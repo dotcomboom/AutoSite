@@ -215,10 +215,16 @@ Public Class Form1
     Private Sub TreeView1_DoubleClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick
         If e.Button = Windows.Forms.MouseButtons.Left Then
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
-                FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
+                Try
+                    FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
+                Catch ex As Exception
+
+                End Try
             End If
             Try
-                WebBrowser1.Navigate(e.Node.Tag)
+                If Not e.Node.Tag.EndsWith(".md") Then
+                    WebBrowser1.Navigate(e.Node.Tag)
+                End If
             Catch ex As Exception
             End Try
         End If
@@ -404,10 +410,27 @@ Public Class Form1
 
     Private Sub SiteTree_NodeMouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
-            If e.Node.Tag = "" Then
+            ContextMenu1.Tag = e.Node.Tag
+            If ContextMenu1.Tag = "" Then
                 OpenInDefault.Enabled = False
+                CutCon.Enabled = False
+                CopyCon.Enabled = False
+                PasteCon.Enabled = False
+                DeleteCon.Enabled = False
+                AddFilesCon.Enabled = False
+                NewCon.Enabled = False
             Else
                 OpenInDefault.Enabled = True
+                CutCon.Enabled = False
+                CopyCon.Enabled = True
+                If Clipboard.ContainsFileDropList Then
+                    PasteCon.Enabled = True
+                Else
+                    PasteCon.Enabled = False
+                End If
+                DeleteCon.Enabled = True
+                AddFilesCon.Enabled = True
+                NewCon.Enabled = True
             End If
             ContextMenu1.Show(SiteTree, e.Location)
         End If
@@ -417,5 +440,124 @@ Public Class Form1
         If SiteTree.Nodes.Count > 0 Then
             refreshTree(SiteTree.Nodes(0))
         End If
+    End Sub
+
+    Private Sub MenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopyCon.Click
+        Dim path = ContextMenu1.Tag
+        If Not path = "" Then
+            Dim f() As String = {path}
+            Dim d As New DataObject(DataFormats.FileDrop, f)
+            Clipboard.SetDataObject(d, True)
+        End If
+    End Sub
+
+    Private Sub PasteCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PasteCon.Click
+        Dim path = ContextMenu1.Tag
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        ' https://stackoverflow.com/questions/10450447/how-to-paste-a-file-from-clipboard-to-specific-path
+        Try
+            Dim data As IDataObject = Clipboard.GetDataObject
+            If data.GetDataPresent(DataFormats.FileDrop) Then
+                For Each s As String In data.GetData(DataFormats.FileDrop)
+                    Dim newFile As String = System.IO.Path.Combine(dir, System.IO.Path.GetFileName(s))
+                    Dim number = 0
+                    Dim oldnewFile = newFile
+                    While My.Computer.FileSystem.FileExists(newFile)
+                        number += 1
+                        newFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(oldnewFile), System.IO.Path.GetFileNameWithoutExtension(oldnewFile) & " (" & number & ")" & System.IO.Path.GetExtension(oldnewFile))
+                    End While
+                    My.Computer.FileSystem.CopyFile(s, newFile, False)
+                Next
+            End If
+            refreshTree(SiteTree.Nodes(0))
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub DeleteCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteCon.Click
+        Dim path = ContextMenu1.Tag
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            Try
+                My.Computer.FileSystem.DeleteDirectory(path, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
+                refreshTree(SiteTree.Nodes(0))
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            Try
+                My.Computer.FileSystem.DeleteFile(path, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
+                refreshTree(SiteTree.Nodes(0))
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub NewFolderCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewFolderCon.Click
+        Dim path = ContextMenu1.Tag
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        If My.Computer.FileSystem.DirectoryExists(dir) Then
+            My.Computer.FileSystem.CreateDirectory(System.IO.Path.Combine(dir, "New Folder"))
+            refreshTree(SiteTree.Nodes(0))
+        End If
+    End Sub
+
+    Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
+        Dim path = ContextMenu1.Tag
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(path, "New Page.html"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine, False)
+        refreshTree(SiteTree.Nodes(0))
+    End Sub
+
+    Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
+        Dim path = ContextMenu1.Tag
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(path, "New Page.md"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine, False)
+        refreshTree(SiteTree.Nodes(0))
+    End Sub
+
+    Private Sub AddFilesCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddFilesCon.Click
+        Dim path = ContextMenu1.Tag
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        If My.Computer.FileSystem.DirectoryExists(dir) Then
+            AddFilesDialog.Title = "Add Files to " & dir
+            If AddFilesDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                For Each file In AddFilesDialog.FileNames
+                    Try
+                        My.Computer.FileSystem.CopyFile(file, System.IO.Path.Combine(dir, file), True, FileIO.UICancelOption.DoNothing)
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+                Next
+                refreshTree(SiteTree.Nodes(0))
+            End If
+        End If
+        refreshTree(SiteTree.Nodes(0))
     End Sub
 End Class

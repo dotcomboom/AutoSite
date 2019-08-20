@@ -71,6 +71,19 @@ Partial Class Form1
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.ContextMenu1 = New System.Windows.Forms.ContextMenu
         Me.OpenInDefault = New System.Windows.Forms.MenuItem
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem
+        Me.CutCon = New System.Windows.Forms.MenuItem
+        Me.CopyCon = New System.Windows.Forms.MenuItem
+        Me.PasteCon = New System.Windows.Forms.MenuItem
+        Me.DeleteCon = New System.Windows.Forms.MenuItem
+        Me.MenuItem3 = New System.Windows.Forms.MenuItem
+        Me.NewCon = New System.Windows.Forms.MenuItem
+        Me.NewFolderCon = New System.Windows.Forms.MenuItem
+        Me.NewHTMLCon = New System.Windows.Forms.MenuItem
+        Me.NewMDCon = New System.Windows.Forms.MenuItem
+        Me.AddFilesCon = New System.Windows.Forms.MenuItem
+        Me.MenuItem10 = New System.Windows.Forms.MenuItem
+        Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -428,6 +441,7 @@ Partial Class Form1
         Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Size = New System.Drawing.Size(531, 183)
         Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Url = New System.Uri("about:blank", System.UriKind.Absolute)
@@ -446,12 +460,79 @@ Partial Class Form1
         '
         'ContextMenu1
         '
-        Me.ContextMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault})
+        Me.ContextMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.MenuItem2, Me.CutCon, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.MenuItem3, Me.DeleteCon, Me.MenuItem10, Me.NewCon})
         '
         'OpenInDefault
         '
         Me.OpenInDefault.Index = 0
         Me.OpenInDefault.Text = "Open in Default Program"
+        '
+        'MenuItem2
+        '
+        Me.MenuItem2.Index = 1
+        Me.MenuItem2.Text = "-"
+        '
+        'CutCon
+        '
+        Me.CutCon.Index = 2
+        Me.CutCon.Text = "Cut"
+        '
+        'CopyCon
+        '
+        Me.CopyCon.Index = 3
+        Me.CopyCon.Text = "Copy"
+        '
+        'PasteCon
+        '
+        Me.PasteCon.Index = 4
+        Me.PasteCon.Text = "Paste"
+        '
+        'DeleteCon
+        '
+        Me.DeleteCon.Index = 7
+        Me.DeleteCon.Text = "Delete"
+        '
+        'MenuItem3
+        '
+        Me.MenuItem3.Index = 6
+        Me.MenuItem3.Text = "-"
+        '
+        'NewCon
+        '
+        Me.NewCon.Index = 9
+        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewHTMLCon, Me.NewMDCon})
+        Me.NewCon.Text = "New"
+        '
+        'NewFolderCon
+        '
+        Me.NewFolderCon.Index = 0
+        Me.NewFolderCon.Text = "Folder"
+        '
+        'NewHTMLCon
+        '
+        Me.NewHTMLCon.Index = 1
+        Me.NewHTMLCon.Text = "HTML Document"
+        '
+        'NewMDCon
+        '
+        Me.NewMDCon.Index = 2
+        Me.NewMDCon.Text = "Markdown Document"
+        '
+        'AddFilesCon
+        '
+        Me.AddFilesCon.Index = 5
+        Me.AddFilesCon.Text = "Add Files..."
+        '
+        'MenuItem10
+        '
+        Me.MenuItem10.Index = 8
+        Me.MenuItem10.Text = "-"
+        '
+        'AddFilesDialog
+        '
+        Me.AddFilesDialog.Filter = "All files (*.*)|*.*"
+        Me.AddFilesDialog.Multiselect = True
+        Me.AddFilesDialog.Title = "Add Files to Folder"
         '
         'Form1
         '
@@ -524,4 +605,17 @@ Partial Class Form1
     Friend WithEvents ContextMenu1 As System.Windows.Forms.ContextMenu
     Friend WithEvents OpenInDefault As System.Windows.Forms.MenuItem
     Friend WithEvents RefreshItem As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
+    Friend WithEvents CutCon As System.Windows.Forms.MenuItem
+    Friend WithEvents CopyCon As System.Windows.Forms.MenuItem
+    Friend WithEvents PasteCon As System.Windows.Forms.MenuItem
+    Friend WithEvents DeleteCon As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem10 As System.Windows.Forms.MenuItem
+    Friend WithEvents NewCon As System.Windows.Forms.MenuItem
+    Friend WithEvents NewFolderCon As System.Windows.Forms.MenuItem
+    Friend WithEvents NewHTMLCon As System.Windows.Forms.MenuItem
+    Friend WithEvents NewMDCon As System.Windows.Forms.MenuItem
+    Friend WithEvents AddFilesCon As System.Windows.Forms.MenuItem
+    Friend WithEvents AddFilesDialog As System.Windows.Forms.OpenFileDialog
 End Class

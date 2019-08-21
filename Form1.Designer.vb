@@ -69,21 +69,23 @@ Partial Class Form1
         Me.FastColoredTextBox1 = New FastColoredTextBoxNS.FastColoredTextBox
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
-        Me.ContextMenu1 = New System.Windows.Forms.ContextMenu
+        Me.Context = New System.Windows.Forms.ContextMenu
         Me.OpenInDefault = New System.Windows.Forms.MenuItem
         Me.MenuItem2 = New System.Windows.Forms.MenuItem
         Me.CutCon = New System.Windows.Forms.MenuItem
         Me.CopyCon = New System.Windows.Forms.MenuItem
         Me.PasteCon = New System.Windows.Forms.MenuItem
-        Me.DeleteCon = New System.Windows.Forms.MenuItem
+        Me.AddFilesCon = New System.Windows.Forms.MenuItem
         Me.MenuItem3 = New System.Windows.Forms.MenuItem
+        Me.DeleteCon = New System.Windows.Forms.MenuItem
+        Me.MenuItem10 = New System.Windows.Forms.MenuItem
         Me.NewCon = New System.Windows.Forms.MenuItem
         Me.NewFolderCon = New System.Windows.Forms.MenuItem
         Me.NewHTMLCon = New System.Windows.Forms.MenuItem
         Me.NewMDCon = New System.Windows.Forms.MenuItem
-        Me.AddFilesCon = New System.Windows.Forms.MenuItem
-        Me.MenuItem10 = New System.Windows.Forms.MenuItem
+        Me.NewPHPCon = New System.Windows.Forms.MenuItem
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
+        Me.MenuItem5 = New System.Windows.Forms.MenuItem
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -269,14 +271,13 @@ Partial Class Form1
         '
         'EnginePython
         '
-        Me.EnginePython.Checked = True
         Me.EnginePython.Index = 0
         Me.EnginePython.RadioCheck = True
         Me.EnginePython.Text = "Python 3 AutoSite"
         '
         'EngineApricot
         '
-        Me.EngineApricot.Enabled = False
+        Me.EngineApricot.Checked = True
         Me.EngineApricot.Index = 1
         Me.EngineApricot.RadioCheck = True
         Me.EngineApricot.Text = "Apricot"
@@ -313,7 +314,7 @@ Partial Class Form1
         'CoreSplit.Panel2
         '
         Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
-        Me.CoreSplit.Size = New System.Drawing.Size(800, 450)
+        Me.CoreSplit.Size = New System.Drawing.Size(800, 429)
         Me.CoreSplit.SplitterDistance = 265
         Me.CoreSplit.TabIndex = 4
         '
@@ -360,7 +361,7 @@ Partial Class Form1
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
         Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.Size = New System.Drawing.Size(265, 450)
+        Me.SiteTree.Size = New System.Drawing.Size(265, 429)
         Me.SiteTree.TabIndex = 4
         '
         'EdSplit
@@ -377,8 +378,8 @@ Partial Class Form1
         'EdSplit.Panel2
         '
         Me.EdSplit.Panel2.Controls.Add(Me.WebBrowser1)
-        Me.EdSplit.Size = New System.Drawing.Size(531, 450)
-        Me.EdSplit.SplitterDistance = 263
+        Me.EdSplit.Size = New System.Drawing.Size(531, 429)
+        Me.EdSplit.SplitterDistance = 250
         Me.EdSplit.TabIndex = 1
         '
         'TabControl1
@@ -391,7 +392,7 @@ Partial Class Form1
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(531, 263)
+        Me.TabControl1.Size = New System.Drawing.Size(531, 250)
         Me.TabControl1.TabIndex = 1
         '
         'TabPage1
@@ -400,7 +401,7 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(523, 234)
+        Me.TabPage1.Size = New System.Drawing.Size(523, 221)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "This does not save"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -429,7 +430,7 @@ Partial Class Form1
         Me.FastColoredTextBox1.RightBracket2 = Global.Microsoft.VisualBasic.ChrW(41)
         Me.FastColoredTextBox1.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.FastColoredTextBox1.ServiceColors = CType(resources.GetObject("FastColoredTextBox1.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
-        Me.FastColoredTextBox1.Size = New System.Drawing.Size(517, 228)
+        Me.FastColoredTextBox1.Size = New System.Drawing.Size(517, 215)
         Me.FastColoredTextBox1.TabIndex = 3
         Me.FastColoredTextBox1.WordWrap = True
         Me.FastColoredTextBox1.Zoom = 100
@@ -442,7 +443,7 @@ Partial Class Form1
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(531, 183)
+        Me.WebBrowser1.Size = New System.Drawing.Size(531, 175)
         Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
@@ -458,9 +459,9 @@ Partial Class Form1
         Me.XP.Images.SetKeyName(5, "Include")
         Me.XP.Images.SetKeyName(6, "Build")
         '
-        'ContextMenu1
+        'Context
         '
-        Me.ContextMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.MenuItem2, Me.CutCon, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.MenuItem3, Me.DeleteCon, Me.MenuItem10, Me.NewCon})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.MenuItem2, Me.CutCon, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.MenuItem3, Me.DeleteCon, Me.MenuItem10, Me.NewCon})
         '
         'OpenInDefault
         '
@@ -487,20 +488,30 @@ Partial Class Form1
         Me.PasteCon.Index = 4
         Me.PasteCon.Text = "Paste"
         '
-        'DeleteCon
+        'AddFilesCon
         '
-        Me.DeleteCon.Index = 7
-        Me.DeleteCon.Text = "Delete"
+        Me.AddFilesCon.Index = 5
+        Me.AddFilesCon.Text = "Add Files..."
         '
         'MenuItem3
         '
         Me.MenuItem3.Index = 6
         Me.MenuItem3.Text = "-"
         '
+        'DeleteCon
+        '
+        Me.DeleteCon.Index = 7
+        Me.DeleteCon.Text = "Delete"
+        '
+        'MenuItem10
+        '
+        Me.MenuItem10.Index = 8
+        Me.MenuItem10.Text = "-"
+        '
         'NewCon
         '
         Me.NewCon.Index = 9
-        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewHTMLCon, Me.NewMDCon})
+        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.MenuItem5, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon})
         Me.NewCon.Text = "New"
         '
         'NewFolderCon
@@ -510,23 +521,18 @@ Partial Class Form1
         '
         'NewHTMLCon
         '
-        Me.NewHTMLCon.Index = 1
+        Me.NewHTMLCon.Index = 2
         Me.NewHTMLCon.Text = "HTML Document"
         '
         'NewMDCon
         '
-        Me.NewMDCon.Index = 2
+        Me.NewMDCon.Index = 3
         Me.NewMDCon.Text = "Markdown Document"
         '
-        'AddFilesCon
+        'NewPHPCon
         '
-        Me.AddFilesCon.Index = 5
-        Me.AddFilesCon.Text = "Add Files..."
-        '
-        'MenuItem10
-        '
-        Me.MenuItem10.Index = 8
-        Me.MenuItem10.Text = "-"
+        Me.NewPHPCon.Index = 4
+        Me.NewPHPCon.Text = "PHP Document"
         '
         'AddFilesDialog
         '
@@ -534,11 +540,16 @@ Partial Class Form1
         Me.AddFilesDialog.Multiselect = True
         Me.AddFilesDialog.Title = "Add Files to Folder"
         '
+        'MenuItem5
+        '
+        Me.MenuItem5.Index = 1
+        Me.MenuItem5.Text = "-"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 429)
         Me.Controls.Add(Me.CoreSplit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Menu = Me.MenuBar
@@ -602,7 +613,7 @@ Partial Class Form1
     Friend WithEvents FileSep As System.Windows.Forms.MenuItem
     Friend WithEvents ExitItem As System.Windows.Forms.MenuItem
     Friend WithEvents FastColoredTextBox1 As FastColoredTextBoxNS.FastColoredTextBox
-    Friend WithEvents ContextMenu1 As System.Windows.Forms.ContextMenu
+    Friend WithEvents Context As System.Windows.Forms.ContextMenu
     Friend WithEvents OpenInDefault As System.Windows.Forms.MenuItem
     Friend WithEvents RefreshItem As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
@@ -618,4 +629,6 @@ Partial Class Form1
     Friend WithEvents NewMDCon As System.Windows.Forms.MenuItem
     Friend WithEvents AddFilesCon As System.Windows.Forms.MenuItem
     Friend WithEvents AddFilesDialog As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents NewPHPCon As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
 End Class

@@ -24,6 +24,7 @@ Public Class Form1
     Private Sub checkOpen()
         Panel1.Visible = (SiteTree.Nodes.Count < 1)
         CloseSite.Enabled = (SiteTree.Nodes.Count > 0)
+        BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
     End Sub
 
     Private Sub iconTheme()
@@ -386,17 +387,25 @@ Public Class Form1
     End Sub
 
     Private Sub BuildSite_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click
-        If My.Computer.FileSystem.FileExists("AutoSitePy.exe") Then
-            If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then
-                My.Computer.FileSystem.CreateDirectory(SiteTree.Nodes(0).Text & "\out")
+        If EnginePython.Checked Then
+            If My.Computer.FileSystem.FileExists("AutoSitePy.exe") Then
+                If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then
+                    My.Computer.FileSystem.CreateDirectory(SiteTree.Nodes(0).Text & "\out")
+                End If
+                Try
+                    Dim startinfo As New ProcessStartInfo
+                    startinfo.FileName = "AutoSitePy.exe"
+                    startinfo.Arguments = "--auto --dir """ & SiteTree.Nodes(0).Text & """"
+                    Process.Start(startinfo)
+                    WebBrowser1.Navigate(SiteTree.Nodes(0).Text & "\out")
+                Catch ex As Exception
+                    MsgBox("The Python 3-based build engine was unable to launch for some reason. This may be because of your operating system or the executable. Error:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Build fail")
+                End Try
+            Else
+                MsgBox("Python 3-based build engine wasn't found. Put AutoSitePy.exe in the same folder as AutoSite XL.exe.", MsgBoxStyle.Exclamation, "Engine not found")
             End If
-            Dim startinfo As New ProcessStartInfo
-            startinfo.FileName = "AutoSitePy.exe"
-            startinfo.Arguments = "--auto --dir """ & SiteTree.Nodes(0).Text & """"
-            Process.Start(startinfo)
-            WebBrowser1.Navigate(SiteTree.Nodes(0).Text & "\out")
         Else
-            MsgBox("Python 3-based build engine wasn't found. Put AutoSitePy.exe in the same folder as AutoSite XL.exe.", MsgBoxStyle.Exclamation, "Engine not found")
+            Build.Show()
         End If
     End Sub
 
@@ -410,8 +419,8 @@ Public Class Form1
 
     Private Sub SiteTree_NodeMouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
-            ContextMenu1.Tag = e.Node.Tag
-            If ContextMenu1.Tag = "" Then
+            Context.Tag = e.Node.Tag
+            If Context.Tag = "" Then
                 OpenInDefault.Enabled = False
                 CutCon.Enabled = False
                 CopyCon.Enabled = False
@@ -432,7 +441,7 @@ Public Class Form1
                 AddFilesCon.Enabled = True
                 NewCon.Enabled = True
             End If
-            ContextMenu1.Show(SiteTree, e.Location)
+            Context.Show(SiteTree, e.Location)
         End If
     End Sub
 
@@ -443,7 +452,7 @@ Public Class Form1
     End Sub
 
     Private Sub MenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopyCon.Click
-        Dim path = ContextMenu1.Tag
+        Dim path = Context.Tag
         If Not path = "" Then
             Dim f() As String = {path}
             Dim d As New DataObject(DataFormats.FileDrop, f)
@@ -452,7 +461,7 @@ Public Class Form1
     End Sub
 
     Private Sub PasteCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PasteCon.Click
-        Dim path = ContextMenu1.Tag
+        Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
             dir = path
@@ -481,7 +490,7 @@ Public Class Form1
     End Sub
 
     Private Sub DeleteCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteCon.Click
-        Dim path = ContextMenu1.Tag
+        Dim path = Context.Tag
         If My.Computer.FileSystem.DirectoryExists(path) Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(path, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
@@ -500,7 +509,7 @@ Public Class Form1
     End Sub
 
     Private Sub NewFolderCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewFolderCon.Click
-        Dim path = ContextMenu1.Tag
+        Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
             dir = path
@@ -514,31 +523,43 @@ Public Class Form1
     End Sub
 
     Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
-        Dim path = ContextMenu1.Tag
+        Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
             dir = path
         ElseIf My.Computer.FileSystem.FileExists(path) Then
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(path, "New Page.html"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine, False)
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.html"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine, False)
         refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
-        Dim path = ContextMenu1.Tag
+        Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
             dir = path
         ElseIf My.Computer.FileSystem.FileExists(path) Then
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(path, "New Page.md"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine, False)
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.md"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine, False)
+        refreshTree(SiteTree.Nodes(0))
+    End Sub
+
+    Private Sub NewPHPCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewPHPCon.Click
+        Dim path = Context.Tag
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.php"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
         refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub AddFilesCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddFilesCon.Click
-        Dim path = ContextMenu1.Tag
+        Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
             dir = path
@@ -559,5 +580,21 @@ Public Class Form1
             End If
         End If
         refreshTree(SiteTree.Nodes(0))
+    End Sub
+
+    Private Sub EngineApricot_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EngineApricot.Click
+        EnginePython.Checked = False
+        EngineApricot.Checked = True
+        My.Settings.engine = "apricot"
+    End Sub
+
+    Private Sub EnginePython_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnginePython.Click
+        EnginePython.Checked = True
+        EngineApricot.Checked = False
+        My.Settings.engine = "python"
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

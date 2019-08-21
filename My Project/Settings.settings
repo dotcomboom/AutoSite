@@ -9,7 +9,7 @@
       <Value Profile="(Default)">auto</Value>
     </Setting>
     <Setting Name="engine" Type="System.String" Scope="User">
-      <Value Profile="(Default)">python</Value>
+      <Value Profile="(Default)">apricot</Value>
     </Setting>
     <Setting Name="explorerOpen" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

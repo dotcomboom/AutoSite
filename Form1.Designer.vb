@@ -72,7 +72,6 @@ Partial Class Form1
         Me.Context = New System.Windows.Forms.ContextMenu
         Me.OpenInDefault = New System.Windows.Forms.MenuItem
         Me.MenuItem2 = New System.Windows.Forms.MenuItem
-        Me.CutCon = New System.Windows.Forms.MenuItem
         Me.CopyCon = New System.Windows.Forms.MenuItem
         Me.PasteCon = New System.Windows.Forms.MenuItem
         Me.AddFilesCon = New System.Windows.Forms.MenuItem
@@ -81,11 +80,11 @@ Partial Class Form1
         Me.MenuItem10 = New System.Windows.Forms.MenuItem
         Me.NewCon = New System.Windows.Forms.MenuItem
         Me.NewFolderCon = New System.Windows.Forms.MenuItem
+        Me.MenuItem5 = New System.Windows.Forms.MenuItem
         Me.NewHTMLCon = New System.Windows.Forms.MenuItem
         Me.NewMDCon = New System.Windows.Forms.MenuItem
         Me.NewPHPCon = New System.Windows.Forms.MenuItem
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
-        Me.MenuItem5 = New System.Windows.Forms.MenuItem
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -409,7 +408,7 @@ Partial Class Form1
         'FastColoredTextBox1
         '
         Me.FastColoredTextBox1.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.FastColoredTextBox1.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.FastColoredTextBox1.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         Me.FastColoredTextBox1.AutoScrollMinSize = New System.Drawing.Size(0, 14)
         Me.FastColoredTextBox1.BackBrush = Nothing
         Me.FastColoredTextBox1.CharHeight = 14
@@ -418,6 +417,7 @@ Partial Class Form1
         Me.FastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.FastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.FastColoredTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FastColoredTextBox1.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.FastColoredTextBox1.IsReplaceMode = False
         Me.FastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML
         Me.FastColoredTextBox1.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
@@ -461,7 +461,7 @@ Partial Class Form1
         '
         'Context
         '
-        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.MenuItem2, Me.CutCon, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.MenuItem3, Me.DeleteCon, Me.MenuItem10, Me.NewCon})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.MenuItem2, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.MenuItem3, Me.DeleteCon, Me.MenuItem10, Me.NewCon})
         '
         'OpenInDefault
         '
@@ -472,11 +472,6 @@ Partial Class Form1
         '
         Me.MenuItem2.Index = 1
         Me.MenuItem2.Text = "-"
-        '
-        'CutCon
-        '
-        Me.CutCon.Index = 2
-        Me.CutCon.Text = "Cut"
         '
         'CopyCon
         '
@@ -519,6 +514,11 @@ Partial Class Form1
         Me.NewFolderCon.Index = 0
         Me.NewFolderCon.Text = "Folder"
         '
+        'MenuItem5
+        '
+        Me.MenuItem5.Index = 1
+        Me.MenuItem5.Text = "-"
+        '
         'NewHTMLCon
         '
         Me.NewHTMLCon.Index = 2
@@ -539,11 +539,6 @@ Partial Class Form1
         Me.AddFilesDialog.Filter = "All files (*.*)|*.*"
         Me.AddFilesDialog.Multiselect = True
         Me.AddFilesDialog.Title = "Add Files to Folder"
-        '
-        'MenuItem5
-        '
-        Me.MenuItem5.Index = 1
-        Me.MenuItem5.Text = "-"
         '
         'Form1
         '
@@ -617,7 +612,6 @@ Partial Class Form1
     Friend WithEvents OpenInDefault As System.Windows.Forms.MenuItem
     Friend WithEvents RefreshItem As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
-    Friend WithEvents CutCon As System.Windows.Forms.MenuItem
     Friend WithEvents CopyCon As System.Windows.Forms.MenuItem
     Friend WithEvents PasteCon As System.Windows.Forms.MenuItem
     Friend WithEvents DeleteCon As System.Windows.Forms.MenuItem

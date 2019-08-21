@@ -422,7 +422,6 @@ Public Class Form1
             Context.Tag = e.Node.Tag
             If Context.Tag = "" Then
                 OpenInDefault.Enabled = False
-                CutCon.Enabled = False
                 CopyCon.Enabled = False
                 PasteCon.Enabled = False
                 DeleteCon.Enabled = False
@@ -430,7 +429,6 @@ Public Class Form1
                 NewCon.Enabled = False
             Else
                 OpenInDefault.Enabled = True
-                CutCon.Enabled = False
                 CopyCon.Enabled = True
                 If Clipboard.ContainsFileDropList Then
                     PasteCon.Enabled = True

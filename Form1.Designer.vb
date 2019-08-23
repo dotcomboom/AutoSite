@@ -417,7 +417,6 @@ Partial Class Form1
         Me.FastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.FastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.FastColoredTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FastColoredTextBox1.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.FastColoredTextBox1.IsReplaceMode = False
         Me.FastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML
         Me.FastColoredTextBox1.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
@@ -437,7 +436,6 @@ Partial Class Form1
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.AllowWebBrowserDrop = False
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
@@ -453,11 +451,14 @@ Partial Class Form1
         Me.XP.TransparentColor = System.Drawing.Color.Transparent
         Me.XP.Images.SetKeyName(0, "Folder")
         Me.XP.Images.SetKeyName(1, "Template")
-        Me.XP.Images.SetKeyName(2, "Page")
-        Me.XP.Images.SetKeyName(3, "Include")
+        Me.XP.Images.SetKeyName(2, "Template")
+        Me.XP.Images.SetKeyName(3, "Page")
         Me.XP.Images.SetKeyName(4, "Include")
         Me.XP.Images.SetKeyName(5, "Include")
-        Me.XP.Images.SetKeyName(6, "Build")
+        Me.XP.Images.SetKeyName(6, "Include")
+        Me.XP.Images.SetKeyName(7, "Include")
+        Me.XP.Images.SetKeyName(8, "Include")
+        Me.XP.Images.SetKeyName(9, "Build")
         '
         'Context
         '
@@ -475,37 +476,37 @@ Partial Class Form1
         '
         'CopyCon
         '
-        Me.CopyCon.Index = 3
+        Me.CopyCon.Index = 2
         Me.CopyCon.Text = "Copy"
         '
         'PasteCon
         '
-        Me.PasteCon.Index = 4
+        Me.PasteCon.Index = 3
         Me.PasteCon.Text = "Paste"
         '
         'AddFilesCon
         '
-        Me.AddFilesCon.Index = 5
+        Me.AddFilesCon.Index = 4
         Me.AddFilesCon.Text = "Add Files..."
         '
         'MenuItem3
         '
-        Me.MenuItem3.Index = 6
+        Me.MenuItem3.Index = 5
         Me.MenuItem3.Text = "-"
         '
         'DeleteCon
         '
-        Me.DeleteCon.Index = 7
+        Me.DeleteCon.Index = 6
         Me.DeleteCon.Text = "Delete"
         '
         'MenuItem10
         '
-        Me.MenuItem10.Index = 8
+        Me.MenuItem10.Index = 7
         Me.MenuItem10.Text = "-"
         '
         'NewCon
         '
-        Me.NewCon.Index = 9
+        Me.NewCon.Index = 8
         Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.MenuItem5, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon})
         Me.NewCon.Text = "New"
         '

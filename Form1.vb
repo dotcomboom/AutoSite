@@ -218,11 +218,15 @@ Public Class Form1
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
                 Try
                     If Not TabControl1.TabPages.ContainsKey(e.Node.Tag) Then
-                        MsgBox("ok")
                         Dim tab As New TabPage
                         tab.Tag = e.Node.Tag
                         tab.Text = e.Node.Tag.ToString().Replace(SiteTree.Nodes.Item(0).Text, "")
                         TabControl1.TabPages.Add(tab)
+                        TabControl1.SelectedTab = tab
+                        Dim code As New FastColoredTextBox
+                        code.Parent = tab
+                        code.Dock = DockStyle.Fill
+                        code.Text = My.Computer.FileSystem.ReadAllText(tab.Tag)
                     End If
                     'FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
                 Catch ex As Exception

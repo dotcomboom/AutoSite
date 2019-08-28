@@ -308,8 +308,8 @@ Partial Class Form1
         'CoreSplit.Panel2
         '
         Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
-        Me.CoreSplit.Size = New System.Drawing.Size(798, 427)
-        Me.CoreSplit.SplitterDistance = 264
+        Me.CoreSplit.Size = New System.Drawing.Size(792, 421)
+        Me.CoreSplit.SplitterDistance = 262
         Me.CoreSplit.TabIndex = 4
         '
         'Panel1
@@ -355,7 +355,7 @@ Partial Class Form1
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
         Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.Size = New System.Drawing.Size(264, 427)
+        Me.SiteTree.Size = New System.Drawing.Size(262, 421)
         Me.SiteTree.TabIndex = 4
         '
         'EdSplit
@@ -372,20 +372,19 @@ Partial Class Form1
         'EdSplit.Panel2
         '
         Me.EdSplit.Panel2.Controls.Add(Me.WebBrowser1)
-        Me.EdSplit.Size = New System.Drawing.Size(530, 427)
-        Me.EdSplit.SplitterDistance = 248
+        Me.EdSplit.Size = New System.Drawing.Size(526, 421)
+        Me.EdSplit.SplitterDistance = 244
         Me.EdSplit.TabIndex = 1
         '
         'TabControl1
         '
-        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(0)
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(530, 248)
+        Me.TabControl1.Size = New System.Drawing.Size(526, 244)
         Me.TabControl1.TabIndex = 1
         '
         'WebBrowser1
@@ -395,7 +394,7 @@ Partial Class Form1
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(530, 175)
+        Me.WebBrowser1.Size = New System.Drawing.Size(526, 173)
         Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
@@ -499,7 +498,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(798, 427)
+        Me.ClientSize = New System.Drawing.Size(792, 421)
         Me.Controls.Add(Me.CoreSplit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Menu = Me.MenuBar

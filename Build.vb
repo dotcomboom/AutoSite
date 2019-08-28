@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Text
+Imports CommonMark
 
 Public Class Build
 
@@ -20,6 +21,17 @@ Public Class Build
     Public Shared Function ReplaceFirst(ByVal expression As String, ByVal find As String, ByVal replacement As String) As String
         Dim index As Integer = expression.IndexOf(find)
         Return expression.Remove(index, find.Length).Insert(index, replacement)
+    End Function
+
+    'https://stackoverflow.com/questions/22268373/vb-c-replace-string
+    Public Shared Function ReplaceLast(ByVal str As String, ByVal search As String, ByVal newText As String) As String
+        Dim ind As Integer = str.LastIndexOf(search)
+
+        If ind < 0 Then
+            Return str
+        End If
+
+        Return str.Substring(0, ind) & newText & str.Substring(ind + search.Length)
     End Function
 
     'https://stackoverflow.com/questions/5193893/count-specific-character-occurrences-in-a-string
@@ -73,11 +85,15 @@ Public Class Build
             End If
             Dim newHtml = template_cache.Item(attribs.Item("template"))
             BackgroundWorker1.ReportProgress(50, "Slotting into template " & attribs.Item("template"))
+            If rel.EndsWith(".md") Then
+                content = CommonMark.CommonMarkConverter.Convert(content)
+                rel = ReplaceLast(rel, ".md", ".html")
+            End If
             newHtml = newHtml.Replace("[#content#]", content)
             'MsgBox(rel)
             newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(rel, "\")))
             For Each kvp As KeyValuePair(Of String, String) In attribs
-                BackgroundWorker1.ReportProgress(20, "  " & kvp.Key & ": " & kvp.Value)
+                BackgroundWorker1.ReportProgress(50, "  " & kvp.Key & ": " & kvp.Value)
                 newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
             Next
             BackgroundWorker1.ReportProgress(90, "Saving file")

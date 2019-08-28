@@ -22,54 +22,59 @@ Partial Class Build
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.Progress = New System.Windows.Forms.ProgressBar
+        Me.Status = New System.Windows.Forms.Label
         Me.Log = New System.Windows.Forms.TextBox
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker
         Me.SuspendLayout()
         '
-        'ProgressBar1
+        'Progress
         '
-        Me.ProgressBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Progress.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProgressBar1.Location = New System.Drawing.Point(12, 12)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(331, 23)
-        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.ProgressBar1.TabIndex = 0
+        Me.Progress.Location = New System.Drawing.Point(12, 12)
+        Me.Progress.Name = "Progress"
+        Me.Progress.Size = New System.Drawing.Size(329, 23)
+        Me.Progress.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.Progress.TabIndex = 0
         '
-        'Label1
+        'Status
         '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Status.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.Location = New System.Drawing.Point(12, 42)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(331, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Building... This may take a while depending on the size of your site."
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Status.Location = New System.Drawing.Point(12, 42)
+        Me.Status.Name = "Status"
+        Me.Status.Size = New System.Drawing.Size(329, 30)
+        Me.Status.TabIndex = 1
+        Me.Status.Text = "Building... This may take a while depending on the size of your site."
+        Me.Status.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Log
         '
         Me.Log.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Log.Location = New System.Drawing.Point(12, 59)
+        Me.Log.Location = New System.Drawing.Point(12, 75)
         Me.Log.Multiline = True
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
         Me.Log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.Log.Size = New System.Drawing.Size(331, 82)
+        Me.Log.Size = New System.Drawing.Size(329, 64)
         Me.Log.TabIndex = 2
+        '
+        'BackgroundWorker1
+        '
+        Me.BackgroundWorker1.WorkerReportsProgress = True
         '
         'Build
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(353, 153)
+        Me.ClientSize = New System.Drawing.Size(351, 151)
         Me.ControlBox = False
         Me.Controls.Add(Me.Log)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.Status)
+        Me.Controls.Add(Me.Progress)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Build"
@@ -80,7 +85,8 @@ Partial Class Build
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Progress As System.Windows.Forms.ProgressBar
+    Friend WithEvents Status As System.Windows.Forms.Label
     Friend WithEvents Log As System.Windows.Forms.TextBox
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

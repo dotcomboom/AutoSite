@@ -138,7 +138,7 @@ Public Class Form1
         Else
             VirtualSpace.Checked = True
         End If
-        FastColoredTextBox1.VirtualSpace = VirtualSpace.Checked
+        'FastColoredTextBox1.VirtualSpace = VirtualSpace.Checked
     End Sub
 
     Private Sub WideCaret_Click(ByVal sender As Object, ByVal e As EventArgs) Handles WideCaret.Click
@@ -147,7 +147,7 @@ Public Class Form1
         Else
             WideCaret.Checked = True
         End If
-        FastColoredTextBox1.WideCaret = WideCaret.Checked
+        'FastColoredTextBox1.WideCaret = WideCaret.Checked
     End Sub
 
     Private Sub WordWrap_Click(ByVal sender As Object, ByVal e As EventArgs) Handles WordWrap.Click
@@ -156,7 +156,7 @@ Public Class Form1
         Else
             WordWrap.Checked = True
         End If
-        FastColoredTextBox1.WordWrap = WordWrap.Checked
+        'FastColoredTextBox1.WordWrap = WordWrap.Checked
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -217,7 +217,14 @@ Public Class Form1
         If e.Button = Windows.Forms.MouseButtons.Left Then
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
                 Try
-                    FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
+                    If Not TabControl1.TabPages.ContainsKey(e.Node.Tag) Then
+                        MsgBox("ok")
+                        Dim tab As New TabPage
+                        tab.Tag = e.Node.Tag
+                        tab.Text = e.Node.Tag.ToString().Replace(SiteTree.Nodes.Item(0).Text, "")
+                        TabControl1.TabPages.Add(tab)
+                    End If
+                    'FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
                 Catch ex As Exception
 
                 End Try
@@ -365,7 +372,7 @@ Public Class Form1
         range.SetFoldingMarkers("<tr", "</tr>", RegexOptions.IgnoreCase)
     End Sub
 
-    Private Sub FastColoredTextBox1_TextChanged(ByVal sender As System.Object, ByVal e As FastColoredTextBoxNS.TextChangedEventArgs) Handles FastColoredTextBox1.TextChanged
+    Private Sub FastColoredTextBox1_TextChanged(ByVal sender As System.Object, ByVal e As FastColoredTextBoxNS.TextChangedEventArgs)
         'HTMLSyntaxHighlight(e.ChangedRange)
         'Dim GreenStyle As New TextStyle(Brushes.Green, Nothing, FontStyle.Bold)
         'Dim TurqStyle As New TextStyle(Brushes.Turquoise, Nothing, FontStyle.Bold)

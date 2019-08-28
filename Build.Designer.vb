@@ -34,7 +34,7 @@ Partial Class Build
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Progress.Location = New System.Drawing.Point(12, 12)
         Me.Progress.Name = "Progress"
-        Me.Progress.Size = New System.Drawing.Size(329, 23)
+        Me.Progress.Size = New System.Drawing.Size(400, 23)
         Me.Progress.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.Progress.TabIndex = 0
         '
@@ -44,7 +44,7 @@ Partial Class Build
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Status.Location = New System.Drawing.Point(12, 42)
         Me.Status.Name = "Status"
-        Me.Status.Size = New System.Drawing.Size(329, 30)
+        Me.Status.Size = New System.Drawing.Size(400, 30)
         Me.Status.TabIndex = 1
         Me.Status.Text = "Building... This may take a while depending on the size of your site."
         Me.Status.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -59,7 +59,7 @@ Partial Class Build
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
         Me.Log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.Log.Size = New System.Drawing.Size(329, 64)
+        Me.Log.Size = New System.Drawing.Size(400, 226)
         Me.Log.TabIndex = 2
         '
         'BackgroundWorker1
@@ -70,12 +70,11 @@ Partial Class Build
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(351, 151)
+        Me.ClientSize = New System.Drawing.Size(422, 313)
         Me.ControlBox = False
         Me.Controls.Add(Me.Log)
         Me.Controls.Add(Me.Status)
         Me.Controls.Add(Me.Progress)
-        Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Build"
         Me.ShowIcon = False

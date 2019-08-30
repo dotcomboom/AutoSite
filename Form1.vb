@@ -1,5 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Imports FastColoredTextBoxNS
+Imports System.IO
+Imports System.Text
 
 Public Class Form1
 
@@ -106,16 +108,20 @@ Public Class Form1
 
     Sub panelUpdate()
         EdSplit.Panel2Collapsed = Not (PreviewPanel.Checked)
-        CoreSplit.Panel1Collapsed = Not (ExplorerPanel.Checked)
+        CoreSplit.Panel1Collapsed = (ExplorerPanel.Checked = False) And (BuildPanel.Checked = False)
         EdSplit.Panel1Collapsed = Not (EditorPanel.Checked)
-        CoreSplit.Panel2Collapsed = ((EditorPanel.Checked = False) And (PreviewPanel.Checked = False))
+        CoreSplit.Panel2Collapsed = (EditorPanel.Checked = False) And (PreviewPanel.Checked = False)
+
+        ExSplit.Panel1Collapsed = Not (ExplorerPanel.Checked)
+        ExSplit.Panel2Collapsed = Not (BuildPanel.Checked)
 
         My.Settings.explorerOpen = ExplorerPanel.Checked
         My.Settings.editorOpen = EditorPanel.Checked
         My.Settings.browserOpen = PreviewPanel.Checked
+        My.Settings.buildOpen = BuildPanel.Checked
     End Sub
 
-    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, LinkLabel1.Click
+    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click
         If FolderBrowser.ShowDialog() = DialogResult.OK Then
             If My.Computer.FileSystem.DirectoryExists(FolderBrowser.SelectedPath) Then
                 openSite(FolderBrowser.SelectedPath, False)
@@ -129,6 +135,7 @@ Public Class Form1
 
     Private Sub CloseSite_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseSite.Click
         SiteTree.Nodes.Clear()
+        TabControl1.TabPages.Clear()
         checkOpen()
     End Sub
 
@@ -215,6 +222,7 @@ Public Class Form1
 
     Private Sub TreeView1_DoubleClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick
         If e.Button = Windows.Forms.MouseButtons.Left Then
+            Dim box As FastColoredTextBox
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
                 Try
                     If Not TabControl1.TabPages.ContainsKey(e.Node.Tag) Then
@@ -227,6 +235,7 @@ Public Class Form1
                         code.Parent = tab
                         code.Dock = DockStyle.Fill
                         code.Text = My.Computer.FileSystem.ReadAllText(tab.Tag)
+                        box = code
                     End If
                     'FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
                 Catch ex As Exception
@@ -236,6 +245,8 @@ Public Class Form1
             Try
                 If Not e.Node.Tag.EndsWith(".md") Then
                     WebBrowser1.Navigate(e.Node.Tag)
+                Else
+                    WebBrowser1.DocumentText = CommonMark.CommonMarkConverter.Convert(box.Text)
                 End If
             Catch ex As Exception
             End Try
@@ -247,6 +258,15 @@ Public Class Form1
             ExplorerPanel.Checked = False
         Else
             ExplorerPanel.Checked = True
+        End If
+        panelUpdate()
+    End Sub
+
+    Private Sub BuildPanel_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BuildPanel.Click
+        If BuildPanel.Checked Then
+            BuildPanel.Checked = False
+        Else
+            BuildPanel.Checked = True
         End If
         panelUpdate()
     End Sub
@@ -269,7 +289,7 @@ Public Class Form1
         panelUpdate()
     End Sub
 
-    Private Sub SiteTree_Layout(ByVal sender As Object, ByVal e As LayoutEventArgs) Handles SiteTree.Layout
+    Private Sub SiteTree_Layout(ByVal sender As Object, ByVal e As LayoutEventArgs)
         checkOpen()
     End Sub
 
@@ -291,13 +311,13 @@ Public Class Form1
         iconTheme()
     End Sub
 
-    Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.BeforeLabelEdit
+    Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
         If e.Node.Tag = "" Then
             e.CancelEdit = True
         End If
     End Sub
 
-    Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.AfterLabelEdit
+    Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
         Try
             Dim newpath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(e.Node.Tag), e.Label)
             Try
@@ -315,7 +335,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub SiteTree_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles SiteTree.AfterSelect
+    Private Sub SiteTree_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
 
     End Sub
 
@@ -397,7 +417,7 @@ Public Class Form1
         Me.Close()
     End Sub
 
-    Private Sub BuildSite_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click
+    Private Sub BuildSite_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, ToolStripButton1.Click
         If EnginePython.Checked Then
             If My.Computer.FileSystem.FileExists("AutoSitePy.exe") Then
                 If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then
@@ -416,7 +436,9 @@ Public Class Form1
                 MsgBox("Python 3-based build engine wasn't found. Put AutoSitePy.exe in the same folder as AutoSite XL.exe.", MsgBoxStyle.Exclamation, "Engine not found")
             End If
         Else
-            Build.Show()
+            'Build.Show()
+            bld = SiteTree.Nodes(0).Text
+            Apricot.RunWorkerAsync()
         End If
     End Sub
 
@@ -428,7 +450,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub SiteTree_NodeMouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseClick
+    Private Sub SiteTree_NodeMouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs)
         If e.Button = Windows.Forms.MouseButtons.Right Then
             Context.Tag = e.Node.Tag
             If Context.Tag = "" Then
@@ -603,7 +625,151 @@ Public Class Form1
         My.Settings.engine = "python"
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+    Public bld = ""
+    Public template_cache As New Dictionary(Of String, String)()
 
+    Private Sub aLog(ByVal text As String)
+        Log.AppendText(vbNewLine & text)
+    End Sub
+
+    'https://bytes.com/topic/visual-basic-net/answers/370586-replace-first-occurrance-substring#post1428786
+    Public Shared Function ReplaceFirst(ByVal expression As String, ByVal find As String, ByVal replacement As String) As String
+        Dim index As Integer = expression.IndexOf(find)
+        Return expression.Remove(index, find.Length).Insert(index, replacement)
+    End Function
+
+    'https://stackoverflow.com/questions/22268373/vb-c-replace-string
+    Public Shared Function ReplaceLast(ByVal str As String, ByVal search As String, ByVal newText As String) As String
+        Dim ind As Integer = str.LastIndexOf(search)
+
+        If ind < 0 Then
+            Return str
+        End If
+
+        Return str.Substring(0, ind) & newText & str.Substring(ind + search.Length)
+    End Function
+
+    'https://stackoverflow.com/questions/5193893/count-specific-character-occurrences-in-a-string
+    Public Function CountCharacter(ByVal value As String, ByVal ch As Char) As Integer
+        Dim cnt As Integer = 0
+        For Each c As Char In value
+            If c = ch Then
+                cnt += 1
+            End If
+        Next
+        Return cnt
+    End Function
+
+    'https://social.msdn.microsoft.com/forums/windows/en-us/07e63494-9ee0-412e-8a8d-cfc9b91f456a/string-function-for-repeating-character-string
+    Public Shared Function FillString(ByVal ch As String, ByVal count As Integer) As String
+        Dim sb As StringBuilder = New StringBuilder(count)
+
+        For ix As Integer = 0 To count - 1
+            sb.Append(ch)
+        Next
+
+        Return sb.ToString()
+    End Function
+
+    Sub walkInputs(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal input As String, ByVal templates As String, ByVal out As String)
+        For Each file In directory.GetFiles(pattern)
+            Apricot.ReportProgress(0, "Rendering " & file.FullName)
+            Dim rel = ReplaceFirst(file.FullName, input, "")
+            'Dim contents = My.Computer.FileSystem.ReadAllText(file.FullName)
+            Dim content = ""
+            Dim attribs As New Dictionary(Of String, String)()
+            attribs.Add("template", "default")
+            Dim reader As New StreamReader(file.FullName, Encoding.Default)
+            Dim line As String
+            Apricot.ReportProgress(20, "Reading attributes")
+            Do
+                line = reader.ReadLine
+                Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("^<!-- attrib (.*): (.*) -->")
+                If Not line Is Nothing Then
+                    Dim match As RegularExpressions.Match = regex.Match(line)
+                    If match.Success Then
+                        attribs.Item(match.Groups(1).Value) = match.Groups(2).Value
+                    Else
+                        content = content & vbNewLine & line
+                    End If
+                End If
+            Loop Until line Is Nothing
+            If Not template_cache.ContainsKey(attribs.Item("template")) Then
+                Apricot.ReportProgress(30, "Loading template " & attribs.Item("template"))
+                template_cache.Item(attribs.Item("template")) = My.Computer.FileSystem.ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
+            End If
+            Dim newHtml = template_cache.Item(attribs.Item("template"))
+            Apricot.ReportProgress(50, "Slotting into template " & attribs.Item("template"))
+            If rel.EndsWith(".md") Then
+                content = CommonMark.CommonMarkConverter.Convert(content)
+                rel = ReplaceLast(rel, ".md", ".html")
+            End If
+            newHtml = newHtml.Replace("[#content#]", content)
+            'MsgBox(rel)
+            newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(rel, "\")))
+            For Each kvp As KeyValuePair(Of String, String) In attribs
+                Apricot.ReportProgress(50, "  " & kvp.Key & ": " & kvp.Value)
+                newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
+            Next
+            Apricot.ReportProgress(90, "Saving file")
+            My.Computer.FileSystem.WriteAllText(out & rel, newHtml, False)
+            Apricot.ReportProgress(100, "Done with file")
+        Next
+        For Each subDir In directory.GetDirectories
+            walkInputs(subDir, pattern, input, templates, out)
+        Next
+    End Sub
+
+    Private Sub Apricot_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles Apricot.DoWork
+        Dim input = Path.Combine(bld, "in\")
+        Dim templates = Path.Combine(bld, "templates\")
+        Dim includes = Path.Combine(bld, "includes\")
+        Dim out = Path.Combine(bld, "out\")
+
+        Apricot.ReportProgress(0, "Starting!")
+        Apricot.ReportProgress(0, bld)
+
+        If Not My.Computer.FileSystem.DirectoryExists(input) Then
+            Apricot.ReportProgress(10, "Creating in/ folder")
+            My.Computer.FileSystem.CreateDirectory(input)
+        End If
+        If Not My.Computer.FileSystem.DirectoryExists(templates) Then
+            Apricot.ReportProgress(10, "Creating templates/ folder")
+            My.Computer.FileSystem.CreateDirectory(templates)
+        End If
+        If Not My.Computer.FileSystem.DirectoryExists(includes) Then
+            Apricot.ReportProgress(10, "Creating includes/ folder")
+            My.Computer.FileSystem.CreateDirectory(includes)
+        End If
+        If Not My.Computer.FileSystem.DirectoryExists(out) Then
+            Apricot.ReportProgress(10, "Creating out/ folder")
+            My.Computer.FileSystem.CreateDirectory(out)
+        End If
+
+        'walkLog(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*")
+        'walkLog(My.Computer.FileSystem.GetDirectoryInfo(templates), "*.*")
+        'walkLog(My.Computer.FileSystem.GetDirectoryInfo(includes), "*.*")
+        'walkLog(My.Computer.FileSystem.GetDirectoryInfo(out), "*.*")
+
+        Apricot.ReportProgress(20, "Syncing includes")
+
+        My.Computer.FileSystem.CopyDirectory(includes, out, True)
+
+        Apricot.ReportProgress(25, "Rendering input files")
+        walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", input, templates, out)
+
+        Apricot.ReportProgress(100, "Finished!")
+    End Sub
+
+    Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles Apricot.ProgressChanged
+        BuildProgress.Visible = True
+        BuildProgress.Value = e.ProgressPercentage
+        Me.Text = e.UserState
+        aLog(e.UserState)
+    End Sub
+
+    Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles Apricot.RunWorkerCompleted
+        Me.Text = "AutoSite XL"
+        BuildProgress.Visible = False
     End Sub
 End Class

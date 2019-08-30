@@ -35,6 +35,7 @@ Partial Class Form1
         Me.ViewMenu = New System.Windows.Forms.MenuItem
         Me.Panels = New System.Windows.Forms.MenuItem
         Me.ExplorerPanel = New System.Windows.Forms.MenuItem
+        Me.BuildPanel = New System.Windows.Forms.MenuItem
         Me.PanelSep = New System.Windows.Forms.MenuItem
         Me.EditorPanel = New System.Windows.Forms.MenuItem
         Me.PreviewPanel = New System.Windows.Forms.MenuItem
@@ -59,10 +60,15 @@ Partial Class Form1
         Me.AboutItem = New System.Windows.Forms.MenuItem
         Me.HelpTopics = New System.Windows.Forms.MenuItem
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
+        Me.ExSplit = New System.Windows.Forms.SplitContainer
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
         Me.Label1 = New System.Windows.Forms.Label
         Me.SiteTree = New System.Windows.Forms.TreeView
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
+        Me.BuildProgress = New System.Windows.Forms.ProgressBar
+        Me.Log = New System.Windows.Forms.TextBox
         Me.EdSplit = New System.Windows.Forms.SplitContainer
         Me.TabControl1 = New System.Windows.Forms.TabControl
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser
@@ -83,10 +89,15 @@ Partial Class Form1
         Me.NewMDCon = New System.Windows.Forms.MenuItem
         Me.NewPHPCon = New System.Windows.Forms.MenuItem
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
+        Me.Apricot = New System.ComponentModel.BackgroundWorker
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
+        Me.ExSplit.Panel1.SuspendLayout()
+        Me.ExSplit.Panel2.SuspendLayout()
+        Me.ExSplit.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
         Me.EdSplit.SuspendLayout()
@@ -126,7 +137,7 @@ Partial Class Form1
         '
         Me.CloseSite.Enabled = False
         Me.CloseSite.Index = 1
-        Me.CloseSite.Shortcut = System.Windows.Forms.Shortcut.CtrlW
+        Me.CloseSite.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftW
         Me.CloseSite.Text = "Close Site"
         '
         'FileSep
@@ -149,7 +160,7 @@ Partial Class Form1
         'Panels
         '
         Me.Panels.Index = 0
-        Me.Panels.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.PanelSep, Me.EditorPanel, Me.PreviewPanel})
+        Me.Panels.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.PanelSep, Me.EditorPanel, Me.PreviewPanel})
         Me.Panels.Text = "Panels"
         '
         'ExplorerPanel
@@ -158,21 +169,27 @@ Partial Class Form1
         Me.ExplorerPanel.Index = 0
         Me.ExplorerPanel.Text = "Explorer"
         '
+        'BuildPanel
+        '
+        Me.BuildPanel.Checked = True
+        Me.BuildPanel.Index = 1
+        Me.BuildPanel.Text = "Build"
+        '
         'PanelSep
         '
-        Me.PanelSep.Index = 1
+        Me.PanelSep.Index = 2
         Me.PanelSep.Text = "-"
         '
         'EditorPanel
         '
         Me.EditorPanel.Checked = True
-        Me.EditorPanel.Index = 2
+        Me.EditorPanel.Index = 3
         Me.EditorPanel.Text = "Editor"
         '
         'PreviewPanel
         '
         Me.PreviewPanel.Checked = True
-        Me.PreviewPanel.Index = 3
+        Me.PreviewPanel.Index = 4
         Me.PreviewPanel.Text = "Preview"
         '
         'MenuItem4
@@ -284,7 +301,6 @@ Partial Class Form1
         '
         'AboutItem
         '
-        Me.AboutItem.Enabled = False
         Me.AboutItem.Index = 0
         Me.AboutItem.Text = "About"
         '
@@ -302,8 +318,7 @@ Partial Class Form1
         '
         'CoreSplit.Panel1
         '
-        Me.CoreSplit.Panel1.Controls.Add(Me.Panel1)
-        Me.CoreSplit.Panel1.Controls.Add(Me.SiteTree)
+        Me.CoreSplit.Panel1.Controls.Add(Me.ExSplit)
         '
         'CoreSplit.Panel2
         '
@@ -311,6 +326,27 @@ Partial Class Form1
         Me.CoreSplit.Size = New System.Drawing.Size(792, 421)
         Me.CoreSplit.SplitterDistance = 262
         Me.CoreSplit.TabIndex = 4
+        '
+        'ExSplit
+        '
+        Me.ExSplit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ExSplit.Location = New System.Drawing.Point(0, 0)
+        Me.ExSplit.Name = "ExSplit"
+        Me.ExSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'ExSplit.Panel1
+        '
+        Me.ExSplit.Panel1.Controls.Add(Me.Panel1)
+        Me.ExSplit.Panel1.Controls.Add(Me.SiteTree)
+        '
+        'ExSplit.Panel2
+        '
+        Me.ExSplit.Panel2.Controls.Add(Me.ToolStrip1)
+        Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
+        Me.ExSplit.Panel2.Controls.Add(Me.Log)
+        Me.ExSplit.Size = New System.Drawing.Size(262, 421)
+        Me.ExSplit.SplitterDistance = 273
+        Me.ExSplit.TabIndex = 4
         '
         'Panel1
         '
@@ -321,10 +357,10 @@ Partial Class Form1
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
         Me.Panel1.Controls.Add(Me.LinkLabel1)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(27, 12)
+        Me.Panel1.Location = New System.Drawing.Point(30, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(202, 55)
-        Me.Panel1.TabIndex = 3
+        Me.Panel1.TabIndex = 5
         '
         'LinkLabel1
         '
@@ -355,8 +391,46 @@ Partial Class Form1
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
         Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.Size = New System.Drawing.Size(262, 421)
+        Me.SiteTree.Size = New System.Drawing.Size(262, 273)
         Me.SiteTree.TabIndex = 4
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(262, 25)
+        Me.ToolStrip1.TabIndex = 2
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
+        'BuildProgress
+        '
+        Me.BuildProgress.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BuildProgress.Location = New System.Drawing.Point(3, 118)
+        Me.BuildProgress.Name = "BuildProgress"
+        Me.BuildProgress.Size = New System.Drawing.Size(236, 23)
+        Me.BuildProgress.TabIndex = 1
+        Me.BuildProgress.Visible = False
+        '
+        'Log
+        '
+        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Log.Location = New System.Drawing.Point(0, 0)
+        Me.Log.Multiline = True
+        Me.Log.Name = "Log"
+        Me.Log.ReadOnly = True
+        Me.Log.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.Log.Size = New System.Drawing.Size(262, 144)
+        Me.Log.TabIndex = 0
         '
         'EdSplit
         '
@@ -494,6 +568,10 @@ Partial Class Form1
         Me.AddFilesDialog.Multiselect = True
         Me.AddFilesDialog.Title = "Add Files to Folder"
         '
+        'Apricot
+        '
+        Me.Apricot.WorkerReportsProgress = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -505,10 +583,16 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "AutoSite XL"
         Me.CoreSplit.Panel1.ResumeLayout(False)
-        Me.CoreSplit.Panel1.PerformLayout()
         Me.CoreSplit.Panel2.ResumeLayout(False)
         Me.CoreSplit.ResumeLayout(False)
+        Me.ExSplit.Panel1.ResumeLayout(False)
+        Me.ExSplit.Panel1.PerformLayout()
+        Me.ExSplit.Panel2.ResumeLayout(False)
+        Me.ExSplit.Panel2.PerformLayout()
+        Me.ExSplit.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.EdSplit.Panel1.ResumeLayout(False)
         Me.EdSplit.Panel2.ResumeLayout(False)
         Me.EdSplit.ResumeLayout(False)
@@ -543,10 +627,6 @@ Partial Class Form1
     Friend WithEvents AboutItem As System.Windows.Forms.MenuItem
     Friend WithEvents HelpTopics As System.Windows.Forms.MenuItem
     Friend WithEvents CoreSplit As System.Windows.Forms.SplitContainer
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents SiteTree As System.Windows.Forms.TreeView
     Friend WithEvents EdSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
@@ -574,4 +654,15 @@ Partial Class Form1
     Friend WithEvents AddFilesDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents NewPHPCon As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
+    Friend WithEvents BuildProgress As System.Windows.Forms.ProgressBar
+    Friend WithEvents Apricot As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BuildPanel As System.Windows.Forms.MenuItem
+    Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents SiteTree As System.Windows.Forms.TreeView
+    Friend WithEvents Log As System.Windows.Forms.TextBox
+    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 End Class

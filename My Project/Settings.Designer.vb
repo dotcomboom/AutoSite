@@ -104,7 +104,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
         Public Property editorOpen() As Boolean
             Get
                 Return CType(Me("editorOpen"),Boolean)
@@ -116,13 +116,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
         Public Property browserOpen() As Boolean
             Get
                 Return CType(Me("browserOpen"),Boolean)
             End Get
             Set
                 Me("browserOpen") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property buildOpen() As Boolean
+            Get
+                Return CType(Me("buildOpen"),Boolean)
+            End Get
+            Set
+                Me("buildOpen") = value
             End Set
         End Property
     End Class

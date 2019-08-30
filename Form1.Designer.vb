@@ -70,7 +70,7 @@ Partial Class Form1
         Me.BuildProgress = New System.Windows.Forms.ProgressBar
         Me.Log = New System.Windows.Forms.TextBox
         Me.EdSplit = New System.Windows.Forms.SplitContainer
-        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.EditTabs = New System.Windows.Forms.TabControl
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu
@@ -173,7 +173,7 @@ Partial Class Form1
         '
         Me.BuildPanel.Checked = True
         Me.BuildPanel.Index = 1
-        Me.BuildPanel.Text = "Build"
+        Me.BuildPanel.Text = "Apricot Output"
         '
         'PanelSep
         '
@@ -323,8 +323,8 @@ Partial Class Form1
         'CoreSplit.Panel2
         '
         Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
-        Me.CoreSplit.Size = New System.Drawing.Size(792, 421)
-        Me.CoreSplit.SplitterDistance = 262
+        Me.CoreSplit.Size = New System.Drawing.Size(711, 421)
+        Me.CoreSplit.SplitterDistance = 235
         Me.CoreSplit.TabIndex = 4
         '
         'ExSplit
@@ -344,7 +344,7 @@ Partial Class Form1
         Me.ExSplit.Panel2.Controls.Add(Me.ToolStrip1)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
         Me.ExSplit.Panel2.Controls.Add(Me.Log)
-        Me.ExSplit.Size = New System.Drawing.Size(262, 421)
+        Me.ExSplit.Size = New System.Drawing.Size(235, 421)
         Me.ExSplit.SplitterDistance = 273
         Me.ExSplit.TabIndex = 4
         '
@@ -391,7 +391,7 @@ Partial Class Form1
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
         Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.Size = New System.Drawing.Size(262, 273)
+        Me.SiteTree.Size = New System.Drawing.Size(235, 273)
         Me.SiteTree.TabIndex = 4
         '
         'ToolStrip1
@@ -399,7 +399,7 @@ Partial Class Form1
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(262, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(235, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -411,6 +411,7 @@ Partial Class Form1
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.ToolStripButton1.ToolTipText = "Build"
         '
         'BuildProgress
         '
@@ -429,7 +430,7 @@ Partial Class Form1
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
         Me.Log.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.Log.Size = New System.Drawing.Size(262, 144)
+        Me.Log.Size = New System.Drawing.Size(235, 144)
         Me.Log.TabIndex = 0
         '
         'EdSplit
@@ -441,25 +442,25 @@ Partial Class Form1
         '
         'EdSplit.Panel1
         '
-        Me.EdSplit.Panel1.Controls.Add(Me.TabControl1)
+        Me.EdSplit.Panel1.Controls.Add(Me.EditTabs)
         '
         'EdSplit.Panel2
         '
         Me.EdSplit.Panel2.Controls.Add(Me.WebBrowser1)
-        Me.EdSplit.Size = New System.Drawing.Size(526, 421)
+        Me.EdSplit.Size = New System.Drawing.Size(472, 421)
         Me.EdSplit.SplitterDistance = 244
         Me.EdSplit.TabIndex = 1
         '
-        'TabControl1
+        'EditTabs
         '
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(0)
-        Me.TabControl1.Multiline = True
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(526, 244)
-        Me.TabControl1.TabIndex = 1
+        Me.EditTabs.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EditTabs.Location = New System.Drawing.Point(0, 0)
+        Me.EditTabs.Margin = New System.Windows.Forms.Padding(0)
+        Me.EditTabs.Multiline = True
+        Me.EditTabs.Name = "EditTabs"
+        Me.EditTabs.SelectedIndex = 0
+        Me.EditTabs.Size = New System.Drawing.Size(472, 244)
+        Me.EditTabs.TabIndex = 1
         '
         'WebBrowser1
         '
@@ -468,7 +469,7 @@ Partial Class Form1
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(526, 173)
+        Me.WebBrowser1.Size = New System.Drawing.Size(472, 173)
         Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
@@ -576,7 +577,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 421)
+        Me.ClientSize = New System.Drawing.Size(711, 421)
         Me.Controls.Add(Me.CoreSplit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Menu = Me.MenuBar
@@ -634,7 +635,7 @@ Partial Class Form1
     Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
     Friend WithEvents XP As System.Windows.Forms.ImageList
     Friend WithEvents XPitem As System.Windows.Forms.MenuItem
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents EditTabs As System.Windows.Forms.TabControl
     Friend WithEvents FileSep As System.Windows.Forms.MenuItem
     Friend WithEvents ExitItem As System.Windows.Forms.MenuItem
     Friend WithEvents Context As System.Windows.Forms.ContextMenu

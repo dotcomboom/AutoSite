@@ -5,6 +5,8 @@ Imports System.Text
 
 Public Class Form1
 
+    Public openFiles As New ArrayList
+
     ' https://stackoverflow.com/a/8182507
     Sub walkTree(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal parentNode As TreeNode, ByVal key As String, ByVal incRoot As Boolean)
         Dim dirnode = parentNode
@@ -135,7 +137,7 @@ Public Class Form1
 
     Private Sub CloseSite_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseSite.Click
         SiteTree.Nodes.Clear()
-        TabControl1.TabPages.Clear()
+        EditTabs.TabPages.Clear()
         checkOpen()
     End Sub
 
@@ -225,17 +227,18 @@ Public Class Form1
             Dim box As FastColoredTextBox
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
                 Try
-                    If Not TabControl1.TabPages.ContainsKey(e.Node.Tag) Then
+                    If Not openFiles.Contains(e.Node.Tag) Then
                         Dim tab As New TabPage
                         tab.Tag = e.Node.Tag
                         tab.Text = e.Node.Tag.ToString().Replace(SiteTree.Nodes.Item(0).Text, "")
-                        TabControl1.TabPages.Add(tab)
-                        TabControl1.SelectedTab = tab
-                        Dim code As New FastColoredTextBox
+                        EditTabs.TabPages.Add(tab)
+                        EditTabs.SelectedTab = tab
+                        Dim code As New Editor
                         code.Parent = tab
                         code.Dock = DockStyle.Fill
-                        code.Text = My.Computer.FileSystem.ReadAllText(tab.Tag)
-                        box = code
+                        code.Code.OpenFile(tab.Tag)
+                        box = code.Code
+                        openFiles.Add(e.Node.Tag)
                     End If
                     'FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
                 Catch ex As Exception

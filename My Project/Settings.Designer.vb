@@ -137,6 +137,42 @@ Namespace My
                 Me("buildOpen") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property WordWrap() As Boolean
+            Get
+                Return CType(Me("WordWrap"),Boolean)
+            End Get
+            Set
+                Me("WordWrap") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property VirtualSpace() As Boolean
+            Get
+                Return CType(Me("VirtualSpace"),Boolean)
+            End Get
+            Set
+                Me("VirtualSpace") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property WideCaret() As Boolean
+            Get
+                Return CType(Me("WideCaret"),Boolean)
+            End Get
+            Set
+                Me("WideCaret") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

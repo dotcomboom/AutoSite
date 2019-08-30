@@ -47,7 +47,7 @@ Partial Class Form1
         Me.VS2017item = New System.Windows.Forms.MenuItem
         Me.XPitem = New System.Windows.Forms.MenuItem
         Me.RefreshItem = New System.Windows.Forms.MenuItem
-        Me.ViewSep = New System.Windows.Forms.MenuItem
+        Me.MenuItem6 = New System.Windows.Forms.MenuItem
         Me.WordWrap = New System.Windows.Forms.MenuItem
         Me.VirtualSpace = New System.Windows.Forms.MenuItem
         Me.WideCaret = New System.Windows.Forms.MenuItem
@@ -62,7 +62,7 @@ Partial Class Form1
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.ExSplit = New System.Windows.Forms.SplitContainer
         Me.Panel1 = New System.Windows.Forms.Panel
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
+        Me.OpenLink = New System.Windows.Forms.LinkLabel
         Me.Label1 = New System.Windows.Forms.Label
         Me.SiteTree = New System.Windows.Forms.TreeView
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
@@ -119,7 +119,7 @@ Partial Class Form1
         '
         'MenuBar
         '
-        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu})
+        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.ViewMenu, Me.MenuItem6, Me.BuildMenu, Me.HelpMenu})
         '
         'FileMenu
         '
@@ -154,7 +154,7 @@ Partial Class Form1
         'ViewMenu
         '
         Me.ViewMenu.Index = 1
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Panels, Me.MenuItem4, Me.DisplayStyle, Me.MenuItem1, Me.RefreshItem, Me.ViewSep, Me.WordWrap, Me.VirtualSpace, Me.WideCaret})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Panels, Me.MenuItem4, Me.DisplayStyle, Me.MenuItem1, Me.RefreshItem})
         Me.ViewMenu.Text = "View"
         '
         'Panels
@@ -241,30 +241,31 @@ Partial Class Form1
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
         Me.RefreshItem.Text = "Refresh"
         '
-        'ViewSep
+        'MenuItem6
         '
-        Me.ViewSep.Index = 5
-        Me.ViewSep.Text = "-"
+        Me.MenuItem6.Index = 2
+        Me.MenuItem6.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret})
+        Me.MenuItem6.Text = "Format"
         '
         'WordWrap
         '
         Me.WordWrap.Checked = True
-        Me.WordWrap.Index = 6
+        Me.WordWrap.Index = 0
         Me.WordWrap.Text = "Word Wrap"
         '
         'VirtualSpace
         '
-        Me.VirtualSpace.Index = 7
+        Me.VirtualSpace.Index = 1
         Me.VirtualSpace.Text = "Virtual Space"
         '
         'WideCaret
         '
-        Me.WideCaret.Index = 8
+        Me.WideCaret.Index = 2
         Me.WideCaret.Text = "Wide Caret"
         '
         'BuildMenu
         '
-        Me.BuildMenu.Index = 2
+        Me.BuildMenu.Index = 3
         Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.BuildEngineMenu})
         Me.BuildMenu.Text = "Build"
         '
@@ -295,7 +296,7 @@ Partial Class Form1
         '
         'HelpMenu
         '
-        Me.HelpMenu.Index = 3
+        Me.HelpMenu.Index = 4
         Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.AboutItem, Me.HelpTopics})
         Me.HelpMenu.Text = "Help"
         '
@@ -350,37 +351,40 @@ Partial Class Form1
         '
         'Panel1
         '
-        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.AutoSize = True
         Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel1.Controls.Add(Me.LinkLabel1)
+        Me.Panel1.Controls.Add(Me.OpenLink)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(30, 3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(202, 55)
+        Me.Panel1.Size = New System.Drawing.Size(235, 59)
         Me.Panel1.TabIndex = 5
         '
-        'LinkLabel1
+        'OpenLink
         '
-        Me.LinkLabel1.BackColor = System.Drawing.SystemColors.Window
-        Me.LinkLabel1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LinkLabel1.Location = New System.Drawing.Point(3, 42)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(196, 13)
-        Me.LinkLabel1.TabIndex = 1
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Create or open a site folder"
-        Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.OpenLink.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
+        Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.OpenLink.Location = New System.Drawing.Point(3, 42)
+        Me.OpenLink.Name = "OpenLink"
+        Me.OpenLink.Size = New System.Drawing.Size(229, 17)
+        Me.OpenLink.TabIndex = 1
+        Me.OpenLink.TabStop = True
+        Me.OpenLink.Text = "Create or open a site folder"
+        Me.OpenLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label1
         '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.BackColor = System.Drawing.SystemColors.Window
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label1.Location = New System.Drawing.Point(3, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(194, 20)
+        Me.Label1.Size = New System.Drawing.Size(230, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "A site has not been opened yet."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -399,6 +403,7 @@ Partial Class Form1
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ToolStrip1.Size = New System.Drawing.Size(235, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
@@ -615,7 +620,6 @@ Partial Class Form1
     Friend WithEvents PanelSep As System.Windows.Forms.MenuItem
     Friend WithEvents EditorPanel As System.Windows.Forms.MenuItem
     Friend WithEvents PreviewPanel As System.Windows.Forms.MenuItem
-    Friend WithEvents ViewSep As System.Windows.Forms.MenuItem
     Friend WithEvents WordWrap As System.Windows.Forms.MenuItem
     Friend WithEvents VirtualSpace As System.Windows.Forms.MenuItem
     Friend WithEvents WideCaret As System.Windows.Forms.MenuItem
@@ -660,10 +664,11 @@ Partial Class Form1
     Friend WithEvents BuildPanel As System.Windows.Forms.MenuItem
     Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents SiteTree As System.Windows.Forms.TreeView
     Friend WithEvents Log As System.Windows.Forms.TextBox
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents MenuItem6 As System.Windows.Forms.MenuItem
 End Class

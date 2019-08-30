@@ -121,9 +121,27 @@ Public Class Form1
         My.Settings.editorOpen = EditorPanel.Checked
         My.Settings.browserOpen = PreviewPanel.Checked
         My.Settings.buildOpen = BuildPanel.Checked
+
+        My.Settings.WordWrap = WordWrap.Checked
+        My.Settings.VirtualSpace = VirtualSpace.Checked
+        My.Settings.WideCaret = WideCaret.Checked
+
+        For Each page As TabPage In EditTabs.TabPages
+            Dim point As New Point
+            point.X = 0
+            point.Y = 0
+            Dim child = page.GetChildAtPoint(point, GetChildAtPointSkip.None)
+            If TypeOf child Is Editor Then
+                Dim edit As Editor = child
+                edit.Code.WordWrap = My.Settings.WordWrap
+                edit.Code.VirtualSpace = My.Settings.VirtualSpace
+                edit.Code.WideCaret = My.Settings.WideCaret
+            End If
+
+        Next
     End Sub
 
-    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click
+    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, OpenLink.LinkClicked
         If FolderBrowser.ShowDialog() = DialogResult.OK Then
             If My.Computer.FileSystem.DirectoryExists(FolderBrowser.SelectedPath) Then
                 openSite(FolderBrowser.SelectedPath, False)
@@ -147,7 +165,7 @@ Public Class Form1
         Else
             VirtualSpace.Checked = True
         End If
-        'FastColoredTextBox1.VirtualSpace = VirtualSpace.Checked
+        panelUpdate()
     End Sub
 
     Private Sub WideCaret_Click(ByVal sender As Object, ByVal e As EventArgs) Handles WideCaret.Click
@@ -156,7 +174,7 @@ Public Class Form1
         Else
             WideCaret.Checked = True
         End If
-        'FastColoredTextBox1.WideCaret = WideCaret.Checked
+        panelUpdate()
     End Sub
 
     Private Sub WordWrap_Click(ByVal sender As Object, ByVal e As EventArgs) Handles WordWrap.Click
@@ -165,6 +183,7 @@ Public Class Form1
         Else
             WordWrap.Checked = True
         End If
+        panelUpdate()
         'FastColoredTextBox1.WordWrap = WordWrap.Checked
     End Sub
 
@@ -230,14 +249,17 @@ Public Class Form1
                     If Not openFiles.Contains(e.Node.Tag) Then
                         Dim tab As New TabPage
                         tab.Tag = e.Node.Tag
-                        tab.Text = e.Node.Tag.ToString().Replace(SiteTree.Nodes.Item(0).Text, "")
+                        tab.Text = e.Node.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
                         EditTabs.TabPages.Add(tab)
                         EditTabs.SelectedTab = tab
-                        Dim code As New Editor
-                        code.Parent = tab
-                        code.Dock = DockStyle.Fill
-                        code.Code.OpenFile(tab.Tag)
-                        box = code.Code
+                        Dim editor As New Editor
+                        editor.Parent = tab
+                        editor.Dock = DockStyle.Fill
+                        editor.Code.OpenFile(tab.Tag)
+                        editor.Snapshot = editor.Code.Text
+                        editor.siteRoot = SiteTree.Nodes.Item(0).Text
+                        editor.openFile = tab.Tag
+                        box = editor.Code
                         openFiles.Add(e.Node.Tag)
                     End If
                     'FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
@@ -336,80 +358,6 @@ Public Class Form1
             End Try
         Catch ex As Exception
         End Try
-    End Sub
-
-    Private Sub SiteTree_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
-
-    End Sub
-
-    Public Overridable Sub HTMLSyntaxHighlight(ByVal range As Range)
-        Dim BlueBoldStyle As Style = New TextStyle(Brushes.Blue, Nothing, FontStyle.Bold)
-        Dim BlueStyle As Style = New TextStyle(Brushes.Blue, Nothing, FontStyle.Regular)
-        Dim BoldStyle As Style = New TextStyle(Nothing, Nothing, FontStyle.Bold Or FontStyle.Underline)
-        Dim BrownStyle As Style = New TextStyle(Brushes.Brown, Nothing, FontStyle.Italic)
-        Dim GrayStyle As Style = New TextStyle(Brushes.Gray, Nothing, FontStyle.Regular)
-        Dim GreenStyle As Style = New TextStyle(Brushes.Green, Nothing, FontStyle.Italic)
-        Dim MagentaStyle As Style = New TextStyle(Brushes.Magenta, Nothing, FontStyle.Regular)
-        Dim MaroonStyle As Style = New TextStyle(Brushes.Maroon, Nothing, FontStyle.Regular)
-        Dim RedStyle As Style = New TextStyle(Brushes.Red, Nothing, FontStyle.Regular)
-        Dim BlackStyle As Style = New TextStyle(Brushes.Black, Nothing, FontStyle.Regular)
-
-        Dim AStagStyle As New TextStyle(Brushes.Green, Nothing, FontStyle.Bold)
-        Dim ASconStyle As New TextStyle(Brushes.Turquoise, Nothing, FontStyle.Bold)
-
-        Dim HTMLCommentRegex1 = New Regex("(<!--.*?-->)|(<!--.*)", RegexOptions.Singleline Or RegexOptions.Compiled)
-        Dim HTMLCommentRegex2 = New Regex("(<!--.*?-->)|(.*-->)", RegexOptions.Singleline Or RegexOptions.RightToLeft Or RegexOptions.Compiled)
-        Dim HTMLTagRegex = New Regex("<|/>|</|>", RegexOptions.Compiled)
-        Dim HTMLTagNameRegex = New Regex("<(?<range>[!\w:]+)", RegexOptions.Compiled)
-        Dim HTMLEndTagRegex = New Regex("</(?<range>[\w:]+)>", RegexOptions.Compiled)
-        Dim HTMLTagContentRegex = New Regex("<[^>]+>", RegexOptions.Compiled)
-        Dim HTMLAttrRegex = New Regex("(?<range>[\w\d\-]{1,20}?)='[^']*'|(?<range>[\w\d\-]{1,20})=""[^""]*""|(?<range>[\w\d\-]{1,20})=[\w\d\-]{1,20}", RegexOptions.Compiled)
-        Dim HTMLAttrValRegex = New Regex("[\w\d\-]{1,20}?=(?<range>'[^']*')|[\w\d\-]{1,20}=(?<range>""[^""]*"")|[\w\d\-]{1,20}=(?<range>[\w\d\-]{1,20})", RegexOptions.Compiled)
-        Dim HTMLEntityRegex = New Regex("\&(amp|gt|lt|nbsp|quot|apos|copy|reg|#[0-9]{1,8}|#x[0-9a-f]{1,8});", RegexOptions.Compiled Or RegexOptions.IgnoreCase)
-        Dim CommentStyle = GreenStyle
-        Dim TagBracketStyle = BlueStyle
-        Dim TagNameStyle = MaroonStyle
-        Dim AttributeStyle = RedStyle
-        Dim AttributeValueStyle = BlueStyle
-        Dim HtmlEntityStyle = RedStyle
-        range.tb.CommentPrefix = Nothing
-        range.tb.LeftBracket = "<"c
-        range.tb.RightBracket = ">"c
-        range.tb.LeftBracket2 = "("c
-        range.tb.RightBracket2 = ")"c
-        range.tb.AutoIndentCharsPatterns = ""
-        range.ClearStyle(CommentStyle, TagBracketStyle, TagNameStyle, AttributeStyle, AttributeValueStyle, HtmlEntityStyle, ASconStyle, AStagStyle)
-        range.SetStyle(CommentStyle, HTMLCommentRegex1)
-        range.SetStyle(CommentStyle, HTMLCommentRegex2)
-        range.SetStyle(TagBracketStyle, HTMLTagRegex)
-        range.SetStyle(TagNameStyle, HTMLTagNameRegex)
-        range.SetStyle(TagNameStyle, HTMLEndTagRegex)
-        range.SetStyle(AttributeStyle, HTMLAttrRegex)
-        range.SetStyle(AttributeValueStyle, HTMLAttrValRegex)
-        range.SetStyle(HtmlEntityStyle, HTMLEntityRegex)
-        range.SetStyle(CommentStyle, "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]", RegexOptions.Singleline)
-        range.SetStyle(CommentStyle, "\[#.*?#\]", RegexOptions.Singleline)
-        range.ClearFoldingMarkers()
-        range.SetFoldingMarkers("<head", "</head>", RegexOptions.IgnoreCase)
-        range.SetFoldingMarkers("<body", "</body>", RegexOptions.IgnoreCase)
-        range.SetFoldingMarkers("<table", "</table>", RegexOptions.IgnoreCase)
-        range.SetFoldingMarkers("<form", "</form>", RegexOptions.IgnoreCase)
-        range.SetFoldingMarkers("<div", "</div>", RegexOptions.IgnoreCase)
-        range.SetFoldingMarkers("<script", "</script>", RegexOptions.IgnoreCase)
-        range.SetFoldingMarkers("<tr", "</tr>", RegexOptions.IgnoreCase)
-    End Sub
-
-    Private Sub FastColoredTextBox1_TextChanged(ByVal sender As System.Object, ByVal e As FastColoredTextBoxNS.TextChangedEventArgs)
-        'HTMLSyntaxHighlight(e.ChangedRange)
-        'Dim GreenStyle As New TextStyle(Brushes.Green, Nothing, FontStyle.Bold)
-        'Dim TurqStyle As New TextStyle(Brushes.Turquoise, Nothing, FontStyle.Bold)
-        ''clear style of changed range
-        'FastColoredTextBox1.Range.ClearStyle(TurqStyle)
-        'FastColoredTextBox1.Range.ClearStyle(GreenStyle)
-        ''comment highlighting
-        'FastColoredTextBox1.Range.SetStyle(TurqStyle, "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]", RegexOptions.Singleline)
-        'FastColoredTextBox1.Range.SetStyle(GreenStyle, "\[#.*?#\]", RegexOptions.Singleline)
-        ''for atteql, value, text in re.findall(r'\[(.*)=(.*?)\](.*)\[\/\1.*\]', template):
     End Sub
 
     Private Sub EdSplit_SplitterMoved(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LayoutEventArgs) Handles EdSplit.Layout
@@ -774,5 +722,20 @@ Public Class Form1
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles Apricot.RunWorkerCompleted
         Me.Text = "AutoSite XL"
         BuildProgress.Visible = False
+    End Sub
+
+    Private Sub Form1_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        Dim saved = True
+        For Each page As TabPage In EditTabs.TabPages
+            If page.Text.Contains("*") Then
+                saved = False
+            End If
+        Next
+        If Not saved Then
+            Dim d As DialogResult = MsgBox("One or more files have unsaved changes that will be lost. Close anyway?", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "AutoSite XL")
+            If d = Windows.Forms.DialogResult.No Then
+                e.Cancel = True
+            End If
+        End If
     End Sub
 End Class

@@ -293,7 +293,6 @@ Public Class Form1
                     End If
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message)
             End Try
         End If
     End Sub
@@ -706,6 +705,7 @@ Public Class Form1
                 newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
             Next
             Apricot.ReportProgress(90, "    Saving file")
+            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
             My.Computer.FileSystem.WriteAllText(out & rel, newHtml, False)
         Next
         For Each subDir In directory.GetDirectories

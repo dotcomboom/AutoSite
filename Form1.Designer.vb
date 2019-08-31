@@ -68,11 +68,11 @@ Partial Class Form1
         Me.OpenLink = New System.Windows.Forms.LinkLabel
         Me.OpenPrompt = New System.Windows.Forms.Label
         Me.SiteTree = New System.Windows.Forms.TreeView
-        Me.Log = New System.Windows.Forms.TextBox
         Me.BuildProgress = New System.Windows.Forms.ProgressBar
         Me.BuildStrip = New System.Windows.Forms.ToolStrip
         Me.Build = New System.Windows.Forms.ToolStripButton
         Me.OpenDefault = New System.Windows.Forms.ToolStripButton
+        Me.BrowseOutput = New System.Windows.Forms.ToolStripButton
         Me.EdSplit = New System.Windows.Forms.SplitContainer
         Me.EditTabs = New System.Windows.Forms.TabControl
         Me.Preview = New System.Windows.Forms.WebBrowser
@@ -94,6 +94,7 @@ Partial Class Form1
         Me.NewPHPCon = New System.Windows.Forms.MenuItem
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
         Me.Apricot = New System.ComponentModel.BackgroundWorker
+        Me.Log = New System.Windows.Forms.RichTextBox
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -411,18 +412,6 @@ Partial Class Form1
         Me.SiteTree.Size = New System.Drawing.Size(235, 273)
         Me.SiteTree.TabIndex = 4
         '
-        'Log
-        '
-        Me.Log.BackColor = System.Drawing.SystemColors.Window
-        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Log.Location = New System.Drawing.Point(0, 25)
-        Me.Log.Multiline = True
-        Me.Log.Name = "Log"
-        Me.Log.ReadOnly = True
-        Me.Log.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.Log.Size = New System.Drawing.Size(235, 96)
-        Me.Log.TabIndex = 0
-        '
         'BuildProgress
         '
         Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -436,7 +425,7 @@ Partial Class Form1
         '
         Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
         Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenDefault})
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenDefault, Me.BrowseOutput})
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -462,7 +451,17 @@ Partial Class Form1
         Me.OpenDefault.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.OpenDefault.Name = "OpenDefault"
         Me.OpenDefault.Size = New System.Drawing.Size(23, 22)
-        Me.OpenDefault.Text = "ToolStripButton1"
+        Me.OpenDefault.Text = "Open Output Folder"
+        '
+        'BrowseOutput
+        '
+        Me.BrowseOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BrowseOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BrowseOutput.Image = CType(resources.GetObject("BrowseOutput.Image"), System.Drawing.Image)
+        Me.BrowseOutput.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BrowseOutput.Name = "BrowseOutput"
+        Me.BrowseOutput.Size = New System.Drawing.Size(23, 22)
+        Me.BrowseOutput.Text = "Browse Site in Preview"
         '
         'EdSplit
         '
@@ -606,6 +605,16 @@ Partial Class Form1
         '
         Me.Apricot.WorkerReportsProgress = True
         '
+        'Log
+        '
+        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Log.Location = New System.Drawing.Point(0, 25)
+        Me.Log.Name = "Log"
+        Me.Log.ReadOnly = True
+        Me.Log.Size = New System.Drawing.Size(235, 96)
+        Me.Log.TabIndex = 4
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -692,7 +701,6 @@ Partial Class Form1
     Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
     Friend WithEvents OpenPrompt As System.Windows.Forms.Label
     Friend WithEvents SiteTree As System.Windows.Forms.TreeView
-    Friend WithEvents Log As System.Windows.Forms.TextBox
     Friend WithEvents FormatMenu As System.Windows.Forms.MenuItem
     Friend WithEvents SyntaxHighlight As System.Windows.Forms.MenuItem
     Friend WithEvents FormatMenuSep As System.Windows.Forms.MenuItem
@@ -701,4 +709,6 @@ Partial Class Form1
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents LivePreview As System.Windows.Forms.MenuItem
     Friend WithEvents OpenDefault As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BrowseOutput As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Log As System.Windows.Forms.RichTextBox
 End Class

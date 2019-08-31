@@ -2,6 +2,7 @@
 Imports FastColoredTextBoxNS
 Imports System.IO
 Imports System.Text
+Imports Microsoft.Synchronization.Data
 
 Public Class Form1
 
@@ -587,10 +588,6 @@ Public Class Form1
     Public bld = ""
     Public template_cache As New Dictionary(Of String, String)()
 
-    Private Sub aLog(ByVal text As String)
-        Log.AppendText(vbNewLine & text)
-    End Sub
-
     'https://bytes.com/topic/visual-basic-net/answers/370586-replace-first-occurrance-substring#post1428786
     Public Shared Function ReplaceFirst(ByVal expression As String, ByVal find As String, ByVal replacement As String) As String
         Dim index As Integer = expression.IndexOf(find)
@@ -632,15 +629,15 @@ Public Class Form1
 
     Sub walkInputs(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal input As String, ByVal templates As String, ByVal out As String)
         For Each file In directory.GetFiles(pattern)
-            Apricot.ReportProgress(0, "Rendering " & file.FullName)
             Dim rel = ReplaceFirst(file.FullName, input, "")
+            Apricot.ReportProgress(0, "  Rendering " & rel.Replace("\", "/"))
             Dim content = ""
             Dim attribs As New Dictionary(Of String, String)()
             attribs.Add("template", "default")
             attribs.Add("path", rel.Replace("\", "/"))
             Dim reader As New StreamReader(file.FullName, Encoding.Default)
             Dim line As String
-            Apricot.ReportProgress(20, "Reading attributes")
+            Apricot.ReportProgress(20, "    Reading attributes")
             Do
                 line = reader.ReadLine
                 Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("^<!-- attrib (.*): (.*) -->")
@@ -654,16 +651,16 @@ Public Class Form1
                 End If
             Loop Until line Is Nothing
             If Not template_cache.ContainsKey(attribs.Item("template")) Then
-                Apricot.ReportProgress(30, "Loading template " & attribs.Item("template"))
+                Apricot.ReportProgress(30, "    Loading template " & attribs.Item("template"))
                 template_cache.Item(attribs.Item("template")) = My.Computer.FileSystem.ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
             End If
             Dim newHtml = template_cache.Item(attribs.Item("template"))
-            Apricot.ReportProgress(50, "Slotting into template " & attribs.Item("template"))
+            Apricot.ReportProgress(50, "    Slotting into template " & attribs.Item("template"))
             Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
             Dim matches = Regex.Matches(newHtml, conditionalRegex)
             For Each m As Match In matches
                 Dim fullStr = m.Groups(0).Value
-                Apricot.ReportProgress(50, "  " & fullStr)
+                ' Apricot.ReportProgress(50, "  " & fullStr)
                 Dim key = m.Groups(1).Value
                 Dim value = m.Groups(2).Value
                 Dim html = m.Groups(3).Value
@@ -698,12 +695,13 @@ Public Class Form1
             'MsgBox(rel)
             newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(rel, "\")))
             For Each kvp As KeyValuePair(Of String, String) In attribs
-                Apricot.ReportProgress(50, "  " & kvp.Key & ": " & kvp.Value)
+                If Not kvp.Key = "path" Then
+                    Apricot.ReportProgress(50, "      " & kvp.Key & ": " & kvp.Value)
+                End If
                 newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
             Next
-            Apricot.ReportProgress(90, "Saving file")
+            Apricot.ReportProgress(90, "    Saving file")
             My.Computer.FileSystem.WriteAllText(out & rel, newHtml, False)
-            Apricot.ReportProgress(100, "Done with file")
         Next
         For Each subDir In directory.GetDirectories
             walkInputs(subDir, pattern, input, templates, out)
@@ -716,36 +714,35 @@ Public Class Form1
         Dim includes = Path.Combine(bld, "includes\")
         Dim out = Path.Combine(bld, "out\")
 
-        Apricot.ReportProgress(0, "Starting!")
-        Apricot.ReportProgress(0, bld)
+        Apricot.ReportProgress(0, "Apricot building " & bld)
 
         If Not My.Computer.FileSystem.DirectoryExists(input) Then
-            Apricot.ReportProgress(10, "Creating in/ folder")
+            Apricot.ReportProgress(10, "Creating in\ folder")
             My.Computer.FileSystem.CreateDirectory(input)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(templates) Then
-            Apricot.ReportProgress(10, "Creating templates/ folder")
+            Apricot.ReportProgress(10, "Creating templates\ folder")
             My.Computer.FileSystem.CreateDirectory(templates)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(includes) Then
-            Apricot.ReportProgress(10, "Creating includes/ folder")
+            Apricot.ReportProgress(10, "Creating includes\ folder")
             My.Computer.FileSystem.CreateDirectory(includes)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(out) Then
-            Apricot.ReportProgress(10, "Creating out/ folder")
+            Apricot.ReportProgress(10, "Creating out\ folder")
             My.Computer.FileSystem.CreateDirectory(out)
         End If
 
-        'walkLog(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*")
-        'walkLog(My.Computer.FileSystem.GetDirectoryInfo(templates), "*.*")
-        'walkLog(My.Computer.FileSystem.GetDirectoryInfo(includes), "*.*")
-        'walkLog(My.Computer.FileSystem.GetDirectoryInfo(out), "*.*")
-
         Apricot.ReportProgress(20, "Syncing includes")
 
-        My.Computer.FileSystem.CopyDirectory(includes, out, True)
+        Dim s As New doSync(includes, out)
+        Dim t = s.BeginSynchronization()
+        If t = doSync.SyncResults.Unsuccessful Then
+            Apricot.ReportProgress(20, "  Copying includes\ folder to out\")
+            My.Computer.FileSystem.CopyDirectory(includes, out, True)
+        End If
 
-        Apricot.ReportProgress(25, "Rendering input files")
+        Apricot.ReportProgress(50, "Rendering input files")
         walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", input, templates, out)
 
         Apricot.ReportProgress(100, "Finished!")
@@ -755,7 +752,7 @@ Public Class Form1
         BuildProgress.Visible = True
         BuildProgress.Value = e.ProgressPercentage
         Me.Text = e.UserState
-        aLog(e.UserState)
+        Log.AppendText(e.UserState & vbNewLine)
     End Sub
 
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles Apricot.RunWorkerCompleted
@@ -814,7 +811,21 @@ Public Class Form1
     End Sub
 
     Private Sub OpenDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenDefault.Click
-        MsgBox(SiteTree.Nodes(0).Text & "\out\")
         Process.Start(SiteTree.Nodes(0).Text & "\out\")
+    End Sub
+
+    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseOutput.Click
+        If My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.html") Then
+            Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.html")
+        Else
+            Preview.Navigate(SiteTree.Nodes(0).Text & "\out\")
+        End If
+    End Sub
+
+    Private Sub Preview_Navigating(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserNavigatingEventArgs) Handles Preview.Navigating
+        If My.Computer.FileSystem.FileExists(e.Url.AbsolutePath & "\index.html") Then
+            e.Cancel = True
+            Preview.Navigate(e.Url.AbsolutePath & "\index.html")
+        End If
     End Sub
 End Class

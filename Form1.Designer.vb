@@ -95,6 +95,8 @@ Partial Class Form1
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
         Me.Apricot = New System.ComponentModel.BackgroundWorker
         Me.Log = New System.Windows.Forms.RichTextBox
+        Me.Watcher = New System.IO.FileSystemWatcher
+        Me.RenameCon = New System.Windows.Forms.MenuItem
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -105,6 +107,7 @@ Partial Class Form1
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
         Me.EdSplit.SuspendLayout()
+        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'VS2017
@@ -350,8 +353,8 @@ Partial Class Form1
         'CoreSplit.Panel2
         '
         Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
-        Me.CoreSplit.Size = New System.Drawing.Size(711, 421)
-        Me.CoreSplit.SplitterDistance = 235
+        Me.CoreSplit.Size = New System.Drawing.Size(709, 419)
+        Me.CoreSplit.SplitterDistance = 234
         Me.CoreSplit.TabIndex = 4
         '
         'ExSplit
@@ -372,8 +375,8 @@ Partial Class Form1
         Me.ExSplit.Panel2.Controls.Add(Me.Log)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
-        Me.ExSplit.Size = New System.Drawing.Size(235, 421)
-        Me.ExSplit.SplitterDistance = 273
+        Me.ExSplit.Size = New System.Drawing.Size(234, 419)
+        Me.ExSplit.SplitterDistance = 271
         Me.ExSplit.TabIndex = 4
         '
         'OpenLink
@@ -384,7 +387,7 @@ Partial Class Form1
         Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.OpenLink.Location = New System.Drawing.Point(22, 51)
         Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.Size = New System.Drawing.Size(191, 13)
+        Me.OpenLink.Size = New System.Drawing.Size(190, 13)
         Me.OpenLink.TabIndex = 1
         Me.OpenLink.TabStop = True
         Me.OpenLink.Text = "Create or open a site folder"
@@ -398,7 +401,7 @@ Partial Class Form1
         Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.OpenPrompt.Location = New System.Drawing.Point(19, 26)
         Me.OpenPrompt.Name = "OpenPrompt"
-        Me.OpenPrompt.Size = New System.Drawing.Size(194, 13)
+        Me.OpenPrompt.Size = New System.Drawing.Size(193, 13)
         Me.OpenPrompt.TabIndex = 2
         Me.OpenPrompt.Text = "A site has not been opened yet."
         Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -409,7 +412,7 @@ Partial Class Form1
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
         Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.Size = New System.Drawing.Size(235, 273)
+        Me.SiteTree.Size = New System.Drawing.Size(234, 271)
         Me.SiteTree.TabIndex = 4
         '
         'BuildProgress
@@ -417,7 +420,7 @@ Partial Class Form1
         Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BuildProgress.Location = New System.Drawing.Point(0, 121)
         Me.BuildProgress.Name = "BuildProgress"
-        Me.BuildProgress.Size = New System.Drawing.Size(235, 23)
+        Me.BuildProgress.Size = New System.Drawing.Size(234, 23)
         Me.BuildProgress.TabIndex = 1
         Me.BuildProgress.Visible = False
         '
@@ -429,7 +432,7 @@ Partial Class Form1
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.BuildStrip.Size = New System.Drawing.Size(235, 25)
+        Me.BuildStrip.Size = New System.Drawing.Size(234, 25)
         Me.BuildStrip.TabIndex = 3
         Me.BuildStrip.Text = "ToolStrip1"
         '
@@ -477,8 +480,8 @@ Partial Class Form1
         'EdSplit.Panel2
         '
         Me.EdSplit.Panel2.Controls.Add(Me.Preview)
-        Me.EdSplit.Size = New System.Drawing.Size(472, 421)
-        Me.EdSplit.SplitterDistance = 244
+        Me.EdSplit.Size = New System.Drawing.Size(471, 419)
+        Me.EdSplit.SplitterDistance = 242
         Me.EdSplit.TabIndex = 1
         '
         'EditTabs
@@ -491,7 +494,7 @@ Partial Class Form1
         Me.EditTabs.Padding = New System.Drawing.Point(0, 0)
         Me.EditTabs.SelectedIndex = 0
         Me.EditTabs.ShowToolTips = True
-        Me.EditTabs.Size = New System.Drawing.Size(472, 244)
+        Me.EditTabs.Size = New System.Drawing.Size(471, 242)
         Me.EditTabs.TabIndex = 1
         '
         'Preview
@@ -501,7 +504,7 @@ Partial Class Form1
         Me.Preview.MinimumSize = New System.Drawing.Size(20, 20)
         Me.Preview.Name = "Preview"
         Me.Preview.ScriptErrorsSuppressed = True
-        Me.Preview.Size = New System.Drawing.Size(472, 173)
+        Me.Preview.Size = New System.Drawing.Size(471, 173)
         Me.Preview.TabIndex = 0
         Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
@@ -522,7 +525,7 @@ Partial Class Form1
         '
         'Context
         '
-        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.ContextSep3, Me.NewCon})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.RenameCon, Me.ContextSep3, Me.NewCon})
         '
         'OpenInDefault
         '
@@ -561,12 +564,12 @@ Partial Class Form1
         '
         'ContextSep3
         '
-        Me.ContextSep3.Index = 7
+        Me.ContextSep3.Index = 8
         Me.ContextSep3.Text = "-"
         '
         'NewCon
         '
-        Me.NewCon.Index = 8
+        Me.NewCon.Index = 9
         Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon})
         Me.NewCon.Text = "New"
         '
@@ -611,15 +614,26 @@ Partial Class Form1
         Me.Log.Location = New System.Drawing.Point(0, 25)
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(235, 96)
+        Me.Log.Size = New System.Drawing.Size(234, 96)
         Me.Log.TabIndex = 4
         Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        '
+        'Watcher
+        '
+        Me.Watcher.EnableRaisingEvents = True
+        Me.Watcher.IncludeSubdirectories = True
+        Me.Watcher.SynchronizingObject = Me
+        '
+        'RenameCon
+        '
+        Me.RenameCon.Index = 7
+        Me.RenameCon.Text = "Rename"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(711, 421)
+        Me.ClientSize = New System.Drawing.Size(709, 419)
         Me.Controls.Add(Me.CoreSplit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Menu = Me.MenuBar
@@ -637,6 +651,7 @@ Partial Class Form1
         Me.EdSplit.Panel1.ResumeLayout(False)
         Me.EdSplit.Panel2.ResumeLayout(False)
         Me.EdSplit.ResumeLayout(False)
+        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -711,4 +726,6 @@ Partial Class Form1
     Friend WithEvents OpenDefault As System.Windows.Forms.ToolStripButton
     Friend WithEvents BrowseOutput As System.Windows.Forms.ToolStripButton
     Friend WithEvents Log As System.Windows.Forms.RichTextBox
+    Friend WithEvents Watcher As System.IO.FileSystemWatcher
+    Friend WithEvents RenameCon As System.Windows.Forms.MenuItem
 End Class

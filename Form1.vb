@@ -111,6 +111,7 @@ Public Class Form1
         End If
         checkOpen()
         My.Settings.openProject = path
+        Watcher.Path = path
     End Sub
 
     Public Sub panelUpdate()
@@ -165,6 +166,7 @@ Public Class Form1
         EditTabs.TabPages.Clear()
         Preview.DocumentText = ""
         My.Settings.openProject = ""
+        Watcher.Path = ""
         checkOpen()
     End Sub
 
@@ -399,6 +401,7 @@ Public Class Form1
         Else
             'Build.Show()
             bld = SiteTree.Nodes(0).Text
+            Log.Clear()
             Apricot.RunWorkerAsync()
         End If
     End Sub
@@ -418,6 +421,7 @@ Public Class Form1
                 CopyCon.Enabled = False
                 PasteCon.Enabled = False
                 DeleteCon.Enabled = False
+                RenameCon.Enabled = False
                 AddFilesCon.Enabled = False
                 NewCon.Enabled = False
             Else
@@ -429,6 +433,7 @@ Public Class Form1
                     PasteCon.Enabled = False
                 End If
                 DeleteCon.Enabled = True
+                RenameCon.Enabled = True
                 AddFilesCon.Enabled = True
                 NewCon.Enabled = True
             End If
@@ -474,7 +479,7 @@ Public Class Form1
                     My.Computer.FileSystem.CopyFile(s, newFile, False)
                 Next
             End If
-            refreshTree(SiteTree.Nodes(0))
+            'refreshTree(SiteTree.Nodes(0))
         Catch ex As Exception
 
         End Try
@@ -485,14 +490,14 @@ Public Class Form1
         If My.Computer.FileSystem.DirectoryExists(path) Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(path, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
-                refreshTree(SiteTree.Nodes(0))
+                'refreshTree(SiteTree.Nodes(0))
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
         ElseIf My.Computer.FileSystem.FileExists(path) Then
             Try
                 My.Computer.FileSystem.DeleteFile(path, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
-                refreshTree(SiteTree.Nodes(0))
+                'refreshTree(SiteTree.Nodes(0))
             Catch ex As Exception
 
             End Try
@@ -509,7 +514,7 @@ Public Class Form1
         End If
         If My.Computer.FileSystem.DirectoryExists(dir) Then
             My.Computer.FileSystem.CreateDirectory(System.IO.Path.Combine(dir, "New Folder"))
-            refreshTree(SiteTree.Nodes(0))
+            'refreshTree(SiteTree.Nodes(0))
         End If
     End Sub
 
@@ -522,7 +527,7 @@ Public Class Form1
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
         My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.html"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine, False)
-        refreshTree(SiteTree.Nodes(0))
+        'refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
@@ -534,7 +539,7 @@ Public Class Form1
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
         My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.md"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine, False)
-        refreshTree(SiteTree.Nodes(0))
+        'refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub NewPHPCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewPHPCon.Click
@@ -546,7 +551,7 @@ Public Class Form1
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
         My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.php"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
-        refreshTree(SiteTree.Nodes(0))
+        'refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub AddFilesCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddFilesCon.Click
@@ -562,15 +567,15 @@ Public Class Form1
             If AddFilesDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
                 For Each file In AddFilesDialog.FileNames
                     Try
-                        My.Computer.FileSystem.CopyFile(file, System.IO.Path.Combine(dir, file), True, FileIO.UICancelOption.DoNothing)
+                        My.Computer.FileSystem.CopyFile(file, System.IO.Path.Combine(dir, System.IO.Path.GetFileName(file)))
                     Catch ex As Exception
                         MsgBox(ex.Message)
                     End Try
                 Next
-                refreshTree(SiteTree.Nodes(0))
+                'refreshTree(SiteTree.Nodes(0))
             End If
         End If
-        refreshTree(SiteTree.Nodes(0))
+        'refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub EngineApricot_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EngineApricot.Click
@@ -826,6 +831,112 @@ Public Class Form1
         If My.Computer.FileSystem.FileExists(e.Url.AbsolutePath & "\index.html") Then
             e.Cancel = True
             Preview.Navigate(e.Url.AbsolutePath & "\index.html")
+        End If
+    End Sub
+
+    Private Sub Watcher_Created(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Created
+        Dim root = SiteTree.Nodes(0)
+        Dim pages = root.Nodes(0)
+        Dim templates = root.Nodes(1)
+        Dim includes = root.Nodes(2)
+        Dim node As New TreeNode
+        Dim arr As Array = e.Name.Split("\")
+        node.Text = arr(arr.Length - 1)
+        node.Tag = e.FullPath
+        node.ImageKey = "Folder"
+        node.SelectedImageKey = "Folder"
+        If e.Name.StartsWith("in\") Then
+            Dim f = ReplaceFirst(e.Name, "in\", "")
+            Dim pnode As TreeNode = pages
+            While f.Contains("\")
+                Dim pdir = f.Split("\")(0)
+                f = ReplaceFirst(f, pdir & "\", "")
+                For Each nod As TreeNode In pnode.Nodes()
+                    If nod.Text = pdir Then
+                        pnode = nod
+                    End If
+                Next
+            End While
+            If f.Contains(".") Then
+                node.ImageKey = "Page"
+                node.SelectedImageKey = "Page"
+            End If
+            pnode.Nodes.Add(node)
+        ElseIf e.Name.StartsWith("templates\") Then
+            Dim f = ReplaceFirst(e.Name, "templates\", "")
+            Dim pnode As TreeNode = templates
+            While f.Contains("\")
+                Dim pdir = f.Split("\")(0)
+                f = ReplaceFirst(f, pdir & "\", "")
+                For Each nod As TreeNode In pnode.Nodes()
+                    If nod.Text = pdir Then
+                        pnode = nod
+                    End If
+                Next
+            End While
+            If f.Contains(".") Then
+                node.ImageKey = "Template"
+                node.SelectedImageKey = "Template"
+            End If
+            pnode.Nodes.Add(node)
+        ElseIf e.Name.StartsWith("includes\") Then
+            Dim f = ReplaceFirst(e.Name, "includes\", "")
+            Dim pnode As TreeNode = includes
+            While f.Contains("\")
+                Dim pdir = f.Split("\")(0)
+                f = ReplaceFirst(f, pdir & "\", "")
+                For Each nod As TreeNode In pnode.Nodes()
+                    If nod.Text = pdir Then
+                        pnode = nod
+                    End If
+                Next
+            End While
+            If f.Contains(".") Then
+                node.ImageKey = "Include"
+                node.SelectedImageKey = "Include"
+            End If
+            pnode.Nodes.Add(node)
+        End If
+    End Sub
+
+    Private foundNode As TreeNode = Nothing
+
+    'https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control
+    Private Sub FindNodeTag(ByVal treeNode As TreeNode, ByVal tag As String)
+        If treeNode.Tag = tag Then
+            foundNode = treeNode
+        End If
+
+        If foundNode Is Nothing Then
+            For Each tn As TreeNode In treeNode.Nodes
+                FindNodeTag(tn, tag)
+            Next
+        End If
+    End Sub
+
+    Private Sub Watcher_Deleted(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Deleted
+        foundNode = Nothing
+        FindNodeTag(SiteTree.Nodes(0), e.FullPath)
+        If Not foundNode Is Nothing Then
+            foundNode.Remove()
+        End If
+    End Sub
+
+    Private Sub Watcher_Renamed(ByVal sender As System.Object, ByVal e As System.IO.RenamedEventArgs) Handles Watcher.Renamed
+        foundNode = Nothing
+        FindNodeTag(SiteTree.Nodes(0), e.OldFullPath)
+        If Not foundNode Is Nothing Then
+            Dim arr As Array = e.Name.Split("\")
+            foundNode.Text = arr(arr.Length - 1)
+            foundNode.Tag = e.FullPath
+        End If
+    End Sub
+
+    Private Sub Rename_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RenameCon.Click
+        foundNode = Nothing
+        FindNodeTag(SiteTree.Nodes(0), Context.Tag)
+        If Not foundNode Is Nothing Then
+            foundNode.BeginEdit()
         End If
     End Sub
 End Class

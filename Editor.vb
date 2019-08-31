@@ -49,7 +49,7 @@ Public Class Editor
         End If
         Try
             If My.Settings.LivePreview Then
-                If Me.Parent.Text.EndsWith(".md") Then
+                If Me.Parent.Text.Replace("*", "").EndsWith(".md") Then
                     Form1.Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(Code.Text)
                 Else
                     Form1.Preview.DocumentText = Code.Text

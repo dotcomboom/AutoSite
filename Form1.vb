@@ -247,6 +247,7 @@ Public Class Form1
         VirtualSpace.Checked = My.Settings.VirtualSpace
         WideCaret.Checked = My.Settings.WideCaret
         SyntaxHighlight.Checked = My.Settings.SyntaxHighlight
+        LivePreview.Checked = My.Settings.LivePreview
 
         If My.Computer.FileSystem.DirectoryExists(My.Settings.openProject) Then
             openSite(My.Settings.openProject, True)

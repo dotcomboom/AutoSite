@@ -73,6 +73,7 @@ Partial Class Editor
         '
         'SaveBtn
         '
+        Me.SaveBtn.AutoToolTip = False
         Me.SaveBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem, Me.SaveAllToolStripMenuItem})
         Me.SaveBtn.Enabled = False
         Me.SaveBtn.Image = CType(resources.GetObject("SaveBtn.Image"), System.Drawing.Image)
@@ -85,14 +86,14 @@ Partial Class Editor
         '
         Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'SaveAllToolStripMenuItem
         '
         Me.SaveAllToolStripMenuItem.Image = CType(resources.GetObject("SaveAllToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveAllToolStripMenuItem.Name = "SaveAllToolStripMenuItem"
-        Me.SaveAllToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.SaveAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveAllToolStripMenuItem.Text = "Save All"
         '
         'Sep
@@ -199,6 +200,7 @@ Partial Class Editor
         '
         'Preview
         '
+        Me.Preview.AutoToolTip = False
         Me.Preview.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LivePreview})
         Me.Preview.Image = CType(resources.GetObject("Preview.Image"), System.Drawing.Image)
         Me.Preview.ImageTransparentColor = System.Drawing.Color.Magenta
@@ -209,7 +211,6 @@ Partial Class Editor
         'LivePreview
         '
         Me.LivePreview.CheckOnClick = True
-        Me.LivePreview.Image = CType(resources.GetObject("LivePreview.Image"), System.Drawing.Image)
         Me.LivePreview.Name = "LivePreview"
         Me.LivePreview.Size = New System.Drawing.Size(152, 22)
         Me.LivePreview.Text = "Live Preview"
@@ -218,8 +219,8 @@ Partial Class Editor
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
-        Me.Code.AutoScrollMinSize = New System.Drawing.Size(83, 14)
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Code.AutoScrollMinSize = New System.Drawing.Size(27, 14)
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 14
         Me.Code.CharWidth = 8
@@ -241,7 +242,6 @@ Partial Class Editor
         Me.Code.ServiceColors = CType(resources.GetObject("Code.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
         Me.Code.Size = New System.Drawing.Size(438, 325)
         Me.Code.TabIndex = 2
-        Me.Code.Text = "Loading"
         Me.Code.Zoom = 100
         '
         'Context

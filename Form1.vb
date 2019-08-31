@@ -634,10 +634,10 @@ Public Class Form1
         For Each file In directory.GetFiles(pattern)
             Apricot.ReportProgress(0, "Rendering " & file.FullName)
             Dim rel = ReplaceFirst(file.FullName, input, "")
-            'Dim contents = My.Computer.FileSystem.ReadAllText(file.FullName)
             Dim content = ""
             Dim attribs As New Dictionary(Of String, String)()
             attribs.Add("template", "default")
+            attribs.Add("path", rel.Replace("\", "/"))
             Dim reader As New StreamReader(file.FullName, Encoding.Default)
             Dim line As String
             Apricot.ReportProgress(20, "Reading attributes")
@@ -659,6 +659,37 @@ Public Class Form1
             End If
             Dim newHtml = template_cache.Item(attribs.Item("template"))
             Apricot.ReportProgress(50, "Slotting into template " & attribs.Item("template"))
+            Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
+            Dim matches = Regex.Matches(newHtml, conditionalRegex)
+            For Each m As Match In matches
+                Dim fullStr = m.Groups(0).Value
+                Apricot.ReportProgress(50, "  " & fullStr)
+                Dim key = m.Groups(1).Value
+                Dim value = m.Groups(2).Value
+                Dim html = m.Groups(3).Value
+                Dim equality = (m.Groups(4).Value = "=")
+                Dim pass = False
+
+                If equality = True Then
+                    If attribs.ContainsKey(key) Then
+                        If attribs.Item(key) = value Then
+                            pass = True
+                        End If
+                    End If
+                Else
+                    If Not attribs.ContainsKey(key) Then
+                        pass = True
+                    ElseIf Not (attribs.Item(key) = value) Then
+                        pass = True
+                    End If
+                End If
+
+                If pass Then
+                    newHtml = newHtml.Replace(fullStr, html)
+                Else
+                    newHtml = newHtml.Replace(fullStr, "")
+                End If
+            Next
             If rel.EndsWith(".md") Then
                 content = CommonMark.CommonMarkConverter.Convert(content)
                 rel = ReplaceLast(rel, ".md", ".html")

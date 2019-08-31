@@ -32,6 +32,7 @@ Public Class Form1
         CloseSite.Enabled = (SiteTree.Nodes.Count > 0)
         BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
         Build.Enabled = (SiteTree.Nodes.Count > 0)
+        OpenDefault.Enabled = (SiteTree.Nodes.Count > 0)
     End Sub
 
     Private Sub iconTheme()
@@ -129,6 +130,7 @@ Public Class Form1
         My.Settings.VirtualSpace = VirtualSpace.Checked
         My.Settings.WideCaret = WideCaret.Checked
         My.Settings.SyntaxHighlight = SyntaxHighlight.Checked
+        My.Settings.LivePreview = LivePreview.Checked
 
         For Each page As TabPage In EditTabs.TabPages
             Dim point As New Point
@@ -778,5 +780,10 @@ Public Class Form1
                 edit.Save()
             End If
         Next
+    End Sub
+
+    Private Sub OpenDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenDefault.Click
+        MsgBox(SiteTree.Nodes(0).Text & "\out\")
+        Process.Start(SiteTree.Nodes(0).Text & "\out\")
     End Sub
 End Class

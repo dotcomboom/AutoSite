@@ -72,6 +72,7 @@ Partial Class Form1
         Me.BuildProgress = New System.Windows.Forms.ProgressBar
         Me.BuildStrip = New System.Windows.Forms.ToolStrip
         Me.Build = New System.Windows.Forms.ToolStripButton
+        Me.OpenDefault = New System.Windows.Forms.ToolStripButton
         Me.EdSplit = New System.Windows.Forms.SplitContainer
         Me.EditTabs = New System.Windows.Forms.TabControl
         Me.Preview = New System.Windows.Forms.WebBrowser
@@ -435,7 +436,7 @@ Partial Class Form1
         '
         Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
         Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build})
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenDefault})
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -452,6 +453,16 @@ Partial Class Form1
         Me.Build.Size = New System.Drawing.Size(23, 22)
         Me.Build.Text = "ToolStripButton1"
         Me.Build.ToolTipText = "Build"
+        '
+        'OpenDefault
+        '
+        Me.OpenDefault.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.OpenDefault.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenDefault.Image = CType(resources.GetObject("OpenDefault.Image"), System.Drawing.Image)
+        Me.OpenDefault.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.OpenDefault.Name = "OpenDefault"
+        Me.OpenDefault.Size = New System.Drawing.Size(23, 22)
+        Me.OpenDefault.Text = "ToolStripButton1"
         '
         'EdSplit
         '
@@ -689,4 +700,5 @@ Partial Class Form1
     Friend WithEvents BuildStrip As System.Windows.Forms.ToolStrip
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents LivePreview As System.Windows.Forms.MenuItem
+    Friend WithEvents OpenDefault As System.Windows.Forms.ToolStripButton
 End Class

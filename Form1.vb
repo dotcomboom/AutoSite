@@ -26,9 +26,12 @@ Public Class Form1
     End Sub
 
     Private Sub checkOpen()
-        Panel1.Visible = (SiteTree.Nodes.Count < 1)
+        OpenPrompt.Visible = (SiteTree.Nodes.Count < 1)
+        OpenLink.Visible = (SiteTree.Nodes.Count < 1)
+
         CloseSite.Enabled = (SiteTree.Nodes.Count > 0)
         BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
+        Build.Enabled = (SiteTree.Nodes.Count > 0)
     End Sub
 
     Private Sub iconTheme()
@@ -108,7 +111,7 @@ Public Class Form1
         My.Settings.openProject = path
     End Sub
 
-    Sub panelUpdate()
+    Public Sub panelUpdate()
         EdSplit.Panel2Collapsed = Not (PreviewPanel.Checked)
         CoreSplit.Panel1Collapsed = (ExplorerPanel.Checked = False) And (BuildPanel.Checked = False)
         EdSplit.Panel1Collapsed = Not (EditorPanel.Checked)
@@ -125,6 +128,7 @@ Public Class Form1
         My.Settings.WordWrap = WordWrap.Checked
         My.Settings.VirtualSpace = VirtualSpace.Checked
         My.Settings.WideCaret = WideCaret.Checked
+        My.Settings.SyntaxHighlight = SyntaxHighlight.Checked
 
         For Each page As TabPage In EditTabs.TabPages
             Dim point As New Point
@@ -136,8 +140,8 @@ Public Class Form1
                 edit.Code.WordWrap = My.Settings.WordWrap
                 edit.Code.VirtualSpace = My.Settings.VirtualSpace
                 edit.Code.WideCaret = My.Settings.WideCaret
+                edit.LivePreview.Checked = My.Settings.LivePreview
             End If
-
         Next
     End Sub
 
@@ -156,6 +160,8 @@ Public Class Form1
     Private Sub CloseSite_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseSite.Click
         SiteTree.Nodes.Clear()
         EditTabs.TabPages.Clear()
+        Preview.DocumentText = ""
+        My.Settings.openProject = ""
         checkOpen()
     End Sub
 
@@ -227,6 +233,7 @@ Public Class Form1
         End If
 
         iconTheme()
+        checkOpen()
 
         If My.Settings.engine = "python" Then
             EnginePython.Checked = True
@@ -236,12 +243,17 @@ Public Class Form1
             EngineApricot.Checked = True
         End If
 
+        WordWrap.Checked = My.Settings.WordWrap
+        VirtualSpace.Checked = My.Settings.VirtualSpace
+        WideCaret.Checked = My.Settings.WideCaret
+        SyntaxHighlight.Checked = My.Settings.SyntaxHighlight
+
         If My.Computer.FileSystem.DirectoryExists(My.Settings.openProject) Then
             openSite(My.Settings.openProject, True)
         End If
     End Sub
 
-    Private Sub TreeView1_DoubleClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick
+    Private Sub SiteTree_NodeMouseDoubleClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick
         If e.Button = Windows.Forms.MouseButtons.Left Then
             Dim box As FastColoredTextBox
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
@@ -249,7 +261,8 @@ Public Class Form1
                     If Not openFiles.Contains(e.Node.Tag) Then
                         Dim tab As New TabPage
                         tab.Tag = e.Node.Tag
-                        tab.Text = e.Node.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
+                        tab.ToolTipText = tab.Tag
+                        tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
                         EditTabs.TabPages.Add(tab)
                         EditTabs.SelectedTab = tab
                         Dim editor As New Editor
@@ -268,10 +281,12 @@ Public Class Form1
                 End Try
             End If
             Try
-                If Not e.Node.Tag.EndsWith(".md") Then
-                    WebBrowser1.Navigate(e.Node.Tag)
+                If e.Node.Tag.EndsWith(".md") Then
+                    Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(box.Text)
                 Else
-                    WebBrowser1.DocumentText = CommonMark.CommonMarkConverter.Convert(box.Text)
+                    If Not e.Node.Tag.EndsWith(".css") And Not e.Node.Tag.EndsWith(".js") Then
+                        Preview.Navigate(e.Node.Tag)
+                    End If
                 End If
             Catch ex As Exception
             End Try
@@ -314,10 +329,6 @@ Public Class Form1
         panelUpdate()
     End Sub
 
-    Private Sub SiteTree_Layout(ByVal sender As Object, ByVal e As LayoutEventArgs)
-        checkOpen()
-    End Sub
-
     Private Sub VS2017item_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VS2017item.Click
         If Not VS2017item.Checked Then
             VS2017item.Checked = True
@@ -336,13 +347,13 @@ Public Class Form1
         iconTheme()
     End Sub
 
-    Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
+    Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.BeforeLabelEdit
         If e.Node.Tag = "" Then
             e.CancelEdit = True
         End If
     End Sub
 
-    Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
+    Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.AfterLabelEdit
         Try
             Dim newpath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(e.Node.Tag), e.Label)
             Try
@@ -360,15 +371,11 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub EdSplit_SplitterMoved(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LayoutEventArgs) Handles EdSplit.Layout
-        CoreSplit.Panel2Collapsed = (PreviewPanel.Checked = False And EditorPanel.Checked = False)
-    End Sub
-
     Private Sub ExitItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitItem.Click
         Me.Close()
     End Sub
 
-    Private Sub BuildSite_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, ToolStripButton1.Click
+    Private Sub BuildSite_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, Build.Click
         If EnginePython.Checked Then
             If My.Computer.FileSystem.FileExists("AutoSitePy.exe") Then
                 If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then
@@ -379,7 +386,7 @@ Public Class Form1
                     startinfo.FileName = "AutoSitePy.exe"
                     startinfo.Arguments = "--auto --dir """ & SiteTree.Nodes(0).Text & """"
                     Process.Start(startinfo)
-                    WebBrowser1.Navigate(SiteTree.Nodes(0).Text & "\out")
+                    Preview.Navigate(SiteTree.Nodes(0).Text & "\out")
                 Catch ex As Exception
                     MsgBox("The Python 3-based build engine was unable to launch for some reason. This may be because of your operating system or the executable. Error:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Build fail")
                 End Try
@@ -397,11 +404,10 @@ Public Class Form1
         Try
             Process.Start(SiteTree.SelectedNode.Tag)
         Catch ex As Exception
-
         End Try
     End Sub
 
-    Private Sub SiteTree_NodeMouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs)
+    Private Sub SiteTree_NodeMouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseClick
         If e.Button = Windows.Forms.MouseButtons.Right Then
             Context.Tag = e.Node.Tag
             If Context.Tag = "" Then
@@ -427,13 +433,13 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub MenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshItem.Click
+    Private Sub RefreshItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshItem.Click
         If SiteTree.Nodes.Count > 0 Then
             refreshTree(SiteTree.Nodes(0))
         End If
     End Sub
 
-    Private Sub MenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopyCon.Click
+    Private Sub CopyCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopyCon.Click
         Dim path = Context.Tag
         If Not path = "" Then
             Dim f() As String = {path}
@@ -732,10 +738,45 @@ Public Class Form1
             End If
         Next
         If Not saved Then
-            Dim d As DialogResult = MsgBox("One or more files have unsaved changes that will be lost. Close anyway?", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "AutoSite XL")
-            If d = Windows.Forms.DialogResult.No Then
+            Dim d As DialogResult = MsgBox("Some files have unsaved changes. Save them?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel, "AutoSite XL")
+
+            If d = DialogResult.Yes Then
+                DoSaveAll()
+            End If
+            If d = DialogResult.Cancel Then
                 e.Cancel = True
             End If
         End If
+    End Sub
+
+    Private Sub SyntaxHighlight_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SyntaxHighlight.Click
+        If SyntaxHighlight.Checked Then
+            SyntaxHighlight.Checked = False
+        Else
+            SyntaxHighlight.Checked = True
+        End If
+        panelUpdate()
+    End Sub
+
+    Public Sub LivePreview_Toggle() Handles LivePreview.Click
+        If LivePreview.Checked Then
+            LivePreview.Checked = False
+        Else
+            LivePreview.Checked = True
+        End If
+        panelUpdate()
+    End Sub
+
+    Public Sub DoSaveAll() Handles SaveAll.Click
+        For Each page As TabPage In EditTabs.TabPages
+            Dim point As New Point
+            point.X = 0
+            point.Y = 0
+            Dim child = page.GetChildAtPoint(point, GetChildAtPointSkip.None)
+            If TypeOf child Is Editor Then
+                Dim edit As Editor = child
+                edit.Save()
+            End If
+        Next
     End Sub
 End Class

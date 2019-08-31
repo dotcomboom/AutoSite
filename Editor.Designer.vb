@@ -24,72 +24,201 @@ Partial Class Editor
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Editor))
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton
+        Me.Strip = New System.Windows.Forms.ToolStrip
+        Me.SaveBtn = New System.Windows.Forms.ToolStripSplitButton
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.SaveAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.Sep = New System.Windows.Forms.ToolStripSeparator
+        Me.UndoBtn = New System.Windows.Forms.ToolStripButton
+        Me.RedoBtn = New System.Windows.Forms.ToolStripButton
+        Me.Sep2 = New System.Windows.Forms.ToolStripSeparator
+        Me.CutBtn = New System.Windows.Forms.ToolStripButton
+        Me.CopyBtn = New System.Windows.Forms.ToolStripButton
+        Me.PasteBtn = New System.Windows.Forms.ToolStripButton
+        Me.CloseBtn = New System.Windows.Forms.ToolStripButton
+        Me.Sep3 = New System.Windows.Forms.ToolStripSeparator
+        Me.Find = New System.Windows.Forms.ToolStripButton
+        Me.GTo = New System.Windows.Forms.ToolStripButton
+        Me.Replace = New System.Windows.Forms.ToolStripButton
+        Me.Sep4 = New System.Windows.Forms.ToolStripSeparator
+        Me.Preview = New System.Windows.Forms.ToolStripSplitButton
+        Me.LivePreview = New System.Windows.Forms.ToolStripMenuItem
         Me.Code = New FastColoredTextBoxNS.FastColoredTextBox
-        Me.ContextMenu1 = New System.Windows.Forms.ContextMenu
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem
-        Me.MenuItem7 = New System.Windows.Forms.MenuItem
-        Me.MenuItem3 = New System.Windows.Forms.MenuItem
-        Me.MenuItem4 = New System.Windows.Forms.MenuItem
-        Me.MenuItem5 = New System.Windows.Forms.MenuItem
-        Me.MenuItem8 = New System.Windows.Forms.MenuItem
-        Me.MenuItem6 = New System.Windows.Forms.MenuItem
-        Me.MenuItem9 = New System.Windows.Forms.MenuItem
-        Me.ToolStrip1.SuspendLayout()
+        Me.Context = New System.Windows.Forms.ContextMenu
+        Me.Undo = New System.Windows.Forms.MenuItem
+        Me.Redo = New System.Windows.Forms.MenuItem
+        Me.ConSep = New System.Windows.Forms.MenuItem
+        Me.Cut = New System.Windows.Forms.MenuItem
+        Me.Copy = New System.Windows.Forms.MenuItem
+        Me.Paste = New System.Windows.Forms.MenuItem
+        Me.Delete = New System.Windows.Forms.MenuItem
+        Me.ConSep2 = New System.Windows.Forms.MenuItem
+        Me.SelectAll = New System.Windows.Forms.MenuItem
+        Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ToolStrip1
+        'Strip
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripSeparator1, Me.ToolStripButton1, Me.ToolStripButton2})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(206, 25)
-        Me.ToolStrip1.TabIndex = 1
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.Strip.BackColor = System.Drawing.SystemColors.Window
+        Me.Strip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveBtn, Me.Sep, Me.UndoBtn, Me.RedoBtn, Me.Sep2, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.CloseBtn, Me.Sep3, Me.Find, Me.GTo, Me.Replace, Me.Sep4, Me.Preview})
+        Me.Strip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
+        Me.Strip.Location = New System.Drawing.Point(0, 0)
+        Me.Strip.Name = "Strip"
+        Me.Strip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.Strip.Size = New System.Drawing.Size(438, 25)
+        Me.Strip.TabIndex = 1
+        Me.Strip.Text = "ToolStrip1"
         '
-        'ToolStripButton3
+        'SaveBtn
         '
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton3.Text = "Save"
+        Me.SaveBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem, Me.SaveAllToolStripMenuItem})
+        Me.SaveBtn.Enabled = False
+        Me.SaveBtn.Image = CType(resources.GetObject("SaveBtn.Image"), System.Drawing.Image)
+        Me.SaveBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveBtn.Name = "SaveBtn"
+        Me.SaveBtn.Size = New System.Drawing.Size(63, 22)
+        Me.SaveBtn.Text = "Save"
         '
-        'ToolStripSeparator1
+        'SaveToolStripMenuItem
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.SaveToolStripMenuItem.Text = "Save"
         '
-        'ToolStripButton1
+        'SaveAllToolStripMenuItem
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "Undo"
+        Me.SaveAllToolStripMenuItem.Image = CType(resources.GetObject("SaveAllToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.SaveAllToolStripMenuItem.Name = "SaveAllToolStripMenuItem"
+        Me.SaveAllToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.SaveAllToolStripMenuItem.Text = "Save All"
         '
-        'ToolStripButton2
+        'Sep
         '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton2.Text = "Redo"
+        Me.Sep.Name = "Sep"
+        Me.Sep.Size = New System.Drawing.Size(6, 25)
+        '
+        'UndoBtn
+        '
+        Me.UndoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.UndoBtn.Image = CType(resources.GetObject("UndoBtn.Image"), System.Drawing.Image)
+        Me.UndoBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.UndoBtn.Name = "UndoBtn"
+        Me.UndoBtn.Size = New System.Drawing.Size(23, 22)
+        Me.UndoBtn.Text = "Undo"
+        '
+        'RedoBtn
+        '
+        Me.RedoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.RedoBtn.Image = CType(resources.GetObject("RedoBtn.Image"), System.Drawing.Image)
+        Me.RedoBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RedoBtn.Name = "RedoBtn"
+        Me.RedoBtn.Size = New System.Drawing.Size(23, 22)
+        Me.RedoBtn.Text = "Redo"
+        '
+        'Sep2
+        '
+        Me.Sep2.Name = "Sep2"
+        Me.Sep2.Size = New System.Drawing.Size(6, 25)
+        '
+        'CutBtn
+        '
+        Me.CutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CutBtn.Image = CType(resources.GetObject("CutBtn.Image"), System.Drawing.Image)
+        Me.CutBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CutBtn.Name = "CutBtn"
+        Me.CutBtn.Size = New System.Drawing.Size(23, 22)
+        Me.CutBtn.Text = "Cut"
+        '
+        'CopyBtn
+        '
+        Me.CopyBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CopyBtn.Image = CType(resources.GetObject("CopyBtn.Image"), System.Drawing.Image)
+        Me.CopyBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CopyBtn.Name = "CopyBtn"
+        Me.CopyBtn.Size = New System.Drawing.Size(23, 22)
+        Me.CopyBtn.Text = "Copy"
+        '
+        'PasteBtn
+        '
+        Me.PasteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PasteBtn.Image = CType(resources.GetObject("PasteBtn.Image"), System.Drawing.Image)
+        Me.PasteBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.PasteBtn.Name = "PasteBtn"
+        Me.PasteBtn.Size = New System.Drawing.Size(23, 22)
+        Me.PasteBtn.Text = "Copy"
+        '
+        'CloseBtn
+        '
+        Me.CloseBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.CloseBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CloseBtn.Image = CType(resources.GetObject("CloseBtn.Image"), System.Drawing.Image)
+        Me.CloseBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CloseBtn.Name = "CloseBtn"
+        Me.CloseBtn.Size = New System.Drawing.Size(23, 22)
+        Me.CloseBtn.Text = "Close"
+        '
+        'Sep3
+        '
+        Me.Sep3.Name = "Sep3"
+        Me.Sep3.Size = New System.Drawing.Size(6, 25)
+        '
+        'Find
+        '
+        Me.Find.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Find.Image = CType(resources.GetObject("Find.Image"), System.Drawing.Image)
+        Me.Find.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Find.Name = "Find"
+        Me.Find.Size = New System.Drawing.Size(23, 22)
+        Me.Find.Text = "Find"
+        '
+        'GTo
+        '
+        Me.GTo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GTo.Image = CType(resources.GetObject("GTo.Image"), System.Drawing.Image)
+        Me.GTo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.GTo.Name = "GTo"
+        Me.GTo.Size = New System.Drawing.Size(23, 22)
+        Me.GTo.Text = "Goto"
+        '
+        'Replace
+        '
+        Me.Replace.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Replace.Image = CType(resources.GetObject("Replace.Image"), System.Drawing.Image)
+        Me.Replace.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Replace.Name = "Replace"
+        Me.Replace.Size = New System.Drawing.Size(23, 22)
+        Me.Replace.Text = "Replace"
+        '
+        'Sep4
+        '
+        Me.Sep4.Name = "Sep4"
+        Me.Sep4.Size = New System.Drawing.Size(6, 25)
+        '
+        'Preview
+        '
+        Me.Preview.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LivePreview})
+        Me.Preview.Image = CType(resources.GetObject("Preview.Image"), System.Drawing.Image)
+        Me.Preview.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Preview.Name = "Preview"
+        Me.Preview.Size = New System.Drawing.Size(77, 22)
+        Me.Preview.Text = "Preview"
+        '
+        'LivePreview
+        '
+        Me.LivePreview.CheckOnClick = True
+        Me.LivePreview.Image = CType(resources.GetObject("LivePreview.Image"), System.Drawing.Image)
+        Me.LivePreview.Name = "LivePreview"
+        Me.LivePreview.Size = New System.Drawing.Size(152, 22)
+        Me.LivePreview.Text = "Live Preview"
         '
         'Code
         '
+        Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         Me.Code.AutoScrollMinSize = New System.Drawing.Size(83, 14)
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 14
@@ -98,6 +227,7 @@ Partial Class Editor
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
         Me.Code.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
@@ -109,91 +239,105 @@ Partial Class Editor
         Me.Code.RightBracket2 = Global.Microsoft.VisualBasic.ChrW(41)
         Me.Code.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Code.ServiceColors = CType(resources.GetObject("Code.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
-        Me.Code.Size = New System.Drawing.Size(206, 176)
+        Me.Code.Size = New System.Drawing.Size(438, 325)
         Me.Code.TabIndex = 2
         Me.Code.Text = "Loading"
         Me.Code.Zoom = 100
         '
-        'ContextMenu1
+        'Context
         '
-        Me.ContextMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1, Me.MenuItem2, Me.MenuItem7, Me.MenuItem3, Me.MenuItem4, Me.MenuItem5, Me.MenuItem8, Me.MenuItem6, Me.MenuItem9})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.ConSep, Me.Cut, Me.Copy, Me.Paste, Me.Delete, Me.ConSep2, Me.SelectAll})
         '
-        'MenuItem1
+        'Undo
         '
-        Me.MenuItem1.Index = 0
-        Me.MenuItem1.Text = "Undo"
+        Me.Undo.Index = 0
+        Me.Undo.Text = "Undo"
         '
-        'MenuItem2
+        'Redo
         '
-        Me.MenuItem2.Index = 1
-        Me.MenuItem2.Text = "Redo"
+        Me.Redo.Index = 1
+        Me.Redo.Text = "Redo"
         '
-        'MenuItem7
+        'ConSep
         '
-        Me.MenuItem7.Index = 2
-        Me.MenuItem7.Text = "-"
+        Me.ConSep.Index = 2
+        Me.ConSep.Text = "-"
         '
-        'MenuItem3
+        'Cut
         '
-        Me.MenuItem3.Index = 3
-        Me.MenuItem3.Text = "Cut"
+        Me.Cut.Index = 3
+        Me.Cut.Text = "Cut"
         '
-        'MenuItem4
+        'Copy
         '
-        Me.MenuItem4.Index = 4
-        Me.MenuItem4.Text = "Copy"
+        Me.Copy.Index = 4
+        Me.Copy.Text = "Copy"
         '
-        'MenuItem5
+        'Paste
         '
-        Me.MenuItem5.Index = 5
-        Me.MenuItem5.Text = "Paste"
+        Me.Paste.Index = 5
+        Me.Paste.Text = "Paste"
         '
-        'MenuItem8
+        'Delete
         '
-        Me.MenuItem8.Enabled = False
-        Me.MenuItem8.Index = 6
-        Me.MenuItem8.Text = "Delete"
+        Me.Delete.Enabled = False
+        Me.Delete.Index = 6
+        Me.Delete.Text = "Delete"
         '
-        'MenuItem6
+        'ConSep2
         '
-        Me.MenuItem6.Index = 7
-        Me.MenuItem6.Text = "-"
+        Me.ConSep2.Index = 7
+        Me.ConSep2.Text = "-"
         '
-        'MenuItem9
+        'SelectAll
         '
-        Me.MenuItem9.Index = 8
-        Me.MenuItem9.Text = "Select All"
+        Me.SelectAll.Index = 8
+        Me.SelectAll.Text = "Select All"
         '
         'Editor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.Code)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.Strip)
         Me.Name = "Editor"
-        Me.Size = New System.Drawing.Size(206, 201)
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.Size = New System.Drawing.Size(438, 350)
+        Me.Strip.ResumeLayout(False)
+        Me.Strip.PerformLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Strip As System.Windows.Forms.ToolStrip
+    Friend WithEvents UndoBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents RedoBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents Code As FastColoredTextBoxNS.FastColoredTextBox
-    Friend WithEvents ContextMenu1 As System.Windows.Forms.ContextMenu
-    Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
-    Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem6 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem7 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem8 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem9 As System.Windows.Forms.MenuItem
+    Friend WithEvents Context As System.Windows.Forms.ContextMenu
+    Friend WithEvents Undo As System.Windows.Forms.MenuItem
+    Friend WithEvents Redo As System.Windows.Forms.MenuItem
+    Friend WithEvents Sep As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Cut As System.Windows.Forms.MenuItem
+    Friend WithEvents Copy As System.Windows.Forms.MenuItem
+    Friend WithEvents Paste As System.Windows.Forms.MenuItem
+    Friend WithEvents ConSep2 As System.Windows.Forms.MenuItem
+    Friend WithEvents ConSep As System.Windows.Forms.MenuItem
+    Friend WithEvents Delete As System.Windows.Forms.MenuItem
+    Friend WithEvents SelectAll As System.Windows.Forms.MenuItem
+    Friend WithEvents Sep2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents CutBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents CopyBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents PasteBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents CloseBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents SaveBtn As System.Windows.Forms.ToolStripSplitButton
+    Friend WithEvents SaveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SaveAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Sep3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Find As System.Windows.Forms.ToolStripButton
+    Friend WithEvents GTo As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Replace As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Sep4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Preview As System.Windows.Forms.ToolStripSplitButton
+    Friend WithEvents LivePreview As System.Windows.Forms.ToolStripMenuItem
 
 End Class

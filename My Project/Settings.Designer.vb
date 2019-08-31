@@ -173,6 +173,30 @@ Namespace My
                 Me("WideCaret") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property SyntaxHighlight() As Boolean
+            Get
+                Return CType(Me("SyntaxHighlight"),Boolean)
+            End Get
+            Set
+                Me("SyntaxHighlight") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property LivePreview() As Boolean
+            Get
+                Return CType(Me("LivePreview"),Boolean)
+            End Get
+            Set
+                Me("LivePreview") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

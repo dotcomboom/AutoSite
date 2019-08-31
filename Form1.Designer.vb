@@ -30,6 +30,7 @@ Partial Class Form1
         Me.FileMenu = New System.Windows.Forms.MenuItem
         Me.OpenFolder = New System.Windows.Forms.MenuItem
         Me.CloseSite = New System.Windows.Forms.MenuItem
+        Me.SaveAll = New System.Windows.Forms.MenuItem
         Me.FileSep = New System.Windows.Forms.MenuItem
         Me.ExitItem = New System.Windows.Forms.MenuItem
         Me.ViewMenu = New System.Windows.Forms.MenuItem
@@ -39,18 +40,21 @@ Partial Class Form1
         Me.PanelSep = New System.Windows.Forms.MenuItem
         Me.EditorPanel = New System.Windows.Forms.MenuItem
         Me.PreviewPanel = New System.Windows.Forms.MenuItem
-        Me.MenuItem4 = New System.Windows.Forms.MenuItem
+        Me.ViewMenuSep = New System.Windows.Forms.MenuItem
         Me.DisplayStyle = New System.Windows.Forms.MenuItem
         Me.NormalDisplay = New System.Windows.Forms.MenuItem
         Me.TemplateDisplay = New System.Windows.Forms.MenuItem
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem
+        Me.IconThemeMenu = New System.Windows.Forms.MenuItem
         Me.VS2017item = New System.Windows.Forms.MenuItem
         Me.XPitem = New System.Windows.Forms.MenuItem
         Me.RefreshItem = New System.Windows.Forms.MenuItem
-        Me.MenuItem6 = New System.Windows.Forms.MenuItem
+        Me.FormatMenu = New System.Windows.Forms.MenuItem
         Me.WordWrap = New System.Windows.Forms.MenuItem
         Me.VirtualSpace = New System.Windows.Forms.MenuItem
         Me.WideCaret = New System.Windows.Forms.MenuItem
+        Me.FormatMenuSep = New System.Windows.Forms.MenuItem
+        Me.SyntaxHighlight = New System.Windows.Forms.MenuItem
+        Me.LivePreview = New System.Windows.Forms.MenuItem
         Me.BuildMenu = New System.Windows.Forms.MenuItem
         Me.BuildSite = New System.Windows.Forms.MenuItem
         Me.BuildEngineMenu = New System.Windows.Forms.MenuItem
@@ -61,30 +65,29 @@ Partial Class Form1
         Me.HelpTopics = New System.Windows.Forms.MenuItem
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.ExSplit = New System.Windows.Forms.SplitContainer
-        Me.Panel1 = New System.Windows.Forms.Panel
         Me.OpenLink = New System.Windows.Forms.LinkLabel
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.OpenPrompt = New System.Windows.Forms.Label
         Me.SiteTree = New System.Windows.Forms.TreeView
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
-        Me.BuildProgress = New System.Windows.Forms.ProgressBar
         Me.Log = New System.Windows.Forms.TextBox
+        Me.BuildProgress = New System.Windows.Forms.ProgressBar
+        Me.BuildStrip = New System.Windows.Forms.ToolStrip
+        Me.Build = New System.Windows.Forms.ToolStripButton
         Me.EdSplit = New System.Windows.Forms.SplitContainer
         Me.EditTabs = New System.Windows.Forms.TabControl
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser
+        Me.Preview = New System.Windows.Forms.WebBrowser
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu
         Me.OpenInDefault = New System.Windows.Forms.MenuItem
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem
+        Me.ContextSep = New System.Windows.Forms.MenuItem
         Me.CopyCon = New System.Windows.Forms.MenuItem
         Me.PasteCon = New System.Windows.Forms.MenuItem
         Me.AddFilesCon = New System.Windows.Forms.MenuItem
-        Me.MenuItem3 = New System.Windows.Forms.MenuItem
+        Me.ContextSep2 = New System.Windows.Forms.MenuItem
         Me.DeleteCon = New System.Windows.Forms.MenuItem
-        Me.MenuItem10 = New System.Windows.Forms.MenuItem
+        Me.ContextSep3 = New System.Windows.Forms.MenuItem
         Me.NewCon = New System.Windows.Forms.MenuItem
         Me.NewFolderCon = New System.Windows.Forms.MenuItem
-        Me.MenuItem5 = New System.Windows.Forms.MenuItem
+        Me.NewSep = New System.Windows.Forms.MenuItem
         Me.NewHTMLCon = New System.Windows.Forms.MenuItem
         Me.NewMDCon = New System.Windows.Forms.MenuItem
         Me.NewPHPCon = New System.Windows.Forms.MenuItem
@@ -96,8 +99,7 @@ Partial Class Form1
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
+        Me.BuildStrip.SuspendLayout()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
         Me.EdSplit.SuspendLayout()
@@ -119,12 +121,12 @@ Partial Class Form1
         '
         'MenuBar
         '
-        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.ViewMenu, Me.MenuItem6, Me.BuildMenu, Me.HelpMenu})
+        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.ViewMenu, Me.FormatMenu, Me.BuildMenu, Me.HelpMenu})
         '
         'FileMenu
         '
         Me.FileMenu.Index = 0
-        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenFolder, Me.CloseSite, Me.FileSep, Me.ExitItem})
+        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenFolder, Me.CloseSite, Me.SaveAll, Me.FileSep, Me.ExitItem})
         Me.FileMenu.Text = "File"
         '
         'OpenFolder
@@ -140,21 +142,27 @@ Partial Class Form1
         Me.CloseSite.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftW
         Me.CloseSite.Text = "Close Site"
         '
+        'SaveAll
+        '
+        Me.SaveAll.Index = 2
+        Me.SaveAll.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS
+        Me.SaveAll.Text = "Save All"
+        '
         'FileSep
         '
-        Me.FileSep.Index = 2
+        Me.FileSep.Index = 3
         Me.FileSep.Text = "-"
         '
         'ExitItem
         '
-        Me.ExitItem.Index = 3
+        Me.ExitItem.Index = 4
         Me.ExitItem.Shortcut = System.Windows.Forms.Shortcut.AltF4
         Me.ExitItem.Text = "Exit"
         '
         'ViewMenu
         '
         Me.ViewMenu.Index = 1
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Panels, Me.MenuItem4, Me.DisplayStyle, Me.MenuItem1, Me.RefreshItem})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Panels, Me.ViewMenuSep, Me.DisplayStyle, Me.IconThemeMenu, Me.RefreshItem})
         Me.ViewMenu.Text = "View"
         '
         'Panels
@@ -192,10 +200,10 @@ Partial Class Form1
         Me.PreviewPanel.Index = 4
         Me.PreviewPanel.Text = "Preview"
         '
-        'MenuItem4
+        'ViewMenuSep
         '
-        Me.MenuItem4.Index = 1
-        Me.MenuItem4.Text = "-"
+        Me.ViewMenuSep.Index = 1
+        Me.ViewMenuSep.Text = "-"
         '
         'DisplayStyle
         '
@@ -217,11 +225,11 @@ Partial Class Form1
         Me.TemplateDisplay.RadioCheck = True
         Me.TemplateDisplay.Text = "Template"
         '
-        'MenuItem1
+        'IconThemeMenu
         '
-        Me.MenuItem1.Index = 3
-        Me.MenuItem1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
-        Me.MenuItem1.Text = "Icon Theme"
+        Me.IconThemeMenu.Index = 3
+        Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
+        Me.IconThemeMenu.Text = "Icon Theme"
         '
         'VS2017item
         '
@@ -241,11 +249,11 @@ Partial Class Form1
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
         Me.RefreshItem.Text = "Refresh"
         '
-        'MenuItem6
+        'FormatMenu
         '
-        Me.MenuItem6.Index = 2
-        Me.MenuItem6.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret})
-        Me.MenuItem6.Text = "Format"
+        Me.FormatMenu.Index = 2
+        Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatMenuSep, Me.SyntaxHighlight, Me.LivePreview})
+        Me.FormatMenu.Text = "Format"
         '
         'WordWrap
         '
@@ -262,6 +270,21 @@ Partial Class Form1
         '
         Me.WideCaret.Index = 2
         Me.WideCaret.Text = "Wide Caret"
+        '
+        'FormatMenuSep
+        '
+        Me.FormatMenuSep.Index = 3
+        Me.FormatMenuSep.Text = "-"
+        '
+        'SyntaxHighlight
+        '
+        Me.SyntaxHighlight.Index = 4
+        Me.SyntaxHighlight.Text = "Experimental Syntax Highlighting"
+        '
+        'LivePreview
+        '
+        Me.LivePreview.Index = 5
+        Me.LivePreview.Text = "Live Preview"
         '
         'BuildMenu
         '
@@ -315,6 +338,7 @@ Partial Class Form1
         '
         Me.CoreSplit.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CoreSplit.Location = New System.Drawing.Point(0, 0)
+        Me.CoreSplit.Margin = New System.Windows.Forms.Padding(0)
         Me.CoreSplit.Name = "CoreSplit"
         '
         'CoreSplit.Panel1
@@ -337,30 +361,18 @@ Partial Class Form1
         '
         'ExSplit.Panel1
         '
-        Me.ExSplit.Panel1.Controls.Add(Me.Panel1)
+        Me.ExSplit.Panel1.Controls.Add(Me.OpenLink)
+        Me.ExSplit.Panel1.Controls.Add(Me.OpenPrompt)
         Me.ExSplit.Panel1.Controls.Add(Me.SiteTree)
         '
         'ExSplit.Panel2
         '
-        Me.ExSplit.Panel2.Controls.Add(Me.ToolStrip1)
-        Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
         Me.ExSplit.Panel2.Controls.Add(Me.Log)
+        Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
+        Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
         Me.ExSplit.Size = New System.Drawing.Size(235, 421)
         Me.ExSplit.SplitterDistance = 273
         Me.ExSplit.TabIndex = 4
-        '
-        'Panel1
-        '
-        Me.Panel1.AutoSize = True
-        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel1.Controls.Add(Me.OpenLink)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(235, 59)
-        Me.Panel1.TabIndex = 5
         '
         'OpenLink
         '
@@ -368,26 +380,26 @@ Partial Class Form1
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
         Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenLink.Location = New System.Drawing.Point(3, 42)
+        Me.OpenLink.Location = New System.Drawing.Point(22, 51)
         Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.Size = New System.Drawing.Size(229, 17)
+        Me.OpenLink.Size = New System.Drawing.Size(191, 13)
         Me.OpenLink.TabIndex = 1
         Me.OpenLink.TabStop = True
         Me.OpenLink.Text = "Create or open a site folder"
         Me.OpenLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'Label1
+        'OpenPrompt
         '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.OpenPrompt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.BackColor = System.Drawing.SystemColors.Window
-        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(3, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(230, 20)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "A site has not been opened yet."
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
+        Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.OpenPrompt.Location = New System.Drawing.Point(19, 26)
+        Me.OpenPrompt.Name = "OpenPrompt"
+        Me.OpenPrompt.Size = New System.Drawing.Size(194, 13)
+        Me.OpenPrompt.TabIndex = 2
+        Me.OpenPrompt.Text = "A site has not been opened yet."
+        Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'SiteTree
         '
@@ -398,45 +410,48 @@ Partial Class Form1
         Me.SiteTree.Size = New System.Drawing.Size(235, 273)
         Me.SiteTree.TabIndex = 4
         '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(235, 25)
-        Me.ToolStrip1.TabIndex = 2
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        Me.ToolStripButton1.ToolTipText = "Build"
-        '
-        'BuildProgress
-        '
-        Me.BuildProgress.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BuildProgress.Location = New System.Drawing.Point(3, 118)
-        Me.BuildProgress.Name = "BuildProgress"
-        Me.BuildProgress.Size = New System.Drawing.Size(236, 23)
-        Me.BuildProgress.TabIndex = 1
-        Me.BuildProgress.Visible = False
-        '
         'Log
         '
+        Me.Log.BackColor = System.Drawing.SystemColors.Window
         Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Log.Location = New System.Drawing.Point(0, 0)
+        Me.Log.Location = New System.Drawing.Point(0, 25)
         Me.Log.Multiline = True
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
         Me.Log.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.Log.Size = New System.Drawing.Size(235, 144)
+        Me.Log.Size = New System.Drawing.Size(235, 96)
         Me.Log.TabIndex = 0
+        '
+        'BuildProgress
+        '
+        Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BuildProgress.Location = New System.Drawing.Point(0, 121)
+        Me.BuildProgress.Name = "BuildProgress"
+        Me.BuildProgress.Size = New System.Drawing.Size(235, 23)
+        Me.BuildProgress.TabIndex = 1
+        Me.BuildProgress.Visible = False
+        '
+        'BuildStrip
+        '
+        Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
+        Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build})
+        Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
+        Me.BuildStrip.Name = "BuildStrip"
+        Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.BuildStrip.Size = New System.Drawing.Size(235, 25)
+        Me.BuildStrip.TabIndex = 3
+        Me.BuildStrip.Text = "ToolStrip1"
+        '
+        'Build
+        '
+        Me.Build.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Build.Image = CType(resources.GetObject("Build.Image"), System.Drawing.Image)
+        Me.Build.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Build.Name = "Build"
+        Me.Build.Size = New System.Drawing.Size(23, 22)
+        Me.Build.Text = "ToolStripButton1"
+        Me.Build.ToolTipText = "Build"
         '
         'EdSplit
         '
@@ -451,7 +466,7 @@ Partial Class Form1
         '
         'EdSplit.Panel2
         '
-        Me.EdSplit.Panel2.Controls.Add(Me.WebBrowser1)
+        Me.EdSplit.Panel2.Controls.Add(Me.Preview)
         Me.EdSplit.Size = New System.Drawing.Size(472, 421)
         Me.EdSplit.SplitterDistance = 244
         Me.EdSplit.TabIndex = 1
@@ -463,20 +478,22 @@ Partial Class Form1
         Me.EditTabs.Margin = New System.Windows.Forms.Padding(0)
         Me.EditTabs.Multiline = True
         Me.EditTabs.Name = "EditTabs"
+        Me.EditTabs.Padding = New System.Drawing.Point(0, 0)
         Me.EditTabs.SelectedIndex = 0
+        Me.EditTabs.ShowToolTips = True
         Me.EditTabs.Size = New System.Drawing.Size(472, 244)
         Me.EditTabs.TabIndex = 1
         '
-        'WebBrowser1
+        'Preview
         '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(472, 173)
-        Me.WebBrowser1.TabIndex = 0
-        Me.WebBrowser1.Url = New System.Uri("about:blank", System.UriKind.Absolute)
+        Me.Preview.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Preview.Location = New System.Drawing.Point(0, 0)
+        Me.Preview.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Preview.Name = "Preview"
+        Me.Preview.ScriptErrorsSuppressed = True
+        Me.Preview.Size = New System.Drawing.Size(472, 173)
+        Me.Preview.TabIndex = 0
+        Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
         'XP
         '
@@ -495,17 +512,17 @@ Partial Class Form1
         '
         'Context
         '
-        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.MenuItem2, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.MenuItem3, Me.DeleteCon, Me.MenuItem10, Me.NewCon})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.ContextSep3, Me.NewCon})
         '
         'OpenInDefault
         '
         Me.OpenInDefault.Index = 0
         Me.OpenInDefault.Text = "Open in Default Program"
         '
-        'MenuItem2
+        'ContextSep
         '
-        Me.MenuItem2.Index = 1
-        Me.MenuItem2.Text = "-"
+        Me.ContextSep.Index = 1
+        Me.ContextSep.Text = "-"
         '
         'CopyCon
         '
@@ -522,25 +539,25 @@ Partial Class Form1
         Me.AddFilesCon.Index = 4
         Me.AddFilesCon.Text = "Add Files..."
         '
-        'MenuItem3
+        'ContextSep2
         '
-        Me.MenuItem3.Index = 5
-        Me.MenuItem3.Text = "-"
+        Me.ContextSep2.Index = 5
+        Me.ContextSep2.Text = "-"
         '
         'DeleteCon
         '
         Me.DeleteCon.Index = 6
         Me.DeleteCon.Text = "Delete"
         '
-        'MenuItem10
+        'ContextSep3
         '
-        Me.MenuItem10.Index = 7
-        Me.MenuItem10.Text = "-"
+        Me.ContextSep3.Index = 7
+        Me.ContextSep3.Text = "-"
         '
         'NewCon
         '
         Me.NewCon.Index = 8
-        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.MenuItem5, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon})
+        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon})
         Me.NewCon.Text = "New"
         '
         'NewFolderCon
@@ -548,10 +565,10 @@ Partial Class Form1
         Me.NewFolderCon.Index = 0
         Me.NewFolderCon.Text = "Folder"
         '
-        'MenuItem5
+        'NewSep
         '
-        Me.MenuItem5.Index = 1
-        Me.MenuItem5.Text = "-"
+        Me.NewSep.Index = 1
+        Me.NewSep.Text = "-"
         '
         'NewHTMLCon
         '
@@ -592,13 +609,11 @@ Partial Class Form1
         Me.CoreSplit.Panel2.ResumeLayout(False)
         Me.CoreSplit.ResumeLayout(False)
         Me.ExSplit.Panel1.ResumeLayout(False)
-        Me.ExSplit.Panel1.PerformLayout()
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
         Me.ExSplit.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.BuildStrip.ResumeLayout(False)
+        Me.BuildStrip.PerformLayout()
         Me.EdSplit.Panel1.ResumeLayout(False)
         Me.EdSplit.Panel2.ResumeLayout(False)
         Me.EdSplit.ResumeLayout(False)
@@ -633,10 +648,10 @@ Partial Class Form1
     Friend WithEvents HelpTopics As System.Windows.Forms.MenuItem
     Friend WithEvents CoreSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents EdSplit As System.Windows.Forms.SplitContainer
-    Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
-    Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
+    Friend WithEvents Preview As System.Windows.Forms.WebBrowser
+    Friend WithEvents IconThemeMenu As System.Windows.Forms.MenuItem
     Friend WithEvents VS2017item As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
+    Friend WithEvents ViewMenuSep As System.Windows.Forms.MenuItem
     Friend WithEvents XP As System.Windows.Forms.ImageList
     Friend WithEvents XPitem As System.Windows.Forms.MenuItem
     Friend WithEvents EditTabs As System.Windows.Forms.TabControl
@@ -645,12 +660,12 @@ Partial Class Form1
     Friend WithEvents Context As System.Windows.Forms.ContextMenu
     Friend WithEvents OpenInDefault As System.Windows.Forms.MenuItem
     Friend WithEvents RefreshItem As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
+    Friend WithEvents ContextSep As System.Windows.Forms.MenuItem
     Friend WithEvents CopyCon As System.Windows.Forms.MenuItem
     Friend WithEvents PasteCon As System.Windows.Forms.MenuItem
     Friend WithEvents DeleteCon As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem10 As System.Windows.Forms.MenuItem
+    Friend WithEvents ContextSep2 As System.Windows.Forms.MenuItem
+    Friend WithEvents ContextSep3 As System.Windows.Forms.MenuItem
     Friend WithEvents NewCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewFolderCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewHTMLCon As System.Windows.Forms.MenuItem
@@ -658,17 +673,20 @@ Partial Class Form1
     Friend WithEvents AddFilesCon As System.Windows.Forms.MenuItem
     Friend WithEvents AddFilesDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents NewPHPCon As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
+    Friend WithEvents NewSep As System.Windows.Forms.MenuItem
     Friend WithEvents BuildProgress As System.Windows.Forms.ProgressBar
     Friend WithEvents Apricot As System.ComponentModel.BackgroundWorker
     Friend WithEvents BuildPanel As System.Windows.Forms.MenuItem
     Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents OpenPrompt As System.Windows.Forms.Label
     Friend WithEvents SiteTree As System.Windows.Forms.TreeView
     Friend WithEvents Log As System.Windows.Forms.TextBox
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents MenuItem6 As System.Windows.Forms.MenuItem
+    Friend WithEvents FormatMenu As System.Windows.Forms.MenuItem
+    Friend WithEvents SyntaxHighlight As System.Windows.Forms.MenuItem
+    Friend WithEvents FormatMenuSep As System.Windows.Forms.MenuItem
+    Friend WithEvents SaveAll As System.Windows.Forms.MenuItem
+    Friend WithEvents BuildStrip As System.Windows.Forms.ToolStrip
+    Friend WithEvents Build As System.Windows.Forms.ToolStripButton
+    Friend WithEvents LivePreview As System.Windows.Forms.MenuItem
 End Class

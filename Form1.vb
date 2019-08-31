@@ -275,9 +275,7 @@ Public Class Form1
                         box = editor.Code
                         openFiles.Add(e.Node.Tag)
                     End If
-                    'FastColoredTextBox1.Text = My.Computer.FileSystem.ReadAllText(e.Node.Tag)
                 Catch ex As Exception
-
                 End Try
             End If
             Try
@@ -289,6 +287,7 @@ Public Class Form1
                     End If
                 End If
             Catch ex As Exception
+                MsgBox(ex.Message)
             End Try
         End If
     End Sub

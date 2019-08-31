@@ -47,13 +47,16 @@ Public Class Editor
             Code.Range.SetStyle(GreenStyle, "\[#.*?#\]", RegexOptions.Singleline)
             'for atteql, value, text in re.findall(r'\[(.*)=(.*?)\](.*)\[\/\1.*\]', template):
         End If
-        If My.Settings.LivePreview Then
-            If Me.Parent.Text.EndsWith(".md") Then
-                Form1.Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(Code.Text)
-            Else
-                Form1.Preview.DocumentText = Code.Text
+        Try
+            If My.Settings.LivePreview Then
+                If Me.Parent.Text.EndsWith(".md") Then
+                    Form1.Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(Code.Text)
+                Else
+                    Form1.Preview.DocumentText = Code.Text
+                End If
             End If
-        End If
+        Catch ex As Exception
+        End Try
     End Sub
 
     Public Sub Save() Handles SaveBtn.ButtonClick, SaveToolStripMenuItem.Click

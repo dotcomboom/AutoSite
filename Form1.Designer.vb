@@ -41,9 +41,6 @@ Partial Class Form1
         Me.EditorPanel = New System.Windows.Forms.MenuItem
         Me.PreviewPanel = New System.Windows.Forms.MenuItem
         Me.ViewMenuSep = New System.Windows.Forms.MenuItem
-        Me.DisplayStyle = New System.Windows.Forms.MenuItem
-        Me.NormalDisplay = New System.Windows.Forms.MenuItem
-        Me.TemplateDisplay = New System.Windows.Forms.MenuItem
         Me.IconThemeMenu = New System.Windows.Forms.MenuItem
         Me.VS2017item = New System.Windows.Forms.MenuItem
         Me.XPitem = New System.Windows.Forms.MenuItem
@@ -68,6 +65,11 @@ Partial Class Form1
         Me.OpenLink = New System.Windows.Forms.LinkLabel
         Me.OpenPrompt = New System.Windows.Forms.Label
         Me.SiteTree = New System.Windows.Forms.TreeView
+        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.LogPage = New System.Windows.Forms.TabPage
+        Me.Log = New System.Windows.Forms.RichTextBox
+        Me.MapPage = New System.Windows.Forms.TabPage
+        Me.AttributeTree = New System.Windows.Forms.TreeView
         Me.BuildProgress = New System.Windows.Forms.ProgressBar
         Me.BuildStrip = New System.Windows.Forms.ToolStrip
         Me.Build = New System.Windows.Forms.ToolStripButton
@@ -85,6 +87,7 @@ Partial Class Form1
         Me.AddFilesCon = New System.Windows.Forms.MenuItem
         Me.ContextSep2 = New System.Windows.Forms.MenuItem
         Me.DeleteCon = New System.Windows.Forms.MenuItem
+        Me.RenameCon = New System.Windows.Forms.MenuItem
         Me.ContextSep3 = New System.Windows.Forms.MenuItem
         Me.NewCon = New System.Windows.Forms.MenuItem
         Me.NewFolderCon = New System.Windows.Forms.MenuItem
@@ -94,15 +97,16 @@ Partial Class Form1
         Me.NewPHPCon = New System.Windows.Forms.MenuItem
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
         Me.Apricot = New System.ComponentModel.BackgroundWorker
-        Me.Log = New System.Windows.Forms.RichTextBox
         Me.Watcher = New System.IO.FileSystemWatcher
-        Me.RenameCon = New System.Windows.Forms.MenuItem
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.LogPage.SuspendLayout()
+        Me.MapPage.SuspendLayout()
         Me.BuildStrip.SuspendLayout()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -119,6 +123,8 @@ Partial Class Form1
         Me.VS2017.Images.SetKeyName(2, "Page")
         Me.VS2017.Images.SetKeyName(3, "Include")
         Me.VS2017.Images.SetKeyName(4, "Build")
+        Me.VS2017.Images.SetKeyName(5, "Attribute")
+        Me.VS2017.Images.SetKeyName(6, "Value")
         '
         'FolderBrowser
         '
@@ -167,7 +173,7 @@ Partial Class Form1
         'ViewMenu
         '
         Me.ViewMenu.Index = 1
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Panels, Me.ViewMenuSep, Me.DisplayStyle, Me.IconThemeMenu, Me.RefreshItem})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Panels, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem})
         Me.ViewMenu.Text = "View"
         '
         'Panels
@@ -209,26 +215,6 @@ Partial Class Form1
         '
         Me.ViewMenuSep.Index = 1
         Me.ViewMenuSep.Text = "-"
-        '
-        'DisplayStyle
-        '
-        Me.DisplayStyle.Index = 2
-        Me.DisplayStyle.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NormalDisplay, Me.TemplateDisplay})
-        Me.DisplayStyle.Text = "Display Style"
-        '
-        'NormalDisplay
-        '
-        Me.NormalDisplay.Checked = True
-        Me.NormalDisplay.Index = 0
-        Me.NormalDisplay.RadioCheck = True
-        Me.NormalDisplay.Text = "Normal"
-        '
-        'TemplateDisplay
-        '
-        Me.TemplateDisplay.Enabled = False
-        Me.TemplateDisplay.Index = 1
-        Me.TemplateDisplay.RadioCheck = True
-        Me.TemplateDisplay.Text = "Template"
         '
         'IconThemeMenu
         '
@@ -353,8 +339,8 @@ Partial Class Form1
         'CoreSplit.Panel2
         '
         Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
-        Me.CoreSplit.Size = New System.Drawing.Size(709, 419)
-        Me.CoreSplit.SplitterDistance = 234
+        Me.CoreSplit.Size = New System.Drawing.Size(707, 417)
+        Me.CoreSplit.SplitterDistance = 233
         Me.CoreSplit.TabIndex = 4
         '
         'ExSplit
@@ -372,11 +358,11 @@ Partial Class Form1
         '
         'ExSplit.Panel2
         '
-        Me.ExSplit.Panel2.Controls.Add(Me.Log)
+        Me.ExSplit.Panel2.Controls.Add(Me.TabControl1)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
-        Me.ExSplit.Size = New System.Drawing.Size(234, 419)
-        Me.ExSplit.SplitterDistance = 271
+        Me.ExSplit.Size = New System.Drawing.Size(233, 417)
+        Me.ExSplit.SplitterDistance = 236
         Me.ExSplit.TabIndex = 4
         '
         'OpenLink
@@ -387,7 +373,7 @@ Partial Class Form1
         Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.OpenLink.Location = New System.Drawing.Point(22, 51)
         Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.Size = New System.Drawing.Size(190, 13)
+        Me.OpenLink.Size = New System.Drawing.Size(189, 13)
         Me.OpenLink.TabIndex = 1
         Me.OpenLink.TabStop = True
         Me.OpenLink.Text = "Create or open a site folder"
@@ -401,7 +387,7 @@ Partial Class Form1
         Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.OpenPrompt.Location = New System.Drawing.Point(19, 26)
         Me.OpenPrompt.Name = "OpenPrompt"
-        Me.OpenPrompt.Size = New System.Drawing.Size(193, 13)
+        Me.OpenPrompt.Size = New System.Drawing.Size(192, 13)
         Me.OpenPrompt.TabIndex = 2
         Me.OpenPrompt.Text = "A site has not been opened yet."
         Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -412,15 +398,72 @@ Partial Class Form1
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
         Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.Size = New System.Drawing.Size(234, 271)
+        Me.SiteTree.Size = New System.Drawing.Size(233, 236)
         Me.SiteTree.TabIndex = 4
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.LogPage)
+        Me.TabControl1.Controls.Add(Me.MapPage)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 25)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(233, 129)
+        Me.TabControl1.TabIndex = 5
+        '
+        'LogPage
+        '
+        Me.LogPage.Controls.Add(Me.Log)
+        Me.LogPage.Location = New System.Drawing.Point(4, 22)
+        Me.LogPage.Name = "LogPage"
+        Me.LogPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.LogPage.Size = New System.Drawing.Size(226, 103)
+        Me.LogPage.TabIndex = 0
+        Me.LogPage.Text = "Log"
+        Me.LogPage.UseVisualStyleBackColor = True
+        '
+        'Log
+        '
+        Me.Log.BackColor = System.Drawing.SystemColors.Window
+        Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Log.Location = New System.Drawing.Point(3, 3)
+        Me.Log.Name = "Log"
+        Me.Log.ReadOnly = True
+        Me.Log.Size = New System.Drawing.Size(220, 97)
+        Me.Log.TabIndex = 5
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        '
+        'MapPage
+        '
+        Me.MapPage.Controls.Add(Me.AttributeTree)
+        Me.MapPage.Location = New System.Drawing.Point(4, 22)
+        Me.MapPage.Name = "MapPage"
+        Me.MapPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.MapPage.Size = New System.Drawing.Size(225, 103)
+        Me.MapPage.TabIndex = 1
+        Me.MapPage.Text = "Attribute Map"
+        Me.MapPage.UseVisualStyleBackColor = True
+        '
+        'AttributeTree
+        '
+        Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.AttributeTree.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AttributeTree.ImageIndex = 0
+        Me.AttributeTree.ImageList = Me.VS2017
+        Me.AttributeTree.Location = New System.Drawing.Point(3, 3)
+        Me.AttributeTree.Name = "AttributeTree"
+        Me.AttributeTree.SelectedImageIndex = 0
+        Me.AttributeTree.Size = New System.Drawing.Size(219, 97)
+        Me.AttributeTree.TabIndex = 0
         '
         'BuildProgress
         '
         Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BuildProgress.Location = New System.Drawing.Point(0, 121)
+        Me.BuildProgress.Location = New System.Drawing.Point(0, 154)
         Me.BuildProgress.Name = "BuildProgress"
-        Me.BuildProgress.Size = New System.Drawing.Size(234, 23)
+        Me.BuildProgress.Size = New System.Drawing.Size(233, 23)
         Me.BuildProgress.TabIndex = 1
         Me.BuildProgress.Visible = False
         '
@@ -432,7 +475,7 @@ Partial Class Form1
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.BuildStrip.Size = New System.Drawing.Size(234, 25)
+        Me.BuildStrip.Size = New System.Drawing.Size(233, 25)
         Me.BuildStrip.TabIndex = 3
         Me.BuildStrip.Text = "ToolStrip1"
         '
@@ -480,8 +523,8 @@ Partial Class Form1
         'EdSplit.Panel2
         '
         Me.EdSplit.Panel2.Controls.Add(Me.Preview)
-        Me.EdSplit.Size = New System.Drawing.Size(471, 419)
-        Me.EdSplit.SplitterDistance = 242
+        Me.EdSplit.Size = New System.Drawing.Size(470, 417)
+        Me.EdSplit.SplitterDistance = 240
         Me.EdSplit.TabIndex = 1
         '
         'EditTabs
@@ -494,7 +537,7 @@ Partial Class Form1
         Me.EditTabs.Padding = New System.Drawing.Point(0, 0)
         Me.EditTabs.SelectedIndex = 0
         Me.EditTabs.ShowToolTips = True
-        Me.EditTabs.Size = New System.Drawing.Size(471, 242)
+        Me.EditTabs.Size = New System.Drawing.Size(470, 240)
         Me.EditTabs.TabIndex = 1
         '
         'Preview
@@ -504,7 +547,7 @@ Partial Class Form1
         Me.Preview.MinimumSize = New System.Drawing.Size(20, 20)
         Me.Preview.Name = "Preview"
         Me.Preview.ScriptErrorsSuppressed = True
-        Me.Preview.Size = New System.Drawing.Size(471, 173)
+        Me.Preview.Size = New System.Drawing.Size(470, 173)
         Me.Preview.TabIndex = 0
         Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
@@ -562,6 +605,11 @@ Partial Class Form1
         Me.DeleteCon.Index = 6
         Me.DeleteCon.Text = "Delete"
         '
+        'RenameCon
+        '
+        Me.RenameCon.Index = 7
+        Me.RenameCon.Text = "Rename"
+        '
         'ContextSep3
         '
         Me.ContextSep3.Index = 8
@@ -608,32 +656,18 @@ Partial Class Form1
         '
         Me.Apricot.WorkerReportsProgress = True
         '
-        'Log
-        '
-        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Log.Location = New System.Drawing.Point(0, 25)
-        Me.Log.Name = "Log"
-        Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(234, 96)
-        Me.Log.TabIndex = 4
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
-        '
         'Watcher
         '
         Me.Watcher.EnableRaisingEvents = True
+        Me.Watcher.Filter = "JINFC)(#@)D)(J@()J()DN@()NQND_)NQ#WNN"
         Me.Watcher.IncludeSubdirectories = True
         Me.Watcher.SynchronizingObject = Me
-        '
-        'RenameCon
-        '
-        Me.RenameCon.Index = 7
-        Me.RenameCon.Text = "Rename"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(709, 419)
+        Me.ClientSize = New System.Drawing.Size(707, 417)
         Me.Controls.Add(Me.CoreSplit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Menu = Me.MenuBar
@@ -646,6 +680,9 @@ Partial Class Form1
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
         Me.ExSplit.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.LogPage.ResumeLayout(False)
+        Me.MapPage.ResumeLayout(False)
         Me.BuildStrip.ResumeLayout(False)
         Me.BuildStrip.PerformLayout()
         Me.EdSplit.Panel1.ResumeLayout(False)
@@ -662,9 +699,6 @@ Partial Class Form1
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
     Friend WithEvents CloseSite As System.Windows.Forms.MenuItem
     Friend WithEvents ViewMenu As System.Windows.Forms.MenuItem
-    Friend WithEvents DisplayStyle As System.Windows.Forms.MenuItem
-    Friend WithEvents NormalDisplay As System.Windows.Forms.MenuItem
-    Friend WithEvents TemplateDisplay As System.Windows.Forms.MenuItem
     Friend WithEvents Panels As System.Windows.Forms.MenuItem
     Friend WithEvents ExplorerPanel As System.Windows.Forms.MenuItem
     Friend WithEvents PanelSep As System.Windows.Forms.MenuItem
@@ -725,7 +759,11 @@ Partial Class Form1
     Friend WithEvents LivePreview As System.Windows.Forms.MenuItem
     Friend WithEvents OpenDefault As System.Windows.Forms.ToolStripButton
     Friend WithEvents BrowseOutput As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Log As System.Windows.Forms.RichTextBox
     Friend WithEvents Watcher As System.IO.FileSystemWatcher
     Friend WithEvents RenameCon As System.Windows.Forms.MenuItem
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents LogPage As System.Windows.Forms.TabPage
+    Friend WithEvents Log As System.Windows.Forms.RichTextBox
+    Friend WithEvents MapPage As System.Windows.Forms.TabPage
+    Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
 End Class

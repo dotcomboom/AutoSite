@@ -47,8 +47,8 @@ Public Class Form1
     End Sub
 
     Private Sub refreshTree(ByVal root As TreeNode)
-        Dim templatePath = root.Text & "\templates"
         Dim inPath = root.Text & "\in"
+        Dim templatePath = root.Text & "\templates"
         Dim includePath = root.Text & "\includes"
 
         root.Nodes.Clear()
@@ -56,14 +56,17 @@ Public Class Form1
         Dim pages = root.Nodes.Add("Pages")
         pages.ImageKey = "Page"
         pages.SelectedImageKey = "Page"
+        pages.Tag = inPath
 
         Dim templates = root.Nodes.Add("Templates")
         templates.ImageKey = "Template"
         templates.SelectedImageKey = "Template"
+        templates.Tag = templatePath
 
         Dim includes = root.Nodes.Add("Includes")
         includes.ImageKey = "Include"
         includes.SelectedImageKey = "Include"
+        includes.Tag = includePath
 
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(inPath), "*", pages, "Page", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
@@ -112,6 +115,7 @@ Public Class Form1
         checkOpen()
         My.Settings.openProject = path
         Watcher.Path = path
+        Watcher.Filter = "*.*"
     End Sub
 
     Public Sub panelUpdate()
@@ -164,9 +168,10 @@ Public Class Form1
     Private Sub CloseSite_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseSite.Click
         SiteTree.Nodes.Clear()
         EditTabs.TabPages.Clear()
+        AttributeTree.Nodes.Clear()
         Preview.DocumentText = ""
         My.Settings.openProject = ""
-        Watcher.Path = ""
+        Watcher.Filter = "NFIDNI#N()Dxn)(@Nqinnxisabub@IZWNQIONCIWENiN@Nd0N@()@()OPQNOPMNXONNW(ENND@#(ONCPENQOPNNNSANOI" ' can't disable it so /shrug
         checkOpen()
     End Sub
 
@@ -259,8 +264,29 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub SiteTree_NodeMouseDoubleClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick
+    Private foundNode As TreeNode = Nothing
+
+    'https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control
+    Private Sub FindNodeTag(ByVal treeNode As TreeNode, ByVal tag As String)
+        If treeNode.Tag = tag Then
+            foundNode = treeNode
+        End If
+
+        If foundNode Is Nothing Then
+            For Each tn As TreeNode In treeNode.Nodes
+                FindNodeTag(tn, tag)
+            Next
+        End If
+    End Sub
+
+    Private Sub SiteTree_NodeMouseDoubleClick(ByVal sender As TreeView, ByVal e As TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick, AttributeTree.NodeMouseDoubleClick
         If e.Button = Windows.Forms.MouseButtons.Left Then
+            If sender.Name = "AttributeTree" Then
+                FindNodeTag(SiteTree.Nodes(0), e.Node.Tag)
+                If Not foundNode Is Nothing Then
+                    foundNode.TreeView.SelectedNode = foundNode
+                End If
+            End If
             Dim box As FastColoredTextBox
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
                 Try
@@ -401,6 +427,7 @@ Public Class Form1
             'Build.Show()
             bld = SiteTree.Nodes(0).Text
             Log.Clear()
+            AttributeTree.Nodes.Clear()
             Apricot.RunWorkerAsync()
         End If
     End Sub
@@ -431,8 +458,8 @@ Public Class Form1
                 Else
                     PasteCon.Enabled = False
                 End If
-                DeleteCon.Enabled = True
-                RenameCon.Enabled = True
+                DeleteCon.Enabled = Context.Tag.EndsWith(e.Node.Text)
+                RenameCon.Enabled = Context.Tag.EndsWith(e.Node.Text)
                 AddFilesCon.Enabled = True
                 NewCon.Enabled = True
             End If
@@ -503,7 +530,10 @@ Public Class Form1
         End If
     End Sub
 
+    Private fileAddContext As String = ""
+
     Private Sub NewFolderCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewFolderCon.Click
+        fileAddContext = "rename"
         Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
@@ -518,6 +548,7 @@ Public Class Form1
     End Sub
 
     Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
+        fileAddContext = "rename"
         Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
@@ -526,10 +557,10 @@ Public Class Form1
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
         My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.html"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine, False)
-        'refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
+        fileAddContext = "rename"
         Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
@@ -542,6 +573,7 @@ Public Class Form1
     End Sub
 
     Private Sub NewPHPCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewPHPCon.Click
+        fileAddContext = "rename"
         Dim path = Context.Tag
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
@@ -631,6 +663,38 @@ Public Class Form1
         Return sb.ToString()
     End Function
 
+    Public Class TNode
+        Private _relPath As String
+        Public Property relPath() As String
+            Get
+                Return _relPath
+            End Get
+            Set(ByVal value As String)
+                _relPath = value
+            End Set
+        End Property
+
+        Private _Attribute As String
+        Public Property Attribute() As String
+            Get
+                Return _Attribute
+            End Get
+            Set(ByVal value As String)
+                _Attribute = value
+            End Set
+        End Property
+
+        Private _Value As String
+        Public Property Value() As String
+            Get
+                Return _Value
+            End Get
+            Set(ByVal value As String)
+                _Value = value
+            End Set
+        End Property
+    End Class
+
     Sub walkInputs(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal input As String, ByVal templates As String, ByVal out As String)
         For Each file In directory.GetFiles(pattern)
             Dim rel = ReplaceFirst(file.FullName, input, "")
@@ -654,7 +718,15 @@ Public Class Form1
                     End If
                 End If
             Loop Until line Is Nothing
+            For Each attrib In attribs
+                Dim tn As New TNode
+                tn.relPath = rel
+                tn.Attribute = attrib.Key
+                tn.Value = attrib.Value
+                Apricot.ReportProgress(20, tn)
+            Next
             If Not template_cache.ContainsKey(attribs.Item("template")) Then
+
                 Apricot.ReportProgress(30, "    Loading template " & attribs.Item("template"))
                 template_cache.Item(attribs.Item("template")) = My.Computer.FileSystem.ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
             End If
@@ -754,10 +826,82 @@ Public Class Form1
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles Apricot.ProgressChanged
-        BuildProgress.Visible = True
-        BuildProgress.Value = e.ProgressPercentage
-        Me.Text = e.UserState
-        Log.AppendText(e.UserState & vbNewLine)
+        If e.UserState.GetType() Is GetType(System.String) Then
+            BuildProgress.Visible = True
+            BuildProgress.Value = e.ProgressPercentage
+            Me.Text = e.UserState
+            Log.AppendText(e.UserState & vbNewLine)
+        ElseIf e.UserState.GetType() Is GetType(TNode) Then
+            Dim tn As TNode = e.UserState
+
+            Dim aNode As New TreeNode
+            Dim exists As Boolean = False
+            For Each node As TreeNode In AttributeTree.Nodes
+                If node.Text = tn.Attribute Then
+                    aNode = node
+                    exists = True
+                End If
+            Next
+
+            If Not exists Then
+                aNode = New TreeNode
+                aNode.Text = tn.Attribute
+                aNode.ImageKey = "Attribute"
+                aNode.SelectedImageKey = "Attribute"
+                AttributeTree.Nodes.Add(aNode)
+            End If
+
+            Dim vNode As New TreeNode
+            Dim txt = tn.Value
+            If txt.Length > 20 Then
+                txt = txt.Substring(0, 20) & ".."
+            End If
+
+            exists = False
+            For Each node As TreeNode In aNode.Nodes
+                If node.Text = txt Then
+                    vNode = node
+                    exists = True
+                End If
+            Next
+
+            If Not exists Then
+                vNode = New TreeNode
+                vNode.Text = txt
+                vNode.ImageKey = "Value"
+                vNode.SelectedImageKey = "Value"
+                aNode.Nodes.Add(vNode)
+            End If
+
+            Dim pNode = vNode
+            Dim rPath = tn.relPath
+            While rPath.Contains("\")
+                Dim folderName = rPath.Split("\")(0)
+                Dim npExists = False
+                Dim npNode As New TreeNode
+                For Each node As TreeNode In pNode.Nodes
+                    If node.Text = folderName Then
+                        npNode = node
+                        npExists = True
+                    End If
+                Next
+                If Not npExists Then
+                    npNode.Text = folderName
+                    npNode.ImageKey = "Folder"
+                    npNode.SelectedImageKey = "Folder"
+                    pNode.Nodes.Add(npNode)
+                End If
+                pNode = npNode
+                rPath = ReplaceFirst(rPath, folderName & "\", "")
+            End While
+
+            Dim fNode As New TreeNode
+            fNode.Text = rPath
+            fNode.ImageKey = "Page"
+            fNode.SelectedImageKey = "Page"
+            fNode.Tag = Path.Combine(SiteTree.Nodes(0).Text, "in\" & tn.relPath)
+            pNode.Nodes.Add(fNode)
+        End If
     End Sub
 
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles Apricot.RunWorkerCompleted
@@ -862,6 +1006,10 @@ Public Class Form1
                 node.SelectedImageKey = "Page"
             End If
             pnode.Nodes.Add(node)
+            If fileAddContext = "rename" Then
+                fileAddContext = ""
+                node.BeginEdit()
+            End If
         ElseIf e.Name.StartsWith("templates\") Then
             Dim f = ReplaceFirst(e.Name, "templates\", "")
             Dim pnode As TreeNode = templates
@@ -879,6 +1027,10 @@ Public Class Form1
                 node.SelectedImageKey = "Template"
             End If
             pnode.Nodes.Add(node)
+            If fileAddContext = "rename" Then
+                fileAddContext = ""
+                node.BeginEdit()
+            End If
         ElseIf e.Name.StartsWith("includes\") Then
             Dim f = ReplaceFirst(e.Name, "includes\", "")
             Dim pnode As TreeNode = includes
@@ -896,21 +1048,10 @@ Public Class Form1
                 node.SelectedImageKey = "Include"
             End If
             pnode.Nodes.Add(node)
-        End If
-    End Sub
-
-    Private foundNode As TreeNode = Nothing
-
-    'https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control
-    Private Sub FindNodeTag(ByVal treeNode As TreeNode, ByVal tag As String)
-        If treeNode.Tag = tag Then
-            foundNode = treeNode
-        End If
-
-        If foundNode Is Nothing Then
-            For Each tn As TreeNode In treeNode.Nodes
-                FindNodeTag(tn, tag)
-            Next
+            If fileAddContext = "rename" Then
+                fileAddContext = ""
+                node.BeginEdit()
+            End If
         End If
     End Sub
 

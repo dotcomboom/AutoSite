@@ -658,7 +658,7 @@ SOFTWARE.</value>
   <data name="ChangelogBox.Text" xml:space="preserve">
     <value>0.9.1 - The Touch Up:
    + About box is larger, changelog tab added
-   + Context menu improvements
+   + Context menu improvements; code of new HTML files made is different based on whether it is a page, template or include
    + Version number is now shown in title bar
    * About box can now be maximized
    * Visual Studio 2017 icon theme used by default as it's used throughout the UI outside of the explorer view

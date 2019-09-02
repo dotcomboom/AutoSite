@@ -659,11 +659,12 @@ SOFTWARE.</value>
     <value>0.9.2 - Zucchini Squash:
    + Double clicking on a file that's already open in the editor will switch to its tab
    + You can open the root folder in external program/Explorer
-   + You can create a new folder/file when the default name already exists and a (1) or similar will be appended to its filename
    + Close Site now prompts to save  
    + Save All is now disabled when no site is open
+   + You can create a new folder/file when the default name already exists and a (1) or similar will be appended to its filename
    * New files now don't have spaces with the exception of the above
    * Right clicking on the root no longer errors out
+   * "Icon Theme" renamed to "Explorer Icon Theme" as it's not yet throughout the whole UI
 
    * Inequality conditionals are finally actually positively for real fixed now I promise
 

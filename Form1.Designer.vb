@@ -224,7 +224,7 @@ Partial Class Form1
         '
         Me.IconThemeMenu.Index = 2
         Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
-        Me.IconThemeMenu.Text = "Icon Theme"
+        Me.IconThemeMenu.Text = "Explorer Icon Theme"
         '
         'VS2017item
         '

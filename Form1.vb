@@ -113,6 +113,7 @@ Public Class Form1
             Dim root = SiteTree.Nodes.Add(path)
             root.ImageKey = "Folder"
             root.SelectedImageKey = "Folder"
+            root.Tag = path
 
             refreshTree(root)
         End If
@@ -478,6 +479,15 @@ Public Class Form1
                 AddFilesCon.Enabled = True
                 NewCon.Enabled = True
             End If
+            If Context.Tag = SiteTree.Nodes(0).Tag Then
+                OpenInDefault.Enabled = True
+                CopyCon.Enabled = False
+                PasteCon.Enabled = False
+                DeleteCon.Enabled = False
+                RenameCon.Enabled = False
+                AddFilesCon.Enabled = False
+                NewCon.Enabled = False
+            End If
             Try
                 If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then
                     NewFolderCon.Enabled = True
@@ -584,7 +594,13 @@ Public Class Form1
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
         If My.Computer.FileSystem.DirectoryExists(dir) Then
-            My.Computer.FileSystem.CreateDirectory(System.IO.Path.Combine(dir, "New Folder"))
+            Dim num = 0
+            Dim add = ""
+            While My.Computer.FileSystem.DirectoryExists(System.IO.Path.Combine(dir, "new_folder" & add))
+                num += 1
+                add = " (" & num & ")"
+            End While
+            My.Computer.FileSystem.CreateDirectory(System.IO.Path.Combine(dir, "new_folder" & add))
             'refreshTree(SiteTree.Nodes(0))
         End If
     End Sub
@@ -604,7 +620,13 @@ Public Class Form1
         ElseIf dir = SiteTree.Nodes(0).Nodes(2).Tag Then
             html = "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>New HTML Page</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>Include Page</h1>" & vbNewLine & "  </body>" & vbNewLine & "</html>"
         End If
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.html"), html, False)
+        Dim num = 0
+        Dim add = ""
+        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
+            num += 1
+            add = " (" & num & ")"
+        End While
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-page" & add & ".html"), html, False)
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
@@ -616,8 +638,13 @@ Public Class Form1
         ElseIf My.Computer.FileSystem.FileExists(path) Then
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.md"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine, False)
-        'refreshTree(SiteTree.Nodes(0))
+        Dim num = 0
+        Dim add = ""
+        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
+            num += 1
+            add = " (" & num & ")"
+        End While
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-page" & add & ".md"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine, False)
     End Sub
 
     Private Sub NewPHPCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewPHPCon.Click
@@ -629,8 +656,49 @@ Public Class Form1
         ElseIf My.Computer.FileSystem.FileExists(path) Then
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.php"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
-        'refreshTree(SiteTree.Nodes(0))
+        Dim num = 0
+        Dim add = ""
+        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
+            num += 1
+            add = " (" & num & ")"
+        End While
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-page" & add & ".php"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
+    End Sub
+
+    Private Sub NewCSSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCSSCon.Click
+        fileAddContext = "rename"
+        Dim path = Context.Tag
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        Dim num = 0
+        Dim add = ""
+        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
+            num += 1
+            add = " (" & num & ")"
+        End While
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-style" & add & ".css"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
+    End Sub
+
+    Private Sub NewJSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewJSCon.Click
+        fileAddContext = "rename"
+        Dim path = Context.Tag
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        Dim num = 0
+        Dim add = ""
+        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
+            num += 1
+            add = " (" & num & ")"
+        End While
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-script" & add & ".js"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
     End Sub
 
     Private Sub AddFilesCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddFilesCon.Click

@@ -23,67 +23,67 @@ Partial Class About
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(About))
-        Me.aboutText = New System.Windows.Forms.RichTextBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.version = New System.Windows.Forms.Label
+        Me.LicenseBox = New System.Windows.Forms.RichTextBox
+        Me.OK = New System.Windows.Forms.Button
+        Me.Logo = New System.Windows.Forms.PictureBox
+        Me.Version = New System.Windows.Forms.Label
         Me.GithubLink = New System.Windows.Forms.LinkLabel
         Me.WebsiteLink = New System.Windows.Forms.LinkLabel
         Me.Py3AutoSite = New System.Windows.Forms.Label
         Me.PyWebsiteLink = New System.Windows.Forms.LinkLabel
         Me.PyGithubLink = New System.Windows.Forms.LinkLabel
-        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.Tabs = New System.Windows.Forms.TabControl
         Me.License = New System.Windows.Forms.TabPage
         Me.Changelog = New System.Windows.Forms.TabPage
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl1.SuspendLayout()
+        Me.ChangelogBox = New System.Windows.Forms.RichTextBox
+        CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Tabs.SuspendLayout()
         Me.License.SuspendLayout()
         Me.Changelog.SuspendLayout()
         Me.SuspendLayout()
         '
-        'aboutText
+        'LicenseBox
         '
-        Me.aboutText.BackColor = System.Drawing.SystemColors.Window
-        Me.aboutText.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.aboutText.Cursor = System.Windows.Forms.Cursors.Default
-        Me.aboutText.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.aboutText.Location = New System.Drawing.Point(3, 3)
-        Me.aboutText.Name = "aboutText"
-        Me.aboutText.ReadOnly = True
-        Me.aboutText.Size = New System.Drawing.Size(286, 236)
-        Me.aboutText.TabIndex = 0
-        Me.aboutText.Text = resources.GetString("aboutText.Text")
+        Me.LicenseBox.BackColor = System.Drawing.SystemColors.Window
+        Me.LicenseBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.LicenseBox.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LicenseBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LicenseBox.Location = New System.Drawing.Point(3, 3)
+        Me.LicenseBox.Name = "LicenseBox"
+        Me.LicenseBox.ReadOnly = True
+        Me.LicenseBox.Size = New System.Drawing.Size(286, 236)
+        Me.LicenseBox.TabIndex = 0
+        Me.LicenseBox.Text = resources.GetString("LicenseBox.Text")
         '
-        'Button1
+        'OK
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(318, 286)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OK.Location = New System.Drawing.Point(318, 286)
+        Me.OK.Name = "OK"
+        Me.OK.Size = New System.Drawing.Size(75, 23)
+        Me.OK.TabIndex = 1
+        Me.OK.Text = "OK"
+        Me.OK.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'Logo
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(75, 78)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
+        Me.Logo.Location = New System.Drawing.Point(12, 12)
+        Me.Logo.Name = "Logo"
+        Me.Logo.Size = New System.Drawing.Size(75, 78)
+        Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Logo.TabIndex = 2
+        Me.Logo.TabStop = False
         '
-        'version
+        'Version
         '
-        Me.version.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.version.Location = New System.Drawing.Point(12, 97)
-        Me.version.Name = "version"
-        Me.version.Size = New System.Drawing.Size(75, 13)
-        Me.version.TabIndex = 3
-        Me.version.Text = "v0.0.0.0"
-        Me.version.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Version.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Version.Location = New System.Drawing.Point(12, 97)
+        Me.Version.Name = "Version"
+        Me.Version.Size = New System.Drawing.Size(75, 13)
+        Me.Version.TabIndex = 3
+        Me.Version.Text = "v0.0.0.0"
+        Me.Version.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GithubLink
         '
@@ -133,22 +133,22 @@ Partial Class About
         Me.PyGithubLink.TabStop = True
         Me.PyGithubLink.Text = "Github"
         '
-        'TabControl1
+        'Tabs
         '
-        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.Tabs.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl1.Controls.Add(Me.License)
-        Me.TabControl1.Controls.Add(Me.Changelog)
-        Me.TabControl1.Location = New System.Drawing.Point(93, 12)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(300, 268)
-        Me.TabControl1.TabIndex = 10
+        Me.Tabs.Controls.Add(Me.License)
+        Me.Tabs.Controls.Add(Me.Changelog)
+        Me.Tabs.Location = New System.Drawing.Point(93, 12)
+        Me.Tabs.Name = "Tabs"
+        Me.Tabs.SelectedIndex = 0
+        Me.Tabs.Size = New System.Drawing.Size(300, 268)
+        Me.Tabs.TabIndex = 10
         '
         'License
         '
-        Me.License.Controls.Add(Me.aboutText)
+        Me.License.Controls.Add(Me.LicenseBox)
         Me.License.Location = New System.Drawing.Point(4, 22)
         Me.License.Name = "License"
         Me.License.Padding = New System.Windows.Forms.Padding(3)
@@ -159,7 +159,7 @@ Partial Class About
         '
         'Changelog
         '
-        Me.Changelog.Controls.Add(Me.RichTextBox1)
+        Me.Changelog.Controls.Add(Me.ChangelogBox)
         Me.Changelog.Location = New System.Drawing.Point(4, 22)
         Me.Changelog.Name = "Changelog"
         Me.Changelog.Padding = New System.Windows.Forms.Padding(3)
@@ -168,56 +168,56 @@ Partial Class About
         Me.Changelog.Text = "Changelog"
         Me.Changelog.UseVisualStyleBackColor = True
         '
-        'RichTextBox1
+        'ChangelogBox
         '
-        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Window
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(286, 236)
-        Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        Me.ChangelogBox.BackColor = System.Drawing.SystemColors.Window
+        Me.ChangelogBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ChangelogBox.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ChangelogBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ChangelogBox.Location = New System.Drawing.Point(3, 3)
+        Me.ChangelogBox.Name = "ChangelogBox"
+        Me.ChangelogBox.ReadOnly = True
+        Me.ChangelogBox.Size = New System.Drawing.Size(286, 236)
+        Me.ChangelogBox.TabIndex = 1
+        Me.ChangelogBox.Text = resources.GetString("ChangelogBox.Text")
         '
         'About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(405, 324)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.PyWebsiteLink)
         Me.Controls.Add(Me.PyGithubLink)
         Me.Controls.Add(Me.Py3AutoSite)
         Me.Controls.Add(Me.WebsiteLink)
         Me.Controls.Add(Me.GithubLink)
-        Me.Controls.Add(Me.version)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Version)
+        Me.Controls.Add(Me.Logo)
+        Me.Controls.Add(Me.OK)
         Me.Name = "About"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "About"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl1.ResumeLayout(False)
+        CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Tabs.ResumeLayout(False)
         Me.License.ResumeLayout(False)
         Me.Changelog.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents aboutText As System.Windows.Forms.RichTextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents version As System.Windows.Forms.Label
+    Friend WithEvents LicenseBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents OK As System.Windows.Forms.Button
+    Friend WithEvents Logo As System.Windows.Forms.PictureBox
+    Friend WithEvents Version As System.Windows.Forms.Label
     Friend WithEvents GithubLink As System.Windows.Forms.LinkLabel
     Friend WithEvents WebsiteLink As System.Windows.Forms.LinkLabel
     Friend WithEvents Py3AutoSite As System.Windows.Forms.Label
     Friend WithEvents PyWebsiteLink As System.Windows.Forms.LinkLabel
     Friend WithEvents PyGithubLink As System.Windows.Forms.LinkLabel
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents Tabs As System.Windows.Forms.TabControl
     Friend WithEvents License As System.Windows.Forms.TabPage
     Friend WithEvents Changelog As System.Windows.Forms.TabPage
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents ChangelogBox As System.Windows.Forms.RichTextBox
 End Class

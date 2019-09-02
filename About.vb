@@ -1,16 +1,16 @@
 ﻿Public Class About
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         Me.Close()
     End Sub
 
     Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        version.Text = "v" & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
+        Version.Text = "v" & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
         If My.Application.Info.Version.Revision > 0 Then
-            version.Text &= "." & My.Application.Info.Version.Revision
+            Version.Text &= "." & My.Application.Info.Version.Revision
         End If
         If My.Application.Info.Version.Build > 0 Then
-            version.Text &= "." & My.Application.Info.Version.Build
+            Version.Text &= "." & My.Application.Info.Version.Build
         End If
     End Sub
 

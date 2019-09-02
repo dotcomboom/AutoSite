@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="aboutText.Text" xml:space="preserve">
+  <data name="LicenseBox.Text" xml:space="preserve">
     <value>AutoSite XL is powered by these most excellent open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox
   - CommonMark.NET: https://github.com/Knagis/CommonMark.NET
@@ -149,7 +149,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAdSNJREFUeF7tnQeY
@@ -655,7 +655,7 @@ SOFTWARE.</value>
         3WS+5HdXGPNcfXsLvp/2oJ0k1Rdwm8u8mY0VgegbEftvzoT5P659y3+9/DwPAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="RichTextBox1.Text" xml:space="preserve">
+  <data name="ChangelogBox.Text" xml:space="preserve">
     <value>0.9.1 - The Touch Up:
    + About box is larger, changelog tab added
    + Context menu improvements

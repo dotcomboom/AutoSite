@@ -33,7 +33,10 @@ Public Class Form1
         CloseSite.Enabled = (SiteTree.Nodes.Count > 0)
         BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
         Build.Enabled = (SiteTree.Nodes.Count > 0)
-        OpenDefault.Enabled = (SiteTree.Nodes.Count > 0)
+        OpenOutput.Enabled = (SiteTree.Nodes.Count > 0)
+        Build.Enabled = (SiteTree.Nodes.Count > 0)
+        BrowseOutput.Enabled = (SiteTree.Nodes.Count > 0)
+        BrowseOutputExt.Enabled = (SiteTree.Nodes.Count > 0)
     End Sub
 
     Private Sub iconTheme()
@@ -166,6 +169,7 @@ Public Class Form1
     End Sub
 
     Private Sub CloseSite_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseSite.Click
+        openFiles.Clear()
         SiteTree.Nodes.Clear()
         EditTabs.TabPages.Clear()
         AttributeTree.Nodes.Clear()
@@ -428,6 +432,7 @@ Public Class Form1
             bld = SiteTree.Nodes(0).Text
             Log.Clear()
             AttributeTree.Nodes.Clear()
+            template_cache.Clear()
             Apricot.RunWorkerAsync()
         End If
     End Sub
@@ -959,7 +964,7 @@ Public Class Form1
         Next
     End Sub
 
-    Private Sub OpenDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenDefault.Click
+    Private Sub OpenDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenOutput.Click
         Process.Start(SiteTree.Nodes(0).Text & "\out\")
     End Sub
 
@@ -1078,6 +1083,14 @@ Public Class Form1
         FindNodeTag(SiteTree.Nodes(0), Context.Tag)
         If Not foundNode Is Nothing Then
             foundNode.BeginEdit()
+        End If
+    End Sub
+
+    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseOutputExt.Click
+        If My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.html") Then
+            Process.Start(SiteTree.Nodes(0).Text & "\out\index.html")
+        Else
+            Process.Start("iexplore " & SiteTree.Nodes(0).Text & "\out\")
         End If
     End Sub
 End Class

@@ -86,14 +86,14 @@ Partial Class Editor
         '
         Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'SaveAllToolStripMenuItem
         '
         Me.SaveAllToolStripMenuItem.Image = CType(resources.GetObject("SaveAllToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveAllToolStripMenuItem.Name = "SaveAllToolStripMenuItem"
-        Me.SaveAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveAllToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.SaveAllToolStripMenuItem.Text = "Save All"
         '
         'Sep
@@ -149,7 +149,7 @@ Partial Class Editor
         Me.PasteBtn.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PasteBtn.Name = "PasteBtn"
         Me.PasteBtn.Size = New System.Drawing.Size(23, 22)
-        Me.PasteBtn.Text = "Copy"
+        Me.PasteBtn.Text = "Paste"
         '
         'CloseBtn
         '
@@ -212,14 +212,14 @@ Partial Class Editor
         '
         Me.LivePreview.CheckOnClick = True
         Me.LivePreview.Name = "LivePreview"
-        Me.LivePreview.Size = New System.Drawing.Size(152, 22)
+        Me.LivePreview.Size = New System.Drawing.Size(134, 22)
         Me.LivePreview.Text = "Live Preview"
         '
         'Code
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         Me.Code.AutoScrollMinSize = New System.Drawing.Size(27, 14)
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 14

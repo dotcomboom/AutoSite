@@ -73,8 +73,9 @@ Partial Class Form1
         Me.BuildProgress = New System.Windows.Forms.ProgressBar
         Me.BuildStrip = New System.Windows.Forms.ToolStrip
         Me.Build = New System.Windows.Forms.ToolStripButton
-        Me.OpenDefault = New System.Windows.Forms.ToolStripButton
+        Me.OpenOutput = New System.Windows.Forms.ToolStripButton
         Me.BrowseOutput = New System.Windows.Forms.ToolStripButton
+        Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
         Me.EdSplit = New System.Windows.Forms.SplitContainer
         Me.EditTabs = New System.Windows.Forms.TabControl
         Me.Preview = New System.Windows.Forms.WebBrowser
@@ -218,7 +219,7 @@ Partial Class Form1
         '
         'IconThemeMenu
         '
-        Me.IconThemeMenu.Index = 3
+        Me.IconThemeMenu.Index = 2
         Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
         Me.IconThemeMenu.Text = "Icon Theme"
         '
@@ -236,7 +237,7 @@ Partial Class Form1
         '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 4
+        Me.RefreshItem.Index = 3
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
         Me.RefreshItem.Text = "Refresh"
         '
@@ -395,9 +396,12 @@ Partial Class Form1
         'SiteTree
         '
         Me.SiteTree.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SiteTree.ImageIndex = 0
+        Me.SiteTree.ImageList = Me.VS2017
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
         Me.SiteTree.Name = "SiteTree"
+        Me.SiteTree.SelectedImageIndex = 0
         Me.SiteTree.Size = New System.Drawing.Size(233, 236)
         Me.SiteTree.TabIndex = 4
         '
@@ -418,7 +422,7 @@ Partial Class Form1
         Me.LogPage.Location = New System.Drawing.Point(4, 22)
         Me.LogPage.Name = "LogPage"
         Me.LogPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.LogPage.Size = New System.Drawing.Size(226, 103)
+        Me.LogPage.Size = New System.Drawing.Size(225, 103)
         Me.LogPage.TabIndex = 0
         Me.LogPage.Text = "Log"
         Me.LogPage.UseVisualStyleBackColor = True
@@ -431,7 +435,7 @@ Partial Class Form1
         Me.Log.Location = New System.Drawing.Point(3, 3)
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(220, 97)
+        Me.Log.Size = New System.Drawing.Size(219, 97)
         Me.Log.TabIndex = 5
         Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
@@ -471,7 +475,7 @@ Partial Class Form1
         '
         Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
         Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenDefault, Me.BrowseOutput})
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseOutput, Me.BrowseOutputExt})
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -489,15 +493,15 @@ Partial Class Form1
         Me.Build.Text = "ToolStripButton1"
         Me.Build.ToolTipText = "Build"
         '
-        'OpenDefault
+        'OpenOutput
         '
-        Me.OpenDefault.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.OpenDefault.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OpenDefault.Image = CType(resources.GetObject("OpenDefault.Image"), System.Drawing.Image)
-        Me.OpenDefault.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.OpenDefault.Name = "OpenDefault"
-        Me.OpenDefault.Size = New System.Drawing.Size(23, 22)
-        Me.OpenDefault.Text = "Open Output Folder"
+        Me.OpenOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.OpenOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenOutput.Image = CType(resources.GetObject("OpenOutput.Image"), System.Drawing.Image)
+        Me.OpenOutput.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.OpenOutput.Name = "OpenOutput"
+        Me.OpenOutput.Size = New System.Drawing.Size(23, 22)
+        Me.OpenOutput.Text = "Open Output Folder"
         '
         'BrowseOutput
         '
@@ -508,6 +512,16 @@ Partial Class Form1
         Me.BrowseOutput.Name = "BrowseOutput"
         Me.BrowseOutput.Size = New System.Drawing.Size(23, 22)
         Me.BrowseOutput.Text = "Browse Site in Preview"
+        '
+        'BrowseOutputExt
+        '
+        Me.BrowseOutputExt.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BrowseOutputExt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BrowseOutputExt.Image = CType(resources.GetObject("BrowseOutputExt.Image"), System.Drawing.Image)
+        Me.BrowseOutputExt.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BrowseOutputExt.Name = "BrowseOutputExt"
+        Me.BrowseOutputExt.Size = New System.Drawing.Size(23, 22)
+        Me.BrowseOutputExt.Text = "Browse Site in Default Browser"
         '
         'EdSplit
         '
@@ -757,7 +771,7 @@ Partial Class Form1
     Friend WithEvents BuildStrip As System.Windows.Forms.ToolStrip
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents LivePreview As System.Windows.Forms.MenuItem
-    Friend WithEvents OpenDefault As System.Windows.Forms.ToolStripButton
+    Friend WithEvents OpenOutput As System.Windows.Forms.ToolStripButton
     Friend WithEvents BrowseOutput As System.Windows.Forms.ToolStripButton
     Friend WithEvents Watcher As System.IO.FileSystemWatcher
     Friend WithEvents RenameCon As System.Windows.Forms.MenuItem
@@ -766,4 +780,5 @@ Partial Class Form1
     Friend WithEvents Log As System.Windows.Forms.RichTextBox
     Friend WithEvents MapPage As System.Windows.Forms.TabPage
     Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
+    Friend WithEvents BrowseOutputExt As System.Windows.Forms.ToolStripButton
 End Class

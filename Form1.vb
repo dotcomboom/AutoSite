@@ -32,6 +32,7 @@ Public Class Form1
         OpenLink.Visible = (SiteTree.Nodes.Count < 1)
 
         CloseSite.Enabled = (SiteTree.Nodes.Count > 0)
+        SaveAll.Enabled = (SiteTree.Nodes.Count > 0)
         BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
         Build.Enabled = (SiteTree.Nodes.Count > 0)
         OpenOutput.Enabled = (SiteTree.Nodes.Count > 0)
@@ -171,6 +172,22 @@ Public Class Form1
     End Sub
 
     Private Sub CloseSite_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseSite.Click
+        Dim saved = True
+        For Each page As TabPage In EditTabs.TabPages
+            If page.Text.Contains("*") Then
+                saved = False
+            End If
+        Next
+        If Not saved Then
+            Dim d As DialogResult = MsgBox("Some files have unsaved changes. Save them?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel, "AutoSite XL")
+
+            If d = DialogResult.Yes Then
+                DoSaveAll()
+            End If
+            If d = DialogResult.Cancel Then
+                Exit Sub
+            End If
+        End If
         openFiles.Clear()
         SiteTree.Nodes.Clear()
         EditTabs.TabPages.Clear()

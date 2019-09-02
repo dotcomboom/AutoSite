@@ -26,7 +26,7 @@ Baked in are the special attributes `root`, relative path to root, `path`, the r
 
 Attributes within pages are defined like this at the top of the document:
 ```<!-- attrib title: New Page Title -->```
-In this example, any reference of `[#title#]` will be replaced with `New Page Title` within the template. If an attribute isn't present in the page, the tag is left the same in the template.
+In this example, any reference of `[#title#]` will be replaced with `New Page Title` within the template. If an attribute isn't present in the page, the tag is removed.
 
 When you build your site, AutoSite XL's new **Attribute Map** located in the **Apricot Output** panel allows you to get a birds' eye view of all the attributes your site uses, their values, and what pages have those values. It's great for identifying errors, or just seeing what pages use which templates for example.
 

@@ -790,28 +790,30 @@ Public Class Form1
                 Dim value = m.Groups(2).Value
                 Dim html = m.Groups(3).Value
                 Dim equality = (Not key.EndsWith("!"))
+                If equality = False Then
+                    key = ReplaceLast(key, "!", "")
+                End If
                 Dim pass = False
-                If equality = True Then
-                    If attribs.ContainsKey(key) Then
-                        If attribs.Item(key) = value Then
-                            pass = True
-                        End If
-                    End If
-                Else
-                    equality = ReplaceLast(equality, "!", "")
-                    If Not attribs.ContainsKey(key) Then
+                If attribs.ContainsKey(key) Then
+                    If attribs.Item(key) = value Then
                         pass = True
-                    Else
-                        If Not (attribs.Item(key) = value) Then
-                            pass = True
-                        End If
                     End If
                 End If
 
                 If pass Then
-                    newHtml = newHtml.Replace(fullStr, html)
+                    If equality = True Then
+                        MsgBox(equality & pass & key)
+                        newHtml = newHtml.Replace(fullStr, html)
+                    Else
+                        newHtml = newHtml.Replace(fullStr, "")
+                    End If
                 Else
-                    newHtml = newHtml.Replace(fullStr, "")
+                    If equality = True Then
+                        newHtml = newHtml.Replace(fullStr, "")
+                    Else
+                        MsgBox(equality & pass & key)
+                        newHtml = newHtml.Replace(fullStr, html)
+                    End If
                 End If
             Next
             If rel.EndsWith(".md") Then

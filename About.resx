@@ -656,7 +656,11 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.1 - The Touch Up:
+    <value>0.9.2 - Finally:
+   * Inequality conditionals are finally fixed
+   * Right clicking on the root no longer errors out
+
+0.9.1 - The Touch Up:
    + About box is larger, changelog tab added
    + Context menu improvements; code of new HTML files made is different based on whether it is a page, template or include
    + Version number is now shown in title bar

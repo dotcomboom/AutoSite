@@ -478,30 +478,33 @@ Public Class Form1
                 AddFilesCon.Enabled = True
                 NewCon.Enabled = True
             End If
-            If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then
-                NewFolderCon.Enabled = True
-                NewHTMLCon.Enabled = True
-                NewMDCon.Enabled = True
-                NewPHPCon.Enabled = True
-                NewCSSCon.Enabled = False
-                NewJSCon.Enabled = False
-            End If
-            If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(1).Tag) Then
-                NewFolderCon.Enabled = False
-                NewHTMLCon.Enabled = True
-                NewMDCon.Enabled = False
-                NewPHPCon.Enabled = False
-                NewCSSCon.Enabled = False
-                NewJSCon.Enabled = False
-            End If
-            If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(2).Tag) Then
-                NewFolderCon.Enabled = True
-                NewHTMLCon.Enabled = True
-                NewMDCon.Enabled = True
-                NewPHPCon.Enabled = True
-                NewCSSCon.Enabled = True
-                NewJSCon.Enabled = True
-            End If
+            Try
+                If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then
+                    NewFolderCon.Enabled = True
+                    NewHTMLCon.Enabled = True
+                    NewMDCon.Enabled = True
+                    NewPHPCon.Enabled = True
+                    NewCSSCon.Enabled = False
+                    NewJSCon.Enabled = False
+                End If
+                If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(1).Tag) Then
+                    NewFolderCon.Enabled = False
+                    NewHTMLCon.Enabled = True
+                    NewMDCon.Enabled = False
+                    NewPHPCon.Enabled = False
+                    NewCSSCon.Enabled = False
+                    NewJSCon.Enabled = False
+                End If
+                If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(2).Tag) Then
+                    NewFolderCon.Enabled = True
+                    NewHTMLCon.Enabled = True
+                    NewMDCon.Enabled = True
+                    NewPHPCon.Enabled = True
+                    NewCSSCon.Enabled = True
+                    NewJSCon.Enabled = True
+                End If
+            Catch ex As Exception
+            End Try
             Context.Show(SiteTree, e.Location)
         End If
     End Sub

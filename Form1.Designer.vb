@@ -96,12 +96,12 @@ Partial Class Form1
         Me.NewHTMLCon = New System.Windows.Forms.MenuItem
         Me.NewMDCon = New System.Windows.Forms.MenuItem
         Me.NewPHPCon = New System.Windows.Forms.MenuItem
+        Me.MenuItem3 = New System.Windows.Forms.MenuItem
+        Me.NewCSSCon = New System.Windows.Forms.MenuItem
+        Me.NewJSCon = New System.Windows.Forms.MenuItem
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
         Me.Apricot = New System.ComponentModel.BackgroundWorker
         Me.Watcher = New System.IO.FileSystemWatcher
-        Me.NewCSSCon = New System.Windows.Forms.MenuItem
-        Me.NewJSCon = New System.Windows.Forms.MenuItem
-        Me.MenuItem3 = New System.Windows.Forms.MenuItem
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -440,7 +440,7 @@ Partial Class Form1
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(219, 97)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
         'MapPage
         '
@@ -663,6 +663,21 @@ Partial Class Form1
         Me.NewPHPCon.Index = 4
         Me.NewPHPCon.Text = "PHP Script"
         '
+        'MenuItem3
+        '
+        Me.MenuItem3.Index = 5
+        Me.MenuItem3.Text = "-"
+        '
+        'NewCSSCon
+        '
+        Me.NewCSSCon.Index = 6
+        Me.NewCSSCon.Text = "CSS Stylesheet"
+        '
+        'NewJSCon
+        '
+        Me.NewJSCon.Index = 7
+        Me.NewJSCon.Text = "JS Script"
+        '
         'AddFilesDialog
         '
         Me.AddFilesDialog.Filter = "All files (*.*)|*.*"
@@ -679,21 +694,6 @@ Partial Class Form1
         Me.Watcher.Filter = "JINFC)(#@)D)(J@()J()DN@()NQND_)NQ#WNN"
         Me.Watcher.IncludeSubdirectories = True
         Me.Watcher.SynchronizingObject = Me
-        '
-        'NewCSSCon
-        '
-        Me.NewCSSCon.Index = 6
-        Me.NewCSSCon.Text = "CSS Stylesheet"
-        '
-        'NewJSCon
-        '
-        Me.NewJSCon.Index = 7
-        Me.NewJSCon.Text = "JS Script"
-        '
-        'MenuItem3
-        '
-        Me.MenuItem3.Index = 5
-        Me.MenuItem3.Text = "-"
         '
         'Form1
         '

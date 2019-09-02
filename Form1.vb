@@ -789,6 +789,7 @@ Public Class Form1
                 End If
                 newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
             Next
+            newHtml = Regex.Replace(newHtml, "\[#.*?#\]", "")
             Apricot.ReportProgress(90, "    Saving file")
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
             My.Computer.FileSystem.WriteAllText(out & rel, newHtml, False)

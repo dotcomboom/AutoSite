@@ -103,10 +103,6 @@ Public Class Editor
         Code.Paste()
     End Sub
 
-    Private Sub Delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Delete.Click
-
-    End Sub
-
     Private Sub SelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SelectAll.Click
         Code.SelectAll()
     End Sub

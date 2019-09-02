@@ -228,11 +228,11 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         wTitle &= " v" & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
-        If My.Application.Info.Version.Revision > 0 Then
-            wTitle &= "." & My.Application.Info.Version.Revision
-        End If
         If My.Application.Info.Version.Build > 0 Then
             wTitle &= "." & My.Application.Info.Version.Build
+        End If
+        If My.Application.Info.Version.Revision > 0 Then
+            wTitle &= "." & My.Application.Info.Version.Revision
         End If
         Me.Text = wTitle
 
@@ -893,7 +893,6 @@ Public Class Form1
 
                 If pass Then
                     If equality = True Then
-                        MsgBox(equality & pass & key)
                         newHtml = newHtml.Replace(fullStr, html)
                     Else
                         newHtml = newHtml.Replace(fullStr, "")
@@ -902,7 +901,6 @@ Public Class Form1
                     If equality = True Then
                         newHtml = newHtml.Replace(fullStr, "")
                     Else
-                        MsgBox(equality & pass & key)
                         newHtml = newHtml.Replace(fullStr, html)
                     End If
                 End If

@@ -54,7 +54,7 @@ A slightly more advanced example, which doesn't link Home if you're already on `
 [path!=index.md]</a>[/path!=]
 ```
 
-It's important to note that while conditionals are most *commonly* used with the `path` attribute
+It's important to note that while conditionals are most *commonly* used with the `path` attribute but can also be used with any other regular attribute. So you can compare the `path` attribute, `template` attribute, and whatever other attributes you come up with.
 
 *The start and end of conditionals must be on the same line.*
 

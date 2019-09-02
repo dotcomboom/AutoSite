@@ -7,6 +7,7 @@ Imports Microsoft.Synchronization.Data
 Public Class Form1
 
     Public openFiles As New ArrayList
+    Public wTitle = "AutoSite XL"
 
     ' https://stackoverflow.com/a/8182507
     Sub walkTree(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal parentNode As TreeNode, ByVal key As String, ByVal incRoot As Boolean)
@@ -208,6 +209,15 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+        wTitle &= " v" & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
+        If My.Application.Info.Version.Revision > 0 Then
+            wTitle &= "." & My.Application.Info.Version.Revision
+        End If
+        If My.Application.Info.Version.Build > 0 Then
+            wTitle &= "." & My.Application.Info.Version.Build
+        End If
+        Me.Text = wTitle
+
         If My.Settings.explorerOpen Then
             ExplorerPanel.Checked = True
             CoreSplit.Panel1Collapsed = False
@@ -731,12 +741,13 @@ Public Class Form1
                 Apricot.ReportProgress(20, tn)
             Next
             If Not template_cache.ContainsKey(attribs.Item("template")) Then
-
                 Apricot.ReportProgress(30, "    Loading template " & attribs.Item("template"))
                 template_cache.Item(attribs.Item("template")) = My.Computer.FileSystem.ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
             End If
             Dim newHtml = template_cache.Item(attribs.Item("template"))
             Apricot.ReportProgress(50, "    Slotting into template " & attribs.Item("template"))
+            newHtml = newHtml.Replace("[#content#]", content)
+            newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(rel, "\")))
             Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
             Dim matches = Regex.Matches(newHtml, conditionalRegex)
             For Each m As Match In matches
@@ -772,9 +783,6 @@ Public Class Form1
                 content = CommonMark.CommonMarkConverter.Convert(content)
                 rel = ReplaceLast(rel, ".md", ".html")
             End If
-            newHtml = newHtml.Replace("[#content#]", content)
-            'MsgBox(rel)
-            newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(rel, "\")))
             For Each kvp As KeyValuePair(Of String, String) In attribs
                 If Not kvp.Key = "path" Then
                     Apricot.ReportProgress(50, "      " & kvp.Key & ": " & kvp.Value)
@@ -910,7 +918,7 @@ Public Class Form1
     End Sub
 
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles Apricot.RunWorkerCompleted
-        Me.Text = "AutoSite XL"
+        Me.Text = wTitle
         BuildProgress.Visible = False
     End Sub
 

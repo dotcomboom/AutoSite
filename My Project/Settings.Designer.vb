@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("auto")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("vs2017")>  _
         Public Property iconTheme() As String
             Get
                 Return CType(Me("iconTheme"),String)

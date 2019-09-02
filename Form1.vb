@@ -478,6 +478,30 @@ Public Class Form1
                 AddFilesCon.Enabled = True
                 NewCon.Enabled = True
             End If
+            If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then
+                NewFolderCon.Enabled = True
+                NewHTMLCon.Enabled = True
+                NewMDCon.Enabled = True
+                NewPHPCon.Enabled = True
+                NewCSSCon.Enabled = False
+                NewJSCon.Enabled = False
+            End If
+            If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(1).Tag) Then
+                NewFolderCon.Enabled = False
+                NewHTMLCon.Enabled = True
+                NewMDCon.Enabled = False
+                NewPHPCon.Enabled = False
+                NewCSSCon.Enabled = False
+                NewJSCon.Enabled = False
+            End If
+            If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(2).Tag) Then
+                NewFolderCon.Enabled = True
+                NewHTMLCon.Enabled = True
+                NewMDCon.Enabled = True
+                NewPHPCon.Enabled = True
+                NewCSSCon.Enabled = True
+                NewJSCon.Enabled = True
+            End If
             Context.Show(SiteTree, e.Location)
         End If
     End Sub
@@ -571,7 +595,13 @@ Public Class Form1
         ElseIf My.Computer.FileSystem.FileExists(path) Then
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.html"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine, False)
+        Dim html = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine
+        If dir = SiteTree.Nodes(0).Nodes(1).Tag Then
+            html = "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [path=index.md]You are on the index.[/path=]" & vbNewLine & "    [path!=index.md]You are not on the index.[/path!=]" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>"
+        ElseIf dir = SiteTree.Nodes(0).Nodes(2).Tag Then
+            html = "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>New HTML Page</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>Include Page</h1>" & vbNewLine & "  </body>" & vbNewLine & "</html>"
+        End If
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "New Page.html"), html, False)
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
@@ -756,9 +786,8 @@ Public Class Form1
                 Dim key = m.Groups(1).Value
                 Dim value = m.Groups(2).Value
                 Dim html = m.Groups(3).Value
-                Dim equality = (m.Groups(4).Value = "=")
+                Dim equality = (Not key.EndsWith("!"))
                 Dim pass = False
-
                 If equality = True Then
                     If attribs.ContainsKey(key) Then
                         If attribs.Item(key) = value Then
@@ -766,10 +795,13 @@ Public Class Form1
                         End If
                     End If
                 Else
+                    equality = ReplaceLast(equality, "!", "")
                     If Not attribs.ContainsKey(key) Then
                         pass = True
-                    ElseIf Not (attribs.Item(key) = value) Then
-                        pass = True
+                    Else
+                        If Not (attribs.Item(key) = value) Then
+                            pass = True
+                        End If
                     End If
                 End If
 

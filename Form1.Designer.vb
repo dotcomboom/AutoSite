@@ -99,6 +99,9 @@ Partial Class Form1
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
         Me.Apricot = New System.ComponentModel.BackgroundWorker
         Me.Watcher = New System.IO.FileSystemWatcher
+        Me.NewCSSCon = New System.Windows.Forms.MenuItem
+        Me.NewJSCon = New System.Windows.Forms.MenuItem
+        Me.MenuItem3 = New System.Windows.Forms.MenuItem
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -437,7 +440,7 @@ Partial Class Form1
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(219, 97)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
         '
         'MapPage
         '
@@ -632,7 +635,7 @@ Partial Class Form1
         'NewCon
         '
         Me.NewCon.Index = 9
-        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon})
+        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.MenuItem3, Me.NewCSSCon, Me.NewJSCon})
         Me.NewCon.Text = "New"
         '
         'NewFolderCon
@@ -648,17 +651,17 @@ Partial Class Form1
         'NewHTMLCon
         '
         Me.NewHTMLCon.Index = 2
-        Me.NewHTMLCon.Text = "HTML Document"
+        Me.NewHTMLCon.Text = "HTML Page"
         '
         'NewMDCon
         '
         Me.NewMDCon.Index = 3
-        Me.NewMDCon.Text = "Markdown Document"
+        Me.NewMDCon.Text = "Markdown Page"
         '
         'NewPHPCon
         '
         Me.NewPHPCon.Index = 4
-        Me.NewPHPCon.Text = "PHP Document"
+        Me.NewPHPCon.Text = "PHP Script"
         '
         'AddFilesDialog
         '
@@ -676,6 +679,21 @@ Partial Class Form1
         Me.Watcher.Filter = "JINFC)(#@)D)(J@()J()DN@()NQND_)NQ#WNN"
         Me.Watcher.IncludeSubdirectories = True
         Me.Watcher.SynchronizingObject = Me
+        '
+        'NewCSSCon
+        '
+        Me.NewCSSCon.Index = 6
+        Me.NewCSSCon.Text = "CSS Stylesheet"
+        '
+        'NewJSCon
+        '
+        Me.NewJSCon.Index = 7
+        Me.NewJSCon.Text = "JS Script"
+        '
+        'MenuItem3
+        '
+        Me.MenuItem3.Index = 5
+        Me.MenuItem3.Text = "-"
         '
         'Form1
         '
@@ -781,4 +799,7 @@ Partial Class Form1
     Friend WithEvents MapPage As System.Windows.Forms.TabPage
     Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
     Friend WithEvents BrowseOutputExt As System.Windows.Forms.ToolStripButton
+    Friend WithEvents NewCSSCon As System.Windows.Forms.MenuItem
+    Friend WithEvents NewJSCon As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
 End Class

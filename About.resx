@@ -655,4 +655,18 @@ SOFTWARE.</value>
         3WS+5HdXGPNcfXsLvp/2oJ0k1Rdwm8u8mY0VgegbEftvzoT5P659y3+9/DwPAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>0.9.1 - The Touch Up:
+   + About box is larger, changelog tab added
+   + Context menu improvements
+   + Version number is now shown in title bar
+   * About box can now be maximized
+   * Visual Studio 2017 icon theme used by default as it's used throughout the UI outside of the explorer view
+
+   * Attributes that aren't defined in the page are removed from the template (feature parity)
+   * Inequality conditionals are fixed
+
+0.9 - The First One:
+   * Initial stable release, first version number</value>
+  </data>
 </root>

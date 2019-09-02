@@ -32,28 +32,33 @@ Partial Class About
         Me.Py3AutoSite = New System.Windows.Forms.Label
         Me.PyWebsiteLink = New System.Windows.Forms.LinkLabel
         Me.PyGithubLink = New System.Windows.Forms.LinkLabel
+        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.License = New System.Windows.Forms.TabPage
+        Me.Changelog = New System.Windows.Forms.TabPage
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.License.SuspendLayout()
+        Me.Changelog.SuspendLayout()
         Me.SuspendLayout()
         '
         'aboutText
         '
-        Me.aboutText.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.aboutText.BackColor = System.Drawing.SystemColors.Control
+        Me.aboutText.BackColor = System.Drawing.SystemColors.Window
         Me.aboutText.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.aboutText.Cursor = System.Windows.Forms.Cursors.Default
-        Me.aboutText.Location = New System.Drawing.Point(93, 12)
+        Me.aboutText.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.aboutText.Location = New System.Drawing.Point(3, 3)
         Me.aboutText.Name = "aboutText"
         Me.aboutText.ReadOnly = True
-        Me.aboutText.Size = New System.Drawing.Size(215, 202)
+        Me.aboutText.Size = New System.Drawing.Size(286, 236)
         Me.aboutText.TabIndex = 0
         Me.aboutText.Text = resources.GetString("aboutText.Text")
         '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(233, 220)
+        Me.Button1.Location = New System.Drawing.Point(318, 286)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -128,11 +133,60 @@ Partial Class About
         Me.PyGithubLink.TabStop = True
         Me.PyGithubLink.Text = "Github"
         '
+        'TabControl1
+        '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.Controls.Add(Me.License)
+        Me.TabControl1.Controls.Add(Me.Changelog)
+        Me.TabControl1.Location = New System.Drawing.Point(93, 12)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(300, 268)
+        Me.TabControl1.TabIndex = 10
+        '
+        'License
+        '
+        Me.License.Controls.Add(Me.aboutText)
+        Me.License.Location = New System.Drawing.Point(4, 22)
+        Me.License.Name = "License"
+        Me.License.Padding = New System.Windows.Forms.Padding(3)
+        Me.License.Size = New System.Drawing.Size(292, 242)
+        Me.License.TabIndex = 0
+        Me.License.Text = "License"
+        Me.License.UseVisualStyleBackColor = True
+        '
+        'Changelog
+        '
+        Me.Changelog.Controls.Add(Me.RichTextBox1)
+        Me.Changelog.Location = New System.Drawing.Point(4, 22)
+        Me.Changelog.Name = "Changelog"
+        Me.Changelog.Padding = New System.Windows.Forms.Padding(3)
+        Me.Changelog.Size = New System.Drawing.Size(292, 242)
+        Me.Changelog.TabIndex = 1
+        Me.Changelog.Text = "Changelog"
+        Me.Changelog.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Window
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(286, 236)
+        Me.RichTextBox1.TabIndex = 1
+        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        '
         'About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(320, 258)
+        Me.ClientSize = New System.Drawing.Size(405, 324)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.PyWebsiteLink)
         Me.Controls.Add(Me.PyGithubLink)
         Me.Controls.Add(Me.Py3AutoSite)
@@ -141,13 +195,14 @@ Partial Class About
         Me.Controls.Add(Me.version)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.aboutText)
-        Me.MaximizeBox = False
         Me.Name = "About"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "About"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.License.ResumeLayout(False)
+        Me.Changelog.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -161,4 +216,8 @@ Partial Class About
     Friend WithEvents Py3AutoSite As System.Windows.Forms.Label
     Friend WithEvents PyWebsiteLink As System.Windows.Forms.LinkLabel
     Friend WithEvents PyGithubLink As System.Windows.Forms.LinkLabel
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents License As System.Windows.Forms.TabPage
+    Friend WithEvents Changelog As System.Windows.Forms.TabPage
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
 End Class

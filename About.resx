@@ -657,10 +657,11 @@ SOFTWARE.</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
     <value>0.9.2 - Zucchini Squash:
-   * Right clicking on the root no longer errors out
+   + Double clicking on a file that's already open in the editor will switch to its tab
    + You can open the root folder in external program/Explorer
    + You can create a new folder/file when the default name already exists and a (1) or similar will be appended to its filename
    * New files now don't have spaces with the exception of the above
+   * Right clicking on the root no longer errors out
 
    * Inequality conditionals are finally actually positively for real fixed now I promise
 

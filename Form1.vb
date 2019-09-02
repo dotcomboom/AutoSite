@@ -305,7 +305,13 @@ Public Class Form1
             Dim box As FastColoredTextBox
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
                 Try
-                    If Not openFiles.Contains(e.Node.Tag) Then
+                    If openFiles.Contains(e.Node.Tag) Then
+                        For Each page As TabPage In EditTabs.TabPages
+                            If page.Tag = e.Node.Tag Then
+                                EditTabs.SelectedTab = page
+                            End If
+                        Next
+                    Else
                         Dim tab As New TabPage
                         tab.Tag = e.Node.Tag
                         tab.ToolTipText = tab.Tag

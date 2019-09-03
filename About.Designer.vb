@@ -197,6 +197,7 @@ Partial Class About
         Me.Controls.Add(Me.OK)
         Me.Name = "About"
         Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "About"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()

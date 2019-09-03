@@ -703,7 +703,7 @@ Public Class Form1
             num += 1
             add = " (" & num & ")"
         End While
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-style" & add & ".css"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-style" & add & ".css"), "", False)
     End Sub
 
     Private Sub NewJSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewJSCon.Click
@@ -869,6 +869,19 @@ Public Class Form1
                 template_cache.Item(attribs.Item("template")) = My.Computer.FileSystem.ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
             End If
             Dim newHtml = template_cache.Item(attribs.Item("template"))
+            ' Attribute Process 1 (Content)
+            For Each kvp As KeyValuePair(Of String, String) In attribs
+                If Not kvp.Key = "path" Then
+                    Apricot.ReportProgress(50, "      " & kvp.Key & ": " & kvp.Value)
+                End If
+                newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
+            Next
+            ' End Attribute Process 1
+            If rel.EndsWith(".md") Then
+                Apricot.ReportProgress(50, "    Converting Markdown")
+                content = CommonMark.CommonMarkConverter.Convert(content)
+                rel = ReplaceLast(rel, ".md", ".html")
+            End If
             Apricot.ReportProgress(50, "    Slotting into template " & attribs.Item("template"))
             newHtml = newHtml.Replace("[#content#]", content)
             newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(rel, "\")))
@@ -905,16 +918,14 @@ Public Class Form1
                     End If
                 End If
             Next
-            If rel.EndsWith(".md") Then
-                content = CommonMark.CommonMarkConverter.Convert(content)
-                rel = ReplaceLast(rel, ".md", ".html")
-            End If
+            ' Attribute Process 2 (Whole Page)
             For Each kvp As KeyValuePair(Of String, String) In attribs
                 If Not kvp.Key = "path" Then
                     Apricot.ReportProgress(50, "      " & kvp.Key & ": " & kvp.Value)
                 End If
                 newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
             Next
+            ' End Attribute Process 2
             newHtml = Regex.Replace(newHtml, "\[#.*?#\]", "")
             Apricot.ReportProgress(90, "    Saving file")
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))

@@ -656,9 +656,15 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.2.1 - Butternut Squash:
+    <value>0.9.3 - Caramel Mocha:
+   * Fixed Markdown file building
+   * Fixed editor toolbar buttons (Cut/Copy/Paste)
+   * New CSS files are now blank instead of the PHP starter
+
+0.9.2.1 - Butternut Squash:
    * Removed debug message boxes during build process that were introducted in 0.9.2
    * Internal version number fix
+
 0.9.2 - Zucchini Squash:
    + Double clicking on a file that's already open in the editor will switch to its tab
    + You can open the root folder in external program/Explorer

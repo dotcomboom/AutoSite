@@ -91,15 +91,15 @@ Public Class Editor
         End If
     End Sub
 
-    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click
+    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click, CutBtn.Click
         Code.Cut()
     End Sub
 
-    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click
+    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click, CopyBtn.Click
         Code.Copy()
     End Sub
 
-    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click
+    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click, PasteBtn.Click
         Code.Paste()
     End Sub
 

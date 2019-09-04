@@ -661,9 +661,10 @@ SOFTWARE.</value>
    * Fixed editor toolbar buttons (Cut/Copy/Paste)
    * New CSS files are now blank instead of the PHP starter
    * Don't show About window in taskbar
+   * Loading files in the editor should now no longer "lock" them and cause "in use by another process" errors
 
 0.9.2.1 - Butternut Squash:
-   * Removed debug message boxes during build process that were introducted in 0.9.2
+   * Removed debug message boxes during build process that were introduced in 0.9.2
    * Internal version number fix
 
 0.9.2 - Zucchini Squash:

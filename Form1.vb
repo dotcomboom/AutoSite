@@ -27,6 +27,17 @@ Public Class Form1
         Next
     End Sub
 
+    'https://stackoverflow.com/a/3448307
+    Function ReadAllText(ByVal path As String)
+        Dim text = ""
+        Dim inStream = New FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+        Dim streamReader = New StreamReader(inStream, True)
+        text = streamReader.ReadToEnd()
+        streamReader.Dispose()
+        inStream.Dispose()
+        Return text
+    End Function
+
     Private Sub checkOpen()
         OpenPrompt.Visible = (SiteTree.Nodes.Count < 1)
         OpenLink.Visible = (SiteTree.Nodes.Count < 1)
@@ -338,7 +349,8 @@ Public Class Form1
                         Dim editor As New Editor
                         editor.Parent = tab
                         editor.Dock = DockStyle.Fill
-                        editor.Code.OpenFile(tab.Tag)
+                        editor.Code.Text = ReadAllText(tab.Tag)
+                        editor.Code.ClearUndo()
                         editor.Snapshot = editor.Code.Text
                         editor.siteRoot = SiteTree.Nodes.Item(0).Text
                         editor.openFile = tab.Tag
@@ -866,7 +878,7 @@ Public Class Form1
             Next
             If Not template_cache.ContainsKey(attribs.Item("template")) Then
                 Apricot.ReportProgress(30, "    Loading template " & attribs.Item("template"))
-                template_cache.Item(attribs.Item("template")) = My.Computer.FileSystem.ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
+                template_cache.Item(attribs.Item("template")) = ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
             End If
             Dim newHtml = template_cache.Item(attribs.Item("template"))
             ' Attribute Process 1 (Content)

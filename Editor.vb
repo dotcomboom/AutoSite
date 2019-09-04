@@ -8,6 +8,17 @@ Public Class Editor
     Public siteRoot As String
     Public Snapshot As String
 
+    'https://stackoverflow.com/a/3448307
+    Function ReadAllText(ByVal path As String)
+        Dim text = ""
+        Dim inStream = New FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+        Dim streamReader = New StreamReader(inStream)
+        text = streamReader.ReadToEnd()
+        streamReader.Dispose()
+        inStream.Dispose()
+        Return text
+    End Function
+
     Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UndoBtn.Click, Undo.Click
         Code.Undo()
     End Sub

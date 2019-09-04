@@ -51,14 +51,14 @@ Partial Class About
         Me.LicenseBox.Location = New System.Drawing.Point(3, 3)
         Me.LicenseBox.Name = "LicenseBox"
         Me.LicenseBox.ReadOnly = True
-        Me.LicenseBox.Size = New System.Drawing.Size(286, 236)
+        Me.LicenseBox.Size = New System.Drawing.Size(284, 234)
         Me.LicenseBox.TabIndex = 0
         Me.LicenseBox.Text = resources.GetString("LicenseBox.Text")
         '
         'OK
         '
         Me.OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OK.Location = New System.Drawing.Point(318, 286)
+        Me.OK.Location = New System.Drawing.Point(316, 284)
         Me.OK.Name = "OK"
         Me.OK.Size = New System.Drawing.Size(75, 23)
         Me.OK.TabIndex = 1
@@ -143,7 +143,7 @@ Partial Class About
         Me.Tabs.Location = New System.Drawing.Point(93, 12)
         Me.Tabs.Name = "Tabs"
         Me.Tabs.SelectedIndex = 0
-        Me.Tabs.Size = New System.Drawing.Size(300, 268)
+        Me.Tabs.Size = New System.Drawing.Size(298, 266)
         Me.Tabs.TabIndex = 10
         '
         'License
@@ -152,7 +152,7 @@ Partial Class About
         Me.License.Location = New System.Drawing.Point(4, 22)
         Me.License.Name = "License"
         Me.License.Padding = New System.Windows.Forms.Padding(3)
-        Me.License.Size = New System.Drawing.Size(292, 242)
+        Me.License.Size = New System.Drawing.Size(290, 240)
         Me.License.TabIndex = 0
         Me.License.Text = "License"
         Me.License.UseVisualStyleBackColor = True
@@ -163,7 +163,7 @@ Partial Class About
         Me.Changelog.Location = New System.Drawing.Point(4, 22)
         Me.Changelog.Name = "Changelog"
         Me.Changelog.Padding = New System.Windows.Forms.Padding(3)
-        Me.Changelog.Size = New System.Drawing.Size(292, 242)
+        Me.Changelog.Size = New System.Drawing.Size(290, 240)
         Me.Changelog.TabIndex = 1
         Me.Changelog.Text = "Changelog"
         Me.Changelog.UseVisualStyleBackColor = True
@@ -177,7 +177,7 @@ Partial Class About
         Me.ChangelogBox.Location = New System.Drawing.Point(3, 3)
         Me.ChangelogBox.Name = "ChangelogBox"
         Me.ChangelogBox.ReadOnly = True
-        Me.ChangelogBox.Size = New System.Drawing.Size(286, 236)
+        Me.ChangelogBox.Size = New System.Drawing.Size(284, 234)
         Me.ChangelogBox.TabIndex = 1
         Me.ChangelogBox.Text = resources.GetString("ChangelogBox.Text")
         '
@@ -185,7 +185,7 @@ Partial Class About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(405, 324)
+        Me.ClientSize = New System.Drawing.Size(403, 322)
         Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.PyWebsiteLink)
         Me.Controls.Add(Me.PyGithubLink)

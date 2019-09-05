@@ -1,4 +1,5 @@
 # AutoSite XL
+![MIT License (see License section)](https://img.shields.io/badge/license-MIT-green) ![Latest Release](https://img.shields.io/github/v/release/dotcomboom/AutoSite-XL) ![Code Size](https://img.shields.io/github/languages/code-size/dotcomboom/AutoSite-XL)
 
 AutoSite XL is an all-in-one static site generator program. It's been rebuilt from the ground up, with third party components here and there, to either supplement or completely replace the original AutoSite.
 

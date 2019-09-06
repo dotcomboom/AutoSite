@@ -640,14 +640,29 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
+    Private Sub NewFile(ByVal base As String, ByVal ext As String, ByVal contents As String)
         fileAddContext = "rename"
-        Dim path = Context.Tag
         Dim dir = ""
-        If My.Computer.FileSystem.DirectoryExists(path) Then
-            dir = path
-        ElseIf My.Computer.FileSystem.FileExists(path) Then
-            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        If My.Computer.FileSystem.DirectoryExists(Context.Tag) Then
+            dir = Context.Tag
+        ElseIf My.Computer.FileSystem.FileExists(Context.Tag) Then
+            dir = My.Computer.FileSystem.GetFileInfo(Context.Tag).DirectoryName
+        End If
+        Dim num = 0
+        Dim add = ""
+        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, base & add & ext))
+            num += 1
+            add = " (" & num & ")"
+        End While
+        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, base & add & ext), contents, False)
+    End Sub
+
+    Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(Context.Tag) Then
+            dir = Context.Tag
+        ElseIf My.Computer.FileSystem.FileExists(Context.Tag) Then
+            dir = My.Computer.FileSystem.GetFileInfo(Context.Tag).DirectoryName
         End If
         Dim html = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine
         If dir = SiteTree.Nodes(0).Nodes(1).Tag Then
@@ -655,85 +670,25 @@ Public Class Form1
         ElseIf dir = SiteTree.Nodes(0).Nodes(2).Tag Then
             html = "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>New HTML Page</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>Include Page</h1>" & vbNewLine & "  </body>" & vbNewLine & "</html>"
         End If
-        Dim num = 0
-        Dim add = ""
-        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
-            num += 1
-            add = " (" & num & ")"
-        End While
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-page" & add & ".html"), html, False)
+        NewFile("new-page", ".html", html)
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
-        fileAddContext = "rename"
-        Dim path = Context.Tag
-        Dim dir = ""
-        If My.Computer.FileSystem.DirectoryExists(path) Then
-            dir = path
-        ElseIf My.Computer.FileSystem.FileExists(path) Then
-            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
-        End If
-        Dim num = 0
-        Dim add = ""
-        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
-            num += 1
-            add = " (" & num & ")"
-        End While
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-page" & add & ".md"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine, False)
+        Dim md = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine
+        NewFile("new-page", ".md", md)
     End Sub
 
     Private Sub NewPHPCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewPHPCon.Click
-        fileAddContext = "rename"
-        Dim path = Context.Tag
-        Dim dir = ""
-        If My.Computer.FileSystem.DirectoryExists(path) Then
-            dir = path
-        ElseIf My.Computer.FileSystem.FileExists(path) Then
-            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
-        End If
-        Dim num = 0
-        Dim add = ""
-        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
-            num += 1
-            add = " (" & num & ")"
-        End While
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-page" & add & ".php"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
+        Dim php = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>"
+        NewFile("new-page", ".php", php)
     End Sub
 
     Private Sub NewCSSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCSSCon.Click
-        fileAddContext = "rename"
-        Dim path = Context.Tag
-        Dim dir = ""
-        If My.Computer.FileSystem.DirectoryExists(path) Then
-            dir = path
-        ElseIf My.Computer.FileSystem.FileExists(path) Then
-            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
-        End If
-        Dim num = 0
-        Dim add = ""
-        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
-            num += 1
-            add = " (" & num & ")"
-        End While
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-style" & add & ".css"), "", False)
+        NewFile("new-style", ".css", "")
     End Sub
 
     Private Sub NewJSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewJSCon.Click
-        fileAddContext = "rename"
-        Dim path = Context.Tag
-        Dim dir = ""
-        If My.Computer.FileSystem.DirectoryExists(path) Then
-            dir = path
-        ElseIf My.Computer.FileSystem.FileExists(path) Then
-            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
-        End If
-        Dim num = 0
-        Dim add = ""
-        While My.Computer.FileSystem.FileExists(System.IO.Path.Combine(dir, "new-page" & add & ".html"))
-            num += 1
-            add = " (" & num & ")"
-        End While
-        My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, "new-script" & add & ".js"), "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>", False)
+        NewFile("new-script", ".js", "")
     End Sub
 
     Private Sub AddFilesCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddFilesCon.Click

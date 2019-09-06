@@ -440,7 +440,7 @@ Partial Class Form1
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(219, 97)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
         'MapPage
         '

@@ -3,6 +3,7 @@ Imports FastColoredTextBoxNS
 Imports System.IO
 Imports System.Text
 Imports Microsoft.Synchronization.Data
+Imports Microsoft.Win32
 
 Public Class Form1
 
@@ -1211,11 +1212,43 @@ Public Class Form1
         End If
     End Sub
 
+    'https://stackoverflow.com/a/1562233
+    Private Function getDefaultBrowser() As String
+        Dim browser As String = String.Empty
+        Dim key As RegistryKey = Nothing
+        Try
+            key = Registry.ClassesRoot.OpenSubKey("HTTP\shell\open\command", False)
+
+            'trim off quotes
+            browser = key.GetValue(Nothing).ToString().ToLower().Replace("""", "")
+            If Not browser.EndsWith("exe") Then
+                'get rid of everything after the ".exe"
+                browser = browser.Substring(0, browser.LastIndexOf(".exe") + 4)
+                MsgBox(browser)
+            End If
+        Finally
+            If key IsNot Nothing Then
+                key.Close()
+            End If
+        End Try
+        Return browser
+    End Function
+
     Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseOutputExt.Click
-        If My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.html") Then
-            Process.Start(SiteTree.Nodes(0).Text & "\out\index.html")
-        Else
-            Process.Start("iexplore " & SiteTree.Nodes(0).Text & "\out\")
+        Dim path = SiteTree.Nodes(0).Text & "\out\"
+        If My.Computer.FileSystem.FileExists(path & "index.html") Then
+            path &= "index.html"
         End If
+        If My.Computer.FileSystem.FileExists(path & "index.htm") Then
+            path &= "index.htm"
+        End If
+        Dim startinfo As New ProcessStartInfo
+        Try
+            startinfo.FileName = getDefaultBrowser() 'only finds ie please investigate
+        Catch ex As Exception
+            startinfo.FileName = "iexplore"
+        End Try
+        startinfo.Arguments = path
+        Process.Start(startinfo)
     End Sub
 End Class

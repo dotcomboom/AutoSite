@@ -831,6 +831,18 @@ Public Class Form1
                 tn.Value = attrib.Value
                 Apricot.ReportProgress(20, tn)
             Next
+            If Not My.Computer.FileSystem.FileExists(templates & "\" & attribs.Item("template") & ".html") Then
+                If My.Computer.FileSystem.FileExists(templates & "\default.html") Then
+                    Apricot.ReportProgress(20, "      WARN: Template " & attribs.Item("template") & " does not exist, using template default")
+                    attribs.Item("template") = "default"
+                Else
+                    Apricot.ReportProgress(20, "      WARN: Template " & attribs.Item("template") & " does not exist, using basic internal template")
+                    attribs.Item("template") = "<b>AS</b>internal"
+                    If Not template_cache.ContainsKey("<b>AS</b>internal") Then
+                        template_cache.Add("<b>AS</b>internal", "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "      [path=index.md]You are on the index.[/path=]" & vbNewLine & "    </p>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>")
+                    End If
+                End If
+            End If
             If Not template_cache.ContainsKey(attribs.Item("template")) Then
                 Apricot.ReportProgress(30, "    Loading template " & attribs.Item("template"))
                 template_cache.Item(attribs.Item("template")) = ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))

@@ -19,4 +19,9 @@
       </requestedPrivileges>
     </security>
   </trustInfo>
+  <asmv1:application>
+    <asmv1:windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">
+      <dpiAware>true</dpiAware>
+    </asmv1:windowsSettings>
+  </asmv1:application>
 </asmv1:assembly>

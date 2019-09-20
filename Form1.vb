@@ -350,7 +350,7 @@ Public Class Form1
                         Dim editor As New Editor
                         editor.Parent = tab
                         editor.Dock = DockStyle.Fill
-                        editor.Code.Text = ReadAllText(tab.Tag)
+                        editor.Code.Text = editor.ReadAllText(tab.Tag)
                         editor.Code.ClearUndo()
                         editor.Snapshot = editor.Code.Text
                         editor.siteRoot = SiteTree.Nodes.Item(0).Text
@@ -810,7 +810,7 @@ Public Class Form1
             Dim attribs As New Dictionary(Of String, String)()
             attribs.Add("template", "default")
             attribs.Add("path", rel.Replace("\", "/"))
-            Dim reader As New StreamReader(file.FullName, Encoding.Default)
+            Dim reader As New StreamReader(file.FullName, Encoding.Default, True)
             Dim line As String
             Apricot.ReportProgress(20, "    Reading attributes")
             Do
@@ -825,6 +825,8 @@ Public Class Form1
                     End If
                 End If
             Loop Until line Is Nothing
+            reader.Close()
+            reader.Dispose()
             For Each attrib In attribs
                 Dim tn As New TNode
                 tn.relPath = rel
@@ -960,7 +962,7 @@ Public Class Form1
         If e.UserState.GetType() Is GetType(System.String) Then
             BuildProgress.Visible = True
             BuildProgress.Value = e.ProgressPercentage
-            Me.Text = e.UserState
+            'Me.Text = e.UserState
             Log.AppendText(e.UserState & vbNewLine)
         ElseIf e.UserState.GetType() Is GetType(TNode) Then
             Dim tn As TNode = e.UserState
@@ -1212,28 +1214,6 @@ Public Class Form1
         End If
     End Sub
 
-    'https://stackoverflow.com/a/1562233
-    Private Function getDefaultBrowser() As String
-        Dim browser As String = String.Empty
-        Dim key As RegistryKey = Nothing
-        Try
-            key = Registry.ClassesRoot.OpenSubKey("HTTP\shell\open\command", False)
-
-            'trim off quotes
-            browser = key.GetValue(Nothing).ToString().ToLower().Replace("""", "")
-            If Not browser.EndsWith("exe") Then
-                'get rid of everything after the ".exe"
-                browser = browser.Substring(0, browser.LastIndexOf(".exe") + 4)
-                MsgBox(browser)
-            End If
-        Finally
-            If key IsNot Nothing Then
-                key.Close()
-            End If
-        End Try
-        Return browser
-    End Function
-
     Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseOutputExt.Click
         Dim path = SiteTree.Nodes(0).Text & "\out\"
         If My.Computer.FileSystem.FileExists(path & "index.html") Then
@@ -1242,13 +1222,14 @@ Public Class Form1
         If My.Computer.FileSystem.FileExists(path & "index.htm") Then
             path &= "index.htm"
         End If
-        Dim startinfo As New ProcessStartInfo
-        Try
-            startinfo.FileName = getDefaultBrowser() 'only finds ie please investigate
-        Catch ex As Exception
-            startinfo.FileName = "iexplore"
-        End Try
-        startinfo.Arguments = path
-        Process.Start(startinfo)
+        Process.Start(path)
+    End Sub
+
+    Private Sub AttributeTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles AttributeTree.ItemDrag
+        If e.Button = Windows.Forms.MouseButtons.Left Then
+            'If e.Item.SelectedImageKey = "Attribute" Then
+            DoDragDrop(e.Item, DragDropEffects.Move)
+            'End If
+        End If
     End Sub
 End Class

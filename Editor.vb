@@ -9,7 +9,7 @@ Public Class Editor
     Public Snapshot As String
 
     'https://stackoverflow.com/a/3448307
-    Function ReadAllText(ByVal path As String)
+    Public Function ReadAllText(ByVal path As String)
         Dim text = ""
         Dim inStream = New FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
         Dim streamReader = New StreamReader(inStream)
@@ -19,11 +19,37 @@ Public Class Editor
         Return text
     End Function
 
-    Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UndoBtn.Click, Undo.Click
+    Sub WriteAllText(ByVal path As String)
+        'broken pls fix
+        'Dim outStream = New FileStream(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite)
+        'Using streamWriter As New StreamWriter(outStream)
+        '    streamWriter.Flush()
+        '    For Each line In Code.Lines
+        '        streamWriter.WriteLine(text)
+        '    Next
+        '    streamWriter.Close()
+        '    streamWriter.Dispose()
+        'End Using
+        'outStream.Dispose()
+        Try
+            Code.SaveToFile(path, System.Text.Encoding.UTF8)
+        Catch
+            Try
+                Dim unlocker = New FileStream(path, FileMode.Open)
+                unlocker.Unlock(1, unlocker.Length)
+                unlocker.Close()
+                Code.SaveToFile(path, System.Text.Encoding.UTF8)
+            Catch ex As Exception
+                MsgBox("The file could not be saved.", MsgBoxStyle.Critical, "AutoSite XL")
+            End Try
+        End Try
+    End Sub
+
+    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UndoBtn.Click, Undo.Click
         Code.Undo()
     End Sub
 
-    Private Sub ToolStripButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RedoBtn.Click, Redo.Click
+    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RedoBtn.Click, Redo.Click
         Code.Redo()
     End Sub
 
@@ -72,7 +98,7 @@ Public Class Editor
 
     Public Sub Save() Handles SaveBtn.ButtonClick, SaveToolStripMenuItem.Click
         If Not openFile Is Nothing Then
-            Code.SaveToFile(openFile, System.Text.Encoding.Unicode)
+            WriteAllText(openFile)
             Snapshot = Code.Text
             Me.Parent.Text = openFile.Replace(siteRoot & "\", "")
             SaveBtn.Enabled = False
@@ -150,5 +176,30 @@ Public Class Editor
         My.Settings.LivePreview = LivePreview.Checked
         Form1.LivePreview.Checked = My.Settings.LivePreview
         Form1.panelUpdate()
+    End Sub
+
+    ' https://www.codeproject.com/articles/8995/introduction-to-treeview-drag-and-drop-vb-net
+    Public Sub Code_DragEnter(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Code.DragEnter
+        If e.Data.GetDataPresent("System.Windows.Forms.TreeNode", True) Then
+            e.Effect = DragDropEffects.Copy
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+
+    Private Sub Code_DragDrop(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Code.DragDrop
+        If e.Data.GetDataPresent("System.Windows.Forms.TreeNode", True) = False Then
+            Exit Sub
+        End If
+
+        Dim selectedTreeview As TreeView = CType(sender, TreeView)
+
+        Dim dropNode As TreeNode = CType(e.Data.GetData("System.Windows.Forms.TreeNode"), TreeNode)
+
+        If dropNode.ImageKey = "Attribute" Then
+            Code.InsertText(dropNode.Text)
+        ElseIf dropNode.ImageKey = "Value" Then
+            Code.InsertText(dropNode.Text)
+        End If
     End Sub
 End Class

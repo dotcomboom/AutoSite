@@ -86,14 +86,14 @@ Partial Class Editor
         '
         Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'SaveAllToolStripMenuItem
         '
         Me.SaveAllToolStripMenuItem.Image = CType(resources.GetObject("SaveAllToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveAllToolStripMenuItem.Name = "SaveAllToolStripMenuItem"
-        Me.SaveAllToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.SaveAllToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.SaveAllToolStripMenuItem.Text = "Save All"
         '
         'Sep
@@ -205,21 +205,21 @@ Partial Class Editor
         Me.Preview.Image = CType(resources.GetObject("Preview.Image"), System.Drawing.Image)
         Me.Preview.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Preview.Name = "Preview"
-        Me.Preview.Size = New System.Drawing.Size(77, 22)
+        Me.Preview.Size = New System.Drawing.Size(80, 22)
         Me.Preview.Text = "Preview"
         '
         'LivePreview
         '
         Me.LivePreview.CheckOnClick = True
         Me.LivePreview.Name = "LivePreview"
-        Me.LivePreview.Size = New System.Drawing.Size(134, 22)
+        Me.LivePreview.Size = New System.Drawing.Size(139, 22)
         Me.LivePreview.Text = "Live Preview"
         '
         'Code
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         Me.Code.AutoScrollMinSize = New System.Drawing.Size(27, 14)
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 14
@@ -228,6 +228,7 @@ Partial Class Editor
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Code.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML

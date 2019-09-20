@@ -60,25 +60,6 @@ Partial Class Form1
         Me.HelpMenu = New System.Windows.Forms.MenuItem
         Me.AboutItem = New System.Windows.Forms.MenuItem
         Me.HelpTopics = New System.Windows.Forms.MenuItem
-        Me.CoreSplit = New System.Windows.Forms.SplitContainer
-        Me.ExSplit = New System.Windows.Forms.SplitContainer
-        Me.OpenLink = New System.Windows.Forms.LinkLabel
-        Me.OpenPrompt = New System.Windows.Forms.Label
-        Me.SiteTree = New System.Windows.Forms.TreeView
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.LogPage = New System.Windows.Forms.TabPage
-        Me.Log = New System.Windows.Forms.RichTextBox
-        Me.MapPage = New System.Windows.Forms.TabPage
-        Me.AttributeTree = New System.Windows.Forms.TreeView
-        Me.BuildProgress = New System.Windows.Forms.ProgressBar
-        Me.BuildStrip = New System.Windows.Forms.ToolStrip
-        Me.Build = New System.Windows.Forms.ToolStripButton
-        Me.OpenOutput = New System.Windows.Forms.ToolStripButton
-        Me.BrowseOutput = New System.Windows.Forms.ToolStripButton
-        Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
-        Me.EdSplit = New System.Windows.Forms.SplitContainer
-        Me.EditTabs = New System.Windows.Forms.TabControl
-        Me.Preview = New System.Windows.Forms.WebBrowser
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu
         Me.OpenInDefault = New System.Windows.Forms.MenuItem
@@ -102,20 +83,39 @@ Partial Class Form1
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
         Me.Apricot = New System.ComponentModel.BackgroundWorker
         Me.Watcher = New System.IO.FileSystemWatcher
-        Me.CoreSplit.Panel1.SuspendLayout()
-        Me.CoreSplit.Panel2.SuspendLayout()
-        Me.CoreSplit.SuspendLayout()
-        Me.ExSplit.Panel1.SuspendLayout()
-        Me.ExSplit.Panel2.SuspendLayout()
-        Me.ExSplit.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.LogPage.SuspendLayout()
-        Me.MapPage.SuspendLayout()
-        Me.BuildStrip.SuspendLayout()
+        Me.EdSplit = New System.Windows.Forms.SplitContainer
+        Me.Preview = New System.Windows.Forms.WebBrowser
+        Me.EditTabs = New System.Windows.Forms.TabControl
+        Me.ExSplit = New System.Windows.Forms.SplitContainer
+        Me.BuildStrip = New System.Windows.Forms.ToolStrip
+        Me.Build = New System.Windows.Forms.ToolStripButton
+        Me.OpenOutput = New System.Windows.Forms.ToolStripButton
+        Me.BrowseOutput = New System.Windows.Forms.ToolStripButton
+        Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
+        Me.BuildProgress = New System.Windows.Forms.ProgressBar
+        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.MapPage = New System.Windows.Forms.TabPage
+        Me.AttributeTree = New System.Windows.Forms.TreeView
+        Me.LogPage = New System.Windows.Forms.TabPage
+        Me.Log = New System.Windows.Forms.RichTextBox
+        Me.SiteTree = New System.Windows.Forms.TreeView
+        Me.OpenPrompt = New System.Windows.Forms.Label
+        Me.OpenLink = New System.Windows.Forms.LinkLabel
+        Me.CoreSplit = New System.Windows.Forms.SplitContainer
+        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
         Me.EdSplit.SuspendLayout()
-        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ExSplit.Panel1.SuspendLayout()
+        Me.ExSplit.Panel2.SuspendLayout()
+        Me.ExSplit.SuspendLayout()
+        Me.BuildStrip.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.MapPage.SuspendLayout()
+        Me.LogPage.SuspendLayout()
+        Me.CoreSplit.Panel1.SuspendLayout()
+        Me.CoreSplit.Panel2.SuspendLayout()
+        Me.CoreSplit.SuspendLayout()
         Me.SuspendLayout()
         '
         'VS2017
@@ -329,245 +329,6 @@ Partial Class Form1
         Me.HelpTopics.Index = 1
         Me.HelpTopics.Text = "Help Topics"
         '
-        'CoreSplit
-        '
-        Me.CoreSplit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CoreSplit.Location = New System.Drawing.Point(0, 0)
-        Me.CoreSplit.Margin = New System.Windows.Forms.Padding(0)
-        Me.CoreSplit.Name = "CoreSplit"
-        '
-        'CoreSplit.Panel1
-        '
-        Me.CoreSplit.Panel1.Controls.Add(Me.ExSplit)
-        '
-        'CoreSplit.Panel2
-        '
-        Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
-        Me.CoreSplit.Size = New System.Drawing.Size(707, 417)
-        Me.CoreSplit.SplitterDistance = 233
-        Me.CoreSplit.TabIndex = 4
-        '
-        'ExSplit
-        '
-        Me.ExSplit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ExSplit.Location = New System.Drawing.Point(0, 0)
-        Me.ExSplit.Name = "ExSplit"
-        Me.ExSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'ExSplit.Panel1
-        '
-        Me.ExSplit.Panel1.Controls.Add(Me.OpenLink)
-        Me.ExSplit.Panel1.Controls.Add(Me.OpenPrompt)
-        Me.ExSplit.Panel1.Controls.Add(Me.SiteTree)
-        '
-        'ExSplit.Panel2
-        '
-        Me.ExSplit.Panel2.Controls.Add(Me.TabControl1)
-        Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
-        Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
-        Me.ExSplit.Size = New System.Drawing.Size(233, 417)
-        Me.ExSplit.SplitterDistance = 236
-        Me.ExSplit.TabIndex = 4
-        '
-        'OpenLink
-        '
-        Me.OpenLink.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
-        Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenLink.Location = New System.Drawing.Point(22, 51)
-        Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.Size = New System.Drawing.Size(189, 13)
-        Me.OpenLink.TabIndex = 1
-        Me.OpenLink.TabStop = True
-        Me.OpenLink.Text = "Create or open a site folder"
-        Me.OpenLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'OpenPrompt
-        '
-        Me.OpenPrompt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
-        Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenPrompt.Location = New System.Drawing.Point(19, 26)
-        Me.OpenPrompt.Name = "OpenPrompt"
-        Me.OpenPrompt.Size = New System.Drawing.Size(192, 13)
-        Me.OpenPrompt.TabIndex = 2
-        Me.OpenPrompt.Text = "A site has not been opened yet."
-        Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'SiteTree
-        '
-        Me.SiteTree.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SiteTree.ImageIndex = 0
-        Me.SiteTree.ImageList = Me.VS2017
-        Me.SiteTree.LabelEdit = True
-        Me.SiteTree.Location = New System.Drawing.Point(0, 0)
-        Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.SelectedImageIndex = 0
-        Me.SiteTree.Size = New System.Drawing.Size(233, 236)
-        Me.SiteTree.TabIndex = 4
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.LogPage)
-        Me.TabControl1.Controls.Add(Me.MapPage)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 25)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(233, 129)
-        Me.TabControl1.TabIndex = 5
-        '
-        'LogPage
-        '
-        Me.LogPage.Controls.Add(Me.Log)
-        Me.LogPage.Location = New System.Drawing.Point(4, 22)
-        Me.LogPage.Name = "LogPage"
-        Me.LogPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.LogPage.Size = New System.Drawing.Size(225, 103)
-        Me.LogPage.TabIndex = 0
-        Me.LogPage.Text = "Log"
-        Me.LogPage.UseVisualStyleBackColor = True
-        '
-        'Log
-        '
-        Me.Log.BackColor = System.Drawing.SystemColors.Window
-        Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Log.Location = New System.Drawing.Point(3, 3)
-        Me.Log.Name = "Log"
-        Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(219, 97)
-        Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
-        '
-        'MapPage
-        '
-        Me.MapPage.Controls.Add(Me.AttributeTree)
-        Me.MapPage.Location = New System.Drawing.Point(4, 22)
-        Me.MapPage.Name = "MapPage"
-        Me.MapPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.MapPage.Size = New System.Drawing.Size(225, 103)
-        Me.MapPage.TabIndex = 1
-        Me.MapPage.Text = "Attribute Map"
-        Me.MapPage.UseVisualStyleBackColor = True
-        '
-        'AttributeTree
-        '
-        Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.AttributeTree.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AttributeTree.ImageIndex = 0
-        Me.AttributeTree.ImageList = Me.VS2017
-        Me.AttributeTree.Location = New System.Drawing.Point(3, 3)
-        Me.AttributeTree.Name = "AttributeTree"
-        Me.AttributeTree.SelectedImageIndex = 0
-        Me.AttributeTree.Size = New System.Drawing.Size(219, 97)
-        Me.AttributeTree.TabIndex = 0
-        '
-        'BuildProgress
-        '
-        Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BuildProgress.Location = New System.Drawing.Point(0, 154)
-        Me.BuildProgress.Name = "BuildProgress"
-        Me.BuildProgress.Size = New System.Drawing.Size(233, 23)
-        Me.BuildProgress.TabIndex = 1
-        Me.BuildProgress.Visible = False
-        '
-        'BuildStrip
-        '
-        Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
-        Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseOutput, Me.BrowseOutputExt})
-        Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
-        Me.BuildStrip.Name = "BuildStrip"
-        Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.BuildStrip.Size = New System.Drawing.Size(233, 25)
-        Me.BuildStrip.TabIndex = 3
-        Me.BuildStrip.Text = "ToolStrip1"
-        '
-        'Build
-        '
-        Me.Build.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Build.Image = CType(resources.GetObject("Build.Image"), System.Drawing.Image)
-        Me.Build.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Build.Name = "Build"
-        Me.Build.Size = New System.Drawing.Size(23, 22)
-        Me.Build.Text = "ToolStripButton1"
-        Me.Build.ToolTipText = "Build"
-        '
-        'OpenOutput
-        '
-        Me.OpenOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.OpenOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OpenOutput.Image = CType(resources.GetObject("OpenOutput.Image"), System.Drawing.Image)
-        Me.OpenOutput.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.OpenOutput.Name = "OpenOutput"
-        Me.OpenOutput.Size = New System.Drawing.Size(23, 22)
-        Me.OpenOutput.Text = "Open Output Folder"
-        '
-        'BrowseOutput
-        '
-        Me.BrowseOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BrowseOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BrowseOutput.Image = CType(resources.GetObject("BrowseOutput.Image"), System.Drawing.Image)
-        Me.BrowseOutput.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BrowseOutput.Name = "BrowseOutput"
-        Me.BrowseOutput.Size = New System.Drawing.Size(23, 22)
-        Me.BrowseOutput.Text = "Browse Site in Preview"
-        '
-        'BrowseOutputExt
-        '
-        Me.BrowseOutputExt.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BrowseOutputExt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BrowseOutputExt.Image = CType(resources.GetObject("BrowseOutputExt.Image"), System.Drawing.Image)
-        Me.BrowseOutputExt.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BrowseOutputExt.Name = "BrowseOutputExt"
-        Me.BrowseOutputExt.Size = New System.Drawing.Size(23, 22)
-        Me.BrowseOutputExt.Text = "Browse Site in Default Browser"
-        '
-        'EdSplit
-        '
-        Me.EdSplit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EdSplit.Location = New System.Drawing.Point(0, 0)
-        Me.EdSplit.Name = "EdSplit"
-        Me.EdSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'EdSplit.Panel1
-        '
-        Me.EdSplit.Panel1.Controls.Add(Me.EditTabs)
-        '
-        'EdSplit.Panel2
-        '
-        Me.EdSplit.Panel2.Controls.Add(Me.Preview)
-        Me.EdSplit.Size = New System.Drawing.Size(470, 417)
-        Me.EdSplit.SplitterDistance = 240
-        Me.EdSplit.TabIndex = 1
-        '
-        'EditTabs
-        '
-        Me.EditTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EditTabs.Location = New System.Drawing.Point(0, 0)
-        Me.EditTabs.Margin = New System.Windows.Forms.Padding(0)
-        Me.EditTabs.Multiline = True
-        Me.EditTabs.Name = "EditTabs"
-        Me.EditTabs.Padding = New System.Drawing.Point(0, 0)
-        Me.EditTabs.SelectedIndex = 0
-        Me.EditTabs.ShowToolTips = True
-        Me.EditTabs.Size = New System.Drawing.Size(470, 240)
-        Me.EditTabs.TabIndex = 1
-        '
-        'Preview
-        '
-        Me.Preview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Preview.Location = New System.Drawing.Point(0, 0)
-        Me.Preview.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.Preview.Name = "Preview"
-        Me.Preview.ScriptErrorsSuppressed = True
-        Me.Preview.Size = New System.Drawing.Size(470, 173)
-        Me.Preview.TabIndex = 0
-        Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
-        '
         'XP
         '
         Me.XP.ImageStream = CType(resources.GetObject("XP.ImageStream"), System.Windows.Forms.ImageListStreamer)
@@ -695,6 +456,245 @@ Partial Class Form1
         Me.Watcher.IncludeSubdirectories = True
         Me.Watcher.SynchronizingObject = Me
         '
+        'EdSplit
+        '
+        Me.EdSplit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EdSplit.Location = New System.Drawing.Point(0, 0)
+        Me.EdSplit.Name = "EdSplit"
+        Me.EdSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'EdSplit.Panel1
+        '
+        Me.EdSplit.Panel1.Controls.Add(Me.EditTabs)
+        '
+        'EdSplit.Panel2
+        '
+        Me.EdSplit.Panel2.Controls.Add(Me.Preview)
+        Me.EdSplit.Size = New System.Drawing.Size(470, 417)
+        Me.EdSplit.SplitterDistance = 240
+        Me.EdSplit.TabIndex = 1
+        '
+        'Preview
+        '
+        Me.Preview.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Preview.Location = New System.Drawing.Point(0, 0)
+        Me.Preview.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Preview.Name = "Preview"
+        Me.Preview.ScriptErrorsSuppressed = True
+        Me.Preview.Size = New System.Drawing.Size(470, 173)
+        Me.Preview.TabIndex = 0
+        Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
+        '
+        'EditTabs
+        '
+        Me.EditTabs.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.EditTabs.Location = New System.Drawing.Point(0, 0)
+        Me.EditTabs.Margin = New System.Windows.Forms.Padding(0)
+        Me.EditTabs.Multiline = True
+        Me.EditTabs.Name = "EditTabs"
+        Me.EditTabs.Padding = New System.Drawing.Point(0, 0)
+        Me.EditTabs.SelectedIndex = 0
+        Me.EditTabs.ShowToolTips = True
+        Me.EditTabs.Size = New System.Drawing.Size(470, 240)
+        Me.EditTabs.TabIndex = 1
+        '
+        'ExSplit
+        '
+        Me.ExSplit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ExSplit.Location = New System.Drawing.Point(0, 0)
+        Me.ExSplit.Name = "ExSplit"
+        Me.ExSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'ExSplit.Panel1
+        '
+        Me.ExSplit.Panel1.Controls.Add(Me.OpenLink)
+        Me.ExSplit.Panel1.Controls.Add(Me.OpenPrompt)
+        Me.ExSplit.Panel1.Controls.Add(Me.SiteTree)
+        '
+        'ExSplit.Panel2
+        '
+        Me.ExSplit.Panel2.Controls.Add(Me.TabControl1)
+        Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
+        Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
+        Me.ExSplit.Size = New System.Drawing.Size(233, 417)
+        Me.ExSplit.SplitterDistance = 236
+        Me.ExSplit.TabIndex = 4
+        '
+        'BuildStrip
+        '
+        Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
+        Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseOutput, Me.BrowseOutputExt})
+        Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
+        Me.BuildStrip.Name = "BuildStrip"
+        Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.BuildStrip.Size = New System.Drawing.Size(233, 25)
+        Me.BuildStrip.TabIndex = 3
+        Me.BuildStrip.Text = "ToolStrip1"
+        '
+        'Build
+        '
+        Me.Build.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Build.Image = CType(resources.GetObject("Build.Image"), System.Drawing.Image)
+        Me.Build.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Build.Name = "Build"
+        Me.Build.Size = New System.Drawing.Size(23, 22)
+        Me.Build.Text = "ToolStripButton1"
+        Me.Build.ToolTipText = "Build"
+        '
+        'OpenOutput
+        '
+        Me.OpenOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.OpenOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenOutput.Image = CType(resources.GetObject("OpenOutput.Image"), System.Drawing.Image)
+        Me.OpenOutput.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.OpenOutput.Name = "OpenOutput"
+        Me.OpenOutput.Size = New System.Drawing.Size(23, 22)
+        Me.OpenOutput.Text = "Open Output Folder"
+        '
+        'BrowseOutput
+        '
+        Me.BrowseOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BrowseOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BrowseOutput.Image = CType(resources.GetObject("BrowseOutput.Image"), System.Drawing.Image)
+        Me.BrowseOutput.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BrowseOutput.Name = "BrowseOutput"
+        Me.BrowseOutput.Size = New System.Drawing.Size(23, 22)
+        Me.BrowseOutput.Text = "Browse Site in Preview"
+        '
+        'BrowseOutputExt
+        '
+        Me.BrowseOutputExt.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BrowseOutputExt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BrowseOutputExt.Image = CType(resources.GetObject("BrowseOutputExt.Image"), System.Drawing.Image)
+        Me.BrowseOutputExt.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BrowseOutputExt.Name = "BrowseOutputExt"
+        Me.BrowseOutputExt.Size = New System.Drawing.Size(23, 22)
+        Me.BrowseOutputExt.Text = "Browse Site"
+        '
+        'BuildProgress
+        '
+        Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BuildProgress.Location = New System.Drawing.Point(0, 154)
+        Me.BuildProgress.Name = "BuildProgress"
+        Me.BuildProgress.Size = New System.Drawing.Size(233, 23)
+        Me.BuildProgress.TabIndex = 1
+        Me.BuildProgress.Visible = False
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.LogPage)
+        Me.TabControl1.Controls.Add(Me.MapPage)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 25)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(233, 129)
+        Me.TabControl1.TabIndex = 5
+        '
+        'MapPage
+        '
+        Me.MapPage.Controls.Add(Me.AttributeTree)
+        Me.MapPage.Location = New System.Drawing.Point(4, 22)
+        Me.MapPage.Name = "MapPage"
+        Me.MapPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.MapPage.Size = New System.Drawing.Size(225, 103)
+        Me.MapPage.TabIndex = 1
+        Me.MapPage.Text = "Attribute Map"
+        Me.MapPage.UseVisualStyleBackColor = True
+        '
+        'AttributeTree
+        '
+        Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.AttributeTree.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AttributeTree.ImageIndex = 0
+        Me.AttributeTree.ImageList = Me.VS2017
+        Me.AttributeTree.Location = New System.Drawing.Point(3, 3)
+        Me.AttributeTree.Name = "AttributeTree"
+        Me.AttributeTree.SelectedImageIndex = 0
+        Me.AttributeTree.Size = New System.Drawing.Size(219, 97)
+        Me.AttributeTree.TabIndex = 0
+        '
+        'LogPage
+        '
+        Me.LogPage.Controls.Add(Me.Log)
+        Me.LogPage.Location = New System.Drawing.Point(4, 22)
+        Me.LogPage.Name = "LogPage"
+        Me.LogPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.LogPage.Size = New System.Drawing.Size(225, 103)
+        Me.LogPage.TabIndex = 0
+        Me.LogPage.Text = "Log"
+        Me.LogPage.UseVisualStyleBackColor = True
+        '
+        'Log
+        '
+        Me.Log.BackColor = System.Drawing.SystemColors.Window
+        Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Log.Location = New System.Drawing.Point(3, 3)
+        Me.Log.Name = "Log"
+        Me.Log.ReadOnly = True
+        Me.Log.Size = New System.Drawing.Size(219, 97)
+        Me.Log.TabIndex = 5
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
+        '
+        'SiteTree
+        '
+        Me.SiteTree.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SiteTree.ImageIndex = 0
+        Me.SiteTree.ImageList = Me.VS2017
+        Me.SiteTree.LabelEdit = True
+        Me.SiteTree.Location = New System.Drawing.Point(0, 0)
+        Me.SiteTree.Name = "SiteTree"
+        Me.SiteTree.SelectedImageIndex = 0
+        Me.SiteTree.Size = New System.Drawing.Size(233, 236)
+        Me.SiteTree.TabIndex = 4
+        '
+        'OpenPrompt
+        '
+        Me.OpenPrompt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
+        Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.OpenPrompt.Location = New System.Drawing.Point(19, 26)
+        Me.OpenPrompt.Name = "OpenPrompt"
+        Me.OpenPrompt.Size = New System.Drawing.Size(192, 13)
+        Me.OpenPrompt.TabIndex = 2
+        Me.OpenPrompt.Text = "A site has not been opened yet."
+        Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'OpenLink
+        '
+        Me.OpenLink.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
+        Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.OpenLink.Location = New System.Drawing.Point(22, 51)
+        Me.OpenLink.Name = "OpenLink"
+        Me.OpenLink.Size = New System.Drawing.Size(189, 13)
+        Me.OpenLink.TabIndex = 1
+        Me.OpenLink.TabStop = True
+        Me.OpenLink.Text = "Create or open a site folder"
+        Me.OpenLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'CoreSplit
+        '
+        Me.CoreSplit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CoreSplit.Location = New System.Drawing.Point(0, 0)
+        Me.CoreSplit.Margin = New System.Windows.Forms.Padding(0)
+        Me.CoreSplit.Name = "CoreSplit"
+        '
+        'CoreSplit.Panel1
+        '
+        Me.CoreSplit.Panel1.Controls.Add(Me.ExSplit)
+        '
+        'CoreSplit.Panel2
+        '
+        Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
+        Me.CoreSplit.Size = New System.Drawing.Size(707, 417)
+        Me.CoreSplit.SplitterDistance = 233
+        Me.CoreSplit.TabIndex = 4
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -705,22 +705,22 @@ Partial Class Form1
         Me.Menu = Me.MenuBar
         Me.Name = "Form1"
         Me.Text = "AutoSite XL"
-        Me.CoreSplit.Panel1.ResumeLayout(False)
-        Me.CoreSplit.Panel2.ResumeLayout(False)
-        Me.CoreSplit.ResumeLayout(False)
+        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.EdSplit.Panel1.ResumeLayout(False)
+        Me.EdSplit.Panel2.ResumeLayout(False)
+        Me.EdSplit.ResumeLayout(False)
         Me.ExSplit.Panel1.ResumeLayout(False)
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
         Me.ExSplit.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
-        Me.LogPage.ResumeLayout(False)
-        Me.MapPage.ResumeLayout(False)
         Me.BuildStrip.ResumeLayout(False)
         Me.BuildStrip.PerformLayout()
-        Me.EdSplit.Panel1.ResumeLayout(False)
-        Me.EdSplit.Panel2.ResumeLayout(False)
-        Me.EdSplit.ResumeLayout(False)
-        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.MapPage.ResumeLayout(False)
+        Me.LogPage.ResumeLayout(False)
+        Me.CoreSplit.Panel1.ResumeLayout(False)
+        Me.CoreSplit.Panel2.ResumeLayout(False)
+        Me.CoreSplit.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -747,15 +747,11 @@ Partial Class Form1
     Friend WithEvents HelpMenu As System.Windows.Forms.MenuItem
     Friend WithEvents AboutItem As System.Windows.Forms.MenuItem
     Friend WithEvents HelpTopics As System.Windows.Forms.MenuItem
-    Friend WithEvents CoreSplit As System.Windows.Forms.SplitContainer
-    Friend WithEvents EdSplit As System.Windows.Forms.SplitContainer
-    Friend WithEvents Preview As System.Windows.Forms.WebBrowser
     Friend WithEvents IconThemeMenu As System.Windows.Forms.MenuItem
     Friend WithEvents VS2017item As System.Windows.Forms.MenuItem
     Friend WithEvents ViewMenuSep As System.Windows.Forms.MenuItem
     Friend WithEvents XP As System.Windows.Forms.ImageList
     Friend WithEvents XPitem As System.Windows.Forms.MenuItem
-    Friend WithEvents EditTabs As System.Windows.Forms.TabControl
     Friend WithEvents FileSep As System.Windows.Forms.MenuItem
     Friend WithEvents ExitItem As System.Windows.Forms.MenuItem
     Friend WithEvents Context As System.Windows.Forms.ContextMenu
@@ -775,31 +771,35 @@ Partial Class Form1
     Friend WithEvents AddFilesDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents NewPHPCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewSep As System.Windows.Forms.MenuItem
-    Friend WithEvents BuildProgress As System.Windows.Forms.ProgressBar
     Friend WithEvents Apricot As System.ComponentModel.BackgroundWorker
     Friend WithEvents BuildPanel As System.Windows.Forms.MenuItem
-    Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
-    Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
-    Friend WithEvents OpenPrompt As System.Windows.Forms.Label
-    Friend WithEvents SiteTree As System.Windows.Forms.TreeView
     Friend WithEvents FormatMenu As System.Windows.Forms.MenuItem
     Friend WithEvents SyntaxHighlight As System.Windows.Forms.MenuItem
     Friend WithEvents FormatMenuSep As System.Windows.Forms.MenuItem
     Friend WithEvents SaveAll As System.Windows.Forms.MenuItem
-    Friend WithEvents BuildStrip As System.Windows.Forms.ToolStrip
-    Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents LivePreview As System.Windows.Forms.MenuItem
-    Friend WithEvents OpenOutput As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BrowseOutput As System.Windows.Forms.ToolStripButton
     Friend WithEvents Watcher As System.IO.FileSystemWatcher
     Friend WithEvents RenameCon As System.Windows.Forms.MenuItem
+    Friend WithEvents NewCSSCon As System.Windows.Forms.MenuItem
+    Friend WithEvents NewJSCon As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
+    Friend WithEvents CoreSplit As System.Windows.Forms.SplitContainer
+    Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
+    Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
+    Friend WithEvents OpenPrompt As System.Windows.Forms.Label
+    Friend WithEvents SiteTree As System.Windows.Forms.TreeView
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents LogPage As System.Windows.Forms.TabPage
     Friend WithEvents Log As System.Windows.Forms.RichTextBox
     Friend WithEvents MapPage As System.Windows.Forms.TabPage
     Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
+    Friend WithEvents BuildProgress As System.Windows.Forms.ProgressBar
+    Friend WithEvents BuildStrip As System.Windows.Forms.ToolStrip
+    Friend WithEvents Build As System.Windows.Forms.ToolStripButton
+    Friend WithEvents OpenOutput As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BrowseOutput As System.Windows.Forms.ToolStripButton
     Friend WithEvents BrowseOutputExt As System.Windows.Forms.ToolStripButton
-    Friend WithEvents NewCSSCon As System.Windows.Forms.MenuItem
-    Friend WithEvents NewJSCon As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
+    Friend WithEvents EdSplit As System.Windows.Forms.SplitContainer
+    Friend WithEvents EditTabs As System.Windows.Forms.TabControl
+    Friend WithEvents Preview As System.Windows.Forms.WebBrowser
 End Class

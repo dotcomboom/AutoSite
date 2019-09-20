@@ -84,23 +84,23 @@ Partial Class Form1
         Me.Apricot = New System.ComponentModel.BackgroundWorker
         Me.Watcher = New System.IO.FileSystemWatcher
         Me.EdSplit = New System.Windows.Forms.SplitContainer
-        Me.Preview = New System.Windows.Forms.WebBrowser
         Me.EditTabs = New System.Windows.Forms.TabControl
+        Me.Preview = New System.Windows.Forms.WebBrowser
         Me.ExSplit = New System.Windows.Forms.SplitContainer
+        Me.OpenLink = New System.Windows.Forms.LinkLabel
+        Me.OpenPrompt = New System.Windows.Forms.Label
+        Me.SiteTree = New System.Windows.Forms.TreeView
+        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.LogPage = New System.Windows.Forms.TabPage
+        Me.Log = New System.Windows.Forms.RichTextBox
+        Me.MapPage = New System.Windows.Forms.TabPage
+        Me.AttributeTree = New System.Windows.Forms.TreeView
+        Me.BuildProgress = New System.Windows.Forms.ProgressBar
         Me.BuildStrip = New System.Windows.Forms.ToolStrip
         Me.Build = New System.Windows.Forms.ToolStripButton
         Me.OpenOutput = New System.Windows.Forms.ToolStripButton
         Me.BrowseOutput = New System.Windows.Forms.ToolStripButton
         Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
-        Me.BuildProgress = New System.Windows.Forms.ProgressBar
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.MapPage = New System.Windows.Forms.TabPage
-        Me.AttributeTree = New System.Windows.Forms.TreeView
-        Me.LogPage = New System.Windows.Forms.TabPage
-        Me.Log = New System.Windows.Forms.RichTextBox
-        Me.SiteTree = New System.Windows.Forms.TreeView
-        Me.OpenPrompt = New System.Windows.Forms.Label
-        Me.OpenLink = New System.Windows.Forms.LinkLabel
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
@@ -109,10 +109,10 @@ Partial Class Form1
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
-        Me.BuildStrip.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        Me.MapPage.SuspendLayout()
         Me.LogPage.SuspendLayout()
+        Me.MapPage.SuspendLayout()
+        Me.BuildStrip.SuspendLayout()
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -474,17 +474,6 @@ Partial Class Form1
         Me.EdSplit.SplitterDistance = 240
         Me.EdSplit.TabIndex = 1
         '
-        'Preview
-        '
-        Me.Preview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Preview.Location = New System.Drawing.Point(0, 0)
-        Me.Preview.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.Preview.Name = "Preview"
-        Me.Preview.ScriptErrorsSuppressed = True
-        Me.Preview.Size = New System.Drawing.Size(470, 173)
-        Me.Preview.TabIndex = 0
-        Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
-        '
         'EditTabs
         '
         Me.EditTabs.Dock = System.Windows.Forms.DockStyle.Fill
@@ -497,6 +486,17 @@ Partial Class Form1
         Me.EditTabs.ShowToolTips = True
         Me.EditTabs.Size = New System.Drawing.Size(470, 240)
         Me.EditTabs.TabIndex = 1
+        '
+        'Preview
+        '
+        Me.Preview.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Preview.Location = New System.Drawing.Point(0, 0)
+        Me.Preview.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Preview.Name = "Preview"
+        Me.Preview.ScriptErrorsSuppressed = True
+        Me.Preview.Size = New System.Drawing.Size(470, 173)
+        Me.Preview.TabIndex = 0
+        Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
         'ExSplit
         '
@@ -519,6 +519,115 @@ Partial Class Form1
         Me.ExSplit.Size = New System.Drawing.Size(233, 417)
         Me.ExSplit.SplitterDistance = 236
         Me.ExSplit.TabIndex = 4
+        '
+        'OpenLink
+        '
+        Me.OpenLink.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OpenLink.AutoEllipsis = True
+        Me.OpenLink.AutoSize = True
+        Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
+        Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.OpenLink.Location = New System.Drawing.Point(45, 52)
+        Me.OpenLink.Name = "OpenLink"
+        Me.OpenLink.Size = New System.Drawing.Size(134, 13)
+        Me.OpenLink.TabIndex = 1
+        Me.OpenLink.TabStop = True
+        Me.OpenLink.Text = "Create or open a site folder"
+        Me.OpenLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'OpenPrompt
+        '
+        Me.OpenPrompt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OpenPrompt.AutoEllipsis = True
+        Me.OpenPrompt.AutoSize = True
+        Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
+        Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.OpenPrompt.Location = New System.Drawing.Point(35, 27)
+        Me.OpenPrompt.Name = "OpenPrompt"
+        Me.OpenPrompt.Size = New System.Drawing.Size(157, 13)
+        Me.OpenPrompt.TabIndex = 2
+        Me.OpenPrompt.Text = "A site has not been opened yet."
+        Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'SiteTree
+        '
+        Me.SiteTree.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SiteTree.ImageIndex = 0
+        Me.SiteTree.ImageList = Me.VS2017
+        Me.SiteTree.LabelEdit = True
+        Me.SiteTree.Location = New System.Drawing.Point(0, 0)
+        Me.SiteTree.Name = "SiteTree"
+        Me.SiteTree.SelectedImageIndex = 0
+        Me.SiteTree.Size = New System.Drawing.Size(233, 236)
+        Me.SiteTree.TabIndex = 4
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.LogPage)
+        Me.TabControl1.Controls.Add(Me.MapPage)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 25)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(233, 129)
+        Me.TabControl1.TabIndex = 5
+        '
+        'LogPage
+        '
+        Me.LogPage.Controls.Add(Me.Log)
+        Me.LogPage.Location = New System.Drawing.Point(4, 22)
+        Me.LogPage.Name = "LogPage"
+        Me.LogPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.LogPage.Size = New System.Drawing.Size(225, 103)
+        Me.LogPage.TabIndex = 0
+        Me.LogPage.Text = "Log"
+        Me.LogPage.UseVisualStyleBackColor = True
+        '
+        'Log
+        '
+        Me.Log.BackColor = System.Drawing.SystemColors.Window
+        Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Log.Location = New System.Drawing.Point(3, 3)
+        Me.Log.Name = "Log"
+        Me.Log.ReadOnly = True
+        Me.Log.Size = New System.Drawing.Size(219, 97)
+        Me.Log.TabIndex = 5
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        '
+        'MapPage
+        '
+        Me.MapPage.Controls.Add(Me.AttributeTree)
+        Me.MapPage.Location = New System.Drawing.Point(4, 22)
+        Me.MapPage.Name = "MapPage"
+        Me.MapPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.MapPage.Size = New System.Drawing.Size(225, 103)
+        Me.MapPage.TabIndex = 1
+        Me.MapPage.Text = "Attribute Map"
+        Me.MapPage.UseVisualStyleBackColor = True
+        '
+        'AttributeTree
+        '
+        Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.AttributeTree.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AttributeTree.ImageIndex = 0
+        Me.AttributeTree.ImageList = Me.VS2017
+        Me.AttributeTree.Location = New System.Drawing.Point(3, 3)
+        Me.AttributeTree.Name = "AttributeTree"
+        Me.AttributeTree.SelectedImageIndex = 0
+        Me.AttributeTree.Size = New System.Drawing.Size(219, 97)
+        Me.AttributeTree.TabIndex = 0
+        '
+        'BuildProgress
+        '
+        Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BuildProgress.Location = New System.Drawing.Point(0, 154)
+        Me.BuildProgress.Name = "BuildProgress"
+        Me.BuildProgress.Size = New System.Drawing.Size(233, 23)
+        Me.BuildProgress.TabIndex = 1
+        Me.BuildProgress.Visible = False
         '
         'BuildStrip
         '
@@ -572,111 +681,6 @@ Partial Class Form1
         Me.BrowseOutputExt.Size = New System.Drawing.Size(23, 22)
         Me.BrowseOutputExt.Text = "Browse Site"
         '
-        'BuildProgress
-        '
-        Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BuildProgress.Location = New System.Drawing.Point(0, 154)
-        Me.BuildProgress.Name = "BuildProgress"
-        Me.BuildProgress.Size = New System.Drawing.Size(233, 23)
-        Me.BuildProgress.TabIndex = 1
-        Me.BuildProgress.Visible = False
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.LogPage)
-        Me.TabControl1.Controls.Add(Me.MapPage)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 25)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(233, 129)
-        Me.TabControl1.TabIndex = 5
-        '
-        'MapPage
-        '
-        Me.MapPage.Controls.Add(Me.AttributeTree)
-        Me.MapPage.Location = New System.Drawing.Point(4, 22)
-        Me.MapPage.Name = "MapPage"
-        Me.MapPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.MapPage.Size = New System.Drawing.Size(225, 103)
-        Me.MapPage.TabIndex = 1
-        Me.MapPage.Text = "Attribute Map"
-        Me.MapPage.UseVisualStyleBackColor = True
-        '
-        'AttributeTree
-        '
-        Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.AttributeTree.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AttributeTree.ImageIndex = 0
-        Me.AttributeTree.ImageList = Me.VS2017
-        Me.AttributeTree.Location = New System.Drawing.Point(3, 3)
-        Me.AttributeTree.Name = "AttributeTree"
-        Me.AttributeTree.SelectedImageIndex = 0
-        Me.AttributeTree.Size = New System.Drawing.Size(219, 97)
-        Me.AttributeTree.TabIndex = 0
-        '
-        'LogPage
-        '
-        Me.LogPage.Controls.Add(Me.Log)
-        Me.LogPage.Location = New System.Drawing.Point(4, 22)
-        Me.LogPage.Name = "LogPage"
-        Me.LogPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.LogPage.Size = New System.Drawing.Size(225, 103)
-        Me.LogPage.TabIndex = 0
-        Me.LogPage.Text = "Log"
-        Me.LogPage.UseVisualStyleBackColor = True
-        '
-        'Log
-        '
-        Me.Log.BackColor = System.Drawing.SystemColors.Window
-        Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Log.Location = New System.Drawing.Point(3, 3)
-        Me.Log.Name = "Log"
-        Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(219, 97)
-        Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
-        '
-        'SiteTree
-        '
-        Me.SiteTree.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SiteTree.ImageIndex = 0
-        Me.SiteTree.ImageList = Me.VS2017
-        Me.SiteTree.LabelEdit = True
-        Me.SiteTree.Location = New System.Drawing.Point(0, 0)
-        Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.SelectedImageIndex = 0
-        Me.SiteTree.Size = New System.Drawing.Size(233, 236)
-        Me.SiteTree.TabIndex = 4
-        '
-        'OpenPrompt
-        '
-        Me.OpenPrompt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
-        Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenPrompt.Location = New System.Drawing.Point(19, 26)
-        Me.OpenPrompt.Name = "OpenPrompt"
-        Me.OpenPrompt.Size = New System.Drawing.Size(192, 13)
-        Me.OpenPrompt.TabIndex = 2
-        Me.OpenPrompt.Text = "A site has not been opened yet."
-        Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'OpenLink
-        '
-        Me.OpenLink.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
-        Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenLink.Location = New System.Drawing.Point(22, 51)
-        Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.Size = New System.Drawing.Size(189, 13)
-        Me.OpenLink.TabIndex = 1
-        Me.OpenLink.TabStop = True
-        Me.OpenLink.Text = "Create or open a site folder"
-        Me.OpenLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'CoreSplit
         '
         Me.CoreSplit.Dock = System.Windows.Forms.DockStyle.Fill
@@ -710,14 +714,15 @@ Partial Class Form1
         Me.EdSplit.Panel2.ResumeLayout(False)
         Me.EdSplit.ResumeLayout(False)
         Me.ExSplit.Panel1.ResumeLayout(False)
+        Me.ExSplit.Panel1.PerformLayout()
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
         Me.ExSplit.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.LogPage.ResumeLayout(False)
+        Me.MapPage.ResumeLayout(False)
         Me.BuildStrip.ResumeLayout(False)
         Me.BuildStrip.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
-        Me.MapPage.ResumeLayout(False)
-        Me.LogPage.ResumeLayout(False)
         Me.CoreSplit.Panel1.ResumeLayout(False)
         Me.CoreSplit.Panel2.ResumeLayout(False)
         Me.CoreSplit.ResumeLayout(False)

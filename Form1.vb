@@ -2,13 +2,13 @@
 Imports FastColoredTextBoxNS
 Imports System.IO
 Imports System.Text
-Imports Microsoft.Synchronization.Data
 Imports Microsoft.Win32
 
 Public Class Form1
 
     Public openFiles As New ArrayList
     Public wTitle = "AutoSite XL"
+    Public editExtensions() As String = {"txt", "md", "css", "ts", "js", "html", "htm", "php", "xml", "json", "csv", "lass", "sass"}
 
     ' https://stackoverflow.com/a/8182507
     Sub walkTree(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal parentNode As TreeNode, ByVal key As String, ByVal incRoot As Boolean)
@@ -341,36 +341,51 @@ Public Class Form1
                             End If
                         Next
                     Else
-                        Dim tab As New TabPage
-                        tab.Tag = e.Node.Tag
-                        tab.ToolTipText = tab.Tag
-                        tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
-                        EditTabs.TabPages.Add(tab)
-                        EditTabs.SelectedTab = tab
-                        Dim editor As New Editor
-                        editor.Parent = tab
-                        editor.Dock = DockStyle.Fill
-                        editor.Code.Text = editor.ReadAllText(tab.Tag)
-                        editor.Code.ClearUndo()
-                        editor.Snapshot = editor.Code.Text
-                        editor.siteRoot = SiteTree.Nodes.Item(0).Text
-                        editor.openFile = tab.Tag
-                        box = editor.Code
-                        openFiles.Add(e.Node.Tag)
+                        Dim edit = False
+                        If e.Node.Text.StartsWith(".") Then
+                            edit = True
+                        Else
+                            For Each extension In editExtensions
+                                If e.Node.Text.EndsWith(extension) Then
+                                    edit = True
+                                    Exit For
+                                End If
+                            Next
+                        End If
+                        If edit Then
+                            Dim tab As New TabPage
+                            tab.Tag = e.Node.Tag
+                            tab.ToolTipText = tab.Tag
+                            tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
+                            EditTabs.TabPages.Add(tab)
+                            EditTabs.SelectedTab = tab
+                            Dim editor As New Editor
+                            editor.Parent = tab
+                            editor.Dock = DockStyle.Fill
+                            editor.Code.Text = editor.ReadAllText(tab.Tag)
+                            editor.Code.ClearUndo()
+                            editor.Snapshot = editor.Code.Text
+                            editor.siteRoot = SiteTree.Nodes.Item(0).Text
+                            editor.openFile = tab.Tag
+                            box = editor.Code
+                            openFiles.Add(e.Node.Tag)
+                        Else
+                            Process.Start(e.Node.Tag)
+                        End If
                     End If
                 Catch ex As Exception
                 End Try
             End If
-            Try
-                If e.Node.Tag.EndsWith(".md") Then
-                    Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(box.Text)
-                Else
-                    If Not e.Node.Tag.EndsWith(".css") And Not e.Node.Tag.EndsWith(".js") Then
-                        Preview.Navigate(e.Node.Tag)
-                    End If
-                End If
-            Catch ex As Exception
-            End Try
+            'Try
+            '    If e.Node.Tag.EndsWith(".md") Then
+            '        Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(box.Text)
+            '    Else
+            '        If Not e.Node.Tag.EndsWith(".css") And Not e.Node.Tag.EndsWith(".js") Then
+            '            Preview.Navigate(e.Node.Tag)
+            '        End If
+            '    End If
+            'Catch ex As Exception
+            'End Try
         End If
     End Sub
 
@@ -667,7 +682,7 @@ Public Class Form1
         End If
         Dim html = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine
         If dir = SiteTree.Nodes(0).Nodes(1).Tag Then
-            html = "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "      [path=index.md]You are on the index.[/path=]" & vbNewLine & "      [path!=index.md]You are not on the index.[/path!=]" & vbNewLine & "    </p>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>"
+            html = "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "    </p>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>"
         ElseIf dir = SiteTree.Nodes(0).Nodes(2).Tag Then
             html = "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>New HTML Page</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>Include Page</h1>" & vbNewLine & "  </body>" & vbNewLine & "</html>"
         End If

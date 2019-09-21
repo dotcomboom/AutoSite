@@ -651,13 +651,16 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.4 - Macchiato
+    <value>0.9.4 - Macchiato:
    * Creating duplicate files in the site tree other than .html is fixed
-   * Application is no longer blurry on HiDPI displays
-   * Apricot will now close input files after reading to prevent locking
+   * Application is no longer blurry on high DPI displays
+   * Apricot will now close input files after reading to prevent locking (finally!)
    * If a page's template is not found, an internal default template is used
    * Title bar is not updated during build
    * Browse Site will not error if there is no index.html, and instead will just open Windows Explorer
+   * Debug conditional removed from default template
+   * Editor now opens on double-click depending on the file's extension, and Preview does not open files on double-click anymore
+
    + Dragging an attribute from the Attribute Tree into the editor will insert it; dragging its value will insert a definition
    + Conditionals can now be inserted from the editor's context menu
 

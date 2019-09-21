@@ -654,6 +654,9 @@ SOFTWARE.</value>
     <value>0.9.5 - ????:
    + Editor previews now slot stuff in like Apricot does (exception is Live Preview, which works the same as before for performance reasons)
    + Build and View Output buttons added to editor for easy access
+   + Editor font can now be changed (only works with monospaced fonts)
+   * Code editor in Add Conditional dialog now uses the same settings as the main editor
+
 0.9.4 - Macchiato:
    * Creating duplicate files in the site tree other than .html is fixed
    * Application is no longer blurry on high DPI displays

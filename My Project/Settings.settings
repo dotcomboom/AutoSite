@@ -38,5 +38,8 @@
     <Setting Name="LivePreview" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="editorFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 9.75pt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

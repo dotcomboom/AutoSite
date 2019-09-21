@@ -102,6 +102,9 @@ Partial Class Form1
         Me.BrowseOutput = New System.Windows.Forms.ToolStripButton
         Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
+        Me.FormatSep2 = New System.Windows.Forms.MenuItem
+        Me.EditorFont = New System.Windows.Forms.MenuItem
+        Me.SelectFont = New System.Windows.Forms.FontDialog
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -247,7 +250,7 @@ Partial Class Form1
         'FormatMenu
         '
         Me.FormatMenu.Index = 2
-        Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatMenuSep, Me.SyntaxHighlight, Me.LivePreview})
+        Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatMenuSep, Me.SyntaxHighlight, Me.LivePreview, Me.FormatSep2, Me.EditorFont})
         Me.FormatMenu.Text = "Format"
         '
         'WordWrap
@@ -606,7 +609,7 @@ Partial Class Form1
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(294, 128)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
         '
         'MapPage
         '
@@ -713,6 +716,16 @@ Partial Class Form1
         Me.CoreSplit.SplitterDistance = 310
         Me.CoreSplit.SplitterWidth = 5
         Me.CoreSplit.TabIndex = 4
+        '
+        'FormatSep2
+        '
+        Me.FormatSep2.Index = 6
+        Me.FormatSep2.Text = "-"
+        '
+        'EditorFont
+        '
+        Me.EditorFont.Index = 7
+        Me.EditorFont.Text = "Editor (Monospace) Font..."
         '
         'Form1
         '
@@ -823,4 +836,7 @@ Partial Class Form1
     Friend WithEvents EdSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents EditTabs As System.Windows.Forms.TabControl
     Friend WithEvents Preview As System.Windows.Forms.WebBrowser
+    Friend WithEvents FormatSep2 As System.Windows.Forms.MenuItem
+    Friend WithEvents EditorFont As System.Windows.Forms.MenuItem
+    Friend WithEvents SelectFont As System.Windows.Forms.FontDialog
 End Class

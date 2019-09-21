@@ -166,6 +166,7 @@ Public Class Form1
                 edit.Code.WordWrap = My.Settings.WordWrap
                 edit.Code.VirtualSpace = My.Settings.VirtualSpace
                 edit.Code.WideCaret = My.Settings.WideCaret
+                edit.Code.Font = My.Settings.editorFont
                 edit.LivePreview.Checked = My.Settings.LivePreview
             End If
         Next
@@ -1247,6 +1248,14 @@ Public Class Form1
             ElseIf e.Item.SelectedImageKey = "Value" Then
                 DoDragDrop("<!-- attrib " & e.Item.Parent.Text & ": " & e.Item.Text & " -->", DragDropEffects.Link)
             End If
+        End If
+    End Sub
+
+    Private Sub EditorFont_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditorFont.Click
+        SelectFont.Font = My.Settings.editorFont
+        If SelectFont.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            My.Settings.editorFont = SelectFont.Font
+            panelUpdate()
         End If
     End Sub
 End Class

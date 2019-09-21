@@ -29,5 +29,9 @@ Public Class AddConditional
         For Each att As TreeNode In Form1.AttributeTree.Nodes
             Attribute.Items.Add(att.Text)
         Next
+        output.WordWrap = My.Settings.WordWrap
+        output.VirtualSpace = My.Settings.VirtualSpace
+        output.Code.WideCaret = My.Settings.WideCaret
+        output.Code.Font = My.Settings.editorFont
     End Sub
 End Class

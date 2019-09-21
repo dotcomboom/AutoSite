@@ -59,6 +59,7 @@ Partial Class Editor
         Me.SelectAll = New System.Windows.Forms.MenuItem
         Me.ConSep3 = New System.Windows.Forms.MenuItem
         Me.InsertConditional = New System.Windows.Forms.MenuItem
+        Me.PropertyGrid1 = New System.Windows.Forms.PropertyGrid
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -245,7 +246,7 @@ Partial Class Editor
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
         Me.Code.AutoScrollMinSize = New System.Drawing.Size(31, 18)
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 18
@@ -254,7 +255,6 @@ Partial Class Editor
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Code.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
@@ -332,10 +332,19 @@ Partial Class Editor
         Me.InsertConditional.Index = 10
         Me.InsertConditional.Text = "Insert Conditional..."
         '
+        'PropertyGrid1
+        '
+        Me.PropertyGrid1.Location = New System.Drawing.Point(261, 62)
+        Me.PropertyGrid1.Name = "PropertyGrid1"
+        Me.PropertyGrid1.SelectedObject = Me.Code
+        Me.PropertyGrid1.Size = New System.Drawing.Size(320, 311)
+        Me.PropertyGrid1.TabIndex = 3
+        '
         'Editor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.PropertyGrid1)
         Me.Controls.Add(Me.Code)
         Me.Controls.Add(Me.Strip)
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -383,5 +392,6 @@ Partial Class Editor
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents Sep5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ViewOutput As System.Windows.Forms.ToolStripButton
+    Friend WithEvents PropertyGrid1 As System.Windows.Forms.PropertyGrid
 
 End Class

@@ -658,7 +658,8 @@ SOFTWARE.</value>
    * If a page's template is not found, an internal default template is used
    * Title bar is not updated during build
    * Browse Site will not error if there is no index.html, and instead will just open Windows Explorer
-   + {WIP} Dragging an attribute into the editor will prompt to insert it
+   + Dragging an attribute from the Attribute Tree into the editor will insert it; dragging its value will insert a definition
+   + Conditionals can now be inserted from the editor's context menu
 
 0.9.3 - Caramel Mocha:
    * Fixed Markdown file building

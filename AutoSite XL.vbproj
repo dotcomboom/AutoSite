@@ -74,6 +74,12 @@
     <Compile Include="About.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddConditional.Designer.vb">
+      <DependentUpon>AddConditional.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddConditional.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Editor.Designer.vb">
       <DependentUpon>Editor.vb</DependentUpon>
     </Compile>
@@ -107,6 +113,9 @@
   <ItemGroup>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddConditional.resx">
+      <DependentUpon>AddConditional.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.vb</DependentUpon>

@@ -180,26 +180,17 @@ Public Class Editor
 
     ' https://www.codeproject.com/articles/8995/introduction-to-treeview-drag-and-drop-vb-net
     Public Sub Code_DragEnter(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Code.DragEnter
-        If e.Data.GetDataPresent("System.Windows.Forms.TreeNode", True) Then
-            e.Effect = DragDropEffects.Copy
-        Else
-            e.Effect = DragDropEffects.None
-        End If
+        e.Effect = DragDropEffects.Link
     End Sub
 
-    Private Sub Code_DragDrop(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Code.DragDrop
-        If e.Data.GetDataPresent("System.Windows.Forms.TreeNode", True) = False Then
-            Exit Sub
-        End If
+    Private Sub Code_DragOver(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles Code.DragOver
+        e.Effect = DragDropEffects.Link
+    End Sub
 
-        Dim selectedTreeview As TreeView = CType(sender, TreeView)
-
-        Dim dropNode As TreeNode = CType(e.Data.GetData("System.Windows.Forms.TreeNode"), TreeNode)
-
-        If dropNode.ImageKey = "Attribute" Then
-            Code.InsertText(dropNode.Text)
-        ElseIf dropNode.ImageKey = "Value" Then
-            Code.InsertText(dropNode.Text)
+    Private Sub InsertConditional_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InsertConditional.Click
+        Dim conditionals = New AddConditional
+        If conditionals.ShowDialog() = DialogResult.OK Then
+            Code.InsertText(conditionals.output)
         End If
     End Sub
 End Class

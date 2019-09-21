@@ -54,6 +54,8 @@ Partial Class Editor
         Me.Delete = New System.Windows.Forms.MenuItem
         Me.ConSep2 = New System.Windows.Forms.MenuItem
         Me.SelectAll = New System.Windows.Forms.MenuItem
+        Me.ConSep3 = New System.Windows.Forms.MenuItem
+        Me.InsertConditional = New System.Windows.Forms.MenuItem
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -219,7 +221,7 @@ Partial Class Editor
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
         Me.Code.AutoScrollMinSize = New System.Drawing.Size(27, 14)
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 14
@@ -247,7 +249,7 @@ Partial Class Editor
         '
         'Context
         '
-        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.ConSep, Me.Cut, Me.Copy, Me.Paste, Me.Delete, Me.ConSep2, Me.SelectAll})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.ConSep, Me.Cut, Me.Copy, Me.Paste, Me.Delete, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertConditional})
         '
         'Undo
         '
@@ -295,6 +297,16 @@ Partial Class Editor
         Me.SelectAll.Index = 8
         Me.SelectAll.Text = "Select All"
         '
+        'ConSep3
+        '
+        Me.ConSep3.Index = 9
+        Me.ConSep3.Text = "-"
+        '
+        'InsertConditional
+        '
+        Me.InsertConditional.Index = 10
+        Me.InsertConditional.Text = "Insert Conditional..."
+        '
         'Editor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -340,5 +352,7 @@ Partial Class Editor
     Friend WithEvents Sep4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Preview As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents LivePreview As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConSep3 As System.Windows.Forms.MenuItem
+    Friend WithEvents InsertConditional As System.Windows.Forms.MenuItem
 
 End Class

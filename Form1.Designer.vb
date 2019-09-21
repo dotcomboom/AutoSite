@@ -77,7 +77,7 @@ Partial Class Form1
         Me.NewHTMLCon = New System.Windows.Forms.MenuItem
         Me.NewMDCon = New System.Windows.Forms.MenuItem
         Me.NewPHPCon = New System.Windows.Forms.MenuItem
-        Me.MenuItem3 = New System.Windows.Forms.MenuItem
+        Me.NewSep2 = New System.Windows.Forms.MenuItem
         Me.NewCSSCon = New System.Windows.Forms.MenuItem
         Me.NewJSCon = New System.Windows.Forms.MenuItem
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
@@ -90,7 +90,7 @@ Partial Class Form1
         Me.OpenLink = New System.Windows.Forms.LinkLabel
         Me.OpenPrompt = New System.Windows.Forms.Label
         Me.SiteTree = New System.Windows.Forms.TreeView
-        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.ApricotTabs = New System.Windows.Forms.TabControl
         Me.LogPage = New System.Windows.Forms.TabPage
         Me.Log = New System.Windows.Forms.RichTextBox
         Me.MapPage = New System.Windows.Forms.TabPage
@@ -109,7 +109,7 @@ Partial Class Form1
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.ApricotTabs.SuspendLayout()
         Me.LogPage.SuspendLayout()
         Me.MapPage.SuspendLayout()
         Me.BuildStrip.SuspendLayout()
@@ -396,7 +396,7 @@ Partial Class Form1
         'NewCon
         '
         Me.NewCon.Index = 9
-        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.MenuItem3, Me.NewCSSCon, Me.NewJSCon})
+        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.NewSep2, Me.NewCSSCon, Me.NewJSCon})
         Me.NewCon.Text = "New"
         '
         'NewFolderCon
@@ -424,10 +424,10 @@ Partial Class Form1
         Me.NewPHPCon.Index = 4
         Me.NewPHPCon.Text = "PHP Script"
         '
-        'MenuItem3
+        'NewSep2
         '
-        Me.MenuItem3.Index = 5
-        Me.MenuItem3.Text = "-"
+        Me.NewSep2.Index = 5
+        Me.NewSep2.Text = "-"
         '
         'NewCSSCon
         '
@@ -460,6 +460,7 @@ Partial Class Form1
         '
         Me.EdSplit.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EdSplit.Location = New System.Drawing.Point(0, 0)
+        Me.EdSplit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EdSplit.Name = "EdSplit"
         Me.EdSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -470,8 +471,9 @@ Partial Class Form1
         'EdSplit.Panel2
         '
         Me.EdSplit.Panel2.Controls.Add(Me.Preview)
-        Me.EdSplit.Size = New System.Drawing.Size(470, 417)
-        Me.EdSplit.SplitterDistance = 240
+        Me.EdSplit.Size = New System.Drawing.Size(628, 513)
+        Me.EdSplit.SplitterDistance = 295
+        Me.EdSplit.SplitterWidth = 5
         Me.EdSplit.TabIndex = 1
         '
         'EditTabs
@@ -484,17 +486,18 @@ Partial Class Form1
         Me.EditTabs.Padding = New System.Drawing.Point(0, 0)
         Me.EditTabs.SelectedIndex = 0
         Me.EditTabs.ShowToolTips = True
-        Me.EditTabs.Size = New System.Drawing.Size(470, 240)
+        Me.EditTabs.Size = New System.Drawing.Size(628, 295)
         Me.EditTabs.TabIndex = 1
         '
         'Preview
         '
         Me.Preview.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Preview.Location = New System.Drawing.Point(0, 0)
-        Me.Preview.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Preview.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Preview.MinimumSize = New System.Drawing.Size(27, 25)
         Me.Preview.Name = "Preview"
         Me.Preview.ScriptErrorsSuppressed = True
-        Me.Preview.Size = New System.Drawing.Size(470, 173)
+        Me.Preview.Size = New System.Drawing.Size(628, 213)
         Me.Preview.TabIndex = 0
         Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
@@ -502,6 +505,7 @@ Partial Class Form1
         '
         Me.ExSplit.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ExSplit.Location = New System.Drawing.Point(0, 0)
+        Me.ExSplit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ExSplit.Name = "ExSplit"
         Me.ExSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -513,11 +517,12 @@ Partial Class Form1
         '
         'ExSplit.Panel2
         '
-        Me.ExSplit.Panel2.Controls.Add(Me.TabControl1)
+        Me.ExSplit.Panel2.Controls.Add(Me.ApricotTabs)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
-        Me.ExSplit.Size = New System.Drawing.Size(233, 417)
-        Me.ExSplit.SplitterDistance = 236
+        Me.ExSplit.Size = New System.Drawing.Size(310, 513)
+        Me.ExSplit.SplitterDistance = 290
+        Me.ExSplit.SplitterWidth = 5
         Me.ExSplit.TabIndex = 4
         '
         'OpenLink
@@ -528,9 +533,10 @@ Partial Class Form1
         Me.OpenLink.AutoSize = True
         Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
         Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenLink.Location = New System.Drawing.Point(45, 52)
+        Me.OpenLink.Location = New System.Drawing.Point(60, 64)
+        Me.OpenLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.Size = New System.Drawing.Size(134, 13)
+        Me.OpenLink.Size = New System.Drawing.Size(181, 17)
         Me.OpenLink.TabIndex = 1
         Me.OpenLink.TabStop = True
         Me.OpenLink.Text = "Create or open a site folder"
@@ -544,9 +550,10 @@ Partial Class Form1
         Me.OpenPrompt.AutoSize = True
         Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
         Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenPrompt.Location = New System.Drawing.Point(35, 27)
+        Me.OpenPrompt.Location = New System.Drawing.Point(47, 33)
+        Me.OpenPrompt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.OpenPrompt.Name = "OpenPrompt"
-        Me.OpenPrompt.Size = New System.Drawing.Size(157, 13)
+        Me.OpenPrompt.Size = New System.Drawing.Size(209, 17)
         Me.OpenPrompt.TabIndex = 2
         Me.OpenPrompt.Text = "A site has not been opened yet."
         Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -558,29 +565,32 @@ Partial Class Form1
         Me.SiteTree.ImageList = Me.VS2017
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
+        Me.SiteTree.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SiteTree.Name = "SiteTree"
         Me.SiteTree.SelectedImageIndex = 0
-        Me.SiteTree.Size = New System.Drawing.Size(233, 236)
+        Me.SiteTree.Size = New System.Drawing.Size(310, 290)
         Me.SiteTree.TabIndex = 4
         '
-        'TabControl1
+        'ApricotTabs
         '
-        Me.TabControl1.Controls.Add(Me.LogPage)
-        Me.TabControl1.Controls.Add(Me.MapPage)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 25)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(233, 129)
-        Me.TabControl1.TabIndex = 5
+        Me.ApricotTabs.Controls.Add(Me.LogPage)
+        Me.ApricotTabs.Controls.Add(Me.MapPage)
+        Me.ApricotTabs.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ApricotTabs.Location = New System.Drawing.Point(0, 25)
+        Me.ApricotTabs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ApricotTabs.Name = "ApricotTabs"
+        Me.ApricotTabs.SelectedIndex = 0
+        Me.ApricotTabs.Size = New System.Drawing.Size(310, 165)
+        Me.ApricotTabs.TabIndex = 5
         '
         'LogPage
         '
         Me.LogPage.Controls.Add(Me.Log)
-        Me.LogPage.Location = New System.Drawing.Point(4, 22)
+        Me.LogPage.Location = New System.Drawing.Point(4, 25)
+        Me.LogPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LogPage.Name = "LogPage"
-        Me.LogPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.LogPage.Size = New System.Drawing.Size(225, 103)
+        Me.LogPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LogPage.Size = New System.Drawing.Size(302, 136)
         Me.LogPage.TabIndex = 0
         Me.LogPage.Text = "Log"
         Me.LogPage.UseVisualStyleBackColor = True
@@ -590,20 +600,22 @@ Partial Class Form1
         Me.Log.BackColor = System.Drawing.SystemColors.Window
         Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Log.Location = New System.Drawing.Point(3, 3)
+        Me.Log.Location = New System.Drawing.Point(4, 4)
+        Me.Log.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(219, 97)
+        Me.Log.Size = New System.Drawing.Size(294, 128)
         Me.Log.TabIndex = 5
         Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
         'MapPage
         '
         Me.MapPage.Controls.Add(Me.AttributeTree)
-        Me.MapPage.Location = New System.Drawing.Point(4, 22)
+        Me.MapPage.Location = New System.Drawing.Point(4, 25)
+        Me.MapPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MapPage.Name = "MapPage"
-        Me.MapPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.MapPage.Size = New System.Drawing.Size(225, 103)
+        Me.MapPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MapPage.Size = New System.Drawing.Size(303, 130)
         Me.MapPage.TabIndex = 1
         Me.MapPage.Text = "Attribute Map"
         Me.MapPage.UseVisualStyleBackColor = True
@@ -614,18 +626,20 @@ Partial Class Form1
         Me.AttributeTree.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AttributeTree.ImageIndex = 0
         Me.AttributeTree.ImageList = Me.VS2017
-        Me.AttributeTree.Location = New System.Drawing.Point(3, 3)
+        Me.AttributeTree.Location = New System.Drawing.Point(4, 4)
+        Me.AttributeTree.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AttributeTree.Name = "AttributeTree"
         Me.AttributeTree.SelectedImageIndex = 0
-        Me.AttributeTree.Size = New System.Drawing.Size(219, 97)
+        Me.AttributeTree.Size = New System.Drawing.Size(295, 122)
         Me.AttributeTree.TabIndex = 0
         '
         'BuildProgress
         '
         Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BuildProgress.Location = New System.Drawing.Point(0, 154)
+        Me.BuildProgress.Location = New System.Drawing.Point(0, 190)
+        Me.BuildProgress.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BuildProgress.Name = "BuildProgress"
-        Me.BuildProgress.Size = New System.Drawing.Size(233, 23)
+        Me.BuildProgress.Size = New System.Drawing.Size(310, 28)
         Me.BuildProgress.TabIndex = 1
         Me.BuildProgress.Visible = False
         '
@@ -637,7 +651,7 @@ Partial Class Form1
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.BuildStrip.Size = New System.Drawing.Size(233, 25)
+        Me.BuildStrip.Size = New System.Drawing.Size(310, 25)
         Me.BuildStrip.TabIndex = 3
         Me.BuildStrip.Text = "ToolStrip1"
         '
@@ -695,17 +709,19 @@ Partial Class Form1
         'CoreSplit.Panel2
         '
         Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
-        Me.CoreSplit.Size = New System.Drawing.Size(707, 417)
-        Me.CoreSplit.SplitterDistance = 233
+        Me.CoreSplit.Size = New System.Drawing.Size(943, 513)
+        Me.CoreSplit.SplitterDistance = 310
+        Me.CoreSplit.SplitterWidth = 5
         Me.CoreSplit.TabIndex = 4
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(707, 417)
+        Me.ClientSize = New System.Drawing.Size(943, 513)
         Me.Controls.Add(Me.CoreSplit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Menu = Me.MenuBar
         Me.Name = "Form1"
         Me.Text = "AutoSite XL"
@@ -718,7 +734,7 @@ Partial Class Form1
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
         Me.ExSplit.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
+        Me.ApricotTabs.ResumeLayout(False)
         Me.LogPage.ResumeLayout(False)
         Me.MapPage.ResumeLayout(False)
         Me.BuildStrip.ResumeLayout(False)
@@ -787,13 +803,13 @@ Partial Class Form1
     Friend WithEvents RenameCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewCSSCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewJSCon As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
+    Friend WithEvents NewSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents CoreSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
     Friend WithEvents OpenPrompt As System.Windows.Forms.Label
     Friend WithEvents SiteTree As System.Windows.Forms.TreeView
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents ApricotTabs As System.Windows.Forms.TabControl
     Friend WithEvents LogPage As System.Windows.Forms.TabPage
     Friend WithEvents Log As System.Windows.Forms.RichTextBox
     Friend WithEvents MapPage As System.Windows.Forms.TabPage

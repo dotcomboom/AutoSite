@@ -1227,9 +1227,11 @@ Public Class Form1
 
     Private Sub AttributeTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles AttributeTree.ItemDrag
         If e.Button = Windows.Forms.MouseButtons.Left Then
-            'If e.Item.SelectedImageKey = "Attribute" Then
-            DoDragDrop(e.Item, DragDropEffects.Move)
-            'End If
+            If e.Item.SelectedImageKey = "Attribute" Then
+                DoDragDrop("[#" & e.Item.Text & "#]", DragDropEffects.Link)
+            ElseIf e.Item.SelectedImageKey = "Value" Then
+                DoDragDrop("<!-- attrib " & e.Item.Parent.Text & ": " & e.Item.Text & "-->", DragDropEffects.Link)
+            End If
         End If
     End Sub
 End Class

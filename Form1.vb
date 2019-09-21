@@ -1230,7 +1230,7 @@ Public Class Form1
             If e.Item.SelectedImageKey = "Attribute" Then
                 DoDragDrop("[#" & e.Item.Text & "#]", DragDropEffects.Link)
             ElseIf e.Item.SelectedImageKey = "Value" Then
-                DoDragDrop("<!-- attrib " & e.Item.Parent.Text & ": " & e.Item.Text & "-->", DragDropEffects.Link)
+                DoDragDrop("<!-- attrib " & e.Item.Parent.Text & ": " & e.Item.Text & " -->", DragDropEffects.Link)
             End If
         End If
     End Sub

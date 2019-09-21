@@ -651,7 +651,10 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.5 - Chocolate Milk:
+    <value>0.9.5.1 - Cocoa:
+   * Removed debug PropertyGrid from editor
+
+0.9.5 - Chocolate Milk:
    + Editor previews now slot stuff in like Apricot does (exception is Live Preview, which works the same as before for performance reasons)
    + Build and View Output buttons added to editor for easy access
    + Editor font can now be changed (only works with monospaced fonts)

@@ -52,6 +52,8 @@ Partial Class Form1
         Me.FormatMenuSep = New System.Windows.Forms.MenuItem
         Me.SyntaxHighlight = New System.Windows.Forms.MenuItem
         Me.LivePreview = New System.Windows.Forms.MenuItem
+        Me.FormatSep2 = New System.Windows.Forms.MenuItem
+        Me.EditorFont = New System.Windows.Forms.MenuItem
         Me.BuildMenu = New System.Windows.Forms.MenuItem
         Me.BuildSite = New System.Windows.Forms.MenuItem
         Me.BuildEngineMenu = New System.Windows.Forms.MenuItem
@@ -102,8 +104,6 @@ Partial Class Form1
         Me.BrowseOutput = New System.Windows.Forms.ToolStripButton
         Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
-        Me.FormatSep2 = New System.Windows.Forms.MenuItem
-        Me.EditorFont = New System.Windows.Forms.MenuItem
         Me.SelectFont = New System.Windows.Forms.FontDialog
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
@@ -283,6 +283,16 @@ Partial Class Form1
         '
         Me.LivePreview.Index = 5
         Me.LivePreview.Text = "Live Preview"
+        '
+        'FormatSep2
+        '
+        Me.FormatSep2.Index = 6
+        Me.FormatSep2.Text = "-"
+        '
+        'EditorFont
+        '
+        Me.EditorFont.Index = 7
+        Me.EditorFont.Text = "Editor (Monospace) Font..."
         '
         'BuildMenu
         '
@@ -609,7 +619,7 @@ Partial Class Form1
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(294, 128)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
         'MapPage
         '
@@ -716,16 +726,6 @@ Partial Class Form1
         Me.CoreSplit.SplitterDistance = 310
         Me.CoreSplit.SplitterWidth = 5
         Me.CoreSplit.TabIndex = 4
-        '
-        'FormatSep2
-        '
-        Me.FormatSep2.Index = 6
-        Me.FormatSep2.Text = "-"
-        '
-        'EditorFont
-        '
-        Me.EditorFont.Index = 7
-        Me.EditorFont.Text = "Editor (Monospace) Font..."
         '
         'Form1
         '

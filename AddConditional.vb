@@ -13,7 +13,7 @@ Public Class AddConditional
             If Not out = "" Then
                 out &= vbNewLine
             End If
-            out &= "[" & Attribute.Text & ineq & "=" & Equals.Text & "]" & line.Replace(vbNewLine, "").Replace("\n", "") & "[/" & Attribute.Text & ineq & "=]"
+            out &= "[" & Attribute.Text & ineq & "=" & EqualsTxt.Text & "]" & line.Replace(vbNewLine, "").Replace("\n", "") & "[/" & Attribute.Text & ineq & "=]"
         Next
         output = out
         Me.DialogResult = System.Windows.Forms.DialogResult.OK

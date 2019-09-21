@@ -49,7 +49,7 @@ Partial Class About
         Me.LicenseBox.Cursor = System.Windows.Forms.Cursors.Default
         Me.LicenseBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LicenseBox.Location = New System.Drawing.Point(4, 4)
-        Me.LicenseBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LicenseBox.Margin = New System.Windows.Forms.Padding(4)
         Me.LicenseBox.Name = "LicenseBox"
         Me.LicenseBox.ReadOnly = True
         Me.LicenseBox.Size = New System.Drawing.Size(381, 290)
@@ -60,7 +60,7 @@ Partial Class About
         '
         Me.OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.OK.Location = New System.Drawing.Point(421, 350)
-        Me.OK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.OK.Margin = New System.Windows.Forms.Padding(4)
         Me.OK.Name = "OK"
         Me.OK.Size = New System.Drawing.Size(100, 28)
         Me.OK.TabIndex = 1
@@ -71,7 +71,7 @@ Partial Class About
         '
         Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
         Me.Logo.Location = New System.Drawing.Point(16, 15)
-        Me.Logo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Logo.Margin = New System.Windows.Forms.Padding(4)
         Me.Logo.Name = "Logo"
         Me.Logo.Size = New System.Drawing.Size(100, 96)
         Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -150,7 +150,7 @@ Partial Class About
         Me.Tabs.Controls.Add(Me.License)
         Me.Tabs.Controls.Add(Me.Changelog)
         Me.Tabs.Location = New System.Drawing.Point(124, 15)
-        Me.Tabs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Tabs.Margin = New System.Windows.Forms.Padding(4)
         Me.Tabs.Name = "Tabs"
         Me.Tabs.SelectedIndex = 0
         Me.Tabs.Size = New System.Drawing.Size(397, 327)
@@ -160,9 +160,9 @@ Partial Class About
         '
         Me.License.Controls.Add(Me.LicenseBox)
         Me.License.Location = New System.Drawing.Point(4, 25)
-        Me.License.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.License.Margin = New System.Windows.Forms.Padding(4)
         Me.License.Name = "License"
-        Me.License.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.License.Padding = New System.Windows.Forms.Padding(4)
         Me.License.Size = New System.Drawing.Size(389, 298)
         Me.License.TabIndex = 0
         Me.License.Text = "License"
@@ -172,9 +172,9 @@ Partial Class About
         '
         Me.Changelog.Controls.Add(Me.ChangelogBox)
         Me.Changelog.Location = New System.Drawing.Point(4, 25)
-        Me.Changelog.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Changelog.Margin = New System.Windows.Forms.Padding(4)
         Me.Changelog.Name = "Changelog"
-        Me.Changelog.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Changelog.Padding = New System.Windows.Forms.Padding(4)
         Me.Changelog.Size = New System.Drawing.Size(389, 298)
         Me.Changelog.TabIndex = 1
         Me.Changelog.Text = "Changelog"
@@ -187,7 +187,7 @@ Partial Class About
         Me.ChangelogBox.Cursor = System.Windows.Forms.Cursors.Default
         Me.ChangelogBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ChangelogBox.Location = New System.Drawing.Point(4, 4)
-        Me.ChangelogBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ChangelogBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ChangelogBox.Name = "ChangelogBox"
         Me.ChangelogBox.ReadOnly = True
         Me.ChangelogBox.Size = New System.Drawing.Size(381, 290)
@@ -208,7 +208,7 @@ Partial Class About
         Me.Controls.Add(Me.Version)
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.OK)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "About"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False

@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
 Imports FastColoredTextBoxNS
+Imports System.Text
 
 Public Class Editor
 
@@ -160,11 +161,120 @@ Public Class Editor
         Code.ShowReplaceDialog()
     End Sub
 
+    Public template_cache As New Dictionary(Of String, String)()
+
     Private Sub Preview_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preview.ButtonClick
+        Dim page = ""
         If Me.Parent.Text.EndsWith(".md") Then
-            Form1.Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(Code.Text)
+            page = CommonMark.CommonMarkConverter.Convert(Code.Text)
         Else
-            Form1.Preview.DocumentText = Code.Text
+            page = Code.Text
+        End If
+
+        Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+
+        If Not Me.Parent.Text.StartsWith("in\") Then
+            Form1.Preview.Navigate(Path.Combine(Form1.SiteTree.Nodes(0).Text, "out\"))
+            Form1.Preview.DocumentText = page
+        Else
+            Dim templates = Path.Combine(Form1.SiteTree.Nodes(0).Text, "templates\")
+            template_cache.Clear()
+
+            Dim content = ""
+            Dim attribs As New Dictionary(Of String, String)()
+            attribs.Add("template", "default")
+            attribs.Add("path", rel.Replace("\", "/"))
+            Dim reader As New StringReader(page)
+            Dim line As String
+            Do
+                line = reader.ReadLine
+                Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("^<!-- attrib (.*): (.*) -->")
+                If Not line Is Nothing Then
+                    Dim match As RegularExpressions.Match = regex.Match(line)
+                    If match.Success Then
+                        attribs.Item(match.Groups(1).Value) = match.Groups(2).Value
+                    Else
+                        content = content & vbNewLine & line
+                    End If
+                End If
+            Loop Until line Is Nothing
+            reader.Close()
+            reader.Dispose()
+            For Each attrib In attribs
+                Dim tn As New Form1.TNode
+                tn.relPath = rel
+                tn.Attribute = attrib.Key
+                tn.Value = attrib.Value
+            Next
+            If Not My.Computer.FileSystem.FileExists(templates & "\" & attribs.Item("template") & ".html") Then
+                If My.Computer.FileSystem.FileExists(templates & "\default.html") Then
+                    attribs.Item("template") = "default"
+                Else
+                    attribs.Item("template") = "<b>AS</b>internal"
+                    If Not template_cache.ContainsKey("<b>AS</b>internal") Then
+                        template_cache.Add("<b>AS</b>internal", "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "      [path=index.md]You are on the index.[/path=]" & vbNewLine & "    </p>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>")
+                    End If
+                End If
+            End If
+            If Not template_cache.ContainsKey(attribs.Item("template")) Then
+                template_cache.Item(attribs.Item("template")) = ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
+            End If
+            Dim newHtml = template_cache.Item(attribs.Item("template"))
+            ' Attribute Process 1 (Content)
+            For Each kvp As KeyValuePair(Of String, String) In attribs
+                newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
+            Next
+            ' End Attribute Process 1
+            If rel.EndsWith(".md") Then
+                content = CommonMark.CommonMarkConverter.Convert(content)
+                rel = Form1.ReplaceLast(rel, ".md", ".html")
+            End If
+            newHtml = newHtml.Replace("[#content#]", content)
+            newHtml = newHtml.Replace("[#root#]", Form1.FillString("../", Form1.CountCharacter(rel, "\")))
+            Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
+            Dim matches = Regex.Matches(newHtml, conditionalRegex)
+            For Each m As Match In matches
+                Dim fullStr = m.Groups(0).Value
+                Dim key = m.Groups(1).Value
+                Dim value = m.Groups(2).Value
+                Dim html = m.Groups(3).Value
+                Dim equality = (Not key.EndsWith("!"))
+                If equality = False Then
+                    key = Form1.ReplaceLast(key, "!", "")
+                End If
+                Dim pass = False
+                If attribs.ContainsKey(key) Then
+                    If attribs.Item(key) = value Then
+                        pass = True
+                    End If
+                End If
+
+                If pass Then
+                    If equality = True Then
+                        newHtml = newHtml.Replace(fullStr, html)
+                    Else
+                        newHtml = newHtml.Replace(fullStr, "")
+                    End If
+                Else
+                    If equality = True Then
+                        newHtml = newHtml.Replace(fullStr, "")
+                    Else
+                        newHtml = newHtml.Replace(fullStr, html)
+                    End If
+                End If
+            Next
+            ' Attribute Process 2 (Whole Page)
+            For Each kvp As KeyValuePair(Of String, String) In attribs
+                newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
+            Next
+            ' End Attribute Process 2
+            newHtml = Regex.Replace(newHtml, "\[#.*?#\]", "")
+
+            If rel.EndsWith(".md") Then
+                rel = Form1.ReplaceLast(rel, ".md", ".html")
+            End If
+            Form1.Preview.Navigate(siteRoot & "out\" & rel)
+            Form1.Preview.DocumentText = newHtml
         End If
     End Sub
 
@@ -192,5 +302,17 @@ Public Class Editor
         If conditionals.ShowDialog() = DialogResult.OK Then
             Code.InsertText(conditionals.output)
         End If
+    End Sub
+
+    Private Sub ViewOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutput.Click
+        Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        If rel.EndsWith(".md") Then
+            rel = Form1.ReplaceLast(rel, ".md", ".html")
+        End If
+        Form1.Preview.Navigate(siteRoot & "\out\" & rel)
+    End Sub
+
+    Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Build.Click
+        Form1.doBuild()
     End Sub
 End Class

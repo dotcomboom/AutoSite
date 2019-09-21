@@ -31,7 +31,7 @@ Partial Class AddConditional
         Me.AttLabel = New System.Windows.Forms.Label
         Me.Attribute = New System.Windows.Forms.ComboBox
         Me.AttIcon = New System.Windows.Forms.PictureBox
-        Me.Equals = New System.Windows.Forms.TextBox
+        Me.EqualsTxt = New System.Windows.Forms.TextBox
         Me.PassLabel = New System.Windows.Forms.Label
         Me.FastColoredTextBox1 = New FastColoredTextBoxNS.FastColoredTextBox
         Me.Yesnt = New System.Windows.Forms.CheckBox
@@ -49,7 +49,7 @@ Partial Class AddConditional
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(183, 337)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -60,7 +60,7 @@ Partial Class AddConditional
         '
         Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.OK_Button.Location = New System.Drawing.Point(4, 4)
-        Me.OK_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.OK_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.Size = New System.Drawing.Size(89, 28)
         Me.OK_Button.TabIndex = 0
@@ -71,7 +71,7 @@ Partial Class AddConditional
         Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Cancel_Button.Location = New System.Drawing.Point(101, 4)
-        Me.Cancel_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Cancel_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.Size = New System.Drawing.Size(89, 28)
         Me.Cancel_Button.TabIndex = 1
@@ -100,7 +100,7 @@ Partial Class AddConditional
         '
         Me.Attribute.FormattingEnabled = True
         Me.Attribute.Location = New System.Drawing.Point(161, 102)
-        Me.Attribute.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Attribute.Margin = New System.Windows.Forms.Padding(4)
         Me.Attribute.Name = "Attribute"
         Me.Attribute.Size = New System.Drawing.Size(215, 24)
         Me.Attribute.TabIndex = 5
@@ -110,21 +110,21 @@ Partial Class AddConditional
         '
         Me.AttIcon.Image = CType(resources.GetObject("AttIcon.Image"), System.Drawing.Image)
         Me.AttIcon.Location = New System.Drawing.Point(139, 106)
-        Me.AttIcon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AttIcon.Margin = New System.Windows.Forms.Padding(4)
         Me.AttIcon.Name = "AttIcon"
         Me.AttIcon.Size = New System.Drawing.Size(16, 16)
         Me.AttIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.AttIcon.TabIndex = 6
         Me.AttIcon.TabStop = False
         '
-        'Equals
+        'EqualsTxt
         '
-        Me.Equals.Location = New System.Drawing.Point(76, 134)
-        Me.Equals.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Equals.Name = "Equals"
-        Me.Equals.Size = New System.Drawing.Size(300, 22)
-        Me.Equals.TabIndex = 9
-        Me.Equals.Text = "index.html"
+        Me.EqualsTxt.Location = New System.Drawing.Point(76, 134)
+        Me.EqualsTxt.Margin = New System.Windows.Forms.Padding(4)
+        Me.EqualsTxt.Name = "EqualsTxt"
+        Me.EqualsTxt.Size = New System.Drawing.Size(300, 22)
+        Me.EqualsTxt.TabIndex = 9
+        Me.EqualsTxt.Text = "index.html"
         '
         'PassLabel
         '
@@ -139,21 +139,26 @@ Partial Class AddConditional
         'FastColoredTextBox1
         '
         Me.FastColoredTextBox1.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.FastColoredTextBox1.AutoIndentCharsPatterns = "^\s*[\w\.]+(\s\w+)?\s*(?<range>=)\s*(?<range>[^;=]+);" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "^\s*(case|default)\s*[^:]*" & _
-            "(?<range>:)\s*(?<range>[^;]+);"
+        Me.FastColoredTextBox1.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         Me.FastColoredTextBox1.AutoScrollMinSize = New System.Drawing.Size(31, 18)
         Me.FastColoredTextBox1.BackBrush = Nothing
         Me.FastColoredTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.FastColoredTextBox1.CharHeight = 18
         Me.FastColoredTextBox1.CharWidth = 10
+        Me.FastColoredTextBox1.CommentPrefix = Nothing
         Me.FastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.FastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.FastColoredTextBox1.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.FastColoredTextBox1.IsReplaceMode = False
         Me.FastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML
+        Me.FastColoredTextBox1.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
+        Me.FastColoredTextBox1.LeftBracket2 = Global.Microsoft.VisualBasic.ChrW(40)
         Me.FastColoredTextBox1.Location = New System.Drawing.Point(17, 196)
-        Me.FastColoredTextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FastColoredTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.FastColoredTextBox1.Name = "FastColoredTextBox1"
         Me.FastColoredTextBox1.Paddings = New System.Windows.Forms.Padding(0)
+        Me.FastColoredTextBox1.RightBracket = Global.Microsoft.VisualBasic.ChrW(62)
+        Me.FastColoredTextBox1.RightBracket2 = Global.Microsoft.VisualBasic.ChrW(41)
         Me.FastColoredTextBox1.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.FastColoredTextBox1.ServiceColors = CType(resources.GetObject("FastColoredTextBox1.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
         Me.FastColoredTextBox1.Size = New System.Drawing.Size(360, 133)
@@ -180,14 +185,14 @@ Partial Class AddConditional
         Me.Controls.Add(Me.Yesnt)
         Me.Controls.Add(Me.FastColoredTextBox1)
         Me.Controls.Add(Me.PassLabel)
-        Me.Controls.Add(Me.Equals)
+        Me.Controls.Add(Me.EqualsTxt)
         Me.Controls.Add(Me.AttIcon)
         Me.Controls.Add(Me.Attribute)
         Me.Controls.Add(Me.AttLabel)
         Me.Controls.Add(Me.Explanation)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AddConditional"
@@ -208,7 +213,7 @@ Partial Class AddConditional
     Friend WithEvents AttLabel As System.Windows.Forms.Label
     Friend WithEvents Attribute As System.Windows.Forms.ComboBox
     Friend WithEvents AttIcon As System.Windows.Forms.PictureBox
-    Friend WithEvents Equals As System.Windows.Forms.TextBox
+    Friend WithEvents EqualsTxt As System.Windows.Forms.TextBox
     Friend WithEvents PassLabel As System.Windows.Forms.Label
     Friend WithEvents FastColoredTextBox1 As FastColoredTextBoxNS.FastColoredTextBox
     Friend WithEvents Yesnt As System.Windows.Forms.CheckBox

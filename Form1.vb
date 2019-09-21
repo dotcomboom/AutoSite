@@ -471,7 +471,7 @@ Public Class Form1
         Me.Close()
     End Sub
 
-    Private Sub BuildSite_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, Build.Click
+    Public Sub doBuild() Handles BuildSite.Click, Build.Click
         If EnginePython.Checked Then
             If My.Computer.FileSystem.FileExists("AutoSitePy.exe") Then
                 If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then

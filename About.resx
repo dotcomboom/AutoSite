@@ -651,7 +651,10 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.4 - Macchiato:
+    <value>0.9.5 - ????:
+   + Editor previews now slot stuff in like Apricot does (exception is Live Preview, which works the same as before for performance reasons)
+   + Build and View Output buttons added to editor for easy access
+0.9.4 - Macchiato:
    * Creating duplicate files in the site tree other than .html is fixed
    * Application is no longer blurry on high DPI displays
    * Apricot will now close input files after reading to prevent locking (finally!)

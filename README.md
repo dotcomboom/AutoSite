@@ -31,7 +31,7 @@ In this example, any reference of `[#title#]` will be replaced with `New Page Ti
 
 When you build your site, AutoSite XL's new **Attribute Map** located in the **Apricot Output** panel allows you to get a birds' eye view of all the attributes your site uses, their values, and what pages have those values. It's great for identifying errors, or just seeing what pages use which templates for example.
 
-![AutoSite XL](https://github.com/dotcomboom/AutoSite-XL/blob/master/screenshot_xp.png?raw=true)
+![AutoSite XL](https://github.com/dotcomboom/AutoSite-XL/blob/master/screenshot.png?raw=true)
 
 ## Conditionals
 

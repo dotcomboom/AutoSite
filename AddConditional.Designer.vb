@@ -33,11 +33,11 @@ Partial Class AddConditional
         Me.AttIcon = New System.Windows.Forms.PictureBox
         Me.EqualsTxt = New System.Windows.Forms.TextBox
         Me.PassLabel = New System.Windows.Forms.Label
-        Me.FastColoredTextBox1 = New FastColoredTextBoxNS.FastColoredTextBox
+        Me.Display = New FastColoredTextBoxNS.FastColoredTextBox
         Me.Yesnt = New System.Windows.Forms.CheckBox
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.AttIcon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FastColoredTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Display, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -136,34 +136,33 @@ Partial Class AddConditional
         Me.PassLabel.TabIndex = 11
         Me.PassLabel.Text = "If conditional passes, render out:"
         '
-        'FastColoredTextBox1
+        'Display
         '
-        Me.FastColoredTextBox1.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.FastColoredTextBox1.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
-        Me.FastColoredTextBox1.AutoScrollMinSize = New System.Drawing.Size(31, 18)
-        Me.FastColoredTextBox1.BackBrush = Nothing
-        Me.FastColoredTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FastColoredTextBox1.CharHeight = 18
-        Me.FastColoredTextBox1.CharWidth = 10
-        Me.FastColoredTextBox1.CommentPrefix = Nothing
-        Me.FastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.FastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.FastColoredTextBox1.Font = New System.Drawing.Font("Courier New", 9.75!)
-        Me.FastColoredTextBox1.IsReplaceMode = False
-        Me.FastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML
-        Me.FastColoredTextBox1.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
-        Me.FastColoredTextBox1.LeftBracket2 = Global.Microsoft.VisualBasic.ChrW(40)
-        Me.FastColoredTextBox1.Location = New System.Drawing.Point(17, 196)
-        Me.FastColoredTextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.FastColoredTextBox1.Name = "FastColoredTextBox1"
-        Me.FastColoredTextBox1.Paddings = New System.Windows.Forms.Padding(0)
-        Me.FastColoredTextBox1.RightBracket = Global.Microsoft.VisualBasic.ChrW(62)
-        Me.FastColoredTextBox1.RightBracket2 = Global.Microsoft.VisualBasic.ChrW(41)
-        Me.FastColoredTextBox1.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.FastColoredTextBox1.ServiceColors = CType(resources.GetObject("FastColoredTextBox1.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
-        Me.FastColoredTextBox1.Size = New System.Drawing.Size(360, 133)
-        Me.FastColoredTextBox1.TabIndex = 12
-        Me.FastColoredTextBox1.Zoom = 100
+        Me.Display.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
+        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Display.AutoScrollMinSize = New System.Drawing.Size(31, 18)
+        Me.Display.BackBrush = Nothing
+        Me.Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Display.CharHeight = 18
+        Me.Display.CharWidth = 10
+        Me.Display.CommentPrefix = Nothing
+        Me.Display.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Display.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Display.IsReplaceMode = False
+        Me.Display.Language = FastColoredTextBoxNS.Language.HTML
+        Me.Display.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
+        Me.Display.LeftBracket2 = Global.Microsoft.VisualBasic.ChrW(40)
+        Me.Display.Location = New System.Drawing.Point(17, 196)
+        Me.Display.Margin = New System.Windows.Forms.Padding(4)
+        Me.Display.Name = "Display"
+        Me.Display.Paddings = New System.Windows.Forms.Padding(0)
+        Me.Display.RightBracket = Global.Microsoft.VisualBasic.ChrW(62)
+        Me.Display.RightBracket2 = Global.Microsoft.VisualBasic.ChrW(41)
+        Me.Display.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Display.ServiceColors = CType(resources.GetObject("Display.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
+        Me.Display.Size = New System.Drawing.Size(360, 133)
+        Me.Display.TabIndex = 12
+        Me.Display.Zoom = 100
         '
         'Yesnt
         '
@@ -183,7 +182,7 @@ Partial Class AddConditional
         Me.CancelButton = Me.Cancel_Button
         Me.ClientSize = New System.Drawing.Size(391, 388)
         Me.Controls.Add(Me.Yesnt)
-        Me.Controls.Add(Me.FastColoredTextBox1)
+        Me.Controls.Add(Me.Display)
         Me.Controls.Add(Me.PassLabel)
         Me.Controls.Add(Me.EqualsTxt)
         Me.Controls.Add(Me.AttIcon)
@@ -201,7 +200,7 @@ Partial Class AddConditional
         Me.Text = "Insert Conditional"
         Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.AttIcon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FastColoredTextBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Display, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -215,7 +214,7 @@ Partial Class AddConditional
     Friend WithEvents AttIcon As System.Windows.Forms.PictureBox
     Friend WithEvents EqualsTxt As System.Windows.Forms.TextBox
     Friend WithEvents PassLabel As System.Windows.Forms.Label
-    Friend WithEvents FastColoredTextBox1 As FastColoredTextBoxNS.FastColoredTextBox
+    Friend WithEvents Display As FastColoredTextBoxNS.FastColoredTextBox
     Friend WithEvents Yesnt As System.Windows.Forms.CheckBox
 
 End Class

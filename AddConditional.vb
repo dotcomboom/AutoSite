@@ -4,18 +4,16 @@ Public Class AddConditional
     Public output = ""
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
-        Dim out = ""
         Dim ineq = ""
         If Yesnt.Checked Then
             ineq = "!"
         End If
-        For Each line In FastColoredTextBox1.Lines
-            If Not out = "" Then
-                out &= vbNewLine
+        For Each line In Display.Lines
+            If Not output = "" Then
+                output &= vbNewLine
             End If
-            out &= "[" & Attribute.Text & ineq & "=" & EqualsTxt.Text & "]" & line.Replace(vbNewLine, "").Replace("\n", "") & "[/" & Attribute.Text & ineq & "=]"
+            output &= "[" & Attribute.Text & ineq & "=" & EqualsTxt.Text & "]" & line.Replace(vbNewLine, "").Replace("\n", "") & "[/" & Attribute.Text & ineq & "=]"
         Next
-        output = out
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Close()
     End Sub
@@ -29,9 +27,9 @@ Public Class AddConditional
         For Each att As TreeNode In Form1.AttributeTree.Nodes
             Attribute.Items.Add(att.Text)
         Next
-        output.WordWrap = My.Settings.WordWrap
-        output.VirtualSpace = My.Settings.VirtualSpace
-        output.Code.WideCaret = My.Settings.WideCaret
-        output.Code.Font = My.Settings.editorFont
+        Display.WordWrap = My.Settings.WordWrap
+        Display.VirtualSpace = My.Settings.VirtualSpace
+        Display.WideCaret = My.Settings.WideCaret
+        Display.Font = My.Settings.editorFont
     End Sub
 End Class

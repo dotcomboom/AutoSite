@@ -651,7 +651,10 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.5.1 - Cocoa:
+    <value>0.9.5.2 - Peppermint:
+   * Fixed exception on Add Conditional dialog when using main editor options
+
+0.9.5.1 - Cocoa:
    * Removed debug PropertyGrid from editor
 
 0.9.5 - Chocolate Milk:

@@ -31,6 +31,8 @@ In this example, any reference of `[#title#]` will be replaced with `New Page Ti
 
 When you build your site, AutoSite XL's new **Attribute Map** located in the **Apricot Output** panel allows you to get a birds' eye view of all the attributes your site uses, their values, and what pages have those values. It's great for identifying errors, or just seeing what pages use which templates for example.
 
+The Attribute Map also allows you to drag attributes into the editor to reference them (input pages and templates) or their values to define them (input pages). It's a quick way to get a head start on your pages.
+
 ![AutoSite XL](https://github.com/dotcomboom/AutoSite-XL/blob/master/screenshot.png?raw=true)
 
 ## Conditionals
@@ -58,6 +60,8 @@ A slightly more advanced example, which doesn't link Home if you're already on `
 It's important to note that while conditionals are most *commonly* used with the `path` attribute, they can also be used with any other regular attribute. So you can compare the `path` attribute, `template` attribute, and whatever other attributes you come up with.
 
 *The start and end of conditionals must be on the same line.*
+
+AutoSite XL provides a tool for quickly inserting conditionals, which can be accessed by right-clicking the editor and selecting the **Insert Conditional...** option.
 
 ## Includes
 

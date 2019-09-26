@@ -869,9 +869,9 @@ Public Class Form1
             Dim newHtml = template_cache.Item(attribs.Item("template"))
             ' Attribute Process 1 (Content)
             For Each kvp As KeyValuePair(Of String, String) In attribs
-                If Not kvp.Key = "path" Then
-                    Apricot.ReportProgress(50, "      " & kvp.Key & ": " & kvp.Value)
-                End If
+                'If Not kvp.Key = "path" Then
+                '    Apricot.ReportProgress(50, "      " & kvp.Key & ": " & kvp.Value)
+                'End If
                 newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
             Next
             ' End Attribute Process 1

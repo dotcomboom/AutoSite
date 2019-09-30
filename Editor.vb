@@ -230,7 +230,8 @@ Public Class Editor
                 rel = Form1.ReplaceLast(rel, ".md", ".html")
             End If
             newHtml = newHtml.Replace("[#content#]", content)
-            newHtml = newHtml.Replace("[#root#]", Form1.FillString("../", Form1.CountCharacter(rel, "\")))
+            'newHtml = newHtml.Replace("[#root#]", Form1.FillString("../", Form1.CountCharacter(rel, "\")))
+            newHtml = newHtml.Replace("[#root#]", siteRoot & "\includes\")
             Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
             Dim matches = Regex.Matches(newHtml, conditionalRegex)
             For Each m As Match In matches

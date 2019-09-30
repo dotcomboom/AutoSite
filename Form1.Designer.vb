@@ -82,6 +82,7 @@ Partial Class Form1
         Me.NewSep2 = New System.Windows.Forms.MenuItem
         Me.NewCSSCon = New System.Windows.Forms.MenuItem
         Me.NewJSCon = New System.Windows.Forms.MenuItem
+        Me.NewTXTCon = New System.Windows.Forms.MenuItem
         Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog
         Me.Apricot = New System.ComponentModel.BackgroundWorker
         Me.Watcher = New System.IO.FileSystemWatcher
@@ -409,7 +410,7 @@ Partial Class Form1
         'NewCon
         '
         Me.NewCon.Index = 9
-        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.NewSep2, Me.NewCSSCon, Me.NewJSCon})
+        Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.NewSep2, Me.NewCSSCon, Me.NewJSCon, Me.NewTXTCon})
         Me.NewCon.Text = "New"
         '
         'NewFolderCon
@@ -425,17 +426,17 @@ Partial Class Form1
         'NewHTMLCon
         '
         Me.NewHTMLCon.Index = 2
-        Me.NewHTMLCon.Text = "HTML Page"
+        Me.NewHTMLCon.Text = "HTML Page (.html)"
         '
         'NewMDCon
         '
         Me.NewMDCon.Index = 3
-        Me.NewMDCon.Text = "Markdown Page"
+        Me.NewMDCon.Text = "Markdown Page (.md)"
         '
         'NewPHPCon
         '
         Me.NewPHPCon.Index = 4
-        Me.NewPHPCon.Text = "PHP Script"
+        Me.NewPHPCon.Text = "PHP Script (.php)"
         '
         'NewSep2
         '
@@ -445,12 +446,17 @@ Partial Class Form1
         'NewCSSCon
         '
         Me.NewCSSCon.Index = 6
-        Me.NewCSSCon.Text = "CSS Stylesheet"
+        Me.NewCSSCon.Text = "CSS Stylesheet (.css)"
         '
         'NewJSCon
         '
         Me.NewJSCon.Index = 7
-        Me.NewJSCon.Text = "JS Script"
+        Me.NewJSCon.Text = "JS Script (.js)"
+        '
+        'NewTXTCon
+        '
+        Me.NewTXTCon.Index = 8
+        Me.NewTXTCon.Text = "Plain Text (.txt)"
         '
         'AddFilesDialog
         '
@@ -619,7 +625,7 @@ Partial Class Form1
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(294, 128)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
         '
         'MapPage
         '
@@ -815,7 +821,6 @@ Partial Class Form1
     Friend WithEvents Watcher As System.IO.FileSystemWatcher
     Friend WithEvents RenameCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewCSSCon As System.Windows.Forms.MenuItem
-    Friend WithEvents NewJSCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents CoreSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
@@ -839,4 +844,6 @@ Partial Class Form1
     Friend WithEvents FormatSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents EditorFont As System.Windows.Forms.MenuItem
     Friend WithEvents SelectFont As System.Windows.Forms.FontDialog
+    Friend WithEvents NewJSCon As System.Windows.Forms.MenuItem
+    Friend WithEvents NewTXTCon As System.Windows.Forms.MenuItem
 End Class

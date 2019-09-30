@@ -708,6 +708,10 @@ Public Class Form1
         NewFile("new-script", ".js", "")
     End Sub
 
+    Private Sub NewTXTCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewTXTCon.Click
+        NewFile("new-file", ".txt", "")
+    End Sub
+
     Private Sub AddFilesCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddFilesCon.Click
         Dim path = Context.Tag
         Dim dir = ""

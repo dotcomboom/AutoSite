@@ -34,7 +34,6 @@ Partial Class Form1
         Me.FileSep = New System.Windows.Forms.MenuItem
         Me.ExitItem = New System.Windows.Forms.MenuItem
         Me.ViewMenu = New System.Windows.Forms.MenuItem
-        Me.Panels = New System.Windows.Forms.MenuItem
         Me.ExplorerPanel = New System.Windows.Forms.MenuItem
         Me.BuildPanel = New System.Windows.Forms.MenuItem
         Me.PanelSep = New System.Windows.Forms.MenuItem
@@ -181,14 +180,8 @@ Partial Class Form1
         'ViewMenu
         '
         Me.ViewMenu.Index = 1
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Panels, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.PanelSep, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem})
         Me.ViewMenu.Text = "View"
-        '
-        'Panels
-        '
-        Me.Panels.Index = 0
-        Me.Panels.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.PanelSep, Me.EditorPanel, Me.PreviewPanel})
-        Me.Panels.Text = "Panels"
         '
         'ExplorerPanel
         '
@@ -221,12 +214,12 @@ Partial Class Form1
         '
         'ViewMenuSep
         '
-        Me.ViewMenuSep.Index = 1
+        Me.ViewMenuSep.Index = 5
         Me.ViewMenuSep.Text = "-"
         '
         'IconThemeMenu
         '
-        Me.IconThemeMenu.Index = 2
+        Me.IconThemeMenu.Index = 6
         Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
         Me.IconThemeMenu.Text = "Explorer Icon Theme"
         '
@@ -244,7 +237,7 @@ Partial Class Form1
         '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 3
+        Me.RefreshItem.Index = 7
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
         Me.RefreshItem.Text = "Refresh"
         '
@@ -771,7 +764,6 @@ Partial Class Form1
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
     Friend WithEvents CloseSite As System.Windows.Forms.MenuItem
     Friend WithEvents ViewMenu As System.Windows.Forms.MenuItem
-    Friend WithEvents Panels As System.Windows.Forms.MenuItem
     Friend WithEvents ExplorerPanel As System.Windows.Forms.MenuItem
     Friend WithEvents PanelSep As System.Windows.Forms.MenuItem
     Friend WithEvents EditorPanel As System.Windows.Forms.MenuItem

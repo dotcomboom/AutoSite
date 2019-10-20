@@ -618,23 +618,23 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub DeleteCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteCon.Click
-        Dim path = Context.Tag
+    Private Sub deleteFile(ByVal path As String)
         If My.Computer.FileSystem.DirectoryExists(path) Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(path, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
-                'refreshTree(SiteTree.Nodes(0))
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
         ElseIf My.Computer.FileSystem.FileExists(path) Then
             Try
                 My.Computer.FileSystem.DeleteFile(path, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
-                'refreshTree(SiteTree.Nodes(0))
             Catch ex As Exception
-
             End Try
         End If
+    End Sub
+
+    Private Sub DeleteCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteCon.Click
+        deleteFile(Context.Tag)
     End Sub
 
     Private fileAddContext As String = ""
@@ -1263,6 +1263,15 @@ Public Class Form1
         If SelectFont.ShowDialog() = Windows.Forms.DialogResult.OK Then
             My.Settings.editorFont = SelectFont.Font
             panelUpdate()
+        End If
+    End Sub
+
+    Private Sub SiteTree_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles SiteTree.KeyDown
+        If e.KeyCode = Keys.Delete Then
+            Try
+                deleteFile(SiteTree.SelectedNode.Tag)
+            Catch ex As Exception
+            End Try
         End If
     End Sub
 End Class

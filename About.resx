@@ -663,7 +663,8 @@ SOFTWARE.</value>
    - View Output disabled when editing templates, Add Conditional disabled when editing includes
    - Build icon changed to VS2017 style for consistency
    - Site creation confirmation box now has an icon
-   - About box now has an icon, displays version in title
+   - About box now has an icon
+   - Dialogs can now be closed with the Escape key
    
 0.9.6 - Vanilla:
    + New plain text file option

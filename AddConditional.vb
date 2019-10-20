@@ -44,4 +44,10 @@ Public Class AddConditional
         Display.WideCaret = My.Settings.WideCaret
         Display.Font = My.Settings.editorFont
     End Sub
+
+    Private Sub AddConditional_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        End If
+    End Sub
 End Class

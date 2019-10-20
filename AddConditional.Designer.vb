@@ -130,7 +130,7 @@ Partial Class AddConditional
         'Display
         '
         Me.Display.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
         Me.Display.AutoScrollMinSize = New System.Drawing.Size(31, 18)
         Me.Display.BackBrush = Nothing
         Me.Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -139,7 +139,6 @@ Partial Class AddConditional
         Me.Display.CommentPrefix = Nothing
         Me.Display.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Display.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.Display.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Display.IsReplaceMode = False
         Me.Display.Language = FastColoredTextBoxNS.Language.HTML
         Me.Display.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)

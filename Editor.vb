@@ -89,9 +89,9 @@ Public Class Editor
         Try
             If My.Settings.LivePreview Then
                 If Me.Parent.Text.Replace("*", "").EndsWith(".md") Then
-                    Form1.Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(Code.Text)
+                    Main.Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(Code.Text)
                 Else
-                    Form1.Preview.DocumentText = Code.Text
+                    Main.Preview.DocumentText = Code.Text
                 End If
             End If
         Catch ex As Exception
@@ -117,7 +117,7 @@ Public Class Editor
                 Exit Sub
             End If
         End If
-        Form1.openFiles.Remove(openFile)
+        Main.openFiles.Remove(openFile)
         Me.Parent.Dispose()
     End Sub
 
@@ -154,7 +154,7 @@ Public Class Editor
     End Sub
 
     Private Sub SaveAllToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveAllToolStripMenuItem.Click
-        Form1.DoSaveAll()
+        Main.DoSaveAll()
     End Sub
 
     Private Sub doFind() Handles Find.Click
@@ -182,10 +182,10 @@ Public Class Editor
         Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
         If Not Me.Parent.Text.StartsWith("in\") Then
-            Form1.Preview.Navigate(Path.Combine(Form1.SiteTree.Nodes(0).Text, "out\"))
-            Form1.Preview.DocumentText = page
+            Main.Preview.Navigate(Path.Combine(Main.SiteTree.Nodes(0).Text, "out\"))
+            Main.Preview.DocumentText = page
         Else
-            Dim templates = Path.Combine(Form1.SiteTree.Nodes(0).Text, "templates\")
+            Dim templates = Path.Combine(Main.SiteTree.Nodes(0).Text, "templates\")
             template_cache.Clear()
 
             Dim content = ""
@@ -209,7 +209,7 @@ Public Class Editor
             reader.Close()
             reader.Dispose()
             For Each attrib In attribs
-                Dim tn As New Form1.TNode
+                Dim tn As New Main.TNode
                 tn.relPath = rel
                 tn.Attribute = attrib.Key
                 tn.Value = attrib.Value
@@ -235,7 +235,7 @@ Public Class Editor
             ' End Attribute Process 1
             If rel.EndsWith(".md") Then
                 content = CommonMark.CommonMarkConverter.Convert(content)
-                rel = Form1.ReplaceLast(rel, ".md", ".html")
+                rel = Main.ReplaceLast(rel, ".md", ".html")
             End If
             newHtml = newHtml.Replace("[#content#]", content)
             'newHtml = newHtml.Replace("[#root#]", Form1.FillString("../", Form1.CountCharacter(rel, "\")))
@@ -249,7 +249,7 @@ Public Class Editor
                 Dim html = m.Groups(3).Value
                 Dim equality = (Not key.EndsWith("!"))
                 If equality = False Then
-                    key = Form1.ReplaceLast(key, "!", "")
+                    key = Main.ReplaceLast(key, "!", "")
                 End If
                 Dim pass = False
                 If attribs.ContainsKey(key) Then
@@ -280,10 +280,10 @@ Public Class Editor
             newHtml = Regex.Replace(newHtml, "\[#.*?#\]", "")
 
             If rel.EndsWith(".md") Then
-                rel = Form1.ReplaceLast(rel, ".md", ".html")
+                rel = Main.ReplaceLast(rel, ".md", ".html")
             End If
-            Form1.Preview.Navigate(siteRoot & "out\" & rel)
-            Form1.Preview.DocumentText = newHtml
+            Main.Preview.Navigate(siteRoot & "out\" & rel)
+            Main.Preview.DocumentText = newHtml
         End If
     End Sub
 
@@ -293,8 +293,8 @@ Public Class Editor
 
     Private Sub LivePreview_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LivePreview.CheckedChanged
         My.Settings.LivePreview = LivePreview.Checked
-        Form1.LivePreview.Checked = My.Settings.LivePreview
-        Form1.panelUpdate()
+        Main.LivePreview.Checked = My.Settings.LivePreview
+        Main.panelUpdate()
     End Sub
 
     ' https://www.codeproject.com/articles/8995/introduction-to-treeview-drag-and-drop-vb-net
@@ -316,12 +316,12 @@ Public Class Editor
     Private Sub ViewOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutput.Click
         Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
         If rel.EndsWith(".md") Then
-            rel = Form1.ReplaceLast(rel, ".md", ".html")
+            rel = Main.ReplaceLast(rel, ".md", ".html")
         End If
-        Form1.Preview.Navigate(siteRoot & "\out\" & rel)
+        Main.Preview.Navigate(siteRoot & "\out\" & rel)
     End Sub
 
     Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Build.Click
-        Form1.doBuild()
+        Main.doBuild()
     End Sub
 End Class

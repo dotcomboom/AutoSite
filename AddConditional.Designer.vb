@@ -63,7 +63,7 @@ Partial Class AddConditional
         Me.OK_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.Size = New System.Drawing.Size(89, 28)
-        Me.OK_Button.TabIndex = 0
+        Me.OK_Button.TabIndex = 5
         Me.OK_Button.Text = "OK"
         '
         'Cancel_Button
@@ -74,7 +74,7 @@ Partial Class AddConditional
         Me.Cancel_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.Size = New System.Drawing.Size(89, 28)
-        Me.Cancel_Button.TabIndex = 1
+        Me.Cancel_Button.TabIndex = 6
         Me.Cancel_Button.Text = "Cancel"
         '
         'Explanation
@@ -93,7 +93,7 @@ Partial Class AddConditional
         Me.AttLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AttLabel.Name = "AttLabel"
         Me.AttLabel.Size = New System.Drawing.Size(121, 17)
-        Me.AttLabel.TabIndex = 4
+        Me.AttLabel.TabIndex = 2
         Me.AttLabel.Text = "Attribute to query:"
         '
         'Attribute
@@ -103,7 +103,7 @@ Partial Class AddConditional
         Me.Attribute.Margin = New System.Windows.Forms.Padding(4)
         Me.Attribute.Name = "Attribute"
         Me.Attribute.Size = New System.Drawing.Size(215, 24)
-        Me.Attribute.TabIndex = 5
+        Me.Attribute.TabIndex = 1
         Me.Attribute.Text = "path"
         '
         'AttIcon
@@ -130,7 +130,7 @@ Partial Class AddConditional
         'Display
         '
         Me.Display.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         Me.Display.AutoScrollMinSize = New System.Drawing.Size(31, 18)
         Me.Display.BackBrush = Nothing
         Me.Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -153,7 +153,7 @@ Partial Class AddConditional
         Me.Display.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Display.ServiceColors = CType(resources.GetObject("Display.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
         Me.Display.Size = New System.Drawing.Size(360, 133)
-        Me.Display.TabIndex = 12
+        Me.Display.TabIndex = 4
         Me.Display.Zoom = 100
         '
         'Yesnt
@@ -162,7 +162,7 @@ Partial Class AddConditional
         Me.Yesnt.Location = New System.Drawing.Point(15, 134)
         Me.Yesnt.Name = "Yesnt"
         Me.Yesnt.Size = New System.Drawing.Size(60, 21)
-        Me.Yesnt.TabIndex = 13
+        Me.Yesnt.TabIndex = 2
         Me.Yesnt.Text = "NOT"
         Me.Yesnt.UseVisualStyleBackColor = True
         '
@@ -173,7 +173,7 @@ Partial Class AddConditional
         Me.Value.Margin = New System.Windows.Forms.Padding(4)
         Me.Value.Name = "Value"
         Me.Value.Size = New System.Drawing.Size(296, 24)
-        Me.Value.TabIndex = 14
+        Me.Value.TabIndex = 3
         Me.Value.Text = "index.md"
         '
         'AddConditional

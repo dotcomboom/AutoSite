@@ -23,8 +23,8 @@ Public Class AddConditional
         Me.Close()
     End Sub
 
-    Private Sub Populate() Handles Attribute.SelectedIndexChanged
-        For Each att As TreeNode In Form1.AttributeTree.Nodes
+    Private Sub Populate() Handles Attribute.SelectedIndexChanged, Attribute.TextChanged
+        For Each att As TreeNode In Main.AttributeTree.Nodes
             If att.Text = Attribute.Text Then
                 Value.Items.Clear()
                 For Each val As TreeNode In att.Nodes
@@ -35,7 +35,7 @@ Public Class AddConditional
     End Sub
 
     Private Sub AddConditional_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        For Each att As TreeNode In Form1.AttributeTree.Nodes
+        For Each att As TreeNode In Main.AttributeTree.Nodes
             Attribute.Items.Add(att.Text)
         Next
         Populate()

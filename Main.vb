@@ -466,10 +466,7 @@ Public Class Main
                 For Each t As TabPage In EditTabs.TabPages
                     For Each c In t.Controls
                         If c.GetType() Is GetType(Editor) Then
-                            MsgBox(c.ToString())
                             Dim edit As Editor = c
-                            MsgBox(edit.openFile)
-                            MsgBox(oldpath)
                             If edit.openFile = oldpath Then
                                 edit.openFile = newpath
                                 If t.Text.Contains("*") Then

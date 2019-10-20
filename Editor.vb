@@ -130,6 +130,10 @@ Public Class Editor
             doPreview()
         ElseIf e.Control And e.KeyCode = Keys.F Then
             doFind()
+        ElseIf e.Control And e.KeyCode = Keys.H Then
+            doReplace()
+        ElseIf e.Control And e.KeyCode = Keys.G Then
+            doGoto()
         End If
     End Sub
 
@@ -157,11 +161,11 @@ Public Class Editor
         Code.ShowFindDialog()
     End Sub
 
-    Private Sub GTo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GTo.Click
+    Private Sub doGoto() Handles GTo.Click
         Code.ShowGoToDialog()
     End Sub
 
-    Private Sub Replace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Replace.Click
+    Private Sub doReplace() Handles Replace.Click
         Code.ShowReplaceDialog()
     End Sub
 

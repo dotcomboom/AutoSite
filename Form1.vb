@@ -1009,9 +1009,9 @@ Public Class Form1
 
             Dim vNode As New TreeNode
             Dim txt = tn.Value
-            If txt.Length > 20 Then
-                txt = txt.Substring(0, 20) & ".."
-            End If
+            'If txt.Length > 20 Then
+            '    txt = txt.Substring(0, 20) & ".."
+            'End If
 
             exists = False
             For Each node As TreeNode In aNode.Nodes

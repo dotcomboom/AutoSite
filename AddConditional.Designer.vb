@@ -31,10 +31,10 @@ Partial Class AddConditional
         Me.AttLabel = New System.Windows.Forms.Label
         Me.Attribute = New System.Windows.Forms.ComboBox
         Me.AttIcon = New System.Windows.Forms.PictureBox
-        Me.EqualsTxt = New System.Windows.Forms.TextBox
         Me.PassLabel = New System.Windows.Forms.Label
         Me.Display = New FastColoredTextBoxNS.FastColoredTextBox
         Me.Yesnt = New System.Windows.Forms.CheckBox
+        Me.Value = New System.Windows.Forms.ComboBox
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.AttIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Display, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,15 +117,6 @@ Partial Class AddConditional
         Me.AttIcon.TabIndex = 6
         Me.AttIcon.TabStop = False
         '
-        'EqualsTxt
-        '
-        Me.EqualsTxt.Location = New System.Drawing.Point(76, 134)
-        Me.EqualsTxt.Margin = New System.Windows.Forms.Padding(4)
-        Me.EqualsTxt.Name = "EqualsTxt"
-        Me.EqualsTxt.Size = New System.Drawing.Size(300, 22)
-        Me.EqualsTxt.TabIndex = 9
-        Me.EqualsTxt.Text = "index.html"
-        '
         'PassLabel
         '
         Me.PassLabel.AutoSize = True
@@ -139,7 +130,7 @@ Partial Class AddConditional
         'Display
         '
         Me.Display.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
         Me.Display.AutoScrollMinSize = New System.Drawing.Size(31, 18)
         Me.Display.BackBrush = Nothing
         Me.Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -148,6 +139,7 @@ Partial Class AddConditional
         Me.Display.CommentPrefix = Nothing
         Me.Display.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Display.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Display.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Display.IsReplaceMode = False
         Me.Display.Language = FastColoredTextBoxNS.Language.HTML
         Me.Display.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
@@ -174,6 +166,16 @@ Partial Class AddConditional
         Me.Yesnt.Text = "NOT"
         Me.Yesnt.UseVisualStyleBackColor = True
         '
+        'Value
+        '
+        Me.Value.FormattingEnabled = True
+        Me.Value.Location = New System.Drawing.Point(80, 132)
+        Me.Value.Margin = New System.Windows.Forms.Padding(4)
+        Me.Value.Name = "Value"
+        Me.Value.Size = New System.Drawing.Size(296, 24)
+        Me.Value.TabIndex = 14
+        Me.Value.Text = "index.md"
+        '
         'AddConditional
         '
         Me.AcceptButton = Me.OK_Button
@@ -181,10 +183,10 @@ Partial Class AddConditional
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
         Me.ClientSize = New System.Drawing.Size(391, 388)
+        Me.Controls.Add(Me.Value)
         Me.Controls.Add(Me.Yesnt)
         Me.Controls.Add(Me.Display)
         Me.Controls.Add(Me.PassLabel)
-        Me.Controls.Add(Me.EqualsTxt)
         Me.Controls.Add(Me.AttIcon)
         Me.Controls.Add(Me.Attribute)
         Me.Controls.Add(Me.AttLabel)
@@ -212,9 +214,9 @@ Partial Class AddConditional
     Friend WithEvents AttLabel As System.Windows.Forms.Label
     Friend WithEvents Attribute As System.Windows.Forms.ComboBox
     Friend WithEvents AttIcon As System.Windows.Forms.PictureBox
-    Friend WithEvents EqualsTxt As System.Windows.Forms.TextBox
     Friend WithEvents PassLabel As System.Windows.Forms.Label
     Friend WithEvents Display As FastColoredTextBoxNS.FastColoredTextBox
     Friend WithEvents Yesnt As System.Windows.Forms.CheckBox
+    Friend WithEvents Value As System.Windows.Forms.ComboBox
 
 End Class

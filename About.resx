@@ -653,6 +653,7 @@ SOFTWARE.</value>
   <data name="ChangelogBox.Text" xml:space="preserve">
     <value>0.9.7 - Cola Float:
    + More editor keyboard shortcuts added! CTRL+F for Find, CTRL+H for Replace, CTRL+G for Goto, CTRL+P for Preview
+   + Panels can now be toggled with Alt+1 through 4
    + Add Conditional dialog Value box is now a dropdown that is populated with what values are used for the selected attribute in the tree
    + Pressing Delete with a file in the Site Tree selected will send it to the Recycle Bin
    + Files that are renamed while opened will be updated to the new path in the editor

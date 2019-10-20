@@ -664,7 +664,7 @@ SOFTWARE.</value>
    - Build icon changed to VS2017 style for consistency
    - Site creation confirmation box now has an icon
    - About box now has an icon
-   - Dialogs can now be closed with the Escape key
+   - About is now a FixedDialog
    
 0.9.6 - Vanilla:
    + New plain text file option

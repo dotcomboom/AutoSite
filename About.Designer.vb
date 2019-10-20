@@ -59,7 +59,7 @@ Partial Class About
         'OK
         '
         Me.OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OK.Location = New System.Drawing.Point(421, 350)
+        Me.OK.Location = New System.Drawing.Point(561, 433)
         Me.OK.Margin = New System.Windows.Forms.Padding(4)
         Me.OK.Name = "OK"
         Me.OK.Size = New System.Drawing.Size(100, 28)
@@ -153,7 +153,7 @@ Partial Class About
         Me.Tabs.Margin = New System.Windows.Forms.Padding(4)
         Me.Tabs.Name = "Tabs"
         Me.Tabs.SelectedIndex = 0
-        Me.Tabs.Size = New System.Drawing.Size(397, 327)
+        Me.Tabs.Size = New System.Drawing.Size(537, 410)
         Me.Tabs.TabIndex = 10
         '
         'License
@@ -175,7 +175,7 @@ Partial Class About
         Me.Changelog.Margin = New System.Windows.Forms.Padding(4)
         Me.Changelog.Name = "Changelog"
         Me.Changelog.Padding = New System.Windows.Forms.Padding(4)
-        Me.Changelog.Size = New System.Drawing.Size(389, 298)
+        Me.Changelog.Size = New System.Drawing.Size(529, 381)
         Me.Changelog.TabIndex = 1
         Me.Changelog.Text = "Changelog"
         Me.Changelog.UseVisualStyleBackColor = True
@@ -190,7 +190,7 @@ Partial Class About
         Me.ChangelogBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ChangelogBox.Name = "ChangelogBox"
         Me.ChangelogBox.ReadOnly = True
-        Me.ChangelogBox.Size = New System.Drawing.Size(381, 290)
+        Me.ChangelogBox.Size = New System.Drawing.Size(521, 373)
         Me.ChangelogBox.TabIndex = 1
         Me.ChangelogBox.Text = resources.GetString("ChangelogBox.Text")
         '
@@ -198,7 +198,7 @@ Partial Class About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(537, 396)
+        Me.ClientSize = New System.Drawing.Size(677, 479)
         Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.PyWebsiteLink)
         Me.Controls.Add(Me.PyGithubLink)
@@ -208,6 +208,7 @@ Partial Class About
         Me.Controls.Add(Me.Version)
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.OK)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "About"

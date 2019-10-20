@@ -187,18 +187,21 @@ Partial Class Main
         '
         Me.ExplorerPanel.Checked = True
         Me.ExplorerPanel.Index = 0
+        Me.ExplorerPanel.Shortcut = System.Windows.Forms.Shortcut.Alt1
         Me.ExplorerPanel.Text = "Explorer"
         '
         'EditorPanel
         '
         Me.EditorPanel.Checked = True
         Me.EditorPanel.Index = 3
+        Me.EditorPanel.Shortcut = System.Windows.Forms.Shortcut.Alt3
         Me.EditorPanel.Text = "Editor"
         '
         'PreviewPanel
         '
         Me.PreviewPanel.Checked = True
         Me.PreviewPanel.Index = 4
+        Me.PreviewPanel.Shortcut = System.Windows.Forms.Shortcut.Alt4
         Me.PreviewPanel.Text = "Preview"
         '
         'IconThemeMenu
@@ -714,6 +717,7 @@ Partial Class Main
         '
         Me.BuildPanel.Checked = True
         Me.BuildPanel.Index = 1
+        Me.BuildPanel.Shortcut = System.Windows.Forms.Shortcut.Alt2
         Me.BuildPanel.Text = "Apricot"
         '
         'ViewMenuSep

@@ -54,10 +54,11 @@ Public Class Editor
         Code.Redo()
     End Sub
 
-    Private Sub Code_Load(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub Code_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Code.Load
         Code.WordWrap = My.Settings.WordWrap
         Code.VirtualSpace = My.Settings.VirtualSpace
         Code.WideCaret = My.Settings.WideCaret
+        Code.Font = My.Settings.editorFont
     End Sub
 
     Private Sub Code_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Code.MouseClick

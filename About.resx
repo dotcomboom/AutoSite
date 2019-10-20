@@ -666,6 +666,8 @@ SOFTWARE.</value>
    - Site creation confirmation box now has an icon
    - About box now has an icon
    - About is now a FixedDialog
+   - Font selection menu item named to "Monospace Font..."
+   - Panel toggles moved to top-level of View menu
    
 0.9.6 - Vanilla:
    + New plain text file option

@@ -651,7 +651,20 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.6 - Vanilla:
+    <value>0.9.7 - Cola Float:
+   + More editor keyboard shortcuts added! CTRL+F for Find, CTRL+H for Replace, CTRL+G for Goto, CTRL+P for Preview
+   + Add Conditional dialog Value box is now a dropdown that is populated with what values are used in the tree
+   + Pressing Delete with a file in the Site Tree selected will send it to the Recycle Bin
+   - Default template has been tweaked and cleaned up
+   - Plain Text context option is disabled in the Templates folder
+
+   - Editor will load settings correctly on load now
+   - View Output disabled when editing templates, Add Conditional disabled when editing includes
+
+   - Build icon changed to VS2017 style for consistency
+   - Site creation confirmation box now has an icon
+   
+0.9.6 - Vanilla:
    + New plain text file option
    + Preview now links to included files
 

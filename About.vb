@@ -12,6 +12,7 @@
         If My.Application.Info.Version.Revision > 0 Then
             Version.Text &= "." & My.Application.Info.Version.Revision
         End If
+        Me.Text = "About AutoSite XL " & Version.Text
     End Sub
 
     Private Sub GithubLink_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles GithubLink.LinkClicked

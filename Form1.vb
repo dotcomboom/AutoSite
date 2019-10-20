@@ -104,7 +104,7 @@ Public Class Form1
 
             If Not (My.Computer.FileSystem.DirectoryExists(templatePath) And My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(includePath)) Then
                 If autoload = False Then
-                    If MsgBox("AutoSite will create a site in the folder located at " & path & ". Is this OK?", MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then
+                    If MsgBox("AutoSite XL will create a site in the folder located at " & path & ". Is this OK?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then
                         Exit Sub
                     End If
                 Else

@@ -653,6 +653,8 @@ SOFTWARE.</value>
   <data name="ChangelogBox.Text" xml:space="preserve">
     <value>0.9.7.1 - Root Beer Float:
    + Double clicking any file while the editor is collapsed will open it with the default program/shell behavior
+   + Sanitary Build added
+   + Engine selection moved to top-level of Build menu
 
 0.9.7 - Cola Float:
    + More editor keyboard shortcuts added! CTRL+F for Find, CTRL+H for Replace, CTRL+G for Goto, CTRL+P for Preview

@@ -56,8 +56,8 @@ Partial Class Main
         Me.BuildSite = New System.Windows.Forms.MenuItem
         Me.SanitaryBuild = New System.Windows.Forms.MenuItem
         Me.BuildSep = New System.Windows.Forms.MenuItem
-        Me.EnginePython = New System.Windows.Forms.MenuItem
         Me.EngineApricot = New System.Windows.Forms.MenuItem
+        Me.EnginePython = New System.Windows.Forms.MenuItem
         Me.HelpMenu = New System.Windows.Forms.MenuItem
         Me.AboutItem = New System.Windows.Forms.MenuItem
         Me.HelpTopics = New System.Windows.Forms.MenuItem
@@ -303,18 +303,12 @@ Partial Class Main
         '
         Me.SanitaryBuild.Index = 1
         Me.SanitaryBuild.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftB
-        Me.SanitaryBuild.Text = "Sanitary Build"
+        Me.SanitaryBuild.Text = "Sanitary Build..."
         '
         'BuildSep
         '
         Me.BuildSep.Index = 2
         Me.BuildSep.Text = "-"
-        '
-        'EnginePython
-        '
-        Me.EnginePython.Index = 4
-        Me.EnginePython.RadioCheck = True
-        Me.EnginePython.Text = "Legacy AutoSite"
         '
         'EngineApricot
         '
@@ -322,6 +316,12 @@ Partial Class Main
         Me.EngineApricot.Index = 3
         Me.EngineApricot.RadioCheck = True
         Me.EngineApricot.Text = "Apricot"
+        '
+        'EnginePython
+        '
+        Me.EnginePython.Index = 4
+        Me.EnginePython.RadioCheck = True
+        Me.EnginePython.Text = "Legacy AutoSite"
         '
         'HelpMenu
         '

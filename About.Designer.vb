@@ -52,7 +52,7 @@ Partial Class About
         Me.LicenseBox.Margin = New System.Windows.Forms.Padding(4)
         Me.LicenseBox.Name = "LicenseBox"
         Me.LicenseBox.ReadOnly = True
-        Me.LicenseBox.Size = New System.Drawing.Size(381, 290)
+        Me.LicenseBox.Size = New System.Drawing.Size(521, 373)
         Me.LicenseBox.TabIndex = 0
         Me.LicenseBox.Text = resources.GetString("LicenseBox.Text")
         '
@@ -163,7 +163,7 @@ Partial Class About
         Me.License.Margin = New System.Windows.Forms.Padding(4)
         Me.License.Name = "License"
         Me.License.Padding = New System.Windows.Forms.Padding(4)
-        Me.License.Size = New System.Drawing.Size(389, 298)
+        Me.License.Size = New System.Drawing.Size(529, 381)
         Me.License.TabIndex = 0
         Me.License.Text = "License"
         Me.License.UseVisualStyleBackColor = True

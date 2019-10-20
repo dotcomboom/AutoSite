@@ -36,7 +36,6 @@ Partial Class Form1
         Me.ViewMenu = New System.Windows.Forms.MenuItem
         Me.ExplorerPanel = New System.Windows.Forms.MenuItem
         Me.BuildPanel = New System.Windows.Forms.MenuItem
-        Me.PanelSep = New System.Windows.Forms.MenuItem
         Me.EditorPanel = New System.Windows.Forms.MenuItem
         Me.PreviewPanel = New System.Windows.Forms.MenuItem
         Me.ViewMenuSep = New System.Windows.Forms.MenuItem
@@ -180,7 +179,7 @@ Partial Class Form1
         'ViewMenu
         '
         Me.ViewMenu.Index = 1
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.PanelSep, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem})
         Me.ViewMenu.Text = "View"
         '
         'ExplorerPanel
@@ -193,12 +192,7 @@ Partial Class Form1
         '
         Me.BuildPanel.Checked = True
         Me.BuildPanel.Index = 1
-        Me.BuildPanel.Text = "Apricot Output"
-        '
-        'PanelSep
-        '
-        Me.PanelSep.Index = 2
-        Me.PanelSep.Text = "-"
+        Me.BuildPanel.Text = "Apricot"
         '
         'EditorPanel
         '
@@ -765,7 +759,6 @@ Partial Class Form1
     Friend WithEvents CloseSite As System.Windows.Forms.MenuItem
     Friend WithEvents ViewMenu As System.Windows.Forms.MenuItem
     Friend WithEvents ExplorerPanel As System.Windows.Forms.MenuItem
-    Friend WithEvents PanelSep As System.Windows.Forms.MenuItem
     Friend WithEvents EditorPanel As System.Windows.Forms.MenuItem
     Friend WithEvents PreviewPanel As System.Windows.Forms.MenuItem
     Friend WithEvents WordWrap As System.Windows.Forms.MenuItem

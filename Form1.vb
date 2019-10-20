@@ -368,6 +368,12 @@ Public Class Form1
                             editor.Snapshot = editor.Code.Text
                             editor.siteRoot = SiteTree.Nodes.Item(0).Text
                             editor.openFile = tab.Tag
+                            If tab.Text.StartsWith("templates\") Then
+                                editor.ViewOutput.Enabled = False
+                            End If
+                            If tab.Text.StartsWith("includes\") Then
+                                editor.InsertConditional.Enabled = False
+                            End If
                             box = editor.Code
                             openFiles.Add(e.Node.Tag)
                         Else

@@ -197,23 +197,23 @@ Partial Class Form1
         'EditorPanel
         '
         Me.EditorPanel.Checked = True
-        Me.EditorPanel.Index = 3
+        Me.EditorPanel.Index = 2
         Me.EditorPanel.Text = "Editor"
         '
         'PreviewPanel
         '
         Me.PreviewPanel.Checked = True
-        Me.PreviewPanel.Index = 4
+        Me.PreviewPanel.Index = 3
         Me.PreviewPanel.Text = "Preview"
         '
         'ViewMenuSep
         '
-        Me.ViewMenuSep.Index = 5
+        Me.ViewMenuSep.Index = 4
         Me.ViewMenuSep.Text = "-"
         '
         'IconThemeMenu
         '
-        Me.IconThemeMenu.Index = 6
+        Me.IconThemeMenu.Index = 5
         Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
         Me.IconThemeMenu.Text = "Explorer Icon Theme"
         '
@@ -231,7 +231,7 @@ Partial Class Form1
         '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 7
+        Me.RefreshItem.Index = 6
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
         Me.RefreshItem.Text = "Refresh"
         '

@@ -126,6 +126,8 @@ Public Class Editor
             Close()
         ElseIf e.Control And e.KeyCode = Keys.S Then
             Save()
+        ElseIf e.Control And e.KeyCode = Keys.P Then
+            doPreview()
         End If
     End Sub
 
@@ -163,7 +165,7 @@ Public Class Editor
 
     Public template_cache As New Dictionary(Of String, String)()
 
-    Private Sub Preview_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preview.ButtonClick
+    Private Sub doPreview() Handles Preview.ButtonClick
         Dim page = ""
         If Me.Parent.Text.EndsWith(".md") Then
             page = CommonMark.CommonMarkConverter.Convert(Code.Text)

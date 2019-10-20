@@ -1241,6 +1241,20 @@ Public Class Main
         If Not foundNode Is Nothing Then
             foundNode.Remove()
         End If
+
+        For Each t As TabPage In EditTabs.TabPages
+            For Each c In t.Controls
+                If c.GetType() Is GetType(Editor) Then
+                    Dim edit As Editor = c
+                    If edit.openFile = e.FullPath Then
+                        If Not t.Text.Contains("*") Then
+                            t.Text = t.Text & "*"
+                            edit.SaveBtn.Enabled = True
+                        End If
+                    End If
+                End If
+            Next
+        Next
     End Sub
 
     Private Sub Watcher_Renamed(ByVal sender As System.Object, ByVal e As System.IO.RenamedEventArgs) Handles Watcher.Renamed

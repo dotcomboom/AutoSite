@@ -54,7 +54,7 @@ Public Class Editor
         Code.Redo()
     End Sub
 
-    Private Sub Code_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Code.Load
+    Private Sub Code_Load(ByVal sender As Object, ByVal e As System.EventArgs)
         Code.WordWrap = My.Settings.WordWrap
         Code.VirtualSpace = My.Settings.VirtualSpace
         Code.WideCaret = My.Settings.WideCaret
@@ -128,6 +128,8 @@ Public Class Editor
             Save()
         ElseIf e.Control And e.KeyCode = Keys.P Then
             doPreview()
+        ElseIf e.Control And e.KeyCode = Keys.F Then
+            doFind()
         End If
     End Sub
 
@@ -151,7 +153,7 @@ Public Class Editor
         Form1.DoSaveAll()
     End Sub
 
-    Private Sub Find_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Find.Click
+    Private Sub doFind() Handles Find.Click
         Code.ShowFindDialog()
     End Sub
 

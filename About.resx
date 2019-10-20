@@ -656,6 +656,7 @@ SOFTWARE.</value>
    + Add Conditional dialog Value box is now a dropdown that is populated with what values are used for the selected attribute in the tree
    + Pressing Delete with a file in the Site Tree selected will send it to the Recycle Bin
    + Files that are renamed while opened will be updated to the new path in the editor
+   + Files that are deleted while opened will be marked as having unsaved changes in the editor
 
    - Default template has been tweaked and cleaned up
    - Plain Text context option is disabled in the Templates folder

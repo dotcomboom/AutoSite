@@ -353,6 +353,9 @@ Public Class Main
                                 End If
                             Next
                         End If
+                        If EdSplit.Panel1Collapsed Then
+                            edit = False
+                        End If
                         If edit Then
                             Dim tab As New TabPage
                             tab.Tag = e.Node.Tag

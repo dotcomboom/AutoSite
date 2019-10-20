@@ -651,7 +651,10 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.7 - Cola Float:
+    <value>0.9.7.1 - Root Beer Float:
+   + Double clicking any file while the editor is collapsed will open it with the default program/shell behavior
+
+0.9.7 - Cola Float:
    + More editor keyboard shortcuts added! CTRL+F for Find, CTRL+H for Replace, CTRL+G for Goto, CTRL+P for Preview
    + Panels can now be toggled with Alt+1 through 4
    + Add Conditional dialog Value box is now a dropdown that is populated with what values are used for the selected attribute in the tree

@@ -548,6 +548,7 @@ Public Class Form1
                     NewPHPCon.Enabled = True
                     NewCSSCon.Enabled = False
                     NewJSCon.Enabled = False
+                    NewTXTCon.Enabled = True
                 End If
                 If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(1).Tag) Then
                     NewFolderCon.Enabled = False
@@ -556,6 +557,7 @@ Public Class Form1
                     NewPHPCon.Enabled = False
                     NewCSSCon.Enabled = False
                     NewJSCon.Enabled = False
+                    NewTXTCon.Enabled = False
                 End If
                 If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(2).Tag) Then
                     NewFolderCon.Enabled = True
@@ -564,6 +566,7 @@ Public Class Form1
                     NewPHPCon.Enabled = True
                     NewCSSCon.Enabled = True
                     NewJSCon.Enabled = True
+                    NewTXTCon.Enabled = True
                 End If
             Catch ex As Exception
             End Try

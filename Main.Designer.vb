@@ -35,8 +35,10 @@ Partial Class Main
         Me.ExitItem = New System.Windows.Forms.MenuItem
         Me.ViewMenu = New System.Windows.Forms.MenuItem
         Me.ExplorerPanel = New System.Windows.Forms.MenuItem
+        Me.BuildPanel = New System.Windows.Forms.MenuItem
         Me.EditorPanel = New System.Windows.Forms.MenuItem
         Me.PreviewPanel = New System.Windows.Forms.MenuItem
+        Me.ViewMenuSep = New System.Windows.Forms.MenuItem
         Me.IconThemeMenu = New System.Windows.Forms.MenuItem
         Me.VS2017item = New System.Windows.Forms.MenuItem
         Me.XPitem = New System.Windows.Forms.MenuItem
@@ -52,7 +54,8 @@ Partial Class Main
         Me.EditorFont = New System.Windows.Forms.MenuItem
         Me.BuildMenu = New System.Windows.Forms.MenuItem
         Me.BuildSite = New System.Windows.Forms.MenuItem
-        Me.BuildEngineMenu = New System.Windows.Forms.MenuItem
+        Me.SanitaryBuild = New System.Windows.Forms.MenuItem
+        Me.BuildSep = New System.Windows.Forms.MenuItem
         Me.EnginePython = New System.Windows.Forms.MenuItem
         Me.EngineApricot = New System.Windows.Forms.MenuItem
         Me.HelpMenu = New System.Windows.Forms.MenuItem
@@ -102,9 +105,6 @@ Partial Class Main
         Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.SelectFont = New System.Windows.Forms.FontDialog
-        Me.BuildPanel = New System.Windows.Forms.MenuItem
-        Me.ViewMenuSep = New System.Windows.Forms.MenuItem
-        Me.ViewSep2 = New System.Windows.Forms.MenuItem
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -180,7 +180,7 @@ Partial Class Main
         'ViewMenu
         '
         Me.ViewMenu.Index = 1
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.ViewSep2, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem})
         Me.ViewMenu.Text = "View"
         '
         'ExplorerPanel
@@ -190,23 +190,35 @@ Partial Class Main
         Me.ExplorerPanel.Shortcut = System.Windows.Forms.Shortcut.Alt1
         Me.ExplorerPanel.Text = "Explorer"
         '
+        'BuildPanel
+        '
+        Me.BuildPanel.Checked = True
+        Me.BuildPanel.Index = 1
+        Me.BuildPanel.Shortcut = System.Windows.Forms.Shortcut.Alt2
+        Me.BuildPanel.Text = "Apricot"
+        '
         'EditorPanel
         '
         Me.EditorPanel.Checked = True
-        Me.EditorPanel.Index = 3
+        Me.EditorPanel.Index = 2
         Me.EditorPanel.Shortcut = System.Windows.Forms.Shortcut.Alt3
         Me.EditorPanel.Text = "Editor"
         '
         'PreviewPanel
         '
         Me.PreviewPanel.Checked = True
-        Me.PreviewPanel.Index = 4
+        Me.PreviewPanel.Index = 3
         Me.PreviewPanel.Shortcut = System.Windows.Forms.Shortcut.Alt4
         Me.PreviewPanel.Text = "Preview"
         '
+        'ViewMenuSep
+        '
+        Me.ViewMenuSep.Index = 4
+        Me.ViewMenuSep.Text = "-"
+        '
         'IconThemeMenu
         '
-        Me.IconThemeMenu.Index = 6
+        Me.IconThemeMenu.Index = 5
         Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
         Me.IconThemeMenu.Text = "Explorer Icon Theme"
         '
@@ -224,7 +236,7 @@ Partial Class Main
         '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 7
+        Me.RefreshItem.Index = 6
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
         Me.RefreshItem.Text = "Refresh"
         '
@@ -278,7 +290,7 @@ Partial Class Main
         'BuildMenu
         '
         Me.BuildMenu.Index = 3
-        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.BuildEngineMenu})
+        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep, Me.EngineApricot, Me.EnginePython})
         Me.BuildMenu.Text = "Build"
         '
         'BuildSite
@@ -287,22 +299,27 @@ Partial Class Main
         Me.BuildSite.Shortcut = System.Windows.Forms.Shortcut.CtrlB
         Me.BuildSite.Text = "Build Site"
         '
-        'BuildEngineMenu
+        'SanitaryBuild
         '
-        Me.BuildEngineMenu.Index = 1
-        Me.BuildEngineMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnginePython, Me.EngineApricot})
-        Me.BuildEngineMenu.Text = "Engine"
+        Me.SanitaryBuild.Index = 1
+        Me.SanitaryBuild.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftB
+        Me.SanitaryBuild.Text = "Sanitary Build"
+        '
+        'BuildSep
+        '
+        Me.BuildSep.Index = 2
+        Me.BuildSep.Text = "-"
         '
         'EnginePython
         '
-        Me.EnginePython.Index = 0
+        Me.EnginePython.Index = 4
         Me.EnginePython.RadioCheck = True
-        Me.EnginePython.Text = "Python 3 AutoSite"
+        Me.EnginePython.Text = "Legacy AutoSite"
         '
         'EngineApricot
         '
         Me.EngineApricot.Checked = True
-        Me.EngineApricot.Index = 1
+        Me.EngineApricot.Index = 3
         Me.EngineApricot.RadioCheck = True
         Me.EngineApricot.Text = "Apricot"
         '
@@ -713,23 +730,6 @@ Partial Class Main
         Me.CoreSplit.SplitterWidth = 5
         Me.CoreSplit.TabIndex = 4
         '
-        'BuildPanel
-        '
-        Me.BuildPanel.Checked = True
-        Me.BuildPanel.Index = 1
-        Me.BuildPanel.Shortcut = System.Windows.Forms.Shortcut.Alt2
-        Me.BuildPanel.Text = "Apricot"
-        '
-        'ViewMenuSep
-        '
-        Me.ViewMenuSep.Index = 5
-        Me.ViewMenuSep.Text = "-"
-        '
-        'ViewSep2
-        '
-        Me.ViewSep2.Index = 2
-        Me.ViewSep2.Text = "-"
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -776,7 +776,6 @@ Partial Class Main
     Friend WithEvents WideCaret As System.Windows.Forms.MenuItem
     Friend WithEvents BuildMenu As System.Windows.Forms.MenuItem
     Friend WithEvents BuildSite As System.Windows.Forms.MenuItem
-    Friend WithEvents BuildEngineMenu As System.Windows.Forms.MenuItem
     Friend WithEvents EnginePython As System.Windows.Forms.MenuItem
     Friend WithEvents EngineApricot As System.Windows.Forms.MenuItem
     Friend WithEvents HelpMenu As System.Windows.Forms.MenuItem
@@ -840,6 +839,7 @@ Partial Class Main
     Friend WithEvents NewJSCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewTXTCon As System.Windows.Forms.MenuItem
     Friend WithEvents BuildPanel As System.Windows.Forms.MenuItem
-    Friend WithEvents ViewSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents ViewMenuSep As System.Windows.Forms.MenuItem
+    Friend WithEvents SanitaryBuild As System.Windows.Forms.MenuItem
+    Friend WithEvents BuildSep As System.Windows.Forms.MenuItem
 End Class

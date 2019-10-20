@@ -47,8 +47,9 @@ Public Class Main
         SaveAll.Enabled = (SiteTree.Nodes.Count > 0)
         BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
         Build.Enabled = (SiteTree.Nodes.Count > 0)
+        SanitaryBuild.Enabled = (SiteTree.Nodes.Count > 0)
+
         OpenOutput.Enabled = (SiteTree.Nodes.Count > 0)
-        Build.Enabled = (SiteTree.Nodes.Count > 0)
         BrowseOutput.Enabled = (SiteTree.Nodes.Count > 0)
         BrowseOutputExt.Enabled = (SiteTree.Nodes.Count > 0)
     End Sub
@@ -1313,6 +1314,17 @@ Public Class Main
                 deleteFile(SiteTree.SelectedNode.Tag)
             Catch ex As Exception
             End Try
+        End If
+    End Sub
+
+    Private Sub SanitaryBuild_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SanitaryBuild.Click
+        If MsgBox("A sanitary build will completely remove the output folder and build from scratch. Any files that aren't in your Pages or Includes will be gone. Do this?", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel, "AutoSite XL") = MsgBoxResult.Ok Then
+            Try
+                My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+            doBuild()
         End If
     End Sub
 End Class

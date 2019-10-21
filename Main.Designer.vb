@@ -29,16 +29,19 @@ Partial Class Main
         Me.MenuBar = New System.Windows.Forms.MainMenu(Me.components)
         Me.FileMenu = New System.Windows.Forms.MenuItem
         Me.OpenFolder = New System.Windows.Forms.MenuItem
-        Me.CloseSite = New System.Windows.Forms.MenuItem
-        Me.SaveAll = New System.Windows.Forms.MenuItem
-        Me.FileSep = New System.Windows.Forms.MenuItem
-        Me.ExitItem = New System.Windows.Forms.MenuItem
+        Me.OpenRecent = New System.Windows.Forms.MenuItem
         Me.Recent1 = New System.Windows.Forms.MenuItem
         Me.Recent2 = New System.Windows.Forms.MenuItem
         Me.Recent3 = New System.Windows.Forms.MenuItem
         Me.Recent4 = New System.Windows.Forms.MenuItem
         Me.Recent5 = New System.Windows.Forms.MenuItem
+        Me.RecentSep = New System.Windows.Forms.MenuItem
         Me.ClearRecents = New System.Windows.Forms.MenuItem
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem
+        Me.CloseSite = New System.Windows.Forms.MenuItem
+        Me.SaveAll = New System.Windows.Forms.MenuItem
+        Me.FileSep = New System.Windows.Forms.MenuItem
+        Me.ExitItem = New System.Windows.Forms.MenuItem
         Me.ViewMenu = New System.Windows.Forms.MenuItem
         Me.ExplorerPanel = New System.Windows.Forms.MenuItem
         Me.BuildPanel = New System.Windows.Forms.MenuItem
@@ -111,9 +114,6 @@ Partial Class Main
         Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.SelectFont = New System.Windows.Forms.FontDialog
-        Me.OpenRecent = New System.Windows.Forms.MenuItem
-        Me.RecentSep = New System.Windows.Forms.MenuItem
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -162,29 +162,11 @@ Partial Class Main
         Me.OpenFolder.Shortcut = System.Windows.Forms.Shortcut.CtrlO
         Me.OpenFolder.Text = "Open Folder..."
         '
-        'CloseSite
+        'OpenRecent
         '
-        Me.CloseSite.Enabled = False
-        Me.CloseSite.Index = 2
-        Me.CloseSite.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftW
-        Me.CloseSite.Text = "Close Site"
-        '
-        'SaveAll
-        '
-        Me.SaveAll.Index = 3
-        Me.SaveAll.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS
-        Me.SaveAll.Text = "Save All"
-        '
-        'FileSep
-        '
-        Me.FileSep.Index = 4
-        Me.FileSep.Text = "-"
-        '
-        'ExitItem
-        '
-        Me.ExitItem.Index = 5
-        Me.ExitItem.Shortcut = System.Windows.Forms.Shortcut.AltF4
-        Me.ExitItem.Text = "Exit"
+        Me.OpenRecent.Index = 1
+        Me.OpenRecent.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Recent1, Me.Recent2, Me.Recent3, Me.Recent4, Me.Recent5, Me.RecentSep, Me.ClearRecents})
+        Me.OpenRecent.Text = "Open Recent"
         '
         'Recent1
         '
@@ -216,10 +198,44 @@ Partial Class Main
         Me.Recent5.Text = "Recent 5"
         Me.Recent5.Visible = False
         '
+        'RecentSep
+        '
+        Me.RecentSep.Index = 5
+        Me.RecentSep.Text = "-"
+        '
         'ClearRecents
         '
         Me.ClearRecents.Index = 6
         Me.ClearRecents.Text = "Clear Recent Sites"
+        '
+        'MenuItem1
+        '
+        Me.MenuItem1.Index = 2
+        Me.MenuItem1.Text = "-"
+        '
+        'CloseSite
+        '
+        Me.CloseSite.Enabled = False
+        Me.CloseSite.Index = 3
+        Me.CloseSite.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftW
+        Me.CloseSite.Text = "Close Site"
+        '
+        'SaveAll
+        '
+        Me.SaveAll.Index = 4
+        Me.SaveAll.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS
+        Me.SaveAll.Text = "Save All"
+        '
+        'FileSep
+        '
+        Me.FileSep.Index = 5
+        Me.FileSep.Text = "-"
+        '
+        'ExitItem
+        '
+        Me.ExitItem.Index = 6
+        Me.ExitItem.Shortcut = System.Windows.Forms.Shortcut.AltF4
+        Me.ExitItem.Text = "Exit"
         '
         'ViewMenu
         '
@@ -773,22 +789,6 @@ Partial Class Main
         Me.CoreSplit.SplitterDistance = 310
         Me.CoreSplit.SplitterWidth = 5
         Me.CoreSplit.TabIndex = 4
-        '
-        'OpenRecent
-        '
-        Me.OpenRecent.Index = 1
-        Me.OpenRecent.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Recent1, Me.Recent2, Me.Recent3, Me.Recent4, Me.Recent5, Me.RecentSep, Me.ClearRecents})
-        Me.OpenRecent.Text = "Open Recent"
-        '
-        'RecentSep
-        '
-        Me.RecentSep.Index = 5
-        Me.RecentSep.Text = "-"
-        '
-        'MenuItem1
-        '
-        Me.MenuItem1.Index = 2
-        Me.MenuItem1.Text = "-"
         '
         'Main
         '

@@ -1354,32 +1354,37 @@ Public Class Main
     End Sub
 
     Private Sub updateRecents()
-        OpenRecent.Enabled = My.Settings.recents.Count > 0
-        Recent1.Visible = My.Settings.recents.Count > 0
-        Recent2.Visible = My.Settings.recents.Count > 1
-        Recent3.Visible = My.Settings.recents.Count > 2
-        Recent4.Visible = My.Settings.recents.Count > 3
-        Recent5.Visible = My.Settings.recents.Count > 4
-        If My.Settings.recents.Count > 0 Then
-            Recent1.Text = "1. " & My.Settings.recents(0)
-            Recent1.Tag = My.Settings.recents(0)
-        End If
-        If My.Settings.recents.Count > 1 Then
-            Recent2.Text = "2. " & My.Settings.recents(1)
-            Recent2.Tag = My.Settings.recents(1)
-        End If
-        If My.Settings.recents.Count > 2 Then
-            Recent3.Text = "3. " & My.Settings.recents(2)
-            Recent3.Tag = My.Settings.recents(2)
-        End If
-        If My.Settings.recents.Count > 3 Then
-            Recent4.Text = "4. " & My.Settings.recents(3)
-            Recent4.Tag = My.Settings.recents(3)
-        End If
-        If My.Settings.recents.Count > 4 Then
-            Recent5.Text = "5. " & My.Settings.recents(4)
-            Recent5.Tag = My.Settings.recents(4)
-        End If
+        Try
+            OpenRecent.Enabled = My.Settings.recents.Count > 0
+            Recent1.Visible = My.Settings.recents.Count > 0
+            Recent2.Visible = My.Settings.recents.Count > 1
+            Recent3.Visible = My.Settings.recents.Count > 2
+            Recent4.Visible = My.Settings.recents.Count > 3
+            Recent5.Visible = My.Settings.recents.Count > 4
+            If My.Settings.recents.Count > 0 Then
+                Recent1.Text = "1. " & My.Settings.recents(0)
+                Recent1.Tag = My.Settings.recents(0)
+            End If
+            If My.Settings.recents.Count > 1 Then
+                Recent2.Text = "2. " & My.Settings.recents(1)
+                Recent2.Tag = My.Settings.recents(1)
+            End If
+            If My.Settings.recents.Count > 2 Then
+                Recent3.Text = "3. " & My.Settings.recents(2)
+                Recent3.Tag = My.Settings.recents(2)
+            End If
+            If My.Settings.recents.Count > 3 Then
+                Recent4.Text = "4. " & My.Settings.recents(3)
+                Recent4.Tag = My.Settings.recents(3)
+            End If
+            If My.Settings.recents.Count > 4 Then
+                Recent5.Text = "5. " & My.Settings.recents(4)
+                Recent5.Tag = My.Settings.recents(4)
+            End If
+        Catch ex As Exception
+            OpenRecent.Enabled = False
+            My.Settings.recents = New System.Collections.Specialized.StringCollection
+        End Try
     End Sub
 
     Private Sub Recent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Recent1.Click, Recent2.Click, Recent3.Click, Recent4.Click, Recent5.Click

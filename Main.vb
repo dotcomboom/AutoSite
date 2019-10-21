@@ -99,40 +99,62 @@ Public Class Main
     Private Sub openSite(ByVal path As String, ByVal autoload As Boolean)
         checkOpen()
         If My.Computer.FileSystem.DirectoryExists(path) Then
-            Dim templatePath = path & "\templates"
-            Dim inPath = path & "\in"
-            Dim includePath = path & "\includes"
+            If doClose() Then
+                Dim templatePath = path & "\templates"
+                Dim inPath = path & "\in"
+                Dim includePath = path & "\includes"
 
-            If Not (My.Computer.FileSystem.DirectoryExists(templatePath) And My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(includePath)) Then
-                If autoload = False Then
-                    If MsgBox("AutoSite XL will create a site in the folder located at " & path & ". Is this OK?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then
+                If Not (My.Computer.FileSystem.DirectoryExists(templatePath) And My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(includePath)) Then
+                    If autoload = False Then
+                        If MsgBox("AutoSite XL will create a site in the folder located at " & path & ". Is this OK?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then
+                            Exit Sub
+                        End If
+                    Else
                         Exit Sub
                     End If
-                Else
-                    Exit Sub
                 End If
-            End If
-            If Not My.Computer.FileSystem.DirectoryExists(templatePath) Then
-                My.Computer.FileSystem.CreateDirectory(templatePath)
-            End If
-            If Not My.Computer.FileSystem.DirectoryExists(inPath) Then
-                My.Computer.FileSystem.CreateDirectory(inPath)
-            End If
-            If Not My.Computer.FileSystem.DirectoryExists(includePath) Then
-                My.Computer.FileSystem.CreateDirectory(includePath)
-            End If
+                If Not My.Computer.FileSystem.DirectoryExists(templatePath) Then
+                    My.Computer.FileSystem.CreateDirectory(templatePath)
+                End If
+                If Not My.Computer.FileSystem.DirectoryExists(inPath) Then
+                    My.Computer.FileSystem.CreateDirectory(inPath)
+                End If
+                If Not My.Computer.FileSystem.DirectoryExists(includePath) Then
+                    My.Computer.FileSystem.CreateDirectory(includePath)
+                End If
 
-            SiteTree.Nodes.Clear()
+                SiteTree.Nodes.Clear()
 
-            Dim root = SiteTree.Nodes.Add(path)
-            root.ImageKey = "Folder"
-            root.SelectedImageKey = "Folder"
-            root.Tag = path
+                Dim root = SiteTree.Nodes.Add(path)
+                root.ImageKey = "Folder"
+                root.SelectedImageKey = "Folder"
+                root.Tag = path
 
-            refreshTree(root)
+                refreshTree(root)
+            End If
         End If
         checkOpen()
+
         My.Settings.openProject = path
+
+        Dim recents = My.Settings.recents
+        Try
+            If recents.Contains(path) Then
+                recents.Remove(path)
+            End If
+        Catch ex As Exception
+            recents = New System.Collections.Specialized.StringCollection
+        End Try
+        recents.Insert(0, path)
+        If recents.Count > 5 Then
+            While recents.Count > 5
+                recents.RemoveAt(5)
+            End While
+        End If
+        My.Settings.recents = recents
+
+        updateRecents()
+
         Watcher.Path = path
         Watcher.Filter = "*.*"
     End Sub
@@ -185,7 +207,7 @@ Public Class Main
         About.ShowDialog()
     End Sub
 
-    Private Sub CloseSite_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseSite.Click
+    Private Function doClose() Handles CloseSite.Click
         Dim saved = True
         For Each page As TabPage In EditTabs.TabPages
             If page.Text.Contains("*") Then
@@ -199,7 +221,7 @@ Public Class Main
                 DoSaveAll()
             End If
             If d = DialogResult.Cancel Then
-                Exit Sub
+                Return False
             End If
         End If
         openFiles.Clear()
@@ -210,7 +232,8 @@ Public Class Main
         My.Settings.openProject = ""
         Watcher.Filter = "NFIDNI#N()Dxn)(@Nqinnxisabub@IZWNQIONCIWENiN@Nd0N@()@()OPQNOPMNXONNW(ENND@#(ONCPENQOPNNNSANOI" ' can't disable it so /shrug
         checkOpen()
-    End Sub
+        Return True
+    End Function
 
     Private Sub VirtualSpace_Click(ByVal sender As Object, ByVal e As EventArgs) Handles VirtualSpace.Click
         If VirtualSpace.Checked Then
@@ -308,6 +331,8 @@ Public Class Main
         If My.Computer.FileSystem.DirectoryExists(My.Settings.openProject) Then
             openSite(My.Settings.openProject, True)
         End If
+
+        updateRecents()
     End Sub
 
     Private foundNode As TreeNode = Nothing
@@ -1326,5 +1351,43 @@ Public Class Main
             End Try
             doBuild()
         End If
+    End Sub
+
+    Private Sub updateRecents()
+        OpenRecent.Enabled = My.Settings.recents.Count > 0
+        Recent1.Visible = My.Settings.recents.Count > 0
+        Recent2.Visible = My.Settings.recents.Count > 1
+        Recent3.Visible = My.Settings.recents.Count > 2
+        Recent4.Visible = My.Settings.recents.Count > 3
+        Recent5.Visible = My.Settings.recents.Count > 4
+        If My.Settings.recents.Count > 0 Then
+            Recent1.Text = "1. " & My.Settings.recents(0)
+            Recent1.Tag = My.Settings.recents(0)
+        End If
+        If My.Settings.recents.Count > 1 Then
+            Recent2.Text = "2. " & My.Settings.recents(1)
+            Recent2.Tag = My.Settings.recents(1)
+        End If
+        If My.Settings.recents.Count > 2 Then
+            Recent3.Text = "3. " & My.Settings.recents(2)
+            Recent3.Tag = My.Settings.recents(2)
+        End If
+        If My.Settings.recents.Count > 3 Then
+            Recent4.Text = "4. " & My.Settings.recents(3)
+            Recent4.Tag = My.Settings.recents(3)
+        End If
+        If My.Settings.recents.Count > 4 Then
+            Recent5.Text = "5. " & My.Settings.recents(4)
+            Recent5.Tag = My.Settings.recents(4)
+        End If
+    End Sub
+
+    Private Sub Recent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Recent1.Click, Recent2.Click, Recent3.Click, Recent4.Click, Recent5.Click
+        openSite(sender.Tag, False)
+    End Sub
+
+    Private Sub ClearRecents_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClearRecents.Click
+        My.Settings.recents = New System.Collections.Specialized.StringCollection
+        updateRecents()
     End Sub
 End Class

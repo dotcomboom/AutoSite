@@ -41,5 +41,8 @@
     <Setting Name="editorFont" Type="System.Drawing.Font" Scope="User">
       <Value Profile="(Default)">Courier New, 9.75pt</Value>
     </Setting>
+    <Setting Name="recents" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

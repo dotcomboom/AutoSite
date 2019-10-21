@@ -33,6 +33,12 @@ Partial Class Main
         Me.SaveAll = New System.Windows.Forms.MenuItem
         Me.FileSep = New System.Windows.Forms.MenuItem
         Me.ExitItem = New System.Windows.Forms.MenuItem
+        Me.Recent1 = New System.Windows.Forms.MenuItem
+        Me.Recent2 = New System.Windows.Forms.MenuItem
+        Me.Recent3 = New System.Windows.Forms.MenuItem
+        Me.Recent4 = New System.Windows.Forms.MenuItem
+        Me.Recent5 = New System.Windows.Forms.MenuItem
+        Me.ClearRecents = New System.Windows.Forms.MenuItem
         Me.ViewMenu = New System.Windows.Forms.MenuItem
         Me.ExplorerPanel = New System.Windows.Forms.MenuItem
         Me.BuildPanel = New System.Windows.Forms.MenuItem
@@ -105,6 +111,9 @@ Partial Class Main
         Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.SelectFont = New System.Windows.Forms.FontDialog
+        Me.OpenRecent = New System.Windows.Forms.MenuItem
+        Me.RecentSep = New System.Windows.Forms.MenuItem
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -144,7 +153,7 @@ Partial Class Main
         'FileMenu
         '
         Me.FileMenu.Index = 0
-        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenFolder, Me.CloseSite, Me.SaveAll, Me.FileSep, Me.ExitItem})
+        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenFolder, Me.OpenRecent, Me.MenuItem1, Me.CloseSite, Me.SaveAll, Me.FileSep, Me.ExitItem})
         Me.FileMenu.Text = "File"
         '
         'OpenFolder
@@ -156,26 +165,61 @@ Partial Class Main
         'CloseSite
         '
         Me.CloseSite.Enabled = False
-        Me.CloseSite.Index = 1
+        Me.CloseSite.Index = 2
         Me.CloseSite.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftW
         Me.CloseSite.Text = "Close Site"
         '
         'SaveAll
         '
-        Me.SaveAll.Index = 2
+        Me.SaveAll.Index = 3
         Me.SaveAll.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS
         Me.SaveAll.Text = "Save All"
         '
         'FileSep
         '
-        Me.FileSep.Index = 3
+        Me.FileSep.Index = 4
         Me.FileSep.Text = "-"
         '
         'ExitItem
         '
-        Me.ExitItem.Index = 4
+        Me.ExitItem.Index = 5
         Me.ExitItem.Shortcut = System.Windows.Forms.Shortcut.AltF4
         Me.ExitItem.Text = "Exit"
+        '
+        'Recent1
+        '
+        Me.Recent1.Index = 0
+        Me.Recent1.Text = "Recent 1"
+        Me.Recent1.Visible = False
+        '
+        'Recent2
+        '
+        Me.Recent2.Index = 1
+        Me.Recent2.Text = "Recent 2"
+        Me.Recent2.Visible = False
+        '
+        'Recent3
+        '
+        Me.Recent3.Index = 2
+        Me.Recent3.Text = "Recent 3"
+        Me.Recent3.Visible = False
+        '
+        'Recent4
+        '
+        Me.Recent4.Index = 3
+        Me.Recent4.Text = "Recent 4"
+        Me.Recent4.Visible = False
+        '
+        'Recent5
+        '
+        Me.Recent5.Index = 4
+        Me.Recent5.Text = "Recent 5"
+        Me.Recent5.Visible = False
+        '
+        'ClearRecents
+        '
+        Me.ClearRecents.Index = 6
+        Me.ClearRecents.Text = "Clear Recent Sites"
         '
         'ViewMenu
         '
@@ -622,7 +666,7 @@ Partial Class Main
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(294, 128)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
         'MapPage
         '
@@ -729,6 +773,22 @@ Partial Class Main
         Me.CoreSplit.SplitterDistance = 310
         Me.CoreSplit.SplitterWidth = 5
         Me.CoreSplit.TabIndex = 4
+        '
+        'OpenRecent
+        '
+        Me.OpenRecent.Index = 1
+        Me.OpenRecent.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Recent1, Me.Recent2, Me.Recent3, Me.Recent4, Me.Recent5, Me.RecentSep, Me.ClearRecents})
+        Me.OpenRecent.Text = "Open Recent"
+        '
+        'RecentSep
+        '
+        Me.RecentSep.Index = 5
+        Me.RecentSep.Text = "-"
+        '
+        'MenuItem1
+        '
+        Me.MenuItem1.Index = 2
+        Me.MenuItem1.Text = "-"
         '
         'Main
         '
@@ -842,4 +902,13 @@ Partial Class Main
     Friend WithEvents ViewMenuSep As System.Windows.Forms.MenuItem
     Friend WithEvents SanitaryBuild As System.Windows.Forms.MenuItem
     Friend WithEvents BuildSep As System.Windows.Forms.MenuItem
+    Friend WithEvents Recent1 As System.Windows.Forms.MenuItem
+    Friend WithEvents Recent2 As System.Windows.Forms.MenuItem
+    Friend WithEvents Recent3 As System.Windows.Forms.MenuItem
+    Friend WithEvents Recent4 As System.Windows.Forms.MenuItem
+    Friend WithEvents Recent5 As System.Windows.Forms.MenuItem
+    Friend WithEvents ClearRecents As System.Windows.Forms.MenuItem
+    Friend WithEvents OpenRecent As System.Windows.Forms.MenuItem
+    Friend WithEvents RecentSep As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
 End Class

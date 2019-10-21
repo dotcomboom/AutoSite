@@ -209,6 +209,17 @@ Namespace My
                 Me("editorFont") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property recents() As Global.System.Collections.Specialized.StringCollection
+            Get
+                Return CType(Me("recents"),Global.System.Collections.Specialized.StringCollection)
+            End Get
+            Set
+                Me("recents") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -198,6 +198,7 @@ Partial Class About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.OK
         Me.ClientSize = New System.Drawing.Size(677, 479)
         Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.PyWebsiteLink)
@@ -208,11 +209,8 @@ Partial Class About
         Me.Controls.Add(Me.Version)
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.OK)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "About"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

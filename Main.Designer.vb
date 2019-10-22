@@ -71,11 +71,11 @@ Partial Class Main
         Me.XPitem = New System.Windows.Forms.MenuItem
         Me.RefreshItem = New System.Windows.Forms.MenuItem
         Me.MenuItem5 = New System.Windows.Forms.MenuItem
-        Me.BrowseSiteMnu = New System.Windows.Forms.MenuItem
-        Me.BrowseSitePreviewMnu = New System.Windows.Forms.MenuItem
-        Me.ViewSep3 = New System.Windows.Forms.MenuItem
         Me.PreviewPage = New System.Windows.Forms.MenuItem
         Me.ViewFileOutput = New System.Windows.Forms.MenuItem
+        Me.ViewSep3 = New System.Windows.Forms.MenuItem
+        Me.BrowseSiteMnu = New System.Windows.Forms.MenuItem
+        Me.BrowseSitePreviewMnu = New System.Windows.Forms.MenuItem
         Me.FormatMenu = New System.Windows.Forms.MenuItem
         Me.WordWrap = New System.Windows.Forms.MenuItem
         Me.VirtualSpace = New System.Windows.Forms.MenuItem
@@ -437,22 +437,6 @@ Partial Class Main
         Me.MenuItem5.Index = 7
         Me.MenuItem5.Text = "-"
         '
-        'BrowseSiteMnu
-        '
-        Me.BrowseSiteMnu.Index = 11
-        Me.BrowseSiteMnu.Text = "Browse Site in Default Browser"
-        '
-        'BrowseSitePreviewMnu
-        '
-        Me.BrowseSitePreviewMnu.Index = 12
-        Me.BrowseSitePreviewMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftP
-        Me.BrowseSitePreviewMnu.Text = "Browse Site in Preview"
-        '
-        'ViewSep3
-        '
-        Me.ViewSep3.Index = 10
-        Me.ViewSep3.Text = "-"
-        '
         'PreviewPage
         '
         Me.PreviewPage.Index = 8
@@ -464,6 +448,22 @@ Partial Class Main
         Me.ViewFileOutput.Index = 9
         Me.ViewFileOutput.Shortcut = System.Windows.Forms.Shortcut.CtrlO
         Me.ViewFileOutput.Text = "View Output"
+        '
+        'ViewSep3
+        '
+        Me.ViewSep3.Index = 10
+        Me.ViewSep3.Text = "-"
+        '
+        'BrowseSiteMnu
+        '
+        Me.BrowseSiteMnu.Index = 11
+        Me.BrowseSiteMnu.Text = "Browse Site in Default Browser"
+        '
+        'BrowseSitePreviewMnu
+        '
+        Me.BrowseSitePreviewMnu.Index = 12
+        Me.BrowseSitePreviewMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftP
+        Me.BrowseSitePreviewMnu.Text = "Browse Site in Preview"
         '
         'FormatMenu
         '

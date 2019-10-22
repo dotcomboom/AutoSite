@@ -121,22 +121,6 @@ Public Class Editor
         Me.Parent.Dispose()
     End Sub
 
-    Private Sub Code_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Code.KeyDown
-        If e.Control And e.KeyCode = Keys.W Then
-            Close()
-        ElseIf e.Control And e.KeyCode = Keys.S Then
-            Save()
-        ElseIf e.Control And e.KeyCode = Keys.P Then
-            doPreview()
-        ElseIf e.Control And e.KeyCode = Keys.F Then
-            doFind()
-        ElseIf e.Control And e.KeyCode = Keys.H Then
-            doReplace()
-        ElseIf e.Control And e.KeyCode = Keys.G Then
-            doGoto()
-        End If
-    End Sub
-
     Public Sub doCut() Handles Cut.Click, CutBtn.Click
         Code.Cut()
     End Sub
@@ -313,7 +297,7 @@ Public Class Editor
         End If
     End Sub
 
-    Public Sub ViewOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutput.Click
+    Public Sub doViewOutput() Handles ViewOutput.Click
         Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
         If rel.EndsWith(".md") Then
             rel = Main.ReplaceLast(rel, ".md", ".html")
@@ -325,7 +309,7 @@ Public Class Editor
         Main.doBuild()
     End Sub
 
-    Private Sub Delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Delete.Click
+    Private Sub Delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ' NYI
     End Sub
 End Class

@@ -1424,7 +1424,7 @@ Public Class Main
     End Function
 
     Private Sub EditMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditMenu.Popup
-        Dim edit = activeEditor()
+        Dim edit As Editor = activeEditor()
         If edit Is Nothing Then
             For Each item As MenuItem In EditMenu.MenuItems
                 item.Enabled = False
@@ -1433,7 +1433,32 @@ Public Class Main
             For Each item As MenuItem In EditMenu.MenuItems
                 item.Enabled = True
             Next
-            Delete.Enabled = False
+            Undo.Enabled = edit.Undo.Enabled
+            Redo.Enabled = edit.Redo.Enabled
+            'Delete.Enabled = False
+            Cut.Enabled = edit.Code.SelectionLength > 0
+            Copy.Enabled = edit.Code.SelectionLength > 0
+            Paste.Enabled = My.Computer.Clipboard.ContainsText
+        End If
+    End Sub
+
+    Private Sub ViewMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewMenu.Popup
+        Dim edit = activeEditor()
+        If edit Is Nothing Then
+            PreviewPage.Enabled = False
+        Else
+            PreviewPage.Enabled = True
+        End If
+    End Sub
+
+    Private Sub FileMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FileMenu.Popup
+        Dim edit = activeEditor()
+        If edit Is Nothing Then
+            Save.Enabled = False
+            CloseFile.Enabled = False
+        Else
+            Save.Enabled = True
+            CloseFile.Enabled = True
         End If
     End Sub
 
@@ -1483,6 +1508,55 @@ Public Class Main
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doInsertConditional()
+        End If
+    End Sub
+
+    Private Sub Find_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Find.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doFind()
+        End If
+    End Sub
+
+    Private Sub Replace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Replace.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doReplace()
+        End If
+    End Sub
+
+    Private Sub GoToMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GoToMnu.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doGoto()
+        End If
+    End Sub
+
+    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewPage.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doPreview()
+        End If
+    End Sub
+
+    Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.Save()
+        End If
+    End Sub
+
+    Private Sub CloseFile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CloseFile.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.Close()
+        End If
+    End Sub
+
+    Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewFileOutput.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doViewOutput()
         End If
     End Sub
 End Class

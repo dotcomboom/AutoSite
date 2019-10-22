@@ -38,7 +38,10 @@ Partial Class Main
         Me.RecentSep = New System.Windows.Forms.MenuItem
         Me.ClearRecents = New System.Windows.Forms.MenuItem
         Me.MenuItem1 = New System.Windows.Forms.MenuItem
+        Me.CloseFile = New System.Windows.Forms.MenuItem
         Me.CloseSite = New System.Windows.Forms.MenuItem
+        Me.MenuItem6 = New System.Windows.Forms.MenuItem
+        Me.Save = New System.Windows.Forms.MenuItem
         Me.SaveAll = New System.Windows.Forms.MenuItem
         Me.FileSep = New System.Windows.Forms.MenuItem
         Me.ExitItem = New System.Windows.Forms.MenuItem
@@ -49,10 +52,13 @@ Partial Class Main
         Me.Cut = New System.Windows.Forms.MenuItem
         Me.Copy = New System.Windows.Forms.MenuItem
         Me.Paste = New System.Windows.Forms.MenuItem
-        Me.Delete = New System.Windows.Forms.MenuItem
         Me.EditSep2 = New System.Windows.Forms.MenuItem
+        Me.Find = New System.Windows.Forms.MenuItem
+        Me.Replace = New System.Windows.Forms.MenuItem
+        Me.GoToMnu = New System.Windows.Forms.MenuItem
+        Me.MenuItem10 = New System.Windows.Forms.MenuItem
         Me.SelectAll = New System.Windows.Forms.MenuItem
-        Me.EditSep3 = New System.Windows.Forms.MenuItem
+        Me.EditSep4 = New System.Windows.Forms.MenuItem
         Me.InsertConditional = New System.Windows.Forms.MenuItem
         Me.ViewMenu = New System.Windows.Forms.MenuItem
         Me.ExplorerPanel = New System.Windows.Forms.MenuItem
@@ -67,6 +73,9 @@ Partial Class Main
         Me.MenuItem5 = New System.Windows.Forms.MenuItem
         Me.BrowseSiteMnu = New System.Windows.Forms.MenuItem
         Me.BrowseSitePreviewMnu = New System.Windows.Forms.MenuItem
+        Me.ViewSep3 = New System.Windows.Forms.MenuItem
+        Me.PreviewPage = New System.Windows.Forms.MenuItem
+        Me.ViewFileOutput = New System.Windows.Forms.MenuItem
         Me.FormatMenu = New System.Windows.Forms.MenuItem
         Me.WordWrap = New System.Windows.Forms.MenuItem
         Me.VirtualSpace = New System.Windows.Forms.MenuItem
@@ -173,8 +182,8 @@ Partial Class Main
         'FileMenu
         '
         Me.FileMenu.Index = 0
-        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenFolder, Me.OpenRecent, Me.MenuItem1, Me.CloseSite, Me.SaveAll, Me.FileSep, Me.ExitItem})
-        Me.FileMenu.Text = "File"
+        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenFolder, Me.OpenRecent, Me.MenuItem1, Me.CloseFile, Me.CloseSite, Me.MenuItem6, Me.Save, Me.SaveAll, Me.FileSep, Me.ExitItem})
+        Me.FileMenu.Text = "&File"
         '
         'OpenFolder
         '
@@ -233,44 +242,63 @@ Partial Class Main
         Me.MenuItem1.Index = 2
         Me.MenuItem1.Text = "-"
         '
+        'CloseFile
+        '
+        Me.CloseFile.Index = 3
+        Me.CloseFile.Shortcut = System.Windows.Forms.Shortcut.CtrlW
+        Me.CloseFile.Text = "Close"
+        '
         'CloseSite
         '
         Me.CloseSite.Enabled = False
-        Me.CloseSite.Index = 3
+        Me.CloseSite.Index = 4
         Me.CloseSite.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftW
         Me.CloseSite.Text = "Close Site"
         '
+        'MenuItem6
+        '
+        Me.MenuItem6.Index = 5
+        Me.MenuItem6.Text = "-"
+        '
+        'Save
+        '
+        Me.Save.Index = 6
+        Me.Save.Shortcut = System.Windows.Forms.Shortcut.CtrlS
+        Me.Save.Text = "Save"
+        '
         'SaveAll
         '
-        Me.SaveAll.Index = 4
+        Me.SaveAll.Index = 7
         Me.SaveAll.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS
         Me.SaveAll.Text = "Save All"
         '
         'FileSep
         '
-        Me.FileSep.Index = 5
+        Me.FileSep.Index = 8
         Me.FileSep.Text = "-"
         '
         'ExitItem
         '
-        Me.ExitItem.Index = 6
+        Me.ExitItem.Index = 9
         Me.ExitItem.Shortcut = System.Windows.Forms.Shortcut.AltF4
         Me.ExitItem.Text = "Exit"
         '
         'EditMenu
         '
         Me.EditMenu.Index = 1
-        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.Delete, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.InsertConditional})
-        Me.EditMenu.Text = "Edit"
+        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.Find, Me.Replace, Me.GoToMnu, Me.MenuItem10, Me.SelectAll, Me.EditSep4, Me.InsertConditional})
+        Me.EditMenu.Text = "&Edit"
         '
         'Undo
         '
         Me.Undo.Index = 0
+        Me.Undo.Shortcut = System.Windows.Forms.Shortcut.CtrlZ
         Me.Undo.Text = "Undo"
         '
         'Redo
         '
         Me.Redo.Index = 1
+        Me.Redo.Shortcut = System.Windows.Forms.Shortcut.CtrlY
         Me.Redo.Text = "Redo"
         '
         'EditSep
@@ -281,49 +309,71 @@ Partial Class Main
         'Cut
         '
         Me.Cut.Index = 3
+        Me.Cut.Shortcut = System.Windows.Forms.Shortcut.CtrlX
         Me.Cut.Text = "Cut"
         '
         'Copy
         '
         Me.Copy.Index = 4
+        Me.Copy.Shortcut = System.Windows.Forms.Shortcut.CtrlC
         Me.Copy.Text = "Copy"
         '
         'Paste
         '
         Me.Paste.Index = 5
+        Me.Paste.Shortcut = System.Windows.Forms.Shortcut.CtrlV
         Me.Paste.Text = "Paste"
-        '
-        'Delete
-        '
-        Me.Delete.Enabled = False
-        Me.Delete.Index = 6
-        Me.Delete.Text = "Delete"
         '
         'EditSep2
         '
-        Me.EditSep2.Index = 7
+        Me.EditSep2.Index = 6
         Me.EditSep2.Text = "-"
+        '
+        'Find
+        '
+        Me.Find.Index = 7
+        Me.Find.Shortcut = System.Windows.Forms.Shortcut.CtrlF
+        Me.Find.Text = "Find..."
+        '
+        'Replace
+        '
+        Me.Replace.Index = 8
+        Me.Replace.Shortcut = System.Windows.Forms.Shortcut.CtrlH
+        Me.Replace.Text = "Replace..."
+        '
+        'GoToMnu
+        '
+        Me.GoToMnu.Index = 9
+        Me.GoToMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlG
+        Me.GoToMnu.Text = "Go To..."
+        '
+        'MenuItem10
+        '
+        Me.MenuItem10.Index = 10
+        Me.MenuItem10.Text = "-"
         '
         'SelectAll
         '
-        Me.SelectAll.Index = 8
+        Me.SelectAll.Index = 11
+        Me.SelectAll.Shortcut = System.Windows.Forms.Shortcut.CtrlA
         Me.SelectAll.Text = "Select All"
         '
-        'EditSep3
+        'EditSep4
         '
-        Me.EditSep3.Index = 9
-        Me.EditSep3.Text = "-"
+        Me.EditSep4.Index = 12
+        Me.EditSep4.Text = "-"
         '
         'InsertConditional
         '
-        Me.InsertConditional.Index = 10
+        Me.InsertConditional.Index = 13
+        Me.InsertConditional.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftI
         Me.InsertConditional.Text = "Insert Conditional..."
         '
         'ViewMenu
         '
         Me.ViewMenu.Index = 2
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem, Me.MenuItem5, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
-        Me.ViewMenu.Text = "View"
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem, Me.MenuItem5, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu, Me.ViewSep3, Me.PreviewPage, Me.ViewFileOutput})
+        Me.ViewMenu.Text = "&View"
         '
         'ExplorerPanel
         '
@@ -398,11 +448,28 @@ Partial Class Main
         Me.BrowseSitePreviewMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftP
         Me.BrowseSitePreviewMnu.Text = "Browse Site in Preview"
         '
+        'ViewSep3
+        '
+        Me.ViewSep3.Index = 10
+        Me.ViewSep3.Text = "-"
+        '
+        'PreviewPage
+        '
+        Me.PreviewPage.Index = 11
+        Me.PreviewPage.Shortcut = System.Windows.Forms.Shortcut.CtrlP
+        Me.PreviewPage.Text = "Preview File"
+        '
+        'ViewFileOutput
+        '
+        Me.ViewFileOutput.Index = 12
+        Me.ViewFileOutput.Shortcut = System.Windows.Forms.Shortcut.CtrlO
+        Me.ViewFileOutput.Text = "View Output"
+        '
         'FormatMenu
         '
         Me.FormatMenu.Index = 3
         Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatMenuSep, Me.SyntaxHighlight, Me.LivePreview, Me.FormatSep2, Me.EditorFont})
-        Me.FormatMenu.Text = "Format"
+        Me.FormatMenu.Text = "F&ormat"
         '
         'WordWrap
         '
@@ -449,7 +516,7 @@ Partial Class Main
         '
         Me.BuildMenu.Index = 4
         Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep, Me.EngineApricot, Me.EnginePython, Me.MenuItem4, Me.OpenOutputMnu})
-        Me.BuildMenu.Text = "Build"
+        Me.BuildMenu.Text = "&Build"
         '
         'BuildSite
         '
@@ -496,7 +563,7 @@ Partial Class Main
         '
         Me.HelpMenu.Index = 5
         Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem3, Me.SendFeedback, Me.MenuItem2, Me.AboutItem})
-        Me.HelpMenu.Text = "Help"
+        Me.HelpMenu.Text = "&Help"
         '
         'MenuItem3
         '
@@ -1044,9 +1111,18 @@ Partial Class Main
     Friend WithEvents Cut As System.Windows.Forms.MenuItem
     Friend WithEvents Copy As System.Windows.Forms.MenuItem
     Friend WithEvents Paste As System.Windows.Forms.MenuItem
-    Friend WithEvents Delete As System.Windows.Forms.MenuItem
     Friend WithEvents EditSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents SelectAll As System.Windows.Forms.MenuItem
-    Friend WithEvents EditSep3 As System.Windows.Forms.MenuItem
     Friend WithEvents InsertConditional As System.Windows.Forms.MenuItem
+    Friend WithEvents Find As System.Windows.Forms.MenuItem
+    Friend WithEvents GoToMnu As System.Windows.Forms.MenuItem
+    Friend WithEvents Replace As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem10 As System.Windows.Forms.MenuItem
+    Friend WithEvents EditSep4 As System.Windows.Forms.MenuItem
+    Friend WithEvents PreviewPage As System.Windows.Forms.MenuItem
+    Friend WithEvents ViewSep3 As System.Windows.Forms.MenuItem
+    Friend WithEvents Save As System.Windows.Forms.MenuItem
+    Friend WithEvents CloseFile As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem6 As System.Windows.Forms.MenuItem
+    Friend WithEvents ViewFileOutput As System.Windows.Forms.MenuItem
 End Class

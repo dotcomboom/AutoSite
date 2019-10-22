@@ -58,7 +58,6 @@ Partial Class Editor
         Me.SelectAll = New System.Windows.Forms.MenuItem
         Me.ConSep3 = New System.Windows.Forms.MenuItem
         Me.InsertConditional = New System.Windows.Forms.MenuItem
-        Me.Delete = New System.Windows.Forms.MenuItem
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -254,7 +253,6 @@ Partial Class Editor
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Code.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
@@ -274,7 +272,7 @@ Partial Class Editor
         '
         'Context
         '
-        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.ConSep, Me.Cut, Me.Copy, Me.Paste, Me.Delete, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertConditional})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.ConSep, Me.Cut, Me.Copy, Me.Paste, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertConditional})
         '
         'Undo
         '
@@ -308,29 +306,23 @@ Partial Class Editor
         '
         'ConSep2
         '
-        Me.ConSep2.Index = 7
+        Me.ConSep2.Index = 6
         Me.ConSep2.Text = "-"
         '
         'SelectAll
         '
-        Me.SelectAll.Index = 8
+        Me.SelectAll.Index = 7
         Me.SelectAll.Text = "Select All"
         '
         'ConSep3
         '
-        Me.ConSep3.Index = 9
+        Me.ConSep3.Index = 8
         Me.ConSep3.Text = "-"
         '
         'InsertConditional
         '
-        Me.InsertConditional.Index = 10
+        Me.InsertConditional.Index = 9
         Me.InsertConditional.Text = "Insert Conditional..."
-        '
-        'Delete
-        '
-        Me.Delete.Enabled = False
-        Me.Delete.Index = 6
-        Me.Delete.Text = "Delete"
         '
         'Editor
         '
@@ -382,6 +374,5 @@ Partial Class Editor
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents Sep5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ViewOutput As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Delete As System.Windows.Forms.MenuItem
 
 End Class

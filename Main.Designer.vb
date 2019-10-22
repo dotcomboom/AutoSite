@@ -42,6 +42,18 @@ Partial Class Main
         Me.SaveAll = New System.Windows.Forms.MenuItem
         Me.FileSep = New System.Windows.Forms.MenuItem
         Me.ExitItem = New System.Windows.Forms.MenuItem
+        Me.EditMenu = New System.Windows.Forms.MenuItem
+        Me.Undo = New System.Windows.Forms.MenuItem
+        Me.Redo = New System.Windows.Forms.MenuItem
+        Me.EditSep = New System.Windows.Forms.MenuItem
+        Me.Cut = New System.Windows.Forms.MenuItem
+        Me.Copy = New System.Windows.Forms.MenuItem
+        Me.Paste = New System.Windows.Forms.MenuItem
+        Me.Delete = New System.Windows.Forms.MenuItem
+        Me.EditSep2 = New System.Windows.Forms.MenuItem
+        Me.SelectAll = New System.Windows.Forms.MenuItem
+        Me.EditSep3 = New System.Windows.Forms.MenuItem
+        Me.InsertConditional = New System.Windows.Forms.MenuItem
         Me.ViewMenu = New System.Windows.Forms.MenuItem
         Me.ExplorerPanel = New System.Windows.Forms.MenuItem
         Me.BuildPanel = New System.Windows.Forms.MenuItem
@@ -52,6 +64,9 @@ Partial Class Main
         Me.VS2017item = New System.Windows.Forms.MenuItem
         Me.XPitem = New System.Windows.Forms.MenuItem
         Me.RefreshItem = New System.Windows.Forms.MenuItem
+        Me.MenuItem5 = New System.Windows.Forms.MenuItem
+        Me.BrowseSiteMnu = New System.Windows.Forms.MenuItem
+        Me.BrowseSitePreviewMnu = New System.Windows.Forms.MenuItem
         Me.FormatMenu = New System.Windows.Forms.MenuItem
         Me.WordWrap = New System.Windows.Forms.MenuItem
         Me.VirtualSpace = New System.Windows.Forms.MenuItem
@@ -67,9 +82,13 @@ Partial Class Main
         Me.BuildSep = New System.Windows.Forms.MenuItem
         Me.EngineApricot = New System.Windows.Forms.MenuItem
         Me.EnginePython = New System.Windows.Forms.MenuItem
+        Me.MenuItem4 = New System.Windows.Forms.MenuItem
+        Me.OpenOutputMnu = New System.Windows.Forms.MenuItem
         Me.HelpMenu = New System.Windows.Forms.MenuItem
+        Me.MenuItem3 = New System.Windows.Forms.MenuItem
+        Me.SendFeedback = New System.Windows.Forms.MenuItem
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem
         Me.AboutItem = New System.Windows.Forms.MenuItem
-        Me.HelpTopics = New System.Windows.Forms.MenuItem
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu
         Me.OpenInDefault = New System.Windows.Forms.MenuItem
@@ -110,8 +129,8 @@ Partial Class Main
         Me.BuildStrip = New System.Windows.Forms.ToolStrip
         Me.Build = New System.Windows.Forms.ToolStripButton
         Me.OpenOutput = New System.Windows.Forms.ToolStripButton
-        Me.BrowseOutput = New System.Windows.Forms.ToolStripButton
-        Me.BrowseOutputExt = New System.Windows.Forms.ToolStripButton
+        Me.BrowseSitePreview = New System.Windows.Forms.ToolStripButton
+        Me.BrowseSite = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.SelectFont = New System.Windows.Forms.FontDialog
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -144,11 +163,12 @@ Partial Class Main
         '
         'FolderBrowser
         '
-        Me.FolderBrowser.Description = "Choose an existing site folder or create a new one to hold your site's files."
+        Me.FolderBrowser.Description = "Choose an existing site folder to open or create a new one to hold your site's fi" & _
+            "les."
         '
         'MenuBar
         '
-        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.ViewMenu, Me.FormatMenu, Me.BuildMenu, Me.HelpMenu})
+        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.FormatMenu, Me.BuildMenu, Me.HelpMenu})
         '
         'FileMenu
         '
@@ -237,10 +257,72 @@ Partial Class Main
         Me.ExitItem.Shortcut = System.Windows.Forms.Shortcut.AltF4
         Me.ExitItem.Text = "Exit"
         '
+        'EditMenu
+        '
+        Me.EditMenu.Index = 1
+        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.Delete, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.InsertConditional})
+        Me.EditMenu.Text = "Edit"
+        '
+        'Undo
+        '
+        Me.Undo.Index = 0
+        Me.Undo.Text = "Undo"
+        '
+        'Redo
+        '
+        Me.Redo.Index = 1
+        Me.Redo.Text = "Redo"
+        '
+        'EditSep
+        '
+        Me.EditSep.Index = 2
+        Me.EditSep.Text = "-"
+        '
+        'Cut
+        '
+        Me.Cut.Index = 3
+        Me.Cut.Text = "Cut"
+        '
+        'Copy
+        '
+        Me.Copy.Index = 4
+        Me.Copy.Text = "Copy"
+        '
+        'Paste
+        '
+        Me.Paste.Index = 5
+        Me.Paste.Text = "Paste"
+        '
+        'Delete
+        '
+        Me.Delete.Enabled = False
+        Me.Delete.Index = 6
+        Me.Delete.Text = "Delete"
+        '
+        'EditSep2
+        '
+        Me.EditSep2.Index = 7
+        Me.EditSep2.Text = "-"
+        '
+        'SelectAll
+        '
+        Me.SelectAll.Index = 8
+        Me.SelectAll.Text = "Select All"
+        '
+        'EditSep3
+        '
+        Me.EditSep3.Index = 9
+        Me.EditSep3.Text = "-"
+        '
+        'InsertConditional
+        '
+        Me.InsertConditional.Index = 10
+        Me.InsertConditional.Text = "Insert Conditional..."
+        '
         'ViewMenu
         '
-        Me.ViewMenu.Index = 1
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem})
+        Me.ViewMenu.Index = 2
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem, Me.MenuItem5, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
         Me.ViewMenu.Text = "View"
         '
         'ExplorerPanel
@@ -298,11 +380,27 @@ Partial Class Main
         '
         Me.RefreshItem.Index = 6
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
-        Me.RefreshItem.Text = "Refresh"
+        Me.RefreshItem.Text = "Refresh Explorer"
+        '
+        'MenuItem5
+        '
+        Me.MenuItem5.Index = 7
+        Me.MenuItem5.Text = "-"
+        '
+        'BrowseSiteMnu
+        '
+        Me.BrowseSiteMnu.Index = 8
+        Me.BrowseSiteMnu.Text = "Browse Site in Default Browser"
+        '
+        'BrowseSitePreviewMnu
+        '
+        Me.BrowseSitePreviewMnu.Index = 9
+        Me.BrowseSitePreviewMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftP
+        Me.BrowseSitePreviewMnu.Text = "Browse Site in Preview"
         '
         'FormatMenu
         '
-        Me.FormatMenu.Index = 2
+        Me.FormatMenu.Index = 3
         Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatMenuSep, Me.SyntaxHighlight, Me.LivePreview, Me.FormatSep2, Me.EditorFont})
         Me.FormatMenu.Text = "Format"
         '
@@ -349,8 +447,8 @@ Partial Class Main
         '
         'BuildMenu
         '
-        Me.BuildMenu.Index = 3
-        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep, Me.EngineApricot, Me.EnginePython})
+        Me.BuildMenu.Index = 4
+        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep, Me.EngineApricot, Me.EnginePython, Me.MenuItem4, Me.OpenOutputMnu})
         Me.BuildMenu.Text = "Build"
         '
         'BuildSite
@@ -383,22 +481,43 @@ Partial Class Main
         Me.EnginePython.RadioCheck = True
         Me.EnginePython.Text = "Legacy AutoSite"
         '
+        'MenuItem4
+        '
+        Me.MenuItem4.Index = 5
+        Me.MenuItem4.Text = "-"
+        '
+        'OpenOutputMnu
+        '
+        Me.OpenOutputMnu.Index = 6
+        Me.OpenOutputMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftO
+        Me.OpenOutputMnu.Text = "Open Output Folder"
+        '
         'HelpMenu
         '
-        Me.HelpMenu.Index = 4
-        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.AboutItem, Me.HelpTopics})
+        Me.HelpMenu.Index = 5
+        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem3, Me.SendFeedback, Me.MenuItem2, Me.AboutItem})
         Me.HelpMenu.Text = "Help"
+        '
+        'MenuItem3
+        '
+        Me.MenuItem3.Enabled = False
+        Me.MenuItem3.Index = 0
+        Me.MenuItem3.Text = "Help Topics"
+        '
+        'SendFeedback
+        '
+        Me.SendFeedback.Index = 1
+        Me.SendFeedback.Text = "Send Feedback"
+        '
+        'MenuItem2
+        '
+        Me.MenuItem2.Index = 2
+        Me.MenuItem2.Text = "-"
         '
         'AboutItem
         '
-        Me.AboutItem.Index = 0
-        Me.AboutItem.Text = "About"
-        '
-        'HelpTopics
-        '
-        Me.HelpTopics.Enabled = False
-        Me.HelpTopics.Index = 1
-        Me.HelpTopics.Text = "Help Topics"
+        Me.AboutItem.Index = 3
+        Me.AboutItem.Text = "About AutoSite XL"
         '
         'XP
         '
@@ -682,7 +801,7 @@ Partial Class Main
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(294, 128)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
         '
         'MapPage
         '
@@ -723,7 +842,7 @@ Partial Class Main
         '
         Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
         Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseOutput, Me.BrowseOutputExt})
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseSitePreview, Me.BrowseSite})
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -751,25 +870,25 @@ Partial Class Main
         Me.OpenOutput.Size = New System.Drawing.Size(23, 22)
         Me.OpenOutput.Text = "Open Output Folder"
         '
-        'BrowseOutput
+        'BrowseSitePreview
         '
-        Me.BrowseOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BrowseOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BrowseOutput.Image = CType(resources.GetObject("BrowseOutput.Image"), System.Drawing.Image)
-        Me.BrowseOutput.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BrowseOutput.Name = "BrowseOutput"
-        Me.BrowseOutput.Size = New System.Drawing.Size(23, 22)
-        Me.BrowseOutput.Text = "Browse Site in Preview"
+        Me.BrowseSitePreview.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BrowseSitePreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BrowseSitePreview.Image = CType(resources.GetObject("BrowseSitePreview.Image"), System.Drawing.Image)
+        Me.BrowseSitePreview.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BrowseSitePreview.Name = "BrowseSitePreview"
+        Me.BrowseSitePreview.Size = New System.Drawing.Size(23, 22)
+        Me.BrowseSitePreview.Text = "Browse Site in Preview"
         '
-        'BrowseOutputExt
+        'BrowseSite
         '
-        Me.BrowseOutputExt.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BrowseOutputExt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BrowseOutputExt.Image = CType(resources.GetObject("BrowseOutputExt.Image"), System.Drawing.Image)
-        Me.BrowseOutputExt.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BrowseOutputExt.Name = "BrowseOutputExt"
-        Me.BrowseOutputExt.Size = New System.Drawing.Size(23, 22)
-        Me.BrowseOutputExt.Text = "Browse Site"
+        Me.BrowseSite.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BrowseSite.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BrowseSite.Image = CType(resources.GetObject("BrowseSite.Image"), System.Drawing.Image)
+        Me.BrowseSite.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BrowseSite.Name = "BrowseSite"
+        Me.BrowseSite.Size = New System.Drawing.Size(23, 22)
+        Me.BrowseSite.Text = "Browse Site"
         '
         'CoreSplit
         '
@@ -840,7 +959,6 @@ Partial Class Main
     Friend WithEvents EngineApricot As System.Windows.Forms.MenuItem
     Friend WithEvents HelpMenu As System.Windows.Forms.MenuItem
     Friend WithEvents AboutItem As System.Windows.Forms.MenuItem
-    Friend WithEvents HelpTopics As System.Windows.Forms.MenuItem
     Friend WithEvents IconThemeMenu As System.Windows.Forms.MenuItem
     Friend WithEvents VS2017item As System.Windows.Forms.MenuItem
     Friend WithEvents XP As System.Windows.Forms.ImageList
@@ -888,8 +1006,8 @@ Partial Class Main
     Friend WithEvents BuildStrip As System.Windows.Forms.ToolStrip
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents OpenOutput As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BrowseOutput As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BrowseOutputExt As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BrowseSitePreview As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BrowseSite As System.Windows.Forms.ToolStripButton
     Friend WithEvents EdSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents EditTabs As System.Windows.Forms.TabControl
     Friend WithEvents Preview As System.Windows.Forms.WebBrowser
@@ -911,4 +1029,24 @@ Partial Class Main
     Friend WithEvents OpenRecent As System.Windows.Forms.MenuItem
     Friend WithEvents RecentSep As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
+    Friend WithEvents SendFeedback As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
+    Friend WithEvents BrowseSiteMnu As System.Windows.Forms.MenuItem
+    Friend WithEvents BrowseSitePreviewMnu As System.Windows.Forms.MenuItem
+    Friend WithEvents OpenOutputMnu As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
+    Friend WithEvents EditMenu As System.Windows.Forms.MenuItem
+    Friend WithEvents Undo As System.Windows.Forms.MenuItem
+    Friend WithEvents Redo As System.Windows.Forms.MenuItem
+    Friend WithEvents EditSep As System.Windows.Forms.MenuItem
+    Friend WithEvents Cut As System.Windows.Forms.MenuItem
+    Friend WithEvents Copy As System.Windows.Forms.MenuItem
+    Friend WithEvents Paste As System.Windows.Forms.MenuItem
+    Friend WithEvents Delete As System.Windows.Forms.MenuItem
+    Friend WithEvents EditSep2 As System.Windows.Forms.MenuItem
+    Friend WithEvents SelectAll As System.Windows.Forms.MenuItem
+    Friend WithEvents EditSep3 As System.Windows.Forms.MenuItem
+    Friend WithEvents InsertConditional As System.Windows.Forms.MenuItem
 End Class

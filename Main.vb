@@ -50,8 +50,12 @@ Public Class Main
         SanitaryBuild.Enabled = (SiteTree.Nodes.Count > 0)
 
         OpenOutput.Enabled = (SiteTree.Nodes.Count > 0)
-        BrowseOutput.Enabled = (SiteTree.Nodes.Count > 0)
-        BrowseOutputExt.Enabled = (SiteTree.Nodes.Count > 0)
+        BrowseSitePreview.Enabled = (SiteTree.Nodes.Count > 0)
+        BrowseSite.Enabled = (SiteTree.Nodes.Count > 0)
+
+        OpenOutputMnu.Enabled = (SiteTree.Nodes.Count > 0)
+        BrowseSiteMnu.Enabled = (SiteTree.Nodes.Count > 0)
+        BrowseSitePreviewMnu.Enabled = (SiteTree.Nodes.Count > 0)
     End Sub
 
     Private Sub iconTheme()
@@ -1168,11 +1172,14 @@ Public Class Main
         Next
     End Sub
 
-    Private Sub OpenDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenOutput.Click
-        Process.Start(SiteTree.Nodes(0).Text & "\out\")
+    Private Sub OpenDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenOutput.Click, OpenOutputMnu.Click
+        Try
+            Process.Start(SiteTree.Nodes(0).Text & "\out\")
+        Catch ex As Exception
+        End Try
     End Sub
 
-    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseOutput.Click
+    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click, BrowseSitePreviewMnu.Click
         If My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.html") Then
             Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.html")
         Else
@@ -1304,7 +1311,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseOutputExt.Click
+    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click, BrowseSiteMnu.Click
         Dim path = SiteTree.Nodes(0).Text & "\out\"
         If My.Computer.FileSystem.FileExists(path & "index.html") Then
             path &= "index.html"
@@ -1312,7 +1319,10 @@ Public Class Main
         If My.Computer.FileSystem.FileExists(path & "index.htm") Then
             path &= "index.htm"
         End If
-        Process.Start(path)
+        Try
+            Process.Start(path)
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub AttributeTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles AttributeTree.ItemDrag
@@ -1394,5 +1404,85 @@ Public Class Main
     Private Sub ClearRecents_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClearRecents.Click
         My.Settings.recents = New System.Collections.Specialized.StringCollection
         updateRecents()
+    End Sub
+
+    Private Sub SendFeedback_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SendFeedback.Click
+        Process.Start("https://github.com/dotcomboom/AutoSite-XL/issues")
+    End Sub
+
+    Private Function activeEditor()
+        Try
+            For Each c In EditTabs.SelectedTab.Controls
+                If c.GetType() Is GetType(Editor) Then
+                    Dim edit As Editor = c
+                    Return edit
+                End If
+            Next
+        Catch ex As Exception
+        End Try
+        Return Nothing
+    End Function
+
+    Private Sub EditMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditMenu.Popup
+        Dim edit = activeEditor()
+        If edit Is Nothing Then
+            For Each item As MenuItem In EditMenu.MenuItems
+                item.Enabled = False
+            Next
+        Else
+            For Each item As MenuItem In EditMenu.MenuItems
+                item.Enabled = True
+            Next
+            Delete.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Undo.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doUndo()
+        End If
+    End Sub
+
+    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doRedo()
+        End If
+    End Sub
+
+    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doCut()
+        End If
+    End Sub
+
+    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doCopy()
+        End If
+    End Sub
+
+    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doPaste()
+        End If
+    End Sub
+
+    Private Sub SelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SelectAll.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doSelectAll()
+        End If
+    End Sub
+
+    Private Sub InsertConditional_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InsertConditional.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doInsertConditional()
+        End If
     End Sub
 End Class

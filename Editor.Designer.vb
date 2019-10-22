@@ -54,11 +54,11 @@ Partial Class Editor
         Me.Cut = New System.Windows.Forms.MenuItem
         Me.Copy = New System.Windows.Forms.MenuItem
         Me.Paste = New System.Windows.Forms.MenuItem
-        Me.Delete = New System.Windows.Forms.MenuItem
         Me.ConSep2 = New System.Windows.Forms.MenuItem
         Me.SelectAll = New System.Windows.Forms.MenuItem
         Me.ConSep3 = New System.Windows.Forms.MenuItem
         Me.InsertConditional = New System.Windows.Forms.MenuItem
+        Me.Delete = New System.Windows.Forms.MenuItem
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -254,6 +254,7 @@ Partial Class Editor
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Code.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
@@ -305,12 +306,6 @@ Partial Class Editor
         Me.Paste.Index = 5
         Me.Paste.Text = "Paste"
         '
-        'Delete
-        '
-        Me.Delete.Enabled = False
-        Me.Delete.Index = 6
-        Me.Delete.Text = "Delete"
-        '
         'ConSep2
         '
         Me.ConSep2.Index = 7
@@ -330,6 +325,12 @@ Partial Class Editor
         '
         Me.InsertConditional.Index = 10
         Me.InsertConditional.Text = "Insert Conditional..."
+        '
+        'Delete
+        '
+        Me.Delete.Enabled = False
+        Me.Delete.Index = 6
+        Me.Delete.Text = "Delete"
         '
         'Editor
         '
@@ -360,7 +361,6 @@ Partial Class Editor
     Friend WithEvents Paste As System.Windows.Forms.MenuItem
     Friend WithEvents ConSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents ConSep As System.Windows.Forms.MenuItem
-    Friend WithEvents Delete As System.Windows.Forms.MenuItem
     Friend WithEvents SelectAll As System.Windows.Forms.MenuItem
     Friend WithEvents Sep2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CutBtn As System.Windows.Forms.ToolStripButton
@@ -382,5 +382,6 @@ Partial Class Editor
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents Sep5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ViewOutput As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Delete As System.Windows.Forms.MenuItem
 
 End Class

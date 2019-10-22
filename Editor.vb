@@ -46,11 +46,11 @@ Public Class Editor
         End Try
     End Sub
 
-    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UndoBtn.Click, Undo.Click
+    Public Sub doUndo() Handles UndoBtn.Click, Undo.Click
         Code.Undo()
     End Sub
 
-    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RedoBtn.Click, Redo.Click
+    Public Sub doRedo() Handles RedoBtn.Click, Redo.Click
         Code.Redo()
     End Sub
 
@@ -137,19 +137,19 @@ Public Class Editor
         End If
     End Sub
 
-    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click, CutBtn.Click
+    Public Sub doCut() Handles Cut.Click, CutBtn.Click
         Code.Cut()
     End Sub
 
-    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click, CopyBtn.Click
+    Public Sub doCopy() Handles Copy.Click, CopyBtn.Click
         Code.Copy()
     End Sub
 
-    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click, PasteBtn.Click
+    Public Sub doPaste() Handles Paste.Click, PasteBtn.Click
         Code.Paste()
     End Sub
 
-    Private Sub SelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SelectAll.Click
+    Public Sub doSelectAll() Handles SelectAll.Click
         Code.SelectAll()
     End Sub
 
@@ -157,21 +157,21 @@ Public Class Editor
         Main.DoSaveAll()
     End Sub
 
-    Private Sub doFind() Handles Find.Click
+    Public Sub doFind() Handles Find.Click
         Code.ShowFindDialog()
     End Sub
 
-    Private Sub doGoto() Handles GTo.Click
+    Public Sub doGoto() Handles GTo.Click
         Code.ShowGoToDialog()
     End Sub
 
-    Private Sub doReplace() Handles Replace.Click
+    Public Sub doReplace() Handles Replace.Click
         Code.ShowReplaceDialog()
     End Sub
 
     Public template_cache As New Dictionary(Of String, String)()
 
-    Private Sub doPreview() Handles Preview.ButtonClick
+    Public Sub doPreview() Handles Preview.ButtonClick
         Dim page = ""
         If Me.Parent.Text.EndsWith(".md") Then
             page = CommonMark.CommonMarkConverter.Convert(Code.Text)
@@ -306,14 +306,14 @@ Public Class Editor
         e.Effect = DragDropEffects.Link
     End Sub
 
-    Private Sub InsertConditional_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InsertConditional.Click
+    Public Sub doInsertConditional() Handles InsertConditional.Click
         Dim conditionals = New AddConditional
         If conditionals.ShowDialog() = DialogResult.OK Then
             Code.InsertText(conditionals.output)
         End If
     End Sub
 
-    Private Sub ViewOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutput.Click
+    Public Sub ViewOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutput.Click
         Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
         If rel.EndsWith(".md") Then
             rel = Main.ReplaceLast(rel, ".md", ".html")
@@ -323,5 +323,9 @@ Public Class Editor
 
     Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Build.Click
         Main.doBuild()
+    End Sub
+
+    Private Sub Delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Delete.Click
+        ' NYI
     End Sub
 End Class

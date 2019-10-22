@@ -308,8 +308,4 @@ Public Class Editor
     Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Build.Click
         Main.doBuild()
     End Sub
-
-    Private Sub Delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        ' NYI
-    End Sub
 End Class

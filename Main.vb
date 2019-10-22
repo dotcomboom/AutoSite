@@ -1446,8 +1446,10 @@ Public Class Main
         Dim edit = activeEditor()
         If edit Is Nothing Then
             PreviewPage.Enabled = False
+            ViewFileOutput.Enabled = False
         Else
             PreviewPage.Enabled = True
+            ViewFileOutput.Enabled = True
         End If
     End Sub
 

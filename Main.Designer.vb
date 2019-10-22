@@ -372,7 +372,7 @@ Partial Class Main
         'ViewMenu
         '
         Me.ViewMenu.Index = 2
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem, Me.MenuItem5, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu, Me.ViewSep3, Me.PreviewPage, Me.ViewFileOutput})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem, Me.MenuItem5, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
         Me.ViewMenu.Text = "&View"
         '
         'ExplorerPanel
@@ -439,12 +439,12 @@ Partial Class Main
         '
         'BrowseSiteMnu
         '
-        Me.BrowseSiteMnu.Index = 8
+        Me.BrowseSiteMnu.Index = 11
         Me.BrowseSiteMnu.Text = "Browse Site in Default Browser"
         '
         'BrowseSitePreviewMnu
         '
-        Me.BrowseSitePreviewMnu.Index = 9
+        Me.BrowseSitePreviewMnu.Index = 12
         Me.BrowseSitePreviewMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftP
         Me.BrowseSitePreviewMnu.Text = "Browse Site in Preview"
         '
@@ -455,13 +455,13 @@ Partial Class Main
         '
         'PreviewPage
         '
-        Me.PreviewPage.Index = 11
+        Me.PreviewPage.Index = 8
         Me.PreviewPage.Shortcut = System.Windows.Forms.Shortcut.CtrlP
         Me.PreviewPage.Text = "Preview File"
         '
         'ViewFileOutput
         '
-        Me.ViewFileOutput.Index = 12
+        Me.ViewFileOutput.Index = 9
         Me.ViewFileOutput.Shortcut = System.Windows.Forms.Shortcut.CtrlO
         Me.ViewFileOutput.Text = "View Output"
         '

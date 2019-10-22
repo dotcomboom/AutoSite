@@ -253,6 +253,7 @@ Partial Class Editor
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Code.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
@@ -306,22 +307,22 @@ Partial Class Editor
         '
         'ConSep2
         '
-        Me.ConSep2.Index = 6
+        Me.ConSep2.Index = 7
         Me.ConSep2.Text = "-"
         '
         'SelectAll
         '
-        Me.SelectAll.Index = 7
+        Me.SelectAll.Index = 8
         Me.SelectAll.Text = "Select All"
         '
         'ConSep3
         '
-        Me.ConSep3.Index = 8
+        Me.ConSep3.Index = 9
         Me.ConSep3.Text = "-"
         '
         'InsertConditional
         '
-        Me.InsertConditional.Index = 9
+        Me.InsertConditional.Index = 10
         Me.InsertConditional.Text = "Insert Conditional..."
         '
         'Editor

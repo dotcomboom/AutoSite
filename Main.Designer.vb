@@ -177,7 +177,7 @@ Partial Class Main
         '
         'MenuBar
         '
-        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.FormatMenu, Me.BuildMenu, Me.HelpMenu})
+        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu})
         '
         'FileMenu
         '
@@ -371,7 +371,7 @@ Partial Class Main
         '
         'ViewMenu
         '
-        Me.ViewMenu.Index = 2
+        Me.ViewMenu.Index = 3
         Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem, Me.MenuItem5, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
         Me.ViewMenu.Text = "&View"
         '
@@ -467,7 +467,7 @@ Partial Class Main
         '
         'FormatMenu
         '
-        Me.FormatMenu.Index = 3
+        Me.FormatMenu.Index = 2
         Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatMenuSep, Me.SyntaxHighlight, Me.LivePreview, Me.FormatSep2, Me.EditorFont})
         Me.FormatMenu.Text = "F&ormat"
         '

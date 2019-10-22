@@ -172,6 +172,9 @@ Public Class Main
         ExSplit.Panel1Collapsed = Not (ExplorerPanel.Checked)
         ExSplit.Panel2Collapsed = Not (BuildPanel.Checked)
 
+        EditMenu.Visible = EditorPanel.Checked
+        FormatMenu.Visible = EditorPanel.Checked
+
         My.Settings.explorerOpen = ExplorerPanel.Checked
         My.Settings.editorOpen = EditorPanel.Checked
         My.Settings.browserOpen = PreviewPanel.Checked

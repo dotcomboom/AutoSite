@@ -578,12 +578,12 @@ Partial Class Main
         '
         'MenuItem2
         '
-        Me.MenuItem2.Index = 2
+        Me.MenuItem2.Index = 3
         Me.MenuItem2.Text = "-"
         '
         'AboutItem
         '
-        Me.AboutItem.Index = 3
+        Me.AboutItem.Index = 4
         Me.AboutItem.Text = "About AutoSite XL"
         '
         'XP
@@ -868,7 +868,7 @@ Partial Class Main
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(294, 128)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
         'MapPage
         '

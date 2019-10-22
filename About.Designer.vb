@@ -59,6 +59,7 @@ Partial Class About
         'OK
         '
         Me.OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OK.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.OK.Location = New System.Drawing.Point(561, 433)
         Me.OK.Margin = New System.Windows.Forms.Padding(4)
         Me.OK.Name = "OK"

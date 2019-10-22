@@ -186,7 +186,7 @@ Partial Class Editor
         Me.GTo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.GTo.Name = "GTo"
         Me.GTo.Size = New System.Drawing.Size(23, 24)
-        Me.GTo.Text = "Goto"
+        Me.GTo.Text = "Go To"
         '
         'Replace
         '

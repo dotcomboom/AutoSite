@@ -656,10 +656,11 @@ SOFTWARE.</value>
    + Sanitary Build added
    + Engine selection moved to top-level of Build menu
    + Up to 5 recent sites now shown in File menu
-   + More Editor and Apricot functions added to main menu
+   + Much more functions can be done from the main menu; among them, Editor-related tasks (Edit menu), opening the output folder, and previews
+   + Send Feedback button added; goes to Github issues
    - Opening a site will close the currently open one first
    - About dialog is sizable again, can now be closed with Escape key
-   - Main menu is now Alt friendly
+   - Main menu is now Alt-key friendly
 
 0.9.7 - Cola Float:
    + More editor keyboard shortcuts added! CTRL+F for Find, CTRL+H for Replace, CTRL+G for Goto, CTRL+P for Preview

@@ -449,7 +449,6 @@ Partial Class Main
         'ViewFileOutput
         '
         Me.ViewFileOutput.Index = 9
-        Me.ViewFileOutput.Shortcut = System.Windows.Forms.Shortcut.CtrlO
         Me.ViewFileOutput.Text = "View Output"
         '
         'ViewSep3

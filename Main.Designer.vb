@@ -142,6 +142,9 @@ Partial Class Main
         Me.BrowseSite = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.SelectFont = New System.Windows.Forms.FontDialog
+        Me.MenuItem5 = New System.Windows.Forms.MenuItem
+        Me.Website = New System.Windows.Forms.MenuItem
+        Me.GitHub = New System.Windows.Forms.MenuItem
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -562,7 +565,7 @@ Partial Class Main
         'HelpMenu
         '
         Me.HelpMenu.Index = 5
-        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem3, Me.SendFeedback, Me.MenuItem2, Me.AboutItem})
+        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem3, Me.MenuItem5, Me.Website, Me.GitHub, Me.SendFeedback, Me.MenuItem2, Me.AboutItem})
         Me.HelpMenu.Text = "&Help"
         '
         'MenuItem3
@@ -573,17 +576,17 @@ Partial Class Main
         '
         'SendFeedback
         '
-        Me.SendFeedback.Index = 1
+        Me.SendFeedback.Index = 4
         Me.SendFeedback.Text = "Send Feedback"
         '
         'MenuItem2
         '
-        Me.MenuItem2.Index = 2
+        Me.MenuItem2.Index = 5
         Me.MenuItem2.Text = "-"
         '
         'AboutItem
         '
-        Me.AboutItem.Index = 3
+        Me.AboutItem.Index = 6
         Me.AboutItem.Text = "About AutoSite XL"
         '
         'XP
@@ -976,6 +979,21 @@ Partial Class Main
         Me.CoreSplit.SplitterWidth = 5
         Me.CoreSplit.TabIndex = 4
         '
+        'MenuItem5
+        '
+        Me.MenuItem5.Index = 1
+        Me.MenuItem5.Text = "-"
+        '
+        'Website
+        '
+        Me.Website.Index = 2
+        Me.Website.Text = "AutoSite XL Home"
+        '
+        'GitHub
+        '
+        Me.GitHub.Index = 3
+        Me.GitHub.Text = "GitHub Repository"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1125,4 +1143,7 @@ Partial Class Main
     Friend WithEvents CloseFile As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem6 As System.Windows.Forms.MenuItem
     Friend WithEvents ViewFileOutput As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
+    Friend WithEvents Website As System.Windows.Forms.MenuItem
+    Friend WithEvents GitHub As System.Windows.Forms.MenuItem
 End Class

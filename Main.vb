@@ -1564,4 +1564,12 @@ Public Class Main
             edit.doViewOutput()
         End If
     End Sub
+
+    Private Sub Website_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Website.Click
+        Process.Start("https://dotcomboom.somnolescent.net/autosite/xl")
+    End Sub
+
+    Private Sub GitHub_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GitHub.Click
+        Process.Start("https://github.com/dotcomboom/AutoSite-XL")
+    End Sub
 End Class

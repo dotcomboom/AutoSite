@@ -202,7 +202,7 @@ Partial Class About
         Me.Name = "About"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "About"
+        Me.Text = "About AutoSite XL"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tabs.ResumeLayout(False)
         Me.License.ResumeLayout(False)

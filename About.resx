@@ -657,7 +657,7 @@ SOFTWARE.</value>
    + Engine selection moved to top-level of Build menu
    + Up to 5 recent sites now shown in File menu
    + Many more functions can be done from the main menu; among them, Editor-related tasks (Edit menu), opening the output folder, and previews
-   + Website (AutoSite XL Home), GitHub, and Send Feedback added to Help menu
+   + Website, GitHub, and Send Feedback added to Help menu
    - Opening a site will close the currently open one first
    - About dialog is sizable again, can now be closed with Escape key, other changes
    - Main menu is now Alt-key friendly

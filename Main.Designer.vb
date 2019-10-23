@@ -987,7 +987,7 @@ Partial Class Main
         'Website
         '
         Me.Website.Index = 2
-        Me.Website.Text = "AutoSite XL Home"
+        Me.Website.Text = "Website"
         '
         'GitHub
         '

@@ -26,10 +26,6 @@
         Process.Start("https://github.com/dotcomboom/AutoSite/")
     End Sub
 
-    Private Sub PyWebsiteLink_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles PyWebsiteLink.LinkClicked
-        Process.Start("https://dotcomboom.somnolescent.net/autosite")
-    End Sub
-
     Private Sub About_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()

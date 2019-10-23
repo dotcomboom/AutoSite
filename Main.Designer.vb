@@ -65,12 +65,12 @@ Partial Class Main
         Me.BuildPanel = New System.Windows.Forms.MenuItem
         Me.EditorPanel = New System.Windows.Forms.MenuItem
         Me.PreviewPanel = New System.Windows.Forms.MenuItem
-        Me.ViewMenuSep = New System.Windows.Forms.MenuItem
+        Me.ViewSep = New System.Windows.Forms.MenuItem
         Me.IconThemeMenu = New System.Windows.Forms.MenuItem
         Me.VS2017item = New System.Windows.Forms.MenuItem
         Me.XPitem = New System.Windows.Forms.MenuItem
         Me.RefreshItem = New System.Windows.Forms.MenuItem
-        Me.MenuItem5 = New System.Windows.Forms.MenuItem
+        Me.ViewSep2 = New System.Windows.Forms.MenuItem
         Me.PreviewPage = New System.Windows.Forms.MenuItem
         Me.ViewFileOutput = New System.Windows.Forms.MenuItem
         Me.ViewSep3 = New System.Windows.Forms.MenuItem
@@ -286,7 +286,7 @@ Partial Class Main
         'EditMenu
         '
         Me.EditMenu.Index = 1
-        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.Find, Me.Replace, Me.GoToMnu, Me.MenuItem10, Me.SelectAll, Me.EditSep4, Me.InsertConditional})
+        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.MenuItem10, Me.SelectAll, Me.EditSep2, Me.Find, Me.Replace, Me.GoToMnu, Me.EditSep4, Me.InsertConditional})
         Me.EditMenu.Text = "&Edit"
         '
         'Undo
@@ -326,35 +326,35 @@ Partial Class Main
         '
         'EditSep2
         '
-        Me.EditSep2.Index = 6
+        Me.EditSep2.Index = 8
         Me.EditSep2.Text = "-"
         '
         'Find
         '
-        Me.Find.Index = 7
+        Me.Find.Index = 9
         Me.Find.Shortcut = System.Windows.Forms.Shortcut.CtrlF
         Me.Find.Text = "Find..."
         '
         'Replace
         '
-        Me.Replace.Index = 8
+        Me.Replace.Index = 10
         Me.Replace.Shortcut = System.Windows.Forms.Shortcut.CtrlH
         Me.Replace.Text = "Replace..."
         '
         'GoToMnu
         '
-        Me.GoToMnu.Index = 9
+        Me.GoToMnu.Index = 11
         Me.GoToMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlG
         Me.GoToMnu.Text = "Go To..."
         '
         'MenuItem10
         '
-        Me.MenuItem10.Index = 10
+        Me.MenuItem10.Index = 6
         Me.MenuItem10.Text = "-"
         '
         'SelectAll
         '
-        Me.SelectAll.Index = 11
+        Me.SelectAll.Index = 7
         Me.SelectAll.Shortcut = System.Windows.Forms.Shortcut.CtrlA
         Me.SelectAll.Text = "Select All"
         '
@@ -372,7 +372,7 @@ Partial Class Main
         'ViewMenu
         '
         Me.ViewMenu.Index = 3
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewMenuSep, Me.IconThemeMenu, Me.RefreshItem, Me.MenuItem5, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewSep, Me.IconThemeMenu, Me.RefreshItem, Me.ViewSep2, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
         Me.ViewMenu.Text = "&View"
         '
         'ExplorerPanel
@@ -403,10 +403,10 @@ Partial Class Main
         Me.PreviewPanel.Shortcut = System.Windows.Forms.Shortcut.Alt4
         Me.PreviewPanel.Text = "Preview"
         '
-        'ViewMenuSep
+        'ViewSep
         '
-        Me.ViewMenuSep.Index = 4
-        Me.ViewMenuSep.Text = "-"
+        Me.ViewSep.Index = 4
+        Me.ViewSep.Text = "-"
         '
         'IconThemeMenu
         '
@@ -432,10 +432,10 @@ Partial Class Main
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
         Me.RefreshItem.Text = "Refresh Explorer"
         '
-        'MenuItem5
+        'ViewSep2
         '
-        Me.MenuItem5.Index = 7
-        Me.MenuItem5.Text = "-"
+        Me.ViewSep2.Index = 7
+        Me.ViewSep2.Text = "-"
         '
         'PreviewPage
         '
@@ -1084,7 +1084,7 @@ Partial Class Main
     Friend WithEvents NewJSCon As System.Windows.Forms.MenuItem
     Friend WithEvents NewTXTCon As System.Windows.Forms.MenuItem
     Friend WithEvents BuildPanel As System.Windows.Forms.MenuItem
-    Friend WithEvents ViewMenuSep As System.Windows.Forms.MenuItem
+    Friend WithEvents ViewSep As System.Windows.Forms.MenuItem
     Friend WithEvents SanitaryBuild As System.Windows.Forms.MenuItem
     Friend WithEvents BuildSep As System.Windows.Forms.MenuItem
     Friend WithEvents Recent1 As System.Windows.Forms.MenuItem
@@ -1103,7 +1103,7 @@ Partial Class Main
     Friend WithEvents BrowseSiteMnu As System.Windows.Forms.MenuItem
     Friend WithEvents BrowseSitePreviewMnu As System.Windows.Forms.MenuItem
     Friend WithEvents OpenOutputMnu As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
+    Friend WithEvents ViewSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents EditMenu As System.Windows.Forms.MenuItem
     Friend WithEvents Undo As System.Windows.Forms.MenuItem
     Friend WithEvents Redo As System.Windows.Forms.MenuItem

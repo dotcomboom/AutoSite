@@ -29,13 +29,12 @@ Partial Class About
         Me.Version = New System.Windows.Forms.Label
         Me.GithubLink = New System.Windows.Forms.LinkLabel
         Me.WebsiteLink = New System.Windows.Forms.LinkLabel
-        Me.Py3AutoSite = New System.Windows.Forms.Label
-        Me.PyWebsiteLink = New System.Windows.Forms.LinkLabel
-        Me.PyGithubLink = New System.Windows.Forms.LinkLabel
         Me.Tabs = New System.Windows.Forms.TabControl
         Me.License = New System.Windows.Forms.TabPage
         Me.Changelog = New System.Windows.Forms.TabPage
         Me.ChangelogBox = New System.Windows.Forms.RichTextBox
+        Me.LegacyAutoSite = New System.Windows.Forms.Label
+        Me.PyGithubLink = New System.Windows.Forms.LinkLabel
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tabs.SuspendLayout()
         Me.License.SuspendLayout()
@@ -96,10 +95,10 @@ Partial Class About
         Me.GithubLink.Location = New System.Drawing.Point(16, 149)
         Me.GithubLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.GithubLink.Name = "GithubLink"
-        Me.GithubLink.Size = New System.Drawing.Size(50, 17)
+        Me.GithubLink.Size = New System.Drawing.Size(52, 17)
         Me.GithubLink.TabIndex = 4
         Me.GithubLink.TabStop = True
-        Me.GithubLink.Text = "Github"
+        Me.GithubLink.Text = "GitHub"
         '
         'WebsiteLink
         '
@@ -111,37 +110,6 @@ Partial Class About
         Me.WebsiteLink.TabIndex = 5
         Me.WebsiteLink.TabStop = True
         Me.WebsiteLink.Text = "Website"
-        '
-        'Py3AutoSite
-        '
-        Me.Py3AutoSite.Location = New System.Drawing.Point(16, 207)
-        Me.Py3AutoSite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Py3AutoSite.Name = "Py3AutoSite"
-        Me.Py3AutoSite.Size = New System.Drawing.Size(81, 37)
-        Me.Py3AutoSite.TabIndex = 7
-        Me.Py3AutoSite.Text = "Python3 AutoSite"
-        '
-        'PyWebsiteLink
-        '
-        Me.PyWebsiteLink.AutoSize = True
-        Me.PyWebsiteLink.Location = New System.Drawing.Point(16, 271)
-        Me.PyWebsiteLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.PyWebsiteLink.Name = "PyWebsiteLink"
-        Me.PyWebsiteLink.Size = New System.Drawing.Size(59, 17)
-        Me.PyWebsiteLink.TabIndex = 9
-        Me.PyWebsiteLink.TabStop = True
-        Me.PyWebsiteLink.Text = "Website"
-        '
-        'PyGithubLink
-        '
-        Me.PyGithubLink.AutoSize = True
-        Me.PyGithubLink.Location = New System.Drawing.Point(16, 245)
-        Me.PyGithubLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.PyGithubLink.Name = "PyGithubLink"
-        Me.PyGithubLink.Size = New System.Drawing.Size(50, 17)
-        Me.PyGithubLink.TabIndex = 8
-        Me.PyGithubLink.TabStop = True
-        Me.PyGithubLink.Text = "Github"
         '
         'Tabs
         '
@@ -195,6 +163,26 @@ Partial Class About
         Me.ChangelogBox.TabIndex = 1
         Me.ChangelogBox.Text = resources.GetString("ChangelogBox.Text")
         '
+        'LegacyAutoSite
+        '
+        Me.LegacyAutoSite.Location = New System.Drawing.Point(16, 207)
+        Me.LegacyAutoSite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LegacyAutoSite.Name = "LegacyAutoSite"
+        Me.LegacyAutoSite.Size = New System.Drawing.Size(81, 37)
+        Me.LegacyAutoSite.TabIndex = 7
+        Me.LegacyAutoSite.Text = "Legacy AutoSite"
+        '
+        'PyGithubLink
+        '
+        Me.PyGithubLink.AutoSize = True
+        Me.PyGithubLink.Location = New System.Drawing.Point(16, 245)
+        Me.PyGithubLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.PyGithubLink.Name = "PyGithubLink"
+        Me.PyGithubLink.Size = New System.Drawing.Size(52, 17)
+        Me.PyGithubLink.TabIndex = 8
+        Me.PyGithubLink.TabStop = True
+        Me.PyGithubLink.Text = "GitHub"
+        '
         'About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -202,9 +190,8 @@ Partial Class About
         Me.CancelButton = Me.OK
         Me.ClientSize = New System.Drawing.Size(677, 479)
         Me.Controls.Add(Me.Tabs)
-        Me.Controls.Add(Me.PyWebsiteLink)
         Me.Controls.Add(Me.PyGithubLink)
-        Me.Controls.Add(Me.Py3AutoSite)
+        Me.Controls.Add(Me.LegacyAutoSite)
         Me.Controls.Add(Me.WebsiteLink)
         Me.Controls.Add(Me.GithubLink)
         Me.Controls.Add(Me.Version)
@@ -230,11 +217,10 @@ Partial Class About
     Friend WithEvents Version As System.Windows.Forms.Label
     Friend WithEvents GithubLink As System.Windows.Forms.LinkLabel
     Friend WithEvents WebsiteLink As System.Windows.Forms.LinkLabel
-    Friend WithEvents Py3AutoSite As System.Windows.Forms.Label
-    Friend WithEvents PyWebsiteLink As System.Windows.Forms.LinkLabel
-    Friend WithEvents PyGithubLink As System.Windows.Forms.LinkLabel
     Friend WithEvents Tabs As System.Windows.Forms.TabControl
     Friend WithEvents License As System.Windows.Forms.TabPage
     Friend WithEvents Changelog As System.Windows.Forms.TabPage
     Friend WithEvents ChangelogBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents LegacyAutoSite As System.Windows.Forms.Label
+    Friend WithEvents PyGithubLink As System.Windows.Forms.LinkLabel
 End Class

@@ -4,6 +4,9 @@ Public Class AddConditional
     Public output = ""
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
+        If Empty.Checked Then
+            Value.Text = ""
+        End If
         Dim ineq = ""
         If Yesnt.Checked Then
             ineq = "!"
@@ -49,5 +52,9 @@ Public Class AddConditional
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         End If
+    End Sub
+
+    Private Sub Empty_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Empty.CheckedChanged
+        Value.Enabled = (Not Empty.Checked)
     End Sub
 End Class

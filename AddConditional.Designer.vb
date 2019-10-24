@@ -35,6 +35,7 @@ Partial Class AddConditional
         Me.Display = New FastColoredTextBoxNS.FastColoredTextBox
         Me.Yesnt = New System.Windows.Forms.CheckBox
         Me.Value = New System.Windows.Forms.ComboBox
+        Me.Empty = New System.Windows.Forms.CheckBox
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.AttIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Display, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,7 +49,7 @@ Partial Class AddConditional
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(183, 337)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(183, 358)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -120,7 +121,7 @@ Partial Class AddConditional
         'PassLabel
         '
         Me.PassLabel.AutoSize = True
-        Me.PassLabel.Location = New System.Drawing.Point(13, 172)
+        Me.PassLabel.Location = New System.Drawing.Point(12, 193)
         Me.PassLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PassLabel.Name = "PassLabel"
         Me.PassLabel.Size = New System.Drawing.Size(214, 17)
@@ -130,7 +131,7 @@ Partial Class AddConditional
         'Display
         '
         Me.Display.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Display.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         Me.Display.AutoScrollMinSize = New System.Drawing.Size(31, 18)
         Me.Display.BackBrush = Nothing
         Me.Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -139,11 +140,12 @@ Partial Class AddConditional
         Me.Display.CommentPrefix = Nothing
         Me.Display.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Display.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Display.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Display.IsReplaceMode = False
         Me.Display.Language = FastColoredTextBoxNS.Language.HTML
         Me.Display.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
         Me.Display.LeftBracket2 = Global.Microsoft.VisualBasic.ChrW(40)
-        Me.Display.Location = New System.Drawing.Point(17, 196)
+        Me.Display.Location = New System.Drawing.Point(16, 217)
         Me.Display.Margin = New System.Windows.Forms.Padding(4)
         Me.Display.Name = "Display"
         Me.Display.Paddings = New System.Windows.Forms.Padding(0)
@@ -175,13 +177,24 @@ Partial Class AddConditional
         Me.Value.TabIndex = 3
         Me.Value.Text = "index.md"
         '
+        'Empty
+        '
+        Me.Empty.AutoSize = True
+        Me.Empty.Location = New System.Drawing.Point(80, 163)
+        Me.Empty.Name = "Empty"
+        Me.Empty.Size = New System.Drawing.Size(69, 21)
+        Me.Empty.TabIndex = 12
+        Me.Empty.Text = "Empty"
+        Me.Empty.UseVisualStyleBackColor = True
+        '
         'AddConditional
         '
         Me.AcceptButton = Me.OK_Button
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(391, 388)
+        Me.ClientSize = New System.Drawing.Size(391, 409)
+        Me.Controls.Add(Me.Empty)
         Me.Controls.Add(Me.Value)
         Me.Controls.Add(Me.Yesnt)
         Me.Controls.Add(Me.Display)
@@ -217,5 +230,6 @@ Partial Class AddConditional
     Friend WithEvents Display As FastColoredTextBoxNS.FastColoredTextBox
     Friend WithEvents Yesnt As System.Windows.Forms.CheckBox
     Friend WithEvents Value As System.Windows.Forms.ComboBox
+    Friend WithEvents Empty As System.Windows.Forms.CheckBox
 
 End Class

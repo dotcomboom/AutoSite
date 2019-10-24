@@ -653,6 +653,7 @@ SOFTWARE.</value>
   <data name="ChangelogBox.Text" xml:space="preserve">
     <value>0.9.8.1 - Malt:
    + Conditionals can now check if attributes are empty/non-existent properly
+   + Empty option added to Add Conditional dialog
 
 0.9.8 - Milkshake:
    + Double clicking any file while the editor is collapsed will open it with the default program/shell behavior

@@ -651,7 +651,10 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.8.1 - Malt:
+    <value>0.9.8.2 - Chocolate Malt:
+   + Plain UTF-8 (no BOM) is now used
+
+0.9.8.1 - Malt:
    + Conditionals can now check if attributes are empty/non-existent properly
    + Empty option added to Add Conditional dialog
 

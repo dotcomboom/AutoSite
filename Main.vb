@@ -9,6 +9,7 @@ Public Class Main
     Public openFiles As New ArrayList
     Public wTitle = "AutoSite XL"
     Public editExtensions() As String = {"txt", "md", "css", "ts", "js", "html", "htm", "php", "xml", "json", "csv", "lass", "sass"}
+    Public encodingType As Encoding = New UTF8Encoding(False)
 
     ' https://stackoverflow.com/a/8182507
     Sub walkTree(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal parentNode As TreeNode, ByVal key As String, ByVal incRoot As Boolean)
@@ -893,7 +894,7 @@ Public Class Main
             Dim attribs As New Dictionary(Of String, String)()
             attribs.Add("template", "default")
             attribs.Add("path", rel.Replace("\", "/"))
-            Dim reader As New StreamReader(file.FullName, Encoding.Default, True)
+            Dim reader As New StreamReader(file.FullName, encodingType, True)
             Dim line As String
             Apricot.ReportProgress(20, "    Reading attributes")
             Do
@@ -1014,7 +1015,7 @@ Public Class Main
             newHtml = Regex.Replace(newHtml, "\[#.*?#\]", "")
             Apricot.ReportProgress(90, "    Saving file")
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
-            My.Computer.FileSystem.WriteAllText(out & rel, newHtml, False)
+            My.Computer.FileSystem.WriteAllText(out & rel, newHtml, False, encodingType)
         Next
         For Each subDir In directory.GetDirectories
             walkInputs(subDir, pattern, input, templates, out)

@@ -33,13 +33,13 @@ Public Class Editor
         'End Using
         'outStream.Dispose()
         Try
-            Code.SaveToFile(path, System.Text.Encoding.UTF8)
+            Code.SaveToFile(path, Main.encodingType)
         Catch
             Try
                 Dim unlocker = New FileStream(path, FileMode.Open)
                 unlocker.Unlock(1, unlocker.Length)
                 unlocker.Close()
-                Code.SaveToFile(path, System.Text.Encoding.UTF8)
+                Code.SaveToFile(path, Main.encodingType)
             Catch ex As Exception
                 MsgBox("The file could not be saved.", MsgBoxStyle.Critical, "AutoSite XL")
             End Try

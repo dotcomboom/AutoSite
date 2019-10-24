@@ -969,6 +969,26 @@ Public Class Main
                     End If
                 End If
 
+                ' check emptiness
+                If fullStr.StartsWith("[" & key & "=]") Then
+                    If attribs.ContainsKey(key) Then
+                        If attribs.Item(key) = "" Then
+                            pass = True
+                        End If
+                    Else
+                        pass = True
+                    End If
+                End If
+                If fullStr.StartsWith("[" & key & "!=]") Then
+                    If attribs.ContainsKey(key) Then
+                        If attribs.Item(key) = "" Then
+                            pass = True
+                        End If
+                    Else
+                        pass = True
+                    End If
+                End If
+
                 If pass Then
                     If equality = True Then
                         newHtml = newHtml.Replace(fullStr, html)

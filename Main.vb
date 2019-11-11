@@ -202,6 +202,29 @@ Public Class Main
             End If
         Next
     End Sub
+    Public Sub openEditor(ByVal path As String)
+        Dim tab As New TabPage
+        tab.Tag = path
+        tab.ToolTipText = tab.Tag
+        tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
+        EditTabs.TabPages.Add(tab)
+        EditTabs.SelectedTab = tab
+        Dim editor As New Editor
+        editor.Parent = tab
+        editor.Dock = DockStyle.Fill
+        editor.Code.Text = editor.ReadAllText(tab.Tag)
+        editor.Code.ClearUndo()
+        editor.Snapshot = editor.Code.Text
+        editor.siteRoot = SiteTree.Nodes.Item(0).Text
+        editor.openFile = tab.Tag
+        If tab.Text.StartsWith("templates\") Then
+            editor.ViewOutput.Enabled = False
+        End If
+        If tab.Text.StartsWith("includes\") Then
+            editor.InsertConditional.Enabled = False
+        End If
+        openFiles.Add(path)
+    End Sub
 
     Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, OpenLink.LinkClicked
         If FolderBrowser.ShowDialog() = DialogResult.OK Then
@@ -366,7 +389,6 @@ Public Class Main
                     foundNode.TreeView.SelectedNode = foundNode
                 End If
             End If
-            Dim box As FastColoredTextBox
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
                 Try
                     If openFiles.Contains(e.Node.Tag) Then
@@ -391,28 +413,7 @@ Public Class Main
                             edit = False
                         End If
                         If edit Then
-                            Dim tab As New TabPage
-                            tab.Tag = e.Node.Tag
-                            tab.ToolTipText = tab.Tag
-                            tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
-                            EditTabs.TabPages.Add(tab)
-                            EditTabs.SelectedTab = tab
-                            Dim editor As New Editor
-                            editor.Parent = tab
-                            editor.Dock = DockStyle.Fill
-                            editor.Code.Text = editor.ReadAllText(tab.Tag)
-                            editor.Code.ClearUndo()
-                            editor.Snapshot = editor.Code.Text
-                            editor.siteRoot = SiteTree.Nodes.Item(0).Text
-                            editor.openFile = tab.Tag
-                            If tab.Text.StartsWith("templates\") Then
-                                editor.ViewOutput.Enabled = False
-                            End If
-                            If tab.Text.StartsWith("includes\") Then
-                                editor.InsertConditional.Enabled = False
-                            End If
-                            box = editor.Code
-                            openFiles.Add(e.Node.Tag)
+                            openEditor(e.Node.Tag)
                         Else
                             Process.Start(e.Node.Tag)
                         End If
@@ -1066,13 +1067,11 @@ Public Class Main
         If e.UserState.GetType() Is GetType(System.String) Then
             BuildProgress.Visible = True
             BuildProgress.Value = e.ProgressPercentage
-            'Me.Text = e.UserState
             Dim s As String = e.UserState
             Dim start = Log.TextLength
             Log.AppendText(e.UserState & vbNewLine)
             Dim length = Log.TextLength - start
             Log.Select(start, length)
-            'Log.SelectionLength = Log.TextLength - Log.SelectionStart
             If s.StartsWith("Apricot") Or s.StartsWith("Finished") Then
                 Log.SelectionFont = New Font(Log.Font, FontStyle.Bold)
                 Log.SelectionColor = Color.Blue
@@ -1086,6 +1085,7 @@ Public Class Main
             If s.Contains("WARN:") Then
                 Log.SelectionColor = Color.OrangeRed
             End If
+            Log.DeselectAll()
         ElseIf e.UserState.GetType() Is GetType(TNode) Then
             Dim tn As TNode = e.UserState
 
@@ -1610,5 +1610,53 @@ Public Class Main
 
     Private Sub GitHub_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GitHub.Click
         Process.Start("https://github.com/dotcomboom/AutoSite-XL")
+    End Sub
+
+    Private Sub OpenContext_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenContext.Click
+        If Not openFiles.Contains(Context.Tag) Then
+            openEditor(Context.Tag)
+        End If
+    End Sub
+
+    Private Sub Context_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Context.Popup
+        Dim edit = False
+        If Context.Tag.StartsWith(".") Then
+            edit = True
+        Else
+            For Each extension In editExtensions
+                If Context.Tag.EndsWith(extension) Then
+                    edit = True
+                    Exit For
+                End If
+            Next
+        End If
+        If EdSplit.Panel1Collapsed Then
+            edit = False
+        End If
+        OpenContext.Visible = edit
+        OpenContext.DefaultItem = edit
+        OpenInDefault.DefaultItem = Not edit
+    End Sub
+
+    Private Sub SaveLog_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveLog.Click
+        If SaveLogDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            Try
+                If SaveLogDialog.FileName.EndsWith(".rtf") Then
+                    Log.SaveFile(SaveLogDialog.FileName)
+                ElseIf SaveLogDialog.FileName.EndsWith(".html") Then
+                    ' not yet implemented
+                    My.Computer.FileSystem.WriteAllText(SaveLogDialog.FileName, Log.Text, False)
+                Else
+                    My.Computer.FileSystem.WriteAllText(SaveLogDialog.FileName, Log.Text, False)
+                End If
+            Catch ex As Exception
+                MsgBox("Something went wrong when trying to save the log:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Failed to save")
+            End Try
+        End If
+    End Sub
+
+    Private Sub MenuStripBridge_Opening(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles LogMenuBridge.Opening
+        LogMenu.Show(Log, Log.PointToClient(MousePosition))
+        e.Cancel = True
     End Sub
 End Class

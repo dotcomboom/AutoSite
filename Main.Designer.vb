@@ -103,6 +103,7 @@ Partial Class Main
         Me.AboutItem = New System.Windows.Forms.MenuItem
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu
+        Me.OpenContext = New System.Windows.Forms.MenuItem
         Me.OpenInDefault = New System.Windows.Forms.MenuItem
         Me.ContextSep = New System.Windows.Forms.MenuItem
         Me.CopyCon = New System.Windows.Forms.MenuItem
@@ -135,6 +136,7 @@ Partial Class Main
         Me.ApricotTabs = New System.Windows.Forms.TabControl
         Me.LogPage = New System.Windows.Forms.TabPage
         Me.Log = New System.Windows.Forms.RichTextBox
+        Me.LogMenuBridge = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.MapPage = New System.Windows.Forms.TabPage
         Me.AttributeTree = New System.Windows.Forms.TreeView
         Me.BuildProgress = New System.Windows.Forms.ProgressBar
@@ -145,7 +147,9 @@ Partial Class Main
         Me.BrowseSite = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.SelectFont = New System.Windows.Forms.FontDialog
-        Me.SaveLog = New System.Windows.Forms.ToolStripButton
+        Me.LogMenu = New System.Windows.Forms.ContextMenu
+        Me.SaveLog = New System.Windows.Forms.MenuItem
+        Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -621,56 +625,61 @@ Partial Class Main
         '
         'Context
         '
-        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenInDefault, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.RenameCon, Me.ContextSep3, Me.NewCon})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenContext, Me.OpenInDefault, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.RenameCon, Me.ContextSep3, Me.NewCon})
+        '
+        'OpenContext
+        '
+        Me.OpenContext.Index = 0
+        Me.OpenContext.Text = "Open"
         '
         'OpenInDefault
         '
-        Me.OpenInDefault.Index = 0
+        Me.OpenInDefault.Index = 1
         Me.OpenInDefault.Text = "Open in Default Program"
         '
         'ContextSep
         '
-        Me.ContextSep.Index = 1
+        Me.ContextSep.Index = 2
         Me.ContextSep.Text = "-"
         '
         'CopyCon
         '
-        Me.CopyCon.Index = 2
+        Me.CopyCon.Index = 3
         Me.CopyCon.Text = "Copy"
         '
         'PasteCon
         '
-        Me.PasteCon.Index = 3
+        Me.PasteCon.Index = 4
         Me.PasteCon.Text = "Paste"
         '
         'AddFilesCon
         '
-        Me.AddFilesCon.Index = 4
+        Me.AddFilesCon.Index = 5
         Me.AddFilesCon.Text = "Add Files..."
         '
         'ContextSep2
         '
-        Me.ContextSep2.Index = 5
+        Me.ContextSep2.Index = 6
         Me.ContextSep2.Text = "-"
         '
         'DeleteCon
         '
-        Me.DeleteCon.Index = 6
+        Me.DeleteCon.Index = 7
         Me.DeleteCon.Text = "Delete"
         '
         'RenameCon
         '
-        Me.RenameCon.Index = 7
+        Me.RenameCon.Index = 8
         Me.RenameCon.Text = "Rename"
         '
         'ContextSep3
         '
-        Me.ContextSep3.Index = 8
+        Me.ContextSep3.Index = 9
         Me.ContextSep3.Text = "-"
         '
         'NewCon
         '
-        Me.NewCon.Index = 9
+        Me.NewCon.Index = 10
         Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.NewSep2, Me.NewCSSCon, Me.NewJSCon, Me.NewTXTCon})
         Me.NewCon.Text = "New"
         '
@@ -879,6 +888,7 @@ Partial Class Main
         '
         Me.Log.BackColor = System.Drawing.SystemColors.Window
         Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Log.ContextMenuStrip = Me.LogMenuBridge
         Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Log.Location = New System.Drawing.Point(4, 4)
         Me.Log.Margin = New System.Windows.Forms.Padding(4)
@@ -887,6 +897,11 @@ Partial Class Main
         Me.Log.Size = New System.Drawing.Size(255, 141)
         Me.Log.TabIndex = 5
         Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        '
+        'LogMenuBridge
+        '
+        Me.LogMenuBridge.Name = "LogMenuBridge"
+        Me.LogMenuBridge.Size = New System.Drawing.Size(61, 4)
         '
         'MapPage
         '
@@ -927,7 +942,7 @@ Partial Class Main
         '
         Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
         Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseSitePreview, Me.BrowseSite, Me.SaveLog})
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseSitePreview, Me.BrowseSite})
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -993,14 +1008,20 @@ Partial Class Main
         Me.CoreSplit.SplitterDistance = 271
         Me.CoreSplit.TabIndex = 4
         '
+        'LogMenu
+        '
+        Me.LogMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.SaveLog})
+        '
         'SaveLog
         '
-        Me.SaveLog.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SaveLog.Image = CType(resources.GetObject("SaveLog.Image"), System.Drawing.Image)
-        Me.SaveLog.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveLog.Name = "SaveLog"
-        Me.SaveLog.Size = New System.Drawing.Size(23, 22)
-        Me.SaveLog.Text = "Save Log"
+        Me.SaveLog.Index = 0
+        Me.SaveLog.Text = "Save..."
+        '
+        'SaveLogDialog
+        '
+        Me.SaveLogDialog.DefaultExt = "rtf"
+        Me.SaveLogDialog.Filter = "Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt"
+        Me.SaveLogDialog.Title = "Save Log"
         '
         'Main
         '
@@ -1155,5 +1176,9 @@ Partial Class Main
     Friend WithEvents HelpSep As System.Windows.Forms.MenuItem
     Friend WithEvents Website As System.Windows.Forms.MenuItem
     Friend WithEvents GitHub As System.Windows.Forms.MenuItem
-    Friend WithEvents SaveLog As System.Windows.Forms.ToolStripButton
+    Friend WithEvents LogMenu As System.Windows.Forms.ContextMenu
+    Friend WithEvents SaveLog As System.Windows.Forms.MenuItem
+    Friend WithEvents OpenContext As System.Windows.Forms.MenuItem
+    Friend WithEvents SaveLogDialog As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents LogMenuBridge As System.Windows.Forms.ContextMenuStrip
 End Class

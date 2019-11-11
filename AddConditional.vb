@@ -46,6 +46,9 @@ Public Class AddConditional
         Display.VirtualSpace = My.Settings.VirtualSpace
         Display.WideCaret = My.Settings.WideCaret
         Display.Font = My.Settings.editorFont
+        If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
+            Me.BackColor = SystemColors.Control
+        End If
     End Sub
 
     Private Sub AddConditional_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown

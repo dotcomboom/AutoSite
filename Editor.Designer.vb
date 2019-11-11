@@ -71,7 +71,7 @@ Partial Class Editor
         Me.Strip.Location = New System.Drawing.Point(0, 0)
         Me.Strip.Name = "Strip"
         Me.Strip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.Strip.Size = New System.Drawing.Size(681, 27)
+        Me.Strip.Size = New System.Drawing.Size(596, 27)
         Me.Strip.TabIndex = 1
         Me.Strip.Text = "ToolStrip1"
         '
@@ -244,7 +244,7 @@ Partial Class Editor
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.iconTheme
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite_XL.My.Resources.Resources.openProject
         Me.Code.AutoScrollMinSize = New System.Drawing.Size(31, 18)
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 18
@@ -253,6 +253,7 @@ Partial Class Editor
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Code.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
@@ -266,7 +267,7 @@ Partial Class Editor
         Me.Code.RightBracket2 = Global.Microsoft.VisualBasic.ChrW(41)
         Me.Code.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Code.ServiceColors = CType(resources.GetObject("Code.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
-        Me.Code.Size = New System.Drawing.Size(681, 431)
+        Me.Code.Size = New System.Drawing.Size(596, 460)
         Me.Code.TabIndex = 2
         Me.Code.Zoom = 100
         '
@@ -326,13 +327,14 @@ Partial Class Editor
         '
         'Editor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.Code)
         Me.Controls.Add(Me.Strip)
+        Me.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Editor"
-        Me.Size = New System.Drawing.Size(681, 458)
+        Me.Size = New System.Drawing.Size(596, 487)
         Me.Strip.ResumeLayout(False)
         Me.Strip.PerformLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).EndInit()

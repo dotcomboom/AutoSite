@@ -59,6 +59,10 @@ Public Class Editor
         Code.VirtualSpace = My.Settings.VirtualSpace
         Code.WideCaret = My.Settings.WideCaret
         Code.Font = My.Settings.editorFont
+        If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
+            Me.BackColor = SystemColors.Control
+            Strip.BackColor = SystemColors.Control
+        End If
     End Sub
 
     Private Sub Code_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Code.MouseClick

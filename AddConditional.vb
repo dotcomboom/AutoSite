@@ -8,7 +8,7 @@ Public Class AddConditional
             Value.Text = ""
         End If
         Dim ineq = ""
-        If Yesnt.Checked Then
+        If NotChk.Checked Then
             ineq = "!"
         End If
         For Each line In Display.Lines

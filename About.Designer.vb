@@ -51,7 +51,7 @@ Partial Class About
         Me.LicenseBox.Margin = New System.Windows.Forms.Padding(4)
         Me.LicenseBox.Name = "LicenseBox"
         Me.LicenseBox.ReadOnly = True
-        Me.LicenseBox.Size = New System.Drawing.Size(521, 373)
+        Me.LicenseBox.Size = New System.Drawing.Size(454, 398)
         Me.LicenseBox.TabIndex = 0
         Me.LicenseBox.Text = resources.GetString("LicenseBox.Text")
         '
@@ -59,10 +59,10 @@ Partial Class About
         '
         Me.OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.OK.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.OK.Location = New System.Drawing.Point(561, 433)
+        Me.OK.Location = New System.Drawing.Point(491, 460)
         Me.OK.Margin = New System.Windows.Forms.Padding(4)
         Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(100, 28)
+        Me.OK.Size = New System.Drawing.Size(88, 30)
         Me.OK.TabIndex = 1
         Me.OK.Text = "OK"
         Me.OK.UseVisualStyleBackColor = True
@@ -70,21 +70,21 @@ Partial Class About
         'Logo
         '
         Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
-        Me.Logo.Location = New System.Drawing.Point(16, 15)
+        Me.Logo.Location = New System.Drawing.Point(14, 16)
         Me.Logo.Margin = New System.Windows.Forms.Padding(4)
         Me.Logo.Name = "Logo"
-        Me.Logo.Size = New System.Drawing.Size(100, 96)
+        Me.Logo.Size = New System.Drawing.Size(88, 102)
         Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Logo.TabIndex = 2
         Me.Logo.TabStop = False
         '
         'Version
         '
-        Me.Version.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Version.Location = New System.Drawing.Point(16, 119)
+        Me.Version.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Version.Location = New System.Drawing.Point(14, 126)
         Me.Version.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Version.Name = "Version"
-        Me.Version.Size = New System.Drawing.Size(100, 16)
+        Me.Version.Size = New System.Drawing.Size(88, 17)
         Me.Version.TabIndex = 3
         Me.Version.Text = "v0.0.0.0"
         Me.Version.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -92,10 +92,10 @@ Partial Class About
         'GithubLink
         '
         Me.GithubLink.AutoSize = True
-        Me.GithubLink.Location = New System.Drawing.Point(16, 149)
+        Me.GithubLink.Location = New System.Drawing.Point(14, 158)
         Me.GithubLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.GithubLink.Name = "GithubLink"
-        Me.GithubLink.Size = New System.Drawing.Size(52, 17)
+        Me.GithubLink.Size = New System.Drawing.Size(53, 19)
         Me.GithubLink.TabIndex = 4
         Me.GithubLink.TabStop = True
         Me.GithubLink.Text = "GitHub"
@@ -103,10 +103,10 @@ Partial Class About
         'WebsiteLink
         '
         Me.WebsiteLink.AutoSize = True
-        Me.WebsiteLink.Location = New System.Drawing.Point(16, 175)
+        Me.WebsiteLink.Location = New System.Drawing.Point(14, 186)
         Me.WebsiteLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.WebsiteLink.Name = "WebsiteLink"
-        Me.WebsiteLink.Size = New System.Drawing.Size(59, 17)
+        Me.WebsiteLink.Size = New System.Drawing.Size(57, 19)
         Me.WebsiteLink.TabIndex = 5
         Me.WebsiteLink.TabStop = True
         Me.WebsiteLink.Text = "Website"
@@ -118,21 +118,21 @@ Partial Class About
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Tabs.Controls.Add(Me.License)
         Me.Tabs.Controls.Add(Me.Changelog)
-        Me.Tabs.Location = New System.Drawing.Point(124, 15)
+        Me.Tabs.Location = New System.Drawing.Point(108, 16)
         Me.Tabs.Margin = New System.Windows.Forms.Padding(4)
         Me.Tabs.Name = "Tabs"
         Me.Tabs.SelectedIndex = 0
-        Me.Tabs.Size = New System.Drawing.Size(537, 410)
+        Me.Tabs.Size = New System.Drawing.Size(470, 436)
         Me.Tabs.TabIndex = 10
         '
         'License
         '
         Me.License.Controls.Add(Me.LicenseBox)
-        Me.License.Location = New System.Drawing.Point(4, 25)
+        Me.License.Location = New System.Drawing.Point(4, 26)
         Me.License.Margin = New System.Windows.Forms.Padding(4)
         Me.License.Name = "License"
         Me.License.Padding = New System.Windows.Forms.Padding(4)
-        Me.License.Size = New System.Drawing.Size(529, 381)
+        Me.License.Size = New System.Drawing.Size(462, 406)
         Me.License.TabIndex = 0
         Me.License.Text = "License"
         Me.License.UseVisualStyleBackColor = True
@@ -144,7 +144,7 @@ Partial Class About
         Me.Changelog.Margin = New System.Windows.Forms.Padding(4)
         Me.Changelog.Name = "Changelog"
         Me.Changelog.Padding = New System.Windows.Forms.Padding(4)
-        Me.Changelog.Size = New System.Drawing.Size(529, 381)
+        Me.Changelog.Size = New System.Drawing.Size(462, 407)
         Me.Changelog.TabIndex = 1
         Me.Changelog.Text = "Changelog"
         Me.Changelog.UseVisualStyleBackColor = True
@@ -159,36 +159,37 @@ Partial Class About
         Me.ChangelogBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ChangelogBox.Name = "ChangelogBox"
         Me.ChangelogBox.ReadOnly = True
-        Me.ChangelogBox.Size = New System.Drawing.Size(521, 373)
+        Me.ChangelogBox.Size = New System.Drawing.Size(454, 399)
         Me.ChangelogBox.TabIndex = 1
         Me.ChangelogBox.Text = resources.GetString("ChangelogBox.Text")
         '
         'LegacyAutoSite
         '
-        Me.LegacyAutoSite.Location = New System.Drawing.Point(16, 207)
+        Me.LegacyAutoSite.Location = New System.Drawing.Point(14, 220)
         Me.LegacyAutoSite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LegacyAutoSite.Name = "LegacyAutoSite"
-        Me.LegacyAutoSite.Size = New System.Drawing.Size(81, 37)
+        Me.LegacyAutoSite.Size = New System.Drawing.Size(71, 39)
         Me.LegacyAutoSite.TabIndex = 7
         Me.LegacyAutoSite.Text = "Legacy AutoSite"
         '
         'PyGithubLink
         '
         Me.PyGithubLink.AutoSize = True
-        Me.PyGithubLink.Location = New System.Drawing.Point(16, 245)
+        Me.PyGithubLink.Location = New System.Drawing.Point(14, 260)
         Me.PyGithubLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PyGithubLink.Name = "PyGithubLink"
-        Me.PyGithubLink.Size = New System.Drawing.Size(52, 17)
+        Me.PyGithubLink.Size = New System.Drawing.Size(53, 19)
         Me.PyGithubLink.TabIndex = 8
         Me.PyGithubLink.TabStop = True
         Me.PyGithubLink.Text = "GitHub"
         '
         'About
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.OK
-        Me.ClientSize = New System.Drawing.Size(677, 479)
+        Me.ClientSize = New System.Drawing.Size(592, 509)
         Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.PyGithubLink)
         Me.Controls.Add(Me.LegacyAutoSite)
@@ -197,6 +198,7 @@ Partial Class About
         Me.Controls.Add(Me.Version)
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.OK)
+        Me.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "About"

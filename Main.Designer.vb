@@ -145,6 +145,7 @@ Partial Class Main
         Me.BrowseSite = New System.Windows.Forms.ToolStripButton
         Me.CoreSplit = New System.Windows.Forms.SplitContainer
         Me.SelectFont = New System.Windows.Forms.FontDialog
+        Me.SaveLog = New System.Windows.Forms.ToolStripButton
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -739,7 +740,7 @@ Partial Class Main
         '
         Me.EdSplit.Dock = System.Windows.Forms.DockStyle.Fill
         Me.EdSplit.Location = New System.Drawing.Point(0, 0)
-        Me.EdSplit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.EdSplit.Margin = New System.Windows.Forms.Padding(4)
         Me.EdSplit.Name = "EdSplit"
         Me.EdSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -772,7 +773,7 @@ Partial Class Main
         '
         Me.Preview.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Preview.Location = New System.Drawing.Point(0, 0)
-        Me.Preview.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Preview.Margin = New System.Windows.Forms.Padding(4)
         Me.Preview.MinimumSize = New System.Drawing.Size(24, 27)
         Me.Preview.Name = "Preview"
         Me.Preview.ScriptErrorsSuppressed = True
@@ -784,7 +785,7 @@ Partial Class Main
         '
         Me.ExSplit.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ExSplit.Location = New System.Drawing.Point(0, 0)
-        Me.ExSplit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ExSplit.Margin = New System.Windows.Forms.Padding(4)
         Me.ExSplit.Name = "ExSplit"
         Me.ExSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -844,7 +845,7 @@ Partial Class Main
         Me.SiteTree.ImageList = Me.VS2017
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Location = New System.Drawing.Point(0, 0)
-        Me.SiteTree.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SiteTree.Margin = New System.Windows.Forms.Padding(4)
         Me.SiteTree.Name = "SiteTree"
         Me.SiteTree.SelectedImageIndex = 0
         Me.SiteTree.Size = New System.Drawing.Size(271, 308)
@@ -856,7 +857,7 @@ Partial Class Main
         Me.ApricotTabs.Controls.Add(Me.MapPage)
         Me.ApricotTabs.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ApricotTabs.Location = New System.Drawing.Point(0, 25)
-        Me.ApricotTabs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ApricotTabs.Margin = New System.Windows.Forms.Padding(4)
         Me.ApricotTabs.Name = "ApricotTabs"
         Me.ApricotTabs.SelectedIndex = 0
         Me.ApricotTabs.Size = New System.Drawing.Size(271, 179)
@@ -866,9 +867,9 @@ Partial Class Main
         '
         Me.LogPage.Controls.Add(Me.Log)
         Me.LogPage.Location = New System.Drawing.Point(4, 26)
-        Me.LogPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LogPage.Margin = New System.Windows.Forms.Padding(4)
         Me.LogPage.Name = "LogPage"
-        Me.LogPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LogPage.Padding = New System.Windows.Forms.Padding(4)
         Me.LogPage.Size = New System.Drawing.Size(263, 149)
         Me.LogPage.TabIndex = 0
         Me.LogPage.Text = "Log"
@@ -880,21 +881,21 @@ Partial Class Main
         Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Log.Location = New System.Drawing.Point(4, 4)
-        Me.Log.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Log.Margin = New System.Windows.Forms.Padding(4)
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(255, 141)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
         'MapPage
         '
         Me.MapPage.Controls.Add(Me.AttributeTree)
         Me.MapPage.Location = New System.Drawing.Point(4, 25)
-        Me.MapPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MapPage.Margin = New System.Windows.Forms.Padding(4)
         Me.MapPage.Name = "MapPage"
-        Me.MapPage.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.MapPage.Size = New System.Drawing.Size(263, 148)
+        Me.MapPage.Padding = New System.Windows.Forms.Padding(4)
+        Me.MapPage.Size = New System.Drawing.Size(263, 150)
         Me.MapPage.TabIndex = 1
         Me.MapPage.Text = "Attribute Map"
         Me.MapPage.UseVisualStyleBackColor = True
@@ -906,17 +907,17 @@ Partial Class Main
         Me.AttributeTree.ImageIndex = 0
         Me.AttributeTree.ImageList = Me.VS2017
         Me.AttributeTree.Location = New System.Drawing.Point(4, 4)
-        Me.AttributeTree.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AttributeTree.Margin = New System.Windows.Forms.Padding(4)
         Me.AttributeTree.Name = "AttributeTree"
         Me.AttributeTree.SelectedImageIndex = 0
-        Me.AttributeTree.Size = New System.Drawing.Size(255, 140)
+        Me.AttributeTree.Size = New System.Drawing.Size(255, 142)
         Me.AttributeTree.TabIndex = 0
         '
         'BuildProgress
         '
         Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BuildProgress.Location = New System.Drawing.Point(0, 204)
-        Me.BuildProgress.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BuildProgress.Margin = New System.Windows.Forms.Padding(4)
         Me.BuildProgress.Name = "BuildProgress"
         Me.BuildProgress.Size = New System.Drawing.Size(271, 30)
         Me.BuildProgress.TabIndex = 1
@@ -926,7 +927,7 @@ Partial Class Main
         '
         Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
         Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseSitePreview, Me.BrowseSite})
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseSitePreview, Me.BrowseSite, Me.SaveLog})
         Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -992,6 +993,15 @@ Partial Class Main
         Me.CoreSplit.SplitterDistance = 271
         Me.CoreSplit.TabIndex = 4
         '
+        'SaveLog
+        '
+        Me.SaveLog.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveLog.Image = CType(resources.GetObject("SaveLog.Image"), System.Drawing.Image)
+        Me.SaveLog.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveLog.Name = "SaveLog"
+        Me.SaveLog.Size = New System.Drawing.Size(23, 22)
+        Me.SaveLog.Text = "Save Log"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -1000,7 +1010,7 @@ Partial Class Main
         Me.Controls.Add(Me.CoreSplit)
         Me.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Menu = Me.MenuBar
         Me.Name = "Main"
         Me.Text = "AutoSite XL"
@@ -1145,4 +1155,5 @@ Partial Class Main
     Friend WithEvents HelpSep As System.Windows.Forms.MenuItem
     Friend WithEvents Website As System.Windows.Forms.MenuItem
     Friend WithEvents GitHub As System.Windows.Forms.MenuItem
+    Friend WithEvents SaveLog As System.Windows.Forms.ToolStripButton
 End Class

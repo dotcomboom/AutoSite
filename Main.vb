@@ -889,14 +889,14 @@ Public Class Main
     Sub walkInputs(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal input As String, ByVal templates As String, ByVal out As String)
         For Each file In directory.GetFiles(pattern)
             Dim rel = ReplaceFirst(file.FullName, input, "")
-            Apricot.ReportProgress(0, "  Rendering " & rel.Replace("\", "/"))
+            Apricot.ReportProgress(0, "Rendering " & rel.Replace("\", "/"))
             Dim content = ""
             Dim attribs As New Dictionary(Of String, String)()
             attribs.Add("template", "default")
             attribs.Add("path", rel.Replace("\", "/"))
             Dim reader As New StreamReader(file.FullName, encodingType, True)
             Dim line As String
-            Apricot.ReportProgress(20, "    Reading attributes")
+            Apricot.ReportProgress(20, "Reading attributes")
             Do
                 line = reader.ReadLine
                 Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("^<!-- attrib (.*): (.*) -->")
@@ -920,10 +920,10 @@ Public Class Main
             Next
             If Not My.Computer.FileSystem.FileExists(templates & "\" & attribs.Item("template") & ".html") Then
                 If My.Computer.FileSystem.FileExists(templates & "\default.html") Then
-                    Apricot.ReportProgress(20, "      WARN: Template " & attribs.Item("template") & " does not exist, using template default")
+                    Apricot.ReportProgress(20, "  WARN: Template " & attribs.Item("template") & ".html does not exist, using template default")
                     attribs.Item("template") = "default"
                 Else
-                    Apricot.ReportProgress(20, "      WARN: Template " & attribs.Item("template") & " does not exist, using basic internal template")
+                    Apricot.ReportProgress(20, "  WARN: Template " & attribs.Item("template") & ".html does not exist, using basic internal template")
                     attribs.Item("template") = "<b>AS</b>internal"
                     If Not template_cache.ContainsKey("<b>AS</b>internal") Then
                         template_cache.Add("<b>AS</b>internal", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>")
@@ -931,7 +931,7 @@ Public Class Main
                 End If
             End If
             If Not template_cache.ContainsKey(attribs.Item("template")) Then
-                Apricot.ReportProgress(30, "    Loading template " & attribs.Item("template"))
+                Apricot.ReportProgress(30, "  Loading template " & attribs.Item("template"))
                 template_cache.Item(attribs.Item("template")) = ReadAllText(Path.Combine(templates, attribs.Item("template") & ".html"))
             End If
             Dim newHtml = template_cache.Item(attribs.Item("template"))
@@ -944,11 +944,11 @@ Public Class Main
             Next
             ' End Attribute Process 1
             If rel.EndsWith(".md") Then
-                Apricot.ReportProgress(50, "    Converting Markdown")
+                Apricot.ReportProgress(50, "  Converting Markdown")
                 content = CommonMark.CommonMarkConverter.Convert(content)
                 rel = ReplaceLast(rel, ".md", ".html")
             End If
-            Apricot.ReportProgress(50, "    Slotting into template " & attribs.Item("template"))
+            Apricot.ReportProgress(50, "  Slotting into template " & attribs.Item("template"))
             newHtml = newHtml.Replace("[#content#]", content)
             newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(rel, "\")))
             Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
@@ -1013,7 +1013,7 @@ Public Class Main
             Next
             ' End Attribute Process 2
             newHtml = Regex.Replace(newHtml, "\[#.*?#\]", "")
-            Apricot.ReportProgress(90, "    Saving file")
+            Apricot.ReportProgress(90, "  Saving file")
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
             My.Computer.FileSystem.WriteAllText(out & rel, newHtml, False, encodingType)
         Next
@@ -1056,7 +1056,7 @@ Public Class Main
             My.Computer.FileSystem.CopyDirectory(includes, out, True)
         End If
 
-        Apricot.ReportProgress(50, "Rendering input files")
+        Apricot.ReportProgress(50, "Processing input files")
         walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", input, templates, out)
 
         Apricot.ReportProgress(100, "Finished!")
@@ -1067,7 +1067,25 @@ Public Class Main
             BuildProgress.Visible = True
             BuildProgress.Value = e.ProgressPercentage
             'Me.Text = e.UserState
+            Dim s As String = e.UserState
+            Dim start = Log.TextLength
             Log.AppendText(e.UserState & vbNewLine)
+            Dim length = Log.TextLength - start
+            Log.Select(start, length)
+            'Log.SelectionLength = Log.TextLength - Log.SelectionStart
+            If s.StartsWith("Apricot") Or s.StartsWith("Finished") Then
+                Log.SelectionFont = New Font(Log.Font, FontStyle.Bold)
+                Log.SelectionColor = Color.Blue
+            End If
+            If s.StartsWith("Rendering") Then
+                Log.SelectionFont = New Font(Log.Font, FontStyle.Italic + FontStyle.Underline)
+            End If
+            If s.Contains(":") Then
+                Log.SelectionColor = Color.Green
+            End If
+            If s.Contains("WARN:") Then
+                Log.SelectionColor = Color.OrangeRed
+            End If
         ElseIf e.UserState.GetType() Is GetType(TNode) Then
             Dim tn As TNode = e.UserState
 

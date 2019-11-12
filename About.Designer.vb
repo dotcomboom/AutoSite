@@ -33,8 +33,6 @@ Partial Class About
         Me.License = New System.Windows.Forms.TabPage
         Me.Changelog = New System.Windows.Forms.TabPage
         Me.ChangelogBox = New System.Windows.Forms.RichTextBox
-        Me.LegacyAutoSite = New System.Windows.Forms.Label
-        Me.PyGithubLink = New System.Windows.Forms.LinkLabel
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tabs.SuspendLayout()
         Me.License.SuspendLayout()
@@ -47,11 +45,11 @@ Partial Class About
         Me.LicenseBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.LicenseBox.Cursor = System.Windows.Forms.Cursors.Default
         Me.LicenseBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LicenseBox.Location = New System.Drawing.Point(4, 4)
-        Me.LicenseBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.LicenseBox.Location = New System.Drawing.Point(5, 5)
+        Me.LicenseBox.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.LicenseBox.Name = "LicenseBox"
         Me.LicenseBox.ReadOnly = True
-        Me.LicenseBox.Size = New System.Drawing.Size(454, 412)
+        Me.LicenseBox.Size = New System.Drawing.Size(339, 272)
         Me.LicenseBox.TabIndex = 0
         Me.LicenseBox.Text = resources.GetString("LicenseBox.Text")
         '
@@ -59,10 +57,10 @@ Partial Class About
         '
         Me.OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.OK.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.OK.Location = New System.Drawing.Point(485, 466)
-        Me.OK.Margin = New System.Windows.Forms.Padding(4)
+        Me.OK.Location = New System.Drawing.Point(402, 333)
+        Me.OK.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(88, 30)
+        Me.OK.Size = New System.Drawing.Size(75, 23)
         Me.OK.TabIndex = 1
         Me.OK.Text = "OK"
         Me.OK.UseVisualStyleBackColor = True
@@ -70,10 +68,10 @@ Partial Class About
         'Logo
         '
         Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
-        Me.Logo.Location = New System.Drawing.Point(9, 8)
-        Me.Logo.Margin = New System.Windows.Forms.Padding(4)
+        Me.Logo.Location = New System.Drawing.Point(10, 10)
+        Me.Logo.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Logo.Name = "Logo"
-        Me.Logo.Size = New System.Drawing.Size(88, 102)
+        Me.Logo.Size = New System.Drawing.Size(103, 128)
         Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Logo.TabIndex = 2
         Me.Logo.TabStop = False
@@ -81,10 +79,10 @@ Partial Class About
         'Version
         '
         Me.Version.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Version.Location = New System.Drawing.Point(9, 118)
-        Me.Version.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Version.Location = New System.Drawing.Point(11, 143)
+        Me.Version.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Version.Name = "Version"
-        Me.Version.Size = New System.Drawing.Size(88, 17)
+        Me.Version.Size = New System.Drawing.Size(103, 21)
         Me.Version.TabIndex = 3
         Me.Version.Text = "v0.0.0.0"
         Me.Version.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -92,10 +90,10 @@ Partial Class About
         'GithubLink
         '
         Me.GithubLink.AutoSize = True
-        Me.GithubLink.Location = New System.Drawing.Point(9, 150)
-        Me.GithubLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.GithubLink.Location = New System.Drawing.Point(10, 164)
+        Me.GithubLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.GithubLink.Name = "GithubLink"
-        Me.GithubLink.Size = New System.Drawing.Size(53, 19)
+        Me.GithubLink.Size = New System.Drawing.Size(45, 15)
         Me.GithubLink.TabIndex = 4
         Me.GithubLink.TabStop = True
         Me.GithubLink.Text = "GitHub"
@@ -103,10 +101,10 @@ Partial Class About
         'WebsiteLink
         '
         Me.WebsiteLink.AutoSize = True
-        Me.WebsiteLink.Location = New System.Drawing.Point(9, 178)
-        Me.WebsiteLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.WebsiteLink.Location = New System.Drawing.Point(61, 164)
+        Me.WebsiteLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.WebsiteLink.Name = "WebsiteLink"
-        Me.WebsiteLink.Size = New System.Drawing.Size(57, 19)
+        Me.WebsiteLink.Size = New System.Drawing.Size(49, 15)
         Me.WebsiteLink.TabIndex = 5
         Me.WebsiteLink.TabStop = True
         Me.WebsiteLink.Text = "Website"
@@ -118,21 +116,21 @@ Partial Class About
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Tabs.Controls.Add(Me.License)
         Me.Tabs.Controls.Add(Me.Changelog)
-        Me.Tabs.Location = New System.Drawing.Point(103, 8)
-        Me.Tabs.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tabs.Location = New System.Drawing.Point(120, 10)
+        Me.Tabs.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Tabs.Name = "Tabs"
         Me.Tabs.SelectedIndex = 0
-        Me.Tabs.Size = New System.Drawing.Size(470, 450)
+        Me.Tabs.Size = New System.Drawing.Size(357, 310)
         Me.Tabs.TabIndex = 10
         '
         'License
         '
         Me.License.Controls.Add(Me.LicenseBox)
-        Me.License.Location = New System.Drawing.Point(4, 26)
-        Me.License.Margin = New System.Windows.Forms.Padding(4)
+        Me.License.Location = New System.Drawing.Point(4, 24)
+        Me.License.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.License.Name = "License"
-        Me.License.Padding = New System.Windows.Forms.Padding(4)
-        Me.License.Size = New System.Drawing.Size(462, 420)
+        Me.License.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.License.Size = New System.Drawing.Size(349, 282)
         Me.License.TabIndex = 0
         Me.License.Text = "License"
         Me.License.UseVisualStyleBackColor = True
@@ -140,11 +138,11 @@ Partial Class About
         'Changelog
         '
         Me.Changelog.Controls.Add(Me.ChangelogBox)
-        Me.Changelog.Location = New System.Drawing.Point(4, 26)
-        Me.Changelog.Margin = New System.Windows.Forms.Padding(4)
+        Me.Changelog.Location = New System.Drawing.Point(4, 24)
+        Me.Changelog.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Changelog.Name = "Changelog"
-        Me.Changelog.Padding = New System.Windows.Forms.Padding(4)
-        Me.Changelog.Size = New System.Drawing.Size(462, 406)
+        Me.Changelog.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Changelog.Size = New System.Drawing.Size(340, 282)
         Me.Changelog.TabIndex = 1
         Me.Changelog.Text = "Changelog"
         Me.Changelog.UseVisualStyleBackColor = True
@@ -155,52 +153,30 @@ Partial Class About
         Me.ChangelogBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ChangelogBox.Cursor = System.Windows.Forms.Cursors.Default
         Me.ChangelogBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ChangelogBox.Location = New System.Drawing.Point(4, 4)
-        Me.ChangelogBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.ChangelogBox.Location = New System.Drawing.Point(5, 5)
+        Me.ChangelogBox.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.ChangelogBox.Name = "ChangelogBox"
         Me.ChangelogBox.ReadOnly = True
-        Me.ChangelogBox.Size = New System.Drawing.Size(454, 398)
+        Me.ChangelogBox.Size = New System.Drawing.Size(330, 272)
         Me.ChangelogBox.TabIndex = 1
         Me.ChangelogBox.Text = resources.GetString("ChangelogBox.Text")
         '
-        'LegacyAutoSite
-        '
-        Me.LegacyAutoSite.Location = New System.Drawing.Point(9, 212)
-        Me.LegacyAutoSite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LegacyAutoSite.Name = "LegacyAutoSite"
-        Me.LegacyAutoSite.Size = New System.Drawing.Size(71, 39)
-        Me.LegacyAutoSite.TabIndex = 7
-        Me.LegacyAutoSite.Text = "Legacy AutoSite"
-        '
-        'PyGithubLink
-        '
-        Me.PyGithubLink.AutoSize = True
-        Me.PyGithubLink.Location = New System.Drawing.Point(9, 252)
-        Me.PyGithubLink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.PyGithubLink.Name = "PyGithubLink"
-        Me.PyGithubLink.Size = New System.Drawing.Size(53, 19)
-        Me.PyGithubLink.TabIndex = 8
-        Me.PyGithubLink.TabStop = True
-        Me.PyGithubLink.Text = "GitHub"
-        '
         'About
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.OK
-        Me.ClientSize = New System.Drawing.Size(592, 509)
+        Me.ClientSize = New System.Drawing.Size(491, 370)
         Me.Controls.Add(Me.Tabs)
-        Me.Controls.Add(Me.PyGithubLink)
-        Me.Controls.Add(Me.LegacyAutoSite)
         Me.Controls.Add(Me.WebsiteLink)
         Me.Controls.Add(Me.GithubLink)
         Me.Controls.Add(Me.Version)
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.OK)
-        Me.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Name = "About"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
@@ -223,6 +199,4 @@ Partial Class About
     Friend WithEvents License As System.Windows.Forms.TabPage
     Friend WithEvents Changelog As System.Windows.Forms.TabPage
     Friend WithEvents ChangelogBox As System.Windows.Forms.RichTextBox
-    Friend WithEvents LegacyAutoSite As System.Windows.Forms.Label
-    Friend WithEvents PyGithubLink As System.Windows.Forms.LinkLabel
 End Class

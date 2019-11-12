@@ -25,7 +25,7 @@
         Process.Start("https://dotcomboom.somnolescent.net/autosite/xl")
     End Sub
 
-    Private Sub PyGithubLink_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles PyGithubLink.LinkClicked
+    Private Sub PyGithubLink_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
         Process.Start("https://github.com/dotcomboom/AutoSite/")
     End Sub
 

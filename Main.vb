@@ -295,6 +295,13 @@ Public Class Main
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+        Try
+            Dim key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
+            key.SetValue(Path.GetFileName(Application.ExecutablePath), 11001, Microsoft.Win32.RegistryValueKind.DWord)
+            key.Close()
+        Catch ex As Exception
+        End Try
+
         wTitle &= " v" & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
         If My.Application.Info.Version.Build > 0 Then
             wTitle &= "." & My.Application.Info.Version.Build

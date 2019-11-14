@@ -1079,10 +1079,6 @@ Public Class Main
             Log.AppendText(e.UserState & vbNewLine)
             Dim length = Log.TextLength - start
             Log.Select(start, length)
-            If s.StartsWith("Apricot") Or s.StartsWith("Finished") Then
-                Log.SelectionFont = New Font(Log.Font, FontStyle.Bold)
-                Log.SelectionColor = Color.Blue
-            End If
             If s.StartsWith("Rendering") Then
                 Log.SelectionFont = New Font(Log.Font, FontStyle.Italic + FontStyle.Underline)
             End If
@@ -1091,6 +1087,10 @@ Public Class Main
             End If
             If s.Contains("WARN:") Then
                 Log.SelectionColor = Color.OrangeRed
+            End If
+            If s.StartsWith("Apricot") Or s.StartsWith("Finished") Then
+                Log.SelectionFont = New Font(Log.Font, FontStyle.Bold)
+                Log.SelectionColor = Color.Blue
             End If
             Log.DeselectAll()
         ElseIf e.UserState.GetType() Is GetType(TNode) Then

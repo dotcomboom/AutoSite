@@ -196,7 +196,7 @@ Partial Class Main
         'OpenFolder
         '
         Me.OpenFolder.Index = 0
-        Me.OpenFolder.Shortcut = System.Windows.Forms.Shortcut.CtrlO
+        Me.OpenFolder.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftO
         Me.OpenFolder.Text = "Open Folder..."
         '
         'OpenRecent

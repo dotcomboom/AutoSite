@@ -49,6 +49,7 @@ Public Class Main
         BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
         Build.Enabled = (SiteTree.Nodes.Count > 0)
         SanitaryBuild.Enabled = (SiteTree.Nodes.Count > 0)
+        InstallPackMnu.Enabled = (SiteTree.Nodes.Count > 0)
 
         OpenOutput.Enabled = (SiteTree.Nodes.Count > 0)
         BrowseSitePreview.Enabled = (SiteTree.Nodes.Count > 0)
@@ -1665,5 +1666,21 @@ Public Class Main
     Private Sub MenuStripBridge_Opening(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles LogMenuBridge.Opening
         LogMenu.Show(Log, Log.PointToClient(MousePosition))
         e.Cancel = True
+    End Sub
+
+    'https://www.codeproject.com/Tips/257193/Easily-Zip-Unzip-Files-using-Windows-Shell
+    Sub UnZip(ByVal zip, ByVal folder)
+        Dim shObj As Object = Activator.CreateInstance(Type.GetTypeFromProgID("Shell.Application"))
+        Dim output As Object = shObj.NameSpace((folder))
+        Dim input As Object = shObj.NameSpace((zip))
+        output.CopyHere((input.Items), 4)
+    End Sub
+
+
+    Private Sub InstallPackMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InstallPackMnu.Click
+        If InstallPack.ShowDialog = Windows.Forms.DialogResult.OK Then
+            UnZip(InstallPack.FileName, SiteTree.Nodes(0).Tag)
+            refreshTree(SiteTree.Nodes(0))
+        End If
     End Sub
 End Class

@@ -228,7 +228,7 @@ Public Class Main
     End Sub
 
     Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, OpenLink.LinkClicked
-        If FolderBrowser.ShowDialog() = DialogResult.OK Then
+        If FolderBrowser.ShowDialog(Me) = DialogResult.OK Then
             If My.Computer.FileSystem.DirectoryExists(FolderBrowser.SelectedPath) Then
                 openSite(FolderBrowser.SelectedPath, False)
             End If
@@ -236,7 +236,7 @@ Public Class Main
     End Sub
 
     Private Sub AboutItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles AboutItem.Click
-        About.ShowDialog()
+        About.ShowDialog(Me)
     End Sub
 
     Private Function doClose() Handles CloseSite.Click
@@ -296,6 +296,32 @@ Public Class Main
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+        Try
+            ' https://www.codeproject.com/Tips/543631/Save-and-restore-your-form-size-and-location
+            Dim initLocation As String = My.Settings.windowLocation
+            Dim il As Point = New Point(0, 0)
+            Dim sz As Size = Size
+
+            If Not initLocation Is Nothing Then
+                Dim parts As String() = initLocation.Split(",")
+
+                If parts.Length >= 2 Then
+                    il = New Point(Integer.Parse(parts(0)), Integer.Parse(parts(1)))
+                End If
+
+                If parts.Length >= 4 Then
+                    sz = New Size(Integer.Parse(parts(2)), Integer.Parse(parts(3)))
+                End If
+            End If
+
+            Me.Size = sz
+            Me.Location = il
+
+            MsgBox(sz)
+            MsgBox(il)
+        Catch ex As Exception
+        End Try
+
         Try
             Dim key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
             key.SetValue(Path.GetFileName(Application.ExecutablePath), 11001, Microsoft.Win32.RegistryValueKind.DWord)
@@ -795,7 +821,7 @@ Public Class Main
         End If
         If My.Computer.FileSystem.DirectoryExists(dir) Then
             AddFilesDialog.Title = "Add Files to " & dir
-            If AddFilesDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            If AddFilesDialog.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
                 For Each file In AddFilesDialog.FileNames
                     Try
                         My.Computer.FileSystem.CopyFile(file, System.IO.Path.Combine(dir, System.IO.Path.GetFileName(file)))
@@ -1189,6 +1215,23 @@ Public Class Main
                 e.Cancel = True
             End If
         End If
+
+        ' https://www.codeproject.com/Tips/543631/Save-and-restore-your-form-size-and-location
+        If Not e.Cancel Then
+            Try
+                Dim location As Point = Me.Location
+                Dim size As Size = Me.Size
+
+                If Not WindowState = FormWindowState.Normal Then
+                    location = RestoreBounds.Location
+                    size = RestoreBounds.Size
+                End If
+
+                My.Settings.windowLocation = location.X & "," & location.Y & "," & size.Width & "," & size.Height
+                My.Settings.Save()
+            Catch ex As Exception
+            End Try
+        End If
     End Sub
 
     Private Sub SyntaxHighlight_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SyntaxHighlight.Click
@@ -1387,7 +1430,7 @@ Public Class Main
 
     Private Sub EditorFont_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditorFont.Click
         SelectFont.Font = My.Settings.editorFont
-        If SelectFont.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If SelectFont.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
             My.Settings.editorFont = SelectFont.Font
             panelUpdate()
         End If
@@ -1647,7 +1690,7 @@ Public Class Main
     End Sub
 
     Private Sub SaveLog_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveLog.Click
-        If SaveLogDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If SaveLogDialog.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
             Try
                 If SaveLogDialog.FileName.EndsWith(".rtf") Then
                     Log.SaveFile(SaveLogDialog.FileName)
@@ -1668,19 +1711,11 @@ Public Class Main
         e.Cancel = True
     End Sub
 
-    'https://www.codeproject.com/Tips/257193/Easily-Zip-Unzip-Files-using-Windows-Shell
-    Sub UnZip(ByVal zip, ByVal folder)
-        Dim shObj As Object = Activator.CreateInstance(Type.GetTypeFromProgID("Shell.Application"))
-        Dim output As Object = shObj.NameSpace((folder))
-        Dim input As Object = shObj.NameSpace((zip))
-        output.CopyHere((input.Items), 4)
-    End Sub
-
-
     Private Sub InstallPackMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InstallPackMnu.Click
-        If InstallPack.ShowDialog = Windows.Forms.DialogResult.OK Then
-            UnZip(InstallPack.FileName, SiteTree.Nodes(0).Tag)
-            refreshTree(SiteTree.Nodes(0))
+        If OpenPack.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+            InstallPack.Pack = OpenPack.FileName
+            InstallPack.ShowDialog()
+            'UnZip(OpenPack.FileName, SiteTree.Nodes(0).Tag)
         End If
     End Sub
 End Class

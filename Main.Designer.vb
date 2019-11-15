@@ -44,6 +44,8 @@ Partial Class Main
         Me.Save = New System.Windows.Forms.MenuItem
         Me.SaveAll = New System.Windows.Forms.MenuItem
         Me.FileSep3 = New System.Windows.Forms.MenuItem
+        Me.InstallPackMnu = New System.Windows.Forms.MenuItem
+        Me.FileSep4 = New System.Windows.Forms.MenuItem
         Me.ExitItem = New System.Windows.Forms.MenuItem
         Me.EditMenu = New System.Windows.Forms.MenuItem
         Me.Undo = New System.Windows.Forms.MenuItem
@@ -150,9 +152,7 @@ Partial Class Main
         Me.LogMenu = New System.Windows.Forms.ContextMenu
         Me.SaveLog = New System.Windows.Forms.MenuItem
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog
-        Me.FileSep4 = New System.Windows.Forms.MenuItem
-        Me.InstallPackMnu = New System.Windows.Forms.MenuItem
-        Me.InstallPack = New System.Windows.Forms.OpenFileDialog
+        Me.OpenPack = New System.Windows.Forms.OpenFileDialog
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -287,6 +287,16 @@ Partial Class Main
         '
         Me.FileSep3.Index = 8
         Me.FileSep3.Text = "-"
+        '
+        'InstallPackMnu
+        '
+        Me.InstallPackMnu.Index = 9
+        Me.InstallPackMnu.Text = "Install Pack..."
+        '
+        'FileSep4
+        '
+        Me.FileSep4.Index = 10
+        Me.FileSep4.Text = "-"
         '
         'ExitItem
         '
@@ -899,7 +909,7 @@ Partial Class Main
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(236, 82)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite_XL.My.Resources.Resources.iconTheme
         '
         'LogMenuBridge
         '
@@ -1027,19 +1037,9 @@ Partial Class Main
         Me.SaveLogDialog.Filter = "Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt"
         Me.SaveLogDialog.Title = "Save Log"
         '
-        'FileSep4
+        'OpenPack
         '
-        Me.FileSep4.Index = 10
-        Me.FileSep4.Text = "-"
-        '
-        'InstallPackMnu
-        '
-        Me.InstallPackMnu.Index = 9
-        Me.InstallPackMnu.Text = "Install Pack..."
-        '
-        'InstallPack
-        '
-        Me.InstallPack.Filter = "AutoSite Zip package (*.zip)|*.zip"
+        Me.OpenPack.Filter = "AutoSite Zip package (*.zip)|*.zip"
         '
         'Main
         '
@@ -1052,6 +1052,7 @@ Partial Class Main
         Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Menu = Me.MenuBar
         Me.Name = "Main"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "AutoSite XL"
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EdSplit.Panel1.ResumeLayout(False)
@@ -1201,5 +1202,5 @@ Partial Class Main
     Friend WithEvents LogMenuBridge As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents InstallPackMnu As System.Windows.Forms.MenuItem
     Friend WithEvents FileSep4 As System.Windows.Forms.MenuItem
-    Friend WithEvents InstallPack As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents OpenPack As System.Windows.Forms.OpenFileDialog
 End Class

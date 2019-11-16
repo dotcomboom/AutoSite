@@ -1,8 +1,4 @@
 
-Apricot/Apricot/Apricot/obj/
-
-Apricot/Apricot/Apricot/bin/
-
 *.user
-
-Apricot/bin/
+*/bin/
+*/obj/

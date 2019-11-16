@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LicenseBox.Text" xml:space="preserve">
-    <value>AutoSite XL is powered by these most excellent open source libraries:
+    <value>AutoSite is powered by these most excellent open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox
   - CommonMark.NET: https://github.com/Knagis/CommonMark.NET
 
-AutoSite XL's code *with the exception* of the libraries used above, and the code used from StackOverflow and other websites (referenced as needed in the source) is licensed under the MIT License.
+AutoSite XL's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced as needed in the source) is licensed under the MIT License.
 
 ---
 

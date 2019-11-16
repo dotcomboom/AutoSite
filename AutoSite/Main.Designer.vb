@@ -1053,7 +1053,7 @@ Partial Class Main
         Me.Menu = Me.MenuBar
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "AutoSite XL"
+        Me.Text = "AutoSite"
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EdSplit.Panel1.ResumeLayout(False)
         Me.EdSplit.Panel2.ResumeLayout(False)

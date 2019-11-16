@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Version.Text = "v" & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
+        Version.Text = My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
         If My.Application.Info.Version.Build > 0 Then
             Version.Text &= "." & My.Application.Info.Version.Build
         End If

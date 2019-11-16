@@ -84,7 +84,7 @@ Partial Class About
         Me.Version.Name = "Version"
         Me.Version.Size = New System.Drawing.Size(103, 21)
         Me.Version.TabIndex = 3
-        Me.Version.Text = "v0.0.0.0"
+        Me.Version.Text = "0.0.0.0"
         Me.Version.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GithubLink
@@ -180,7 +180,7 @@ Partial Class About
         Me.Name = "About"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "About AutoSite XL"
+        Me.Text = "About AutoSite"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tabs.ResumeLayout(False)
         Me.License.ResumeLayout(False)

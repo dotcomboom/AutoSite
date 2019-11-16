@@ -1,6 +1,8 @@
 
-bin/
+Apricot/Apricot/Apricot/obj/
 
-obj/
+Apricot/Apricot/Apricot/bin/
 
-AutoSite XL.suo
+*.user
+
+Apricot/bin/

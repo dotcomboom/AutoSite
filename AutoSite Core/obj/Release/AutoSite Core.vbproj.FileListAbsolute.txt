@@ -1,0 +1,13 @@
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\bin\Release\AutoSite Core.exe
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\bin\Release\AutoSite Core.pdb
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\bin\Release\AutoSite Core.xml
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\bin\Release\Apricot.dll
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\bin\Release\CommonMark.dll
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\bin\Release\Apricot.pdb
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\bin\Release\Apricot.xml
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\obj\Release\AutoSite_Core.Resources.resources
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\obj\Release\AutoSite Core.vbproj.GenerateResource.Cache
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\obj\Release\AutoSite Core.exe
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\obj\Release\AutoSite Core.xml
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\AutoSite Core\obj\Release\AutoSite Core.pdb

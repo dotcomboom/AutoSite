@@ -1,0 +1,10 @@
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\bin\Release\Apricot.dll
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\bin\Release\Apricot.pdb
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\bin\Release\Apricot.xml
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\bin\Release\CommonMark.dll
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\obj\Release\Apricot.Resources.resources
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\obj\Release\Apricot.vbproj.GenerateResource.Cache
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\obj\Release\Apricot.dll
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\obj\Release\Apricot.xml
+C:\Users\Eric\Nextcloud\Programming\VB.NET\AutoSite XL\git\Apricot\obj\Release\Apricot.pdb

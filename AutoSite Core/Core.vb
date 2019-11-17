@@ -6,9 +6,10 @@ Module Core
         If args.Length > 0 Then
             Apricot.buildSite(args(0))
         Else
+            Console.WriteLine("No folder was passed. To build " + System.IO.Directory.GetCurrentDirectory() + " strike any key.")
+            Console.ReadKey()
             Apricot.buildSite(System.IO.Directory.GetCurrentDirectory())
         End If
-        Console.Read()
     End Sub
 
 End Module

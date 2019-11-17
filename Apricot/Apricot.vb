@@ -94,6 +94,7 @@ Public Module Apricot
     End Function
 
     Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String)
+        Dim log As String = ""
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim content = ""
         Dim attribs As New Dictionary(Of String, String)()
@@ -101,6 +102,7 @@ Public Module Apricot
         attribs.Add("path", filename.Replace("\", "/"))
         Dim reader As New StringReader(pageHtml)
         Dim line As String
+        log &= "Reading attributes\n"
         Do
             line = reader.ReadLine
             Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("^<!-- attrib (.*): (.*) -->")
@@ -117,8 +119,10 @@ Public Module Apricot
         reader.Dispose()
         If Not My.Computer.FileSystem.FileExists(templates & "\" & attribs.Item("template") & ".html") Then
             If My.Computer.FileSystem.FileExists(templates & "\default.html") Then
+                log &= "WARN: Template " & attribs.Item("template") + ".html does not exist, using template default.html\n"
                 attribs.Item("template") = "default"
             Else
+                log &= "WARN: Template " & attribs.Item("template") + ".html does not exist, using basic internal template"
                 attribs.Item("template") = "<b>AS</b>internal"
                 If Not template_cache.ContainsKey("<b>AS</b>internal") Then
                     template_cache.Add("<b>AS</b>internal", "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "      [path=index.md]You are on the index.[/path=]" & vbNewLine & "    </p>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>")
@@ -203,7 +207,7 @@ Public Module Apricot
         If filename.EndsWith(".md") Then
             filename = ReplaceLast(filename, ".md", ".html")
         End If
-        Dim log As String = "a"
+
         Dim output As New ApricotOutput
         output.HTML = newHtml
         output.Attributes = attribs

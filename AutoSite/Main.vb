@@ -59,6 +59,12 @@ Public Class Main
         OpenOutputMnu.Enabled = (SiteTree.Nodes.Count > 0)
         BrowseSiteMnu.Enabled = (SiteTree.Nodes.Count > 0)
         BrowseSitePreviewMnu.Enabled = (SiteTree.Nodes.Count > 0)
+
+        If SiteTree.Nodes.Count > 0 Then
+            Me.Text = wTitle & " - " & SiteTree.Nodes(0).Text
+        Else
+            Me.Text = wTitle
+        End If
     End Sub
 
     Private Sub iconTheme()
@@ -132,7 +138,7 @@ Public Class Main
 
                 SiteTree.Nodes.Clear()
 
-                Me.Text = wTitle & " - " & path
+                checkOpen()
 
                 Dim root = SiteTree.Nodes.Add(path)
                 root.ImageKey = "Folder"
@@ -595,7 +601,7 @@ Public Class Main
             bld = SiteTree.Nodes(0).Text
             Log.Clear()
             AttributeTree.Nodes.Clear()
-            ApricotProgress.RunWorkerAsync()
+            ApricotWorker.RunWorkerAsync()
         End If
     End Sub
 
@@ -886,22 +892,20 @@ Public Class Main
     Sub walkInputs(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal input As String, ByVal templates As String, ByVal out As String)
         For Each file In directory.GetFiles(pattern)
             Dim rel = Apricot.ReplaceFirst(file.FullName, input, "")
-            ApricotProgress.ReportProgress(0, "Rendering " & rel.Replace("\", "/"))
-            Dim output = Apricot.Compile(Apricot.ReadAllText(file.FullName), file.Name, SiteTree.Nodes(0).Text)
+            ApricotWorker.ReportProgress(0, "Rendering " & rel.Replace("\", "/"))
+            Dim output = Apricot.Compile(Apricot.ReadAllText(file.FullName), file.Name, SiteTree.Nodes(0).Text, False, ApricotWorker)
             Dim html = output.HTML
             Dim attribs = output.Attributes
-
-            ApricotProgress.ReportProgress(30, output.Log)
 
             For Each attrib In attribs
                 Dim tn As New TNode
                 tn.relPath = rel ' was filenamePath
                 tn.Attribute = attrib.Key
                 tn.Value = attrib.Value
-                ApricotProgress.ReportProgress(50, tn)
+                ApricotWorker.ReportProgress(50, tn)
             Next
 
-            ApricotProgress.ReportProgress(90, "  Saving file")
+            ApricotWorker.ReportProgress(90, "  Saving file")
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
             My.Computer.FileSystem.WriteAllText(out & rel, html, False, encodingType)
         Next
@@ -910,47 +914,47 @@ Public Class Main
         Next
     End Sub
 
-    Private Sub Apricot_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ApricotProgress.DoWork
+    Private Sub Apricot_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ApricotWorker.DoWork
         Dim input = Path.Combine(bld, "in\")
         Dim templates = Path.Combine(bld, "templates\")
         Dim includes = Path.Combine(bld, "includes\")
         Dim out = Path.Combine(bld, "out\")
 
-        ApricotProgress.ReportProgress(0, "Apricot building " & bld)
+        ApricotWorker.ReportProgress(0, "Apricot building " & bld)
 
         If Not My.Computer.FileSystem.DirectoryExists(input) Then
-            ApricotProgress.ReportProgress(10, "Creating in\ folder")
+            ApricotWorker.ReportProgress(10, "Creating in\ folder")
             My.Computer.FileSystem.CreateDirectory(input)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(templates) Then
-            ApricotProgress.ReportProgress(10, "Creating templates\ folder")
+            ApricotWorker.ReportProgress(10, "Creating templates\ folder")
             My.Computer.FileSystem.CreateDirectory(templates)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(includes) Then
-            ApricotProgress.ReportProgress(10, "Creating includes\ folder")
+            ApricotWorker.ReportProgress(10, "Creating includes\ folder")
             My.Computer.FileSystem.CreateDirectory(includes)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(out) Then
-            ApricotProgress.ReportProgress(10, "Creating out\ folder")
+            ApricotWorker.ReportProgress(10, "Creating out\ folder")
             My.Computer.FileSystem.CreateDirectory(out)
         End If
 
-        ApricotProgress.ReportProgress(20, "Syncing includes")
+        ApricotWorker.ReportProgress(20, "Syncing includes")
 
         Dim s As New Apricot.doSync(includes, out)
         Dim t = s.BeginSynchronization()
         If t = Apricot.doSync.SyncResults.Unsuccessful Then
-            ApricotProgress.ReportProgress(20, "  Copying includes\ folder to out\")
+            ApricotWorker.ReportProgress(20, "  Copying includes\ folder to out\")
             My.Computer.FileSystem.CopyDirectory(includes, out, True)
         End If
 
-        ApricotProgress.ReportProgress(50, "Processing input files")
+        ApricotWorker.ReportProgress(50, "Processing input files")
         walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", input, templates, out)
 
-        ApricotProgress.ReportProgress(100, "Finished!")
+        ApricotWorker.ReportProgress(100, "Finished!")
     End Sub
 
-    Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles ApricotProgress.ProgressChanged
+    Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles ApricotWorker.ProgressChanged
         If e.UserState.GetType() Is GetType(System.String) Then
             BuildProgress.Visible = True
             BuildProgress.Value = e.ProgressPercentage
@@ -1046,7 +1050,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ApricotProgress.RunWorkerCompleted
+    Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ApricotWorker.RunWorkerCompleted
         Me.Text = wTitle
         BuildProgress.Visible = False
     End Sub

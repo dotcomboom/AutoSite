@@ -75,25 +75,16 @@ Public Module Apricot
                 _attribs = value
             End Set
         End Property
-
-        Private _log As String = ""
-        Public Property Log() As String
-            Get
-                Return _log
-            End Get
-            Set(ByVal value As String)
-                _log = value
-            End Set
-        End Property
     End Class
 
-    Private Function Log(ByVal out As ApricotOutput, ByVal msg As String)
-        out.Log &= msg
-        Console.Write(msg)
-        Return out
-    End Function
+    Private Sub doLog(ByVal msg As String, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing, Optional ByVal progress As Integer = 0)
+        Console.WriteLine(msg)
+        If Not worker Is Nothing Then
+            worker.ReportProgress(progress, msg)
+        End If
+    End Sub
 
-    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String)
+    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing)
         Dim log As String = ""
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim content = ""
@@ -102,7 +93,7 @@ Public Module Apricot
         attribs.Add("path", filename.Replace("\", "/"))
         Dim reader As New StringReader(pageHtml)
         Dim line As String
-        log &= "Reading attributes\n"
+        doLog("Reading attributes", worker, 40)
         Do
             line = reader.ReadLine
             Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("^<!-- attrib (.*): (.*) -->")
@@ -119,10 +110,11 @@ Public Module Apricot
         reader.Dispose()
         If Not My.Computer.FileSystem.FileExists(templates & "\" & attribs.Item("template") & ".html") Then
             If My.Computer.FileSystem.FileExists(templates & "\default.html") Then
-                log &= "WARN: Template " & attribs.Item("template") + ".html does not exist, using template default.html\n"
+
+                doLog("WARN: Template " & attribs.Item("template") + ".html does not exist, using template default.html", worker, 40)
                 attribs.Item("template") = "default"
             Else
-                log &= "WARN: Template " & attribs.Item("template") + ".html does not exist, using basic internal template"
+                doLog("WARN: Template " & attribs.Item("template") + ".html does not exist, using basic internal template", worker, 40)
                 attribs.Item("template") = "<b>AS</b>internal"
                 If Not template_cache.ContainsKey("<b>AS</b>internal") Then
                     template_cache.Add("<b>AS</b>internal", "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "      [path=index.md]You are on the index.[/path=]" & vbNewLine & "    </p>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>")
@@ -144,7 +136,11 @@ Public Module Apricot
         End If
         newHtml = newHtml.Replace("[#content#]", content)
         'newHtml = newHtml.Replace("[#root#]", Form1.FillString("../", Form1.CountCharacter(filename, "\")))
-        newHtml = newHtml.Replace("[#root#]", siteRoot & "\includes\")
+        If local Then
+            newHtml = newHtml.Replace("[#root#]", siteRoot & "\includes\")
+        Else
+            newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(filename, "\")))
+        End If
         Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
         Dim matches = RegularExpressions.Regex.Matches(newHtml, conditionalRegex)
         For Each m As RegularExpressions.Match In matches
@@ -211,7 +207,6 @@ Public Module Apricot
         Dim output As New ApricotOutput
         output.HTML = newHtml
         output.Attributes = attribs
-        output.Log = log
         Return output
     End Function
 
@@ -221,7 +216,7 @@ Public Module Apricot
             Dim rel = ReplaceFirst(file.FullName, input, "")
             Console.WriteLine("Rendering " & rel.Replace("\", "/"))
 
-            Dim output = Compile(ReadAllText(file.FullName), file.Name, ReplaceLast(templates, "\templates", ""))
+            Dim output = Compile(ReadAllText(file.FullName), file.Name, ReplaceLast(templates, "\templates", ""), False)
             Dim html = output.HTML
             Dim attribs = output.Attributes
 

@@ -77,6 +77,38 @@ Public Module Apricot
         End Property
     End Class
 
+    Public Class TNode
+        Private _relPath As String
+        Public Property relPath() As String
+            Get
+                Return _relPath
+            End Get
+            Set(ByVal value As String)
+                _relPath = value
+            End Set
+        End Property
+
+        Private _Attribute As String
+        Public Property Attribute() As String
+            Get
+                Return _Attribute
+            End Get
+            Set(ByVal value As String)
+                _Attribute = value
+            End Set
+        End Property
+
+        Private _Value As String
+        Public Property Value() As String
+            Get
+                Return _Value
+            End Get
+            Set(ByVal value As String)
+                _Value = value
+            End Set
+        End Property
+    End Class
+
     Private Sub doLog(ByVal msg As String, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing, Optional ByVal progress As Integer = 0)
         Console.WriteLine(msg)
         If Not worker Is Nothing Then
@@ -84,12 +116,18 @@ Public Module Apricot
         End If
     End Sub
 
-    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing)
+    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, ByVal worker As System.ComponentModel.BackgroundWorker)
         Dim log As String = ""
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim content = ""
         Dim attribs As New Dictionary(Of String, String)()
         attribs.Add("template", "default")
+        While filename.StartsWith("\")
+            filename = ReplaceFirst(filename, "\", "")
+        End While
+        While filename.StartsWith("/")
+            filename = ReplaceFirst(filename, "/", "")
+        End While
         attribs.Add("path", filename.Replace("\", "/"))
         Dim reader As New StringReader(pageHtml)
         Dim line As String
@@ -128,9 +166,11 @@ Public Module Apricot
         ' Attribute Process 1 (Content)
         For Each kvp As KeyValuePair(Of String, String) In attribs
             newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
+            doLog("  " & kvp.Key & ": " & kvp.Value, worker)
         Next
         ' End Attribute Process 1
         If filename.EndsWith(".md") Then
+            doLog("Converting Markdown", worker, 50)
             content = CommonMark.CommonMarkConverter.Convert(content)
             filename = ReplaceLast(filename, ".md", ".html")
         End If
@@ -200,8 +240,14 @@ Public Module Apricot
         ' End Attribute Process 2
         newHtml = RegularExpressions.Regex.Replace(newHtml, "\[#.*?#\]", "")
 
-        If filename.EndsWith(".md") Then
-            filename = ReplaceLast(filename, ".md", ".html")
+        If Not worker Is Nothing Then
+            For Each attrib In attribs
+                Dim tn As New TNode
+                tn.relPath = filename
+                tn.Attribute = attrib.Key
+                tn.Value = attrib.Value
+                worker.ReportProgress(20, tn)
+            Next
         End If
 
         Dim output As New ApricotOutput
@@ -210,63 +256,79 @@ Public Module Apricot
         Return output
     End Function
 
-    ' These are used for Core (synchronous workloads)
-    Sub walkInputs(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal input As String, ByVal templates As String, ByVal out As String)
-        For Each file In directory.GetFiles(pattern)
-            Dim rel = ReplaceFirst(file.FullName, input, "")
-            Console.WriteLine("Rendering " & rel.Replace("\", "/"))
 
-            Dim output = Compile(ReadAllText(file.FullName), file.Name, ReplaceLast(templates, "\templates", ""), False)
+    Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing)
+        Dim input = Path.Combine(siteRoot, "in\")
+        Dim templates = Path.Combine(siteRoot, "templates\")
+        Dim includes = Path.Combine(siteRoot, "includes\")
+        Dim out = Path.Combine(siteRoot, "out\")
+
+        For Each file In subdir.GetFiles(pattern, SearchOption.AllDirectories)
+            Dim rel = ReplaceFirst(file.FullName, input, "")
+            While rel.StartsWith("\")
+                rel = ReplaceFirst(rel, "\", "")
+            End While
+            While rel.StartsWith("/")
+                rel = ReplaceFirst(rel, "/", "")
+            End While
+            doLog(rel, worker)
+            'doLog("Rendering " & rel.Replace("\", "/"), worker, 0)
+
+            Dim output As ApricotOutput = Compile(ReadAllText(file.FullName), rel, ReplaceLast(templates, "\templates", ""), False, worker)
             Dim html = output.HTML
             Dim attribs = output.Attributes
+            'doLog(output.Attributes("path"), worker)
 
-            Console.Write(output.Log)
+            If rel.EndsWith(".md") Then
+                rel = ReplaceLast(rel, ".md", ".html")
+            End If
 
-            Console.WriteLine("  Saving file")
+            doLog("Saving file", worker, 100)
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
-            My.Computer.FileSystem.WriteAllText(out & rel, html, False, encodingType)
+            My.Computer.FileSystem.WriteAllText(Path.Combine(out, rel), html, False, encodingType)
         Next
-        For Each subDir In directory.GetDirectories
-            walkInputs(subDir, pattern, input, templates, out)
+        For Each sdir In subdir.GetDirectories
+            walkInputs(sdir, pattern, siteRoot, worker)
         Next
     End Sub
-    Public Sub buildSite(ByVal folder As String)
+
+    Public Sub buildSite(ByVal folder As String, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing)
         Dim input = Path.Combine(folder, "in\")
         Dim templates = Path.Combine(folder, "templates\")
         Dim includes = Path.Combine(folder, "includes\")
         Dim out = Path.Combine(folder, "out\")
 
-        Console.WriteLine("Apricot building " & folder)
+        doLog("Apricot building " & folder, worker, 0)
 
         If Not My.Computer.FileSystem.DirectoryExists(input) Then
-            Console.WriteLine("Creating in\ folder")
+            doLog("Creating in\ folder", worker, 10)
             My.Computer.FileSystem.CreateDirectory(input)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(templates) Then
-            Console.WriteLine("Creating templates\ folder")
+            doLog("Creating templates\ folder", worker, 10)
             My.Computer.FileSystem.CreateDirectory(templates)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(includes) Then
-            Console.WriteLine("Creating includes\ folder")
+            doLog("Creating includes\ folder", worker, 10)
             My.Computer.FileSystem.CreateDirectory(includes)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(out) Then
-            Console.WriteLine("Creating out\ folder")
+            doLog("Creating out\ folder", worker, 10)
             My.Computer.FileSystem.CreateDirectory(out)
         End If
 
-        Console.WriteLine("Syncing includes")
+        doLog("Syncing includes", worker, 20)
 
         Dim s As New doSync(includes, out)
         Dim t = s.BeginSynchronization()
         If t = doSync.SyncResults.Unsuccessful Then
-            Console.WriteLine("  Copying includes\ folder to out\")
+            doLog("  Copying includes\ folder to out\", worker, 30)
             My.Computer.FileSystem.CopyDirectory(includes, out, True)
         End If
 
-        Console.WriteLine("Processing input files")
-        walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", input, templates, out)
+        doLog("Processing input files", worker, 50)
+        walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", folder, worker)
 
-        Console.WriteLine("Finished!")
+        doLog("Finished!", worker, 100)
     End Sub
 End Module

@@ -856,102 +856,8 @@ Public Class Main
         My.Settings.engine = "python"
     End Sub
 
-
-    Public Class TNode
-        Private _relPath As String
-        Public Property relPath() As String
-            Get
-                Return _relPath
-            End Get
-            Set(ByVal value As String)
-                _relPath = value
-            End Set
-        End Property
-
-        Private _Attribute As String
-        Public Property Attribute() As String
-            Get
-                Return _Attribute
-            End Get
-            Set(ByVal value As String)
-                _Attribute = value
-            End Set
-        End Property
-
-        Private _Value As String
-        Public Property Value() As String
-            Get
-                Return _Value
-            End Get
-            Set(ByVal value As String)
-                _Value = value
-            End Set
-        End Property
-    End Class
-
-    Sub walkInputs(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal input As String, ByVal templates As String, ByVal out As String)
-        For Each file In directory.GetFiles(pattern)
-            Dim rel = Apricot.ReplaceFirst(file.FullName, input, "")
-            ApricotWorker.ReportProgress(0, "Rendering " & rel.Replace("\", "/"))
-            Dim output = Apricot.Compile(Apricot.ReadAllText(file.FullName), file.Name, SiteTree.Nodes(0).Text, False, ApricotWorker)
-            Dim html = output.HTML
-            Dim attribs = output.Attributes
-
-            For Each attrib In attribs
-                Dim tn As New TNode
-                tn.relPath = rel ' was filenamePath
-                tn.Attribute = attrib.Key
-                tn.Value = attrib.Value
-                ApricotWorker.ReportProgress(50, tn)
-            Next
-
-            ApricotWorker.ReportProgress(90, "  Saving file")
-            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
-            My.Computer.FileSystem.WriteAllText(out & rel, html, False, encodingType)
-        Next
-        For Each subDir In directory.GetDirectories
-            walkInputs(subDir, pattern, input, templates, out)
-        Next
-    End Sub
-
     Private Sub Apricot_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ApricotWorker.DoWork
-        Dim input = Path.Combine(bld, "in\")
-        Dim templates = Path.Combine(bld, "templates\")
-        Dim includes = Path.Combine(bld, "includes\")
-        Dim out = Path.Combine(bld, "out\")
-
-        ApricotWorker.ReportProgress(0, "Apricot building " & bld)
-
-        If Not My.Computer.FileSystem.DirectoryExists(input) Then
-            ApricotWorker.ReportProgress(10, "Creating in\ folder")
-            My.Computer.FileSystem.CreateDirectory(input)
-        End If
-        If Not My.Computer.FileSystem.DirectoryExists(templates) Then
-            ApricotWorker.ReportProgress(10, "Creating templates\ folder")
-            My.Computer.FileSystem.CreateDirectory(templates)
-        End If
-        If Not My.Computer.FileSystem.DirectoryExists(includes) Then
-            ApricotWorker.ReportProgress(10, "Creating includes\ folder")
-            My.Computer.FileSystem.CreateDirectory(includes)
-        End If
-        If Not My.Computer.FileSystem.DirectoryExists(out) Then
-            ApricotWorker.ReportProgress(10, "Creating out\ folder")
-            My.Computer.FileSystem.CreateDirectory(out)
-        End If
-
-        ApricotWorker.ReportProgress(20, "Syncing includes")
-
-        Dim s As New Apricot.doSync(includes, out)
-        Dim t = s.BeginSynchronization()
-        If t = Apricot.doSync.SyncResults.Unsuccessful Then
-            ApricotWorker.ReportProgress(20, "  Copying includes\ folder to out\")
-            My.Computer.FileSystem.CopyDirectory(includes, out, True)
-        End If
-
-        ApricotWorker.ReportProgress(50, "Processing input files")
-        walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", input, templates, out)
-
-        ApricotWorker.ReportProgress(100, "Finished!")
+        Apricot.buildSite(SiteTree.Nodes(0).Text, ApricotWorker)
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles ApricotWorker.ProgressChanged
@@ -977,8 +883,8 @@ Public Class Main
                 Log.SelectionColor = Color.Blue
             End If
             Log.DeselectAll()
-        ElseIf e.UserState.GetType() Is GetType(TNode) Then
-            Dim tn As TNode = e.UserState
+        ElseIf e.UserState.GetType() Is GetType(Apricot.TNode) Then
+            Dim tn As Apricot.TNode = e.UserState
 
             Dim aNode As New TreeNode
             Dim exists As Boolean = False

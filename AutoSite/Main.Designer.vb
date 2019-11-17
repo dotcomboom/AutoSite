@@ -835,7 +835,7 @@ Partial Class Main
         Me.OpenLink.AutoSize = True
         Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
         Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenLink.Location = New System.Drawing.Point(32, 66)
+        Me.OpenLink.Location = New System.Drawing.Point(25, 47)
         Me.OpenLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.OpenLink.Name = "OpenLink"
         Me.OpenLink.Size = New System.Drawing.Size(149, 15)
@@ -852,7 +852,7 @@ Partial Class Main
         Me.OpenPrompt.AutoSize = True
         Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
         Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenPrompt.Location = New System.Drawing.Point(20, 25)
+        Me.OpenPrompt.Location = New System.Drawing.Point(14, 19)
         Me.OpenPrompt.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.OpenPrompt.Name = "OpenPrompt"
         Me.OpenPrompt.Size = New System.Drawing.Size(172, 15)
@@ -909,7 +909,7 @@ Partial Class Main
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(236, 87)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'LogMenuBridge
         '

@@ -11,6 +11,7 @@ Public Class Main
     Public wTitle = Application.ProductName
     Public editExtensions() As String = {"txt", "md", "css", "ts", "js", "html", "htm", "php", "xml", "json", "csv", "lass", "sass"}
     Public encodingType As Encoding = New UTF8Encoding(False)
+    Public args As String() = Environment.GetCommandLineArgs()
 
     ' https://stackoverflow.com/a/8182507
     Sub walkTree(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal parentNode As TreeNode, ByVal key As String, ByVal incRoot As Boolean)
@@ -403,6 +404,9 @@ Public Class Main
         SyntaxHighlight.Checked = My.Settings.SyntaxHighlight
         LivePreview.Checked = My.Settings.LivePreview
 
+        If args.Length > 1 Then
+            My.Settings.openProject = args(1)
+        End If
         If My.Computer.FileSystem.DirectoryExists(My.Settings.openProject) Then
             openSite(My.Settings.openProject, True)
         End If

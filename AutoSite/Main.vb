@@ -323,12 +323,15 @@ Public Class Main
                 If parts.Length >= 4 Then
                     sz = New Size(Integer.Parse(parts(2)), Integer.Parse(parts(3)))
                 End If
-            End If
 
-            Me.Size = sz
-            Me.Location = il
+                Me.Size = sz
+                Me.Location = il
+            End If
         Catch ex As Exception
         End Try
+        If My.Settings.maximized Then
+            Me.WindowState = FormWindowState.Maximized
+        End If
 
         Try
             Dim key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
@@ -986,13 +989,15 @@ Public Class Main
             Try
                 Dim location As Point = Me.Location
                 Dim size As Size = Me.Size
+                Dim state As Windows.Forms.FormWindowState = Me.WindowState
 
-                If Not WindowState = FormWindowState.Normal Then
+                If Not state = FormWindowState.Normal Then
                     location = RestoreBounds.Location
                     size = RestoreBounds.Size
                 End If
 
                 My.Settings.windowLocation = location.X & "," & location.Y & "," & size.Width & "," & size.Height
+                My.Settings.maximized = (state = FormWindowState.Maximized)
                 My.Settings.Save()
             Catch ex As Exception
             End Try
@@ -1482,5 +1487,9 @@ Public Class Main
             InstallPack.ShowDialog()
             'UnZip(OpenPack.FileName, SiteTree.Nodes(0).Tag)
         End If
+    End Sub
+
+    Private Sub Main_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseClick
+
     End Sub
 End Class

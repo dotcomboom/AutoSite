@@ -327,9 +327,6 @@ Public Class Main
 
             Me.Size = sz
             Me.Location = il
-
-            MsgBox(sz)
-            MsgBox(il)
         Catch ex As Exception
         End Try
 
@@ -347,6 +344,7 @@ Public Class Main
         If My.Application.Info.Version.Revision > 0 Then
             wTitle &= "." & My.Application.Info.Version.Revision
         End If
+        wTitle &= " " & My.Application.Info.Description
         Me.Text = wTitle
 
         If My.Settings.explorerOpen Then

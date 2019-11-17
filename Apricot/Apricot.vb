@@ -131,7 +131,6 @@ Public Module Apricot
         attribs.Add("path", filename.Replace("\", "/"))
         Dim reader As New StringReader(pageHtml)
         Dim line As String
-        doLog("Reading attributes", worker, 40)
         Do
             line = reader.ReadLine
             Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("^<!-- attrib (.*): (.*) -->")
@@ -166,11 +165,11 @@ Public Module Apricot
         ' Attribute Process 1 (Content)
         For Each kvp As KeyValuePair(Of String, String) In attribs
             newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
-            doLog("  " & kvp.Key & ": " & kvp.Value, worker)
+            doLog(" " & kvp.Key & ": " & kvp.Value, worker, 60)
         Next
         ' End Attribute Process 1
         If filename.EndsWith(".md") Then
-            doLog("Converting Markdown", worker, 50)
+            doLog("Converting Markdown", worker, 70)
             content = CommonMark.CommonMarkConverter.Convert(content)
             filename = ReplaceLast(filename, ".md", ".html")
         End If
@@ -271,13 +270,11 @@ Public Module Apricot
             While rel.StartsWith("/")
                 rel = ReplaceFirst(rel, "/", "")
             End While
-            doLog(rel, worker)
-            'doLog("Rendering " & rel.Replace("\", "/"), worker, 0)
+            doLog("Rendering " & rel.Replace("\", "/"), worker, 0)
 
             Dim output As ApricotOutput = Compile(ReadAllText(file.FullName), rel, ReplaceLast(templates, "\templates", ""), False, worker)
             Dim html = output.HTML
             Dim attribs = output.Attributes
-            'doLog(output.Attributes("path"), worker)
 
             If rel.EndsWith(".md") Then
                 rel = ReplaceLast(rel, ".md", ".html")

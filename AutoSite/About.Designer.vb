@@ -49,7 +49,7 @@ Partial Class About
         Me.LicenseBox.Margin = New System.Windows.Forms.Padding(5)
         Me.LicenseBox.Name = "LicenseBox"
         Me.LicenseBox.ReadOnly = True
-        Me.LicenseBox.Size = New System.Drawing.Size(339, 267)
+        Me.LicenseBox.Size = New System.Drawing.Size(339, 272)
         Me.LicenseBox.TabIndex = 0
         Me.LicenseBox.Text = resources.GetString("LicenseBox.Text")
         '
@@ -79,7 +79,7 @@ Partial Class About
         'Version
         '
         Me.Version.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Version.Location = New System.Drawing.Point(11, 143)
+        Me.Version.Location = New System.Drawing.Point(10, 143)
         Me.Version.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Version.Name = "Version"
         Me.Version.Size = New System.Drawing.Size(103, 21)
@@ -93,7 +93,7 @@ Partial Class About
         Me.GithubLink.Location = New System.Drawing.Point(6, 164)
         Me.GithubLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.GithubLink.Name = "GithubLink"
-        Me.GithubLink.Size = New System.Drawing.Size(56, 20)
+        Me.GithubLink.Size = New System.Drawing.Size(45, 15)
         Me.GithubLink.TabIndex = 4
         Me.GithubLink.TabStop = True
         Me.GithubLink.Text = "GitHub"
@@ -101,10 +101,10 @@ Partial Class About
         'WebsiteLink
         '
         Me.WebsiteLink.AutoSize = True
-        Me.WebsiteLink.Location = New System.Drawing.Point(57, 164)
+        Me.WebsiteLink.Location = New System.Drawing.Point(64, 164)
         Me.WebsiteLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.WebsiteLink.Name = "WebsiteLink"
-        Me.WebsiteLink.Size = New System.Drawing.Size(62, 20)
+        Me.WebsiteLink.Size = New System.Drawing.Size(49, 15)
         Me.WebsiteLink.TabIndex = 5
         Me.WebsiteLink.TabStop = True
         Me.WebsiteLink.Text = "Website"
@@ -126,11 +126,11 @@ Partial Class About
         'License
         '
         Me.License.Controls.Add(Me.LicenseBox)
-        Me.License.Location = New System.Drawing.Point(4, 29)
+        Me.License.Location = New System.Drawing.Point(4, 24)
         Me.License.Margin = New System.Windows.Forms.Padding(5)
         Me.License.Name = "License"
         Me.License.Padding = New System.Windows.Forms.Padding(5)
-        Me.License.Size = New System.Drawing.Size(349, 277)
+        Me.License.Size = New System.Drawing.Size(349, 282)
         Me.License.TabIndex = 0
         Me.License.Text = "License"
         Me.License.UseVisualStyleBackColor = True
@@ -138,11 +138,11 @@ Partial Class About
         'Changelog
         '
         Me.Changelog.Controls.Add(Me.ChangelogBox)
-        Me.Changelog.Location = New System.Drawing.Point(4, 29)
+        Me.Changelog.Location = New System.Drawing.Point(4, 24)
         Me.Changelog.Margin = New System.Windows.Forms.Padding(5)
         Me.Changelog.Name = "Changelog"
         Me.Changelog.Padding = New System.Windows.Forms.Padding(5)
-        Me.Changelog.Size = New System.Drawing.Size(349, 277)
+        Me.Changelog.Size = New System.Drawing.Size(349, 282)
         Me.Changelog.TabIndex = 1
         Me.Changelog.Text = "Changelog"
         Me.Changelog.UseVisualStyleBackColor = True
@@ -157,13 +157,13 @@ Partial Class About
         Me.ChangelogBox.Margin = New System.Windows.Forms.Padding(5)
         Me.ChangelogBox.Name = "ChangelogBox"
         Me.ChangelogBox.ReadOnly = True
-        Me.ChangelogBox.Size = New System.Drawing.Size(339, 267)
+        Me.ChangelogBox.Size = New System.Drawing.Size(339, 272)
         Me.ChangelogBox.TabIndex = 1
         Me.ChangelogBox.Text = resources.GetString("ChangelogBox.Text")
         '
         'About
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.OK

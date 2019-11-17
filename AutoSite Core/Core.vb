@@ -10,6 +10,7 @@ Module Core
         If My.Application.Info.Version.Revision > 0 Then
             version &= "." & My.Application.Info.Version.Revision
         End If
+        version &= " " & My.Application.Info.Description
         Console.Title = My.Application.Info.ProductName & " " & version
         Console.WriteLine(" _______       _____      _________________        ")
         Console.WriteLine(" ___    |___  ___  /________  ___/__(_)_  /_____   ")

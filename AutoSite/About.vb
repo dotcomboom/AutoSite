@@ -12,6 +12,7 @@
         If My.Application.Info.Version.Revision > 0 Then
             Version.Text &= "." & My.Application.Info.Version.Revision
         End If
+        Version.Text &= " " & My.Application.Info.Description
         If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
             Me.BackColor = SystemColors.Control
         End If

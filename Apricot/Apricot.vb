@@ -109,14 +109,14 @@ Public Module Apricot
         End Property
     End Class
 
-    Private Sub doLog(ByVal msg As String, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing, Optional ByVal progress As Integer = 0)
+    Private Sub doLog(ByVal msg As String, Optional ByVal worker As Object = Nothing, Optional ByVal progress As Integer = 0)
         Console.WriteLine(msg)
         If Not worker Is Nothing Then
             worker.ReportProgress(progress, msg)
         End If
     End Sub
 
-    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, ByVal worker As System.ComponentModel.BackgroundWorker)
+    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, ByVal worker As Object)
         Dim log As String = ""
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim content = ""
@@ -256,7 +256,7 @@ Public Module Apricot
     End Function
 
 
-    Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing)
+    Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As Object = Nothing)
         Dim input = Path.Combine(siteRoot, "in\")
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim includes = Path.Combine(siteRoot, "includes\")
@@ -289,7 +289,7 @@ Public Module Apricot
         Next
     End Sub
 
-    Public Sub buildSite(ByVal folder As String, Optional ByVal worker As System.ComponentModel.BackgroundWorker = Nothing)
+    Public Sub buildSite(ByVal folder As String, Optional ByVal worker As Object = Nothing)
         Dim input = Path.Combine(folder, "in\")
         Dim templates = Path.Combine(folder, "templates\")
         Dim includes = Path.Combine(folder, "includes\")

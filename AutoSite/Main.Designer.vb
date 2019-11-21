@@ -80,6 +80,7 @@ Partial Class Main
         Me.IconThemeMenu = New System.Windows.Forms.MenuItem
         Me.VS2017item = New System.Windows.Forms.MenuItem
         Me.XPitem = New System.Windows.Forms.MenuItem
+        Me.SystemIcons = New System.Windows.Forms.MenuItem
         Me.RefreshItem = New System.Windows.Forms.MenuItem
         Me.ViewSep2 = New System.Windows.Forms.MenuItem
         Me.PreviewPage = New System.Windows.Forms.MenuItem
@@ -440,7 +441,7 @@ Partial Class Main
         'ViewMenu
         '
         Me.ViewMenu.Index = 3
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewSep, Me.IconThemeMenu, Me.RefreshItem, Me.ViewSep2, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewSep, Me.IconThemeMenu, Me.SystemIcons, Me.RefreshItem, Me.ViewSep2, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
         Me.ViewMenu.Text = "&View"
         '
         'ExplorerPanel
@@ -494,41 +495,47 @@ Partial Class Main
         Me.XPitem.RadioCheck = True
         Me.XPitem.Text = "XP"
         '
+        'SystemIcons
+        '
+        Me.SystemIcons.Checked = True
+        Me.SystemIcons.Index = 6
+        Me.SystemIcons.Text = "Load File Icons"
+        '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 6
+        Me.RefreshItem.Index = 7
         Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
         Me.RefreshItem.Text = "Refresh Explorer"
         '
         'ViewSep2
         '
-        Me.ViewSep2.Index = 7
+        Me.ViewSep2.Index = 8
         Me.ViewSep2.Text = "-"
         '
         'PreviewPage
         '
-        Me.PreviewPage.Index = 8
+        Me.PreviewPage.Index = 9
         Me.PreviewPage.Shortcut = System.Windows.Forms.Shortcut.CtrlP
         Me.PreviewPage.Text = "Preview File"
         '
         'ViewFileOutput
         '
-        Me.ViewFileOutput.Index = 9
+        Me.ViewFileOutput.Index = 10
         Me.ViewFileOutput.Text = "View Output"
         '
         'ViewSep3
         '
-        Me.ViewSep3.Index = 10
+        Me.ViewSep3.Index = 11
         Me.ViewSep3.Text = "-"
         '
         'BrowseSiteMnu
         '
-        Me.BrowseSiteMnu.Index = 11
+        Me.BrowseSiteMnu.Index = 12
         Me.BrowseSiteMnu.Text = "Browse Site in Default Browser"
         '
         'BrowseSitePreviewMnu
         '
-        Me.BrowseSitePreviewMnu.Index = 12
+        Me.BrowseSitePreviewMnu.Index = 13
         Me.BrowseSitePreviewMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftP
         Me.BrowseSitePreviewMnu.Text = "Browse Site in Preview"
         '
@@ -909,7 +916,7 @@ Partial Class Main
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(236, 82)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
         '
         'LogMenuBridge
         '
@@ -1203,4 +1210,5 @@ Partial Class Main
     Friend WithEvents InstallPackMnu As System.Windows.Forms.MenuItem
     Friend WithEvents FileSep4 As System.Windows.Forms.MenuItem
     Friend WithEvents OpenPack As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents SystemIcons As System.Windows.Forms.MenuItem
 End Class

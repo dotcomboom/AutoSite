@@ -6,7 +6,6 @@ Imports Microsoft.Win32
 
 Public Class Main
 
-    Public bld = ""
     Public openFiles As New ArrayList
     Public wTitle = Application.ProductName
     Public editExtensions() As String = {"txt", "md", "css", "ts", "js", "html", "htm", "php", "xml", "json", "csv", "lass", "sass"}
@@ -25,6 +24,21 @@ Public Class Main
             node.Tag = file.FullName
             node.ImageKey = key
             node.SelectedImageKey = key
+            If My.Settings.systemIcons Then
+                Try
+                    Dim splt = node.Text.Split(".")
+                    Dim ext = splt(splt.Length - 1)
+                    node.ImageKey = ext
+                    node.SelectedImageKey = ext
+                    If Not VS2017.Images.ContainsKey(ext) Then
+                        Dim icon As System.Drawing.Icon = System.Drawing.Icon.ExtractAssociatedIcon(file.FullName)
+                        Dim bitmap As System.Drawing.Bitmap = icon.ToBitmap
+                        VS2017.Images.Add(ext, icon)
+                        XP.Images.Add(ext, icon)
+                    End If
+                Catch ex As Exception
+                End Try
+            End If
         Next
         For Each subDir In directory.GetDirectories
             walkTree(subDir, pattern, dirnode, key, True)
@@ -404,6 +418,7 @@ Public Class Main
         WideCaret.Checked = My.Settings.WideCaret
         SyntaxHighlight.Checked = My.Settings.SyntaxHighlight
         LivePreview.Checked = My.Settings.LivePreview
+        SystemIcons.Checked = My.Settings.systemIcons
 
         If args.Length > 1 Then
             My.Settings.openProject = args(1)
@@ -602,8 +617,6 @@ Public Class Main
                 MsgBox("Python 3-based build engine wasn't found. Put AutoSitePy.exe in the same folder as AutoSite.exe.", MsgBoxStyle.Exclamation, "Engine not found")
             End If
         Else
-            'Build.Show()
-            bld = SiteTree.Nodes(0).Text
             Log.Clear()
             AttributeTree.Nodes.Clear()
             ApricotWorker.RunWorkerAsync()
@@ -1489,7 +1502,8 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Main_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseClick
-
+    Private Sub SystemIcons_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SystemIcons.Click
+        SystemIcons.Checked = Not SystemIcons.Checked
+        My.Settings.systemIcons = SystemIcons.Checked
     End Sub
 End Class

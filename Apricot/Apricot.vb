@@ -117,6 +117,10 @@ Public Module Apricot
     End Sub
 
     Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, ByVal worker As Object)
+        If local Then ' clear cache for previews
+            template_cache.Clear()
+        End If
+
         Dim log As String = ""
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim content = ""
@@ -290,6 +294,8 @@ Public Module Apricot
     End Sub
 
     Public Sub buildSite(ByVal folder As String, Optional ByVal worker As Object = Nothing)
+        template_cache.Clear()
+
         Dim input = Path.Combine(folder, "in\")
         Dim templates = Path.Combine(folder, "templates\")
         Dim includes = Path.Combine(folder, "includes\")

@@ -896,7 +896,7 @@ Public Class Main
             If s.Contains("WARN:") Then
                 Log.SelectionColor = Color.OrangeRed
             End If
-            If s.StartsWith("Apricot") Or s.StartsWith("Finished") Then
+            If s.StartsWith("Apricot") Or s.StartsWith("Finished") Or s.StartsWith("Started") Then
                 Log.SelectionFont = New Font(Log.Font, FontStyle.Bold)
                 Log.SelectionColor = Color.Blue
             End If

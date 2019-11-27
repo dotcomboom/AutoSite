@@ -182,7 +182,8 @@ Public Module Apricot
         If local Then
             newHtml = newHtml.Replace("[#root#]", siteRoot & "\includes\")
         Else
-            newHtml = newHtml.Replace("[#root#]", FillString("../", CountCharacter(filename, "\")))
+            Dim root = FillString("../", CountCharacter(filename, "\"))
+            newHtml = newHtml.Replace("[#root#]", root)
         End If
         Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
         Dim matches = RegularExpressions.Regex.Matches(newHtml, conditionalRegex)
@@ -302,6 +303,7 @@ Public Module Apricot
         Dim out = Path.Combine(folder, "out\")
 
         doLog("Apricot building " & folder, worker, 0)
+        doLog("Started " & My.Computer.Clock.LocalTime, worker, 0)
 
         If Not My.Computer.FileSystem.DirectoryExists(input) Then
             doLog("Creating in\ folder", worker, 10)
@@ -332,6 +334,6 @@ Public Module Apricot
         doLog("Processing input files", worker, 50)
         walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", folder, worker)
 
-        doLog("Finished!", worker, 100)
+        doLog("Finished " & My.Computer.Clock.LocalTime, worker, 100)
     End Sub
 End Module

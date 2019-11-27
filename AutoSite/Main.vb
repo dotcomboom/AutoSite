@@ -975,7 +975,6 @@ Public Class Main
     End Sub
 
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ApricotWorker.RunWorkerCompleted
-        Me.Text = wTitle
         BuildProgress.Visible = False
     End Sub
 

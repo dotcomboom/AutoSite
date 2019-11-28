@@ -970,7 +970,16 @@ Public Class Main
             fNode.ImageKey = "Page"
             fNode.SelectedImageKey = "Page"
             fNode.Tag = Path.Combine(SiteTree.Nodes(0).Text, "in\" & tn.relPath)
-            pNode.Nodes.Add(fNode)
+
+            Dim add = True
+            For Each node As TreeNode In pNode.Nodes
+                If node.Tag = fNode.Tag Then
+                    add = False
+                End If
+            Next
+            If add Then
+                pNode.Nodes.Add(fNode)
+            End If
         End If
     End Sub
 

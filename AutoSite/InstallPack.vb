@@ -64,7 +64,8 @@ Public Class InstallPack
         Dim input As Shell32.Folder = shell.NameSpace((Pack))
 
         TreeView1.Nodes.Clear()
-        TreeView1.Nodes.Add("(Root Node)")
+        Dim split As String() = Pack.Split("\")
+        TreeView1.Nodes.Add(split(split.Length - 1))
 
         walkTree(input, TreeView1.Nodes(0))
 

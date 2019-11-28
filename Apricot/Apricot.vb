@@ -172,6 +172,14 @@ Public Module Apricot
             doLog(" " & kvp.Key & ": " & kvp.Value, worker, 60)
         Next
         ' End Attribute Process 1
+        If local Then
+            newHtml = newHtml.Replace("[#root#]", siteRoot & "\includes\")
+            content = content.Replace("[#root#]", siteRoot & "\includes\")
+        Else
+            Dim root = FillString("../", CountCharacter(filename, "\"))
+            newHtml = newHtml.Replace("[#root#]", root)
+            content = content.Replace("[#root#]", root)
+        End If
         If filename.EndsWith(".md") Then
             doLog("Converting Markdown", worker, 70)
             content = CommonMark.CommonMarkConverter.Convert(content)
@@ -179,12 +187,6 @@ Public Module Apricot
         End If
         newHtml = newHtml.Replace("[#content#]", content)
         'newHtml = newHtml.Replace("[#root#]", Form1.FillString("../", Form1.CountCharacter(filename, "\")))
-        If local Then
-            newHtml = newHtml.Replace("[#root#]", siteRoot & "\includes\")
-        Else
-            Dim root = FillString("../", CountCharacter(filename, "\"))
-            newHtml = newHtml.Replace("[#root#]", root)
-        End If
         Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
         Dim matches = RegularExpressions.Regex.Matches(newHtml, conditionalRegex)
         For Each m As RegularExpressions.Match In matches

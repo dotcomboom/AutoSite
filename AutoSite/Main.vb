@@ -619,7 +619,10 @@ Public Class Main
         Else
             Log.Clear()
             AttributeTree.Nodes.Clear()
-            ApricotWorker.RunWorkerAsync()
+            Try
+                ApricotWorker.RunWorkerAsync()
+            Catch ex As Exception
+            End Try
         End If
     End Sub
 

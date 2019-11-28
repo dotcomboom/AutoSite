@@ -1181,6 +1181,10 @@ Public Class Main
         foundNode = Nothing
         FindNodeTag(SiteTree.Nodes(0), e.OldFullPath)
         If Not foundNode Is Nothing Then
+            If openFiles.Contains(foundNode.Tag) Then
+                openFiles.Remove(foundNode.Tag)
+                openFiles.Add(e.FullPath)
+            End If
             Dim arr As Array = e.Name.Split("\")
             foundNode.Text = arr(arr.Length - 1)
             foundNode.Tag = e.FullPath
@@ -1513,5 +1517,8 @@ Public Class Main
     Private Sub SystemIcons_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SystemIcons.Click
         SystemIcons.Checked = Not SystemIcons.Checked
         My.Settings.systemIcons = SystemIcons.Checked
+        If SiteTree.Nodes.Count > 0 Then
+            refreshTree(SiteTree.Nodes(0))
+        End If
     End Sub
 End Class

@@ -303,6 +303,7 @@ Public Module Apricot
         Dim out = Path.Combine(folder, "out\")
 
         doLog("Apricot building " & folder, worker, 0)
+        Dim startTime As Date = Now()
         doLog("Started " & My.Computer.Clock.LocalTime, worker, 0)
 
         If Not My.Computer.FileSystem.DirectoryExists(input) Then
@@ -327,13 +328,13 @@ Public Module Apricot
         Dim s As New doSync(includes, out)
         Dim t = s.BeginSynchronization()
         If t = doSync.SyncResults.Unsuccessful Then
-            doLog("  Copying includes\ folder to out\", worker, 30)
+            doLog("Copying includes\ folder to out\", worker, 30)
             My.Computer.FileSystem.CopyDirectory(includes, out, True)
         End If
 
         doLog("Processing input files", worker, 50)
         walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", folder, worker)
 
-        doLog("Finished " & My.Computer.Clock.LocalTime, worker, 100)
+        doLog("Finished in " & Math.Round(Now.Subtract(startTime).TotalSeconds, 3) & " seconds.", worker, 100)
     End Sub
 End Module

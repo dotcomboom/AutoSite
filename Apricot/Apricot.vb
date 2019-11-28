@@ -268,6 +268,7 @@ Public Module Apricot
         Dim out = Path.Combine(siteRoot, "out\")
 
         For Each file In subdir.GetFiles(pattern, SearchOption.AllDirectories)
+            Dim modifiedDate = file.LastWriteTime
             Dim rel = ReplaceFirst(file.FullName, input, "")
             While rel.StartsWith("\")
                 rel = ReplaceFirst(rel, "\", "")
@@ -288,6 +289,8 @@ Public Module Apricot
             doLog("Saving file", worker, 100)
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
             My.Computer.FileSystem.WriteAllText(Path.Combine(out, rel), html, False, encodingType)
+            Dim info As FileInfo = New FileInfo(Path.Combine(out, rel))
+            info.LastWriteTime = modifiedDate
         Next
         For Each sdir In subdir.GetDirectories
             walkInputs(sdir, pattern, siteRoot, worker)

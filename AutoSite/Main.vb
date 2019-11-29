@@ -1298,7 +1298,7 @@ Public Class Main
     End Sub
 
     Private Sub SendFeedback_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SendFeedback.Click
-        Process.Start("https://github.com/dotcomboom/AutoSite-XL/issues")
+        Process.Start("https://github.com/dotcomboom/AutoSite/issues")
     End Sub
 
     Private Function activeEditor()
@@ -1454,11 +1454,11 @@ Public Class Main
     End Sub
 
     Private Sub Website_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Website.Click
-        Process.Start("https://dotcomboom.somnolescent.net/autosite/xl")
+        Process.Start("https://dotcomboom.somnolescent.net/autosite")
     End Sub
 
     Private Sub GitHub_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GitHub.Click
-        Process.Start("https://github.com/dotcomboom/AutoSite-XL")
+        Process.Start("https://github.com/dotcomboom/AutoSite")
     End Sub
 
     Private Sub OpenContext_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenContext.Click

@@ -651,7 +651,28 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>0.9.8.2 - Chocolate Malt:
+    <value>1.0 RC1:
+   + New Windows 10 Start menu tile
+   + Apricot is now its own DLL library
+   + AutoSite Core now included, also uses Apricot
+
+   + Segoe UI now used throughout the UI, and dialogs will be white on systems that support XP visual styles
+   + Apricot Log is now formatted with rich text, can now be saved
+   + Files can be opened in the editor through context menu
+   + Internet Explorer compatibility mode is disabled automagically
+   + Window location, size, and maximization status is now saved for next run
+   + Site folders dragged onto the AutoSite executable will be opened
+   + System file type icons can now be used if desired; View -&gt; Load File Icons
+   + Window title now includes path of site folder
+   + Start and elapsed times are now logged
+   + Packs can be installed through File &gt; Install Pack...
+
+   - Website/GitHub links updated
+   - Ctrl+Shift+O is the new shortcut for opening a site folder
+   
+   - Additional fixes/changes probably
+
+0.9.8.2 - Chocolate Malt:
    + Plain UTF-8 (no BOM) is now used
 
 0.9.8.1 - Malt:

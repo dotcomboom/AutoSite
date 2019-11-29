@@ -23,7 +23,7 @@ Partial Class InstallPack
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pack")
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pack")
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InstallPack))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
         Me.OK_Button = New System.Windows.Forms.Button
@@ -80,7 +80,7 @@ Partial Class InstallPack
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 13)
+        Me.Label1.Location = New System.Drawing.Point(11, 12)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(227, 15)
@@ -90,7 +90,7 @@ Partial Class InstallPack
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(299, 21)
+        Me.Label2.Location = New System.Drawing.Point(294, 12)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(60, 15)
@@ -100,7 +100,7 @@ Partial Class InstallPack
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(299, 47)
+        Me.Label3.Location = New System.Drawing.Point(294, 32)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 15)
@@ -110,7 +110,7 @@ Partial Class InstallPack
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(299, 77)
+        Me.Label4.Location = New System.Drawing.Point(294, 62)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 15)
@@ -119,27 +119,32 @@ Partial Class InstallPack
         '
         'Description
         '
-        Me.Description.Location = New System.Drawing.Point(301, 96)
+        Me.Description.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Description.Location = New System.Drawing.Point(297, 86)
         Me.Description.Margin = New System.Windows.Forms.Padding(2)
         Me.Description.Name = "Description"
-        Me.Description.Size = New System.Drawing.Size(196, 202)
+        Me.Description.Size = New System.Drawing.Size(200, 212)
         Me.Description.TabIndex = 6
         Me.Description.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'TreeView1
         '
+        Me.TreeView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TreeView1.CheckBoxes = True
         Me.TreeView1.ImageIndex = 0
         Me.TreeView1.ImageList = Me.VS2017
-        Me.TreeView1.Location = New System.Drawing.Point(12, 47)
+        Me.TreeView1.Location = New System.Drawing.Point(12, 38)
         Me.TreeView1.Margin = New System.Windows.Forms.Padding(2)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode2.Name = "Node0"
-        TreeNode2.Text = "Pack"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode2})
+        TreeNode1.Name = "Node0"
+        TreeNode1.Text = "Pack"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
         Me.TreeView1.SelectedImageIndex = 6
         Me.TreeView1.ShowNodeToolTips = True
-        Me.TreeView1.Size = New System.Drawing.Size(272, 251)
+        Me.TreeView1.Size = New System.Drawing.Size(272, 260)
         Me.TreeView1.TabIndex = 7
         '
         'VS2017
@@ -159,16 +164,20 @@ Partial Class InstallPack
         '
         'PackTitle
         '
-        Me.PackTitle.Location = New System.Drawing.Point(373, 21)
+        Me.PackTitle.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PackTitle.Location = New System.Drawing.Point(359, 12)
         Me.PackTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.PackTitle.Name = "PackTitle"
-        Me.PackTitle.Size = New System.Drawing.Size(124, 15)
+        Me.PackTitle.Size = New System.Drawing.Size(134, 15)
         Me.PackTitle.TabIndex = 8
         Me.PackTitle.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'PackAuthor
         '
-        Me.PackAuthor.Location = New System.Drawing.Point(373, 47)
+        Me.PackAuthor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PackAuthor.Location = New System.Drawing.Point(369, 32)
         Me.PackAuthor.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.PackAuthor.Name = "PackAuthor"
         Me.PackAuthor.Size = New System.Drawing.Size(124, 15)
@@ -196,10 +205,10 @@ Partial Class InstallPack
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimizeBox = False
         Me.Name = "InstallPack"
+        Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Install Pack"

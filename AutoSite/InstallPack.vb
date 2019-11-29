@@ -153,8 +153,6 @@ Public Class InstallPack
         tempFolder = GetTempFolder()
         openSite = Main.SiteTree.Nodes(0).Tag
 
-        MsgBox(openSite)
-
         If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
             Me.BackColor = SystemColors.Control
         End If

@@ -206,6 +206,10 @@
       <Project>{438035F7-F55E-4101-81E2-C200E2A1DA91}</Project>
       <Name>Apricot</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AutoSite Core\AutoSite Core.vbproj">
+      <Project>{69483346-9162-4AC6-BC24-34721693A196}</Project>
+      <Name>AutoSite Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

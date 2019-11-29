@@ -34,10 +34,7 @@ Public Class InstallPack
                         folder &= s & "\"
                     Next
                     folder = Apricot.ReplaceLast(folder, "\", "")
-                    MsgBox(folder)
-                    MsgBox(Path.Combine(openSite, folder))
                     My.Computer.FileSystem.CopyFile(node.Tag, Path.Combine(openSite, folder))
-                    MsgBox(node.Tag & "!")
                 End If
             End If
         Next

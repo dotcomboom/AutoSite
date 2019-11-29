@@ -260,7 +260,8 @@ Public Class Main
     End Sub
 
     Private Sub AboutItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles AboutItem.Click
-        About.ShowDialog(Me)
+        Dim abt As New About
+        abt.ShowDialog(Me)
     End Sub
 
     Private Function doClose() Handles CloseSite.Click

@@ -422,6 +422,7 @@ Partial Class Main
         '
         Me.SyntaxHighlight.Index = 4
         Me.SyntaxHighlight.Text = "Experimental Syntax Highlighting"
+        Me.SyntaxHighlight.Visible = False
         '
         'LivePreview
         '

@@ -26,9 +26,21 @@
         Process.Start("https://dotcomboom.somnolescent.net/autosite")
     End Sub
 
-    Private Sub About_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+    Private Sub About_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown, LicenseBox.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
+        ElseIf e.KeyCode = Keys.NumPad5 Then
+            Dim egg = "?"
+            While egg.Length < 256
+                egg &= "?"
+            End While
+            Me.Text = egg
+            For Each control As Control In Me.Controls
+                control.Text = egg
+                For Each ctl As Control In control.Controls
+                    ctl.Text = egg
+                Next
+            Next
         End If
     End Sub
 End Class

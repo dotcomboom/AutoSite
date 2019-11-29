@@ -916,7 +916,7 @@ Partial Class Main
         Me.Log.ReadOnly = True
         Me.Log.Size = New System.Drawing.Size(236, 87)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'LogMenuBridge
         '

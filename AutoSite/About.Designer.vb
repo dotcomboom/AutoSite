@@ -60,7 +60,7 @@ Partial Class About
         Me.OK.Location = New System.Drawing.Point(402, 333)
         Me.OK.Margin = New System.Windows.Forms.Padding(5)
         Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(75, 23)
+        Me.OK.Size = New System.Drawing.Size(78, 27)
         Me.OK.TabIndex = 1
         Me.OK.Text = "OK"
         Me.OK.UseVisualStyleBackColor = True
@@ -89,25 +89,25 @@ Partial Class About
         '
         'GithubLink
         '
-        Me.GithubLink.AutoSize = True
-        Me.GithubLink.Location = New System.Drawing.Point(6, 164)
+        Me.GithubLink.Location = New System.Drawing.Point(10, 174)
         Me.GithubLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.GithubLink.Name = "GithubLink"
-        Me.GithubLink.Size = New System.Drawing.Size(56, 20)
+        Me.GithubLink.Size = New System.Drawing.Size(103, 20)
         Me.GithubLink.TabIndex = 4
         Me.GithubLink.TabStop = True
         Me.GithubLink.Text = "GitHub"
+        Me.GithubLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'WebsiteLink
         '
-        Me.WebsiteLink.AutoSize = True
-        Me.WebsiteLink.Location = New System.Drawing.Point(64, 164)
+        Me.WebsiteLink.Location = New System.Drawing.Point(10, 207)
         Me.WebsiteLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.WebsiteLink.Name = "WebsiteLink"
-        Me.WebsiteLink.Size = New System.Drawing.Size(62, 20)
+        Me.WebsiteLink.Size = New System.Drawing.Size(103, 20)
         Me.WebsiteLink.TabIndex = 5
         Me.WebsiteLink.TabStop = True
         Me.WebsiteLink.Text = "Website"
+        Me.WebsiteLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Tabs
         '
@@ -186,7 +186,6 @@ Partial Class About
         Me.License.ResumeLayout(False)
         Me.Changelog.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents LicenseBox As System.Windows.Forms.RichTextBox

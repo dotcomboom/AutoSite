@@ -651,7 +651,11 @@ SOFTWARE.</value>
 </value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 RC1:
+    <value>1.0 RC2:
+   + Pages and Includes can be dragged into the editor as paths from [#root#]
+   - Start menu tile small icon fixed
+
+1.0 RC1:
    + New Windows 10 Start menu tile
    + Apricot is now its own DLL library
    + AutoSite Core now included, also uses Apricot

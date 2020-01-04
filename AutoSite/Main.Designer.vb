@@ -846,7 +846,7 @@ Partial Class Main
         Me.OpenLink.Location = New System.Drawing.Point(25, 47)
         Me.OpenLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.Size = New System.Drawing.Size(149, 15)
+        Me.OpenLink.Size = New System.Drawing.Size(191, 20)
         Me.OpenLink.TabIndex = 1
         Me.OpenLink.TabStop = True
         Me.OpenLink.Text = "Create or open a site folder"
@@ -863,7 +863,7 @@ Partial Class Main
         Me.OpenPrompt.Location = New System.Drawing.Point(14, 19)
         Me.OpenPrompt.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.OpenPrompt.Name = "OpenPrompt"
-        Me.OpenPrompt.Size = New System.Drawing.Size(172, 15)
+        Me.OpenPrompt.Size = New System.Drawing.Size(217, 20)
         Me.OpenPrompt.TabIndex = 2
         Me.OpenPrompt.Text = "A site has not been opened yet."
         Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -896,11 +896,11 @@ Partial Class Main
         'LogPage
         '
         Me.LogPage.Controls.Add(Me.Log)
-        Me.LogPage.Location = New System.Drawing.Point(4, 24)
+        Me.LogPage.Location = New System.Drawing.Point(4, 29)
         Me.LogPage.Margin = New System.Windows.Forms.Padding(5)
         Me.LogPage.Name = "LogPage"
         Me.LogPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.LogPage.Size = New System.Drawing.Size(246, 97)
+        Me.LogPage.Size = New System.Drawing.Size(246, 92)
         Me.LogPage.TabIndex = 0
         Me.LogPage.Text = "Log"
         Me.LogPage.UseVisualStyleBackColor = True
@@ -915,9 +915,9 @@ Partial Class Main
         Me.Log.Margin = New System.Windows.Forms.Padding(5)
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(236, 87)
+        Me.Log.Size = New System.Drawing.Size(236, 82)
         Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
         '
         'LogMenuBridge
         '
@@ -927,11 +927,11 @@ Partial Class Main
         'MapPage
         '
         Me.MapPage.Controls.Add(Me.AttributeTree)
-        Me.MapPage.Location = New System.Drawing.Point(4, 22)
+        Me.MapPage.Location = New System.Drawing.Point(4, 29)
         Me.MapPage.Margin = New System.Windows.Forms.Padding(5)
         Me.MapPage.Name = "MapPage"
         Me.MapPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.MapPage.Size = New System.Drawing.Size(246, 99)
+        Me.MapPage.Size = New System.Drawing.Size(246, 92)
         Me.MapPage.TabIndex = 1
         Me.MapPage.Text = "Attribute Map"
         Me.MapPage.UseVisualStyleBackColor = True
@@ -946,7 +946,7 @@ Partial Class Main
         Me.AttributeTree.Margin = New System.Windows.Forms.Padding(5)
         Me.AttributeTree.Name = "AttributeTree"
         Me.AttributeTree.SelectedImageIndex = 0
-        Me.AttributeTree.Size = New System.Drawing.Size(236, 89)
+        Me.AttributeTree.Size = New System.Drawing.Size(236, 82)
         Me.AttributeTree.TabIndex = 0
         '
         'BuildProgress
@@ -1051,7 +1051,7 @@ Partial Class Main
         '
         'Main
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(657, 443)
         Me.Controls.Add(Me.CoreSplit)

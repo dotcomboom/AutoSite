@@ -1525,4 +1525,16 @@ Public Class Main
             refreshTree(SiteTree.Nodes(0))
         End If
     End Sub
+
+    Private Sub SiteTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles SiteTree.ItemDrag
+        If e.Button = Windows.Forms.MouseButtons.Left Then
+            If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & "\in\") Or e.Item.tag.contains(SiteTree.Nodes(0).Tag & "\includes\") Then
+                Dim slash = ""
+                If My.Computer.FileSystem.DirectoryExists(e.Item.tag) Then
+                    slash = "/"
+                End If
+                DoDragDrop("[#root#]" & e.Item.Tag.Replace(SiteTree.Nodes(0).Tag & "\in\", "").Replace(SiteTree.Nodes(0).Tag & "\includes\", "").Replace("\", "/") & slash, DragDropEffects.Link)
+            End If
+        End If
+    End Sub
 End Class

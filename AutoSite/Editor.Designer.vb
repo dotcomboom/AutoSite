@@ -45,7 +45,6 @@ Partial Class Editor
         Me.LivePreview = New System.Windows.Forms.ToolStripMenuItem
         Me.Sep5 = New System.Windows.Forms.ToolStripSeparator
         Me.Build = New System.Windows.Forms.ToolStripButton
-        Me.ViewOutput = New System.Windows.Forms.ToolStripButton
         Me.Code = New FastColoredTextBoxNS.FastColoredTextBox
         Me.Context = New System.Windows.Forms.ContextMenu
         Me.Undo = New System.Windows.Forms.MenuItem
@@ -58,6 +57,8 @@ Partial Class Editor
         Me.SelectAll = New System.Windows.Forms.MenuItem
         Me.ConSep3 = New System.Windows.Forms.MenuItem
         Me.InsertConditional = New System.Windows.Forms.MenuItem
+        Me.ViewOutput = New System.Windows.Forms.ToolStripSplitButton
+        Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,7 +72,7 @@ Partial Class Editor
         Me.Strip.Location = New System.Drawing.Point(0, 0)
         Me.Strip.Name = "Strip"
         Me.Strip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.Strip.Size = New System.Drawing.Size(596, 27)
+        Me.Strip.Size = New System.Drawing.Size(649, 27)
         Me.Strip.TabIndex = 1
         Me.Strip.Text = "ToolStrip1"
         '
@@ -232,19 +233,11 @@ Partial Class Editor
         Me.Build.Size = New System.Drawing.Size(63, 24)
         Me.Build.Text = "Build"
         '
-        'ViewOutput
-        '
-        Me.ViewOutput.Image = CType(resources.GetObject("ViewOutput.Image"), System.Drawing.Image)
-        Me.ViewOutput.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ViewOutput.Name = "ViewOutput"
-        Me.ViewOutput.Size = New System.Drawing.Size(111, 24)
-        Me.ViewOutput.Text = "View Output"
-        '
         'Code
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.iconTheme
         Me.Code.AutoScrollMinSize = New System.Drawing.Size(31, 18)
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 18
@@ -253,7 +246,6 @@ Partial Class Editor
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Code.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
@@ -267,7 +259,7 @@ Partial Class Editor
         Me.Code.RightBracket2 = Global.Microsoft.VisualBasic.ChrW(41)
         Me.Code.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Code.ServiceColors = CType(resources.GetObject("Code.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
-        Me.Code.Size = New System.Drawing.Size(596, 460)
+        Me.Code.Size = New System.Drawing.Size(649, 468)
         Me.Code.TabIndex = 2
         Me.Code.Zoom = 100
         '
@@ -325,6 +317,21 @@ Partial Class Editor
         Me.InsertConditional.Index = 9
         Me.InsertConditional.Text = "Insert Conditional..."
         '
+        'ViewOutput
+        '
+        Me.ViewOutput.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
+        Me.ViewOutput.Image = CType(resources.GetObject("ViewOutput.Image"), System.Drawing.Image)
+        Me.ViewOutput.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ViewOutput.Name = "ViewOutput"
+        Me.ViewOutput.Size = New System.Drawing.Size(123, 24)
+        Me.ViewOutput.Text = "View Output"
+        '
+        'ViewinDefaultBrowser
+        '
+        Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
+        Me.ViewinDefaultBrowser.Size = New System.Drawing.Size(236, 24)
+        Me.ViewinDefaultBrowser.Text = "View in Default Browser"
+        '
         'Editor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -334,7 +341,7 @@ Partial Class Editor
         Me.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Editor"
-        Me.Size = New System.Drawing.Size(596, 487)
+        Me.Size = New System.Drawing.Size(649, 495)
         Me.Strip.ResumeLayout(False)
         Me.Strip.PerformLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).EndInit()
@@ -375,6 +382,7 @@ Partial Class Editor
     Friend WithEvents InsertConditional As System.Windows.Forms.MenuItem
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents Sep5 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ViewOutput As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ViewOutput As System.Windows.Forms.ToolStripSplitButton
+    Friend WithEvents ViewinDefaultBrowser As System.Windows.Forms.ToolStripMenuItem
 
 End Class

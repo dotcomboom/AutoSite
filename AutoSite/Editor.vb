@@ -198,4 +198,12 @@ Public Class Editor
     Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Build.Click
         Main.doBuild()
     End Sub
+
+    Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
+        Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        If rel.EndsWith(".md") Then
+            rel = Apricot.ReplaceLast(rel, ".md", ".html")
+        End If
+        Process.Start(siteRoot & "\out\" & rel)
+    End Sub
 End Class

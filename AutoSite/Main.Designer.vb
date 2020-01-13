@@ -927,11 +927,11 @@ Partial Class Main
         'MapPage
         '
         Me.MapPage.Controls.Add(Me.AttributeTree)
-        Me.MapPage.Location = New System.Drawing.Point(4, 29)
+        Me.MapPage.Location = New System.Drawing.Point(4, 25)
         Me.MapPage.Margin = New System.Windows.Forms.Padding(5)
         Me.MapPage.Name = "MapPage"
         Me.MapPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.MapPage.Size = New System.Drawing.Size(246, 92)
+        Me.MapPage.Size = New System.Drawing.Size(246, 96)
         Me.MapPage.TabIndex = 1
         Me.MapPage.Text = "Attribute Map"
         Me.MapPage.UseVisualStyleBackColor = True
@@ -946,7 +946,7 @@ Partial Class Main
         Me.AttributeTree.Margin = New System.Windows.Forms.Padding(5)
         Me.AttributeTree.Name = "AttributeTree"
         Me.AttributeTree.SelectedImageIndex = 0
-        Me.AttributeTree.Size = New System.Drawing.Size(236, 82)
+        Me.AttributeTree.Size = New System.Drawing.Size(236, 86)
         Me.AttributeTree.TabIndex = 0
         '
         'BuildProgress

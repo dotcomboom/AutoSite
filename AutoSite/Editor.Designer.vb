@@ -45,6 +45,8 @@ Partial Class Editor
         Me.LivePreview = New System.Windows.Forms.ToolStripMenuItem
         Me.Sep5 = New System.Windows.Forms.ToolStripSeparator
         Me.Build = New System.Windows.Forms.ToolStripButton
+        Me.ViewOutput = New System.Windows.Forms.ToolStripSplitButton
+        Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem
         Me.Code = New FastColoredTextBoxNS.FastColoredTextBox
         Me.Context = New System.Windows.Forms.ContextMenu
         Me.Undo = New System.Windows.Forms.MenuItem
@@ -57,8 +59,6 @@ Partial Class Editor
         Me.SelectAll = New System.Windows.Forms.MenuItem
         Me.ConSep3 = New System.Windows.Forms.MenuItem
         Me.InsertConditional = New System.Windows.Forms.MenuItem
-        Me.ViewOutput = New System.Windows.Forms.ToolStripSplitButton
-        Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,198 +69,159 @@ Partial Class Editor
         Me.Strip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveBtn, Me.Sep, Me.UndoBtn, Me.RedoBtn, Me.Sep2, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.CloseBtn, Me.Sep3, Me.Find, Me.GTo, Me.Replace, Me.Sep4, Me.Preview, Me.Sep5, Me.Build, Me.ViewOutput})
         Me.Strip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
-        Me.Strip.Location = New System.Drawing.Point(0, 0)
+        resources.ApplyResources(Me.Strip, "Strip")
         Me.Strip.Name = "Strip"
         Me.Strip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.Strip.Size = New System.Drawing.Size(649, 27)
-        Me.Strip.TabIndex = 1
-        Me.Strip.Text = "ToolStrip1"
         '
         'SaveBtn
         '
         Me.SaveBtn.AutoToolTip = False
         Me.SaveBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem, Me.SaveAllToolStripMenuItem})
-        Me.SaveBtn.Enabled = False
-        Me.SaveBtn.Image = CType(resources.GetObject("SaveBtn.Image"), System.Drawing.Image)
-        Me.SaveBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.SaveBtn, "SaveBtn")
         Me.SaveBtn.Name = "SaveBtn"
-        Me.SaveBtn.Size = New System.Drawing.Size(72, 24)
-        Me.SaveBtn.Text = "Save"
         '
         'SaveToolStripMenuItem
         '
-        Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.SaveToolStripMenuItem, "SaveToolStripMenuItem")
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(131, 24)
-        Me.SaveToolStripMenuItem.Text = "Save"
         '
         'SaveAllToolStripMenuItem
         '
-        Me.SaveAllToolStripMenuItem.Image = CType(resources.GetObject("SaveAllToolStripMenuItem.Image"), System.Drawing.Image)
+        resources.ApplyResources(Me.SaveAllToolStripMenuItem, "SaveAllToolStripMenuItem")
         Me.SaveAllToolStripMenuItem.Name = "SaveAllToolStripMenuItem"
-        Me.SaveAllToolStripMenuItem.Size = New System.Drawing.Size(131, 24)
-        Me.SaveAllToolStripMenuItem.Text = "Save All"
         '
         'Sep
         '
         Me.Sep.Name = "Sep"
-        Me.Sep.Size = New System.Drawing.Size(6, 27)
+        resources.ApplyResources(Me.Sep, "Sep")
         '
         'UndoBtn
         '
         Me.UndoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.UndoBtn.Image = CType(resources.GetObject("UndoBtn.Image"), System.Drawing.Image)
-        Me.UndoBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.UndoBtn, "UndoBtn")
         Me.UndoBtn.Name = "UndoBtn"
-        Me.UndoBtn.Size = New System.Drawing.Size(23, 24)
-        Me.UndoBtn.Text = "Undo"
         '
         'RedoBtn
         '
         Me.RedoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.RedoBtn.Image = CType(resources.GetObject("RedoBtn.Image"), System.Drawing.Image)
-        Me.RedoBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.RedoBtn, "RedoBtn")
         Me.RedoBtn.Name = "RedoBtn"
-        Me.RedoBtn.Size = New System.Drawing.Size(23, 24)
-        Me.RedoBtn.Text = "Redo"
         '
         'Sep2
         '
         Me.Sep2.Name = "Sep2"
-        Me.Sep2.Size = New System.Drawing.Size(6, 27)
+        resources.ApplyResources(Me.Sep2, "Sep2")
         '
         'CutBtn
         '
         Me.CutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CutBtn.Image = CType(resources.GetObject("CutBtn.Image"), System.Drawing.Image)
-        Me.CutBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.CutBtn, "CutBtn")
         Me.CutBtn.Name = "CutBtn"
-        Me.CutBtn.Size = New System.Drawing.Size(23, 24)
-        Me.CutBtn.Text = "Cut"
         '
         'CopyBtn
         '
         Me.CopyBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CopyBtn.Image = CType(resources.GetObject("CopyBtn.Image"), System.Drawing.Image)
-        Me.CopyBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.CopyBtn, "CopyBtn")
         Me.CopyBtn.Name = "CopyBtn"
-        Me.CopyBtn.Size = New System.Drawing.Size(23, 24)
-        Me.CopyBtn.Text = "Copy"
         '
         'PasteBtn
         '
         Me.PasteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PasteBtn.Image = CType(resources.GetObject("PasteBtn.Image"), System.Drawing.Image)
-        Me.PasteBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.PasteBtn, "PasteBtn")
         Me.PasteBtn.Name = "PasteBtn"
-        Me.PasteBtn.Size = New System.Drawing.Size(23, 24)
-        Me.PasteBtn.Text = "Paste"
         '
         'CloseBtn
         '
         Me.CloseBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.CloseBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CloseBtn.Image = CType(resources.GetObject("CloseBtn.Image"), System.Drawing.Image)
-        Me.CloseBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.CloseBtn, "CloseBtn")
         Me.CloseBtn.Name = "CloseBtn"
-        Me.CloseBtn.Size = New System.Drawing.Size(23, 24)
-        Me.CloseBtn.Text = "Close"
         '
         'Sep3
         '
         Me.Sep3.Name = "Sep3"
-        Me.Sep3.Size = New System.Drawing.Size(6, 27)
+        resources.ApplyResources(Me.Sep3, "Sep3")
         '
         'Find
         '
         Me.Find.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Find.Image = CType(resources.GetObject("Find.Image"), System.Drawing.Image)
-        Me.Find.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.Find, "Find")
         Me.Find.Name = "Find"
-        Me.Find.Size = New System.Drawing.Size(23, 24)
-        Me.Find.Text = "Find"
         '
         'GTo
         '
         Me.GTo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.GTo.Image = CType(resources.GetObject("GTo.Image"), System.Drawing.Image)
-        Me.GTo.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.GTo, "GTo")
         Me.GTo.Name = "GTo"
-        Me.GTo.Size = New System.Drawing.Size(23, 24)
-        Me.GTo.Text = "Go To"
         '
         'Replace
         '
         Me.Replace.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Replace.Image = CType(resources.GetObject("Replace.Image"), System.Drawing.Image)
-        Me.Replace.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.Replace, "Replace")
         Me.Replace.Name = "Replace"
-        Me.Replace.Size = New System.Drawing.Size(23, 24)
-        Me.Replace.Text = "Replace"
         '
         'Sep4
         '
         Me.Sep4.Name = "Sep4"
-        Me.Sep4.Size = New System.Drawing.Size(6, 27)
+        resources.ApplyResources(Me.Sep4, "Sep4")
         '
         'Preview
         '
         Me.Preview.AutoToolTip = False
         Me.Preview.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LivePreview})
-        Me.Preview.Image = CType(resources.GetObject("Preview.Image"), System.Drawing.Image)
-        Me.Preview.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.Preview, "Preview")
         Me.Preview.Name = "Preview"
-        Me.Preview.Size = New System.Drawing.Size(92, 24)
-        Me.Preview.Text = "Preview"
         '
         'LivePreview
         '
         Me.LivePreview.CheckOnClick = True
         Me.LivePreview.Name = "LivePreview"
-        Me.LivePreview.Size = New System.Drawing.Size(159, 24)
-        Me.LivePreview.Text = "Live Preview"
+        resources.ApplyResources(Me.LivePreview, "LivePreview")
         '
         'Sep5
         '
         Me.Sep5.Name = "Sep5"
-        Me.Sep5.Size = New System.Drawing.Size(6, 27)
+        resources.ApplyResources(Me.Sep5, "Sep5")
         '
         'Build
         '
-        Me.Build.Image = CType(resources.GetObject("Build.Image"), System.Drawing.Image)
-        Me.Build.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.Build, "Build")
         Me.Build.Name = "Build"
-        Me.Build.Size = New System.Drawing.Size(63, 24)
-        Me.Build.Text = "Build"
+        '
+        'ViewOutput
+        '
+        Me.ViewOutput.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
+        resources.ApplyResources(Me.ViewOutput, "ViewOutput")
+        Me.ViewOutput.Name = "ViewOutput"
+        '
+        'ViewinDefaultBrowser
+        '
+        Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
+        resources.ApplyResources(Me.ViewinDefaultBrowser, "ViewinDefaultBrowser")
         '
         'Code
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.iconTheme
-        Me.Code.AutoScrollMinSize = New System.Drawing.Size(31, 18)
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.openProject
+        resources.ApplyResources(Me.Code, "Code")
         Me.Code.BackBrush = Nothing
-        Me.Code.CharHeight = 18
-        Me.Code.CharWidth = 10
+        Me.Code.CharHeight = 14
+        Me.Code.CharWidth = 8
         Me.Code.CommentPrefix = Nothing
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.Code.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
         Me.Code.LeftBracket = Global.Microsoft.VisualBasic.ChrW(60)
         Me.Code.LeftBracket2 = Global.Microsoft.VisualBasic.ChrW(40)
-        Me.Code.Location = New System.Drawing.Point(0, 27)
-        Me.Code.Margin = New System.Windows.Forms.Padding(4)
         Me.Code.Name = "Code"
         Me.Code.Paddings = New System.Windows.Forms.Padding(0)
         Me.Code.RightBracket = Global.Microsoft.VisualBasic.ChrW(62)
         Me.Code.RightBracket2 = Global.Microsoft.VisualBasic.ChrW(41)
         Me.Code.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Code.ServiceColors = CType(resources.GetObject("Code.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
-        Me.Code.Size = New System.Drawing.Size(649, 468)
-        Me.Code.TabIndex = 2
         Me.Code.Zoom = 100
         '
         'Context
@@ -270,78 +231,60 @@ Partial Class Editor
         'Undo
         '
         Me.Undo.Index = 0
-        Me.Undo.Text = "Undo"
+        resources.ApplyResources(Me.Undo, "Undo")
         '
         'Redo
         '
         Me.Redo.Index = 1
-        Me.Redo.Text = "Redo"
+        resources.ApplyResources(Me.Redo, "Redo")
         '
         'ConSep
         '
         Me.ConSep.Index = 2
-        Me.ConSep.Text = "-"
+        resources.ApplyResources(Me.ConSep, "ConSep")
         '
         'Cut
         '
         Me.Cut.Index = 3
-        Me.Cut.Text = "Cut"
+        resources.ApplyResources(Me.Cut, "Cut")
         '
         'Copy
         '
         Me.Copy.Index = 4
-        Me.Copy.Text = "Copy"
+        resources.ApplyResources(Me.Copy, "Copy")
         '
         'Paste
         '
         Me.Paste.Index = 5
-        Me.Paste.Text = "Paste"
+        resources.ApplyResources(Me.Paste, "Paste")
         '
         'ConSep2
         '
         Me.ConSep2.Index = 6
-        Me.ConSep2.Text = "-"
+        resources.ApplyResources(Me.ConSep2, "ConSep2")
         '
         'SelectAll
         '
         Me.SelectAll.Index = 7
-        Me.SelectAll.Text = "Select All"
+        resources.ApplyResources(Me.SelectAll, "SelectAll")
         '
         'ConSep3
         '
         Me.ConSep3.Index = 8
-        Me.ConSep3.Text = "-"
+        resources.ApplyResources(Me.ConSep3, "ConSep3")
         '
         'InsertConditional
         '
         Me.InsertConditional.Index = 9
-        Me.InsertConditional.Text = "Insert Conditional..."
-        '
-        'ViewOutput
-        '
-        Me.ViewOutput.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
-        Me.ViewOutput.Image = CType(resources.GetObject("ViewOutput.Image"), System.Drawing.Image)
-        Me.ViewOutput.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ViewOutput.Name = "ViewOutput"
-        Me.ViewOutput.Size = New System.Drawing.Size(123, 24)
-        Me.ViewOutput.Text = "View Output"
-        '
-        'ViewinDefaultBrowser
-        '
-        Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
-        Me.ViewinDefaultBrowser.Size = New System.Drawing.Size(236, 24)
-        Me.ViewinDefaultBrowser.Text = "View in Default Browser"
+        resources.ApplyResources(Me.InsertConditional, "InsertConditional")
         '
         'Editor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.Code)
         Me.Controls.Add(Me.Strip)
-        Me.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Editor"
-        Me.Size = New System.Drawing.Size(649, 495)
         Me.Strip.ResumeLayout(False)
         Me.Strip.PerformLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).EndInit()

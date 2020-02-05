@@ -44,107 +44,60 @@ Partial Class About
         Me.LicenseBox.BackColor = System.Drawing.SystemColors.Window
         Me.LicenseBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.LicenseBox.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LicenseBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LicenseBox.Location = New System.Drawing.Point(5, 5)
-        Me.LicenseBox.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.LicenseBox, "LicenseBox")
         Me.LicenseBox.Name = "LicenseBox"
         Me.LicenseBox.ReadOnly = True
-        Me.LicenseBox.Size = New System.Drawing.Size(339, 267)
-        Me.LicenseBox.TabIndex = 0
-        Me.LicenseBox.Text = resources.GetString("LicenseBox.Text")
         '
         'OK
         '
-        Me.OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.OK, "OK")
         Me.OK.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.OK.Location = New System.Drawing.Point(402, 333)
-        Me.OK.Margin = New System.Windows.Forms.Padding(5)
         Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(78, 27)
-        Me.OK.TabIndex = 1
-        Me.OK.Text = "OK"
         Me.OK.UseVisualStyleBackColor = True
         '
         'Logo
         '
-        Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
-        Me.Logo.Location = New System.Drawing.Point(10, 10)
-        Me.Logo.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.Logo, "Logo")
         Me.Logo.Name = "Logo"
-        Me.Logo.Size = New System.Drawing.Size(103, 128)
-        Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Logo.TabIndex = 2
         Me.Logo.TabStop = False
         '
         'Version
         '
-        Me.Version.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Version.Location = New System.Drawing.Point(10, 143)
-        Me.Version.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        resources.ApplyResources(Me.Version, "Version")
         Me.Version.Name = "Version"
-        Me.Version.Size = New System.Drawing.Size(103, 21)
-        Me.Version.TabIndex = 3
-        Me.Version.Text = "0.0.0.0"
-        Me.Version.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GithubLink
         '
-        Me.GithubLink.Location = New System.Drawing.Point(10, 174)
-        Me.GithubLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        resources.ApplyResources(Me.GithubLink, "GithubLink")
         Me.GithubLink.Name = "GithubLink"
-        Me.GithubLink.Size = New System.Drawing.Size(103, 20)
-        Me.GithubLink.TabIndex = 4
         Me.GithubLink.TabStop = True
-        Me.GithubLink.Text = "GitHub"
-        Me.GithubLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'WebsiteLink
         '
-        Me.WebsiteLink.Location = New System.Drawing.Point(10, 207)
-        Me.WebsiteLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        resources.ApplyResources(Me.WebsiteLink, "WebsiteLink")
         Me.WebsiteLink.Name = "WebsiteLink"
-        Me.WebsiteLink.Size = New System.Drawing.Size(103, 20)
-        Me.WebsiteLink.TabIndex = 5
         Me.WebsiteLink.TabStop = True
-        Me.WebsiteLink.Text = "Website"
-        Me.WebsiteLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Tabs
         '
-        Me.Tabs.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.Tabs, "Tabs")
         Me.Tabs.Controls.Add(Me.License)
         Me.Tabs.Controls.Add(Me.Changelog)
-        Me.Tabs.Location = New System.Drawing.Point(120, 10)
-        Me.Tabs.Margin = New System.Windows.Forms.Padding(5)
         Me.Tabs.Name = "Tabs"
         Me.Tabs.SelectedIndex = 0
-        Me.Tabs.Size = New System.Drawing.Size(357, 310)
-        Me.Tabs.TabIndex = 10
         '
         'License
         '
         Me.License.Controls.Add(Me.LicenseBox)
-        Me.License.Location = New System.Drawing.Point(4, 29)
-        Me.License.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.License, "License")
         Me.License.Name = "License"
-        Me.License.Padding = New System.Windows.Forms.Padding(5)
-        Me.License.Size = New System.Drawing.Size(349, 277)
-        Me.License.TabIndex = 0
-        Me.License.Text = "License"
         Me.License.UseVisualStyleBackColor = True
         '
         'Changelog
         '
         Me.Changelog.Controls.Add(Me.ChangelogBox)
-        Me.Changelog.Location = New System.Drawing.Point(4, 29)
-        Me.Changelog.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.Changelog, "Changelog")
         Me.Changelog.Name = "Changelog"
-        Me.Changelog.Padding = New System.Windows.Forms.Padding(5)
-        Me.Changelog.Size = New System.Drawing.Size(349, 277)
-        Me.Changelog.TabIndex = 1
-        Me.Changelog.Text = "Changelog"
         Me.Changelog.UseVisualStyleBackColor = True
         '
         'ChangelogBox
@@ -152,35 +105,24 @@ Partial Class About
         Me.ChangelogBox.BackColor = System.Drawing.SystemColors.Window
         Me.ChangelogBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ChangelogBox.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ChangelogBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ChangelogBox.Location = New System.Drawing.Point(5, 5)
-        Me.ChangelogBox.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.ChangelogBox, "ChangelogBox")
         Me.ChangelogBox.Name = "ChangelogBox"
         Me.ChangelogBox.ReadOnly = True
-        Me.ChangelogBox.Size = New System.Drawing.Size(339, 267)
-        Me.ChangelogBox.TabIndex = 1
-        Me.ChangelogBox.Text = resources.GetString("ChangelogBox.Text")
         '
         'About
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.OK
-        Me.ClientSize = New System.Drawing.Size(491, 370)
         Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.WebsiteLink)
         Me.Controls.Add(Me.GithubLink)
         Me.Controls.Add(Me.Version)
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.OK)
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "About"
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "About AutoSite"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tabs.ResumeLayout(False)
         Me.License.ResumeLayout(False)

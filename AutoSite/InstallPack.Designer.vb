@@ -23,7 +23,6 @@ Partial Class InstallPack
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pack")
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InstallPack))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
         Me.OK_Button = New System.Windows.Forms.Button
@@ -43,109 +42,56 @@ Partial Class InstallPack
         '
         'TableLayoutPanel1
         '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        resources.ApplyResources(Me.TableLayoutPanel1, "TableLayoutPanel1")
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(323, 316)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(170, 33)
-        Me.TableLayoutPanel1.TabIndex = 0
         '
         'OK_Button
         '
-        Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.OK_Button.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.OK_Button.Location = New System.Drawing.Point(3, 3)
+        resources.ApplyResources(Me.OK_Button, "OK_Button")
         Me.OK_Button.Name = "OK_Button"
-        Me.OK_Button.Size = New System.Drawing.Size(78, 27)
-        Me.OK_Button.TabIndex = 0
-        Me.OK_Button.Text = "OK"
         '
         'Cancel_Button
         '
-        Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        resources.ApplyResources(Me.Cancel_Button, "Cancel_Button")
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel_Button.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Cancel_Button.Location = New System.Drawing.Point(88, 3)
         Me.Cancel_Button.Name = "Cancel_Button"
-        Me.Cancel_Button.Size = New System.Drawing.Size(78, 27)
-        Me.Cancel_Button.TabIndex = 1
-        Me.Cancel_Button.Text = "Cancel"
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 12)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(227, 15)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "AutoSite will install these files to your site:"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(294, 12)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 15)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Pack Title:"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(294, 32)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 15)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Pack Author:"
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(294, 62)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 15)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Description:"
         '
         'Description
         '
-        Me.Description.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Description.Location = New System.Drawing.Point(297, 86)
-        Me.Description.Margin = New System.Windows.Forms.Padding(2)
+        resources.ApplyResources(Me.Description, "Description")
         Me.Description.Name = "Description"
-        Me.Description.Size = New System.Drawing.Size(200, 212)
-        Me.Description.TabIndex = 6
         Me.Description.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'TreeView1
         '
-        Me.TreeView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.TreeView1, "TreeView1")
         Me.TreeView1.CheckBoxes = True
-        Me.TreeView1.ImageIndex = 0
         Me.TreeView1.ImageList = Me.VS2017
-        Me.TreeView1.Location = New System.Drawing.Point(12, 38)
-        Me.TreeView1.Margin = New System.Windows.Forms.Padding(2)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "Node0"
-        TreeNode1.Text = "Pack"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
-        Me.TreeView1.SelectedImageIndex = 6
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {CType(resources.GetObject("TreeView1.Nodes"), System.Windows.Forms.TreeNode)})
         Me.TreeView1.ShowNodeToolTips = True
-        Me.TreeView1.Size = New System.Drawing.Size(272, 260)
-        Me.TreeView1.TabIndex = 7
         '
         'VS2017
         '
@@ -164,25 +110,13 @@ Partial Class InstallPack
         '
         'PackTitle
         '
-        Me.PackTitle.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PackTitle.Location = New System.Drawing.Point(359, 12)
-        Me.PackTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        resources.ApplyResources(Me.PackTitle, "PackTitle")
         Me.PackTitle.Name = "PackTitle"
-        Me.PackTitle.Size = New System.Drawing.Size(134, 15)
-        Me.PackTitle.TabIndex = 8
-        Me.PackTitle.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'PackAuthor
         '
-        Me.PackAuthor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PackAuthor.Location = New System.Drawing.Point(369, 32)
-        Me.PackAuthor.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        resources.ApplyResources(Me.PackAuthor, "PackAuthor")
         Me.PackAuthor.Name = "PackAuthor"
-        Me.PackAuthor.Size = New System.Drawing.Size(124, 15)
-        Me.PackAuthor.TabIndex = 9
-        Me.PackAuthor.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'BackgroundWorker1
         '
@@ -190,11 +124,10 @@ Partial Class InstallPack
         'InstallPack
         '
         Me.AcceptButton = Me.OK_Button
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(507, 363)
         Me.Controls.Add(Me.PackAuthor)
         Me.Controls.Add(Me.PackTitle)
         Me.Controls.Add(Me.TreeView1)
@@ -204,14 +137,10 @@ Partial Class InstallPack
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimizeBox = False
         Me.Name = "InstallPack"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Install Pack"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()

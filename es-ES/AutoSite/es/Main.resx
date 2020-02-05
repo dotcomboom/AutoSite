@@ -440,7 +440,7 @@
     <value>-</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
-    <value>Monospace Font...</value>
+    <value>Fuentes monoespaciales...</value>
   </data>
   <data name="FormatMenu.Text" xml:space="preserve">
     <value>F&amp;ormat</value>
@@ -536,7 +536,7 @@
     <value>Apricot</value>
   </data>
   <data name="EnginePython.Text" xml:space="preserve">
-    <value>AutoSite heredado</value>
+    <value>Legacy AutoSite</value>
   </data>
   <data name="BuildSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -563,7 +563,7 @@
     <value>Sitio web</value>
   </data>
   <data name="GitHub.Text" xml:space="preserve">
-    <value>GitHub Repository</value>
+    <value>Repositorio de GitHub</value>
   </data>
   <data name="SendFeedback.Text" xml:space="preserve">
     <value>Enviar Comentarios</value>
@@ -797,19 +797,19 @@
     <value>Página HTML (.html)</value>
   </data>
   <data name="NewMDCon.Text" xml:space="preserve">
-    <value>Markdown Page (.md)</value>
+    <value>Página Markdown (.md)</value>
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>PHP Script (.php)</value>
+    <value>Guión PHP (.php)</value>
   </data>
   <data name="NewSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>Hoja de estilos CSS (.css)</value>
+    <value>Hojas de estilo CSS (.css)</value>
   </data>
   <data name="NewJSCon.Text" xml:space="preserve">
-    <value>Script JS (.js)</value>
+    <value>Guión JS (.js)</value>
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
     <value>Texto simple (.txt)</value>
@@ -3245,7 +3245,7 @@
     <value>Manual</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Autositio</value>
+    <value>AutoSite</value>
   </data>
   <data name="&gt;&gt;VS2017.Name" xml:space="preserve">
     <value>VS2017</value>

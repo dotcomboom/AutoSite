@@ -134,7 +134,7 @@
     <value>115, 22</value>
   </data>
   <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Guardar</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -149,7 +149,7 @@
     <value>115, 22</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save All</value>
+    <value>Guardar Todo</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
@@ -170,7 +170,7 @@
     <value>63, 22</value>
   </data>
   <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Guardar</value>
   </data>
   <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -192,7 +192,7 @@
     <value>23, 22</value>
   </data>
   <data name="UndoBtn.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Deshacer</value>
   </data>
   <data name="RedoBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -213,7 +213,7 @@
     <value>23, 22</value>
   </data>
   <data name="RedoBtn.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Rehacer</value>
   </data>
   <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -236,7 +236,7 @@
     <value>23, 22</value>
   </data>
   <data name="CutBtn.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Cortar</value>
   </data>
   <data name="CopyBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -254,7 +254,7 @@
     <value>23, 22</value>
   </data>
   <data name="CopyBtn.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiar</value>
   </data>
   <data name="PasteBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -271,7 +271,7 @@
     <value>23, 22</value>
   </data>
   <data name="PasteBtn.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Pegar</value>
   </data>
   <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -289,7 +289,7 @@
     <value>23, 22</value>
   </data>
   <data name="CloseBtn.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>Cerrar</value>
   </data>
   <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -314,7 +314,7 @@
     <value>23, 22</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Find</value>
+    <value>Buscar</value>
   </data>
   <data name="GTo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

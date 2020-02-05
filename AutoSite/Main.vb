@@ -251,7 +251,7 @@ Public Class Main
         openFiles.Add(path)
     End Sub
 
-    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, OpenLink.LinkClicked
+    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, OpenLink.LinkClicked, NewSite.Click
         If FolderBrowser.ShowDialog(Me) = DialogResult.OK Then
             If My.Computer.FileSystem.DirectoryExists(FolderBrowser.SelectedPath) Then
                 openSite(FolderBrowser.SelectedPath, False)

@@ -1,4 +1,4 @@
-﻿Public Class About
+Public Class About
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         Me.Close()

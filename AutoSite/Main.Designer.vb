@@ -28,6 +28,7 @@ Partial Class Main
         Me.FolderBrowser = New System.Windows.Forms.FolderBrowserDialog
         Me.MenuBar = New System.Windows.Forms.MainMenu(Me.components)
         Me.FileMenu = New System.Windows.Forms.MenuItem
+        Me.NewSite = New System.Windows.Forms.MenuItem
         Me.OpenFolder = New System.Windows.Forms.MenuItem
         Me.OpenRecent = New System.Windows.Forms.MenuItem
         Me.Recent1 = New System.Windows.Forms.MenuItem
@@ -37,7 +38,6 @@ Partial Class Main
         Me.Recent5 = New System.Windows.Forms.MenuItem
         Me.RecentSep = New System.Windows.Forms.MenuItem
         Me.ClearRecents = New System.Windows.Forms.MenuItem
-        Me.FileSep = New System.Windows.Forms.MenuItem
         Me.CloseFile = New System.Windows.Forms.MenuItem
         Me.CloseSite = New System.Windows.Forms.MenuItem
         Me.FileSep2 = New System.Windows.Forms.MenuItem
@@ -184,8 +184,7 @@ Partial Class Main
         '
         'FolderBrowser
         '
-        Me.FolderBrowser.Description = "Choose an existing site folder to open or create a new one to hold your site's fi" & _
-            "les."
+        resources.ApplyResources(Me.FolderBrowser, "FolderBrowser")
         '
         'MenuBar
         '
@@ -194,440 +193,406 @@ Partial Class Main
         'FileMenu
         '
         Me.FileMenu.Index = 0
-        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenFolder, Me.OpenRecent, Me.FileSep, Me.CloseFile, Me.CloseSite, Me.FileSep2, Me.Save, Me.SaveAll, Me.FileSep3, Me.InstallPackMnu, Me.FileSep4, Me.ExitItem})
-        Me.FileMenu.Text = "&File"
+        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewSite, Me.OpenFolder, Me.OpenRecent, Me.CloseFile, Me.CloseSite, Me.FileSep2, Me.Save, Me.SaveAll, Me.FileSep3, Me.InstallPackMnu, Me.FileSep4, Me.ExitItem})
+        resources.ApplyResources(Me.FileMenu, "FileMenu")
+        '
+        'NewSite
+        '
+        Me.NewSite.Index = 0
+        resources.ApplyResources(Me.NewSite, "NewSite")
         '
         'OpenFolder
         '
-        Me.OpenFolder.Index = 0
-        Me.OpenFolder.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftO
-        Me.OpenFolder.Text = "Open Folder..."
+        Me.OpenFolder.Index = 1
+        resources.ApplyResources(Me.OpenFolder, "OpenFolder")
         '
         'OpenRecent
         '
-        Me.OpenRecent.Index = 1
+        Me.OpenRecent.Index = 2
         Me.OpenRecent.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Recent1, Me.Recent2, Me.Recent3, Me.Recent4, Me.Recent5, Me.RecentSep, Me.ClearRecents})
-        Me.OpenRecent.Text = "Open Recent"
+        resources.ApplyResources(Me.OpenRecent, "OpenRecent")
         '
         'Recent1
         '
         Me.Recent1.Index = 0
-        Me.Recent1.Text = "Recent 1"
-        Me.Recent1.Visible = False
+        resources.ApplyResources(Me.Recent1, "Recent1")
         '
         'Recent2
         '
         Me.Recent2.Index = 1
-        Me.Recent2.Text = "Recent 2"
-        Me.Recent2.Visible = False
+        resources.ApplyResources(Me.Recent2, "Recent2")
         '
         'Recent3
         '
         Me.Recent3.Index = 2
-        Me.Recent3.Text = "Recent 3"
-        Me.Recent3.Visible = False
+        resources.ApplyResources(Me.Recent3, "Recent3")
         '
         'Recent4
         '
         Me.Recent4.Index = 3
-        Me.Recent4.Text = "Recent 4"
-        Me.Recent4.Visible = False
+        resources.ApplyResources(Me.Recent4, "Recent4")
         '
         'Recent5
         '
         Me.Recent5.Index = 4
-        Me.Recent5.Text = "Recent 5"
-        Me.Recent5.Visible = False
+        resources.ApplyResources(Me.Recent5, "Recent5")
         '
         'RecentSep
         '
         Me.RecentSep.Index = 5
-        Me.RecentSep.Text = "-"
+        resources.ApplyResources(Me.RecentSep, "RecentSep")
         '
         'ClearRecents
         '
         Me.ClearRecents.Index = 6
-        Me.ClearRecents.Text = "Clear Recent Sites"
-        '
-        'FileSep
-        '
-        Me.FileSep.Index = 2
-        Me.FileSep.Text = "-"
+        resources.ApplyResources(Me.ClearRecents, "ClearRecents")
         '
         'CloseFile
         '
         Me.CloseFile.Index = 3
-        Me.CloseFile.Shortcut = System.Windows.Forms.Shortcut.CtrlW
-        Me.CloseFile.Text = "Close"
+        resources.ApplyResources(Me.CloseFile, "CloseFile")
         '
         'CloseSite
         '
-        Me.CloseSite.Enabled = False
+        resources.ApplyResources(Me.CloseSite, "CloseSite")
         Me.CloseSite.Index = 4
-        Me.CloseSite.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftW
-        Me.CloseSite.Text = "Close Site"
         '
         'FileSep2
         '
         Me.FileSep2.Index = 5
-        Me.FileSep2.Text = "-"
+        resources.ApplyResources(Me.FileSep2, "FileSep2")
         '
         'Save
         '
         Me.Save.Index = 6
-        Me.Save.Shortcut = System.Windows.Forms.Shortcut.CtrlS
-        Me.Save.Text = "Save"
+        resources.ApplyResources(Me.Save, "Save")
         '
         'SaveAll
         '
         Me.SaveAll.Index = 7
-        Me.SaveAll.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftS
-        Me.SaveAll.Text = "Save All"
+        resources.ApplyResources(Me.SaveAll, "SaveAll")
         '
         'FileSep3
         '
         Me.FileSep3.Index = 8
-        Me.FileSep3.Text = "-"
+        resources.ApplyResources(Me.FileSep3, "FileSep3")
         '
         'InstallPackMnu
         '
         Me.InstallPackMnu.Index = 9
-        Me.InstallPackMnu.Text = "Install Pack..."
+        resources.ApplyResources(Me.InstallPackMnu, "InstallPackMnu")
         '
         'FileSep4
         '
         Me.FileSep4.Index = 10
-        Me.FileSep4.Text = "-"
+        resources.ApplyResources(Me.FileSep4, "FileSep4")
         '
         'ExitItem
         '
         Me.ExitItem.Index = 11
-        Me.ExitItem.Shortcut = System.Windows.Forms.Shortcut.AltF4
-        Me.ExitItem.Text = "Exit"
+        resources.ApplyResources(Me.ExitItem, "ExitItem")
         '
         'EditMenu
         '
         Me.EditMenu.Index = 1
         Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.Find, Me.Replace, Me.GoToMnu, Me.EditSep4, Me.InsertConditional})
-        Me.EditMenu.Text = "&Edit"
+        resources.ApplyResources(Me.EditMenu, "EditMenu")
         '
         'Undo
         '
         Me.Undo.Index = 0
-        Me.Undo.Shortcut = System.Windows.Forms.Shortcut.CtrlZ
-        Me.Undo.Text = "Undo"
+        resources.ApplyResources(Me.Undo, "Undo")
         '
         'Redo
         '
         Me.Redo.Index = 1
-        Me.Redo.Shortcut = System.Windows.Forms.Shortcut.CtrlY
-        Me.Redo.Text = "Redo"
+        resources.ApplyResources(Me.Redo, "Redo")
         '
         'EditSep
         '
         Me.EditSep.Index = 2
-        Me.EditSep.Text = "-"
+        resources.ApplyResources(Me.EditSep, "EditSep")
         '
         'Cut
         '
         Me.Cut.Index = 3
-        Me.Cut.Shortcut = System.Windows.Forms.Shortcut.CtrlX
-        Me.Cut.Text = "Cut"
+        resources.ApplyResources(Me.Cut, "Cut")
         '
         'Copy
         '
         Me.Copy.Index = 4
-        Me.Copy.Shortcut = System.Windows.Forms.Shortcut.CtrlC
-        Me.Copy.Text = "Copy"
+        resources.ApplyResources(Me.Copy, "Copy")
         '
         'Paste
         '
         Me.Paste.Index = 5
-        Me.Paste.Shortcut = System.Windows.Forms.Shortcut.CtrlV
-        Me.Paste.Text = "Paste"
+        resources.ApplyResources(Me.Paste, "Paste")
         '
         'EditSep2
         '
         Me.EditSep2.Index = 6
-        Me.EditSep2.Text = "-"
+        resources.ApplyResources(Me.EditSep2, "EditSep2")
         '
         'SelectAll
         '
         Me.SelectAll.Index = 7
-        Me.SelectAll.Shortcut = System.Windows.Forms.Shortcut.CtrlA
-        Me.SelectAll.Text = "Select All"
+        resources.ApplyResources(Me.SelectAll, "SelectAll")
         '
         'EditSep3
         '
         Me.EditSep3.Index = 8
-        Me.EditSep3.Text = "-"
+        resources.ApplyResources(Me.EditSep3, "EditSep3")
         '
         'Find
         '
         Me.Find.Index = 9
-        Me.Find.Shortcut = System.Windows.Forms.Shortcut.CtrlF
-        Me.Find.Text = "Find..."
+        resources.ApplyResources(Me.Find, "Find")
         '
         'Replace
         '
         Me.Replace.Index = 10
-        Me.Replace.Shortcut = System.Windows.Forms.Shortcut.CtrlH
-        Me.Replace.Text = "Replace..."
+        resources.ApplyResources(Me.Replace, "Replace")
         '
         'GoToMnu
         '
         Me.GoToMnu.Index = 11
-        Me.GoToMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlG
-        Me.GoToMnu.Text = "Go To..."
+        resources.ApplyResources(Me.GoToMnu, "GoToMnu")
         '
         'EditSep4
         '
         Me.EditSep4.Index = 12
-        Me.EditSep4.Text = "-"
+        resources.ApplyResources(Me.EditSep4, "EditSep4")
         '
         'InsertConditional
         '
         Me.InsertConditional.Index = 13
-        Me.InsertConditional.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftI
-        Me.InsertConditional.Text = "Insert Conditional..."
+        resources.ApplyResources(Me.InsertConditional, "InsertConditional")
         '
         'FormatMenu
         '
         Me.FormatMenu.Index = 2
         Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatSep, Me.SyntaxHighlight, Me.LivePreview, Me.FormatSep2, Me.EditorFont})
-        Me.FormatMenu.Text = "F&ormat"
+        resources.ApplyResources(Me.FormatMenu, "FormatMenu")
         '
         'WordWrap
         '
         Me.WordWrap.Checked = True
         Me.WordWrap.Index = 0
-        Me.WordWrap.Text = "Word Wrap"
+        resources.ApplyResources(Me.WordWrap, "WordWrap")
         '
         'VirtualSpace
         '
         Me.VirtualSpace.Index = 1
-        Me.VirtualSpace.Text = "Virtual Space"
+        resources.ApplyResources(Me.VirtualSpace, "VirtualSpace")
         '
         'WideCaret
         '
         Me.WideCaret.Index = 2
-        Me.WideCaret.Text = "Wide Caret"
+        resources.ApplyResources(Me.WideCaret, "WideCaret")
         '
         'FormatSep
         '
         Me.FormatSep.Index = 3
-        Me.FormatSep.Text = "-"
+        resources.ApplyResources(Me.FormatSep, "FormatSep")
         '
         'SyntaxHighlight
         '
         Me.SyntaxHighlight.Index = 4
-        Me.SyntaxHighlight.Text = "Experimental Syntax Highlighting"
-        Me.SyntaxHighlight.Visible = False
+        resources.ApplyResources(Me.SyntaxHighlight, "SyntaxHighlight")
         '
         'LivePreview
         '
         Me.LivePreview.Index = 5
-        Me.LivePreview.Text = "Live Preview"
+        resources.ApplyResources(Me.LivePreview, "LivePreview")
         '
         'FormatSep2
         '
         Me.FormatSep2.Index = 6
-        Me.FormatSep2.Text = "-"
+        resources.ApplyResources(Me.FormatSep2, "FormatSep2")
         '
         'EditorFont
         '
         Me.EditorFont.Index = 7
-        Me.EditorFont.Text = "Monospace Font..."
+        resources.ApplyResources(Me.EditorFont, "EditorFont")
         '
         'ViewMenu
         '
         Me.ViewMenu.Index = 3
         Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewSep, Me.IconThemeMenu, Me.SystemIcons, Me.RefreshItem, Me.ViewSep2, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
-        Me.ViewMenu.Text = "&View"
+        resources.ApplyResources(Me.ViewMenu, "ViewMenu")
         '
         'ExplorerPanel
         '
         Me.ExplorerPanel.Checked = True
         Me.ExplorerPanel.Index = 0
-        Me.ExplorerPanel.Shortcut = System.Windows.Forms.Shortcut.Alt1
-        Me.ExplorerPanel.Text = "Explorer"
+        resources.ApplyResources(Me.ExplorerPanel, "ExplorerPanel")
         '
         'BuildPanel
         '
         Me.BuildPanel.Checked = True
         Me.BuildPanel.Index = 1
-        Me.BuildPanel.Shortcut = System.Windows.Forms.Shortcut.Alt2
-        Me.BuildPanel.Text = "Apricot"
+        resources.ApplyResources(Me.BuildPanel, "BuildPanel")
         '
         'EditorPanel
         '
         Me.EditorPanel.Checked = True
         Me.EditorPanel.Index = 2
-        Me.EditorPanel.Shortcut = System.Windows.Forms.Shortcut.Alt3
-        Me.EditorPanel.Text = "Editor"
+        resources.ApplyResources(Me.EditorPanel, "EditorPanel")
         '
         'PreviewPanel
         '
         Me.PreviewPanel.Checked = True
         Me.PreviewPanel.Index = 3
-        Me.PreviewPanel.Shortcut = System.Windows.Forms.Shortcut.Alt4
-        Me.PreviewPanel.Text = "Preview"
+        resources.ApplyResources(Me.PreviewPanel, "PreviewPanel")
         '
         'ViewSep
         '
         Me.ViewSep.Index = 4
-        Me.ViewSep.Text = "-"
+        resources.ApplyResources(Me.ViewSep, "ViewSep")
         '
         'IconThemeMenu
         '
         Me.IconThemeMenu.Index = 5
         Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
-        Me.IconThemeMenu.Text = "Explorer Icon Theme"
+        resources.ApplyResources(Me.IconThemeMenu, "IconThemeMenu")
         '
         'VS2017item
         '
         Me.VS2017item.Index = 0
         Me.VS2017item.RadioCheck = True
-        Me.VS2017item.Text = "Visual Studio 2017"
+        resources.ApplyResources(Me.VS2017item, "VS2017item")
         '
         'XPitem
         '
         Me.XPitem.Index = 1
         Me.XPitem.RadioCheck = True
-        Me.XPitem.Text = "XP"
+        resources.ApplyResources(Me.XPitem, "XPitem")
         '
         'SystemIcons
         '
         Me.SystemIcons.Checked = True
         Me.SystemIcons.Index = 6
-        Me.SystemIcons.Text = "Load File Icons"
+        resources.ApplyResources(Me.SystemIcons, "SystemIcons")
         '
         'RefreshItem
         '
         Me.RefreshItem.Index = 7
-        Me.RefreshItem.Shortcut = System.Windows.Forms.Shortcut.CtrlR
-        Me.RefreshItem.Text = "Refresh Explorer"
+        resources.ApplyResources(Me.RefreshItem, "RefreshItem")
         '
         'ViewSep2
         '
         Me.ViewSep2.Index = 8
-        Me.ViewSep2.Text = "-"
+        resources.ApplyResources(Me.ViewSep2, "ViewSep2")
         '
         'PreviewPage
         '
         Me.PreviewPage.Index = 9
-        Me.PreviewPage.Shortcut = System.Windows.Forms.Shortcut.CtrlP
-        Me.PreviewPage.Text = "Preview File"
+        resources.ApplyResources(Me.PreviewPage, "PreviewPage")
         '
         'ViewFileOutput
         '
         Me.ViewFileOutput.Index = 10
-        Me.ViewFileOutput.Text = "View Output"
+        resources.ApplyResources(Me.ViewFileOutput, "ViewFileOutput")
         '
         'ViewSep3
         '
         Me.ViewSep3.Index = 11
-        Me.ViewSep3.Text = "-"
+        resources.ApplyResources(Me.ViewSep3, "ViewSep3")
         '
         'BrowseSiteMnu
         '
         Me.BrowseSiteMnu.Index = 12
-        Me.BrowseSiteMnu.Text = "Browse Site in Default Browser"
+        resources.ApplyResources(Me.BrowseSiteMnu, "BrowseSiteMnu")
         '
         'BrowseSitePreviewMnu
         '
         Me.BrowseSitePreviewMnu.Index = 13
-        Me.BrowseSitePreviewMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftP
-        Me.BrowseSitePreviewMnu.Text = "Browse Site in Preview"
+        resources.ApplyResources(Me.BrowseSitePreviewMnu, "BrowseSitePreviewMnu")
         '
         'BuildMenu
         '
         Me.BuildMenu.Index = 4
         Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep, Me.EngineApricot, Me.EnginePython, Me.BuildSep2, Me.OpenOutputMnu})
-        Me.BuildMenu.Text = "&Build"
+        resources.ApplyResources(Me.BuildMenu, "BuildMenu")
         '
         'BuildSite
         '
         Me.BuildSite.Index = 0
-        Me.BuildSite.Shortcut = System.Windows.Forms.Shortcut.CtrlB
-        Me.BuildSite.Text = "Build Site"
+        resources.ApplyResources(Me.BuildSite, "BuildSite")
         '
         'SanitaryBuild
         '
         Me.SanitaryBuild.Index = 1
-        Me.SanitaryBuild.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftB
-        Me.SanitaryBuild.Text = "Sanitary Build..."
+        resources.ApplyResources(Me.SanitaryBuild, "SanitaryBuild")
         '
         'BuildSep
         '
         Me.BuildSep.Index = 2
-        Me.BuildSep.Text = "-"
+        resources.ApplyResources(Me.BuildSep, "BuildSep")
         '
         'EngineApricot
         '
         Me.EngineApricot.Checked = True
         Me.EngineApricot.Index = 3
         Me.EngineApricot.RadioCheck = True
-        Me.EngineApricot.Text = "Apricot"
+        resources.ApplyResources(Me.EngineApricot, "EngineApricot")
         '
         'EnginePython
         '
         Me.EnginePython.Index = 4
         Me.EnginePython.RadioCheck = True
-        Me.EnginePython.Text = "Legacy AutoSite"
+        resources.ApplyResources(Me.EnginePython, "EnginePython")
         '
         'BuildSep2
         '
         Me.BuildSep2.Index = 5
-        Me.BuildSep2.Text = "-"
+        resources.ApplyResources(Me.BuildSep2, "BuildSep2")
         '
         'OpenOutputMnu
         '
         Me.OpenOutputMnu.Index = 6
-        Me.OpenOutputMnu.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftO
-        Me.OpenOutputMnu.Text = "Open Output Folder"
+        resources.ApplyResources(Me.OpenOutputMnu, "OpenOutputMnu")
         '
         'HelpMenu
         '
         Me.HelpMenu.Index = 5
         Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.AboutItem})
-        Me.HelpMenu.Text = "&Help"
+        resources.ApplyResources(Me.HelpMenu, "HelpMenu")
         '
         'HelpTopics
         '
-        Me.HelpTopics.Enabled = False
+        resources.ApplyResources(Me.HelpTopics, "HelpTopics")
         Me.HelpTopics.Index = 0
-        Me.HelpTopics.Text = "Help Topics"
         '
         'HelpSep
         '
         Me.HelpSep.Index = 1
-        Me.HelpSep.Text = "-"
+        resources.ApplyResources(Me.HelpSep, "HelpSep")
         '
         'Website
         '
         Me.Website.Index = 2
-        Me.Website.Text = "Website"
+        resources.ApplyResources(Me.Website, "Website")
         '
         'GitHub
         '
         Me.GitHub.Index = 3
-        Me.GitHub.Text = "GitHub Repository"
+        resources.ApplyResources(Me.GitHub, "GitHub")
         '
         'SendFeedback
         '
         Me.SendFeedback.Index = 4
-        Me.SendFeedback.Text = "Send Feedback"
+        resources.ApplyResources(Me.SendFeedback, "SendFeedback")
         '
         'HelpSep2
         '
         Me.HelpSep2.Index = 5
-        Me.HelpSep2.Text = "-"
+        resources.ApplyResources(Me.HelpSep2, "HelpSep2")
         '
         'AboutItem
         '
         Me.AboutItem.Index = 6
-        Me.AboutItem.Text = "About AutoSite"
+        resources.ApplyResources(Me.AboutItem, "AboutItem")
         '
         'XP
         '
@@ -651,109 +616,108 @@ Partial Class Main
         'OpenContext
         '
         Me.OpenContext.Index = 0
-        Me.OpenContext.Text = "Open"
+        resources.ApplyResources(Me.OpenContext, "OpenContext")
         '
         'OpenInDefault
         '
         Me.OpenInDefault.Index = 1
-        Me.OpenInDefault.Text = "Open in Default Program"
+        resources.ApplyResources(Me.OpenInDefault, "OpenInDefault")
         '
         'ContextSep
         '
         Me.ContextSep.Index = 2
-        Me.ContextSep.Text = "-"
+        resources.ApplyResources(Me.ContextSep, "ContextSep")
         '
         'CopyCon
         '
         Me.CopyCon.Index = 3
-        Me.CopyCon.Text = "Copy"
+        resources.ApplyResources(Me.CopyCon, "CopyCon")
         '
         'PasteCon
         '
         Me.PasteCon.Index = 4
-        Me.PasteCon.Text = "Paste"
+        resources.ApplyResources(Me.PasteCon, "PasteCon")
         '
         'AddFilesCon
         '
         Me.AddFilesCon.Index = 5
-        Me.AddFilesCon.Text = "Add Files..."
+        resources.ApplyResources(Me.AddFilesCon, "AddFilesCon")
         '
         'ContextSep2
         '
         Me.ContextSep2.Index = 6
-        Me.ContextSep2.Text = "-"
+        resources.ApplyResources(Me.ContextSep2, "ContextSep2")
         '
         'DeleteCon
         '
         Me.DeleteCon.Index = 7
-        Me.DeleteCon.Text = "Delete"
+        resources.ApplyResources(Me.DeleteCon, "DeleteCon")
         '
         'RenameCon
         '
         Me.RenameCon.Index = 8
-        Me.RenameCon.Text = "Rename"
+        resources.ApplyResources(Me.RenameCon, "RenameCon")
         '
         'ContextSep3
         '
         Me.ContextSep3.Index = 9
-        Me.ContextSep3.Text = "-"
+        resources.ApplyResources(Me.ContextSep3, "ContextSep3")
         '
         'NewCon
         '
         Me.NewCon.Index = 10
         Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.NewSep2, Me.NewCSSCon, Me.NewJSCon, Me.NewTXTCon})
-        Me.NewCon.Text = "New"
+        resources.ApplyResources(Me.NewCon, "NewCon")
         '
         'NewFolderCon
         '
         Me.NewFolderCon.Index = 0
-        Me.NewFolderCon.Text = "Folder"
+        resources.ApplyResources(Me.NewFolderCon, "NewFolderCon")
         '
         'NewSep
         '
         Me.NewSep.Index = 1
-        Me.NewSep.Text = "-"
+        resources.ApplyResources(Me.NewSep, "NewSep")
         '
         'NewHTMLCon
         '
         Me.NewHTMLCon.Index = 2
-        Me.NewHTMLCon.Text = "HTML Page (.html)"
+        resources.ApplyResources(Me.NewHTMLCon, "NewHTMLCon")
         '
         'NewMDCon
         '
         Me.NewMDCon.Index = 3
-        Me.NewMDCon.Text = "Markdown Page (.md)"
+        resources.ApplyResources(Me.NewMDCon, "NewMDCon")
         '
         'NewPHPCon
         '
         Me.NewPHPCon.Index = 4
-        Me.NewPHPCon.Text = "PHP Script (.php)"
+        resources.ApplyResources(Me.NewPHPCon, "NewPHPCon")
         '
         'NewSep2
         '
         Me.NewSep2.Index = 5
-        Me.NewSep2.Text = "-"
+        resources.ApplyResources(Me.NewSep2, "NewSep2")
         '
         'NewCSSCon
         '
         Me.NewCSSCon.Index = 6
-        Me.NewCSSCon.Text = "CSS Stylesheet (.css)"
+        resources.ApplyResources(Me.NewCSSCon, "NewCSSCon")
         '
         'NewJSCon
         '
         Me.NewJSCon.Index = 7
-        Me.NewJSCon.Text = "JS Script (.js)"
+        resources.ApplyResources(Me.NewJSCon, "NewJSCon")
         '
         'NewTXTCon
         '
         Me.NewTXTCon.Index = 8
-        Me.NewTXTCon.Text = "Plain Text (.txt)"
+        resources.ApplyResources(Me.NewTXTCon, "NewTXTCon")
         '
         'AddFilesDialog
         '
-        Me.AddFilesDialog.Filter = "All files (*.*)|*.*"
+        resources.ApplyResources(Me.AddFilesDialog, "AddFilesDialog")
         Me.AddFilesDialog.Multiselect = True
-        Me.AddFilesDialog.Title = "Add Files to Folder"
         '
         'ApricotWorker
         '
@@ -768,11 +732,8 @@ Partial Class Main
         '
         'EdSplit
         '
-        Me.EdSplit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EdSplit.Location = New System.Drawing.Point(0, 0)
-        Me.EdSplit.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.EdSplit, "EdSplit")
         Me.EdSplit.Name = "EdSplit"
-        Me.EdSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
         'EdSplit.Panel1
         '
@@ -781,43 +742,26 @@ Partial Class Main
         'EdSplit.Panel2
         '
         Me.EdSplit.Panel2.Controls.Add(Me.Preview)
-        Me.EdSplit.Size = New System.Drawing.Size(398, 443)
-        Me.EdSplit.SplitterDistance = 252
-        Me.EdSplit.SplitterWidth = 6
-        Me.EdSplit.TabIndex = 1
         '
         'EditTabs
         '
-        Me.EditTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.EditTabs.Location = New System.Drawing.Point(0, 0)
-        Me.EditTabs.Margin = New System.Windows.Forms.Padding(0)
+        resources.ApplyResources(Me.EditTabs, "EditTabs")
         Me.EditTabs.Multiline = True
         Me.EditTabs.Name = "EditTabs"
-        Me.EditTabs.Padding = New System.Drawing.Point(0, 0)
         Me.EditTabs.SelectedIndex = 0
-        Me.EditTabs.ShowToolTips = True
-        Me.EditTabs.Size = New System.Drawing.Size(398, 252)
-        Me.EditTabs.TabIndex = 1
         '
         'Preview
         '
-        Me.Preview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Preview.Location = New System.Drawing.Point(0, 0)
-        Me.Preview.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.Preview, "Preview")
         Me.Preview.MinimumSize = New System.Drawing.Size(28, 34)
         Me.Preview.Name = "Preview"
         Me.Preview.ScriptErrorsSuppressed = True
-        Me.Preview.Size = New System.Drawing.Size(398, 185)
-        Me.Preview.TabIndex = 0
         Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
         'ExSplit
         '
-        Me.ExSplit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ExSplit.Location = New System.Drawing.Point(0, 0)
-        Me.ExSplit.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.ExSplit, "ExSplit")
         Me.ExSplit.Name = "ExSplit"
-        Me.ExSplit.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
         'ExSplit.Panel1
         '
@@ -830,79 +774,42 @@ Partial Class Main
         Me.ExSplit.Panel2.Controls.Add(Me.ApricotTabs)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
-        Me.ExSplit.Size = New System.Drawing.Size(254, 443)
-        Me.ExSplit.SplitterDistance = 249
-        Me.ExSplit.SplitterWidth = 6
-        Me.ExSplit.TabIndex = 4
         '
         'OpenLink
         '
-        Me.OpenLink.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.OpenLink, "OpenLink")
         Me.OpenLink.AutoEllipsis = True
-        Me.OpenLink.AutoSize = True
         Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
-        Me.OpenLink.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenLink.Location = New System.Drawing.Point(25, 47)
-        Me.OpenLink.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.Size = New System.Drawing.Size(191, 20)
-        Me.OpenLink.TabIndex = 1
         Me.OpenLink.TabStop = True
-        Me.OpenLink.Text = "Create or open a site folder"
-        Me.OpenLink.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'OpenPrompt
         '
-        Me.OpenPrompt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.OpenPrompt, "OpenPrompt")
         Me.OpenPrompt.AutoEllipsis = True
-        Me.OpenPrompt.AutoSize = True
         Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
-        Me.OpenPrompt.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.OpenPrompt.Location = New System.Drawing.Point(14, 19)
-        Me.OpenPrompt.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.OpenPrompt.Name = "OpenPrompt"
-        Me.OpenPrompt.Size = New System.Drawing.Size(217, 20)
-        Me.OpenPrompt.TabIndex = 2
-        Me.OpenPrompt.Text = "A site has not been opened yet."
-        Me.OpenPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'SiteTree
         '
-        Me.SiteTree.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SiteTree.ImageIndex = 0
+        resources.ApplyResources(Me.SiteTree, "SiteTree")
         Me.SiteTree.ImageList = Me.VS2017
         Me.SiteTree.LabelEdit = True
-        Me.SiteTree.Location = New System.Drawing.Point(0, 0)
-        Me.SiteTree.Margin = New System.Windows.Forms.Padding(5)
         Me.SiteTree.Name = "SiteTree"
-        Me.SiteTree.SelectedImageIndex = 0
-        Me.SiteTree.Size = New System.Drawing.Size(254, 249)
-        Me.SiteTree.TabIndex = 4
         '
         'ApricotTabs
         '
         Me.ApricotTabs.Controls.Add(Me.LogPage)
         Me.ApricotTabs.Controls.Add(Me.MapPage)
-        Me.ApricotTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ApricotTabs.Location = New System.Drawing.Point(0, 25)
-        Me.ApricotTabs.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.ApricotTabs, "ApricotTabs")
         Me.ApricotTabs.Name = "ApricotTabs"
         Me.ApricotTabs.SelectedIndex = 0
-        Me.ApricotTabs.Size = New System.Drawing.Size(254, 125)
-        Me.ApricotTabs.TabIndex = 5
         '
         'LogPage
         '
         Me.LogPage.Controls.Add(Me.Log)
-        Me.LogPage.Location = New System.Drawing.Point(4, 29)
-        Me.LogPage.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.LogPage, "LogPage")
         Me.LogPage.Name = "LogPage"
-        Me.LogPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.LogPage.Size = New System.Drawing.Size(246, 92)
-        Me.LogPage.TabIndex = 0
-        Me.LogPage.Text = "Log"
         Me.LogPage.UseVisualStyleBackColor = True
         '
         'Log
@@ -910,112 +817,74 @@ Partial Class Main
         Me.Log.BackColor = System.Drawing.SystemColors.Window
         Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Log.ContextMenuStrip = Me.LogMenuBridge
-        Me.Log.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Log.Location = New System.Drawing.Point(5, 5)
-        Me.Log.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Size = New System.Drawing.Size(236, 82)
-        Me.Log.TabIndex = 5
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'LogMenuBridge
         '
         Me.LogMenuBridge.Name = "LogMenuBridge"
-        Me.LogMenuBridge.Size = New System.Drawing.Size(61, 4)
+        resources.ApplyResources(Me.LogMenuBridge, "LogMenuBridge")
         '
         'MapPage
         '
         Me.MapPage.Controls.Add(Me.AttributeTree)
-        Me.MapPage.Location = New System.Drawing.Point(4, 25)
-        Me.MapPage.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.MapPage, "MapPage")
         Me.MapPage.Name = "MapPage"
-        Me.MapPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.MapPage.Size = New System.Drawing.Size(246, 96)
-        Me.MapPage.TabIndex = 1
-        Me.MapPage.Text = "Attribute Map"
         Me.MapPage.UseVisualStyleBackColor = True
         '
         'AttributeTree
         '
         Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.AttributeTree.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AttributeTree.ImageIndex = 0
+        resources.ApplyResources(Me.AttributeTree, "AttributeTree")
         Me.AttributeTree.ImageList = Me.VS2017
-        Me.AttributeTree.Location = New System.Drawing.Point(5, 5)
-        Me.AttributeTree.Margin = New System.Windows.Forms.Padding(5)
         Me.AttributeTree.Name = "AttributeTree"
-        Me.AttributeTree.SelectedImageIndex = 0
-        Me.AttributeTree.Size = New System.Drawing.Size(236, 86)
-        Me.AttributeTree.TabIndex = 0
         '
         'BuildProgress
         '
-        Me.BuildProgress.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BuildProgress.Location = New System.Drawing.Point(0, 150)
-        Me.BuildProgress.Margin = New System.Windows.Forms.Padding(5)
+        resources.ApplyResources(Me.BuildProgress, "BuildProgress")
         Me.BuildProgress.Name = "BuildProgress"
-        Me.BuildProgress.Size = New System.Drawing.Size(254, 38)
-        Me.BuildProgress.TabIndex = 1
-        Me.BuildProgress.Visible = False
         '
         'BuildStrip
         '
         Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
         Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.OpenOutput, Me.BrowseSitePreview, Me.BrowseSite})
-        Me.BuildStrip.Location = New System.Drawing.Point(0, 0)
+        resources.ApplyResources(Me.BuildStrip, "BuildStrip")
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.BuildStrip.Size = New System.Drawing.Size(254, 25)
-        Me.BuildStrip.TabIndex = 3
-        Me.BuildStrip.Text = "ToolStrip1"
         '
         'Build
         '
         Me.Build.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Build.Image = CType(resources.GetObject("Build.Image"), System.Drawing.Image)
-        Me.Build.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.Build, "Build")
         Me.Build.Name = "Build"
-        Me.Build.Size = New System.Drawing.Size(23, 22)
-        Me.Build.Text = "ToolStripButton1"
-        Me.Build.ToolTipText = "Build"
         '
         'OpenOutput
         '
         Me.OpenOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.OpenOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OpenOutput.Image = CType(resources.GetObject("OpenOutput.Image"), System.Drawing.Image)
-        Me.OpenOutput.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.OpenOutput, "OpenOutput")
         Me.OpenOutput.Name = "OpenOutput"
-        Me.OpenOutput.Size = New System.Drawing.Size(23, 22)
-        Me.OpenOutput.Text = "Open Output Folder"
         '
         'BrowseSitePreview
         '
         Me.BrowseSitePreview.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BrowseSitePreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BrowseSitePreview.Image = CType(resources.GetObject("BrowseSitePreview.Image"), System.Drawing.Image)
-        Me.BrowseSitePreview.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.BrowseSitePreview, "BrowseSitePreview")
         Me.BrowseSitePreview.Name = "BrowseSitePreview"
-        Me.BrowseSitePreview.Size = New System.Drawing.Size(23, 22)
-        Me.BrowseSitePreview.Text = "Browse Site in Preview"
         '
         'BrowseSite
         '
         Me.BrowseSite.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BrowseSite.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BrowseSite.Image = CType(resources.GetObject("BrowseSite.Image"), System.Drawing.Image)
-        Me.BrowseSite.ImageTransparentColor = System.Drawing.Color.Magenta
+        resources.ApplyResources(Me.BrowseSite, "BrowseSite")
         Me.BrowseSite.Name = "BrowseSite"
-        Me.BrowseSite.Size = New System.Drawing.Size(23, 22)
-        Me.BrowseSite.Text = "Browse Site"
         '
         'CoreSplit
         '
-        Me.CoreSplit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CoreSplit.Location = New System.Drawing.Point(0, 0)
-        Me.CoreSplit.Margin = New System.Windows.Forms.Padding(0)
+        resources.ApplyResources(Me.CoreSplit, "CoreSplit")
         Me.CoreSplit.Name = "CoreSplit"
         '
         'CoreSplit.Panel1
@@ -1025,10 +894,6 @@ Partial Class Main
         'CoreSplit.Panel2
         '
         Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
-        Me.CoreSplit.Size = New System.Drawing.Size(657, 443)
-        Me.CoreSplit.SplitterDistance = 254
-        Me.CoreSplit.SplitterWidth = 5
-        Me.CoreSplit.TabIndex = 4
         '
         'LogMenu
         '
@@ -1037,31 +902,24 @@ Partial Class Main
         'SaveLog
         '
         Me.SaveLog.Index = 0
-        Me.SaveLog.Text = "Save..."
+        resources.ApplyResources(Me.SaveLog, "SaveLog")
         '
         'SaveLogDialog
         '
         Me.SaveLogDialog.DefaultExt = "rtf"
-        Me.SaveLogDialog.Filter = "Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt"
-        Me.SaveLogDialog.Title = "Save Log"
+        resources.ApplyResources(Me.SaveLogDialog, "SaveLogDialog")
         '
         'OpenPack
         '
-        Me.OpenPack.Filter = "AutoSite Zip package (*.zip)|*.zip"
+        resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
         'Main
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(657, 443)
         Me.Controls.Add(Me.CoreSplit)
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Menu = Me.MenuBar
         Me.Name = "Main"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "AutoSite"
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EdSplit.Panel1.ResumeLayout(False)
         Me.EdSplit.Panel2.ResumeLayout(False)
@@ -1086,7 +944,6 @@ Partial Class Main
     Friend WithEvents FolderBrowser As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents MenuBar As System.Windows.Forms.MainMenu
     Friend WithEvents FileMenu As System.Windows.Forms.MenuItem
-    Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
     Friend WithEvents CloseSite As System.Windows.Forms.MenuItem
     Friend WithEvents ViewMenu As System.Windows.Forms.MenuItem
     Friend WithEvents ExplorerPanel As System.Windows.Forms.MenuItem
@@ -1170,7 +1027,6 @@ Partial Class Main
     Friend WithEvents ClearRecents As System.Windows.Forms.MenuItem
     Friend WithEvents OpenRecent As System.Windows.Forms.MenuItem
     Friend WithEvents RecentSep As System.Windows.Forms.MenuItem
-    Friend WithEvents FileSep As System.Windows.Forms.MenuItem
     Friend WithEvents HelpTopics As System.Windows.Forms.MenuItem
     Friend WithEvents SendFeedback As System.Windows.Forms.MenuItem
     Friend WithEvents HelpSep2 As System.Windows.Forms.MenuItem
@@ -1212,4 +1068,6 @@ Partial Class Main
     Friend WithEvents FileSep4 As System.Windows.Forms.MenuItem
     Friend WithEvents OpenPack As System.Windows.Forms.OpenFileDialog
     Friend WithEvents SystemIcons As System.Windows.Forms.MenuItem
+    Friend WithEvents NewSite As System.Windows.Forms.MenuItem
+    Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
 End Class

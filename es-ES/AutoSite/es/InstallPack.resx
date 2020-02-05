@@ -142,7 +142,7 @@
     <value>0</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>Aceptar</value>
   </data>
   <data name="&gt;&gt;OK_Button.Name" xml:space="preserve">
     <value>OK_Button</value>
@@ -172,7 +172,7 @@
     <value>1</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
     <value>Cancel_Button</value>
@@ -229,7 +229,7 @@
     <value>2</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>AutoSite will install these files to your site:</value>
+    <value>AutoSite instalará estos archivos en su sitio:</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
@@ -259,7 +259,7 @@
     <value>3</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Pack Title:</value>
+    <value>Título:</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -289,7 +289,7 @@
     <value>4</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>Pack Author:</value>
+    <value>Autor:</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
@@ -319,7 +319,7 @@
     <value>5</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>Description:</value>
+    <value>Descripción:</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -2393,7 +2393,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Install Pack</value>
+    <value>Instalar Paquete</value>
   </data>
   <data name="&gt;&gt;VS2017.Name" xml:space="preserve">
     <value>VS2017</value>

@@ -331,7 +331,7 @@
     <value>23, 22</value>
   </data>
   <data name="GTo.Text" xml:space="preserve">
-    <value>Go To</value>
+    <value>Ir a</value>
   </data>
   <data name="Replace.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -350,7 +350,7 @@
     <value>23, 22</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Replace</value>
+    <value>Reemplazar</value>
   </data>
   <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -359,7 +359,7 @@
     <value>139, 22</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
+    <value>Vista Previa</value>
   </data>
   <data name="Preview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -379,7 +379,7 @@
     <value>80, 22</value>
   </data>
   <data name="Preview.Text" xml:space="preserve">
-    <value>Preview</value>
+    <value>Previsualizar</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -400,13 +400,13 @@
     <value>54, 22</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Compilar</value>
   </data>
   <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 22</value>
   </data>
   <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>View in Default Browser</value>
+    <value>Ver en Navegador Predeterminado</value>
   </data>
   <data name="ViewOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -427,7 +427,7 @@
     <value>105, 22</value>
   </data>
   <data name="ViewOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Ver Output</value>
   </data>
   <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -509,34 +509,34 @@
     <value>119, 17</value>
   </metadata>
   <data name="Undo.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Deshacer</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Rehacer</value>
   </data>
   <data name="ConSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Cortar</value>
   </data>
   <data name="Copy.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiar</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Pegar</value>
   </data>
   <data name="ConSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>Seleccionar Todo</value>
   </data>
   <data name="ConSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insert Conditional...</value>
+    <value>Insertar Condicional...</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

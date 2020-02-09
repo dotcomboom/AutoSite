@@ -287,16 +287,16 @@
     <value>-</value>
   </data>
   <data name="ClearRecents.Text" xml:space="preserve">
-    <value>Clear Recent Sites</value>
+    <value>Legutóbbi weblap lista törlése</value>
   </data>
   <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Open Recent</value>
+    <value>Legutóbbi projektek</value>
   </data>
   <data name="CloseFile.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlW</value>
   </data>
   <data name="CloseFile.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>Bezárás</value>
   </data>
   <data name="CloseSite.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -305,7 +305,7 @@
     <value>CtrlShiftW</value>
   </data>
   <data name="CloseSite.Text" xml:space="preserve">
-    <value>Close Site</value>
+    <value>Weblap bezárása</value>
   </data>
   <data name="FileSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -314,19 +314,19 @@
     <value>CtrlS</value>
   </data>
   <data name="Save.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Mentés</value>
   </data>
   <data name="SaveAll.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftS</value>
   </data>
   <data name="SaveAll.Text" xml:space="preserve">
-    <value>Save All</value>
+    <value>Minden mentése</value>
   </data>
   <data name="FileSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="InstallPackMnu.Text" xml:space="preserve">
-    <value>Install Pack...</value>
+    <value>Csomag telepítése...</value>
   </data>
   <data name="FileSep4.Text" xml:space="preserve">
     <value>-</value>
@@ -335,22 +335,22 @@
     <value>AltF4</value>
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
-    <value>Exit</value>
+    <value>Kilépés</value>
   </data>
   <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;File</value>
+    <value>&amp;Fájl</value>
   </data>
   <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlZ</value>
   </data>
   <data name="Undo.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Visszavonás</value>
   </data>
   <data name="Redo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlY</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Helyrehozás</value>
   </data>
   <data name="EditSep.Text" xml:space="preserve">
     <value>-</value>
@@ -359,19 +359,19 @@
     <value>CtrlX</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Kivágás</value>
   </data>
   <data name="Copy.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlC</value>
   </data>
   <data name="Copy.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Másolás</value>
   </data>
   <data name="Paste.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlV</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Beilleszt</value>
   </data>
   <data name="EditSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -380,7 +380,7 @@
     <value>CtrlA</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>Minden kijelölése</value>
   </data>
   <data name="EditSep3.Text" xml:space="preserve">
     <value>-</value>
@@ -389,19 +389,19 @@
     <value>CtrlF</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Find...</value>
+    <value>Keresés...</value>
   </data>
   <data name="Replace.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlH</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Replace...</value>
+    <value>Csere...</value>
   </data>
   <data name="GoToMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlG</value>
   </data>
   <data name="GoToMnu.Text" xml:space="preserve">
-    <value>Go To...</value>
+    <value>Ugrás...</value>
   </data>
   <data name="EditSep4.Text" xml:space="preserve">
     <value>-</value>
@@ -413,10 +413,10 @@
     <value>Insert Conditional...</value>
   </data>
   <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
+    <value>&amp;Szerkesztés</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
-    <value>Word Wrap</value>
+    <value>Sortörés</value>
   </data>
   <data name="VirtualSpace.Text" xml:space="preserve">
     <value>Virtual Space</value>
@@ -428,28 +428,28 @@
     <value>-</value>
   </data>
   <data name="SyntaxHighlight.Text" xml:space="preserve">
-    <value>Experimental Syntax Highlighting</value>
+    <value>Szintaxis kiemelés (kísérleti)</value>
   </data>
   <data name="SyntaxHighlight.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
+    <value>Élő előnézet</value>
   </data>
   <data name="FormatSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
-    <value>Monospace Font...</value>
+    <value>Monospace betűtípus...</value>
   </data>
   <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
+    <value>F&amp;ormátum</value>
   </data>
   <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt1</value>
   </data>
   <data name="ExplorerPanel.Text" xml:space="preserve">
-    <value>Explorer</value>
+    <value>Intéző</value>
   </data>
   <data name="BuildPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt2</value>
@@ -461,13 +461,13 @@
     <value>Alt3</value>
   </data>
   <data name="EditorPanel.Text" xml:space="preserve">
-    <value>Editor</value>
+    <value>Szerkesztő</value>
   </data>
   <data name="PreviewPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt4</value>
   </data>
   <data name="PreviewPanel.Text" xml:space="preserve">
-    <value>Preview</value>
+    <value>Előnézet</value>
   </data>
   <data name="ViewSep.Text" xml:space="preserve">
     <value>-</value>

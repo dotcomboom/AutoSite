@@ -134,7 +134,7 @@
     <value>115, 22</value>
   </data>
   <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Mentés</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -149,7 +149,7 @@
     <value>115, 22</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save All</value>
+    <value>Minden mentése</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
@@ -170,7 +170,7 @@
     <value>63, 22</value>
   </data>
   <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Mentés</value>
   </data>
   <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -192,7 +192,7 @@
     <value>23, 22</value>
   </data>
   <data name="UndoBtn.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Visszavonás</value>
   </data>
   <data name="RedoBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -213,7 +213,7 @@
     <value>23, 22</value>
   </data>
   <data name="RedoBtn.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Helyrehozás</value>
   </data>
   <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -236,7 +236,7 @@
     <value>23, 22</value>
   </data>
   <data name="CutBtn.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Kivágás</value>
   </data>
   <data name="CopyBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -254,7 +254,7 @@
     <value>23, 22</value>
   </data>
   <data name="CopyBtn.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Másolás</value>
   </data>
   <data name="PasteBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -271,7 +271,7 @@
     <value>23, 22</value>
   </data>
   <data name="PasteBtn.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Beilleszt</value>
   </data>
   <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -289,7 +289,7 @@
     <value>23, 22</value>
   </data>
   <data name="CloseBtn.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>Bezár</value>
   </data>
   <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -314,7 +314,7 @@
     <value>23, 22</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Find</value>
+    <value>Keresés</value>
   </data>
   <data name="GTo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -331,7 +331,7 @@
     <value>23, 22</value>
   </data>
   <data name="GTo.Text" xml:space="preserve">
-    <value>Go To</value>
+    <value>Ugrás</value>
   </data>
   <data name="Replace.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -350,7 +350,7 @@
     <value>23, 22</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Replace</value>
+    <value>Csere</value>
   </data>
   <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -359,7 +359,7 @@
     <value>139, 22</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
+    <value>Élő előnézet</value>
   </data>
   <data name="Preview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -379,7 +379,7 @@
     <value>80, 22</value>
   </data>
   <data name="Preview.Text" xml:space="preserve">
-    <value>Preview</value>
+    <value>Előnézet</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -400,13 +400,13 @@
     <value>54, 22</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Építés</value>
   </data>
   <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 22</value>
   </data>
   <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>View in Default Browser</value>
+    <value>Megtekintés alapértelmezett böngészőben</value>
   </data>
   <data name="ViewOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -427,7 +427,7 @@
     <value>105, 22</value>
   </data>
   <data name="ViewOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Kimenet megtekintése</value>
   </data>
   <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -509,34 +509,34 @@
     <value>119, 17</value>
   </metadata>
   <data name="Undo.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Visszavonás</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Helyrehozás</value>
   </data>
   <data name="ConSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Kivágás</value>
   </data>
   <data name="Copy.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Másolás</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Beilleszt</value>
   </data>
   <data name="ConSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>Minden kijelölése</value>
   </data>
   <data name="ConSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insert Conditional...</value>
+    <value>Függő behelyezése...</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

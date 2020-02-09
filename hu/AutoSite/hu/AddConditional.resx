@@ -178,7 +178,7 @@
     <value>6</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Mégse</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
     <value>Cancel_Button</value>
@@ -238,7 +238,7 @@
     <value>1</value>
   </data>
   <data name="Explanation.Text" xml:space="preserve">
-    <value>Conditionals tell the build engine to display content based on whether the page's attribute is or isn't some specific text. It's most useful in templates, where one template can be rendered out differently based off of pages' attributes.</value>
+    <value>A függők megmondják az építő motornak, hogy a tartalmat az oldal tulajdonságának egy konkrét szövege szerint jelenítse meg. Legfőképp sablonoknál hasznos, ahol egy sablon máshogy lehet megjeleníteni az oldal tulajdonságai alapján.</value>
   </data>
   <data name="&gt;&gt;Explanation.Name" xml:space="preserve">
     <value>Explanation</value>

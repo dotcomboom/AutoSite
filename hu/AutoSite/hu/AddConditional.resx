@@ -363,7 +363,7 @@
     <value>11</value>
   </data>
   <data name="PassLabel.Text" xml:space="preserve">
-    <value>If conditional passes, render out:</value>
+    <value>Ha a függő megfelel, mutassa:</value>
   </data>
   <data name="&gt;&gt;PassLabel.Name" xml:space="preserve">
     <value>PassLabel</value>
@@ -441,7 +441,7 @@
     <value>2</value>
   </data>
   <data name="NotChk.Text" xml:space="preserve">
-    <value>NOT</value>
+    <value>NEM</value>
   </data>
   <data name="&gt;&gt;NotChk.Name" xml:space="preserve">
     <value>NotChk</value>
@@ -501,7 +501,7 @@
     <value>12</value>
   </data>
   <data name="Empty.Text" xml:space="preserve">
-    <value>Empty</value>
+    <value>Üres</value>
   </data>
   <data name="&gt;&gt;Empty.Name" xml:space="preserve">
     <value>Empty</value>
@@ -534,7 +534,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Insert Conditional</value>
+    <value>Függő behelyezése</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddConditional</value>

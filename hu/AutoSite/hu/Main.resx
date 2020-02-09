@@ -410,7 +410,7 @@
     <value>CtrlShiftI</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insert Conditional...</value>
+    <value>Függő behelyezése...</value>
   </data>
   <data name="EditMenu.Text" xml:space="preserve">
     <value>&amp;Szerkesztés</value>
@@ -419,7 +419,7 @@
     <value>Sortörés</value>
   </data>
   <data name="VirtualSpace.Text" xml:space="preserve">
-    <value>Virtual Space</value>
+    <value>Virtuális tér</value>
   </data>
   <data name="WideCaret.Text" xml:space="preserve">
     <value>Wide Caret</value>
@@ -479,16 +479,16 @@
     <value>XP</value>
   </data>
   <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Explorer Icon Theme</value>
+    <value>Intéző Ikonok</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
-    <value>Load File Icons</value>
+    <value>Fájl ikonok betöltése</value>
   </data>
   <data name="RefreshItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlR</value>
   </data>
   <data name="RefreshItem.Text" xml:space="preserve">
-    <value>Refresh Explorer</value>
+    <value>Intéző frissítése</value>
   </data>
   <data name="ViewSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -497,37 +497,37 @@
     <value>CtrlP</value>
   </data>
   <data name="PreviewPage.Text" xml:space="preserve">
-    <value>Preview File</value>
+    <value>Fájl előnézete</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Kimenet megtekintése</value>
   </data>
   <data name="ViewSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="BrowseSiteMnu.Text" xml:space="preserve">
-    <value>Browse Site in Default Browser</value>
+    <value>Oldal böngészése az alapértelmezett böngészőben</value>
   </data>
   <data name="BrowseSitePreviewMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftP</value>
   </data>
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Oldal böngészése előnézetben</value>
   </data>
   <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;View</value>
+    <value>&amp;Nézet</value>
   </data>
   <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlB</value>
   </data>
   <data name="BuildSite.Text" xml:space="preserve">
-    <value>Build Site</value>
+    <value>Webhely építése</value>
   </data>
   <data name="SanitaryBuild.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftB</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Tiszta építés...</value>
   </data>
   <data name="BuildSep.Text" xml:space="preserve">
     <value>-</value>
@@ -545,37 +545,37 @@
     <value>CtrlShiftO</value>
   </data>
   <data name="OpenOutputMnu.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
+    <value>Kimeneti mappa megnyitása</value>
   </data>
   <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Build</value>
+    <value>&amp;Építés</value>
   </data>
   <data name="HelpTopics.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
-    <value>Help Topics</value>
+    <value>&amp;Témakörök</value>
   </data>
   <data name="HelpSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="Website.Text" xml:space="preserve">
-    <value>Website</value>
+    <value>Weblap</value>
   </data>
   <data name="GitHub.Text" xml:space="preserve">
-    <value>GitHub Repository</value>
+    <value>GitHub adattár</value>
   </data>
   <data name="SendFeedback.Text" xml:space="preserve">
-    <value>Send Feedback</value>
+    <value>Visszajelzés</value>
   </data>
   <data name="HelpSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="AboutItem.Text" xml:space="preserve">
-    <value>About AutoSite</value>
+    <value>Az AutoSiteról</value>
   </data>
   <data name="HelpMenu.Text" xml:space="preserve">
-    <value>&amp;Help</value>
+    <value>&amp;Súgó</value>
   </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>250, 17</value>
@@ -758,73 +758,73 @@
     <value>17, 17</value>
   </metadata>
   <data name="OpenContext.Text" xml:space="preserve">
-    <value>Open</value>
+    <value>Megnyit</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Open in Default Program</value>
+    <value>Megnyitás alapértelmezett programban</value>
   </data>
   <data name="ContextSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="CopyCon.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Másolás</value>
   </data>
   <data name="PasteCon.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Beilleszt</value>
   </data>
   <data name="AddFilesCon.Text" xml:space="preserve">
-    <value>Add Files...</value>
+    <value>Fájl hozzáadása...</value>
   </data>
   <data name="ContextSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="DeleteCon.Text" xml:space="preserve">
-    <value>Delete</value>
+    <value>Törlés</value>
   </data>
   <data name="RenameCon.Text" xml:space="preserve">
-    <value>Rename</value>
+    <value>Átnevez</value>
   </data>
   <data name="ContextSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
-    <value>Folder</value>
+    <value>Mappa</value>
   </data>
   <data name="NewSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewHTMLCon.Text" xml:space="preserve">
-    <value>HTML Page (.html)</value>
+    <value>HTML Oldal (.html)</value>
   </data>
   <data name="NewMDCon.Text" xml:space="preserve">
-    <value>Markdown Page (.md)</value>
+    <value>Markdown Oldal (.md)</value>
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>PHP Script (.php)</value>
+    <value>PHP Szkript (.php)</value>
   </data>
   <data name="NewSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>CSS Stylesheet (.css)</value>
+    <value>CSS Stíluslap (.css)</value>
   </data>
   <data name="NewJSCon.Text" xml:space="preserve">
-    <value>JS Script (.js)</value>
+    <value>JS Szkript (.js)</value>
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
-    <value>Plain Text (.txt)</value>
+    <value>Egyszerű szöveg (.txt)</value>
   </data>
   <data name="NewCon.Text" xml:space="preserve">
-    <value>New</value>
+    <value>Új</value>
   </data>
   <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>531, 17</value>
   </metadata>
   <data name="AddFilesDialog.Filter" xml:space="preserve">
-    <value>All files (*.*)|*.*</value>
+    <value>Minden fájl (*.*)|*.*</value>
   </data>
   <data name="AddFilesDialog.Title" xml:space="preserve">
-    <value>Add Files to Folder</value>
+    <value>Fájlok hozzáadása a mappához</value>
   </data>
   <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>163, 41</value>
@@ -885,7 +885,7 @@
     <value>1</value>
   </data>
   <data name="OpenLink.Text" xml:space="preserve">
-    <value>Create or open a site folder</value>
+    <value>Webhely mappa készítése vagy megnyitása</value>
   </data>
   <data name="OpenLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -924,7 +924,7 @@
     <value>2</value>
   </data>
   <data name="OpenPrompt.Text" xml:space="preserve">
-    <value>A site has not been opened yet.</value>
+    <value>Még nincs megnyitva webhely.</value>
   </data>
   <data name="OpenPrompt.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1041,7 +1041,7 @@
     <value>0</value>
   </data>
   <data name="LogPage.Text" xml:space="preserve">
-    <value>Log</value>
+    <value>Napló</value>
   </data>
   <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
     <value>LogPage</value>
@@ -1104,7 +1104,7 @@
     <value>1</value>
   </data>
   <data name="MapPage.Text" xml:space="preserve">
-    <value>Attribute Map</value>
+    <value>Attribútum térkép</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -1197,7 +1197,7 @@
     <value>ToolStripButton1</value>
   </data>
   <data name="Build.ToolTipText" xml:space="preserve">
-    <value>Build</value>
+    <value>Építés</value>
   </data>
   <data name="OpenOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1217,7 +1217,7 @@
     <value>23, 22</value>
   </data>
   <data name="OpenOutput.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
+    <value>Kimeneti mappa megnyitása</value>
   </data>
   <data name="BrowseSitePreview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1237,7 +1237,7 @@
     <value>23, 22</value>
   </data>
   <data name="BrowseSitePreview.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Oldal böngészése előnézetben</value>
   </data>
   <data name="BrowseSite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1255,7 +1255,7 @@
     <value>23, 22</value>
   </data>
   <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Browse Site</value>
+    <value>Weblap böngészése</value>
   </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -3944,21 +3944,21 @@
     <value>680, 54</value>
   </metadata>
   <data name="SaveLog.Text" xml:space="preserve">
-    <value>Save...</value>
+    <value>Mentés...</value>
   </data>
   <metadata name="SaveLogDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>797, 54</value>
   </metadata>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
-    <value>Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt</value>
+    <value>Rich Text (*.rtf)|*.rtf|Egyszerű szöveg (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
-    <value>Save Log</value>
+    <value>Napló mentése</value>
   </data>
   <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1113, 54</value>
   </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
-    <value>AutoSite Zip package (*.zip)|*.zip</value>
+    <value>AutoSite Zip csomag (*.zip)|*.zip</value>
   </data>
 </root>

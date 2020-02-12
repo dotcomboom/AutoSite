@@ -122,6 +122,7 @@ Partial Class About
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.OK)
         Me.Name = "About"
+        Me.ShowIcon = False
         Me.ShowInTaskbar = False
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tabs.ResumeLayout(False)

@@ -133,6 +133,7 @@ Partial Class Main
         Me.EditTabs = New System.Windows.Forms.TabControl
         Me.Preview = New System.Windows.Forms.WebBrowser
         Me.ExSplit = New System.Windows.Forms.SplitContainer
+        Me.OpenPromptBox = New System.Windows.Forms.TableLayoutPanel
         Me.OpenLink = New System.Windows.Forms.LinkLabel
         Me.OpenPrompt = New System.Windows.Forms.Label
         Me.SiteTree = New System.Windows.Forms.TreeView
@@ -141,6 +142,7 @@ Partial Class Main
         Me.Log = New System.Windows.Forms.RichTextBox
         Me.LogMenuBridge = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.MapPage = New System.Windows.Forms.TabPage
+        Me.AttributeExplanation = New System.Windows.Forms.Label
         Me.AttributeTree = New System.Windows.Forms.TreeView
         Me.BuildProgress = New System.Windows.Forms.ProgressBar
         Me.BuildStrip = New System.Windows.Forms.ToolStrip
@@ -161,6 +163,7 @@ Partial Class Main
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
+        Me.OpenPromptBox.SuspendLayout()
         Me.ApricotTabs.SuspendLayout()
         Me.LogPage.SuspendLayout()
         Me.MapPage.SuspendLayout()
@@ -765,8 +768,7 @@ Partial Class Main
         '
         'ExSplit.Panel1
         '
-        Me.ExSplit.Panel1.Controls.Add(Me.OpenLink)
-        Me.ExSplit.Panel1.Controls.Add(Me.OpenPrompt)
+        Me.ExSplit.Panel1.Controls.Add(Me.OpenPromptBox)
         Me.ExSplit.Panel1.Controls.Add(Me.SiteTree)
         '
         'ExSplit.Panel2
@@ -775,18 +777,26 @@ Partial Class Main
         Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
         '
+        'OpenPromptBox
+        '
+        Me.OpenPromptBox.BackColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.OpenPromptBox, "OpenPromptBox")
+        Me.OpenPromptBox.Controls.Add(Me.OpenLink, 0, 3)
+        Me.OpenPromptBox.Controls.Add(Me.OpenPrompt, 0, 1)
+        Me.OpenPromptBox.Name = "OpenPromptBox"
+        '
         'OpenLink
         '
-        resources.ApplyResources(Me.OpenLink, "OpenLink")
         Me.OpenLink.AutoEllipsis = True
+        resources.ApplyResources(Me.OpenLink, "OpenLink")
         Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
         Me.OpenLink.Name = "OpenLink"
         Me.OpenLink.TabStop = True
         '
         'OpenPrompt
         '
-        resources.ApplyResources(Me.OpenPrompt, "OpenPrompt")
         Me.OpenPrompt.AutoEllipsis = True
+        resources.ApplyResources(Me.OpenPrompt, "OpenPrompt")
         Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
         Me.OpenPrompt.Name = "OpenPrompt"
         '
@@ -829,10 +839,16 @@ Partial Class Main
         '
         'MapPage
         '
+        Me.MapPage.Controls.Add(Me.AttributeExplanation)
         Me.MapPage.Controls.Add(Me.AttributeTree)
         resources.ApplyResources(Me.MapPage, "MapPage")
         Me.MapPage.Name = "MapPage"
         Me.MapPage.UseVisualStyleBackColor = True
+        '
+        'AttributeExplanation
+        '
+        resources.ApplyResources(Me.AttributeExplanation, "AttributeExplanation")
+        Me.AttributeExplanation.Name = "AttributeExplanation"
         '
         'AttributeTree
         '
@@ -925,10 +941,11 @@ Partial Class Main
         Me.EdSplit.Panel2.ResumeLayout(False)
         Me.EdSplit.ResumeLayout(False)
         Me.ExSplit.Panel1.ResumeLayout(False)
-        Me.ExSplit.Panel1.PerformLayout()
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
         Me.ExSplit.ResumeLayout(False)
+        Me.OpenPromptBox.ResumeLayout(False)
+        Me.OpenPromptBox.PerformLayout()
         Me.ApricotTabs.ResumeLayout(False)
         Me.LogPage.ResumeLayout(False)
         Me.MapPage.ResumeLayout(False)
@@ -993,8 +1010,6 @@ Partial Class Main
     Friend WithEvents NewSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents CoreSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
-    Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
-    Friend WithEvents OpenPrompt As System.Windows.Forms.Label
     Friend WithEvents SiteTree As System.Windows.Forms.TreeView
     Friend WithEvents ApricotTabs As System.Windows.Forms.TabControl
     Friend WithEvents LogPage As System.Windows.Forms.TabPage
@@ -1070,4 +1085,8 @@ Partial Class Main
     Friend WithEvents SystemIcons As System.Windows.Forms.MenuItem
     Friend WithEvents NewSite As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
+    Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
+    Friend WithEvents OpenPromptBox As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents OpenPrompt As System.Windows.Forms.Label
+    Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
 End Class

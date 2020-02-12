@@ -118,7 +118,9 @@ Public Module Apricot
         End If
     End Sub
 
-    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal worker As Object = Nothing)
+    Public Function Compile(ByVal pageHtml As String, ByVal inputFilename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal worker As Object = Nothing)
+        Dim filename = inputFilename
+
         If local Then ' clear cache for previews
             template_cache.Clear()
         End If
@@ -270,7 +272,7 @@ Public Module Apricot
         If Not worker Is Nothing Then
             For Each attrib In attribs
                 Dim tn As New TNode
-                tn.relPath = filename
+                tn.relPath = inputFilename
                 tn.Attribute = attrib.Key
                 tn.Value = attrib.Value
                 worker.ReportProgress(20, tn)

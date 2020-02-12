@@ -75,6 +75,8 @@ Public Class Main
         BrowseSiteMnu.Enabled = (SiteTree.Nodes.Count > 0)
         BrowseSitePreviewMnu.Enabled = (SiteTree.Nodes.Count > 0)
 
+        AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
+
         If SiteTree.Nodes.Count > 0 Then
             Me.Text = wTitle & " - " & SiteTree.Nodes(0).Text
         Else
@@ -251,7 +253,7 @@ Public Class Main
         openFiles.Add(path)
     End Sub
 
-    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, OpenLink.LinkClicked, NewSite.Click
+    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, NewSite.Click, OpenLink.Click
         If FolderBrowser.ShowDialog(Me) = DialogResult.OK Then
             If My.Computer.FileSystem.DirectoryExists(FolderBrowser.SelectedPath) Then
                 openSite(FolderBrowser.SelectedPath, False)
@@ -448,12 +450,15 @@ Public Class Main
 
     Private Sub SiteTree_NodeMouseDoubleClick(ByVal sender As TreeView, ByVal e As TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick, AttributeTree.NodeMouseDoubleClick
         If e.Button = Windows.Forms.MouseButtons.Left Then
-            If sender.Name = "AttributeTree" Then
-                FindNodeTag(SiteTree.Nodes(0), e.Node.Tag)
-                If Not foundNode Is Nothing Then
-                    foundNode.TreeView.SelectedNode = foundNode
+            Try
+                If sender.Name = "AttributeTree" Then
+                    FindNodeTag(SiteTree.Nodes(0), e.Node.Tag)
+                    If Not foundNode Is Nothing Then
+                        foundNode.TreeView.SelectedNode = foundNode
+                    End If
                 End If
-            End If
+            Catch ex As Exception
+            End Try
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
                 Try
                     If openFiles.Contains(e.Node.Tag) Then
@@ -1536,5 +1541,9 @@ Public Class Main
                 DoDragDrop("[#root#]" & e.Item.Tag.Replace(SiteTree.Nodes(0).Tag & "\in\", "").Replace(SiteTree.Nodes(0).Tag & "\includes\", "").Replace("\", "/") & slash, DragDropEffects.Link)
             End If
         End If
+    End Sub
+
+    Private Sub AttributeTree_Layout(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LayoutEventArgs) Handles AttributeTree.Layout
+        AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
     End Sub
 End Class

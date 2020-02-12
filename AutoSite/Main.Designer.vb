@@ -184,6 +184,7 @@ Partial Class Main
         Me.VS2017.Images.SetKeyName(4, "Build")
         Me.VS2017.Images.SetKeyName(5, "Attribute")
         Me.VS2017.Images.SetKeyName(6, "Value")
+        Me.VS2017.Images.SetKeyName(7, "Billy la Bufanda")
         '
         'FolderBrowser
         '

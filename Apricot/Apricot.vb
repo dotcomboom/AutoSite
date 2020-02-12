@@ -174,7 +174,6 @@ Public Module Apricot
         reader.Dispose()
         If Not My.Computer.FileSystem.FileExists(templates & "\" & attribs.Item("template") & ".html") Then
             If My.Computer.FileSystem.FileExists(templates & "\default.html") Then
-
                 doLog("WARN: Template " & attribs.Item("template") + ".html does not exist, using template default.html", worker, 40)
                 attribs.Item("template") = "default"
             Else

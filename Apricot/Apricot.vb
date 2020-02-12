@@ -196,8 +196,8 @@ Public Module Apricot
         Next
         ' End Attribute Process 1
         If local Then
-            newHtml = newHtml.Replace("[#root#]", siteRoot & "\includes\")
-            content = content.Replace("[#root#]", siteRoot & "\includes\")
+            newHtml = newHtml.Replace("[#root#]", (siteRoot & "\includes\")) '.Replace(" ", "%20"))   TODO: Ok so this is dumb, I do %20 and markdown links render out but then all the include stuff breaks
+            content = content.Replace("[#root#]", (siteRoot & "\includes\")) '.Replace(" ", "%20"))
         Else
             Dim root = FillString("../", CountCharacter(filename, "\"))
             newHtml = newHtml.Replace("[#root#]", root)

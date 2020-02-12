@@ -244,10 +244,12 @@ Public Class Main
         editor.siteRoot = SiteTree.Nodes.Item(0).Text
         editor.openFile = tab.Tag
         If tab.Text.StartsWith("templates\") Then
-            editor.ViewOutput.Enabled = False
+            editor.ViewOutput.Visible = False
+            editor.Preview.Text = "Debug"
         End If
         If tab.Text.StartsWith("includes\") Then
             editor.InsertConditional.Enabled = False
+            editor.Preview.Text = "View"
         End If
         openFiles.Add(path)
     End Sub

@@ -803,6 +803,7 @@ Partial Class Main
         'SiteTree
         '
         resources.ApplyResources(Me.SiteTree, "SiteTree")
+        Me.SiteTree.HotTracking = True
         Me.SiteTree.ImageList = Me.VS2017
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Name = "SiteTree"

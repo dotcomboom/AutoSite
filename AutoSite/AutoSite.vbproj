@@ -71,7 +71,7 @@
     </Reference>
     <Reference Include="Interop.Shell32, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Interop.Shell32.dll</HintPath>
+      <HintPath>bin\Debug\Interop.Shell32.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />

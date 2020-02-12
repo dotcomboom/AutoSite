@@ -57,8 +57,7 @@ Public Class Main
     End Function
 
     Private Sub checkOpen()
-        OpenPrompt.Visible = (SiteTree.Nodes.Count < 1)
-        OpenLink.Visible = (SiteTree.Nodes.Count < 1)
+        OpenPromptBox.Visible = (SiteTree.Nodes.Count < 1)
 
         CloseSite.Enabled = (SiteTree.Nodes.Count > 0)
         SaveAll.Enabled = (SiteTree.Nodes.Count > 0)
@@ -888,6 +887,7 @@ Public Class Main
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles ApricotWorker.ProgressChanged
+        AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
         If e.UserState.GetType() Is GetType(System.String) Then
             BuildProgress.Visible = True
             BuildProgress.Value = e.ProgressPercentage

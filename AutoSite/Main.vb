@@ -1164,6 +1164,21 @@ Public Class Main
                 node.BeginEdit()
             End If
         End If
+        If My.Settings.systemIcons Then
+            Try
+                Dim splt = node.Text.Split(".")
+                Dim ext = splt(splt.Length - 1)
+                node.ImageKey = ext
+                node.SelectedImageKey = ext
+                If Not VS2017.Images.ContainsKey(ext) Then
+                    Dim icon As System.Drawing.Icon = System.Drawing.Icon.ExtractAssociatedIcon(node.Tag)
+                    Dim bitmap As System.Drawing.Bitmap = icon.ToBitmap
+                    VS2017.Images.Add(ext, icon)
+                    XP.Images.Add(ext, icon)
+                End If
+            Catch ex As Exception
+            End Try
+        End If
     End Sub
 
     Private Sub Watcher_Deleted(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Deleted

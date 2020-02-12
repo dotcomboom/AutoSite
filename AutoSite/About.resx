@@ -881,8 +881,16 @@ SOFTWARE.</value>
     <value>1.0 RC2:
    + View Output in Default Browser added to editor
    + Pages and Includes can be dragged into the editor as paths from [#root#]
+   + Site Tree node hover (hottracking) effect
+   + Numerous system icon improvements
+       - Load File Icons rephrased to Use System Icons
+       - System icons switching to a folder icon when selected has been fixed, as well as 
+       - Newly added files now use system icons properly
+       - System icons are now used by default
+   - Markdown [#root#] links in previews are now rendered out properly
    - Start menu tile small icon fixed
-   - About box continues to get tweaked
+   - More About box tweaks
+   - Preview button text is now "Preview" for pages, "Debug" for templates, and "View" for include files
 
 1.0 RC1:
    + New Windows 10 Start menu tile

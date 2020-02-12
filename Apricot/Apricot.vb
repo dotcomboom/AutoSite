@@ -262,7 +262,6 @@ Public Module Apricot
         Return output
     End Function
 
-
     Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As Object = Nothing)
         Dim input = Path.Combine(siteRoot, "in\")
         Dim templates = Path.Combine(siteRoot, "templates\")
@@ -272,6 +271,7 @@ Public Module Apricot
         For Each file In subdir.GetFiles(pattern, SearchOption.AllDirectories)
             Dim modifiedDate = file.LastWriteTime
             Dim rel = ReplaceFirst(file.FullName, input, "")
+
             While rel.StartsWith("\")
                 rel = ReplaceFirst(rel, "\", "")
             End While
@@ -294,9 +294,9 @@ Public Module Apricot
             Dim info As FileInfo = New FileInfo(Path.Combine(out, rel))
             info.LastWriteTime = modifiedDate
         Next
-        For Each sdir In subdir.GetDirectories
-            walkInputs(sdir, pattern, siteRoot, worker)
-        Next
+        'For Each sdir In subdir.GetDirectories
+        'walkInputs(sdir, pattern, siteRoot, worker)
+        'Next
     End Sub
 
     Public Sub buildSite(ByVal folder As String, Optional ByVal worker As Object = Nothing)

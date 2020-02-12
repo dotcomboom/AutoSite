@@ -124,110 +124,111 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAG
-        GAAAAk1TRnQBSQFMAgEBBwEAAWgBBAFoAQQBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
-        AwABIAMAAQEBAAEgBgABIBYAA/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
-        Af8D8QH/A/EB/wPxAf/IAAPxAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wMAAf8D8QH/yAAD8QH/AwAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
-        Af8DAAH/A/EB/8gAA/EB/wMAAf8D8QH/A/EB/wMAAf8DAAH/A/EB/wPxAf8DAAH/AwAB/wPxAf8D8QH/
-        AwAB/wPxAf8IAAP2Af8D9gH/A/YB/wP2Af8D9gH/A/YB/wP2Af8D9gH/A/YB/wP2Af8D9gH/A1wB3wMN
-        ARGMAAPxAf8DAAH/A/EB/wPxAf8DAAH/AwAB/wPxAf8D8QH/AwAB/wMAAf8D8QH/A/EB/wMAAf8D8QH/
-        CAAD9gH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wOnAf8DVAGvAwABAQQA
-        AyEBMANVAbAD9gH/A/YB/wP2Af8D9gH/A/YB/wP2Af8D9gH/A1UBsAMqAUADMgFQA1UBsAP2Af8DXwHg
-        A1EBoEQAA/EB/wMAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/AwAB/wPx
-        Af8IAAP2Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPQAf8DQAFw
-        BAADUQGgA5wB/wMAAf8DAAH/AwAB/wP2Af8DAAH/A4EB/wMAAf8DgQH/A98B/wPfAf8DgQH/AwAB/wMA
-        Af8D9gH/RAAD8QH/AwAB/wPxAf8DAAH/AwAB/wPxAf8DAAH/AwAB/wPxAf8DAAH/AwAB/wPxAf8DAAH/
-        A/EB/wgAA/YB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wNN
-        AfoDIwE0A10B8AMAAf8DsgH/A7IB/wMAAf8D9gH/AwAB/wMAAf8D1AH/AwAB/wOnAf8DkAH/AwAB/wPf
-        Af8DvgH/A/YB/0QAA/EB/wMAAf8D8QH/AwAB/wMAAf8D8QH/AwAB/wMAAf8D8QH/AwAB/wMAAf8D8QH/
-        AwAB/wPxAf8IAAP2Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wHoAecB6AH/AegB5wHo
-        Af8DAAH/AwAB/wOBAf8DXgHdA1UBsAPrAf8DAAH/AwAB/wMAAf8D9gH/AwAB/wOyAf8D9gH/A4EB/wOB
-        Af8DgQH/A4UB/wNRAaADXwHgA/YB/0QAA/EB/wMAAf8D8QH/A/EB/wPxAf8D8QH/A+oB/wPqAf8D8QH/
-        A/EB/wPxAf8D8QH/AwAB/wPxAf8IAAP2Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wHo
-        AecB6AH/AegB5wHoAf8DAAH/AwAB/wOBAf8DXgHdA0cBgAO+Af8DsgH/A4EB/wMAAf8D9gH/AwAB/wMA
-        Af8DvgH/AwAB/wOnAf8DsgH/AwAB/wOyAf8DpwH/A/YB/0QAA/EB/wMAAf8D8QH/BAAE/wPqAf8DgQH/
-        A4EB/wPqBf8EAAPxAf8DAAH/A/EB/wgAA/YB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wMAAf8DAAH/AwAB/wNqAfkDIwEzA0cBgAPJAf8DAAH/AwAB/wOQAf8D9gH/AwAB/wOcAf8DAAH/
-        A4UB/wPrAf8D6wH/A6cB/wMAAf8DAAH/A/YB/0QAA/EB/wPxAf8D8QX/A+oB/wOBAf8DAAH/AwAB/wOB
-        Af8D6gX/A/EB/wPxAf8D8QH/CAAD9gH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wMAAf8D0AH/Az8BbAQAAxcBIAP2Af8D9gH/A/YB/wP2Af8D9gH/AwAB/wPJAf8DXQHwA1EBoAMX
-        ASADKgFAA1UBsANdAfADWgHAA0cBgFAAA/EB/wOGAf8DAAH/A4EB/wOGAf8DAAH/A7IB/wPxAf8UAAP2
-        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A6cB/wNUAawcAAP2Af8DAAH/
-        A8kB/wMqAUBsAAT/A+oB/wPdAf8DgQH/A5kB/wPdAf8D8QX/FAAD9gH/A/YB/wP2Af8D9gH/A/YB/wP2
-        Af8D9gH/A/YB/wP2Af8D9gH/A/YB/wNeAd0DCwEPHAAD9gH/A/YB/wP2Af8DKgFAcAAE/wPxAf8DgQH/
-        A5kB/wPxBf/sAAPxAf8DgQH/A5kB/wPxAf/wAAPxAf8D8QH/A/EB/wPxAf//AEEABP8D8QH/A/EF/wwA
-        A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8UAAPx
-        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/2QABP8D8QH/AYEBmQHM
-        Af8BgQGZAcwB/wPxBf8IAAPxAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wMAAf8D8QH/FAAD8QH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPx
-        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
-        Af8kAAT/A/EB/wGBAZkBzAH/AQABgQHMAf8BAAGBAcwB/wGBAZkBzAH/A/EF/wQAA/EB/wMAAf8D8QH/
-        A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/AwAB/wPxAf8UAAPxAf8DAAH/A/EB/wPx
-        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8DAAH/A/EB/wPxAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLM
-        Af8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8D8QH/
-        IAAD8QH/A/EB/wPxAf8BgQGZAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wGBAZkBzAH/A/EB/wQA
-        A/EB/wMAAf8D8QH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8D8QH/AwAB/wPxAf8UAAPx
-        Af8DAAH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8DAAH/A/EB/wPxAf8BgQLMAf8BgQLM
-        Af8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLM
-        Af8BgQLMAf8D8QH/IAAD8QH/AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wEA
-        AYEBzAH/AYEBmQHMAf8D8QH/BAAD8QH/AwAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAm
+        GAAAAk1TRnQBSQFMAgEBCAEAAXgBBAF4AQQBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABMAMAAQEBAAEgBgABMP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AJgAD8QH/A/EB/wPx
+        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/8gAA/EB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPxAf/IAAPxAf8DAAH/A/EB/wPx
+        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wMAAf8D8QH/yAAD8QH/AwAB/wPxAf8D8QH/
+        AwAB/wMAAf8D8QH/A/EB/wMAAf8DAAH/A/EB/wPxAf8DAAH/A/EB/wgAA/YB/wP2Af8D9gH/A/YB/wP2
+        Af8D9gH/A/YB/wP2Af8D9gH/A/YB/wP2Af8DXAHfAw0BEYwAA/EB/wMAAf8D8QH/A/EB/wMAAf8DAAH/
+        A/EB/wPxAf8DAAH/AwAB/wPxAf8D8QH/AwAB/wPxAf8IAAP2Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMA
+        Af8DAAH/AwAB/wMAAf8DAAH/A6cB/wNUAa8DAAEBBAADIQEwA1UBsAP2Af8D9gH/A/YB/wP2Af8D9gH/
+        A/YB/wP2Af8DVQGwAyoBQAMyAVADVQGwA/YB/wNfAeADUQGgRAAD8QH/AwAB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8DAAH/A/EB/wgAA/YB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A9AB/wNAAXAEAANRAaADnAH/AwAB/wMAAf8DAAH/A/YB/wMA
+        Af8DgQH/AwAB/wOBAf8D3wH/A98B/wOBAf8DAAH/AwAB/wP2Af9EAAPxAf8DAAH/A/EB/wMAAf8DAAH/
+        A/EB/wMAAf8DAAH/A/EB/wMAAf8DAAH/A/EB/wMAAf8D8QH/CAAD9gH/AwAB/wMAAf8DAAH/AwAB/wMA
+        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A00B+gMjATQDXQHwAwAB/wOyAf8DsgH/AwAB/wP2
+        Af8DAAH/AwAB/wPUAf8DAAH/A6cB/wOQAf8DAAH/A98B/wO+Af8D9gH/RAAD8QH/AwAB/wPxAf8DAAH/
+        AwAB/wPxAf8DAAH/AwAB/wPxAf8DAAH/AwAB/wPxAf8DAAH/A/EB/wgAA/YB/wMAAf8DAAH/AwAB/wMA
+        Af8DAAH/AwAB/wMAAf8DAAH/AegB5wHoAf8B6AHnAegB/wMAAf8DAAH/A4EB/wNeAd0DVQGwA+sB/wMA
+        Af8DAAH/AwAB/wP2Af8DAAH/A7IB/wP2Af8DgQH/A4EB/wOBAf8DhQH/A1EBoANfAeAD9gH/RAAD8QH/
+        AwAB/wPxAf8D8QH/A/EB/wPxAf8D6gH/A+oB/wPxAf8D8QH/A/EB/wPxAf8DAAH/A/EB/wgAA/YB/wMA
+        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AegB5wHoAf8B6AHnAegB/wMAAf8DAAH/A4EB/wNe
+        Ad0DRwGAA74B/wOyAf8DgQH/AwAB/wP2Af8DAAH/AwAB/wO+Af8DAAH/A6cB/wOyAf8DAAH/A7IB/wOn
+        Af8D9gH/RAAD8QH/AwAB/wPxAf8EAAT/A+oB/wOBAf8DgQH/A+oF/wQAA/EB/wMAAf8D8QH/CAAD9gH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A2oB+QMjATMDRwGA
+        A8kB/wMAAf8DAAH/A5AB/wP2Af8DAAH/A5wB/wMAAf8DhQH/A+sB/wPrAf8DpwH/AwAB/wMAAf8D9gH/
+        RAAD8QH/A/EB/wPxBf8D6gH/A4EB/wMAAf8DAAH/A4EB/wPqBf8D8QH/A/EB/wPxAf8IAAP2Af8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPQAf8DPwFsBAADFwEgA/YB/wP2
+        Af8D9gH/A/YB/wP2Af8DAAH/A8kB/wNdAfADUQGgAxcBIAMqAUADVQGwA10B8ANaAcADRwGAUAAD8QH/
+        A4YB/wMAAf8DgQH/A4YB/wMAAf8DsgH/A/EB/xQAA/YB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMA
+        Af8DAAH/AwAB/wMAAf8DpwH/A1QBrBwAA/YB/wMAAf8DyQH/AyoBQGwABP8D6gH/A90B/wOBAf8DmQH/
+        A90B/wPxBf8UAAP2Af8D9gH/A/YB/wP2Af8D9gH/A/YB/wP2Af8D9gH/A/YB/wP2Af8D9gH/A14B3QML
+        AQ8cAAP2Af8D9gH/A/YB/wMqAUBwAAT/A/EB/wOBAf8DmQH/A/EF/+wAA/EB/wOBAf8DmQH/A/EB//AA
+        A/EB/wPxAf8D8QH/A/EB//8AQQAE/wPxAf8D8QX/DAAD8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
+        A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/xQAA/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/A/EB/wPxAf8D8QH/ZAAE/wPxAf8BgQGZAcwB/wGBAZkBzAH/A/EF/wgAA/EB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPxAf8UAAPxAf8DAAH/AwAB/wMA
+        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/yQABP8D8QH/AYEBmQHMAf8BAAGBAcwB/wEA
+        AYEBzAH/AYEBmQHMAf8D8QX/BAAD8QH/AwAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
         A/EB/wPxAf8DAAH/A/EB/xQAA/EB/wMAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wMA
         Af8D8QH/A/EB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGB
-        AswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wPxAf8QAAj/CAAD8QH/AQABgQHMAf8D8QH/A/EB/wPx
-        Af8BgQGZAcwB/wGBAZkBzAH/A/EF/wQAA/EB/wMAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
-        A/EB/wPxAf8D8QH/AwAB/wPxAf8UAAPxAf8DAAH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
-        Af8DAAH/A/EB/wPxAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLM
-        Af8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8D8QH/DAAE/wPxAf8D8QX/BAAD8QH/AQABgQHM
-        Af8D8QH/A/EB/wGBAZkBzAH/AYEBmQHMAf8D8QH/A/EB/wgAA/EB/wMAAf8D8QH/AcwBmQEAAf8BzAGZ
-        AQAB/wHMAZkBAAH/AcwBmQEAAf8BzAGZAQAB/wHMAZkBAAH/AcwBmQEAAf8BzAGZAQAB/wPxAf8DAAH/
-        A/EB/xQAA/EB/wMAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wMAAf8D8QH/A/EB/wGB
-        AswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGB
-        AswB/wGBAswB/wGBAswB/wPxAf8IAAT/A/EB/wGBAZkBzAH/AYEBmQHMAf8D8QX/A/EB/wEAAYEBzAH/
-        A/EB/wGBAZkBzAH/AQABgQHMAf8BAAGBAcwB/wGBAZkBzAH/A/EF/wQAA/EB/wMAAf8D8QH/AcwBmQEA
-        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8BzAGZAQAB/wPxAf8DAAH/A/EB/xQAA/EB/wMAAf8D8QH/
-        A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wMAAf8D8QH/A/EB/wGBAswB/wGBAswB/wGBAswB/wGB
-        AswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wPx
-        Af8EAAT/A/EB/wGBAZkBzAH/AQABgQHMAf8BAAGBAcwB/wGBAZkBzAH/A/EB/wPxAf8BAAGBAcwB/wPx
-        Af8BgQGZAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wGBAZkBzAH/A/EB/wQAA/EB/wMAAf8D8QH/
-        AcwBmQEAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8BzAGZAQAB/wPxAf8DAAH/A/EB/wwAA/EB/wPx
-        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/AwAB/wPxAf8D8QH/AYECzAH/
+        AswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wPxAf8gAAPxAf8D8QH/A/EB/wGBAZkBzAH/AQABgQHM
+        Af8BAAGBAcwB/wEAAYEBzAH/AYEBmQHMAf8D8QH/BAAD8QH/AwAB/wPxAf8DAAH/AwAB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wPxAf8DAAH/A/EB/xQAA/EB/wMAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/A/EB/wMAAf8D8QH/A/EB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGB
+        AswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wPxAf8gAAPxAf8BAAGBAcwB/wEA
+        AYEBzAH/AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BgQGZAcwB/wPxAf8EAAPxAf8DAAH/
+        A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wMAAf8D8QH/FAAD8QH/AwAB/wPx
+        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/AwAB/wPxAf8D8QH/AYECzAH/AYECzAH/AYECzAH/
         AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/
-        AYECzAH/AYECzAH/A/EB/wQAA/EB/wGBAZkBzAH/AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHM
-        Af8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wEA
-        AYEBzAH/AYEBmQHMAf8D8QH/BAAD8QH/AwAB/wPxAf8BzAGZAQAB/wHMAZkBAAH/AcwBmQEAAf8BzAGZ
-        AQAB/wHMAZkBAAH/AcwBmQEAAf8BzAGZAQAB/wHMAZkBAAH/A/EB/wMAAf8D8QH/DAAD8QH/AQABmQEA
-        Af8BAAGZAQAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wMAAf8DAAH/AwAB/wMAAf8D8QH/A/EB/wGB
+        A/EB/xAACP8IAAPxAf8BAAGBAcwB/wPxAf8D8QH/A/EB/wGBAZkBzAH/AYEBmQHMAf8D8QX/BAAD8QH/
+        AwAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8DAAH/A/EB/xQAA/EB/wMA
+        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wMAAf8D8QH/A/EB/wGBAswB/wGBAswB/wGB
         AswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGB
-        AswB/wGBAswB/wGBAswB/wPxAf8EAAPxAf8BgQGZAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wEA
-        AYEBzAH/AQABgQHMAf8BgQGZAcwB/wPxAf8D8QH/A/EB/wPxAf8BgQGZAcwB/wGBAZkBzAH/A/EF/wQA
-        A/EB/wMAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/AwAB/wPxAf8EAAPx
-        Af8D8QH/A/EB/wEAAZkBAAH/AQABmQEAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8DAAH/AwAB/wMA
-        Af8DhgH/A/EB/wPxAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLM
-        Af8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8D8QH/BAAE/wPxAf8BgQGZAcwB/wEAAYEBzAH/
-        AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BgQGZAcwB/wPxCf8D8QH/A/EF/wgAA/EB/wMA
-        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/AwAB/wPxAf8EAAPxAf8BAAGZ
-        AQAB/wEAAZkBAAH/AQABmQEAAf8BAAGZAQAB/wEAAZkBAAH/AQABmQEAAf8D8QH/A/EB/wPxAf8D8QH/
-        AwAB/wMAAf8DhgH/A/EB/wPxAf8D8QH/AYECzAH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/AdYC5wH/
-        AZkCzAH/A/EB/wPxAf8D8QH/A/EB/wPxAf8IAAT/A/EB/wGBAZkBzAH/AQABgQHMAf8BAAGBAcwB/wEA
-        AYEBzAH/AQABgQHMAf8BgQGZAcwB/wPxBf8EAAj/DAAD8QH/AwAB/wPxAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wMAAf8DAAH/AwAB/wPxAf8DAAH/A/EB/wQAA/EB/wEAAZkBAAH/AQABmQEAAf8BAAGZAQAB/wEA
-        AZkBAAH/AQABmQEAAf8BAAGZAQAB/wPxAf8DAAH/AwAB/wMAAf8DAAH/A4YB/wPxAf8D8QH/BAAD6gH/
-        AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AcYB1gHvAf8D8QH/
-        HAAE/wPxAf8BgQGZAcwB/wEAAYEBzAH/AQABgQHMAf8BgQGZAcwB/wPxBf8cAAPxAf8DAAH/A/EB/wPx
-        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wMAAf8D8QH/BAAD8QH/A/EB/wPxAf8BAAGZ
-        AQAB/wEAAZkBAAH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/CAAD8QH/A/EB/wPx
-        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QX/IAAE/wPxAf8BgQGZAcwB/wGBAZkBzAH/A/EF/yAA
-        A/EB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPxAf8MAAPx
-        Af8BAAGZAQAB/wEAAZkBAAH/A/EB/3gABP8D8QH/A/EF/yQAA/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
-        A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8MAAPxAf8D8QH/A/EB/wPxAf8oAAFCAU0BPgcA
-        AT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/AQABgAEBBP8CAAGAAQEE/wIAAYABAQT/AgABgAEB
-        AYABAwL/AgABgAEBAYABAQQAAYABAQGAAQEEAAGAAQEBgAUAAYABAQGABQABgAEBAYAFAAGIAREBgAUA
-        AYABAQGAAQEEAAHwAQ8BgAEDAfgBfwIAAfABDwGAAQMB+AF/AgAB+AEfBP8CAAH8AT8E/wIAAfwBPwT/
-        AgAD/wHDAYABAQHwAQAD/wGBAYABAQHwAgABAQH/AQABgAEBAfACAAEBAf4BAAGAAQEB8AIAAQEB/gEA
-        AYABAQHwAgABAQHmAQABgAEBAfACAAEBAcIBAQGAAQEB8AIAAQEBgAEAAYABAQHwAgABAQIAAYABAQHA
-        AgABAQIAAYABAQHAAgABAQIAAYABAQMAAQEBAAEBAYABAQMAAQEBgAETAYABAQEAAQEBAAEfAcABPwGA
-        AQEBAAEDAQABHwHgAX8BgAEBAcMD/wHwAf8BgAEBAcMB/ws=
+        AswB/wPxAf8MAAT/A/EB/wPxBf8EAAPxAf8BAAGBAcwB/wPxAf8D8QH/AYEBmQHMAf8BgQGZAcwB/wPx
+        Af8D8QH/CAAD8QH/AwAB/wPxAf8BzAGZAQAB/wHMAZkBAAH/AcwBmQEAAf8BzAGZAQAB/wHMAZkBAAH/
+        AcwBmQEAAf8BzAGZAQAB/wHMAZkBAAH/A/EB/wMAAf8D8QH/FAAD8QH/AwAB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/A/EB/wPxAf8D8QH/AwAB/wPxAf8D8QH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/
+        AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/A/EB/wgABP8D8QH/
+        AYEBmQHMAf8BgQGZAcwB/wPxBf8D8QH/AQABgQHMAf8D8QH/AYEBmQHMAf8BAAGBAcwB/wEAAYEBzAH/
+        AYEBmQHMAf8D8QX/BAAD8QH/AwAB/wPxAf8BzAGZAQAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wHM
+        AZkBAAH/A/EB/wMAAf8D8QH/FAAD8QH/AwAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
+        AwAB/wPxAf8D8QH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/
+        AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/A/EB/wQABP8D8QH/AYEBmQHMAf8BAAGBAcwB/wEA
+        AYEBzAH/AYEBmQHMAf8D8QH/A/EB/wEAAYEBzAH/A/EB/wGBAZkBzAH/AQABgQHMAf8BAAGBAcwB/wEA
+        AYEBzAH/AYEBmQHMAf8D8QH/BAAD8QH/AwAB/wPxAf8BzAGZAQAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
+        A/EB/wHMAZkBAAH/A/EB/wMAAf8D8QH/DAAD8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/A/EB/wPxAf8DAAH/A/EB/wPxAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLM
+        Af8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8D8QH/BAAD8QH/AYEBmQHM
+        Af8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wEA
+        AYEBzAH/AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BgQGZAcwB/wPxAf8EAAPxAf8DAAH/
+        A/EB/wHMAZkBAAH/AcwBmQEAAf8BzAGZAQAB/wHMAZkBAAH/AcwBmQEAAf8BzAGZAQAB/wHMAZkBAAH/
+        AcwBmQEAAf8D8QH/AwAB/wPxAf8MAAPxAf8BAAGZAQAB/wEAAZkBAAH/A/EB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/AwAB/wMAAf8DAAH/AwAB/wPxAf8D8QH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/
+        AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/AYECzAH/A/EB/wQAA/EB/wGB
+        AZkBzAH/AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wGBAZkBzAH/A/EB/wPx
+        Af8D8QH/A/EB/wGBAZkBzAH/AYEBmQHMAf8D8QX/BAAD8QH/AwAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
+        A/EB/wPxAf8D8QH/A/EB/wPxAf8DAAH/A/EB/wQAA/EB/wPxAf8D8QH/AQABmQEAAf8BAAGZAQAB/wPx
+        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wMAAf8DAAH/AwAB/wOGAf8D8QH/A/EB/wGBAswB/wGBAswB/wGB
+        AswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGBAswB/wGB
+        AswB/wPxAf8EAAT/A/EB/wGBAZkBzAH/AQABgQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGB
+        AcwB/wGBAZkBzAH/A/EJ/wPxAf8D8QX/CAAD8QH/AwAB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/A/EB/wPxAf8DAAH/A/EB/wQAA/EB/wEAAZkBAAH/AQABmQEAAf8BAAGZAQAB/wEAAZkBAAH/
+        AQABmQEAAf8BAAGZAQAB/wPxAf8D8QH/A/EB/wPxAf8DAAH/AwAB/wOGAf8D8QH/A/EB/wPxAf8BgQLM
+        Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8B1gLnAf8BmQLMAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wgA
+        BP8D8QH/AYEBmQHMAf8BAAGBAcwB/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wGBAZkBzAH/A/EF/wQA
+        CP8MAAPxAf8DAAH/A/EB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A/EB/wMAAf8D8QH/
+        BAAD8QH/AQABmQEAAf8BAAGZAQAB/wEAAZkBAAH/AQABmQEAAf8BAAGZAQAB/wEAAZkBAAH/A/EB/wMA
+        Af8DAAH/AwAB/wMAAf8DhgH/A/EB/wPxAf8EAAPqAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLMAf8BgQLM
+        Af8BgQLMAf8BgQLMAf8BgQLMAf8BxgHWAe8B/wPxAf8cAAT/A/EB/wGBAZkBzAH/AQABgQHMAf8BAAGB
+        AcwB/wGBAZkBzAH/A/EF/xwAA/EB/wMAAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/AwAB/wPxAf8EAAPxAf8D8QH/A/EB/wEAAZkBAAH/AQABmQEAAf8D8QH/A/EB/wPxAf8D8QH/
+        A/EB/wPxAf8D8QH/A/EB/wPxAf8IAAPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPx
+        Bf8gAAT/A/EB/wGBAZkBzAH/AYEBmQHMAf8D8QX/IAAD8QH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A/EB/wwAA/EB/wEAAZkBAAH/AQABmQEAAf8D8QH/eAAE/wPx
+        Af8D8QX/JAAD8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/
+        A/EB/wwAA/EB/wPxAf8D8QH/A/EB/ygAAUIBTQE+BwABPgMAASgDAAFAAwABMAMAAQEBAAEBBQABgAEB
+        FgAD/4EAAYABAQb/AYABAQb/AYABAQb/AYABAQGAAQME/wGAAQEBgAEBAgAC/wGAAQEBgAEBAgAC/wGA
+        AQEBgAMAAv8BgAEBAYADAAL/AYABAQGAAwAC/wGIAREBgAMAAv8BgAEBAYABAQIAAv8B8AEPAYABAwH4
+        AX8C/wHwAQ8BgAEDAfgBfwL/AfgBHwb/AfwBPwb/AfwBPwn/AcMBgAEBAfABAAP/AYEBgAEBAfACAAEB
+        Af8BAAGAAQEB8AIAAQEB/gEAAYABAQHwAgABAQH+AQABgAEBAfACAAEBAeYBAAGAAQEB8AIAAQEBwgEB
+        AYABAQHwAgABAQGAAQABgAEBAfACAAEBAgABgAEBAcACAAEBAgABgAEBAcACAAEBAgABgAEBAwABAQEA
+        AQEBgAEBAwABAQGAARMBgAEBAQABAQEAAR8BwAE/AYABAQEAAQMBAAEfAeABfwGAAQEBwwP/AfAB/wGA
+        AQEBwwH/Cw==
 </value>
   </data>
   <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -239,6 +240,9 @@
   <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>149, 17</value>
   </metadata>
+  <data name="FileMenu.Text" xml:space="preserve">
+    <value>&amp;Fájl</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="NewSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftN</value>
@@ -251,6 +255,9 @@
   </data>
   <data name="OpenFolder.Text" xml:space="preserve">
     <value>Weblap megnyitása...</value>
+  </data>
+  <data name="OpenRecent.Text" xml:space="preserve">
+    <value>Legutóbbi projektek</value>
   </data>
   <data name="Recent1.Text" xml:space="preserve">
     <value>Recent 1</value>
@@ -288,9 +295,6 @@
   </data>
   <data name="ClearRecents.Text" xml:space="preserve">
     <value>Legutóbbi weblap lista törlése</value>
-  </data>
-  <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Legutóbbi projektek</value>
   </data>
   <data name="CloseFile.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlW</value>
@@ -337,8 +341,8 @@
   <data name="ExitItem.Text" xml:space="preserve">
     <value>Kilépés</value>
   </data>
-  <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;Fájl</value>
+  <data name="EditMenu.Text" xml:space="preserve">
+    <value>&amp;Szerkesztés</value>
   </data>
   <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlZ</value>
@@ -412,8 +416,8 @@
   <data name="InsertConditional.Text" xml:space="preserve">
     <value>Függő behelyezése...</value>
   </data>
-  <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Szerkesztés</value>
+  <data name="FormatMenu.Text" xml:space="preserve">
+    <value>F&amp;ormátum</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
     <value>Sortörés</value>
@@ -442,8 +446,8 @@
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Monospace betűtípus...</value>
   </data>
-  <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormátum</value>
+  <data name="ViewMenu.Text" xml:space="preserve">
+    <value>&amp;Nézet</value>
   </data>
   <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt1</value>
@@ -472,17 +476,17 @@
   <data name="ViewSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
+  <data name="IconThemeMenu.Text" xml:space="preserve">
+    <value>Intéző Ikonok</value>
+  </data>
   <data name="VS2017item.Text" xml:space="preserve">
     <value>Visual Studio 2017</value>
   </data>
   <data name="XPitem.Text" xml:space="preserve">
     <value>XP</value>
   </data>
-  <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Intéző Ikonok</value>
-  </data>
   <data name="SystemIcons.Text" xml:space="preserve">
-    <value>Fájl ikonok betöltése</value>
+    <value>Use System Icons</value>
   </data>
   <data name="RefreshItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlR</value>
@@ -514,8 +518,8 @@
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
     <value>Oldal böngészése előnézetben</value>
   </data>
-  <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;Nézet</value>
+  <data name="BuildMenu.Text" xml:space="preserve">
+    <value>&amp;Építés</value>
   </data>
   <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlB</value>
@@ -547,8 +551,8 @@
   <data name="OpenOutputMnu.Text" xml:space="preserve">
     <value>Kimeneti mappa megnyitása</value>
   </data>
-  <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Építés</value>
+  <data name="HelpMenu.Text" xml:space="preserve">
+    <value>&amp;Súgó</value>
   </data>
   <data name="HelpTopics.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -573,9 +577,6 @@
   </data>
   <data name="AboutItem.Text" xml:space="preserve">
     <value>Az AutoSiteról</value>
-  </data>
-  <data name="HelpMenu.Text" xml:space="preserve">
-    <value>&amp;Súgó</value>
   </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>250, 17</value>
@@ -787,6 +788,9 @@
   <data name="ContextSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
+  <data name="NewCon.Text" xml:space="preserve">
+    <value>Új</value>
+  </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
     <value>Mappa</value>
   </data>
@@ -813,9 +817,6 @@
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
     <value>Egyszerű szöveg (.txt)</value>
-  </data>
-  <data name="NewCon.Text" xml:space="preserve">
-    <value>Új</value>
   </data>
   <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>531, 17</value>
@@ -866,33 +867,6 @@
   <data name="OpenPromptBox.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="OpenLink.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="OpenLink.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="OpenLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="OpenLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 63</value>
-  </data>
-  <data name="OpenLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="OpenLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 162</value>
-  </data>
-  <data name="OpenLink.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="OpenLink.Text" xml:space="preserve">
-    <value>Webhely mappa készítése vagy megnyitása</value>
-  </data>
-  <data name="OpenLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
   <data name="&gt;&gt;OpenLink.Name" xml:space="preserve">
     <value>OpenLink</value>
   </data>
@@ -904,33 +878,6 @@
   </data>
   <data name="&gt;&gt;OpenLink.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="OpenPrompt.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="OpenPrompt.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="OpenPrompt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="OpenPrompt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 24</value>
-  </data>
-  <data name="OpenPrompt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="OpenPrompt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 15</value>
-  </data>
-  <data name="OpenPrompt.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="OpenPrompt.Text" xml:space="preserve">
-    <value>Még nincs megnyitva webhely.</value>
-  </data>
-  <data name="OpenPrompt.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;OpenPrompt.Name" xml:space="preserve">
     <value>OpenPrompt</value>
@@ -1019,63 +966,6 @@
   <data name="&gt;&gt;ExSplit.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>951, 54</value>
-  </metadata>
-  <data name="LogMenuBridge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 4</value>
-  </data>
-  <data name="&gt;&gt;LogMenuBridge.Name" xml:space="preserve">
-    <value>LogMenuBridge</value>
-  </data>
-  <data name="&gt;&gt;LogMenuBridge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Log.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Log.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="Log.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 90</value>
-  </data>
-  <data name="Log.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;Log.Name" xml:space="preserve">
-    <value>Log</value>
-  </data>
-  <data name="&gt;&gt;Log.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
-    <value>LogPage</value>
-  </data>
-  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LogPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="LogPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="LogPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="LogPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 100</value>
-  </data>
-  <data name="LogPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="LogPage.Text" xml:space="preserve">
-    <value>Napló</value>
-  </data>
   <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
     <value>LogPage</value>
   </data>
@@ -1087,90 +977,6 @@
   </data>
   <data name="&gt;&gt;LogPage.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="AttributeExplanation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="AttributeExplanation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="AttributeExplanation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 90</value>
-  </data>
-  <data name="AttributeExplanation.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="AttributeExplanation.Text" xml:space="preserve">
-    <value>
-The Attribute Map allows you to view all of the Attributes used in your site. 
-
-Build your site to populate the Attribute Map.</value>
-  </data>
-  <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
-    <value>AttributeExplanation</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="AttributeTree.ImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="AttributeTree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="AttributeTree.SelectedImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 90</value>
-  </data>
-  <data name="AttributeTree.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
-    <value>AttributeTree</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="MapPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="MapPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="MapPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="MapPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 100</value>
-  </data>
-  <data name="MapPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MapPage.Text" xml:space="preserve">
-    <value>Attribútum térkép</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -1244,85 +1050,6 @@ Build your site to populate the Attribute Map.</value>
   <metadata name="BuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <data name="Build.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVDhPtZA9EoMgEIU5Us5AT29vzwGs0nALT+EJchMy
-        Y0mTMGi78ZElQ34UzCQ782bX59sPVKxVCOE0zzNB0zQd2a4vALTW1Pf9fsCyfFhOviSA9/4Mj19vF4Lj
-        OF6ttZQAmAGsguA0YwwppahpGuq6Ls7DMMSbcOy50s+C0g3atiUpZRRmePxpjyyv3wEIJjOH5MufsrFy
-        M5dzLurV3wSg18zovP5jQI2KAMylZ3Re/wOgpFXAHr0BvpEQQtwAqZs1YF3M/RkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="Build.Text" xml:space="preserve">
-    <value>ToolStripButton1</value>
-  </data>
-  <data name="Build.ToolTipText" xml:space="preserve">
-    <value>Építés</value>
-  </data>
-  <data name="OpenOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEqSURBVDhPY0AHX758Mfj27duH79+/J0CFiAcwzdmzDv8/
-        cf3pf5IN+fr1awDQgP+6hWv/88UuJM4QoIYJIE3omGhDQIp3nL0PVswQPAcDy6UvBxsI8h5UCyoAScI0
-        w2yHiYHwsSv3/79/dh1FDoonwA0Aaa5echIuiez817cO/L+zrQoFPzu3AqwO6DUFuAtgGkB8WCyA2F8+
-        vQO7ABmDDAHJwV0wY9t5sAHIrsCHMQy4v68TLHD90WsUhbgwzAAQBhsAE3hz7ziYTQy+t6sR04BHx2Zi
-        KMSFQQEJTHgL4AZ8fvcMQxE+/PHVfVAsOMANeH5pA4YiXPjhoYn/P3369AAWiB9AAiA/YVOMDYPCCuj8
-        ArABQEYDMK4/osc1PgxOG+/fCzAwMDAAAMDUoyNGO9ZHAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="OpenOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="OpenOutput.Text" xml:space="preserve">
-    <value>Kimeneti mappa megnyitása</value>
-  </data>
-  <data name="BrowseSitePreview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVDhPjZM9coMwEIU5is9Czx0y8S1onaGndG4SN6mp
-        5NZJm59SVgGUij6h1SzIM2Fn3iB239s/RLW1eZ6fxnF8n6bJa+AjlmilheAhEM0wDL5tW1/X9Qr4iDnn
-        jLX2kGSLJbHt+74QCpqm8Ze3i79b5++/LuRQSajcdV0mn8+v/vvrZyEHcJb3j9tnfNJJFDMXrYnYmGsW
-        auA/nV7imU7QxJ2wHJmZylshwC/J6YRx0KCl/Vxdtw0QHJ+Pq+RwhI92lUCLgfhJ8si/O8F2L+IvEmxH
-        eIRihD1L1JCF5iXu/YyAmPDyZ8RCK0bfQqrocThLZQAXTRRje66yIIktmiRfLCX592eCU4i1MRfLCcS4
-        ZQE+YomWrKr+AGiZpQrywE/bAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BrowseSitePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BrowseSitePreview.Text" xml:space="preserve">
-    <value>Oldal böngészése előnézetben</value>
-  </data>
-  <data name="BrowseSite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVDhPrZPNDcMgDEaZLefklpHIiQ3YIasko9SYnyvF
-        biFqVRUoRXoSJvjxgRQxPEIIcQQWTNP0E1UB3EzhU/2/BMuyvNhb6BKgwYSNANdak8CkRgCIx3EwFu1D
-        lL61JUjN67qWO9OcJAawLqDYdCptzGs0z0kaBHZMQA9GG9+vsG1bdM7FeZ7rb0ApSJKRUrJIKcVJiiCf
-        8A2tdTzPk5up3vf9EvTgvedmROT6+U/2jSwTQog7tCbBvdUMiRkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BrowseSite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Weblap böngészése</value>
-  </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -4002,6 +3729,364 @@ Build your site to populate the Attribute Map.</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OpenLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OpenLink.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="OpenLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OpenLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 63</value>
+  </data>
+  <data name="OpenLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="OpenLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 162</value>
+  </data>
+  <data name="OpenLink.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="OpenLink.Text" xml:space="preserve">
+    <value>Webhely mappa készítése vagy megnyitása</value>
+  </data>
+  <data name="OpenLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;OpenLink.Name" xml:space="preserve">
+    <value>OpenLink</value>
+  </data>
+  <data name="&gt;&gt;OpenLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenLink.Parent" xml:space="preserve">
+    <value>OpenPromptBox</value>
+  </data>
+  <data name="&gt;&gt;OpenLink.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="OpenPrompt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OpenPrompt.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="OpenPrompt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OpenPrompt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 24</value>
+  </data>
+  <data name="OpenPrompt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="OpenPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 15</value>
+  </data>
+  <data name="OpenPrompt.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="OpenPrompt.Text" xml:space="preserve">
+    <value>Még nincs megnyitva webhely.</value>
+  </data>
+  <data name="OpenPrompt.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;OpenPrompt.Name" xml:space="preserve">
+    <value>OpenPrompt</value>
+  </data>
+  <data name="&gt;&gt;OpenPrompt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenPrompt.Parent" xml:space="preserve">
+    <value>OpenPromptBox</value>
+  </data>
+  <data name="&gt;&gt;OpenPrompt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Log.Name" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;Log.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
+    <value>LogPage</value>
+  </data>
+  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LogPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="LogPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="LogPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="LogPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 100</value>
+  </data>
+  <data name="LogPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LogPage.Text" xml:space="preserve">
+    <value>Napló</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
+    <value>LogPage</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Parent" xml:space="preserve">
+    <value>ApricotTabs</value>
+  </data>
+  <data name="&gt;&gt;LogPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>951, 54</value>
+  </metadata>
+  <data name="LogMenuBridge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="&gt;&gt;LogMenuBridge.Name" xml:space="preserve">
+    <value>LogMenuBridge</value>
+  </data>
+  <data name="&gt;&gt;LogMenuBridge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Log.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Log.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="Log.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 90</value>
+  </data>
+  <data name="Log.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Log.Name" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;Log.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
+    <value>LogPage</value>
+  </data>
+  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
+    <value>AttributeExplanation</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
+    <value>AttributeTree</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MapPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="MapPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="MapPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="MapPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 100</value>
+  </data>
+  <data name="MapPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MapPage.Text" xml:space="preserve">
+    <value>Attribútum térkép</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Parent" xml:space="preserve">
+    <value>ApricotTabs</value>
+  </data>
+  <data name="&gt;&gt;MapPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="AttributeExplanation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AttributeExplanation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="AttributeExplanation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 90</value>
+  </data>
+  <data name="AttributeExplanation.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="AttributeExplanation.Text" xml:space="preserve">
+    <value>
+The Attribute Map allows you to view all of the Attributes used in your site. 
+
+Build your site to populate the Attribute Map.</value>
+  </data>
+  <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
+    <value>AttributeExplanation</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AttributeTree.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="AttributeTree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="AttributeTree.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 90</value>
+  </data>
+  <data name="AttributeTree.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
+    <value>AttributeTree</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Build.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVDhPtZA9EoMgEIU5Us5AT29vzwGs0nALT+EJchMy
+        Y0mTMGi78ZElQ34UzCQ782bX59sPVKxVCOE0zzNB0zQd2a4vALTW1Pf9fsCyfFhOviSA9/4Mj19vF4Lj
+        OF6ttZQAmAGsguA0YwwppahpGuq6Ls7DMMSbcOy50s+C0g3atiUpZRRmePxpjyyv3wEIJjOH5MufsrFy
+        M5dzLurV3wSg18zovP5jQI2KAMylZ3Re/wOgpFXAHr0BvpEQQtwAqZs1YF3M/RkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="Build.Text" xml:space="preserve">
+    <value>ToolStripButton1</value>
+  </data>
+  <data name="Build.ToolTipText" xml:space="preserve">
+    <value>Építés</value>
+  </data>
+  <data name="OpenOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEqSURBVDhPY0AHX758Mfj27duH79+/J0CFiAcwzdmzDv8/
+        cf3pf5IN+fr1awDQgP+6hWv/88UuJM4QoIYJIE3omGhDQIp3nL0PVswQPAcDy6UvBxsI8h5UCyoAScI0
+        w2yHiYHwsSv3/79/dh1FDoonwA0Aaa5echIuiez817cO/L+zrQoFPzu3AqwO6DUFuAtgGkB8WCyA2F8+
+        vQO7ABmDDAHJwV0wY9t5sAHIrsCHMQy4v68TLHD90WsUhbgwzAAQBhsAE3hz7ziYTQy+t6sR04BHx2Zi
+        KMSFQQEJTHgL4AZ8fvcMQxE+/PHVfVAsOMANeH5pA4YiXPjhoYn/P3369AAWiB9AAiA/YVOMDYPCCuj8
+        ArABQEYDMK4/osc1PgxOG+/fCzAwMDAAAMDUoyNGO9ZHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="OpenOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="OpenOutput.Text" xml:space="preserve">
+    <value>Kimeneti mappa megnyitása</value>
+  </data>
+  <data name="BrowseSitePreview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVDhPjZM9coMwEIU5is9Czx0y8S1onaGndG4SN6mp
+        5NZJm59SVgGUij6h1SzIM2Fn3iB239s/RLW1eZ6fxnF8n6bJa+AjlmilheAhEM0wDL5tW1/X9Qr4iDnn
+        jLX2kGSLJbHt+74QCpqm8Ze3i79b5++/LuRQSajcdV0mn8+v/vvrZyEHcJb3j9tnfNJJFDMXrYnYmGsW
+        auA/nV7imU7QxJ2wHJmZylshwC/J6YRx0KCl/Vxdtw0QHJ+Pq+RwhI92lUCLgfhJ8si/O8F2L+IvEmxH
+        eIRihD1L1JCF5iXu/YyAmPDyZ8RCK0bfQqrocThLZQAXTRRje66yIIktmiRfLCX592eCU4i1MRfLCcS4
+        ZQE+YomWrKr+AGiZpQrywE/bAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BrowseSitePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BrowseSitePreview.Text" xml:space="preserve">
+    <value>Oldal böngészése előnézetben</value>
+  </data>
+  <data name="BrowseSite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVDhPrZPNDcMgDEaZLefklpHIiQ3YIasko9SYnyvF
+        biFqVRUoRXoSJvjxgRQxPEIIcQQWTNP0E1UB3EzhU/2/BMuyvNhb6BKgwYSNANdak8CkRgCIx3EwFu1D
+        lL61JUjN67qWO9OcJAawLqDYdCptzGs0z0kaBHZMQA9GG9+vsG1bdM7FeZ7rb0ApSJKRUrJIKcVJiiCf
+        8A2tdTzPk5up3vf9EvTgvedmROT6+U/2jSwTQog7tCbBvdUMiRkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BrowseSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BrowseSite.Text" xml:space="preserve">
+    <value>Weblap böngészése</value>
   </data>
   <metadata name="SelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>556, 54</value>

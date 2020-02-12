@@ -8,7 +8,7 @@ Public Class Main
 
     Public openFiles As New ArrayList
     Public wTitle = Application.ProductName
-    Public editExtensions() As String = {"txt", "md", "css", "ts", "js", "html", "htm", "php", "xml", "json", "csv", "lass", "sass"}
+    Public editExtensions() As String = Apricot.knownExtensions
     Public encodingType As Encoding = New UTF8Encoding(False)
     Public args As String() = Environment.GetCommandLineArgs()
 

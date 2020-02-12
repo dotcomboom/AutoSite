@@ -4,6 +4,8 @@ Imports System.Text
 Public Module Apricot
     Public template_cache As New Dictionary(Of String, String)()
     Public encodingType As Encoding = New UTF8Encoding(False)
+    Public knownExtensions() As String = {"txt", "md", "css", "ts", "js", "html", "htm", "php", "xml", "json", "csv", "lass", "sass"}
+    Private warnedExtensions = False
 
     'https://stackoverflow.com/a/3448307
     Public Function ReadAllText(ByVal path As String)
@@ -116,9 +118,28 @@ Public Module Apricot
         End If
     End Sub
 
-    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, ByVal worker As Object)
+    Public Function Compile(ByVal pageHtml As String, ByVal filename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal worker As Object = Nothing)
         If local Then ' clear cache for previews
             template_cache.Clear()
+        End If
+
+        If filename.Contains(".") And (Not filename.StartsWith(".")) Then ' if contains an extension and is not a dotfile
+            Dim ext As String() = filename.Split(".")
+            Dim extension = ext(ext.Length - 1)
+            Dim pass = False
+            For Each ex In knownExtensions
+                If extension = ex Then
+                    pass = True
+                End If
+            Next
+            If Not pass Then
+                If Not worker Is Nothing Then
+                    If MsgBox("The type of file " & filename & " is unknown. If this is an image or asset other than a Page, choose Cancel to skip processing it.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel, "Unknown Extension") = MsgBoxResult.Cancel Then
+                        Return False
+                    End If
+                End If
+                doLog("WARN: The type " & extension & " is unknown. If this is an image or asset other than a page, place it in Includes. Further warnings will be suppressed.", worker, 40)
+            End If
         End If
 
         Dim log As String = ""
@@ -268,6 +289,8 @@ Public Module Apricot
         Dim includes = Path.Combine(siteRoot, "includes\")
         Dim out = Path.Combine(siteRoot, "out\")
 
+        warnedExtensions = False
+
         For Each file In subdir.GetFiles(pattern, SearchOption.AllDirectories)
             Dim modifiedDate = file.LastWriteTime
             Dim rel = ReplaceFirst(file.FullName, input, "")
@@ -280,19 +303,24 @@ Public Module Apricot
             End While
             doLog("Rendering " & rel.Replace("\", "/"), worker, 0)
 
-            Dim output As ApricotOutput = Compile(ReadAllText(file.FullName), rel, ReplaceLast(templates, "\templates", ""), False, worker)
-            Dim html = output.HTML
-            Dim attribs = output.Attributes
+            Try
+                Dim output As ApricotOutput = Compile(ReadAllText(file.FullName), rel, ReplaceLast(templates, "\templates", ""), False, worker)
+                Dim html = output.HTML
+                Dim attribs = output.Attributes
 
-            If rel.EndsWith(".md") Then
-                rel = ReplaceLast(rel, ".md", ".html")
-            End If
+                If rel.EndsWith(".md") Then
+                    rel = ReplaceLast(rel, ".md", ".html")
+                End If
 
-            doLog("Saving file", worker, 100)
-            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
-            My.Computer.FileSystem.WriteAllText(Path.Combine(out, rel), html, False, encodingType)
-            Dim info As FileInfo = New FileInfo(Path.Combine(out, rel))
-            info.LastWriteTime = modifiedDate
+                doLog("Saving file", worker, 100)
+                System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
+                My.Computer.FileSystem.WriteAllText(Path.Combine(out, rel), html, False, encodingType)
+                Dim info As FileInfo = New FileInfo(Path.Combine(out, rel))
+                info.LastWriteTime = modifiedDate
+            Catch ex As InvalidCastException
+                doLog("Skipped", worker, 100)
+            End Try
+            
         Next
         'For Each sdir In subdir.GetDirectories
         'walkInputs(sdir, pattern, siteRoot, worker)

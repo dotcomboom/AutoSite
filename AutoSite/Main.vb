@@ -1,4 +1,4 @@
-﻿Imports System.Text.RegularExpressions
+Imports System.Text.RegularExpressions
 Imports FastColoredTextBoxNS
 Imports System.IO
 Imports System.Text
@@ -482,7 +482,7 @@ Public Class Main
                                 End If
                             Next
                         End If
-                        If EdSplit.Panel1Collapsed Then
+                        If EditorPanel.Enabled = False Then
                             edit = False
                         End If
                         If edit Then
@@ -565,6 +565,7 @@ Public Class Main
         If e.Node.Tag = "" Then
             e.CancelEdit = True
         End If
+        If e.Node.Level < 2 Then    ' don't edit root nodes
     End Sub
 
     Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.AfterLabelEdit

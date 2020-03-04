@@ -157,7 +157,7 @@ Public Class Editor
         Else
             template_cache.Clear()
             Main.Preview.Navigate(siteRoot & "out\" & rel)
-            Main.Preview.DocumentText = Apricot.Compile(Code.Text, rel, siteRoot, True, Nothing).HTML
+            Main.Preview.DocumentText = Apricot.Compile(Code.Text, rel, siteRoot, True, Now, Nothing).HTML
         End If
     End Sub
 

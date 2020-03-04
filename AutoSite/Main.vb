@@ -1,4 +1,4 @@
-Imports System.Text.RegularExpressions
+﻿Imports System.Text.RegularExpressions
 Imports FastColoredTextBoxNS
 Imports System.IO
 Imports System.Text
@@ -116,6 +116,11 @@ Public Class Main
         includes.ImageKey = "Include"
         includes.SelectedImageKey = "Include"
         includes.Tag = includePath
+
+        'Dim settings = root.Nodes.Add("Locale")
+        'settings.ImageKey = "Build"
+        'settings.SelectedImageKey = "Build"
+        'settings.Tag = root.Text & "\apricot.xml"
 
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(inPath), "*", pages, "Page", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
@@ -566,6 +571,8 @@ Public Class Main
             e.CancelEdit = True
         End If
         If e.Node.Level < 2 Then    ' don't edit root nodes
+            e.CancelEdit = True
+        End If
     End Sub
 
     Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.AfterLabelEdit
@@ -927,6 +934,7 @@ Public Class Main
                 End If
             Next
 
+            'If (Not exists) And (Not tn.Attribute.StartsWith("mod_")) Then  ' Exclude modified 
             If Not exists Then
                 aNode = New TreeNode
                 aNode.Text = tn.Attribute

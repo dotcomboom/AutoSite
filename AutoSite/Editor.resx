@@ -121,6 +121,51 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Strip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>649, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Strip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Strip.Text" xml:space="preserve">
+    <value>ToolStrip1</value>
+  </data>
+  <data name="&gt;&gt;Strip.Name" xml:space="preserve">
+    <value>Strip</value>
+  </data>
+  <data name="&gt;&gt;Strip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Strip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Strip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SaveBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB+SURBVDhPY/j27Vs4EL8B4v8kYpCecJABb7QL1vxnCJ5D
+        EgbpAekFGYBVATEYrBfZgA/vPxKFh7MBpOJBagA2PyNjZLW0NQCdjy4OwmC9X758uVM8/xiGBnQ+ujgI
+        gw34+vWrDLIh6AqRNSOLgzDYABCAGQISACkC0cThb/8BXmPqvKWoVTAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 22</value>
+  </data>
+  <data name="SaveBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="SaveToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -151,27 +196,6 @@
   <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Save All</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SaveBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB+SURBVDhPY/j27Vs4EL8B4v8kYpCecJABb7QL1vxnCJ5D
-        EgbpAekFGYBVATEYrBfZgA/vPxKFh7MBpOJBagA2PyNjZLW0NQCdjy4OwmC9X758uVM8/xiGBnQ+ujgI
-        gw34+vWrDLIh6AqRNSOLgzDYABCAGQISACkC0cThb/8BXmPqvKWoVTAAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 22</value>
-  </data>
-  <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
   <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
@@ -197,13 +221,13 @@
   <data name="RedoBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFaSURBVDhPY0AG////Z/v69Wvut2/fzrx8+fLnzZs3/wL5
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFaSURBVDhPY0AG////Z/v69Wvut2/fzrx8+fLnjRs3/gL5
         N4C48fv37wpA8f/IGKoNAj59+iQKFDy5/vid/7bVm/6zhc/7zxw6979e0dr/07Zd/v/167fnz998+M8Q
         PAeMUQwA2sz05cuXw40rT8MVoOOgzl3/H754B+ejGADkRO8+/wAumTnz0P8rD179v//83f/2NWf/s4bN
         A4vb127GacC2gI6dYImUqQdBkpeAfnYEKQLh1UduwQ3BagDQ/w/k0peDJQ5fefwfqNnh/fv3Ash+Rsco
         Bnz+/Pm+PNSAQ5fBBjiTZACQsxXmhYRJ+4Eh/vXqjx8/VIEh/x9kCDaMbkD03gsP4aY3rTwDUnAFZAjI
         JbgwVDs8Gg+0AUMczZDLoPQBVYYfABWKgDSANFJiCCg1DkJDpFKWgUMeGL3JUCWEAcyQvo0X/l++/xLk
-        ggqoFPEAZghuzQwMAG6M7ZBnwV86AAAAAElFTkSuQmCC
+        ggqoFPEAZghuzQwMAGK27Y3p3Rx2AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -298,13 +322,13 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGHSURBVDhPnZI/S8NQFMWDbq4OfgyHfoQuJd27ZEjHrIWu
-        KREK/QAOXbI0oEN0KtShDplEHbpmqF2iEJdiGvoHB8vxnvRJkKSCPfBI8ni/m3vPedo+ATjabDbmarV6
-        mM/nn9PpdCvvs/V63UvT9FQdK5fAJwLfTSYTtNtt1Go1VKtVNJtN+L6PJEliKXaujhclf/FGoxHq9To8
-        z8PsZYbX6A3j8T1M04Rt21mR0k4ErkRRBF3X8fT4jEWS/lpx/J4VYSccR2G5uOm6LhzHKcA/i51wHHqi
-        sFwyu9/pdHDj35bCXByHntBYheWSqtfdbheDgVcKc9ETGst0FJZLRmgNh0NYloXkY1FagMYyHUassFzL
-        5fIsDMOtYRjo9/uFIjSW6TBi3hOF7ST5H0sHV0EQZCmwCDvhH+mJ41xk+4yY94SXTaFFmE92wnHoCY1l
-        OoxYznm8bAoth/nNceTZorFMR957sioK22kfzH115G/JYfdgmJLL8NVoNA6DKZntkkXYyb9hTdO+AfGh
-        /ksMHsAbAAAAAElFTkSuQmCC
+        KREK/QAOXbI0oEN0KtShDplEHTpmKHaJQlyKaegfHCzHe9InQZIK9sAjyeP9bu4952n7BOBos9mYq9Xq
+        YT6ff06n0628z9brdS9N01N1rFwCnwh8N5lM0G63UavVUK1W0Ww24fs+kiSJpdi5Ol6U/MUbjUao1+vw
+        PA+zlxleozeMx/cwTRO2bWdFSjsRuBJFEXRdx9PjMxZJ+mvF8XtWhJ1wHIXl4qbrunAcpwD/LHbCceiJ
+        wnLJ7H6n08GNf1sKc3EcekJjFZZLql53u10MBl4pzEVPaCzTUVguGaE1HA5hWRaSj0VpARrLdBixwnIt
+        l8uzMAy3hmGg3+8XitBYpsOIeU8UtpPkfywdXAVBkKXAIuyEf6QnjnOR7TNi3hNeNoUWYT7ZCcehJzSW
+        6TBiOefxsim0HOY3x5Fni8YyHXnvyaoobKd9MPfVkb8lh92DYUouw1ej0TgMpmS2SxZhJ/+GNU37BtIJ
+        /jkaA7+ZAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="Find.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -355,12 +379,6 @@
   <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
-  </data>
   <data name="Preview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -380,6 +398,12 @@
   </data>
   <data name="Preview.Text" xml:space="preserve">
     <value>Preview</value>
+  </data>
+  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LivePreview.Text" xml:space="preserve">
+    <value>Live Preview</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -402,22 +426,16 @@
   <data name="Build.Text" xml:space="preserve">
     <value>Build</value>
   </data>
-  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>View in Default Browser</value>
-  </data>
   <data name="ViewOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE/SURBVDhPnZNRToQwEIZ7Ao/DAQgkewe4CNfg0Xef1jWB
-        cAll7yCQgOuDrobAwz5Q96ttBexqdJIJ5Z//n3amU7G2YRi8cRyv+75/7LruhLMGI6Zp322apqsz4aZp
-        GpmmqYzjWPq+rzyKIoURgwNXyz4N4LzDfZ7nVvR2fF+4weHAXSQhqxGX5f5iAhODi8aIPY5GYLu9tWRX
-        Ar5FUai1LscTNIf6AP/iaNAKOgzA8djh9eWoCPPd8TXGP1rRtu2Jn7pqLpJdGP9csU2w293Jw9Ozk+w6
-        lU1gSviPqxJME5MkWWSf77bG4NomchV1XcvNZmMb+VsCuGjUNepZUIMUhqHc/zRID6UMgkBmWfY1SNh8
-        lMnO7EOeOxgxxHCd74GsHI36ELArbh5TVVXuxzQ36qI5dJgrxlmDEdM0bUJ8ACYnl2hNNrb4AAAAAElF
-        TkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVDhPnZNBToUwEIZ7Ao/DAQgk3AEuwjVYunf1fCYQ
+        LqG8OwgkRF3o0xBYuKC+r7a1YJ9GJ5lQ/vn/aWc6FVubpimY5/lyHMf7YRjecdZgxDTtuy3LcnEiXPV9
+        L4uikFmWyTAMladpqjBicOBq2acBnHa4rarKil6Pbys3OBy4qyRkNeKmOZxNYGJw0RhxwNEI7HbXluxL
+        wLeua7XW5QSC5lAf4F8cDVpBhwE4Hju8PB8Vwd0d32L8oxVcEz9d258l+zD+0doE+/2NfHx48pJ9p7IJ
+        TAn/cVWCaWKe56vs7m5bDK5tIlfRdZ1MksQ28rcEcNGoa9SzoAYpjmN5+GmQ7hoZRZEsy/JrkDB3lMnO
+        7EN2HYwYYrje90BWjkZ9CNgVN4+pbVv/Y3KNumgOHeaacNZgxDRNmxAfAwiXXJDWLWoAAAAASUVORK5C
+        YII=
 </value>
   </data>
   <data name="ViewOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -429,29 +447,11 @@
   <data name="ViewOutput.Text" xml:space="preserve">
     <value>View Output</value>
   </data>
-  <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
   </data>
-  <data name="Strip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 25</value>
-  </data>
-  <data name="Strip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Strip.Text" xml:space="preserve">
-    <value>ToolStrip1</value>
-  </data>
-  <data name="&gt;&gt;Strip.Name" xml:space="preserve">
-    <value>Strip</value>
-  </data>
-  <data name="&gt;&gt;Strip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Strip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Strip.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
+    <value>View in Default Browser</value>
   </data>
   <data name="Code.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
     <value>27, 14</value>
@@ -459,9 +459,6 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Code.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="Code.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Courier New, 9.75pt</value>
   </data>
   <data name="Code.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>

@@ -118,7 +118,7 @@ Public Module Apricot
         End If
     End Sub
 
-    Public Function Compile(ByVal pageHtml As String, ByVal inputFilename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal worker As Object = Nothing)
+    Public Function Compile(ByVal pageHtml As String, ByVal inputFilename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal modifiedDate As Date = Nothing, Optional ByVal worker As Object = Nothing)
         Dim filename = inputFilename
 
         If local Then ' clear cache for previews
@@ -148,14 +148,30 @@ Public Module Apricot
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim content = ""
         Dim attribs As New Dictionary(Of String, String)()
-        attribs.Add("template", "default")
+        attribs.Item("template") = "default"
+        If Not modifiedDate = Nothing Then
+            Try
+                attribs.Item("mod_date") = modifiedDate.ToString.Split(" ")(0)
+            Catch ex As Exception
+            End Try
+            Try
+                attribs.Item("mod_time") = modifiedDate.ToString.Split(" ")(1).Split(":")(0) & ":" & modifiedDate.ToString.Split(" ")(1).Split(":")(1)
+            Catch ex As Exception
+            End Try
+            Try
+                If modifiedDate.ToString.Split(" ").Length > 2 Then
+                    attribs.Item("mod_time") &= " " & modifiedDate.ToString.Split(" ")(2)
+                End If
+            Catch ex As Exception
+            End Try
+        End If
         While filename.StartsWith("\")
             filename = ReplaceFirst(filename, "\", "")
         End While
         While filename.StartsWith("/")
             filename = ReplaceFirst(filename, "/", "")
         End While
-        attribs.Add("path", filename.Replace("\", "/"))
+        attribs.Item("path") = filename.Replace("\", "/")
         Dim reader As New StringReader(pageHtml)
         Dim line As String
         Do
@@ -305,7 +321,7 @@ Public Module Apricot
             doLog("Rendering " & rel.Replace("\", "/"), worker, 0)
 
             Try
-                Dim output As ApricotOutput = Compile(ReadAllText(file.FullName), rel, ReplaceLast(templates, "\templates", ""), False, worker)
+                Dim output As ApricotOutput = Compile(ReadAllText(file.FullName), rel, ReplaceLast(templates, "\templates", ""), False, modifiedDate, worker)
                 Dim html = output.HTML
                 Dim attribs = output.Attributes
 

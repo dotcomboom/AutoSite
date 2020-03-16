@@ -878,7 +878,10 @@ SOFTWARE.</value>
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 RC2:
+    <value>1.0 RC3:
+   + Modified date added as [#modified#]
+
+1.0 RC2:
    + View Output in Default Browser added to editor
    + Pages and Includes can be dragged into the editor as paths from [#root#]
    + Site Tree node hover (hottracking) effect

@@ -151,16 +151,16 @@ Public Module Apricot
         attribs.Item("template") = "default"
         If Not modifiedDate = Nothing Then
             Try
-                attribs.Item("mod_date") = modifiedDate.ToString.Split(" ")(0)
+                attribs.Item("modified") = modifiedDate.ToString.Split(" ")(0)
             Catch ex As Exception
             End Try
             Try
-                attribs.Item("mod_time") = modifiedDate.ToString.Split(" ")(1).Split(":")(0) & ":" & modifiedDate.ToString.Split(" ")(1).Split(":")(1)
+                'attribs.Item("mod_time") = modifiedDate.ToString.Split(" ")(1).Split(":")(0) & ":" & modifiedDate.ToString.Split(" ")(1).Split(":")(1)
             Catch ex As Exception
             End Try
             Try
                 If modifiedDate.ToString.Split(" ").Length > 2 Then
-                    attribs.Item("mod_time") &= " " & modifiedDate.ToString.Split(" ")(2)
+                    'attribs.Item("mod_time") &= " " & modifiedDate.ToString.Split(" ")(2)
                 End If
             Catch ex As Exception
             End Try

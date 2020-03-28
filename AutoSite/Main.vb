@@ -351,7 +351,7 @@ Public Class Main
 
                 Me.Size = sz
 
-                If My.Computer.Screen.Bounds.Contains(Me.Location) Then
+                If My.Computer.Screen.Bounds.Contains(il) Then
                     Me.Location = il
                 End If
             End If

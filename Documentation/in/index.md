@@ -12,8 +12,10 @@ Notes:
 </div>
 -->
 ## Internal Attributes
-- <a href="[#root#]attrib/root/index.html"><code><span>&#91;</span>#root#]</code></a></li>
-- <a href="[#root#]attrib/path/index.html"><code><span>&#91;</span>#path#]</code></a></li>
+- <a href="[#root#]attrib/root/index.html"><code><span>&#91;</span>#root#]</code></a>
+- <a href="[#root#]attrib/path/index.html"><code><span>&#91;</span>#path#]</code></a>
+- <a href="[#root#]attrib/template/index.html"><code><span>&#91;</span>#template#]</code></a>
 
 <!--## AutoSite
  - <a href="[#root#]core/diy/index.html">How to roll your own AutoSite Core</a> -->
+ 

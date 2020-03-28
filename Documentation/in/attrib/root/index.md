@@ -9,12 +9,12 @@
 **Example:**
 *[#path#] (this page)*
 <pre><code>&lt;img src="&#91;#root#]img/lynx.jpg" alt="Lynx lynx" height="350"&gt;
-  (or, in Markdown..)
+  (or, in Markdown, the rendered equivalent of:)
 !&#91;Lynx lynx&#93;(&#91;#root#]img/lynx.jpg)</code></pre>
 *Output:*
 > ```
 > <img src="[#root#]img/lynx.jpg" alt="Lynx lynx" height="350">
->   (or, in Markdown..)
+>   (or, in Markdown, the rendered equivalent of:)
 > ![Lynx lynx]([#root#]img/lynx.jpg)
 > ```
 > <img src="[#root#]img/lynx.jpg" alt="Lynx lynx" height="350">

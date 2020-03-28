@@ -350,7 +350,10 @@ Public Class Main
                 End If
 
                 Me.Size = sz
-                Me.Location = il
+
+                If My.Computer.Screen.Bounds.Contains(Me.Location) Then
+                    Me.Location = il
+                End If
             End If
         Catch ex As Exception
         End Try

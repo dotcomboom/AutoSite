@@ -23,6 +23,7 @@
     <ApplicationIcon>autosite.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <SignManifests>false</SignManifests>
+    <SignAssembly>false</SignAssembly>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -40,7 +41,6 @@
     <ApplicationVersion>0.9.7.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -100,6 +100,12 @@
     <Compile Include="AddConditional.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CheatGame.Designer.vb">
+      <DependentUpon>CheatGame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheatGame.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Editor.Designer.vb">
       <DependentUpon>Editor.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddConditional.resx">
       <DependentUpon>AddConditional.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheatGame.resx">
+      <DependentUpon>CheatGame.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.vb</DependentUpon>

@@ -242,23 +242,37 @@ Public Class Main
         tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
         EditTabs.TabPages.Add(tab)
         EditTabs.SelectedTab = tab
-        Dim editor As New Editor
-        editor.Parent = tab
-        editor.Dock = DockStyle.Fill
-        editor.Code.Text = editor.ReadAllText(tab.Tag)
-        editor.Code.ClearUndo()
-        editor.Snapshot = editor.Code.Text
-        editor.siteRoot = SiteTree.Nodes.Item(0).Text
-        editor.openFile = tab.Tag
-        If tab.Text.StartsWith("templates\") Then
-            editor.ViewOutput.Visible = False
-            editor.Preview.Text = "Debug"
+        Dim game As Boolean = False
+        For Each species In EverySpeciesofNeopet
+            If tab.Text.EndsWith("\" & species & ".ts") Then
+                game = True
+                Exit For
+            End If
+        Next
+        If game Then
+            Dim cheat As New CheatGame
+            cheat.Parent = tab
+            cheat.Dock = DockStyle.Fill
+        Else
+            ' Actual editor code is here
+            Dim editor As New Editor
+            editor.Parent = tab
+            editor.Dock = DockStyle.Fill
+            editor.Code.Text = editor.ReadAllText(tab.Tag)
+            editor.Code.ClearUndo()
+            editor.Snapshot = editor.Code.Text
+            editor.siteRoot = SiteTree.Nodes.Item(0).Text
+            editor.openFile = tab.Tag
+            If tab.Text.StartsWith("templates\") Then
+                editor.ViewOutput.Visible = False
+                editor.Preview.Text = "Debug"
+            End If
+            If tab.Text.StartsWith("includes\") Then
+                editor.InsertConditional.Enabled = False
+                editor.Preview.Text = "View"
+            End If
+            openFiles.Add(path)
         End If
-        If tab.Text.StartsWith("includes\") Then
-            editor.InsertConditional.Enabled = False
-            editor.Preview.Text = "View"
-        End If
-        openFiles.Add(path)
     End Sub
 
     Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, NewSite.Click, OpenLink.Click
@@ -1398,6 +1412,8 @@ Public Class Main
             edit.doUndo()
         End If
     End Sub
+
+    Public EverySpeciesofNeopet As String() = {"Acara", "Aisha", "Blumaroo", "Bori", "Bruce", "Buzz", "Chia", "Chomby", "Cybunny", "Draik", "Elephante", "Eyrie", "Flotsam", "Gelert", "Gnorbu", "Grarrl", "Grundo", "Hissi", "Ixi", "Jetsam", "JubJub", "Kacheek", "Kau", "Kiko", "Koi", "Korbat", "Kougra", "Krawk", "Kyrii", "Lenny", "Lupe", "Lutari", "Meerca", "Moehog", "Mynci", "Nimmo", "Ogrin", "Peophin", "Poogle", "Pteri", "Quiggle", "Ruki", "Scorchio", "Shoyru", "Skeith", "Techo", "Tonu", "Tuskaninny", "Uni", "Usul", "Vandagyre", "Wocky", "Xweetok", "Yurble", "Zafara"}
 
     Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click
         Dim edit As Editor = activeEditor()

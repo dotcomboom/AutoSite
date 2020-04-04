@@ -279,10 +279,6 @@ Public Module Apricot
                 End If
             End If
         Next
-
-        ' Escaped conditionals
-        newHtml = RegularExpressions.Regex.Replace(newHtml, "\$\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]", "[$1=$2]$3[$1=]")
-
         ' Attribute Process 2 (Whole Page)
         For Each kvp As KeyValuePair(Of String, String) In attribs
             newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)

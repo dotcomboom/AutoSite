@@ -1,5 +1,5 @@
 <!-- attrib template: default -->
-<!-- attrib title: $[#root#] -->
+<!-- attrib title: &#91;#root#] -->
 <!-- attrib code: yeah -->
 <div class="warning card">
     <b>This is an Apricot special attribute.</b> It <em>cannot</em> be defined with <code>&lt;!-- attrib root: ... --></code>. <code>&#91;#root#]</code> does not show in the Attribute Map.
@@ -8,7 +8,7 @@
 
 **Example:**
 *[#path#] (this page)*
-<pre><code>&lt;img src="$[#root#]img/lynx.jpg" alt="Lynx lynx" height="350"&gt;
+<pre><code>&lt;img src="&#91;#root#]img/lynx.jpg" alt="Lynx lynx" height="350"&gt;
   (or, in Markdown, the rendered equivalent of:)
 !&#91;Lynx lynx&#93;(&#91;#root#]img/lynx.jpg)</code></pre>
 *Output:*

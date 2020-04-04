@@ -223,10 +223,8 @@ Public Module Apricot
             content = CommonMark.CommonMarkConverter.Convert(content)
             filename = ReplaceLast(filename, ".md", ".html")
         End If
-
-        ' Slot content
-        newHtml = RegularExpressions.Regex.Replace(newHtml, "(?<!\$)(\[#content#\])", content)
-
+        newHtml = newHtml.Replace("[#content#]", content)
+        'newHtml = newHtml.Replace("[#root#]", Form1.FillString("../", Form1.CountCharacter(filename, "\")))
         Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
         Dim matches = RegularExpressions.Regex.Matches(newHtml, conditionalRegex)
         For Each m As RegularExpressions.Match In matches

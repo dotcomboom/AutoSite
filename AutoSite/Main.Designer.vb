@@ -133,9 +133,6 @@ Partial Class Main
         Me.EditTabs = New System.Windows.Forms.TabControl
         Me.Preview = New System.Windows.Forms.WebBrowser
         Me.ExSplit = New System.Windows.Forms.SplitContainer
-        Me.OpenPromptBox = New System.Windows.Forms.TableLayoutPanel
-        Me.OpenLink = New System.Windows.Forms.LinkLabel
-        Me.OpenPrompt = New System.Windows.Forms.Label
         Me.SiteTree = New System.Windows.Forms.TreeView
         Me.ApricotTabs = New System.Windows.Forms.TabControl
         Me.LogPage = New System.Windows.Forms.TabPage
@@ -163,7 +160,6 @@ Partial Class Main
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
-        Me.OpenPromptBox.SuspendLayout()
         Me.ApricotTabs.SuspendLayout()
         Me.LogPage.SuspendLayout()
         Me.MapPage.SuspendLayout()
@@ -769,7 +765,6 @@ Partial Class Main
         '
         'ExSplit.Panel1
         '
-        Me.ExSplit.Panel1.Controls.Add(Me.OpenPromptBox)
         Me.ExSplit.Panel1.Controls.Add(Me.SiteTree)
         '
         'ExSplit.Panel2
@@ -777,29 +772,6 @@ Partial Class Main
         Me.ExSplit.Panel2.Controls.Add(Me.ApricotTabs)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildProgress)
         Me.ExSplit.Panel2.Controls.Add(Me.BuildStrip)
-        '
-        'OpenPromptBox
-        '
-        Me.OpenPromptBox.BackColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.OpenPromptBox, "OpenPromptBox")
-        Me.OpenPromptBox.Controls.Add(Me.OpenLink, 0, 3)
-        Me.OpenPromptBox.Controls.Add(Me.OpenPrompt, 0, 1)
-        Me.OpenPromptBox.Name = "OpenPromptBox"
-        '
-        'OpenLink
-        '
-        Me.OpenLink.AutoEllipsis = True
-        resources.ApplyResources(Me.OpenLink, "OpenLink")
-        Me.OpenLink.BackColor = System.Drawing.SystemColors.Window
-        Me.OpenLink.Name = "OpenLink"
-        Me.OpenLink.TabStop = True
-        '
-        'OpenPrompt
-        '
-        Me.OpenPrompt.AutoEllipsis = True
-        resources.ApplyResources(Me.OpenPrompt, "OpenPrompt")
-        Me.OpenPrompt.BackColor = System.Drawing.SystemColors.Window
-        Me.OpenPrompt.Name = "OpenPrompt"
         '
         'SiteTree
         '
@@ -875,7 +847,6 @@ Partial Class Main
         '
         'Build
         '
-        Me.Build.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         resources.ApplyResources(Me.Build, "Build")
         Me.Build.Name = "Build"
         '
@@ -946,8 +917,6 @@ Partial Class Main
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
         Me.ExSplit.ResumeLayout(False)
-        Me.OpenPromptBox.ResumeLayout(False)
-        Me.OpenPromptBox.PerformLayout()
         Me.ApricotTabs.ResumeLayout(False)
         Me.LogPage.ResumeLayout(False)
         Me.MapPage.ResumeLayout(False)
@@ -1088,7 +1057,4 @@ Partial Class Main
     Friend WithEvents NewSite As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
     Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
-    Friend WithEvents OpenPromptBox As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents OpenPrompt As System.Windows.Forms.Label
-    Friend WithEvents OpenLink As System.Windows.Forms.LinkLabel
 End Class

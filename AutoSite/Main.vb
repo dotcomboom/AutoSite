@@ -1,5 +1,4 @@
 ﻿Imports System.Text.RegularExpressions
-Imports FastColoredTextBoxNS
 Imports System.IO
 Imports System.Text
 Imports Microsoft.Win32
@@ -59,8 +58,6 @@ Public Class Main
     End Function
 
     Private Sub checkOpen()
-        OpenPromptBox.Visible = (SiteTree.Nodes.Count < 1)
-
         CloseSite.Enabled = (SiteTree.Nodes.Count > 0)
         SaveAll.Enabled = (SiteTree.Nodes.Count > 0)
         BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
@@ -132,10 +129,11 @@ Public Class Main
         includes.Expand()
     End Sub
 
-    Private Sub openSite(ByVal path As String, ByVal autoload As Boolean)
+    Public Sub openSite(ByVal path As String, ByVal autoload As Boolean)
         checkOpen()
         If My.Computer.FileSystem.DirectoryExists(path) Then
             If doClose() Then
+                EditTabs.TabPages.Clear()
                 Dim templatePath = path & "\templates"
                 Dim inPath = path & "\in"
                 Dim includePath = path & "\includes"
@@ -275,7 +273,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, NewSite.Click, OpenLink.Click
+    Public Sub OpenFolder_Click() Handles OpenFolder.Click, NewSite.Click
         If FolderBrowser.ShowDialog(Me) = DialogResult.OK Then
             If My.Computer.FileSystem.DirectoryExists(FolderBrowser.SelectedPath) Then
                 openSite(FolderBrowser.SelectedPath, False)
@@ -313,6 +311,13 @@ Public Class Main
         Preview.DocumentText = ""
         My.Settings.openProject = ""
         Watcher.Filter = "NFIDNI#N()Dxn)(@Nqinnxisabub@IZWNQIONCIWENiN@Nd0N@()@()OPQNOPMNXONNW(ENND@#(ONCPENQOPNNNSANOI" ' can't disable it so /shrug
+
+        Dim tab As New TabPage
+        tab.Text = "Start Page"
+        Dim start As New StartPage
+        start.Parent = tab
+        start.Dock = DockStyle.Fill
+        tab.Parent = EditTabs
         checkOpen()
         Return True
     End Function
@@ -453,6 +458,13 @@ Public Class Main
         End If
         If My.Computer.FileSystem.DirectoryExists(My.Settings.openProject) Then
             openSite(My.Settings.openProject, True)
+        Else
+            Dim tab As New TabPage
+            tab.Text = "Start Page"
+            Dim start As New StartPage
+            start.Dock = DockStyle.Fill
+            start.Parent = tab
+            tab.Parent = EditTabs
         End If
 
         updateRecents()

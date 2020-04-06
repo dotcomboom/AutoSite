@@ -206,17 +206,17 @@ Public Module Apricot
         Dim newHtml = template_cache.Item(attribs.Item("template"))
         ' Attribute Process 1 (Content)
         For Each kvp As KeyValuePair(Of String, String) In attribs
-            newHtml = RegularExpressions.Regex.Replace(newHtml, "(?<!\$)(\[#" & RegularExpressions.Regex.Escape(kvp.Key) & "#\])", kvp.Value)
+            newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
             doLog(" " & kvp.Key & ": " & kvp.Value, worker, 60)
         Next
         ' End Attribute Process 1
         If local Then
-            newHtml = RegularExpressions.Regex.Replace(newHtml, "(?<!\$)(\[#root#\])", ("file:///" & siteRoot.Replace("\", "/") & "/includes/").Replace(" ", "%20"))
-            content = RegularExpressions.Regex.Replace(content, "(?<!\$)(\[#root#\])", ("file:///" & siteRoot.Replace("\", "/") & "/includes/").Replace(" ", "%20"))
+            newHtml = newHtml.Replace("[#root#]", ("file:///" & siteRoot.Replace("\", "/") & "/includes/").Replace(" ", "%20"))
+            content = content.Replace("[#root#]", ("file:///" & siteRoot.Replace("\", "/") & "/includes/").Replace(" ", "%20"))
         Else
             Dim root = FillString("../", CountCharacter(filename, "\"))
-            newHtml = RegularExpressions.Regex.Replace(newHtml, "(?<!\$)(\[#root#\])", root)
-            content = RegularExpressions.Regex.Replace(content, "(?<!\$)(\[#root#\])", root)
+            newHtml = newHtml.Replace("[#root#]", root)
+            content = content.Replace("[#root#]", root)
         End If
         If filename.EndsWith(".md") Then
             doLog("Converting Markdown", worker, 70)
@@ -227,8 +227,7 @@ Public Module Apricot
         ' Slot content
         newHtml = RegularExpressions.Regex.Replace(newHtml, "(?<!\$)(\[#content#\])", content)
 
-        Dim conditionalRegex = "(?<!\$)\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
-
+        Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
         Dim matches = RegularExpressions.Regex.Matches(newHtml, conditionalRegex)
         For Each m As RegularExpressions.Match In matches
             Dim fullStr = m.Groups(0).Value
@@ -286,15 +285,10 @@ Public Module Apricot
 
         ' Attribute Process 2 (Whole Page)
         For Each kvp As KeyValuePair(Of String, String) In attribs
-            newHtml = RegularExpressions.Regex.Replace(newHtml, "(?<!\$)(\[#" & RegularExpressions.Regex.Escape(kvp.Key) & "#\])", kvp.Value)
+            newHtml = newHtml.Replace("[#" & kvp.Key & "#]", kvp.Value)
         Next
         ' End Attribute Process 2
-
-        ' Trim out any unescaped, unused attribute references (except for escaped [#content#])
-        newHtml = RegularExpressions.Regex.Replace(newHtml, "(?<!\$)(\[#.*?(?<!content)#\])", "")
-
-        ' Escaped references
-        newHtml = RegularExpressions.Regex.Replace(newHtml, "\$(\[#.*?#\])", "$1")
+        newHtml = RegularExpressions.Regex.Replace(newHtml, "\[#.*?#\]", "")
 
         If Not worker Is Nothing Then
             For Each attrib In attribs

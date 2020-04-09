@@ -69,10 +69,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\References\FastColoredTextBox.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.Shell32, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Interop.Shell32.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -116,7 +112,6 @@
       <DependentUpon>InstallPack.vb</DependentUpon>
     </Compile>
     <Compile Include="InstallPack.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>

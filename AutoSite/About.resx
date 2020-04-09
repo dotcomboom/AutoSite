@@ -880,9 +880,9 @@ SOFTWARE.</value>
   <data name="ChangelogBox.Text" xml:space="preserve">
     <value>1.0 RC3:
    + Modified date added as [#modified#]
-   + Neopets copyright infringement
-   + Conditionals and attribute tags can now be escaped with a preceding $
+   + Easter egg somewhere in there
    - Window will no longer open offscreen and get stuck (if you remove an attached second display for example)
+   - Pack installation has been removed for the time being (compatibility reasons)
 
 1.0 RC2:
    + View Output in Default Browser added to editor

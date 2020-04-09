@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="VS2017.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>278, 17</value>
+    <value>382, 17</value>
   </metadata>
   <data name="VS2017.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAm
-        GAAAAk1TRnQBSQFMAgEBCAEAAegBBAHoAQQBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        GAAAAk1TRnQBSQFMAgEBCAEAAfgBBAH4AQQBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABMAMAAQEBAAEgBgABMP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AJgAD8QH/A/EB/wPx
         Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/8gAA/EB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPxAf/IAAPxAf8DAAH/A/EB/wPx
@@ -232,17 +232,14 @@
 </value>
   </data>
   <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>370, 17</value>
+    <value>474, 17</value>
   </metadata>
   <data name="FolderBrowser.Description" xml:space="preserve">
     <value>Pick a folder in which to store your site's assets. If no site exists in that folder, one will be created.</value>
   </data>
   <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>111, 17</value>
+    <value>215, 17</value>
   </metadata>
-  <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NewSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftN</value>
@@ -255,9 +252,6 @@
   </data>
   <data name="OpenFolder.Text" xml:space="preserve">
     <value>Open Site...</value>
-  </data>
-  <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Open Recent</value>
   </data>
   <data name="Recent1.Text" xml:space="preserve">
     <value>Recent 1</value>
@@ -296,6 +290,9 @@
   <data name="ClearRecents.Text" xml:space="preserve">
     <value>Clear Recent Sites</value>
   </data>
+  <data name="OpenRecent.Text" xml:space="preserve">
+    <value>Open Recent</value>
+  </data>
   <data name="CloseFile.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlW</value>
   </data>
@@ -329,8 +326,14 @@
   <data name="FileSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
+  <data name="FileSep3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="InstallPackMnu.Text" xml:space="preserve">
     <value>Install Pack...</value>
+  </data>
+  <data name="InstallPackMnu.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="FileSep4.Text" xml:space="preserve">
     <value>-</value>
@@ -341,8 +344,8 @@
   <data name="ExitItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
+  <data name="FileMenu.Text" xml:space="preserve">
+    <value>&amp;File</value>
   </data>
   <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlZ</value>
@@ -416,8 +419,8 @@
   <data name="InsertConditional.Text" xml:space="preserve">
     <value>Insert Conditional...</value>
   </data>
-  <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
+  <data name="EditMenu.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
     <value>Word Wrap</value>
@@ -446,8 +449,8 @@
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Monospace Font...</value>
   </data>
-  <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;View</value>
+  <data name="FormatMenu.Text" xml:space="preserve">
+    <value>F&amp;ormat</value>
   </data>
   <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt1</value>
@@ -476,14 +479,14 @@
   <data name="ViewSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Explorer Icon Theme</value>
-  </data>
   <data name="VS2017item.Text" xml:space="preserve">
     <value>Visual Studio 2017</value>
   </data>
   <data name="XPitem.Text" xml:space="preserve">
     <value>XP</value>
+  </data>
+  <data name="IconThemeMenu.Text" xml:space="preserve">
+    <value>Explorer Icon Theme</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
     <value>Use System Icons</value>
@@ -518,8 +521,8 @@
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
     <value>Browse Site in Preview</value>
   </data>
-  <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Build</value>
+  <data name="ViewMenu.Text" xml:space="preserve">
+    <value>&amp;View</value>
   </data>
   <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlB</value>
@@ -551,8 +554,8 @@
   <data name="OpenOutputMnu.Text" xml:space="preserve">
     <value>Open Output Folder</value>
   </data>
-  <data name="HelpMenu.Text" xml:space="preserve">
-    <value>&amp;Help</value>
+  <data name="BuildMenu.Text" xml:space="preserve">
+    <value>&amp;Build</value>
   </data>
   <data name="HelpTopics.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -578,15 +581,18 @@
   <data name="AboutItem.Text" xml:space="preserve">
     <value>About AutoSite</value>
   </data>
+  <data name="HelpMenu.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>212, 17</value>
+    <value>316, 17</value>
   </metadata>
   <data name="XP.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADa
-        JgAAAk1TRnQBSQFMAgEBCgEAAdgBBAHYAQQBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        JgAAAk1TRnQBSQFMAgEBCgEAAegBBAHoAQQBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABMAMAAQEBAAEgBgABMC0AAf8DAAH/AwAB/wMAAf8DAAH/JAADCgENAzYBWQNHAYIDWwHDA2AB3gNU
         AawDCgENAwoBDZgAA8wB/wPMAf8DzAH/A8wB/wMAEf8DzAH/A8wB/wPMAf8UAAMGAQgDWQH1Af8ByAHJ
         Af8DXwHzAdQBrAGdAv8CxwH/A18B4ANbAcMDWwHEAzIBUZQAJP8DAAX/A8wB/xAAAwoBDgNKAYkDfwH+
@@ -755,7 +761,7 @@
 </value>
   </data>
   <metadata name="Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>121, 17</value>
   </metadata>
   <data name="OpenContext.Text" xml:space="preserve">
     <value>Open</value>
@@ -787,9 +793,6 @@
   <data name="ContextSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="NewCon.Text" xml:space="preserve">
-    <value>New</value>
-  </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
     <value>Folder</value>
   </data>
@@ -817,8 +820,11 @@
   <data name="NewTXTCon.Text" xml:space="preserve">
     <value>Plain Text (.txt)</value>
   </data>
+  <data name="NewCon.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
   <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>499, 17</value>
+    <value>603, 17</value>
   </metadata>
   <data name="AddFilesDialog.Filter" xml:space="preserve">
     <value>All files (*.*)|*.*</value>
@@ -830,7 +836,7 @@
     <value>736, 17</value>
   </metadata>
   <metadata name="Watcher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>867, 17</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -908,6 +914,63 @@
   <data name="&gt;&gt;ExSplit.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>458, 56</value>
+  </metadata>
+  <data name="LogMenuBridge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="&gt;&gt;LogMenuBridge.Name" xml:space="preserve">
+    <value>LogMenuBridge</value>
+  </data>
+  <data name="&gt;&gt;LogMenuBridge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Log.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Log.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="Log.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 101</value>
+  </data>
+  <data name="Log.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Log.Name" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;Log.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
+    <value>LogPage</value>
+  </data>
+  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LogPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="LogPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="LogPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="LogPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 111</value>
+  </data>
+  <data name="LogPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LogPage.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
   <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
     <value>LogPage</value>
   </data>
@@ -919,6 +982,90 @@
   </data>
   <data name="&gt;&gt;LogPage.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="AttributeExplanation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AttributeExplanation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="AttributeExplanation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 101</value>
+  </data>
+  <data name="AttributeExplanation.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="AttributeExplanation.Text" xml:space="preserve">
+    <value>
+The Attribute Map allows you to view all of the Attributes used in your site. 
+
+Build your site to populate the Attribute Map.</value>
+  </data>
+  <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
+    <value>AttributeExplanation</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AttributeTree.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="AttributeTree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="AttributeTree.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 101</value>
+  </data>
+  <data name="AttributeTree.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
+    <value>AttributeTree</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MapPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="MapPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="MapPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="MapPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 111</value>
+  </data>
+  <data name="MapPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MapPage.Text" xml:space="preserve">
+    <value>Attribute Map</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -990,8 +1137,87 @@
     <value>1</value>
   </data>
   <metadata name="BuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
+    <value>17, 17</value>
   </metadata>
+  <data name="Build.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVDhPtZA9EoMgEIU5Us5AT29vzwGs0nALT+EJchMy
+        Y0mTMGi78ZElQ34UzCQ782bX59sPVKxVCOE0zzNB0zQd2a4vALTW1Pf9fsCyfFhOviSA9/4Mj19vF4Lj
+        OF6ttZQAmAGsguA0YwwppahpGuq6Ls7DMMSbcOy50s+C0g3atiUpZRRmePxpjyyv3wEIJjOH5MufsrFy
+        M5dzLurV3wSg18zovP5jQI2KAMylZ3Re/wOgpFXAHr0BvpEQQtwAqZs1YF3M/RkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 22</value>
+  </data>
+  <data name="Build.Text" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Build.ToolTipText" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="OpenOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEqSURBVDhPY0AHX758Mfj27duH79+/J0CFiAcwzdmzDv8/
+        cf3pf5IN+fr1awDQgP+6hWv/88UuJM4QoIYJIE3omGhDQIp3nL0PVswQPAcDy6UvBxsI8h5UCyoAScI0
+        w2yHiYHwsSv3/79/dh1FDoonwA0Aaa5echIuiez817cO/L+zrQoFPzu3AqwO6DUFuAtgGkB8WCyA2F8+
+        vQO7ABmDDAHJwV0wY9t5sAHIrsCHMQy4v68TLHD90WsUhbgwzAAQBhsAE3hz7ziYTQy+t6sR04BHx2Zi
+        KMSFQQEJTHgL4AZ8fvcMQxE+/PHVfVAsOMANeH5pA4YiXPjhoYn/P3369AAWiB9AAiA/YVOMDYPCCuj8
+        ArABQEYDMK4/osc1PgxOG+/fCzAwMDAAAMDUoyNGO9ZHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="OpenOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="OpenOutput.Text" xml:space="preserve">
+    <value>Open Output Folder</value>
+  </data>
+  <data name="BrowseSitePreview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVDhPjZM9coMwEIU5is9Czx0y8S1onaGndG4SN6mp
+        5NZJm59SVgGUij6h1SzIM2Fn3iB239s/RLW1eZ6fxnF8n6bJa+AjlmilheAhEM0wDL5tW1/X9Qr4iDnn
+        jLX2kGSLJbHt+74QCpqm8Ze3i79b5++/LuRQSajcdV0mn8+v/vvrZyEHcJb3j9tnfNJJFDMXrYnYmGsW
+        auA/nV7imU7QxJ2wHJmZylshwC/J6YRx0KCl/Vxdtw0QHJ+Pq+RwhI92lUCLgfhJ8si/O8F2L+IvEmxH
+        eIRihD1L1JCF5iXu/YyAmPDyZ8RCK0bfQqrocThLZQAXTRRje66yIIktmiRfLCX592eCU4i1MRfLCcS4
+        ZQE+YomWrKr+AGiZpQrywE/bAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BrowseSitePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BrowseSitePreview.Text" xml:space="preserve">
+    <value>Browse Site in Preview</value>
+  </data>
+  <data name="BrowseSite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVDhPrZPNDcMgDEaZLefklpHIiQ3YIasko9SYnyvF
+        biFqVRUoRXoSJvjxgRQxPEIIcQQWTNP0E1UB3EzhU/2/BMuyvNhb6BKgwYSNANdak8CkRgCIx3EwFu1D
+        lL61JUjN67qWO9OcJAawLqDYdCptzGs0z0kaBHZMQA9GG9+vsG1bdM7FeZ7rb0ApSJKRUrJIKcVJiiCf
+        8A2tdTzPk5up3vf9EvTgvedmROT6+U/2jSwTQog7tCbBvdUMiRkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BrowseSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BrowseSite.Text" xml:space="preserve">
+    <value>Browse Site</value>
+  </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -3672,297 +3898,17 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Log.Name" xml:space="preserve">
-    <value>Log</value>
-  </data>
-  <data name="&gt;&gt;Log.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
-    <value>LogPage</value>
-  </data>
-  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LogPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="LogPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="LogPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="LogPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 111</value>
-  </data>
-  <data name="LogPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="LogPage.Text" xml:space="preserve">
-    <value>Log</value>
-  </data>
-  <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
-    <value>LogPage</value>
-  </data>
-  <data name="&gt;&gt;LogPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LogPage.Parent" xml:space="preserve">
-    <value>ApricotTabs</value>
-  </data>
-  <data name="&gt;&gt;LogPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <data name="LogMenuBridge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 4</value>
-  </data>
-  <data name="&gt;&gt;LogMenuBridge.Name" xml:space="preserve">
-    <value>LogMenuBridge</value>
-  </data>
-  <data name="&gt;&gt;LogMenuBridge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Log.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Log.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="Log.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 101</value>
-  </data>
-  <data name="Log.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;Log.Name" xml:space="preserve">
-    <value>Log</value>
-  </data>
-  <data name="&gt;&gt;Log.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
-    <value>LogPage</value>
-  </data>
-  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
-    <value>AttributeExplanation</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
-    <value>AttributeTree</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="MapPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="MapPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="MapPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="MapPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 111</value>
-  </data>
-  <data name="MapPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MapPage.Text" xml:space="preserve">
-    <value>Attribute Map</value>
-  </data>
-  <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;MapPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MapPage.Parent" xml:space="preserve">
-    <value>ApricotTabs</value>
-  </data>
-  <data name="&gt;&gt;MapPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="AttributeExplanation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="AttributeExplanation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="AttributeExplanation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 101</value>
-  </data>
-  <data name="AttributeExplanation.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="AttributeExplanation.Text" xml:space="preserve">
-    <value>
-The Attribute Map allows you to view all of the Attributes used in your site. 
-
-Build your site to populate the Attribute Map.</value>
-  </data>
-  <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
-    <value>AttributeExplanation</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="AttributeTree.ImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="AttributeTree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="AttributeTree.SelectedImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 101</value>
-  </data>
-  <data name="AttributeTree.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
-    <value>AttributeTree</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Build.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVDhPtZA9EoMgEIU5Us5AT29vzwGs0nALT+EJchMy
-        Y0mTMGi78ZElQ34UzCQ782bX59sPVKxVCOE0zzNB0zQd2a4vALTW1Pf9fsCyfFhOviSA9/4Mj19vF4Lj
-        OF6ttZQAmAGsguA0YwwppahpGuq6Ls7DMMSbcOy50s+C0g3atiUpZRRmePxpjyyv3wEIJjOH5MufsrFy
-        M5dzLurV3wSg18zovP5jQI2KAMylZ3Re/wOgpFXAHr0BvpEQQtwAqZs1YF3M/RkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 22</value>
-  </data>
-  <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
-  </data>
-  <data name="Build.ToolTipText" xml:space="preserve">
-    <value>Build</value>
-  </data>
-  <data name="OpenOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEqSURBVDhPY0AHX758Mfj27duH79+/J0CFiAcwzdmzDv8/
-        cf3pf5IN+fr1awDQgP+6hWv/88UuJM4QoIYJIE3omGhDQIp3nL0PVswQPAcDy6UvBxsI8h5UCyoAScI0
-        w2yHiYHwsSv3/79/dh1FDoonwA0Aaa5echIuiez817cO/L+zrQoFPzu3AqwO6DUFuAtgGkB8WCyA2F8+
-        vQO7ABmDDAHJwV0wY9t5sAHIrsCHMQy4v68TLHD90WsUhbgwzAAQBhsAE3hz7ziYTQy+t6sR04BHx2Zi
-        KMSFQQEJTHgL4AZ8fvcMQxE+/PHVfVAsOMANeH5pA4YiXPjhoYn/P3369AAWiB9AAiA/YVOMDYPCCuj8
-        ArABQEYDMK4/osc1PgxOG+/fCzAwMDAAAMDUoyNGO9ZHAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="OpenOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="OpenOutput.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
-  </data>
-  <data name="BrowseSitePreview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVDhPjZM9coMwEIU5is9Czx0y8S1onaGndG4SN6mp
-        5NZJm59SVgGUij6h1SzIM2Fn3iB239s/RLW1eZ6fxnF8n6bJa+AjlmilheAhEM0wDL5tW1/X9Qr4iDnn
-        jLX2kGSLJbHt+74QCpqm8Ze3i79b5++/LuRQSajcdV0mn8+v/vvrZyEHcJb3j9tnfNJJFDMXrYnYmGsW
-        auA/nV7imU7QxJ2wHJmZylshwC/J6YRx0KCl/Vxdtw0QHJ+Pq+RwhI92lUCLgfhJ8si/O8F2L+IvEmxH
-        eIRihD1L1JCF5iXu/YyAmPDyZ8RCK0bfQqrocThLZQAXTRRje66yIIktmiRfLCX592eCU4i1MRfLCcS4
-        ZQE+YomWrKr+AGiZpQrywE/bAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BrowseSitePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BrowseSitePreview.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
-  </data>
-  <data name="BrowseSite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVDhPrZPNDcMgDEaZLefklpHIiQ3YIasko9SYnyvF
-        biFqVRUoRXoSJvjxgRQxPEIIcQQWTNP0E1UB3EzhU/2/BMuyvNhb6BKgwYSNANdak8CkRgCIx3EwFu1D
-        lL61JUjN67qWO9OcJAawLqDYdCptzGs0z0kaBHZMQA9GG9+vsG1bdM7FeZ7rb0ApSJKRUrJIKcVJiiCf
-        8A2tdTzPk5up3vf9EvTgvedmROT6+U/2jSwTQog7tCbBvdUMiRkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BrowseSite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Browse Site</value>
-  </data>
   <metadata name="SelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>964, 17</value>
+    <value>114, 56</value>
   </metadata>
   <metadata name="LogMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1072, 17</value>
+    <value>222, 56</value>
   </metadata>
   <data name="SaveLog.Text" xml:space="preserve">
     <value>Save...</value>
   </data>
   <metadata name="SaveLogDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1175, 17</value>
+    <value>325, 56</value>
   </metadata>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
     <value>Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt</value>
@@ -3971,7 +3917,7 @@ Build your site to populate the Attribute Map.</value>
     <value>Save Log</value>
   </data>
   <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>156, 56</value>
+    <value>597, 56</value>
   </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
     <value>AutoSite Zip package (*.zip)|*.zip</value>

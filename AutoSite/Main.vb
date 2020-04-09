@@ -1574,13 +1574,13 @@ Public Class Main
         e.Cancel = True
     End Sub
 
-    Private Sub InstallPackMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InstallPackMnu.Click
-        If OpenPack.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
-            InstallPack.Pack = OpenPack.FileName
-            InstallPack.ShowDialog()
-            'UnZip(OpenPack.FileName, SiteTree.Nodes(0).Tag)
-        End If
-    End Sub
+    'Private Sub InstallPackMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InstallPackMnu.Click
+    '    If OpenPack.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+    '        InstallPack.Pack = OpenPack.FileName
+    '        InstallPack.ShowDialog()
+    '        'UnZip(OpenPack.FileName, SiteTree.Nodes(0).Tag)
+    '    End If
+    'End Sub
 
     Private Sub SystemIcons_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SystemIcons.Click
         SystemIcons.Checked = Not SystemIcons.Checked

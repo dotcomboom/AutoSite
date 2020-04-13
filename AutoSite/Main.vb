@@ -645,40 +645,28 @@ Public Class Main
     End Sub
 
     Public Sub doBuild() Handles BuildSite.Click, Build.Click
-        If EnginePython.Checked Then
-            If My.Computer.FileSystem.FileExists("AutoSitePy.exe") Then
-                If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then
-                    My.Computer.FileSystem.CreateDirectory(SiteTree.Nodes(0).Text & "\out")
-                End If
-                Try
-                    Dim startinfo As New ProcessStartInfo
-                    startinfo.FileName = "AutoSitePy.exe"
-                    startinfo.Arguments = "--auto --dir """ & SiteTree.Nodes(0).Text & """"
-                    Process.Start(startinfo)
-                    Preview.Navigate(SiteTree.Nodes(0).Text & "\out")
-                Catch ex As Exception
-                    MsgBox("The Python 3-based build engine was unable to launch for some reason. This may be because of your operating system or the executable. Error:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Build fail")
-                End Try
-            Else
-                MsgBox("Python 3-based build engine wasn't found. Put AutoSitePy.exe in the same folder as AutoSite.exe.", MsgBoxStyle.Exclamation, "Engine not found")
+        If EnginePython.Checked Or EngineCore.Checked Then
+            Dim filename = "AutoSite Core.exe"
+            Dim arguments = SiteTree.Nodes(0).Text
+            If EnginePython.Checked Then
+                filename = "AutoSitePy.exe"
+                arguments = "--auto --dir """ & SiteTree.Nodes(0).Text & """"
             End If
-        ElseIf EngineCore.Checked Then
-            If My.Computer.FileSystem.FileExists("AutoSite Core.exe") Then
+            If My.Computer.FileSystem.FileExists(filename) Then
                 If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then
                     My.Computer.FileSystem.CreateDirectory(SiteTree.Nodes(0).Text & "\out")
                 End If
                 Try
                     Dim startinfo As New ProcessStartInfo
-                    startinfo.FileName = "AutoSite Core.exe"
-                    'startinfo.Arguments = "--auto --dir """ & SiteTree.Nodes(0).Text & """"
-                    startinfo.Arguments = SiteTree.Nodes(0).Text
+                    startinfo.FileName = filename
+                    startinfo.Arguments = arguments
                     Process.Start(startinfo)
                     Preview.Navigate(SiteTree.Nodes(0).Text & "\out")
                 Catch ex As Exception
-                    MsgBox("AutoSite Core was unable to launch for some reason. This may be because of your operating system or the executable. Error:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Build fail")
+                    MsgBox(filename & " was unable to launch for some reason. This may be because of your operating system or the executable. Error:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Build fail")
                 End Try
             Else
-                MsgBox("AutoSite Core wasn't found. Put AutoSite Core.exe in the same folder as AutoSite.exe.", MsgBoxStyle.Exclamation, "Engine not found")
+                MsgBox(filename & " wasn't found. Put it in the same folder as AutoSite.exe.", MsgBoxStyle.Exclamation, "Engine not found")
             End If
         Else
             Log.Clear()
@@ -1631,5 +1619,9 @@ Public Class Main
 
     Private Sub AttributeTree_Layout(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LayoutEventArgs) Handles AttributeTree.Layout
         AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
+    End Sub
+
+    Private Sub OpenFolder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenFolder.Click, NewSite.Click
+
     End Sub
 End Class

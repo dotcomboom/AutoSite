@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Basic Express 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Basic Express 2010
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AutoSite", "AutoSite\AutoSite.vbproj", "{620F97B2-69AD-4637-A568-7ECC0FDE286D}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Apricot", "Apricot\Apricot.vbproj", "{438035F7-F55E-4101-81E2-C200E2A1DA91}"

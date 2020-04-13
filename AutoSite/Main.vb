@@ -1567,8 +1567,4 @@ Public Class Main
     Private Sub AttributeTree_Layout(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LayoutEventArgs) Handles AttributeTree.Layout
         AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
     End Sub
-
-    Private Sub OpenFolder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenFolder.Click, NewSite.Click
-
-    End Sub
 End Class

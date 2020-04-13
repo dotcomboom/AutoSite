@@ -524,12 +524,12 @@ Partial Class Main
         '
         'BuildSep2
         '
-        Me.BuildSep2.Index = 7
+        Me.BuildSep2.Index = 2
         resources.ApplyResources(Me.BuildSep2, "BuildSep2")
         '
         'OpenOutputMnu
         '
-        Me.OpenOutputMnu.Index = 8
+        Me.OpenOutputMnu.Index = 3
         resources.ApplyResources(Me.OpenOutputMnu, "OpenOutputMnu")
         '
         'HelpMenu

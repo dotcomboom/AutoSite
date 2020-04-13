@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAm
-        GAAAAk1TRnQBSQFMAgEBCAEAARgBBQEYAQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        GAAAAk1TRnQBSQFMAgEBCAEAASgBBQEoAQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABMAMAAQEBAAEgBgABMP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AJgAD8QH/A/EB/wPx
         Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/8gAA/EB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPxAf/IAAPxAf8DAAH/A/EB/wPx
@@ -240,7 +240,46 @@
   <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
   </metadata>
+  <data name="FileMenu.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="EditMenu.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="FormatMenu.Text" xml:space="preserve">
+    <value>F&amp;ormat</value>
+  </data>
+  <data name="ViewMenu.Text" xml:space="preserve">
+    <value>&amp;View</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlB</value>
+  </data>
+  <data name="BuildSite.Text" xml:space="preserve">
+    <value>Build Site</value>
+  </data>
+  <data name="SanitaryBuild.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlShiftB</value>
+  </data>
+  <data name="SanitaryBuild.Text" xml:space="preserve">
+    <value>Sanitary Build...</value>
+  </data>
+  <data name="BuildSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="OpenOutputMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlShiftO</value>
+  </data>
+  <data name="OpenOutputMnu.Text" xml:space="preserve">
+    <value>Open Output Folder</value>
+  </data>
+  <data name="BuildMenu.Text" xml:space="preserve">
+    <value>&amp;Build</value>
+  </data>
+  <data name="HelpMenu.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
   <data name="NewSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftN</value>
   </data>
@@ -256,13 +295,49 @@
   <data name="OpenRecent.Text" xml:space="preserve">
     <value>Open Recent</value>
   </data>
+  <data name="Recent1.Text" xml:space="preserve">
+    <value>Recent 1</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Recent1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent2.Text" xml:space="preserve">
+    <value>Recent 2</value>
+  </data>
+  <data name="Recent2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent3.Text" xml:space="preserve">
+    <value>Recent 3</value>
+  </data>
+  <data name="Recent3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent4.Text" xml:space="preserve">
+    <value>Recent 4</value>
+  </data>
+  <data name="Recent4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent5.Text" xml:space="preserve">
+    <value>Recent 5</value>
+  </data>
+  <data name="Recent5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RecentSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="ClearRecents.Text" xml:space="preserve">
+    <value>Clear Recent Sites</value>
+  </data>
   <data name="CloseFile.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlW</value>
   </data>
   <data name="CloseFile.Text" xml:space="preserve">
     <value>Close</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CloseSite.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -307,9 +382,6 @@
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
     <value>Exit</value>
-  </data>
-  <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;File</value>
   </data>
   <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlZ</value>
@@ -383,9 +455,6 @@
   <data name="InsertConditional.Text" xml:space="preserve">
     <value>Insert Conditional...</value>
   </data>
-  <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
-  </data>
   <data name="WordWrap.Text" xml:space="preserve">
     <value>Word Wrap</value>
   </data>
@@ -412,9 +481,6 @@
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Monospace Font...</value>
-  </data>
-  <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
   </data>
   <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt1</value>
@@ -445,6 +511,12 @@
   </data>
   <data name="IconThemeMenu.Text" xml:space="preserve">
     <value>Explorer Icon Theme</value>
+  </data>
+  <data name="VS2017item.Text" xml:space="preserve">
+    <value>Visual Studio 2017</value>
+  </data>
+  <data name="XPitem.Text" xml:space="preserve">
+    <value>XP</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
     <value>Use System Icons</value>
@@ -479,45 +551,6 @@
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
     <value>Browse Site in Preview</value>
   </data>
-  <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;View</value>
-  </data>
-  <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlB</value>
-  </data>
-  <data name="BuildSite.Text" xml:space="preserve">
-    <value>Build Site</value>
-  </data>
-  <data name="SanitaryBuild.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlShiftB</value>
-  </data>
-  <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
-  </data>
-  <data name="BuildSep.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="EngineApricot.Text" xml:space="preserve">
-    <value>Apricot (Native)</value>
-  </data>
-  <data name="EngineCore.Text" xml:space="preserve">
-    <value>AutoSite Core</value>
-  </data>
-  <data name="EnginePython.Text" xml:space="preserve">
-    <value>Legacy AutoSite</value>
-  </data>
-  <data name="BuildSep2.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="OpenOutputMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlShiftO</value>
-  </data>
-  <data name="OpenOutputMnu.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
-  </data>
-  <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Build</value>
-  </data>
   <data name="HelpTopics.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -542,51 +575,6 @@
   <data name="AboutItem.Text" xml:space="preserve">
     <value>About AutoSite</value>
   </data>
-  <data name="HelpMenu.Text" xml:space="preserve">
-    <value>&amp;Help</value>
-  </data>
-  <data name="Recent1.Text" xml:space="preserve">
-    <value>Recent 1</value>
-  </data>
-  <data name="Recent1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Recent2.Text" xml:space="preserve">
-    <value>Recent 2</value>
-  </data>
-  <data name="Recent2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Recent3.Text" xml:space="preserve">
-    <value>Recent 3</value>
-  </data>
-  <data name="Recent3.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Recent4.Text" xml:space="preserve">
-    <value>Recent 4</value>
-  </data>
-  <data name="Recent4.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Recent5.Text" xml:space="preserve">
-    <value>Recent 5</value>
-  </data>
-  <data name="Recent5.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RecentSep.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="ClearRecents.Text" xml:space="preserve">
-    <value>Clear Recent Sites</value>
-  </data>
-  <data name="VS2017item.Text" xml:space="preserve">
-    <value>Visual Studio 2017</value>
-  </data>
-  <data name="XPitem.Text" xml:space="preserve">
-    <value>XP</value>
-  </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>316, 17</value>
   </metadata>
@@ -595,7 +583,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADa
-        JgAAAk1TRnQBSQFMAgEBCgEAAQgBBQEIAQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        JgAAAk1TRnQBSQFMAgEBCgEAARgBBQEYAQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABMAMAAQEBAAEgBgABMC0AAf8DAAH/AwAB/wMAAf8DAAH/JAADCgENAzYBWQNHAYIDWwHDA2AB3gNU
         AawDCgENAwoBDZgAA8wB/wPMAf8DzAH/A8wB/wMAEf8DzAH/A8wB/wPMAf8UAAMGAQgDWQH1Af8ByAHJ
         Af8DXwHzAdQBrAGdAv8CxwH/A18B4ANbAcMDWwHEAzIBUZQAJP8DAAX/A8wB/xAAAwoBDgNKAYkDfwH+
@@ -3394,30 +3382,6 @@
     <value>SanitaryBuild</value>
   </data>
   <data name="&gt;&gt;SanitaryBuild.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildSep.Name" xml:space="preserve">
-    <value>BuildSep</value>
-  </data>
-  <data name="&gt;&gt;BuildSep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EngineApricot.Name" xml:space="preserve">
-    <value>EngineApricot</value>
-  </data>
-  <data name="&gt;&gt;EngineApricot.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EngineCore.Name" xml:space="preserve">
-    <value>EngineCore</value>
-  </data>
-  <data name="&gt;&gt;EngineCore.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EnginePython.Name" xml:space="preserve">
-    <value>EnginePython</value>
-  </data>
-  <data name="&gt;&gt;EnginePython.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BuildSep2.Name" xml:space="preserve">

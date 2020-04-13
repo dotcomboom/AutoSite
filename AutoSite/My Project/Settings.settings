@@ -8,9 +8,6 @@
     <Setting Name="iconTheme" Type="System.String" Scope="User">
       <Value Profile="(Default)">vs2017</Value>
     </Setting>
-    <Setting Name="engine" Type="System.String" Scope="User">
-      <Value Profile="(Default)">apricot</Value>
-    </Setting>
     <Setting Name="explorerOpen" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>

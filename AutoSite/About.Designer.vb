@@ -23,16 +23,16 @@ Partial Class About
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(About))
-        Me.LicenseBox = New System.Windows.Forms.RichTextBox
-        Me.OK = New System.Windows.Forms.Button
-        Me.Logo = New System.Windows.Forms.PictureBox
-        Me.Version = New System.Windows.Forms.Label
-        Me.GithubLink = New System.Windows.Forms.LinkLabel
-        Me.WebsiteLink = New System.Windows.Forms.LinkLabel
-        Me.Tabs = New System.Windows.Forms.TabControl
-        Me.License = New System.Windows.Forms.TabPage
-        Me.Changelog = New System.Windows.Forms.TabPage
-        Me.ChangelogBox = New System.Windows.Forms.RichTextBox
+        Me.LicenseBox = New System.Windows.Forms.RichTextBox()
+        Me.OK = New System.Windows.Forms.Button()
+        Me.Logo = New System.Windows.Forms.PictureBox()
+        Me.Version = New System.Windows.Forms.Label()
+        Me.GithubLink = New System.Windows.Forms.LinkLabel()
+        Me.WebsiteLink = New System.Windows.Forms.LinkLabel()
+        Me.Tabs = New System.Windows.Forms.TabControl()
+        Me.License = New System.Windows.Forms.TabPage()
+        Me.Changelog = New System.Windows.Forms.TabPage()
+        Me.ChangelogBox = New System.Windows.Forms.RichTextBox()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tabs.SuspendLayout()
         Me.License.SuspendLayout()

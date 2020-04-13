@@ -91,10 +91,6 @@ Partial Class Main
         Me.BuildMenu = New System.Windows.Forms.MenuItem()
         Me.BuildSite = New System.Windows.Forms.MenuItem()
         Me.SanitaryBuild = New System.Windows.Forms.MenuItem()
-        Me.BuildSep = New System.Windows.Forms.MenuItem()
-        Me.EngineApricot = New System.Windows.Forms.MenuItem()
-        Me.EngineCore = New System.Windows.Forms.MenuItem()
-        Me.EnginePython = New System.Windows.Forms.MenuItem()
         Me.BuildSep2 = New System.Windows.Forms.MenuItem()
         Me.OpenOutputMnu = New System.Windows.Forms.MenuItem()
         Me.HelpMenu = New System.Windows.Forms.MenuItem()
@@ -513,7 +509,7 @@ Partial Class Main
         'BuildMenu
         '
         Me.BuildMenu.Index = 4
-        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep, Me.EngineApricot, Me.EngineCore, Me.EnginePython, Me.BuildSep2, Me.OpenOutputMnu})
+        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep2, Me.OpenOutputMnu})
         resources.ApplyResources(Me.BuildMenu, "BuildMenu")
         '
         'BuildSite
@@ -526,37 +522,14 @@ Partial Class Main
         Me.SanitaryBuild.Index = 1
         resources.ApplyResources(Me.SanitaryBuild, "SanitaryBuild")
         '
-        'BuildSep
-        '
-        Me.BuildSep.Index = 2
-        resources.ApplyResources(Me.BuildSep, "BuildSep")
-        '
-        'EngineApricot
-        '
-        Me.EngineApricot.Checked = True
-        Me.EngineApricot.Index = 3
-        Me.EngineApricot.RadioCheck = True
-        resources.ApplyResources(Me.EngineApricot, "EngineApricot")
-        '
-        'EngineCore
-        '
-        Me.EngineCore.Index = 4
-        resources.ApplyResources(Me.EngineCore, "EngineCore")
-        '
-        'EnginePython
-        '
-        Me.EnginePython.Index = 5
-        Me.EnginePython.RadioCheck = True
-        resources.ApplyResources(Me.EnginePython, "EnginePython")
-        '
         'BuildSep2
         '
-        Me.BuildSep2.Index = 6
+        Me.BuildSep2.Index = 7
         resources.ApplyResources(Me.BuildSep2, "BuildSep2")
         '
         'OpenOutputMnu
         '
-        Me.OpenOutputMnu.Index = 7
+        Me.OpenOutputMnu.Index = 8
         resources.ApplyResources(Me.OpenOutputMnu, "OpenOutputMnu")
         '
         'HelpMenu
@@ -809,7 +782,7 @@ Partial Class Main
         resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
         '
         'LogMenuBridge
         '
@@ -947,8 +920,6 @@ Partial Class Main
     Friend WithEvents WideCaret As System.Windows.Forms.MenuItem
     Friend WithEvents BuildMenu As System.Windows.Forms.MenuItem
     Friend WithEvents BuildSite As System.Windows.Forms.MenuItem
-    Friend WithEvents EnginePython As System.Windows.Forms.MenuItem
-    Friend WithEvents EngineApricot As System.Windows.Forms.MenuItem
     Friend WithEvents HelpMenu As System.Windows.Forms.MenuItem
     Friend WithEvents AboutItem As System.Windows.Forms.MenuItem
     Friend WithEvents IconThemeMenu As System.Windows.Forms.MenuItem
@@ -1009,7 +980,6 @@ Partial Class Main
     Friend WithEvents BuildPanel As System.Windows.Forms.MenuItem
     Friend WithEvents ViewSep As System.Windows.Forms.MenuItem
     Friend WithEvents SanitaryBuild As System.Windows.Forms.MenuItem
-    Friend WithEvents BuildSep As System.Windows.Forms.MenuItem
     Friend WithEvents Recent1 As System.Windows.Forms.MenuItem
     Friend WithEvents Recent2 As System.Windows.Forms.MenuItem
     Friend WithEvents Recent3 As System.Windows.Forms.MenuItem
@@ -1062,5 +1032,4 @@ Partial Class Main
     Friend WithEvents NewSite As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
     Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
-    Friend WithEvents EngineCore As System.Windows.Forms.MenuItem
 End Class

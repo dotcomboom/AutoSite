@@ -438,14 +438,6 @@ Public Class Main
         iconTheme()
         checkOpen()
 
-        If My.Settings.engine = "python" Then
-            EnginePython.Checked = True
-            EngineApricot.Checked = False
-        Else
-            EnginePython.Checked = False
-            EngineApricot.Checked = True
-        End If
-
         WordWrap.Checked = My.Settings.WordWrap
         VirtualSpace.Checked = My.Settings.VirtualSpace
         WideCaret.Checked = My.Settings.WideCaret
@@ -645,37 +637,13 @@ Public Class Main
     End Sub
 
     Public Sub doBuild() Handles BuildSite.Click, Build.Click
-        If EnginePython.Checked Or EngineCore.Checked Then
-            Dim filename = "AutoSite Core.exe"
-            Dim arguments = SiteTree.Nodes(0).Text
-            If EnginePython.Checked Then
-                filename = "AutoSitePy.exe"
-                arguments = "--auto --dir """ & SiteTree.Nodes(0).Text & """"
-            End If
-            If My.Computer.FileSystem.FileExists(filename) Then
-                If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then
-                    My.Computer.FileSystem.CreateDirectory(SiteTree.Nodes(0).Text & "\out")
-                End If
-                Try
-                    Dim startinfo As New ProcessStartInfo
-                    startinfo.FileName = filename
-                    startinfo.Arguments = arguments
-                    Process.Start(startinfo)
-                    Preview.Navigate(SiteTree.Nodes(0).Text & "\out")
-                Catch ex As Exception
-                    MsgBox(filename & " was unable to launch for some reason. This may be because of your operating system or the executable. Error:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Build fail")
-                End Try
-            Else
-                MsgBox(filename & " wasn't found. Put it in the same folder as AutoSite.exe.", MsgBoxStyle.Exclamation, "Engine not found")
-            End If
-        Else
             Log.Clear()
             AttributeTree.Nodes.Clear()
             Try
                 ApricotWorker.RunWorkerAsync()
-            Catch ex As Exception
-            End Try
-        End If
+        Catch ex As Exception
+            MsgBox("Apricot returned this exception:" & vbNewLine & vbNewLine & ex.ToString, MsgBoxStyle.Exclamation, "Build failed")
+        End Try
     End Sub
 
     Private Sub OpenInDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenInDefault.Click
@@ -915,27 +883,6 @@ Public Class Main
             End If
         End If
         'refreshTree(SiteTree.Nodes(0))
-    End Sub
-
-    Private Sub EngineApricot_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EngineApricot.Click
-        EnginePython.Checked = False
-        EngineApricot.Checked = True
-        EngineCore.Checked = False
-        My.Settings.engine = "apricot"
-    End Sub
-
-    Private Sub EngineCore_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EngineCore.Click
-        EnginePython.Checked = False
-        EngineApricot.Checked = False
-        EngineCore.Checked = True
-        My.Settings.engine = "core"
-    End Sub
-
-    Private Sub EnginePython_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnginePython.Click
-        EnginePython.Checked = True
-        EngineApricot.Checked = False
-        EngineCore.Checked = False
-        My.Settings.engine = "python"
     End Sub
 
     Private Sub Apricot_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ApricotWorker.DoWork

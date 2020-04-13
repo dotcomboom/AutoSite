@@ -883,6 +883,8 @@ SOFTWARE.</value>
    + Easter egg somewhere in there
    - Window will no longer open offscreen and get stuck (if you remove an attached second display for example)
    - Pack installation has been removed for the time being (compatibility reasons)
+   - Sanitary Build can now be performed with the Ctrl+Shift+B keyboard shortcut
+   - AutoSite Core build option added
 
 1.0 RC2:
    + View Output in Default Browser added to editor

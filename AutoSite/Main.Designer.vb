@@ -93,6 +93,7 @@ Partial Class Main
         Me.SanitaryBuild = New System.Windows.Forms.MenuItem
         Me.BuildSep = New System.Windows.Forms.MenuItem
         Me.EngineApricot = New System.Windows.Forms.MenuItem
+        Me.EngineCore = New System.Windows.Forms.MenuItem
         Me.EnginePython = New System.Windows.Forms.MenuItem
         Me.BuildSep2 = New System.Windows.Forms.MenuItem
         Me.OpenOutputMnu = New System.Windows.Forms.MenuItem
@@ -512,7 +513,7 @@ Partial Class Main
         'BuildMenu
         '
         Me.BuildMenu.Index = 4
-        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep, Me.EngineApricot, Me.EnginePython, Me.BuildSep2, Me.OpenOutputMnu})
+        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep, Me.EngineApricot, Me.EngineCore, Me.EnginePython, Me.BuildSep2, Me.OpenOutputMnu})
         resources.ApplyResources(Me.BuildMenu, "BuildMenu")
         '
         'BuildSite
@@ -537,20 +538,25 @@ Partial Class Main
         Me.EngineApricot.RadioCheck = True
         resources.ApplyResources(Me.EngineApricot, "EngineApricot")
         '
+        'EngineCore
+        '
+        Me.EngineCore.Index = 4
+        resources.ApplyResources(Me.EngineCore, "EngineCore")
+        '
         'EnginePython
         '
-        Me.EnginePython.Index = 4
+        Me.EnginePython.Index = 5
         Me.EnginePython.RadioCheck = True
         resources.ApplyResources(Me.EnginePython, "EnginePython")
         '
         'BuildSep2
         '
-        Me.BuildSep2.Index = 5
+        Me.BuildSep2.Index = 6
         resources.ApplyResources(Me.BuildSep2, "BuildSep2")
         '
         'OpenOutputMnu
         '
-        Me.OpenOutputMnu.Index = 6
+        Me.OpenOutputMnu.Index = 7
         resources.ApplyResources(Me.OpenOutputMnu, "OpenOutputMnu")
         '
         'HelpMenu
@@ -1057,4 +1063,5 @@ Partial Class Main
     Friend WithEvents NewSite As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
     Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
+    Friend WithEvents EngineCore As System.Windows.Forms.MenuItem
 End Class

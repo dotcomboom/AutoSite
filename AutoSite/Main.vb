@@ -662,6 +662,24 @@ Public Class Main
             Else
                 MsgBox("Python 3-based build engine wasn't found. Put AutoSitePy.exe in the same folder as AutoSite.exe.", MsgBoxStyle.Exclamation, "Engine not found")
             End If
+        ElseIf EngineCore.Checked Then
+            If My.Computer.FileSystem.FileExists("AutoSite Core.exe") Then
+                If Not My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out") Then
+                    My.Computer.FileSystem.CreateDirectory(SiteTree.Nodes(0).Text & "\out")
+                End If
+                Try
+                    Dim startinfo As New ProcessStartInfo
+                    startinfo.FileName = "AutoSite Core.exe"
+                    'startinfo.Arguments = "--auto --dir """ & SiteTree.Nodes(0).Text & """"
+                    startinfo.Arguments = SiteTree.Nodes(0).Text
+                    Process.Start(startinfo)
+                    Preview.Navigate(SiteTree.Nodes(0).Text & "\out")
+                Catch ex As Exception
+                    MsgBox("AutoSite Core was unable to launch for some reason. This may be because of your operating system or the executable. Error:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Build fail")
+                End Try
+            Else
+                MsgBox("AutoSite Core wasn't found. Put AutoSite Core.exe in the same folder as AutoSite.exe.", MsgBoxStyle.Exclamation, "Engine not found")
+            End If
         Else
             Log.Clear()
             AttributeTree.Nodes.Clear()
@@ -914,12 +932,21 @@ Public Class Main
     Private Sub EngineApricot_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EngineApricot.Click
         EnginePython.Checked = False
         EngineApricot.Checked = True
+        EngineCore.Checked = False
         My.Settings.engine = "apricot"
+    End Sub
+
+    Private Sub EngineCore_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EngineCore.Click
+        EnginePython.Checked = False
+        EngineApricot.Checked = False
+        EngineCore.Checked = True
+        My.Settings.engine = "core"
     End Sub
 
     Private Sub EnginePython_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnginePython.Click
         EnginePython.Checked = True
         EngineApricot.Checked = False
+        EngineCore.Checked = False
         My.Settings.engine = "python"
     End Sub
 

@@ -4,7 +4,7 @@ Imports System.Text
 Public Module Apricot
     Public template_cache As New Dictionary(Of String, String)()
     Public encodingType As Encoding = New UTF8Encoding(False)
-    Public knownExtensions() As String = {"txt", "md", "css", "ts", "js", "html", "htm", "php", "phtml", "xml", "json", "csv", "lass", "sass"}
+    Public knownExtensions() As String = {"txt", "md", "css", "ts", "js", "html", "htm", "php", "phtml", "xml", "json", "csv", "lass", "sass", "gophermap"}
     Private warnedExtensions = False
 
     'https://stackoverflow.com/a/3448307

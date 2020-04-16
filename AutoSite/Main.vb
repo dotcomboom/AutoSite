@@ -502,7 +502,7 @@ Public Class Main
                             edit = True
                         Else
                             For Each extension In editExtensions
-                                If e.Node.Text.EndsWith(extension) Then
+                                If e.Node.Text.EndsWith(extension) Or e.Node.Text = extension Then
                                     edit = True
                                     Exit For
                                 End If
@@ -1500,7 +1500,7 @@ Public Class Main
             edit = True
         Else
             For Each extension In editExtensions
-                If Context.Tag.EndsWith(extension) Then
+                If Context.Tag.EndsWith(extension) Or Context.Tag = extension Then
                     edit = True
                     Exit For
                 End If

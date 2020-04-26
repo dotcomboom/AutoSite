@@ -27,8 +27,6 @@ Public Class Main
                 Try
                     Dim splt = node.Text.Split(".")
                     Dim ext = splt(splt.Length - 1)
-                    'node.ImageKey = ext
-                    'node.SelectedImageKey = ext
                     If Not VS2017.Images.ContainsKey(ext) Then
                         Dim icon As System.Drawing.Icon = System.Drawing.Icon.ExtractAssociatedIcon(file.FullName)
                         Dim bitmap As System.Drawing.Bitmap = icon.ToBitmap

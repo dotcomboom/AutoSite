@@ -14,6 +14,9 @@
         If My.Settings.recents.Count > 0 Then
             Recent1.Text = My.Settings.recents(0)
             Recent1.Tag = My.Settings.recents(0)
+        Else
+            R1.Show()
+            R1.Text = "You have no recent sites yet."
         End If
         If My.Settings.recents.Count > 1 Then
             Recent2.Text = My.Settings.recents(1)

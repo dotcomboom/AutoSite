@@ -289,7 +289,7 @@
     <value>7</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>This task will create index.html or index.md in your Pages folder.</value>
+    <value>This task will create an index page in your Pages folder.</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -535,7 +535,7 @@
     <value>15</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
-    <value>Use this task or select and right-click on Includes in the Explorer to add files. These can be referenced in your code like [#root#]image.png or [#root#]subdir/image.png.</value>
+    <value>Use this task or select and right-click on Includes in the Explorer to add files. These can be referenced in your templates and pages like [#root#]image.png or [#root#]subdir/image.png.</value>
   </data>
   <data name="&gt;&gt;Label11.Name" xml:space="preserve">
     <value>Label11</value>
@@ -562,13 +562,13 @@
     <value>339, 15</value>
   </data>
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 25</value>
+    <value>121, 25</value>
   </data>
   <data name="Label12.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="Label12.Text" xml:space="preserve">
-    <value>Add images and files</value>
+    <value>Add includes</value>
   </data>
   <data name="&gt;&gt;Label12.Name" xml:space="preserve">
     <value>Label12</value>

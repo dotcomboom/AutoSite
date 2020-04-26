@@ -140,7 +140,7 @@ Public Class Main
                 Dim includePath = path & "\includes"
 
                 If Not My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(path & "\in") Then
-                    If MsgBox("AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.", MsgBoxStyle.OkCancel, "Update Site") = MsgBoxResult.Ok Then
+                    If MsgBox("AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.", MsgBoxStyle.OkCancel + MsgBoxStyle.Exclamation, "Update Site") = MsgBoxResult.Ok Then
                         My.Computer.FileSystem.RenameDirectory(path & "\in", "pages")
                     Else
                         doClose()
@@ -1579,6 +1579,7 @@ Public Class Main
     End Sub
 
     Private Sub MenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickstartMnu.Click
-        Quickstart.ShowDialog()
+        Dim q As New Quickstart
+        q.ShowDialog()
     End Sub
 End Class

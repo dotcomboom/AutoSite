@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms
 
 Public Class Quickstart
-    Public site As String = Main.SiteTree.Nodes(0).Tag
+    Public usite As String = Main.SiteTree.Nodes(0).Tag
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -18,10 +18,6 @@ Public Class Quickstart
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         End If
-    End Sub
-
-    Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label4.Click
-
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
@@ -45,7 +41,7 @@ Public Class Quickstart
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        Dim path = site & "\includes\" & relpath.Text.Replace("/", "\")
+        Dim path = usite & "\includes\" & relpath.Text.Replace("/", "\")
         If Not path.EndsWith("\") Then
             path &= "\"
         End If
@@ -72,54 +68,54 @@ Public Class Quickstart
                             MsgBox(ex.Message)
                         End Try
                     Next
-                    'refreshTree(SiteTree.Nodes(0))
+                    'refreshTree(siteTree.Nodes(0))
                 End If
             End If
         End If
-        
+
     End Sub
 
     Private Sub Quickstart_Load() Handles MyBase.Load
-        If My.Computer.FileSystem.FileExists(site & "\templates\default.html") Then
+        If My.Computer.FileSystem.FileExists(usite & "\templates\default.html") Then
             CreateTemplate.Text = "Created"
             CreateTemplate.Enabled = False
         Else
             CreateTemplate.Enabled = True
         End If
-        indexmd.Enabled = Not (My.Computer.FileSystem.FileExists(site & "\pages\index.md"))
-        indexhtml.Enabled = Not (My.Computer.FileSystem.FileExists(site & "\pages\index.html"))
+        indexmd.Enabled = Not (My.Computer.FileSystem.FileExists(usite & "\pages\index.md"))
+        indexhtml.Enabled = Not (My.Computer.FileSystem.FileExists(usite & "\pages\index.html"))
         If Not (indexmd.Enabled And indexhtml.Enabled) Then
             Label4.Text = "As the index page has already been created, you can change formats here."
         End If
     End Sub
 
     Private Sub CreateTemplate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CreateTemplate.Click
-        My.Computer.FileSystem.WriteAllText(site & "\templates\default.html", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
+        My.Computer.FileSystem.WriteAllText(usite & "\templates\default.html", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
         Quickstart_Load()
-        Main.openEditor(site & "\templates\default.html")
+        Main.openEditor(usite & "\templates\default.html")
     End Sub
 
     Private Sub indexmd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles indexmd.Click
-        If (Not My.Computer.FileSystem.FileExists(site & "\pages\index.md")) And (Not My.Computer.FileSystem.FileExists(site & "\pages\index.html")) Then
+        If (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.md")) And (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.html")) Then
             Dim page = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: Home -->" & vbNewLine
-            My.Computer.FileSystem.WriteAllText(site & "\pages\index.md", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
+            My.Computer.FileSystem.WriteAllText(usite & "\pages\index.md", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
             Quickstart_Load()
-        ElseIf My.Computer.FileSystem.FileExists(site & "\pages\index.html") Then
+        ElseIf My.Computer.FileSystem.FileExists(usite & "\pages\index.html") Then
             If MsgBox("index.html will be renamed to index.md. The path will be changed.", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "Switch to Markdown?") = MsgBoxResult.Ok Then
-                My.Computer.FileSystem.RenameFile(site & "\pages\index.html", "index.md")
+                My.Computer.FileSystem.RenameFile(usite & "\pages\index.html", "index.md")
                 Quickstart_Load()
             End If
         End If
     End Sub
 
     Private Sub indexhtml_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles indexhtml.Click
-        If (Not My.Computer.FileSystem.FileExists(site & "\pages\index.md")) And (Not My.Computer.FileSystem.FileExists(site & "\pages\index.html")) Then
+        If (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.md")) And (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.html")) Then
             Dim page = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: Home -->" & vbNewLine
-            My.Computer.FileSystem.WriteAllText(site & "\pages\index.html", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
+            My.Computer.FileSystem.WriteAllText(usite & "\pages\index.html", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
             Quickstart_Load()
-        ElseIf My.Computer.FileSystem.FileExists(site & "\pages\index.md") Then
+        ElseIf My.Computer.FileSystem.FileExists(usite & "\pages\index.md") Then
             If MsgBox("index.md will be renamed to index.html. The path will be changed.", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "Switch to HTML?") = MsgBoxResult.Ok Then
-                My.Computer.FileSystem.RenameFile(site & "\pages\index.md", "index.html")
+                My.Computer.FileSystem.RenameFile(usite & "\pages\index.md", "index.html")
                 Quickstart_Load()
             End If
         End If

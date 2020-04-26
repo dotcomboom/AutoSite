@@ -884,9 +884,10 @@ SOFTWARE.</value>
    + Pages folder now has the path pages\ instead of in\
    - Window will no longer open offscreen and get stuck (if you remove an attached second display for example)
    - Pack installation has been removed for the time being (compatibility reasons)
-   - Sanitary Build can now be performed with the Ctrl+Shift+B keyboard shortcut
+   - Sanitary Build can now be performed with the Ctrl+Shift+B keyboard shortcut, and as an item in the Build option's dropdown in the Apricot panel
    - Legacy build engine removed
    - Debug stuff removed from internal template
+   - Build menu renamed to Tools
 
 1.0 RC2:
    + View Output in Default Browser added to editor

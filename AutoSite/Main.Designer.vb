@@ -142,7 +142,6 @@ Partial Class Main
         Me.AttributeTree = New System.Windows.Forms.TreeView()
         Me.BuildProgress = New System.Windows.Forms.ProgressBar()
         Me.BuildStrip = New System.Windows.Forms.ToolStrip()
-        Me.Build = New System.Windows.Forms.ToolStripButton()
         Me.OpenOutput = New System.Windows.Forms.ToolStripButton()
         Me.BrowseSitePreview = New System.Windows.Forms.ToolStripButton()
         Me.BrowseSite = New System.Windows.Forms.ToolStripButton()
@@ -152,6 +151,8 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
+        Me.Build = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.SanitaryBuildToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -794,7 +795,7 @@ Partial Class Main
         resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'LogMenuBridge
         '
@@ -834,11 +835,6 @@ Partial Class Main
         resources.ApplyResources(Me.BuildStrip, "BuildStrip")
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        '
-        'Build
-        '
-        resources.ApplyResources(Me.Build, "Build")
-        Me.Build.Name = "Build"
         '
         'OpenOutput
         '
@@ -891,6 +887,17 @@ Partial Class Main
         'OpenPack
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
+        '
+        'Build
+        '
+        Me.Build.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SanitaryBuildToolStripMenuItem})
+        resources.ApplyResources(Me.Build, "Build")
+        Me.Build.Name = "Build"
+        '
+        'SanitaryBuildToolStripMenuItem
+        '
+        Me.SanitaryBuildToolStripMenuItem.Name = "SanitaryBuildToolStripMenuItem"
+        resources.ApplyResources(Me.SanitaryBuildToolStripMenuItem, "SanitaryBuildToolStripMenuItem")
         '
         'Main
         '
@@ -977,7 +984,6 @@ Partial Class Main
     Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
     Friend WithEvents BuildProgress As System.Windows.Forms.ProgressBar
     Friend WithEvents BuildStrip As System.Windows.Forms.ToolStrip
-    Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents OpenOutput As System.Windows.Forms.ToolStripButton
     Friend WithEvents BrowseSitePreview As System.Windows.Forms.ToolStripButton
     Friend WithEvents BrowseSite As System.Windows.Forms.ToolStripButton
@@ -1046,4 +1052,6 @@ Partial Class Main
     Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     Friend WithEvents QuickstartMnu As System.Windows.Forms.MenuItem
+    Friend WithEvents Build As System.Windows.Forms.ToolStripDropDownButton
+    Friend WithEvents SanitaryBuildToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

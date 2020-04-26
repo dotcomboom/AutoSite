@@ -357,7 +357,6 @@ Public Class Main
             WordWrap.Checked = True
         End If
         panelUpdate()
-        'FastColoredTextBox1.WordWrap = WordWrap.Checked
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -530,16 +529,6 @@ Public Class Main
                 Catch ex As Exception
                 End Try
             End If
-            'Try
-            '    If e.Node.Tag.EndsWith(".md") Then
-            '        Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(box.Text)
-            '    Else
-            '        If Not e.Node.Tag.EndsWith(".css") And Not e.Node.Tag.EndsWith(".js") Then
-            '            Preview.Navigate(e.Node.Tag)
-            '        End If
-            '    End If
-            'Catch ex As Exception
-            'End Try
         End If
     End Sub
 
@@ -768,7 +757,6 @@ Public Class Main
                     My.Computer.FileSystem.CopyFile(s, newFile, False)
                 Next
             End If
-            'refreshTree(SiteTree.Nodes(0))
         Catch ex As Exception
 
         End Try
@@ -812,7 +800,6 @@ Public Class Main
                 add = " (" & num & ")"
             End While
             My.Computer.FileSystem.CreateDirectory(System.IO.Path.Combine(dir, "new_folder" & add))
-            'refreshTree(SiteTree.Nodes(0))
         End If
     End Sub
 
@@ -889,10 +876,8 @@ Public Class Main
                         MsgBox(ex.Message)
                     End Try
                 Next
-                'refreshTree(SiteTree.Nodes(0))
             End If
         End If
-        'refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub Apricot_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ApricotWorker.DoWork
@@ -935,7 +920,6 @@ Public Class Main
                 End If
             Next
 
-            'If (Not exists) And (Not tn.Attribute.StartsWith("mod_")) Then  ' Exclude modified 
             If Not exists Then
                 aNode = New TreeNode
                 aNode.Text = tn.Attribute
@@ -946,9 +930,6 @@ Public Class Main
 
             Dim vNode As New TreeNode
             Dim txt = tn.Value
-            'If txt.Length > 20 Then
-            '    txt = txt.Substring(0, 20) & ".."
-            'End If
 
             exists = False
             For Each node As TreeNode In aNode.Nodes
@@ -1182,7 +1163,6 @@ Public Class Main
                 Dim ext = splt(splt.Length - 1)
                 If Not VS2017.Images.ContainsKey(ext) Then
                     Dim icon As System.Drawing.Icon = System.Drawing.Icon.ExtractAssociatedIcon(node.Tag)
-                    'Dim bitmap As System.Drawing.Bitmap = icon.ToBitmap
                     VS2017.Images.Add(ext, icon)
                     XP.Images.Add(ext, icon)
                 End If

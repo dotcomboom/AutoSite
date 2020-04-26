@@ -93,6 +93,8 @@ Partial Class Main
         Me.SanitaryBuild = New System.Windows.Forms.MenuItem()
         Me.BuildSep2 = New System.Windows.Forms.MenuItem()
         Me.OpenOutputMnu = New System.Windows.Forms.MenuItem()
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.QuickstartMnu = New System.Windows.Forms.MenuItem()
         Me.HelpMenu = New System.Windows.Forms.MenuItem()
         Me.HelpTopics = New System.Windows.Forms.MenuItem()
         Me.HelpSep = New System.Windows.Forms.MenuItem()
@@ -509,7 +511,7 @@ Partial Class Main
         'BuildMenu
         '
         Me.BuildMenu.Index = 4
-        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep2, Me.OpenOutputMnu})
+        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep2, Me.OpenOutputMnu, Me.MenuItem1, Me.QuickstartMnu})
         resources.ApplyResources(Me.BuildMenu, "BuildMenu")
         '
         'BuildSite
@@ -531,6 +533,16 @@ Partial Class Main
         '
         Me.OpenOutputMnu.Index = 3
         resources.ApplyResources(Me.OpenOutputMnu, "OpenOutputMnu")
+        '
+        'MenuItem1
+        '
+        Me.MenuItem1.Index = 4
+        resources.ApplyResources(Me.MenuItem1, "MenuItem1")
+        '
+        'QuickstartMnu
+        '
+        Me.QuickstartMnu.Index = 5
+        resources.ApplyResources(Me.QuickstartMnu, "QuickstartMnu")
         '
         'HelpMenu
         '
@@ -1032,4 +1044,6 @@ Partial Class Main
     Friend WithEvents NewSite As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
     Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
+    Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
+    Friend WithEvents QuickstartMnu As System.Windows.Forms.MenuItem
 End Class

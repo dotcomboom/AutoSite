@@ -196,7 +196,7 @@ Public Module Apricot
                 doLog("WARN: Template " & attribs.Item("template") + ".html does not exist, using basic internal template", worker, 40)
                 attribs.Item("template") = "<b>AS</b>internal"
                 If Not template_cache.ContainsKey("<b>AS</b>internal") Then
-                    template_cache.Add("<b>AS</b>internal", "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "      [path=index.md]You are on the index.[/path=]" & vbNewLine & "    </p>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>")
+                    template_cache.Add("<b>AS</b>internal", "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "    [#content#]" & vbNewLine & "    </p>" & "  </body>" & vbNewLine & "</html>")
                 End If
             End If
         End If
@@ -301,7 +301,7 @@ Public Module Apricot
     End Function
 
     Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As Object = Nothing)
-        Dim input = Path.Combine(siteRoot, "in\")
+        Dim input = Path.Combine(siteRoot, "pages\")
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim includes = Path.Combine(siteRoot, "includes\")
         Dim out = Path.Combine(siteRoot, "out\")
@@ -337,7 +337,7 @@ Public Module Apricot
             Catch ex As InvalidCastException
                 doLog("Skipped", worker, 100)
             End Try
-            
+
         Next
         'For Each sdir In subdir.GetDirectories
         'walkInputs(sdir, pattern, siteRoot, worker)
@@ -347,7 +347,7 @@ Public Module Apricot
     Public Sub buildSite(ByVal folder As String, Optional ByVal worker As Object = Nothing)
         template_cache.Clear()
 
-        Dim input = Path.Combine(folder, "in\")
+        Dim input = Path.Combine(folder, "pages\")
         Dim templates = Path.Combine(folder, "templates\")
         Dim includes = Path.Combine(folder, "includes\")
         Dim out = Path.Combine(folder, "out\")
@@ -357,7 +357,11 @@ Public Module Apricot
         doLog("Started " & My.Computer.Clock.LocalTime, worker, 0)
 
         If Not My.Computer.FileSystem.DirectoryExists(input) Then
-            doLog("Creating in\ folder", worker, 10)
+            If My.Computer.FileSystem.DirectoryExists("in\") Then
+                doLog("Converting in\ to pages\", worker, 10)
+                My.Computer.FileSystem.RenameDirectory("in\", "pages")
+            End If
+            doLog("Creating pages\ folder", worker, 10)
             My.Computer.FileSystem.CreateDirectory(input)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(templates) Then

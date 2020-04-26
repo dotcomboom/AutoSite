@@ -64,6 +64,7 @@ Public Class Main
         Build.Enabled = (SiteTree.Nodes.Count > 0)
         SanitaryBuild.Enabled = (SiteTree.Nodes.Count > 0)
         InstallPackMnu.Enabled = (SiteTree.Nodes.Count > 0)
+        QuickstartMnu.Enabled = (SiteTree.Nodes.Count > 0)
 
         OpenOutput.Enabled = (SiteTree.Nodes.Count > 0)
         BrowseSitePreview.Enabled = (SiteTree.Nodes.Count > 0)
@@ -93,7 +94,7 @@ Public Class Main
     End Sub
 
     Private Sub refreshTree(ByVal root As TreeNode)
-        Dim inPath = root.Text & "\in"
+        Dim inPath = root.Text & "\pages"
         Dim templatePath = root.Text & "\templates"
         Dim includePath = root.Text & "\includes"
 
@@ -117,7 +118,7 @@ Public Class Main
         'Dim settings = root.Nodes.Add("Locale")
         'settings.ImageKey = "Build"
         'settings.SelectedImageKey = "Build"
-        'settings.Tag = root.Text & "\apricot.xml"
+        'settings.Tag = root.Text & "\apricot.xml
 
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(inPath), "*", pages, "Page", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
@@ -135,8 +136,17 @@ Public Class Main
             If doClose() Then
                 EditTabs.TabPages.Clear()
                 Dim templatePath = path & "\templates"
-                Dim inPath = path & "\in"
+                Dim inPath = path & "\pages"
                 Dim includePath = path & "\includes"
+
+                If Not My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(path & "\in") Then
+                    If MsgBox("AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.", MsgBoxStyle.OkCancel, "Update Site") = MsgBoxResult.Ok Then
+                        My.Computer.FileSystem.RenameDirectory(path & "\in", "pages")
+                    Else
+                        doClose()
+                        Exit Sub
+                    End If
+                End If
 
                 If Not (My.Computer.FileSystem.DirectoryExists(templatePath) And My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(includePath)) Then
                     If autoload = False Then
@@ -982,7 +992,7 @@ Public Class Main
             fNode.Text = rPath
             fNode.ImageKey = "Page"
             fNode.SelectedImageKey = "Page"
-            fNode.Tag = Path.Combine(SiteTree.Nodes(0).Text, "in\" & tn.relPath)
+            fNode.Tag = Path.Combine(SiteTree.Nodes(0).Text, "pages\" & tn.relPath)
 
             Dim add = True
             For Each node As TreeNode In pNode.Nodes
@@ -1102,8 +1112,8 @@ Public Class Main
         node.Tag = e.FullPath
         node.ImageKey = "Folder"
         node.SelectedImageKey = "Folder"
-        If e.Name.StartsWith("in\") Then
-            Dim f = Apricot.ReplaceFirst(e.Name, "in\", "")
+        If e.Name.StartsWith("pages\") Then
+            Dim f = Apricot.ReplaceFirst(e.Name, "pages\", "")
             Dim pnode As TreeNode = pages
             While f.Contains("\")
                 Dim pdir = f.Split("\")(0)
@@ -1268,7 +1278,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub SanitaryBuild_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SanitaryBuild.Click
+    Public Sub doSanitaryBuild() Handles SanitaryBuild.Click
         If MsgBox("A sanitary build will completely remove the output folder and build from scratch. Any files that aren't in your Pages or Includes will be gone. Do this?", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel, "AutoSite") = MsgBoxResult.Ok Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
@@ -1554,17 +1564,21 @@ Public Class Main
 
     Private Sub SiteTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles SiteTree.ItemDrag
         If e.Button = Windows.Forms.MouseButtons.Left Then
-            If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & "\in\") Or e.Item.tag.contains(SiteTree.Nodes(0).Tag & "\includes\") Then
+            If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & "\pages\") Or e.Item.tag.contains(SiteTree.Nodes(0).Tag & "\includes\") Then
                 Dim slash = ""
                 If My.Computer.FileSystem.DirectoryExists(e.Item.tag) Then
                     slash = "/"
                 End If
-                DoDragDrop("[#root#]" & e.Item.Tag.Replace(SiteTree.Nodes(0).Tag & "\in\", "").Replace(SiteTree.Nodes(0).Tag & "\includes\", "").Replace("\", "/") & slash, DragDropEffects.Link)
+                DoDragDrop("[#root#]" & e.Item.Tag.Replace(SiteTree.Nodes(0).Tag & "\pages\", "").Replace(SiteTree.Nodes(0).Tag & "\includes\", "").Replace("\", "/") & slash, DragDropEffects.Link)
             End If
         End If
     End Sub
 
     Private Sub AttributeTree_Layout(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LayoutEventArgs) Handles AttributeTree.Layout
         AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
+    End Sub
+
+    Private Sub MenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickstartMnu.Click
+        Quickstart.ShowDialog()
     End Sub
 End Class

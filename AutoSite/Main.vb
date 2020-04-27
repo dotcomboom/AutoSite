@@ -1256,7 +1256,7 @@ Public Class Main
         End If
     End Sub
 
-    Public Sub doSanitaryBuild() Handles SanitaryBuild.Click, SanitaryBuildToolStripMenuItem.Click
+    Public Sub doSanitaryBuild() Handles SanitaryBuild.Click, SanitaryBuildBtn.Click
         If MsgBox("A sanitary build will completely remove the output folder and build from scratch. Any files that aren't in your Pages or Includes will be gone. Do this?", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel, "AutoSite") = MsgBoxResult.Ok Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
@@ -1559,9 +1559,5 @@ Public Class Main
     Private Sub MenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickstartMnu.Click
         Dim q As New Quickstart
         q.ShowDialog()
-    End Sub
-
-    Private Sub doBuild(sender As System.Object, e As System.EventArgs) Handles BuildSite.Click, Build.Click
-
     End Sub
 End Class

@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms
-
-Public Class Quickstart
+﻿Public Class Quickstart
     Public usite As String = Main.SiteTree.Nodes(0).Tag
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -120,4 +118,5 @@ Public Class Quickstart
             End If
         End If
     End Sub
+
 End Class

@@ -166,7 +166,6 @@
 '        TreeView1.Nodes(0).ImageKey = "Zip"
 '        TreeView1.Nodes(0).SelectedImageKey = "Zip"
 
-
 '        Dim sc As New Shell32.Shell()
 '        IO.Directory.CreateDirectory(tempFolder)
 '        Dim output As Shell32.Folder = sc.NameSpace(tempFolder)

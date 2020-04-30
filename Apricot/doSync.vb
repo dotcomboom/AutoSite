@@ -1,10 +1,10 @@
 ﻿Imports System.IO
+
 ' https://www.experts-exchange.com/questions/21618119/I-need-to-create-a-function-in-VB-NET-to-synchronize-2-directories-w-recursion.html
 ' https://www.experts-exchange.com/members/AlexCode.html
 Public Class doSync
-
-    Dim Dir1 As DirectoryInfo
-    Dim Dir2 As DirectoryInfo
+    ReadOnly Dir1 As DirectoryInfo
+    ReadOnly Dir2 As DirectoryInfo
 
     Public Enum SyncResults
         Successful = 0
@@ -29,9 +29,8 @@ Public Class doSync
 
     End Function
 
-
-    Private Function SyncProcess( _
-        ByVal sourceDir As DirectoryInfo, _
+    Private Function SyncProcess(
+        ByVal sourceDir As DirectoryInfo,
         ByVal destinationDir As DirectoryInfo) As SyncResults
 
         Try
@@ -43,8 +42,8 @@ Public Class doSync
         Return SyncResults.Successful
     End Function
 
-    Private Sub SyncDir( _
-        ByVal sourceDir As DirectoryInfo, _
+    Private Sub SyncDir(
+        ByVal sourceDir As DirectoryInfo,
         ByVal destinationDir As DirectoryInfo)
 
         Dim files As FileInfo() = sourceDir.GetFiles

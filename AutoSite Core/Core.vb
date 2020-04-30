@@ -1,6 +1,4 @@
-﻿Imports Apricot
-
-Module Core
+﻿Module Core
 
     Sub Main(ByVal args() As String)
         Dim version = My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor

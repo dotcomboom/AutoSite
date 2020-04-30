@@ -142,11 +142,11 @@ Partial Class Main
         Me.AttributeTree = New System.Windows.Forms.TreeView()
         Me.BuildProgress = New System.Windows.Forms.ProgressBar()
         Me.BuildStrip = New System.Windows.Forms.ToolStrip()
+        Me.Build = New System.Windows.Forms.ToolStripButton()
+        Me.SanitaryBuildBtn = New System.Windows.Forms.ToolStripButton()
         Me.OpenOutput = New System.Windows.Forms.ToolStripButton()
         Me.BrowseSitePreview = New System.Windows.Forms.ToolStripButton()
         Me.BrowseSite = New System.Windows.Forms.ToolStripButton()
-        Me.Build = New System.Windows.Forms.ToolStripButton()
-        Me.SanitaryBuildBtn = New System.Windows.Forms.ToolStripButton()
         Me.CoreSplit = New System.Windows.Forms.SplitContainer()
         Me.SelectFont = New System.Windows.Forms.FontDialog()
         Me.LogMenu = New System.Windows.Forms.ContextMenu()
@@ -795,7 +795,7 @@ Partial Class Main
         resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
         '
         'LogMenuBridge
         '
@@ -831,10 +831,21 @@ Partial Class Main
         '
         Me.BuildStrip.BackColor = System.Drawing.SystemColors.Control
         Me.BuildStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenOutput, Me.BrowseSitePreview, Me.BrowseSite, Me.Build, Me.SanitaryBuildBtn})
+        Me.BuildStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Build, Me.SanitaryBuildBtn, Me.OpenOutput, Me.BrowseSitePreview, Me.BrowseSite})
         resources.ApplyResources(Me.BuildStrip, "BuildStrip")
         Me.BuildStrip.Name = "BuildStrip"
         Me.BuildStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        '
+        'Build
+        '
+        resources.ApplyResources(Me.Build, "Build")
+        Me.Build.Name = "Build"
+        '
+        'SanitaryBuildBtn
+        '
+        Me.SanitaryBuildBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.SanitaryBuildBtn, "SanitaryBuildBtn")
+        Me.SanitaryBuildBtn.Name = "SanitaryBuildBtn"
         '
         'OpenOutput
         '
@@ -856,17 +867,6 @@ Partial Class Main
         Me.BrowseSite.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         resources.ApplyResources(Me.BrowseSite, "BrowseSite")
         Me.BrowseSite.Name = "BrowseSite"
-        '
-        'Build
-        '
-        resources.ApplyResources(Me.Build, "Build")
-        Me.Build.Name = "Build"
-        '
-        'SanitaryBuildBtn
-        '
-        Me.SanitaryBuildBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.SanitaryBuildBtn, "SanitaryBuildBtn")
-        Me.SanitaryBuildBtn.Name = "SanitaryBuildBtn"
         '
         'CoreSplit
         '

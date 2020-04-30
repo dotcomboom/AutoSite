@@ -1,14 +1,14 @@
 ﻿Public Class CheatGame
 
-    Private DeckSize = 52  ' Must be divisible by 4
+    Private ReadOnly DeckSize = 52  ' Must be divisible by 4
 
-    Private CardTypes As String() = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"}
+    Private ReadOnly CardTypes As String() = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"}
 
-    Private Pile As New ArrayList
-    Private CPU1Deck As New ArrayList
-    Private CPU2Deck As New ArrayList
-    Private CPU3Deck As New ArrayList
-    Private PlayerDeck As New ArrayList
+    Private ReadOnly Pile As New ArrayList
+    Private ReadOnly CPU1Deck As New ArrayList
+    Private ReadOnly CPU2Deck As New ArrayList
+    Private ReadOnly CPU3Deck As New ArrayList
+    Private ReadOnly PlayerDeck As New ArrayList
 
     Private FreeTurn As Boolean = True
     Private LastCardPlayed As String = "Ace"
@@ -17,7 +17,7 @@
 
     Private Turn As Integer ' 0 is player's turn, 1-3 is CPU
 
-    Private R As New Random
+    Private ReadOnly R As New Random
 
     Private Sub UpdateUI()
         CPU1Cards.Text = CPU1Deck.Count & " card"
@@ -333,4 +333,5 @@
             doTurn()
         End If
     End Sub
+
 End Class

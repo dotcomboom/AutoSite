@@ -46,10 +46,9 @@ Public Class Main
 
     'https://stackoverflow.com/a/3448307
     Function ReadAllText(ByVal path As String)
-        Dim text = ""
         Dim inStream = New FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
         Dim streamReader = New StreamReader(inStream, True)
-        text = streamReader.ReadToEnd()
+        Dim text As String = streamReader.ReadToEnd()
         streamReader.Dispose()
         inStream.Dispose()
         Return text
@@ -227,9 +226,10 @@ Public Class Main
         My.Settings.LivePreview = LivePreview.Checked
 
         For Each page As TabPage In EditTabs.TabPages
-            Dim point As New Point
-            point.X = 0
-            point.Y = 0
+            Dim point As New Point With {
+                .X = 0,
+                .Y = 0
+            }
             Dim child = page.GetChildAtPoint(point, GetChildAtPointSkip.None)
             If TypeOf child Is Editor Then
                 Dim edit As Editor = child
@@ -242,8 +242,9 @@ Public Class Main
         Next
     End Sub
     Public Sub openEditor(ByVal path As String)
-        Dim tab As New TabPage
-        tab.Tag = path
+        Dim tab As New TabPage With {
+            .Tag = path
+        }
         tab.ToolTipText = tab.Tag
         tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
         EditTabs.TabPages.Add(tab)
@@ -256,14 +257,16 @@ Public Class Main
             End If
         Next
         If game Then
-            Dim cheat As New CheatGame
-            cheat.Parent = tab
-            cheat.Dock = DockStyle.Fill
+            Dim cheat As New CheatGame With {
+                .Parent = tab,
+                .Dock = DockStyle.Fill
+            }
         Else
             ' Actual editor code is here
-            Dim editor As New Editor
-            editor.Parent = tab
-            editor.Dock = DockStyle.Fill
+            Dim editor As New Editor With {
+                .Parent = tab,
+                .Dock = DockStyle.Fill
+            }
             editor.Code.Text = editor.ReadAllText(tab.Tag)
             editor.Code.ClearUndo()
             editor.Snapshot = editor.Code.Text
@@ -320,11 +323,13 @@ Public Class Main
         My.Settings.openProject = ""
         Watcher.Filter = "NFIDNI#N()Dxn)(@Nqinnxisabub@IZWNQIONCIWENiN@Nd0N@()@()OPQNOPMNXONNW(ENND@#(ONCPENQOPNNNSANOI" ' can't disable it so /shrug
 
-        Dim tab As New TabPage
-        tab.Text = "Start Page"
-        Dim start As New StartPage
-        start.Parent = tab
-        start.Dock = DockStyle.Fill
+        Dim tab As New TabPage With {
+            .Text = "Start Page"
+        }
+        Dim start As New StartPage With {
+            .Parent = tab,
+            .Dock = DockStyle.Fill
+        }
         tab.Parent = EditTabs
         checkOpen()
         Return True
@@ -458,11 +463,13 @@ Public Class Main
         If My.Computer.FileSystem.DirectoryExists(My.Settings.openProject) Then
             openSite(My.Settings.openProject, True)
         Else
-            Dim tab As New TabPage
-            tab.Text = "Start Page"
-            Dim start As New StartPage
-            start.Dock = DockStyle.Fill
-            start.Parent = tab
+            Dim tab As New TabPage With {
+                .Text = "Start Page"
+            }
+            Dim start As New StartPage With {
+                .Dock = DockStyle.Fill,
+                .Parent = tab
+            }
             tab.Parent = EditTabs
         End If
 
@@ -919,10 +926,11 @@ Public Class Main
             Next
 
             If Not exists Then
-                aNode = New TreeNode
-                aNode.Text = tn.Attribute
-                aNode.ImageKey = "Attribute"
-                aNode.SelectedImageKey = "Attribute"
+                aNode = New TreeNode With {
+                    .Text = tn.Attribute,
+                    .ImageKey = "Attribute",
+                    .SelectedImageKey = "Attribute"
+                }
                 AttributeTree.Nodes.Add(aNode)
             End If
 
@@ -938,10 +946,11 @@ Public Class Main
             Next
 
             If Not exists Then
-                vNode = New TreeNode
-                vNode.Text = txt
-                vNode.ImageKey = "Value"
-                vNode.SelectedImageKey = "Value"
+                vNode = New TreeNode With {
+                    .Text = txt,
+                    .ImageKey = "Value",
+                    .SelectedImageKey = "Value"
+                }
                 aNode.Nodes.Add(vNode)
             End If
 
@@ -967,11 +976,12 @@ Public Class Main
                 rPath = Apricot.ReplaceFirst(rPath, folderName & "\", "")
             End While
 
-            Dim fNode As New TreeNode
-            fNode.Text = rPath
-            fNode.ImageKey = "Page"
-            fNode.SelectedImageKey = "Page"
-            fNode.Tag = Path.Combine(SiteTree.Nodes(0).Text, "pages\" & tn.relPath)
+            Dim fNode As New TreeNode With {
+                .Text = rPath,
+                .ImageKey = "Page",
+                .SelectedImageKey = "Page",
+                .Tag = Path.Combine(SiteTree.Nodes(0).Text, "pages\" & tn.relPath)
+            }
 
             Dim add = True
             For Each node As TreeNode In pNode.Nodes
@@ -1047,9 +1057,10 @@ Public Class Main
 
     Public Sub DoSaveAll() Handles SaveAll.Click
         For Each page As TabPage In EditTabs.TabPages
-            Dim point As New Point
-            point.X = 0
-            point.Y = 0
+            Dim point As New Point With {
+                .X = 0,
+                .Y = 0
+            }
             Dim child = page.GetChildAtPoint(point, GetChildAtPointSkip.None)
             If TypeOf child Is Editor Then
                 Dim edit As Editor = child
@@ -1184,7 +1195,7 @@ Public Class Main
                     Dim edit As Editor = c
                     If edit.openFile = e.FullPath Then
                         If Not t.Text.Contains("*") Then
-                            t.Text = t.Text & "*"
+                            t.Text &= "*"
                             edit.SaveBtn.Enabled = True
                         End If
                     End If
@@ -1315,15 +1326,14 @@ Public Class Main
     End Sub
 
     Private Function activeEditor()
-        Try
+        If EditTabs.TabCount > 0 Then
             For Each c In EditTabs.SelectedTab.Controls
                 If c.GetType() Is GetType(Editor) Then
                     Dim edit As Editor = c
                     Return edit
                 End If
             Next
-        Catch ex As Exception
-        End Try
+        End If
         Return Nothing
     End Function
 

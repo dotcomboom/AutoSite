@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms
-
-Public Class AddConditional
+﻿Public Class AddConditional
     Public output = ""
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
@@ -60,4 +58,5 @@ Public Class AddConditional
     Private Sub Empty_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Empty.CheckedChanged
         Value.Enabled = (Not Empty.Checked)
     End Sub
+
 End Class

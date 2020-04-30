@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
 Imports FastColoredTextBoxNS
-Imports System.Text
 
 Public Class Editor
 
@@ -13,10 +12,9 @@ Public Class Editor
 
     'https://stackoverflow.com/a/3448307
     Public Function ReadAllText(ByVal path As String)
-        Dim text = ""
         Dim inStream = New FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
         Dim streamReader = New StreamReader(inStream)
-        text = streamReader.ReadToEnd()
+        Dim text As String = streamReader.ReadToEnd()
         streamReader.Dispose()
         inStream.Dispose()
         Return text
@@ -206,4 +204,5 @@ Public Class Editor
         End If
         Process.Start(siteRoot & "\out\" & rel)
     End Sub
+
 End Class

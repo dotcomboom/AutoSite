@@ -9,10 +9,9 @@ Public Module Apricot
 
     'https://stackoverflow.com/a/3448307
     Public Function ReadAllText(ByVal path As String)
-        Dim text = ""
         Dim inStream = New FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
         Dim streamReader = New StreamReader(inStream)
-        text = streamReader.ReadToEnd()
+        Dim text As String = streamReader.ReadToEnd()
         streamReader.Dispose()
         inStream.Dispose()
         Return text
@@ -59,6 +58,7 @@ Public Module Apricot
 
     Public Class ApricotOutput
         Private _html As String
+
         Public Property HTML() As String
             Get
                 Return _html
@@ -69,6 +69,7 @@ Public Module Apricot
         End Property
 
         Private _attribs As New Dictionary(Of String, String)
+
         Public Property Attributes() As Dictionary(Of String, String)
             Get
                 Return _attribs
@@ -77,10 +78,12 @@ Public Module Apricot
                 _attribs = value
             End Set
         End Property
+
     End Class
 
     Public Class TNode
         Private _relPath As String
+
         Public Property relPath() As String
             Get
                 Return _relPath
@@ -91,6 +94,7 @@ Public Module Apricot
         End Property
 
         Private _Attribute As String
+
         Public Property Attribute() As String
             Get
                 Return _Attribute
@@ -101,6 +105,7 @@ Public Module Apricot
         End Property
 
         Private _Value As String
+
         Public Property Value() As String
             Get
                 Return _Value
@@ -109,6 +114,7 @@ Public Module Apricot
                 _Value = value
             End Set
         End Property
+
     End Class
 
     Private Sub doLog(ByVal msg As String, Optional ByVal worker As Object = Nothing, Optional ByVal progress As Integer = 0)
@@ -286,17 +292,19 @@ Public Module Apricot
 
         If Not worker Is Nothing Then
             For Each attrib In attribs
-                Dim tn As New TNode
-                tn.relPath = inputFilename
-                tn.Attribute = attrib.Key
-                tn.Value = attrib.Value
+                Dim tn As New TNode With {
+                    .relPath = inputFilename,
+                    .Attribute = attrib.Key,
+                    .Value = attrib.Value
+                }
                 worker.ReportProgress(20, tn)
             Next
         End If
 
-        Dim output As New ApricotOutput
-        output.HTML = newHtml
-        output.Attributes = attribs
+        Dim output As New ApricotOutput With {
+            .HTML = newHtml,
+            .Attributes = attribs
+        }
         Return output
     End Function
 
@@ -332,8 +340,9 @@ Public Module Apricot
                 doLog("Saving file", worker, 100)
                 System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(out & rel))
                 My.Computer.FileSystem.WriteAllText(Path.Combine(out, rel), html, False, encodingType)
-                Dim info As FileInfo = New FileInfo(Path.Combine(out, rel))
-                info.LastWriteTime = modifiedDate
+                Dim info As FileInfo = New FileInfo(Path.Combine(out, rel)) With {
+                    .LastWriteTime = modifiedDate
+                }
             Catch ex As InvalidCastException
                 doLog("Skipped", worker, 100)
             End Try
@@ -391,4 +400,5 @@ Public Module Apricot
 
         doLog("Finished in " & Math.Round(Now.Subtract(startTime).TotalSeconds, 3) & " seconds.", worker, 100)
     End Sub
+
 End Module

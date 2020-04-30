@@ -43,4 +43,5 @@
     Private Sub Recent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Recent1.Click, Recent2.Click, Recent3.Click, Recent4.Click, Recent5.Click
         Main.openSite(sender.Tag, False)
     End Sub
+
 End Class

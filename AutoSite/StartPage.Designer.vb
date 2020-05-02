@@ -106,9 +106,9 @@ Partial Class StartPage
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(157, 31)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 21)
+        Me.Label2.Size = New System.Drawing.Size(101, 21)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Recent Sites"
+        Me.Label2.Text = "Open recent"
         '
         'Recent2
         '

@@ -15,8 +15,8 @@
             Recent1.Text = My.Settings.recents(0)
             Recent1.Tag = My.Settings.recents(0)
         Else
-            R1.Show()
-            R1.Text = "You have no recent sites yet."
+            RWarn.Show()
+            RWarn.Text = "You have no recent sites yet."
         End If
         If My.Settings.recents.Count > 1 Then
             Recent2.Text = My.Settings.recents(1)
@@ -36,8 +36,11 @@
         End If
     End Sub
 
-    Private Sub OpenLink_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles OpenLink.LinkClicked
-        Main.OpenFolder_Click()
+    Private Sub NewSite_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles NewSite.LinkClicked
+        Main.browseForSite(True)
+    End Sub
+    Private Sub OpenSite_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles OpenSite.LinkClicked
+        Main.browseForSite(False)
     End Sub
 
     Private Sub Recent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Recent1.Click, Recent2.Click, Recent3.Click, Recent4.Click, Recent5.Click

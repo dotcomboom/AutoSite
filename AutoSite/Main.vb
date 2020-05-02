@@ -285,12 +285,25 @@ Public Class Main
         End If
     End Sub
 
-    Public Sub OpenFolder_Click() Handles OpenFolder.Click, NewSite.Click
+    Public Sub browseForSite(ByVal n As Boolean)
         If FolderBrowser.ShowDialog(Me) = DialogResult.OK Then
             If My.Computer.FileSystem.DirectoryExists(FolderBrowser.SelectedPath) Then
                 openSite(FolderBrowser.SelectedPath, False)
             End If
+            If n Then
+                If QuickstartMnu.Enabled Then
+                    Dim q As New Quickstart
+                    q.ShowDialog()
+                End If
+            End If
         End If
+    End Sub
+    Private Sub NewSite_Click(sender As Object, e As EventArgs) Handles NewSite.Click
+        browseForSite(True)
+    End Sub
+
+    Private Sub OpenFolder_Click(sender As Object, e As EventArgs) Handles OpenFolder.Click
+        browseForSite(False)
     End Sub
 
     Private Sub AboutItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles AboutItem.Click

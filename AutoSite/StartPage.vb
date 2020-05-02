@@ -6,6 +6,7 @@
         Recent3.Visible = My.Settings.recents.Count > 2
         Recent4.Visible = My.Settings.recents.Count > 3
         Recent5.Visible = My.Settings.recents.Count > 4
+        RWarn.Visible = My.Settings.recents.Count = 0
         R1.Visible = My.Settings.recents.Count > 0
         R2.Visible = My.Settings.recents.Count > 1
         R3.Visible = My.Settings.recents.Count > 2
@@ -14,9 +15,6 @@
         If My.Settings.recents.Count > 0 Then
             Recent1.Text = My.Settings.recents(0)
             Recent1.Tag = My.Settings.recents(0)
-        Else
-            RWarn.Show()
-            RWarn.Text = "You have no recent sites yet."
         End If
         If My.Settings.recents.Count > 1 Then
             Recent2.Text = My.Settings.recents(1)

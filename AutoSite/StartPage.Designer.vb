@@ -31,7 +31,6 @@ Partial Class StartPage
         Me.Recent3 = New System.Windows.Forms.LinkLabel()
         Me.Recent4 = New System.Windows.Forms.LinkLabel()
         Me.Recent5 = New System.Windows.Forms.LinkLabel()
-        Me.RWarn = New System.Windows.Forms.Label()
         Me.OpenSite = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -40,6 +39,7 @@ Partial Class StartPage
         Me.R3 = New System.Windows.Forms.PictureBox()
         Me.R4 = New System.Windows.Forms.PictureBox()
         Me.R5 = New System.Windows.Forms.PictureBox()
+        Me.RWarn = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.R1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -186,17 +186,6 @@ Partial Class StartPage
         Me.Recent5.Text = "Recent 5"
         Me.Recent5.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'RWarn
-        '
-        Me.RWarn.AutoSize = True
-        Me.RWarn.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RWarn.ForeColor = System.Drawing.Color.White
-        Me.RWarn.Location = New System.Drawing.Point(161, 66)
-        Me.RWarn.Name = "RWarn"
-        Me.RWarn.Size = New System.Drawing.Size(16, 15)
-        Me.RWarn.TabIndex = 14
-        Me.RWarn.Text = "1."
-        '
         'OpenSite
         '
         Me.OpenSite.ActiveLinkColor = System.Drawing.Color.Gainsboro
@@ -287,6 +276,17 @@ Partial Class StartPage
         Me.R5.TabIndex = 26
         Me.R5.TabStop = False
         '
+        'RWarn
+        '
+        Me.RWarn.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RWarn.ForeColor = System.Drawing.Color.White
+        Me.RWarn.Location = New System.Drawing.Point(158, 66)
+        Me.RWarn.Name = "RWarn"
+        Me.RWarn.Size = New System.Drawing.Size(331, 57)
+        Me.RWarn.TabIndex = 14
+        Me.RWarn.Text = "Sites you work on will show up here for quick access."
+        Me.RWarn.Visible = False
+        '
         'StartPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -300,7 +300,6 @@ Partial Class StartPage
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.OpenSite)
-        Me.Controls.Add(Me.RWarn)
         Me.Controls.Add(Me.Recent5)
         Me.Controls.Add(Me.Recent4)
         Me.Controls.Add(Me.Recent3)
@@ -309,6 +308,7 @@ Partial Class StartPage
         Me.Controls.Add(Me.Recent1)
         Me.Controls.Add(Me.NewSite)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.RWarn)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "StartPage"
         Me.Size = New System.Drawing.Size(562, 374)
@@ -331,7 +331,6 @@ Partial Class StartPage
     Friend WithEvents Recent3 As System.Windows.Forms.LinkLabel
     Friend WithEvents Recent4 As System.Windows.Forms.LinkLabel
     Friend WithEvents Recent5 As System.Windows.Forms.LinkLabel
-    Friend WithEvents RWarn As System.Windows.Forms.Label
     Friend WithEvents OpenSite As LinkLabel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
@@ -340,4 +339,5 @@ Partial Class StartPage
     Friend WithEvents R3 As PictureBox
     Friend WithEvents R4 As PictureBox
     Friend WithEvents R5 As PictureBox
+    Friend WithEvents RWarn As Label
 End Class

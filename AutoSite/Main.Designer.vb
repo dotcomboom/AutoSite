@@ -193,7 +193,7 @@ Partial Class Main
         'FileMenu
         '
         Me.FileMenu.Index = 0
-        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewSite, Me.OpenFolder, Me.OpenRecent, Me.CloseFile, Me.CloseSite, Me.FileSep2, Me.Save, Me.SaveAll, Me.FileSep3, Me.InstallPackMnu, Me.FileSep4, Me.ExitItem})
+        Me.FileMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewSite, Me.OpenFolder, Me.CloseFile, Me.CloseSite, Me.FileSep2, Me.Save, Me.SaveAll, Me.FileSep3, Me.OpenRecent, Me.InstallPackMnu, Me.FileSep4, Me.ExitItem})
         resources.ApplyResources(Me.FileMenu, "FileMenu")
         '
         'NewSite
@@ -208,7 +208,7 @@ Partial Class Main
         '
         'OpenRecent
         '
-        Me.OpenRecent.Index = 2
+        Me.OpenRecent.Index = 8
         Me.OpenRecent.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Recent1, Me.Recent2, Me.Recent3, Me.Recent4, Me.Recent5, Me.RecentSep, Me.ClearRecents})
         resources.ApplyResources(Me.OpenRecent, "OpenRecent")
         '
@@ -249,32 +249,32 @@ Partial Class Main
         '
         'CloseFile
         '
-        Me.CloseFile.Index = 3
+        Me.CloseFile.Index = 2
         resources.ApplyResources(Me.CloseFile, "CloseFile")
         '
         'CloseSite
         '
         resources.ApplyResources(Me.CloseSite, "CloseSite")
-        Me.CloseSite.Index = 4
+        Me.CloseSite.Index = 3
         '
         'FileSep2
         '
-        Me.FileSep2.Index = 5
+        Me.FileSep2.Index = 4
         resources.ApplyResources(Me.FileSep2, "FileSep2")
         '
         'Save
         '
-        Me.Save.Index = 6
+        Me.Save.Index = 5
         resources.ApplyResources(Me.Save, "Save")
         '
         'SaveAll
         '
-        Me.SaveAll.Index = 7
+        Me.SaveAll.Index = 6
         resources.ApplyResources(Me.SaveAll, "SaveAll")
         '
         'FileSep3
         '
-        Me.FileSep3.Index = 8
+        Me.FileSep3.Index = 7
         resources.ApplyResources(Me.FileSep3, "FileSep3")
         '
         'InstallPackMnu

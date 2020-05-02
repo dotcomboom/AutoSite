@@ -60,6 +60,7 @@ Public Class Main
         BuildSite.Enabled = (SiteTree.Nodes.Count > 0)
         Build.Enabled = (SiteTree.Nodes.Count > 0)
         SanitaryBuild.Enabled = (SiteTree.Nodes.Count > 0)
+        SanitaryBuildBtn.Enabled = (SiteTree.Nodes.Count > 0)
         InstallPackMnu.Enabled = (SiteTree.Nodes.Count > 0)
         QuickstartMnu.Enabled = (SiteTree.Nodes.Count > 0)
 

@@ -191,10 +191,17 @@ Public Class Editor
     End Sub
 
     Public Sub doViewOutput() Handles ViewOutput.Click
-        Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+
+        If Not Main.PreviewPanel.Checked Then
+            Main.PreviewPanel.Checked = True
+            Main.panelUpdate()
+        End If
+
         If rel.EndsWith(".md") Then
             rel = Apricot.ReplaceLast(rel, ".md", ".html")
         End If
+
         Main.Preview.Navigate(siteRoot & "\out\" & rel)
     End Sub
 

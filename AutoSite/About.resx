@@ -888,6 +888,7 @@ SOFTWARE.</value>
    - Legacy build engine removed
    - Debug stuff removed from internal template
    - Build menu renamed to Tools
+   - Preview panel will open when a button such as Preview, View Output or Browse Site is pressed
 
 1.0 RC2:
    + View Output in Default Browser added to editor

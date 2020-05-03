@@ -30,6 +30,12 @@ Partial Class Main
         Me.FileMenu = New System.Windows.Forms.MenuItem()
         Me.NewSite = New System.Windows.Forms.MenuItem()
         Me.OpenFolder = New System.Windows.Forms.MenuItem()
+        Me.CloseFile = New System.Windows.Forms.MenuItem()
+        Me.CloseSite = New System.Windows.Forms.MenuItem()
+        Me.FileSep2 = New System.Windows.Forms.MenuItem()
+        Me.Save = New System.Windows.Forms.MenuItem()
+        Me.SaveAll = New System.Windows.Forms.MenuItem()
+        Me.FileSep3 = New System.Windows.Forms.MenuItem()
         Me.OpenRecent = New System.Windows.Forms.MenuItem()
         Me.Recent1 = New System.Windows.Forms.MenuItem()
         Me.Recent2 = New System.Windows.Forms.MenuItem()
@@ -38,12 +44,6 @@ Partial Class Main
         Me.Recent5 = New System.Windows.Forms.MenuItem()
         Me.RecentSep = New System.Windows.Forms.MenuItem()
         Me.ClearRecents = New System.Windows.Forms.MenuItem()
-        Me.CloseFile = New System.Windows.Forms.MenuItem()
-        Me.CloseSite = New System.Windows.Forms.MenuItem()
-        Me.FileSep2 = New System.Windows.Forms.MenuItem()
-        Me.Save = New System.Windows.Forms.MenuItem()
-        Me.SaveAll = New System.Windows.Forms.MenuItem()
-        Me.FileSep3 = New System.Windows.Forms.MenuItem()
         Me.InstallPackMnu = New System.Windows.Forms.MenuItem()
         Me.FileSep4 = New System.Windows.Forms.MenuItem()
         Me.ExitItem = New System.Windows.Forms.MenuItem()
@@ -206,6 +206,36 @@ Partial Class Main
         Me.OpenFolder.Index = 1
         resources.ApplyResources(Me.OpenFolder, "OpenFolder")
         '
+        'CloseFile
+        '
+        Me.CloseFile.Index = 2
+        resources.ApplyResources(Me.CloseFile, "CloseFile")
+        '
+        'CloseSite
+        '
+        resources.ApplyResources(Me.CloseSite, "CloseSite")
+        Me.CloseSite.Index = 3
+        '
+        'FileSep2
+        '
+        Me.FileSep2.Index = 4
+        resources.ApplyResources(Me.FileSep2, "FileSep2")
+        '
+        'Save
+        '
+        Me.Save.Index = 5
+        resources.ApplyResources(Me.Save, "Save")
+        '
+        'SaveAll
+        '
+        Me.SaveAll.Index = 6
+        resources.ApplyResources(Me.SaveAll, "SaveAll")
+        '
+        'FileSep3
+        '
+        Me.FileSep3.Index = 7
+        resources.ApplyResources(Me.FileSep3, "FileSep3")
+        '
         'OpenRecent
         '
         Me.OpenRecent.Index = 8
@@ -246,36 +276,6 @@ Partial Class Main
         '
         Me.ClearRecents.Index = 6
         resources.ApplyResources(Me.ClearRecents, "ClearRecents")
-        '
-        'CloseFile
-        '
-        Me.CloseFile.Index = 2
-        resources.ApplyResources(Me.CloseFile, "CloseFile")
-        '
-        'CloseSite
-        '
-        resources.ApplyResources(Me.CloseSite, "CloseSite")
-        Me.CloseSite.Index = 3
-        '
-        'FileSep2
-        '
-        Me.FileSep2.Index = 4
-        resources.ApplyResources(Me.FileSep2, "FileSep2")
-        '
-        'Save
-        '
-        Me.Save.Index = 5
-        resources.ApplyResources(Me.Save, "Save")
-        '
-        'SaveAll
-        '
-        Me.SaveAll.Index = 6
-        resources.ApplyResources(Me.SaveAll, "SaveAll")
-        '
-        'FileSep3
-        '
-        Me.FileSep3.Index = 7
-        resources.ApplyResources(Me.FileSep3, "FileSep3")
         '
         'InstallPackMnu
         '

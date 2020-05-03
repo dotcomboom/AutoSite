@@ -147,9 +147,14 @@ Public Class Editor
     End Sub
 
     Public Sub doPreview() Handles Preview.ButtonClick
-        Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
-        If Not Me.Parent.Text.StartsWith("in\") Then
+        If Not Main.PreviewPanel.Checked Then
+            Main.PreviewPanel.Checked = True
+            Main.panelUpdate()
+        End If
+
+        If Not Me.Parent.Text.StartsWith("pages\") Then
             Main.Preview.Navigate(Path.Combine(Main.SiteTree.Nodes(0).Text, "out\"))
             Main.Preview.DocumentText = Code.Text
         Else

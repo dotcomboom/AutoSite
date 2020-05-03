@@ -96,7 +96,7 @@
     Private Sub indexmd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles indexmd.Click
         If (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.md")) And (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.html")) Then
             Dim page = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: Home -->" & vbNewLine
-            My.Computer.FileSystem.WriteAllText(usite & "\pages\index.md", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
+            My.Computer.FileSystem.WriteAllText(usite & "\pages\index.md", page, False)
             Quickstart_Load()
         ElseIf My.Computer.FileSystem.FileExists(usite & "\pages\index.html") Then
             If MsgBox("index.html will be renamed to index.md. The path will be changed.", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "Switch to Markdown?") = MsgBoxResult.Ok Then
@@ -109,7 +109,7 @@
     Private Sub indexhtml_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles indexhtml.Click
         If (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.md")) And (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.html")) Then
             Dim page = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: Home -->" & vbNewLine
-            My.Computer.FileSystem.WriteAllText(usite & "\pages\index.html", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
+            My.Computer.FileSystem.WriteAllText(usite & "\pages\index.html", page, False)
             Quickstart_Load()
         ElseIf My.Computer.FileSystem.FileExists(usite & "\pages\index.md") Then
             If MsgBox("index.md will be renamed to index.html. The path will be changed.", MsgBoxStyle.OkCancel + MsgBoxStyle.Question, "Switch to HTML?") = MsgBoxResult.Ok Then

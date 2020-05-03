@@ -1091,6 +1091,10 @@ Public Class Main
     End Sub
 
     Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click, BrowseSitePreviewMnu.Click
+        If Not PreviewPanel.Checked Then
+            PreviewPanel.Checked = True
+            panelUpdate()
+        End If
         If My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.html") Then
             Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.html")
         Else

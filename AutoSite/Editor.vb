@@ -210,7 +210,7 @@ Public Class Editor
     End Sub
 
     Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
-        Dim rel = openFile.Replace(siteRoot & "\in\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
         If rel.EndsWith(".md") Then
             rel = Apricot.ReplaceLast(rel, ".md", ".html")
         End If

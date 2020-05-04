@@ -1097,6 +1097,10 @@ Public Class Main
         End If
         If My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.html") Then
             Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.html")
+        ElseIf My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.phtml") Then
+            Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.phtml", False)
+        ElseIf My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.php") Then
+            Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.php", False)
         Else
             If My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out\") Then
                 Dim html = My.Computer.FileSystem.GetFiles(SiteTree.Nodes(0).Text & "\out\", FileIO.SearchOption.SearchAllSubDirectories, "*.html")

@@ -889,6 +889,7 @@ SOFTWARE.</value>
    - Debug stuff removed from internal template
    - Build menu renamed to Tools
    - Preview panel will open when a button such as Preview, View Output or Browse Site is pressed
+   - Browse Site button is more intelligent; will use the first HTML file it finds in output if it can't find an HTML or PHP index page
 
 1.0 RC2:
    + View Output in Default Browser added to editor

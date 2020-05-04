@@ -50,24 +50,24 @@
                 MsgBox("AutoSite was not able to create the given subdirectory for some reason." & vbNewLine & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "Unable to copy files")
                 Exit Sub
             End Try
-            Dim dir = ""
-            If My.Computer.FileSystem.DirectoryExists(path) Then
-                dir = path
-            ElseIf My.Computer.FileSystem.FileExists(path) Then
-                dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
-            End If
-            If My.Computer.FileSystem.DirectoryExists(dir) Then
-                Main.AddFilesDialog.Title = "Add Files to " & dir
-                If Main.AddFilesDialog.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
-                    For Each file In Main.AddFilesDialog.FileNames
-                        Try
-                            My.Computer.FileSystem.CopyFile(file, System.IO.Path.Combine(dir, System.IO.Path.GetFileName(file)))
-                        Catch ex As Exception
-                            MsgBox(ex.Message)
-                        End Try
-                    Next
-                    'refreshTree(siteTree.Nodes(0))
-                End If
+        End If
+        Dim dir = ""
+        If My.Computer.FileSystem.DirectoryExists(path) Then
+            dir = path
+        ElseIf My.Computer.FileSystem.FileExists(path) Then
+            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
+        End If
+        If My.Computer.FileSystem.DirectoryExists(dir) Then
+            Main.AddFilesDialog.Title = "Add Files to " & dir
+            If Main.AddFilesDialog.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+                For Each file In Main.AddFilesDialog.FileNames
+                    Try
+                        My.Computer.FileSystem.CopyFile(file, System.IO.Path.Combine(dir, System.IO.Path.GetFileName(file)))
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+                Next
+                'refreshTree(siteTree.Nodes(0))
             End If
         End If
 

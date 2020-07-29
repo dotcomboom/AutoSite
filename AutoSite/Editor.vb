@@ -217,14 +217,6 @@ Public Class Editor
         Process.Start(siteRoot & "\out\" & rel)
     End Sub
 
-    Private Sub DefineAttribute_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub ReferenceAttribute_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
     Private Sub Autocomplete_Selecting(ByVal sender As System.Object, ByVal e As AutocompleteMenuNS.SelectingEventArgs) Handles Autocomplete.Selecting
         If e.Item.ImageIndex = 3 Then      ' Build option
             e.Cancel = True

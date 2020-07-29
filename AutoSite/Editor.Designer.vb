@@ -279,7 +279,7 @@ Partial Class Editor
         '
         'InsertConditional
         '
-        Me.InsertConditional.Index = 11
+        Me.InsertConditional.Index = 9
         resources.ApplyResources(Me.InsertConditional, "InsertConditional")
         '
         'Autocomplete

@@ -228,14 +228,10 @@ Public Class Editor
             If Code.GetLineText(Code.LineNumberStartValue - 1) = "" Then
                 Code.InsertText(e.Item.Text)
             Else
+                Code.Selection.Start = New Place(0, 0)
+                Code.Selection.End = New Place(0, 0)
                 Code.ProcessKey(Keys.End)
                 Code.InsertText(vbNewLine & e.Item.Text)
-                'Try
-                '    While Not Code.Lines(Code.LineNumberStartValue - 2).StartsWith("<!-- attrib")
-                '        Code.MoveSelectedLinesUp()
-                '    End While
-                'Catch ex As Exception
-                'End Try
                 If e.Item.Text.Contains("...") Then
                     Code.Selection.Start = New Place(e.Item.Text.IndexOf("..."), Code.Selection.FromLine)
                     Code.Selection.End = New Place(e.Item.Text.IndexOf("...") + 3, Code.Selection.FromLine)
@@ -264,7 +260,6 @@ Public Class Editor
                 items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "[#root#]", "Reference root", "Outputs the page's relative path to root. Can be used for paths to stylesheets, images, and other pages." & vbNewLine & vbNewLine & "Example: ../"))
                 'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & vbNewLine & vbNewLine & "Example: default"))
                 '  I mean referencing this is neat but pretty worthless imho
-                '  btw I like kougras they're cute
                 items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "[#modified#]", "Reference modified", "Outputs the page's last modified date." & vbNewLine & vbNewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
                 items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "[#path#]", "Reference path", "Outputs the page's path, relative from root." & vbNewLine & vbNewLine & "Example: about/index.md"))
             End If
@@ -292,15 +287,15 @@ Public Class Editor
                     End If
                     'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
                 Next
-            End If
+        End If
 
-            If Main.AttributeTree.Nodes.Count = 0 Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build to show more options", "Build", "Choosing this option will build your site and update the Attribute Map."))
+        If Main.AttributeTree.Nodes.Count = 0 Then
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build to show more options", "Build", "Choosing this option will build your site and update the Attribute Map."))
             ElseIf Not Me.Parent.Text.StartsWith("includes\") Then
                 items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert Conditional...", 4, "Insert Conditional...", "Insert Conditional", "Open the Insert Conditional dialog." & vbNewLine & "Conditionals allow you to output text if an attribute has a certain value."))
-            End If
+        End If
 
-            Autocomplete.SetAutocompleteItems(items)
+        Autocomplete.SetAutocompleteItems(items)
         End If
     End Sub
 End Class

@@ -139,7 +139,7 @@
     <value>AutoSite is powered by these most excellent open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
   - AutoComplete Menu: https://www.codeproject.com/articles/365974/autocomplete-menu (LGPLv3)
-  - CommonMark.NET: https://github.com/Knagis/CommonMark.NET (BSD-3 Clause)
+  - CommonMark.NET: https://github.com/Knagis/CommonMark.NET (BSD 3-Clause)
 
 Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced in the source) is licensed under the MIT License.
 

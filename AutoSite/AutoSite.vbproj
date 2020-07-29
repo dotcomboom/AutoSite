@@ -64,8 +64,9 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutocompleteMenu">
-      <HintPath>..\..\..\..\..\..\Downloads\AutocompleteMenuDemo\AutocompleteMenu.dll</HintPath>
+    <Reference Include="AutocompleteMenu, Version=1.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\AutocompleteMenu.dll</HintPath>
     </Reference>
     <Reference Include="CommonMark, Version=0.1.0.0, Culture=neutral, PublicKeyToken=001ef8810438905d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

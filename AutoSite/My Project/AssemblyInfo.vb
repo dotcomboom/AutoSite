@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("AutoSite")>
-<Assembly: AssemblyDescription("RC3")>
+<Assembly: AssemblyDescription("Final?")> 
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("AutoSite")>
 <Assembly: AssemblyCopyright("Copyright © dotcomboom 2020")>

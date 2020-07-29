@@ -879,7 +879,12 @@ SOFTWARE.</value>
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 RC3:
+    <value>1.0 Final?:
+   + New quick insert menu, press CTRL+Space in the editor
+   - Editor's auto indent will no longer affect existing lines
+   - Sanitary Build no longer displays a warning, as it only sends output files to the Recycle Bin
+
+1.0 RC3:
    + Modified date added as [#modified#]
    + Quickstart dialog added; get started with AutoSite faster
    + Pages folder now has the path pages\ instead of in\

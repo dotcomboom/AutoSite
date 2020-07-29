@@ -221,13 +221,13 @@
   <data name="RedoBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFaSURBVDhPY0AG////Z/v69Wvut2/fzrx8+fLnxYsX/wL5
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFaSURBVDhPY0AG////Z/v69Wvut2/fzrx8+fLnhQsX/gL5
         N4C48fv37wpA8f/IGKoNAj59+iQKFDy5/vid/7bVm/6zhc/7zxw6979e0dr/07Zd/v/167fnz998+M8Q
         PAeMUQwA2sz05cuXw40rT8MVoOOgzl3/H754B+ejGADkRO8+/wAumTnz0P8rD179v//83f/2NWf/s4bN
         A4vb127GacC2gI6dYImUqQdBkpeAfnYEKQLh1UduwQ3BagDQ/w/k0peDJQ5fefwfqNnh/fv3Ash+Rsco
         Bnz+/Pm+PNSAQ5fBBjiTZACQsxXmhYRJ+4Eh/vXqjx8/VIEh/x9kCDaMbkD03gsP4aY3rTwDUnAFZAjI
         JbgwVDs8Gg+0AUMczZDLoPQBVYYfABWKgDSANFJiCCg1DkJDpFKWgUMeGL3JUCWEAcyQvo0X/l++/xLk
-        ggqoFPEAZghuzQwMAA/c7Xh6QvTzAAAAAElFTkSuQmCC
+        ggqoFPEAZghuzQwMAAQG7XXd3E/CAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -321,14 +321,14 @@
   <data name="Find.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGISURBVDhPnZIxT8JQFIUb3Vwd/BkO/AQWAjtLhzKyknSF
-        1ISEH+DA0oUmOlQnkjrg0MmoAwyETZZqgguxNC3EQXK8pzzTmBYTOclL25f33d57ztP2CcDRZrMxkiR5
-        WC6Xn9PpdCvv8/V63Yui6FQdK5bAJwLfjcdjmKaJSqWCcrmMRqMB13URhuFCip2r43nJXxzP81Cr1eA4
-        DuYvc7wGbxiN7mEYBtrtdlqksBOBS0EQoFqt4unxGasw+rUWi/e0CDvhOArLxE3btmFZVg7+WeyE49AT
-        hWWS2d1Op4Mb97YQ5uI49ITGKiyTVL3udrsYDJxCmIue0Fimo7BMMkJrOByi2Wwi/FgVFqCxTIcRKyxT
-        HMdnk8lkq+s6+v1+rgiNZTqMmPdEYTtJ/sfSwZXv+2kKLMJO+Ed6YlkX6T4j5j3hZVNoHuaTnXAcekJj
-        mQ4jlnMOL5tCi2F+cxx5tmgs05H3nqySwnbaB3NfHflbctg+GKZms9lXvV4/DKZktksWYSf/hjVN+wb5
-        NP3HJh2gjAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGHSURBVDhPnZI/S8NQFMWDbq4OfgyHfoQuJd27ZEjHrIWu
+        KREK/QAOXbI0oEN0KtShDplEHToEutklCnEppqF/cLAc70mfBEkq2AOPJI/3u7n3nKftE4CjzWZjrlar
+        h/l8/hmG4VbeZ+v1upem6ak6Vi6BTwS+m0wmaLfbqNVqqFaraDab8H0fSZLEUuxcHS9K/uKNRiPU63V4
+        nofZywyv0RvG43uYpgnbtrMipZ0IXImiCLqu4+nxGYsk/bXi+D0rwk44jsJycdN1XTiOU4B/FjvhOPRE
+        Yblkdr/T6eDGvy2FuTgOPaGxCsslVa+73S4GA68U5qInNJbpKCyXjNAaDoewLAvJx6K0AI1lOoxYYbmW
+        y+WZxLc1DAP9fr9QhMYyHUbMe6KwnST/Y+ngKgiCLAUWYSf8Iz1xnItsnxHznvCyKbQI88lOOA49obFM
+        hxHLOY+XTaHlML85jjxbNJbpyHtPVkVhO+2Dua+O/C057B4MU9Pp9KvRaBwGUzLbJYuwk3/DmqZ9A9vN
+        /bszhkpkAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="Find.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -400,7 +400,7 @@
     <value>Preview</value>
   </data>
   <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
     <value>Live Preview</value>
@@ -481,7 +481,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        DAAAAk1TRnQBSQFMAgEBBQEAASABAAEgAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DAAAAk1TRnQBSQFMAgEBBQEAASgBAAEoAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -541,9 +541,6 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Code.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="Code.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Courier New, 9.75pt</value>
   </data>
   <data name="Code.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>

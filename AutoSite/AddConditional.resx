@@ -193,7 +193,7 @@
     <value>1</value>
   </data>
   <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 335</value>
+    <value>135, 274</value>
   </data>
   <data name="TableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -217,58 +217,28 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="TableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="OK_Button" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Cancel_Button" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="Explanation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="Explanation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 6</value>
-  </data>
-  <data name="Explanation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="Explanation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 76</value>
-  </data>
-  <data name="Explanation.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Explanation.Text" xml:space="preserve">
-    <value>Conditionals tell the build engine to display content based on whether the page's attribute is or isn't some specific text. It's most useful in templates, where one template can be rendered out differently based off of pages' attributes.</value>
-  </data>
-  <data name="&gt;&gt;Explanation.Name" xml:space="preserve">
-    <value>Explanation</value>
-  </data>
-  <data name="&gt;&gt;Explanation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Explanation.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Explanation.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <data name="AttLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="AttLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 91</value>
+    <value>12, 12</value>
   </data>
   <data name="AttLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
   <data name="AttLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 15</value>
+    <value>105, 15</value>
   </data>
   <data name="AttLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="AttLabel.Text" xml:space="preserve">
-    <value>Attribute to query:</value>
+    <value>Attribute to check:</value>
   </data>
   <data name="&gt;&gt;AttLabel.Name" xml:space="preserve">
     <value>AttLabel</value>
@@ -286,7 +256,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="Attribute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 88</value>
+    <value>151, 9</value>
   </data>
   <data name="Attribute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -321,7 +291,7 @@
 </value>
   </data>
   <data name="AttIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 91</value>
+    <value>130, 12</value>
   </data>
   <data name="AttIcon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -351,19 +321,19 @@
     <value>True</value>
   </data>
   <data name="PassLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 169</value>
+    <value>10, 96</value>
   </data>
   <data name="PassLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
   <data name="PassLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 15</value>
+    <value>240, 15</value>
   </data>
   <data name="PassLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="PassLabel.Text" xml:space="preserve">
-    <value>If conditional passes, render out:</value>
+    <value>If the attribute passes this condition, output:</value>
   </data>
   <data name="&gt;&gt;PassLabel.Name" xml:space="preserve">
     <value>PassLabel</value>
@@ -383,8 +353,11 @@
   <data name="Display.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
     <value>27, 14</value>
   </data>
+  <data name="Display.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 9.75pt</value>
+  </data>
   <data name="Display.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 189</value>
+    <value>13, 116</value>
   </data>
   <data name="Display.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -408,7 +381,7 @@
 </value>
   </data>
   <data name="Display.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 141</value>
+    <value>292, 154</value>
   </data>
   <data name="Display.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -429,7 +402,7 @@
     <value>True</value>
   </data>
   <data name="NotChk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 121</value>
+    <value>14, 42</value>
   </data>
   <data name="NotChk.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -459,7 +432,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 119</value>
+    <value>71, 40</value>
   </data>
   <data name="Value.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -489,7 +462,7 @@
     <value>True</value>
   </data>
   <data name="Empty.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 147</value>
+    <value>71, 68</value>
   </data>
   <data name="Empty.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -522,10 +495,13 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>314, 372</value>
+    <value>314, 321</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>

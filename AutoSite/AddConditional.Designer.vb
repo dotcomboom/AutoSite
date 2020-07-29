@@ -22,20 +22,19 @@ Partial Class AddConditional
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddConditional))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
-        Me.OK_Button = New System.Windows.Forms.Button
-        Me.Cancel_Button = New System.Windows.Forms.Button
-        Me.Explanation = New System.Windows.Forms.Label
-        Me.AttLabel = New System.Windows.Forms.Label
-        Me.Attribute = New System.Windows.Forms.ComboBox
-        Me.AttIcon = New System.Windows.Forms.PictureBox
-        Me.PassLabel = New System.Windows.Forms.Label
-        Me.Display = New FastColoredTextBoxNS.FastColoredTextBox
-        Me.NotChk = New System.Windows.Forms.CheckBox
-        Me.Value = New System.Windows.Forms.ComboBox
-        Me.Empty = New System.Windows.Forms.CheckBox
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.OK_Button = New System.Windows.Forms.Button()
+        Me.Cancel_Button = New System.Windows.Forms.Button()
+        Me.AttLabel = New System.Windows.Forms.Label()
+        Me.Attribute = New System.Windows.Forms.ComboBox()
+        Me.AttIcon = New System.Windows.Forms.PictureBox()
+        Me.PassLabel = New System.Windows.Forms.Label()
+        Me.Display = New FastColoredTextBoxNS.FastColoredTextBox()
+        Me.NotChk = New System.Windows.Forms.CheckBox()
+        Me.Value = New System.Windows.Forms.ComboBox()
+        Me.Empty = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.AttIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Display, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,11 +62,6 @@ Partial Class AddConditional
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.UseVisualStyleBackColor = False
         '
-        'Explanation
-        '
-        resources.ApplyResources(Me.Explanation, "Explanation")
-        Me.Explanation.Name = "Explanation"
-        '
         'AttLabel
         '
         resources.ApplyResources(Me.AttLabel, "AttLabel")
@@ -94,7 +88,7 @@ Partial Class AddConditional
         '
         resources.ApplyResources(Me.Display, "Display")
         Me.Display.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Display.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Display.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.iconTheme
         Me.Display.BackBrush = Nothing
         Me.Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Display.CharHeight = 14
@@ -147,7 +141,6 @@ Partial Class AddConditional
         Me.Controls.Add(Me.AttIcon)
         Me.Controls.Add(Me.Attribute)
         Me.Controls.Add(Me.AttLabel)
-        Me.Controls.Add(Me.Explanation)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimizeBox = False
         Me.Name = "AddConditional"
@@ -163,7 +156,6 @@ Partial Class AddConditional
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents OK_Button As System.Windows.Forms.Button
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
-    Friend WithEvents Explanation As System.Windows.Forms.Label
     Friend WithEvents AttLabel As System.Windows.Forms.Label
     Friend WithEvents Attribute As System.Windows.Forms.ComboBox
     Friend WithEvents AttIcon As System.Windows.Forms.PictureBox

@@ -290,7 +290,7 @@ Public Class Editor
             End If
 
             If Main.AttributeTree.Nodes.Count = 0 Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build to show more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & " your site and the Attribute Map is populated."))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build to show more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & "your site and the Attribute Map is populated."))
             ElseIf Not Me.Parent.Text.StartsWith("includes\") Then
                 items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert Conditional...", 4, "Insert Conditional...", "Insert Conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
             End If

@@ -138,6 +138,7 @@
   <data name="LicenseBox.Text" xml:space="preserve">
     <value>AutoSite is powered by these most excellent open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox
+  - AutoComplete Menu: https://www.codeproject.com/articles/365974/autocomplete-menu
   - CommonMark.NET: https://github.com/Knagis/CommonMark.NET
 
 Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced as needed in the source) is licensed under the MIT License.

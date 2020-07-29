@@ -22,43 +22,45 @@ Partial Class Editor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Editor))
-        Me.Strip = New System.Windows.Forms.ToolStrip
-        Me.SaveBtn = New System.Windows.Forms.ToolStripSplitButton
-        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.SaveAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.Sep = New System.Windows.Forms.ToolStripSeparator
-        Me.UndoBtn = New System.Windows.Forms.ToolStripButton
-        Me.RedoBtn = New System.Windows.Forms.ToolStripButton
-        Me.Sep2 = New System.Windows.Forms.ToolStripSeparator
-        Me.CutBtn = New System.Windows.Forms.ToolStripButton
-        Me.CopyBtn = New System.Windows.Forms.ToolStripButton
-        Me.PasteBtn = New System.Windows.Forms.ToolStripButton
-        Me.CloseBtn = New System.Windows.Forms.ToolStripButton
-        Me.Sep3 = New System.Windows.Forms.ToolStripSeparator
-        Me.Find = New System.Windows.Forms.ToolStripButton
-        Me.GTo = New System.Windows.Forms.ToolStripButton
-        Me.Replace = New System.Windows.Forms.ToolStripButton
-        Me.Sep4 = New System.Windows.Forms.ToolStripSeparator
-        Me.Preview = New System.Windows.Forms.ToolStripSplitButton
-        Me.LivePreview = New System.Windows.Forms.ToolStripMenuItem
-        Me.Sep5 = New System.Windows.Forms.ToolStripSeparator
-        Me.Build = New System.Windows.Forms.ToolStripButton
-        Me.ViewOutput = New System.Windows.Forms.ToolStripSplitButton
-        Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem
-        Me.Code = New FastColoredTextBoxNS.FastColoredTextBox
-        Me.Context = New System.Windows.Forms.ContextMenu
-        Me.Undo = New System.Windows.Forms.MenuItem
-        Me.Redo = New System.Windows.Forms.MenuItem
-        Me.ConSep = New System.Windows.Forms.MenuItem
-        Me.Cut = New System.Windows.Forms.MenuItem
-        Me.Copy = New System.Windows.Forms.MenuItem
-        Me.Paste = New System.Windows.Forms.MenuItem
-        Me.ConSep2 = New System.Windows.Forms.MenuItem
-        Me.SelectAll = New System.Windows.Forms.MenuItem
-        Me.ConSep3 = New System.Windows.Forms.MenuItem
-        Me.InsertConditional = New System.Windows.Forms.MenuItem
+        Me.Strip = New System.Windows.Forms.ToolStrip()
+        Me.SaveBtn = New System.Windows.Forms.ToolStripSplitButton()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Sep = New System.Windows.Forms.ToolStripSeparator()
+        Me.UndoBtn = New System.Windows.Forms.ToolStripButton()
+        Me.RedoBtn = New System.Windows.Forms.ToolStripButton()
+        Me.Sep2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutBtn = New System.Windows.Forms.ToolStripButton()
+        Me.CopyBtn = New System.Windows.Forms.ToolStripButton()
+        Me.PasteBtn = New System.Windows.Forms.ToolStripButton()
+        Me.CloseBtn = New System.Windows.Forms.ToolStripButton()
+        Me.Sep3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Find = New System.Windows.Forms.ToolStripButton()
+        Me.GTo = New System.Windows.Forms.ToolStripButton()
+        Me.Replace = New System.Windows.Forms.ToolStripButton()
+        Me.Sep4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Preview = New System.Windows.Forms.ToolStripSplitButton()
+        Me.LivePreview = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Sep5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Build = New System.Windows.Forms.ToolStripButton()
+        Me.ViewOutput = New System.Windows.Forms.ToolStripSplitButton()
+        Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Code = New FastColoredTextBoxNS.FastColoredTextBox()
+        Me.Context = New System.Windows.Forms.ContextMenu()
+        Me.Undo = New System.Windows.Forms.MenuItem()
+        Me.Redo = New System.Windows.Forms.MenuItem()
+        Me.ConSep = New System.Windows.Forms.MenuItem()
+        Me.Cut = New System.Windows.Forms.MenuItem()
+        Me.Copy = New System.Windows.Forms.MenuItem()
+        Me.Paste = New System.Windows.Forms.MenuItem()
+        Me.ConSep2 = New System.Windows.Forms.MenuItem()
+        Me.SelectAll = New System.Windows.Forms.MenuItem()
+        Me.ConSep3 = New System.Windows.Forms.MenuItem()
+        Me.InsertConditional = New System.Windows.Forms.MenuItem()
+        Me.Autocomplete = New AutocompleteMenuNS.AutocompleteMenu()
+        Me.PopupIcons = New System.Windows.Forms.ImageList(Me.components)
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -203,7 +205,9 @@ Partial Class Editor
         '
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
+        Me.Autocomplete.SetAutocompleteMenu(Me.Code, Me.Autocomplete)
         Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Code.AutoIndentExistingLines = False
         resources.ApplyResources(Me.Code, "Code")
         Me.Code.BackBrush = Nothing
         Me.Code.CharHeight = 14
@@ -275,8 +279,27 @@ Partial Class Editor
         '
         'InsertConditional
         '
-        Me.InsertConditional.Index = 9
+        Me.InsertConditional.Index = 11
         resources.ApplyResources(Me.InsertConditional, "InsertConditional")
+        '
+        'Autocomplete
+        '
+        Me.Autocomplete.Colors = CType(resources.GetObject("Autocomplete.Colors"), AutocompleteMenuNS.Colors)
+        Me.Autocomplete.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Autocomplete.ImageList = Me.PopupIcons
+        Me.Autocomplete.Items = New String() {"-"}
+        Me.Autocomplete.SearchPattern = "[@]"
+        Me.Autocomplete.TargetControlWrapper = Nothing
+        '
+        'PopupIcons
+        '
+        Me.PopupIcons.ImageStream = CType(resources.GetObject("PopupIcons.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.PopupIcons.TransparentColor = System.Drawing.Color.Transparent
+        Me.PopupIcons.Images.SetKeyName(0, "Reference")
+        Me.PopupIcons.Images.SetKeyName(1, "Define")
+        Me.PopupIcons.Images.SetKeyName(2, "Lightbulb")
+        Me.PopupIcons.Images.SetKeyName(3, "Build")
+        Me.PopupIcons.Images.SetKeyName(4, "Conditional")
         '
         'Editor
         '
@@ -327,5 +350,7 @@ Partial Class Editor
     Friend WithEvents Sep5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ViewOutput As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents ViewinDefaultBrowser As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Autocomplete As AutocompleteMenuNS.AutocompleteMenu
+    Friend WithEvents PopupIcons As System.Windows.Forms.ImageList
 
 End Class

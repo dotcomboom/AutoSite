@@ -68,17 +68,17 @@ Public Class Editor
             Me.Parent.Text = openFile.Replace(siteRoot & "\", "") & "*"
             SaveBtn.Enabled = True
         End If
-        If My.Settings.SyntaxHighlight Then
-            Dim GreenStyle As New TextStyle(Brushes.Green, Nothing, FontStyle.Regular)
-            Dim TurqStyle As New TextStyle(Brushes.Turquoise, Nothing, FontStyle.Regular)
-            'clear style of changed range
-            'Code.Range.ClearStyle(TurqStyle)
-            'Code.Range.ClearStyle(GreenStyle)
-            'comment highlighting
-            Code.Range.SetStyle(TurqStyle, "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]", RegexOptions.Singleline)
-            Code.Range.SetStyle(GreenStyle, "\[#.*?#\]", RegexOptions.Singleline)
-            'for atteql, value, text in re.findall(r'\[(.*)=(.*?)\](.*)\[\/\1.*\]', template):
-        End If
+        'If My.Settings.SyntaxHighlight Then
+        '    Dim GreenStyle As New TextStyle(Brushes.Green, Nothing, FontStyle.Regular)
+        '    Dim TurqStyle As New TextStyle(Brushes.Turquoise, Nothing, FontStyle.Regular)
+        '    'clear style of changed range
+        '    'Code.Range.ClearStyle(TurqStyle)
+        '    'Code.Range.ClearStyle(GreenStyle)
+        '    'comment highlighting
+        '    Code.Range.SetStyle(TurqStyle, "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]", RegexOptions.Singleline)
+        '    Code.Range.SetStyle(GreenStyle, "\[#.*?#\]", RegexOptions.Singleline)
+        '    'for atteql, value, text in re.findall(r'\[(.*)=(.*?)\](.*)\[\/\1.*\]', template):
+        'End If
         Try
             If My.Settings.LivePreview Then
                 If Me.Parent.Text.Replace("*", "").EndsWith(".md") Then
@@ -217,4 +217,98 @@ Public Class Editor
         Process.Start(siteRoot & "\out\" & rel)
     End Sub
 
+    Private Sub DefineAttribute_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub ReferenceAttribute_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Autocomplete_Selecting(ByVal sender As System.Object, ByVal e As AutocompleteMenuNS.SelectingEventArgs) Handles Autocomplete.Selecting
+        If e.Item.ImageIndex = 3 Then      ' Build option
+            e.Cancel = True
+            Autocomplete.Close()
+            Main.doBuild()
+        ElseIf e.Item.ImageIndex = 1 Then  ' Define attribute
+            e.Cancel = True
+
+            If Code.GetLineText(Code.LineNumberStartValue - 1) = "" Then
+                Code.InsertText(e.Item.Text)
+            Else
+                Code.ProcessKey(Keys.End)
+                Code.InsertText(vbNewLine & e.Item.Text)
+                'Try
+                '    While Not Code.Lines(Code.LineNumberStartValue - 2).StartsWith("<!-- attrib")
+                '        Code.MoveSelectedLinesUp()
+                '    End While
+                'Catch ex As Exception
+                'End Try
+                If e.Item.Text.Contains("...") Then
+                    Code.Selection.Start = New Place(e.Item.Text.IndexOf("..."), Code.Selection.FromLine)
+                    Code.Selection.End = New Place(e.Item.Text.IndexOf("...") + 3, Code.Selection.FromLine)
+                End If
+            End If
+            Autocomplete.Close()
+        ElseIf e.Item.ImageIndex = 4 Then  ' Insert conditional
+            e.Cancel = True
+            Autocomplete.Close()
+            doInsertConditional()
+        End If
+    End Sub
+
+    Private Sub Code_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles Code.KeyDown
+        If e.Control Then
+            Dim items As New List(Of AutocompleteMenuNS.AutocompleteItem)
+
+            Dim internal As New List(Of String)
+            internal.Add("root")
+            internal.Add("path")
+            internal.Add("modified")
+            internal.Add("template")
+
+            If Not Me.Parent.Text.StartsWith("includes\") Then
+                ' Internal
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "[#root#]", "Reference root", "Outputs the page's relative path to root. Can be used for paths to stylesheets, images, and other pages." & vbNewLine & vbNewLine & "Example: ../"))
+                'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & vbNewLine & vbNewLine & "Example: default"))
+                '  I mean referencing this is neat but pretty worthless imho
+                '  btw I like kougras they're cute
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "[#modified#]", "Reference modified", "Outputs the page's last modified date." & vbNewLine & vbNewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "[#path#]", "Reference path", "Outputs the page's path, relative from root." & vbNewLine & vbNewLine & "Example: about/index.md"))
+            End If
+
+            For Each Attribute As TreeNode In Main.AttributeTree.Nodes
+                If Not internal.Contains(Attribute.Text) Then
+                    If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or Me.Parent.Text.StartsWith("templates\") Then
+                        items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, "[#" & Attribute.Text & "#]", "Reference " & Attribute.Text, "Outputs the page's value for the " & Attribute.Text & " attribute."))
+                    End If
+                End If
+                'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
+            Next
+
+            ' Internal define option
+            If Me.Parent.Text.StartsWith("pages\") Then
+                If Not Code.Text.Contains("<!-- attrib template:") Then
+                    items.Insert(0, New AutocompleteMenuNS.AutocompleteItem("<!-- attrib template: default -->", 1, "Define template", "Define template", "Defines the template used by the current page." & vbNewLine & vbNewLine & "Default is default, which tells AutoSite to use default.html in the templates folder."))
+                End If
+
+                For Each Attribute As TreeNode In Main.AttributeTree.Nodes
+                    If Not internal.Contains(Attribute.Text) Then
+                        If Not Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Then
+                            items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib " & Attribute.Text & ": ... -->", 1, "Define " & Attribute.Text, "Define " & Attribute.Text, "Defines the " & Attribute.Text & " attribute for this page." & vbNewLine & vbNewLine & "Example: <!-- attrib " & Attribute.Text & ": ... -->"))
+                        End If
+                    End If
+                    'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
+                Next
+            End If
+
+            If Main.AttributeTree.Nodes.Count = 0 Then
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build to show more options", "Build", "Choosing this option will build your site and update the Attribute Map."))
+            ElseIf Not Me.Parent.Text.StartsWith("includes\") Then
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert Conditional...", 4, "Insert Conditional...", "Insert Conditional", "Open the Insert Conditional dialog." & vbNewLine & "Conditionals allow you to output text if an attribute has a certain value."))
+            End If
+
+            Autocomplete.SetAutocompleteItems(items)
+        End If
+    End Sub
 End Class

@@ -242,7 +242,7 @@
                 Pile.Clear()
                 CaughtNotif.Show()
             Else
-                CaughtNotif.Text = "CPU " & cpu & " tried to accuse you" & vbNewLine & " and got +" & Pile.Count & "!"
+                CaughtNotif.Text = "CPU " & cpu & " tried to accuse you" & Environment.NewLine & " and got +" & Pile.Count & "!"
                 For Each card In Pile
                     If cpu = 1 Then
                         CPU1Deck.Add(card)

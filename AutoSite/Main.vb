@@ -660,7 +660,7 @@ Public Class Main
             Try
                 ApricotWorker.RunWorkerAsync()
         Catch ex As Exception
-            MsgBox("Apricot returned this exception:" & vbNewLine & vbNewLine & ex.ToString, MsgBoxStyle.Exclamation, "Build failed")
+            MsgBox("Apricot returned this exception:" & Environment.NewLine & Environment.NewLine & ex.ToString, MsgBoxStyle.Exclamation, "Build failed")
         End Try
     End Sub
 
@@ -846,22 +846,22 @@ Public Class Main
         ElseIf My.Computer.FileSystem.FileExists(Context.Tag) Then
             dir = My.Computer.FileSystem.GetFileInfo(Context.Tag).DirectoryName
         End If
-        Dim html = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New HTML Page -->" & vbNewLine
+        Dim html = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: New HTML Page -->" & Environment.NewLine
         If dir = SiteTree.Nodes(0).Nodes(1).Tag Then
-            html = "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>"
+            html = "<!DOCTYPE html>" & Environment.NewLine & "<html>" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>[#title#]</title>" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>[#title#]</h1>" & Environment.NewLine & "    [#content#]" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
         ElseIf dir = SiteTree.Nodes(0).Nodes(2).Tag Then
-            html = "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>New HTML Page</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>Include Page</h1>" & vbNewLine & "  </body>" & vbNewLine & "</html>"
+            html = "<!DOCTYPE html>" & Environment.NewLine & "<html>" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>New HTML Page</title>" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>Include Page</h1>" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
         End If
         NewFile("new-page", ".html", html)
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
-        Dim md = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New Markdown Page -->" & vbNewLine
+        Dim md = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: New Markdown Page -->" & Environment.NewLine
         NewFile("new-page", ".md", md)
     End Sub
 
     Private Sub NewPHPCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewPHPCon.Click
-        Dim php = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: New PHP Page -->" & vbNewLine & "<?php" & vbNewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & vbNewLine & "?>"
+        Dim php = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: New PHP Page -->" & Environment.NewLine & "<?php" & Environment.NewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & Environment.NewLine & "?>"
         NewFile("new-page", ".php", php)
     End Sub
 
@@ -910,7 +910,7 @@ Public Class Main
             BuildProgress.Value = e.ProgressPercentage
             Dim s As String = e.UserState
             Dim start = Log.TextLength
-            Log.AppendText(e.UserState & vbNewLine)
+            Log.AppendText(e.UserState & Environment.NewLine)
             Dim length = Log.TextLength - start
             Log.Select(start, length)
             If s.StartsWith("Rendering") Then
@@ -1553,7 +1553,7 @@ Public Class Main
                     My.Computer.FileSystem.WriteAllText(SaveLogDialog.FileName, Log.Text, False)
                 End If
             Catch ex As Exception
-                MsgBox("Something went wrong when trying to save the log:" & vbNewLine & vbNewLine & ex.Message, MsgBoxStyle.Exclamation, "Failed to save")
+                MsgBox("Something went wrong when trying to save the log:" & Environment.NewLine & Environment.NewLine & ex.Message, MsgBoxStyle.Exclamation, "Failed to save")
             End Try
         End If
     End Sub

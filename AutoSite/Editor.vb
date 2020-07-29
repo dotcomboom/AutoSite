@@ -231,7 +231,7 @@ Public Class Editor
                 Code.Selection.Start = New Place(0, 0)
                 Code.Selection.End = New Place(0, 0)
                 Code.ProcessKey(Keys.End)
-                Code.InsertText(vbNewLine & e.Item.Text)
+                Code.InsertText(Environment.NewLine & e.Item.Text)
                 If e.Item.Text.Contains("...") Then
                     Code.Selection.Start = New Place(e.Item.Text.IndexOf("..."), Code.Selection.FromLine)
                     Code.Selection.End = New Place(e.Item.Text.IndexOf("...") + 3, Code.Selection.FromLine)
@@ -257,11 +257,11 @@ Public Class Editor
 
             If Not Me.Parent.Text.StartsWith("includes\") Then
                 ' Internal
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "[#root#]", "Reference root", "Outputs the page's relative path to root." & vbNewLine & "Useful for paths to stylesheets, images, and other pages." & vbNewLine & vbNewLine & "Example: ../"))
-                'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & vbNewLine & vbNewLine & "Example: default"))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "[#root#]", "Reference root", "Outputs the page's relative path to root." & Environment.NewLine & "Useful for paths to stylesheets, images, and other pages." & Environment.NewLine & Environment.NewLine & "Example: ../"))
+                'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & Environment.NewLine & Environment.NewLine & "Example: default"))
                 '  I mean referencing this is neat but pretty worthless imho
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "[#modified#]", "Reference modified", "Outputs the page's last modified date." & vbNewLine & vbNewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "[#path#]", "Reference path", "Outputs the page's path, relative from root." & vbNewLine & vbNewLine & "Example: about/index.md"))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "[#modified#]", "Reference modified", "Outputs the page's last modified date." & Environment.NewLine & Environment.NewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "[#path#]", "Reference path", "Outputs the page's path, relative from root." & Environment.NewLine & Environment.NewLine & "Example: about/index.md"))
             End If
 
             For Each Attribute As TreeNode In Main.AttributeTree.Nodes
@@ -276,26 +276,26 @@ Public Class Editor
             ' Internal define option
             If Me.Parent.Text.StartsWith("pages\") Then
                 If Not Code.Text.Contains("<!-- attrib template:") Then
-                    items.Insert(0, New AutocompleteMenuNS.AutocompleteItem("<!-- attrib template: default -->", 1, "Define template", "Define template", "Defines the template used by the current page." & vbNewLine & vbNewLine & "Default is default, which tells AutoSite to use default.html in the templates folder."))
+                    items.Insert(0, New AutocompleteMenuNS.AutocompleteItem("<!-- attrib template: default -->", 1, "Define template", "Define template", "Defines the template used by the current page." & Environment.NewLine & Environment.NewLine & "Default is default, which tells AutoSite to use default.html in the templates folder."))
                 End If
 
                 For Each Attribute As TreeNode In Main.AttributeTree.Nodes
                     If Not internal.Contains(Attribute.Text) Then
                         If Not Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Then
-                            items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib " & Attribute.Text & ": ... -->", 1, "Define " & Attribute.Text, "Define " & Attribute.Text, "Defines the " & Attribute.Text & " attribute for this page." & vbNewLine & vbNewLine & "Example: <!-- attrib " & Attribute.Text & ": ... -->"))
+                            items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib " & Attribute.Text & ": ... -->", 1, "Define " & Attribute.Text, "Define " & Attribute.Text, "Defines the " & Attribute.Text & " attribute for this page." & Environment.NewLine & Environment.NewLine & "Example: <!-- attrib " & Attribute.Text & ": ... -->"))
                         End If
                     End If
                     'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
                 Next
-        End If
+            End If
 
-        If Main.AttributeTree.Nodes.Count = 0 Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build to show more options", "Build", "AutoSite can give you more suggestions when you build" & vbNewLine & " your site and the Attribute Map is populated."))
+            If Main.AttributeTree.Nodes.Count = 0 Then
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build to show more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & " your site and the Attribute Map is populated."))
             ElseIf Not Me.Parent.Text.StartsWith("includes\") Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert Conditional...", 4, "Insert Conditional...", "Insert Conditional", "Open the Insert Conditional dialog." & vbNewLine & "Conditionals allow you to output text if an attribute has a certain value."))
-        End If
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert Conditional...", 4, "Insert Conditional...", "Insert Conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
+            End If
 
-        Autocomplete.SetAutocompleteItems(items)
+            Autocomplete.SetAutocompleteItems(items)
         End If
     End Sub
 End Class

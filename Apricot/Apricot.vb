@@ -188,7 +188,7 @@ Public Module Apricot
                 If match.Success Then
                     attribs.Item(match.Groups(1).Value) = match.Groups(2).Value
                 Else
-                    content = content & vbNewLine & line
+                    content = content & Environment.NewLine & line
                 End If
             End If
         Loop Until line Is Nothing
@@ -202,7 +202,7 @@ Public Module Apricot
                 doLog("WARN: Template " & attribs.Item("template") + ".html does not exist, using basic internal template", worker, 40)
                 attribs.Item("template") = "<b>AS</b>internal"
                 If Not template_cache.ContainsKey("<b>AS</b>internal") Then
-                    template_cache.Add("<b>AS</b>internal", "<!doctype html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    <p>" & vbNewLine & "    [#content#]" & vbNewLine & "    </p>" & "  </body>" & vbNewLine & "</html>")
+                    template_cache.Add("<b>AS</b>internal", "<!doctype html>" & Environment.NewLine & "<html>" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>[#title#]</title>" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>[#title#]</h1>" & Environment.NewLine & "    <p>" & Environment.NewLine & "    [#content#]" & Environment.NewLine & "    </p>" & "  </body>" & Environment.NewLine & "</html>")
                 End If
             End If
         End If

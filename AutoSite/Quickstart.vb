@@ -47,7 +47,7 @@
             Try
                 My.Computer.FileSystem.CreateDirectory(path)
             Catch ex As Exception
-                MsgBox("AutoSite was not able to create the given subdirectory for some reason." & vbNewLine & vbNewLine & ex.ToString, MsgBoxStyle.Critical, "Unable to copy files")
+                MsgBox("AutoSite was not able to create the given subdirectory for some reason." & Environment.NewLine & Environment.NewLine & ex.ToString, MsgBoxStyle.Critical, "Unable to copy files")
                 Exit Sub
             End Try
         End If
@@ -88,14 +88,14 @@
     End Sub
 
     Private Sub CreateTemplate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CreateTemplate.Click
-        My.Computer.FileSystem.WriteAllText(usite & "\templates\default.html", "<!DOCTYPE html>" & vbNewLine & "<html>" & vbNewLine & "  <head>" & vbNewLine & "    <title>[#title#]</title>" & vbNewLine & "  </head>" & vbNewLine & "  <body>" & vbNewLine & "    <h1>[#title#]</h1>" & vbNewLine & "    [#content#]" & vbNewLine & "  </body>" & vbNewLine & "</html>", False)
+        My.Computer.FileSystem.WriteAllText(usite & "\templates\default.html", "<!DOCTYPE html>" & Environment.NewLine & "<html>" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>[#title#]</title>" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>[#title#]</h1>" & Environment.NewLine & "    [#content#]" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>", False)
         Quickstart_Load()
         Main.openEditor(usite & "\templates\default.html")
     End Sub
 
     Private Sub indexmd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles indexmd.Click
         If (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.md")) And (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.html")) Then
-            Dim page = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: Home -->" & vbNewLine
+            Dim page = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: Home -->" & Environment.NewLine
             My.Computer.FileSystem.WriteAllText(usite & "\pages\index.md", page, False)
             Quickstart_Load()
         ElseIf My.Computer.FileSystem.FileExists(usite & "\pages\index.html") Then
@@ -108,7 +108,7 @@
 
     Private Sub indexhtml_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles indexhtml.Click
         If (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.md")) And (Not My.Computer.FileSystem.FileExists(usite & "\pages\index.html")) Then
-            Dim page = "<!-- attrib template: default -->" & vbNewLine & "<!-- attrib title: Home -->" & vbNewLine
+            Dim page = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: Home -->" & Environment.NewLine
             My.Computer.FileSystem.WriteAllText(usite & "\pages\index.html", page, False)
             Quickstart_Load()
         ElseIf My.Computer.FileSystem.FileExists(usite & "\pages\index.md") Then

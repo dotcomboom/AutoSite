@@ -11,9 +11,9 @@
         End If
         For Each line In Display.Lines
             If Not output = "" Then
-                output &= vbNewLine
+                output &= Environment.NewLine
             End If
-            output &= "[" & Attribute.Text & ineq & "=" & Value.Text & "]" & line.Replace(vbNewLine, "").Replace("\n", "") & "[/" & Attribute.Text & ineq & "=]"
+            output &= "[" & Attribute.Text & ineq & "=" & Value.Text & "]" & line.Replace(Environment.NewLine, "").Replace("\n", "") & "[/" & Attribute.Text & ineq & "=]"
         Next
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Close()

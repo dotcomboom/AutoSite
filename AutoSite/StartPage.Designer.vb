@@ -52,6 +52,7 @@ Partial Class StartPage
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(28, 28)
@@ -65,7 +66,7 @@ Partial Class StartPage
         Me.NewSite.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.NewSite.AutoEllipsis = True
         Me.NewSite.AutoSize = True
-        Me.NewSite.BackColor = System.Drawing.Color.Transparent
+        Me.NewSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.NewSite.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NewSite.ForeColor = System.Drawing.Color.Black
         Me.NewSite.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -85,7 +86,7 @@ Partial Class StartPage
         Me.Recent1.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent1.AutoEllipsis = True
         Me.Recent1.AutoSize = True
-        Me.Recent1.BackColor = System.Drawing.Color.Transparent
+        Me.Recent1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Recent1.ForeColor = System.Drawing.Color.Black
         Me.Recent1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Recent1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
@@ -102,6 +103,7 @@ Partial Class StartPage
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(157, 31)
@@ -115,7 +117,7 @@ Partial Class StartPage
         Me.Recent2.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent2.AutoEllipsis = True
         Me.Recent2.AutoSize = True
-        Me.Recent2.BackColor = System.Drawing.Color.Transparent
+        Me.Recent2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Recent2.ForeColor = System.Drawing.Color.Black
         Me.Recent2.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Recent2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
@@ -134,7 +136,7 @@ Partial Class StartPage
         Me.Recent3.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent3.AutoEllipsis = True
         Me.Recent3.AutoSize = True
-        Me.Recent3.BackColor = System.Drawing.Color.Transparent
+        Me.Recent3.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Recent3.ForeColor = System.Drawing.Color.Black
         Me.Recent3.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Recent3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
@@ -153,7 +155,7 @@ Partial Class StartPage
         Me.Recent4.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent4.AutoEllipsis = True
         Me.Recent4.AutoSize = True
-        Me.Recent4.BackColor = System.Drawing.Color.Transparent
+        Me.Recent4.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Recent4.ForeColor = System.Drawing.Color.Black
         Me.Recent4.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Recent4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
@@ -172,7 +174,7 @@ Partial Class StartPage
         Me.Recent5.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent5.AutoEllipsis = True
         Me.Recent5.AutoSize = True
-        Me.Recent5.BackColor = System.Drawing.Color.Transparent
+        Me.Recent5.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Recent5.ForeColor = System.Drawing.Color.Black
         Me.Recent5.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Recent5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
@@ -191,7 +193,7 @@ Partial Class StartPage
         Me.OpenSite.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.OpenSite.AutoEllipsis = True
         Me.OpenSite.AutoSize = True
-        Me.OpenSite.BackColor = System.Drawing.Color.Transparent
+        Me.OpenSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.OpenSite.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OpenSite.ForeColor = System.Drawing.Color.Black
         Me.OpenSite.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -208,6 +210,7 @@ Partial Class StartPage
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(34, 66)
         Me.PictureBox1.Name = "PictureBox1"
@@ -218,6 +221,7 @@ Partial Class StartPage
         '
         'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(34, 94)
         Me.PictureBox2.Name = "PictureBox2"
@@ -228,6 +232,7 @@ Partial Class StartPage
         '
         'R1
         '
+        Me.R1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.R1.Image = CType(resources.GetObject("R1.Image"), System.Drawing.Image)
         Me.R1.Location = New System.Drawing.Point(161, 66)
         Me.R1.Name = "R1"
@@ -238,6 +243,7 @@ Partial Class StartPage
         '
         'R2
         '
+        Me.R2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.R2.Image = CType(resources.GetObject("R2.Image"), System.Drawing.Image)
         Me.R2.Location = New System.Drawing.Point(161, 92)
         Me.R2.Name = "R2"
@@ -248,6 +254,7 @@ Partial Class StartPage
         '
         'R3
         '
+        Me.R3.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.R3.Image = CType(resources.GetObject("R3.Image"), System.Drawing.Image)
         Me.R3.Location = New System.Drawing.Point(161, 118)
         Me.R3.Name = "R3"
@@ -258,6 +265,7 @@ Partial Class StartPage
         '
         'R4
         '
+        Me.R4.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.R4.Image = CType(resources.GetObject("R4.Image"), System.Drawing.Image)
         Me.R4.Location = New System.Drawing.Point(161, 144)
         Me.R4.Name = "R4"
@@ -268,6 +276,7 @@ Partial Class StartPage
         '
         'R5
         '
+        Me.R5.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.R5.Image = CType(resources.GetObject("R5.Image"), System.Drawing.Image)
         Me.R5.Location = New System.Drawing.Point(161, 170)
         Me.R5.Name = "R5"
@@ -278,6 +287,7 @@ Partial Class StartPage
         '
         'RWarn
         '
+        Me.RWarn.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.RWarn.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RWarn.ForeColor = System.Drawing.Color.White
         Me.RWarn.Location = New System.Drawing.Point(158, 66)

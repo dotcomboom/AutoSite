@@ -17,11 +17,13 @@
         Next
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
         Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub Populate() Handles Attribute.SelectedIndexChanged, Attribute.TextChanged
@@ -52,6 +54,7 @@
     Private Sub AddConditional_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
+            Me.Dispose()
         End If
     End Sub
 

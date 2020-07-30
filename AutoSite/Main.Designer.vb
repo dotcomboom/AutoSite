@@ -180,7 +180,7 @@ Partial Class Main
         Me.VS2017.Images.SetKeyName(4, "Build")
         Me.VS2017.Images.SetKeyName(5, "Attribute")
         Me.VS2017.Images.SetKeyName(6, "Value")
-        Me.VS2017.Images.SetKeyName(7, "Billy la Bufanda")
+        Me.VS2017.Images.SetKeyName(7, "Blank")
         '
         'FolderBrowser
         '
@@ -795,7 +795,7 @@ Partial Class Main
         resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'LogMenuBridge
         '

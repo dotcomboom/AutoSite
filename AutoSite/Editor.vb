@@ -218,6 +218,10 @@ Public Class Editor
     End Sub
 
     Private Sub Autocomplete_Selecting(ByVal sender As System.Object, ByVal e As AutocompleteMenuNS.SelectingEventArgs) Handles Autocomplete.Selecting
+        If Autocomplete.Items.Length = 1 Then  ' AutoCompleteMenu automatically selects the one option instead of displaying the menu
+            e.Cancel = True                    ' Fine in other cases but doesn't work so great here, unfortunately
+            Exit Sub
+        End If
         If e.Item.ImageIndex = 3 Then      ' Build option
             e.Cancel = True
             Autocomplete.Close()
@@ -242,6 +246,9 @@ Public Class Editor
             e.Cancel = True
             Autocomplete.Close()
             doInsertConditional()
+        ElseIf e.Item.ImageIndex = 5 Then  ' Include notice
+            e.Cancel = True
+            Autocomplete.Close()
         End If
     End Sub
 
@@ -255,23 +262,22 @@ Public Class Editor
             internal.Add("modified")
             internal.Add("template")
 
-            If Not Me.Parent.Text.StartsWith("includes\") Then
+            If (Not Me.Parent.Text.StartsWith("includes\")) And Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
                 ' Internal
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "[#root#]", "Reference root", "Outputs the page's relative path to root." & Environment.NewLine & "Useful for paths to stylesheets, images, and other pages." & Environment.NewLine & Environment.NewLine & "Example: ../"))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "[#root#]", "Relative path to root", "Outputs the relative path from the page to the site root." & Environment.NewLine & "Use this to begin paths to stylesheets, images, and other" & Environment.NewLine & "pages." & Environment.NewLine & Environment.NewLine & "Output: " & rootCalc()))
                 'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & Environment.NewLine & Environment.NewLine & "Example: default"))
-                '  I mean referencing this is neat but pretty worthless imho
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "[#modified#]", "Reference modified", "Outputs the page's last modified date." & Environment.NewLine & Environment.NewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "[#path#]", "Reference path", "Outputs the page's path, relative from root." & Environment.NewLine & Environment.NewLine & "Example: about/index.md"))
-            End If
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "[#modified#]", "Last modified date", "Outputs the date the page was last modified on." & Environment.NewLine & Environment.NewLine & "Output: " & Date.Now.ToString.Split(" ")(0)))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "[#path#]", "Path", "Outputs the page's relative path from root." & Environment.NewLine & Environment.NewLine & "Output: " & pathCalc()))
 
-            For Each Attribute As TreeNode In Main.AttributeTree.Nodes
-                If Not internal.Contains(Attribute.Text) Then
-                    If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or Me.Parent.Text.StartsWith("templates\") Then
-                        items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, "[#" & Attribute.Text & "#]", "Reference " & Attribute.Text, "Outputs the page's value for the " & Attribute.Text & " attribute."))
+                For Each Attribute As TreeNode In Main.AttributeTree.Nodes
+                    If Not internal.Contains(Attribute.Text) Then
+                        If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or Me.Parent.Text.StartsWith("templates\") Then
+                            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, "[#" & Attribute.Text & "#]", Attribute.Text, "Outputs the page's value for the " & Attribute.Text & " attribute."))
+                        End If
                     End If
-                End If
-                'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
-            Next
+                    'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
+                Next
+            End If
 
             ' Internal define option
             If Me.Parent.Text.StartsWith("pages\") Then
@@ -289,13 +295,35 @@ Public Class Editor
                 Next
             End If
 
-            If Main.AttributeTree.Nodes.Count = 0 Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build to show more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & "your site and the Attribute Map is populated."))
-            ElseIf Not Me.Parent.Text.StartsWith("includes\") Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert Conditional...", 4, "Insert Conditional...", "Insert Conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
+            If Not Me.Parent.Text.StartsWith("includes\") Then
+                If Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
+                    items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert Conditional...", 4, "Insert Conditional...", "Insert Conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
+                End If
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build for more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & "your site and the Attribute Map is populated."))
             End If
 
             Autocomplete.SetAutocompleteItems(items)
         End If
     End Sub
+
+    Private Function rootCalc() As String
+        ' Estimates [#root#] attribute output
+        Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        Dim toreturn = ""
+
+        For Each e In rel.Split("\")
+            toreturn &= "../"
+        Next
+
+        toreturn = toreturn.Substring(3) ' clip off first ../
+
+        Return toreturn
+    End Function
+
+    Private Function pathCalc() As String
+        ' Estimates [#path#] attribute output
+        Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        Return rel
+    End Function
+
 End Class

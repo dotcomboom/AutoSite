@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
 Imports FastColoredTextBoxNS
+Imports System.Text
 
 Public Class Editor
 
@@ -264,15 +265,17 @@ Public Class Editor
 
             If (Not Me.Parent.Text.StartsWith("includes\")) And Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
                 ' Internal
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "[#root#]", "Relative path to root", "Outputs the relative path from the page to the site root." & Environment.NewLine & "Use this to begin paths to stylesheets, images, and other" & Environment.NewLine & "pages." & Environment.NewLine & Environment.NewLine & "Output: " & rootCalc()))
+                If Me.Parent.Text.StartsWith("templates\") And Not Code.Text.Contains("[#content#]") Then
+                    items.Add(New AutocompleteMenuNS.AutocompleteItem("[#content#]", 2, "content", "Content", "Outputs the page's content." & Environment.NewLine & Environment.NewLine & "Use once in templates."))
+                End If
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "root", "Relative path to root", "Outputs the relative path from the page to the site root." & Environment.NewLine & "Use this to begin paths to stylesheets, images, and other" & Environment.NewLine & "pages." & Environment.NewLine & Environment.NewLine & rootCalc()))
                 'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & Environment.NewLine & Environment.NewLine & "Example: default"))
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "[#modified#]", "Last modified date", "Outputs the date the page was last modified on." & Environment.NewLine & Environment.NewLine & "Output: " & Date.Now.ToString.Split(" ")(0)))
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "[#path#]", "Path", "Outputs the page's relative path from root." & Environment.NewLine & Environment.NewLine & "Output: " & pathCalc()))
-
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "modified", "Last modified date", "Outputs the date the page was last modified on." & Environment.NewLine & Environment.NewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "path", "Path", "Outputs the page's relative path from root." & Environment.NewLine & Environment.NewLine & pathCalc()))
                 For Each Attribute As TreeNode In Main.AttributeTree.Nodes
                     If Not internal.Contains(Attribute.Text) Then
                         If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or Me.Parent.Text.StartsWith("templates\") Then
-                            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, "[#" & Attribute.Text & "#]", Attribute.Text, "Outputs the page's value for the " & Attribute.Text & " attribute."))
+                            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, Attribute.Text, Attribute.Text, "Outputs the page's value for the " & Attribute.Text & " attribute."))
                         End If
                     End If
                     'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
@@ -308,22 +311,37 @@ Public Class Editor
 
     Private Function rootCalc() As String
         ' Estimates [#root#] attribute output
-        Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
-        Dim toreturn = ""
+        Dim toreturn = "Example: ../"
 
-        For Each e In rel.Split("\")
-            toreturn &= "../"
-        Next
+        If Not Me.Parent.Text.StartsWith("templates\") Then
+            Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
-        toreturn = toreturn.Substring(3) ' clip off first ../
+            toreturn = ""
+
+            For Each e In rel.Split("\")
+                toreturn &= "../"
+            Next
+
+            toreturn = toreturn.Substring(3) ' clip off first ../
+
+            toreturn = "Output: " & toreturn
+        End If
 
         Return toreturn
     End Function
 
     Private Function pathCalc() As String
         ' Estimates [#path#] attribute output
-        Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
-        Return rel
+        Dim toreturn = "Example: about/index.md"
+
+        If Not Me.Parent.Text.StartsWith("templates\") Then
+            Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+
+            toreturn = "Output: " & rel
+
+            Return toreturn
+        End If
+        Return toreturn
     End Function
 
 End Class

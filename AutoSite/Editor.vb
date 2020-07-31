@@ -227,7 +227,7 @@ Public Class Editor
             e.Cancel = True
             Autocomplete.Close()
             Main.doBuild()
-        ElseIf e.Item.ImageIndex = 1 Then  ' Define attribute
+        ElseIf e.Item.ImageIndex = 1 Or e.Item.ImageIndex = 5 Then  ' Define attribute
             e.Cancel = True
 
             If Code.GetLineText(Code.LineNumberStartValue - 1) = "" Then
@@ -247,9 +247,6 @@ Public Class Editor
             e.Cancel = True
             Autocomplete.Close()
             doInsertConditional()
-        ElseIf e.Item.ImageIndex = 5 Then  ' Include notice
-            e.Cancel = True
-            Autocomplete.Close()
         End If
     End Sub
 
@@ -296,13 +293,15 @@ Public Class Editor
                     End If
                     'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
                 Next
+
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib ...: ... -->", 5, "Define a new attribute", "Define a new attribute", "Adds an attribute definition." & Environment.NewLine & Environment.NewLine & "Example: <!-- attrib ...: ... -->"))
             End If
 
             If Not Me.Parent.Text.StartsWith("includes\") Then
                 If Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
-                    items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert Conditional...", 4, "Insert Conditional...", "Insert Conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
+                    items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert conditional...", 4, "Insert conditional", "Insert Conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
                 End If
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build for more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & "your site and the Attribute Map is populated."))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build for more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & "your site and populate the Attribute Map."))
             End If
 
             Autocomplete.SetAutocompleteItems(items)

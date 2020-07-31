@@ -206,7 +206,7 @@ Partial Class Editor
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
         Me.Autocomplete.SetAutocompleteMenu(Me.Code, Me.Autocomplete)
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.iconTheme
         Me.Code.AutoIndentExistingLines = False
         resources.ApplyResources(Me.Code, "Code")
         Me.Code.BackBrush = Nothing
@@ -297,11 +297,11 @@ Partial Class Editor
         Me.PopupIcons.TransparentColor = System.Drawing.Color.Transparent
         Me.PopupIcons.Images.SetKeyName(0, "Reference")
         Me.PopupIcons.Images.SetKeyName(1, "Define")
-        Me.PopupIcons.Images.SetKeyName(2, "LinkedObject_16x.png")
+        Me.PopupIcons.Images.SetKeyName(2, "ReferenceInternal")
         Me.PopupIcons.Images.SetKeyName(3, "Build")
         Me.PopupIcons.Images.SetKeyName(4, "Conditional")
-        Me.PopupIcons.Images.SetKeyName(5, "Info")
-        Me.PopupIcons.Images.SetKeyName(6, "Lightbulb")
+        Me.PopupIcons.Images.SetKeyName(5, "NewAttribute")
+        Me.PopupIcons.Images.SetKeyName(6, "Conditional")
         '
         'Editor
         '

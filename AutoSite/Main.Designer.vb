@@ -296,7 +296,7 @@ Partial Class Main
         'EditMenu
         '
         Me.EditMenu.Index = 1
-        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.GoToMnu, Me.Find, Me.Replace, Me.MenuItem2, Me.EditSep4, Me.InsertConditional})
+        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.GoToMnu, Me.Find, Me.Replace, Me.EditSep4, Me.MenuItem2, Me.InsertConditional})
         resources.ApplyResources(Me.EditMenu, "EditMenu")
         '
         'Undo
@@ -361,7 +361,7 @@ Partial Class Main
         '
         'EditSep4
         '
-        Me.EditSep4.Index = 13
+        Me.EditSep4.Index = 12
         resources.ApplyResources(Me.EditSep4, "EditSep4")
         '
         'InsertConditional
@@ -902,7 +902,7 @@ Partial Class Main
         '
         'MenuItem2
         '
-        Me.MenuItem2.Index = 12
+        Me.MenuItem2.Index = 13
         resources.ApplyResources(Me.MenuItem2, "MenuItem2")
         '
         'Main

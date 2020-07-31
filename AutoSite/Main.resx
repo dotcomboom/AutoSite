@@ -307,14 +307,14 @@
   <data name="Replace.Text" xml:space="preserve">
     <value>Replace...</value>
   </data>
+  <data name="EditSep4.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="MenuItem2.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlJ</value>
   </data>
   <data name="MenuItem2.Text" xml:space="preserve">
     <value>Quick Insert</value>
-  </data>
-  <data name="EditSep4.Text" xml:space="preserve">
-    <value>-</value>
   </data>
   <data name="InsertConditional.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftI</value>

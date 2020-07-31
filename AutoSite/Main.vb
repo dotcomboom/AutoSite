@@ -1651,7 +1651,7 @@ Public Class Main
     Shared Function getFont() As Drawing.Font
         Dim uiFont = New Font("Segoe UI", 9, FontStyle.Regular)
         If Not uiFont.Name = "Segoe UI" Then
-            uiFont = New Font("Microsoft Sans Serif", 8, FontStyle.Regular)
+            uiFont = SystemFonts.DefaultFont
         End If
         Return uiFont
     End Function

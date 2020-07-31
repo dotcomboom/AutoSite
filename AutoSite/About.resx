@@ -926,15 +926,14 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="ChangelogBox.Text" xml:space="preserve">
     <value>1.0 RC4?:
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
-   + Windows 98 compatibility greatly improved
-   - Editor's auto indent will no longer affect existing lines
-   - Panels are now saved correctly when the Editor/Preview are both closed
-   - System font now used if Segoe UI is not available
-   - Bug fixes pertaining to deleted/renamed files and the editor
+   + Windows 98 compatibility has been greatly improved
+   + Editor's auto indent will no longer affect existing lines
+   - The program's layout is now saved completely and correctly (including when Editor and Preview panels are closed)
+   - System default font (typically Tahoma) is now used if Segoe UI is not available
+   - Bug fixes pertaining to how the editor reacts to deleted/renamed files
    - Double-clicking a file in the Explorer while the Editor panel is not open will open it in its default program
    - Sanitary Build message box and Insert Conditional window have been revised
-
-   - Other small fixes and optimizations
+   - Build buttons are disabled while a build is in progress
 
 1.0 RC3:
    + Modified date added as [#modified#]
@@ -2917,9 +2916,6 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
         y8nJyfnIyMj/ycnJ/8rKyv/Kysr/ysrK/8vLy//FxcXmhYWFUaampjyqqqoBAAAAAAAAAAAAAAAAAAAA
         AAAAAACAAwAAgAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAAADAAAAAwAAAAMAAAABAAAAAwAA
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>

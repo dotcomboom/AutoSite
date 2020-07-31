@@ -206,6 +206,7 @@ Public Class Main
         updateRecents()
 
         Watcher.Path = path
+        Watcher.EnableRaisingEvents = True
         Watcher.Filter = "*.*"
     End Sub
 
@@ -341,7 +342,8 @@ Public Class Main
         AttributeTree.Nodes.Clear()
         Preview.DocumentText = ""
         My.Settings.openProject = ""
-        Watcher.Filter = "NFIDNI#N()Dxn)(@Nqinnxisabub@IZWNQIONCIWENiN@Nd0N@()@()OPQNOPMNXONNW(ENND@#(ONCPENQOPNNNSANOI" ' can't disable it so /shrug
+        Watcher.EnableRaisingEvents = False
+        Watcher.Filter = ""
 
         Dim tab As New TabPage With {
             .Text = "Start Page"

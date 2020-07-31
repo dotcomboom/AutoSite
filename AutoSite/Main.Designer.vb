@@ -57,10 +57,11 @@ Partial Class Main
         Me.EditSep2 = New System.Windows.Forms.MenuItem()
         Me.SelectAll = New System.Windows.Forms.MenuItem()
         Me.EditSep3 = New System.Windows.Forms.MenuItem()
+        Me.GoToMnu = New System.Windows.Forms.MenuItem()
         Me.Find = New System.Windows.Forms.MenuItem()
         Me.Replace = New System.Windows.Forms.MenuItem()
-        Me.GoToMnu = New System.Windows.Forms.MenuItem()
         Me.EditSep4 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         Me.InsertConditional = New System.Windows.Forms.MenuItem()
         Me.FormatMenu = New System.Windows.Forms.MenuItem()
         Me.WordWrap = New System.Windows.Forms.MenuItem()
@@ -153,7 +154,6 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -344,6 +344,11 @@ Partial Class Main
         Me.EditSep3.Index = 8
         resources.ApplyResources(Me.EditSep3, "EditSep3")
         '
+        'GoToMnu
+        '
+        Me.GoToMnu.Index = 9
+        resources.ApplyResources(Me.GoToMnu, "GoToMnu")
+        '
         'Find
         '
         Me.Find.Index = 10
@@ -354,15 +359,15 @@ Partial Class Main
         Me.Replace.Index = 11
         resources.ApplyResources(Me.Replace, "Replace")
         '
-        'GoToMnu
-        '
-        Me.GoToMnu.Index = 9
-        resources.ApplyResources(Me.GoToMnu, "GoToMnu")
-        '
         'EditSep4
         '
         Me.EditSep4.Index = 12
         resources.ApplyResources(Me.EditSep4, "EditSep4")
+        '
+        'MenuItem2
+        '
+        Me.MenuItem2.Index = 13
+        Me.MenuItem2.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'InsertConditional
         '
@@ -718,8 +723,6 @@ Partial Class Main
         '
         'Watcher
         '
-        Me.Watcher.EnableRaisingEvents = True
-        Me.Watcher.Filter = "JINFC)(#@)D)(J@()J()DN@()NQND_)NQ#WNN"
         Me.Watcher.IncludeSubdirectories = True
         Me.Watcher.SynchronizingObject = Me
         '
@@ -796,7 +799,7 @@ Partial Class Main
         resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.openProject
         '
         'LogMenuBridge
         '
@@ -899,11 +902,6 @@ Partial Class Main
         'OpenPack
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
-        '
-        'MenuItem2
-        '
-        Me.MenuItem2.Index = 13
-        resources.ApplyResources(Me.MenuItem2, "MenuItem2")
         '
         'Main
         '

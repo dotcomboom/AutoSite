@@ -308,7 +308,7 @@
     <value>Replace...</value>
   </data>
   <data name="MenuItem2.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlK</value>
+    <value>CtrlJ</value>
   </data>
   <data name="MenuItem2.Text" xml:space="preserve">
     <value>Quick Insert</value>

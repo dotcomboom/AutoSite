@@ -412,6 +412,9 @@ Public Class Main
             End If
         Catch ex As Exception
         End Try
+
+        Me.Size = My.Settings.windowSize
+
         If My.Settings.maximized Then
             Me.WindowState = FormWindowState.Maximized
         End If
@@ -1107,6 +1110,8 @@ Public Class Main
                 My.Settings.edSplitterDistance = EdSplit.SplitterDistance
                 My.Settings.exSplitterDistance = ExSplit.SplitterDistance
                 My.Settings.coreSplitterDistance = CoreSplit.SplitterDistance
+                My.Settings.windowSize = Me.Size
+
                 My.Settings.Save()
             Catch ex As Exception
             End Try

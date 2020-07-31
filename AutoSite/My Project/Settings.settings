@@ -60,5 +60,8 @@
     <Setting Name="coreSplitterDistance" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">280</Value>
     </Setting>
+    <Setting Name="windowSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">673, 482</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

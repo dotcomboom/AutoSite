@@ -61,7 +61,7 @@ Partial Class Main
         Me.Find = New System.Windows.Forms.MenuItem()
         Me.Replace = New System.Windows.Forms.MenuItem()
         Me.EditSep4 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
+        Me.QuickInsertMnu = New System.Windows.Forms.MenuItem()
         Me.InsertConditional = New System.Windows.Forms.MenuItem()
         Me.FormatMenu = New System.Windows.Forms.MenuItem()
         Me.WordWrap = New System.Windows.Forms.MenuItem()
@@ -296,7 +296,7 @@ Partial Class Main
         'EditMenu
         '
         Me.EditMenu.Index = 1
-        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.GoToMnu, Me.Find, Me.Replace, Me.EditSep4, Me.MenuItem2, Me.InsertConditional})
+        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.GoToMnu, Me.Find, Me.Replace, Me.EditSep4, Me.QuickInsertMnu, Me.InsertConditional})
         resources.ApplyResources(Me.EditMenu, "EditMenu")
         '
         'Undo
@@ -364,10 +364,10 @@ Partial Class Main
         Me.EditSep4.Index = 12
         resources.ApplyResources(Me.EditSep4, "EditSep4")
         '
-        'MenuItem2
+        'QuickInsertMnu
         '
-        Me.MenuItem2.Index = 13
-        Me.MenuItem2.Text = Global.AutoSite.My.Resources.Resources.openProject
+        Me.QuickInsertMnu.Index = 13
+        resources.ApplyResources(Me.QuickInsertMnu, "QuickInsertMnu")
         '
         'InsertConditional
         '
@@ -723,6 +723,7 @@ Partial Class Main
         '
         'Watcher
         '
+        Me.Watcher.EnableRaisingEvents = True
         Me.Watcher.IncludeSubdirectories = True
         Me.Watcher.SynchronizingObject = Me
         '
@@ -1058,5 +1059,5 @@ Partial Class Main
     Friend WithEvents QuickstartMnu As System.Windows.Forms.MenuItem
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents SanitaryBuildBtn As System.Windows.Forms.ToolStripButton
-    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
+    Friend WithEvents QuickInsertMnu As System.Windows.Forms.MenuItem
 End Class

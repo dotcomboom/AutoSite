@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAm
-        GAAAAk1TRnQBSQFMAgEBCAEAAfABBQHwAQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        GAAAAk1TRnQBSQFMAgEBCAEAAfgBBQH4AQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABMAMAAQEBAAEgBgABMP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AJgAD8QH/A/EB/wPx
         Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/8gAA/EB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPxAf/IAAPxAf8DAAH/A/EB/wPx
@@ -244,6 +244,99 @@
     <value>&amp;File</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlZ</value>
+  </data>
+  <data name="Undo.Text" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Redo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlY</value>
+  </data>
+  <data name="Redo.Text" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="EditSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Cut.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlX</value>
+  </data>
+  <data name="Cut.Text" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="Copy.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlC</value>
+  </data>
+  <data name="Copy.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Paste.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlV</value>
+  </data>
+  <data name="Paste.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="EditSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="SelectAll.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlA</value>
+  </data>
+  <data name="SelectAll.Text" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="EditSep3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="GoToMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlG</value>
+  </data>
+  <data name="GoToMnu.Text" xml:space="preserve">
+    <value>Go To...</value>
+  </data>
+  <data name="Find.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlF</value>
+  </data>
+  <data name="Find.Text" xml:space="preserve">
+    <value>Find...</value>
+  </data>
+  <data name="Replace.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlH</value>
+  </data>
+  <data name="Replace.Text" xml:space="preserve">
+    <value>Replace...</value>
+  </data>
+  <data name="EditSep4.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="QuickInsertMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlJ</value>
+  </data>
+  <data name="QuickInsertMnu.Text" xml:space="preserve">
+    <value>Quick Insert</value>
+  </data>
+  <data name="InsertConditional.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlShiftI</value>
+  </data>
+  <data name="InsertConditional.Text" xml:space="preserve">
+    <value>Insert Conditional...</value>
+  </data>
+  <data name="EditMenu.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="FormatMenu.Text" xml:space="preserve">
+    <value>F&amp;ormat</value>
+  </data>
+  <data name="ViewMenu.Text" xml:space="preserve">
+    <value>&amp;View</value>
+  </data>
+  <data name="BuildMenu.Text" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="HelpMenu.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
   <data name="NewSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftN</value>
   </data>
@@ -347,84 +440,6 @@
   <data name="ExitItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
-  </data>
-  <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlZ</value>
-  </data>
-  <data name="Undo.Text" xml:space="preserve">
-    <value>Undo</value>
-  </data>
-  <data name="Redo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlY</value>
-  </data>
-  <data name="Redo.Text" xml:space="preserve">
-    <value>Redo</value>
-  </data>
-  <data name="EditSep.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="Cut.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlX</value>
-  </data>
-  <data name="Cut.Text" xml:space="preserve">
-    <value>Cut</value>
-  </data>
-  <data name="Copy.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlC</value>
-  </data>
-  <data name="Copy.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="Paste.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlV</value>
-  </data>
-  <data name="Paste.Text" xml:space="preserve">
-    <value>Paste</value>
-  </data>
-  <data name="EditSep2.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="SelectAll.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlA</value>
-  </data>
-  <data name="SelectAll.Text" xml:space="preserve">
-    <value>Select All</value>
-  </data>
-  <data name="EditSep3.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="GoToMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlG</value>
-  </data>
-  <data name="GoToMnu.Text" xml:space="preserve">
-    <value>Go To...</value>
-  </data>
-  <data name="Find.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlF</value>
-  </data>
-  <data name="Find.Text" xml:space="preserve">
-    <value>Find...</value>
-  </data>
-  <data name="Replace.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlH</value>
-  </data>
-  <data name="Replace.Text" xml:space="preserve">
-    <value>Replace...</value>
-  </data>
-  <data name="EditSep4.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="InsertConditional.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlShiftI</value>
-  </data>
-  <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insert Conditional...</value>
-  </data>
-  <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
-  </data>
   <data name="WordWrap.Text" xml:space="preserve">
     <value>Word Wrap</value>
   </data>
@@ -451,9 +466,6 @@
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Monospace Font...</value>
-  </data>
-  <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;View</value>
   </data>
   <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt1</value>
@@ -524,9 +536,6 @@
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
     <value>Browse Site in Preview</value>
   </data>
-  <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
-  </data>
   <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlB</value>
   </data>
@@ -553,9 +562,6 @@
   </data>
   <data name="QuickstartMnu.Text" xml:space="preserve">
     <value>Quickstart</value>
-  </data>
-  <data name="HelpMenu.Text" xml:space="preserve">
-    <value>&amp;Help</value>
   </data>
   <data name="HelpTopics.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -589,7 +595,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADa
-        JgAAAk1TRnQBSQFMAgEBCgEAAeABBQHgAQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        JgAAAk1TRnQBSQFMAgEBCgEAAegBBQHoAQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABMAMAAQEBAAEgBgABMC0AAf8DAAH/AwAB/wMAAf8DAAH/JAADCgENAzYBWQNHAYIDWwHDA2AB3gNU
         AawDCgENAwoBDZgAA8wB/wPMAf8DzAH/A8wB/wMAEf8DzAH/A8wB/wPMAf8UAAMGAQgDWQH1Af8ByAHJ
         Af8DXwHzAdQBrAGdAv8CxwH/A18B4ANbAcMDWwHEAzIBUZQAJP8DAAX/A8wB/xAAAwoBDgNKAYkDfwH+
@@ -3210,10 +3216,10 @@
   <data name="&gt;&gt;EditSep4.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MenuItem2.Name" xml:space="preserve">
-    <value>MenuItem2</value>
+  <data name="&gt;&gt;QuickInsertMnu.Name" xml:space="preserve">
+    <value>QuickInsertMnu</value>
   </data>
-  <data name="&gt;&gt;MenuItem2.Type" xml:space="preserve">
+  <data name="&gt;&gt;QuickInsertMnu.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;InsertConditional.Name" xml:space="preserve">

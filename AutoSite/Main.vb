@@ -1630,12 +1630,12 @@ Public Class Main
         AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
     End Sub
 
-    Private Sub MenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickstartMnu.Click
+    Private Sub QuickstarMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickstartMnu.Click
         Dim q As New Quickstart
         q.ShowDialog()
     End Sub
 
-    Private Sub MenuItem2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click
+    Private Sub QuickInsertMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickInsertMnu.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doQuickInsert()

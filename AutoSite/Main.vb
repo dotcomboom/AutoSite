@@ -423,12 +423,6 @@ Public Class Main
         Catch ex As Exception
         End Try
 
-        If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
-            Me.BackColor = SystemColors.Control
-            Log.BackColor = SystemColors.Control
-            AttributeTree.BackColor = SystemColors.Control
-        End If
-
         Me.Font = getFont()
 
         wTitle &= " " & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
@@ -465,7 +459,7 @@ Public Class Main
             EdSplit.Panel2Collapsed = True
         End If
 
-        If (EdSplit.Panel1Collapsed = True) And (EdSplit.Panel2Collapsed = True) Then
+        If ((EdSplit.Panel1Collapsed = True) And (EdSplit.Panel2Collapsed = True)) Or (Not My.Settings.browserOpen And Not My.Settings.editorOpen) Then
             CoreSplit.Panel2Collapsed = True
         Else
             CoreSplit.Panel2Collapsed = False

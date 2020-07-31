@@ -1303,7 +1303,7 @@ Public Class Main
     End Sub
 
     Public Sub doSanitaryBuild() Handles SanitaryBuild.Click, SanitaryBuildBtn.Click
-        If MsgBox("A sanitary build will move the output folder to the Recycle Bin and build from scratch, removing any stray files.", MsgBoxStyle.Information + MsgBoxStyle.OkCancel, "Sanitary Build") = MsgBoxResult.Ok Then
+        If MsgBox("A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel, "AutoSite") = MsgBoxResult.Ok Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
             Catch ex As Exception

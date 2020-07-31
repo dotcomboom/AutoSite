@@ -928,6 +928,8 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
    - Editor's auto indent will no longer affect existing lines
    - Sanitary Build message box has been revised
+   - Insert Conditional window has been cleaned up
+   - A couple small bug fixes and optimizations
 
 1.0 RC3:
    + Modified date added as [#modified#]

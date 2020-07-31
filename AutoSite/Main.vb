@@ -1,4 +1,4 @@
-﻿Imports System.Text.RegularExpressions
+Imports System.Text.RegularExpressions
 Imports System.IO
 Imports System.Text
 Imports Microsoft.Win32
@@ -954,6 +954,10 @@ Public Class Main
         AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
         If e.UserState.GetType() Is GetType(System.String) Then
             BuildProgress.Visible = True
+            BuildMenu.Enabled = False
+            Build.Enabled = False
+            SanitaryBuild.Enabled = False
+            SanitaryBuildBtn.Enabled = False
             BuildProgress.Value = e.ProgressPercentage
             Dim s As String = e.UserState
             Dim start = Log.TextLength
@@ -1058,6 +1062,10 @@ Public Class Main
 
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ApricotWorker.RunWorkerCompleted
         BuildProgress.Visible = False
+        BuildMenu.Enabled = True
+        Build.Enabled = True
+        SanitaryBuild.Enabled = True
+        SanitaryBuildBtn.Enabled = True
     End Sub
 
     Private Sub Form1_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing

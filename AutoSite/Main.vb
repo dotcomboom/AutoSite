@@ -139,7 +139,13 @@ Public Class Main
 
                 If Not My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(path & "\in") Then
                     If MsgBox("AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.", MsgBoxStyle.OkCancel + MsgBoxStyle.Exclamation, "Update Site") = MsgBoxResult.Ok Then
-                        My.Computer.FileSystem.RenameDirectory(path & "\in", "pages")
+                        Try
+                            My.Computer.FileSystem.RenameDirectory(path & "\in", "pages")
+                        Catch ex As Exception
+                            MsgBox("AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again.", MsgBoxStyle.Exclamation, "Unable to convert")
+                            doClose()
+                            Exit Sub
+                        End Try
                     Else
                         doClose()
                         Exit Sub

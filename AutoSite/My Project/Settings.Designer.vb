@@ -246,6 +246,42 @@ Namespace My
                 Me("systemIcons") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("214")>  _
+        Public Property exSplitterDistance() As Integer
+            Get
+                Return CType(Me("exSplitterDistance"),Integer)
+            End Get
+            Set
+                Me("exSplitterDistance") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("214")>  _
+        Public Property edSplitterDistance() As Integer
+            Get
+                Return CType(Me("edSplitterDistance"),Integer)
+            End Get
+            Set
+                Me("edSplitterDistance") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("280")>  _
+        Public Property coreSplitterDistance() As Integer
+            Get
+                Return CType(Me("coreSplitterDistance"),Integer)
+            End Get
+            Set
+                Me("coreSplitterDistance") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

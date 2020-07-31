@@ -51,5 +51,14 @@
     <Setting Name="systemIcons" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="exSplitterDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">214</Value>
+    </Setting>
+    <Setting Name="edSplitterDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">214</Value>
+    </Setting>
+    <Setting Name="coreSplitterDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">280</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

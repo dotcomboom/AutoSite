@@ -416,6 +416,10 @@ Public Class Main
             Me.WindowState = FormWindowState.Maximized
         End If
 
+        ExSplit.SplitterDistance = My.Settings.exSplitterDistance
+        EdSplit.SplitterDistance = My.Settings.edSplitterDistance
+        CoreSplit.SplitterDistance = My.Settings.coreSplitterDistance
+
         Try
             Dim key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
             key.SetValue(Path.GetFileName(Application.ExecutablePath), 11001, Microsoft.Win32.RegistryValueKind.DWord)
@@ -1100,6 +1104,9 @@ Public Class Main
 
                 My.Settings.windowLocation = location.X & "," & location.Y & "," & size.Width & "," & size.Height
                 My.Settings.maximized = (state = FormWindowState.Maximized)
+                My.Settings.edSplitterDistance = EdSplit.SplitterDistance
+                My.Settings.exSplitterDistance = ExSplit.SplitterDistance
+                My.Settings.coreSplitterDistance = CoreSplit.SplitterDistance
                 My.Settings.Save()
             Catch ex As Exception
             End Try
@@ -1657,5 +1664,4 @@ Public Class Main
         End If
         Return uiFont
     End Function
-
 End Class

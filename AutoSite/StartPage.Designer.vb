@@ -67,7 +67,6 @@ Partial Class StartPage
         Me.NewSite.AutoEllipsis = True
         Me.NewSite.AutoSize = True
         Me.NewSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.NewSite.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NewSite.ForeColor = System.Drawing.Color.Black
         Me.NewSite.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.NewSite.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
@@ -194,7 +193,6 @@ Partial Class StartPage
         Me.OpenSite.AutoEllipsis = True
         Me.OpenSite.AutoSize = True
         Me.OpenSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.OpenSite.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OpenSite.ForeColor = System.Drawing.Color.Black
         Me.OpenSite.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.OpenSite.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline

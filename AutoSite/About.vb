@@ -15,7 +15,11 @@ Public Class About
         Version.Text &= " " & My.Application.Info.Description
         If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
             Me.BackColor = SystemColors.Control
+            LicenseBox.BackColor = SystemColors.Control
+            ChangelogBox.BackColor = SystemColors.Control
         End If
+
+        Me.Font = Main.getFont()
     End Sub
 
     Private Sub GithubLink_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles GithubLink.LinkClicked

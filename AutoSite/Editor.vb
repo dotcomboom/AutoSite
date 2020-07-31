@@ -94,7 +94,16 @@ Public Class Editor
 
     Public Sub Save() Handles SaveBtn.ButtonClick, SaveToolStripMenuItem.Click
         If Not openFile Is Nothing Then
+            Dim refreshTree = False
+            If My.Computer.Info.OSPlatform = "Win32Windows" Then   ' Detect non-NT Windows (98)
+                If Not My.Computer.FileSystem.FileExists(openFile) Then
+                    refreshTree = True
+                End If
+            End If
             WriteAllText(openFile)
+            If refreshTree Then
+                Main.refreshTree(Main.SiteTree.Nodes(0))
+            End If
             Snapshot = Code.Text
             Me.Parent.Text = openFile.Replace(siteRoot & "\", "")
             SaveBtn.Enabled = False
@@ -203,7 +212,9 @@ Public Class Editor
             rel = Apricot.ReplaceLast(rel, ".md", ".html")
         End If
 
-        Main.Preview.Navigate(siteRoot & "\out\" & rel)
+        If My.Computer.FileSystem.FileExists(siteRoot & "\out\" & rel) Then
+            Main.Preview.Navigate(siteRoot & "\out\" & rel)
+        End If
     End Sub
 
     Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Build.Click

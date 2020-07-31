@@ -369,6 +369,9 @@
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="indexmd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
   <data name="indexmd.Location" type="System.Drawing.Point, System.Drawing">
     <value>42, 221</value>
   </data>
@@ -392,6 +395,9 @@
   </data>
   <data name="&gt;&gt;indexmd.ZOrder" xml:space="preserve">
     <value>17</value>
+  </data>
+  <data name="indexhtml.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
   </data>
   <data name="indexhtml.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -471,6 +477,9 @@
   <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <data name="CreateTemplate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
   <data name="CreateTemplate.Location" type="System.Drawing.Point, System.Drawing">
     <value>42, 113</value>
   </data>
@@ -494,6 +503,9 @@
   </data>
   <data name="&gt;&gt;CreateTemplate.ZOrder" xml:space="preserve">
     <value>13</value>
+  </data>
+  <data name="Button5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
   </data>
   <data name="Button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -614,6 +626,9 @@
   </data>
   <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="Build.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
   </data>
   <data name="Build.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -761,6 +776,9 @@
   </data>
   <data name="&gt;&gt;LinkLabel1.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="SanitaryBuild.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
   </data>
   <data name="SanitaryBuild.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

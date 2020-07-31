@@ -32,6 +32,7 @@
             Recent5.Text = My.Settings.recents(4)
             Recent5.Tag = My.Settings.recents(4)
         End If
+        Me.Font = Main.getFont()
     End Sub
 
     Private Sub NewSite_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles NewSite.LinkClicked

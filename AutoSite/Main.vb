@@ -91,7 +91,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub refreshTree(ByVal root As TreeNode)
+    Public Sub refreshTree(ByVal root As TreeNode)
         Dim inPath = root.Text & "\pages"
         Dim templatePath = root.Text & "\templates"
         Dim includePath = root.Text & "\includes"
@@ -205,9 +205,11 @@ Public Class Main
 
         updateRecents()
 
-        Watcher.Path = path
-        Watcher.EnableRaisingEvents = True
-        Watcher.Filter = "*.*"
+        If Not My.Computer.Info.OSPlatform = "Win32Windows" Then   ' Detect non-NT Windows (98)
+            Watcher.Path = path
+            Watcher.EnableRaisingEvents = True
+            Watcher.Filter = "*.*"
+        End If
     End Sub
 
     Public Sub panelUpdate()
@@ -421,6 +423,14 @@ Public Class Main
         Catch ex As Exception
         End Try
 
+        If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
+            Me.BackColor = SystemColors.Control
+            Log.BackColor = SystemColors.Control
+            AttributeTree.BackColor = SystemColors.Control
+        End If
+
+        Me.Font = getFont()
+
         wTitle &= " " & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
         If My.Application.Info.Version.Build > 0 Then
             wTitle &= "." & My.Application.Info.Version.Build
@@ -525,6 +535,10 @@ Public Class Main
             Catch ex As Exception
             End Try
             If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
+                If Not EditorPanel.Checked Then
+                    Process.Start(e.Node.Tag)
+                    Exit Sub
+                End If
                 Try
                     If openFiles.Contains(e.Node.Tag) Then
                         For Each page As TabPage In EditTabs.TabPages
@@ -635,6 +649,10 @@ Public Class Main
                             Dim edit As Editor = c
                             If edit.openFile = oldpath Then
                                 edit.openFile = newpath
+                                
+                                openFiles.Remove(oldpath)
+                                openFiles.Add(newpath)
+
                                 If t.Text.Contains("*") Then
                                     t.Text = newpath.Replace(SiteTree.Nodes(0).Text & "\", "") & "*"
                                 Else
@@ -782,11 +800,28 @@ Public Class Main
                         newFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(oldnewFile), System.IO.Path.GetFileNameWithoutExtension(oldnewFile) & " (" & number & ")" & System.IO.Path.GetExtension(oldnewFile))
                     End While
                     My.Computer.FileSystem.CopyFile(s, newFile, False)
+                    refreshTree(SiteTree.Nodes(0))
                 Next
             End If
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub MarkDeletedAsUnsaved()
+        For Each t As TabPage In EditTabs.TabPages
+            For Each c In t.Controls
+                If c.GetType() Is GetType(Editor) Then
+                    Dim edit As Editor = c
+                    If Not My.Computer.FileSystem.FileExists(edit.openFile) Then
+                        If Not t.Text.Contains("*") Then
+                            t.Text &= "*"
+                            edit.SaveBtn.Enabled = True
+                        End If
+                    End If
+                End If
+            Next
+        Next
     End Sub
 
     Private Sub deleteFile(ByVal path As String)
@@ -801,6 +836,10 @@ Public Class Main
                 My.Computer.FileSystem.DeleteFile(path, FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
             Catch ex As Exception
             End Try
+        End If
+        MarkDeletedAsUnsaved()
+        If My.Computer.Info.OSPlatform = "Win32Windows" Then   ' Detect non-NT Windows (98)
+            refreshTree(SiteTree.Nodes(0))
         End If
     End Sub
 
@@ -845,6 +884,7 @@ Public Class Main
             add = " (" & num & ")"
         End While
         My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, base & add & ext), contents, False)
+        refreshTree(SiteTree.Nodes(0))
     End Sub
 
     Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
@@ -860,7 +900,11 @@ Public Class Main
         ElseIf dir = SiteTree.Nodes(0).Nodes(2).Tag Then
             html = "<!DOCTYPE html>" & Environment.NewLine & "<html>" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>New HTML Page</title>" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>Include Page</h1>" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
         End If
-        NewFile("new-page", ".html", html)
+        If dir = SiteTree.Nodes(0).Nodes(1).Tag And Not My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Nodes(1).Tag & "\default.html") Then
+            NewFile("default", ".html", html)
+        Else
+            NewFile("new-page", ".html", html)
+        End If
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
@@ -903,6 +947,7 @@ Public Class Main
                         MsgBox(ex.Message)
                     End Try
                 Next
+                refreshTree(SiteTree.Nodes(0))
             End If
         End If
     End Sub
@@ -1226,19 +1271,7 @@ Public Class Main
             foundNode.Remove()
         End If
 
-        For Each t As TabPage In EditTabs.TabPages
-            For Each c In t.Controls
-                If c.GetType() Is GetType(Editor) Then
-                    Dim edit As Editor = c
-                    If edit.openFile = e.FullPath Then
-                        If Not t.Text.Contains("*") Then
-                            t.Text &= "*"
-                            edit.SaveBtn.Enabled = True
-                        End If
-                    End If
-                End If
-            Next
-        Next
+        MarkDeletedAsUnsaved()
     End Sub
 
     Private Sub Watcher_Renamed(ByVal sender As System.Object, ByVal e As System.IO.RenamedEventArgs) Handles Watcher.Renamed
@@ -1614,4 +1647,13 @@ Public Class Main
             edit.doQuickInsert()
         End If
     End Sub
+
+    Shared Function getFont() As Drawing.Font
+        Dim uiFont = New Font("Segoe UI", 9, FontStyle.Regular)
+        If Not uiFont.Name = "Segoe UI" Then
+            uiFont = New Font("Microsoft Sans Serif", 8, FontStyle.Regular)
+        End If
+        Return uiFont
+    End Function
+
 End Class

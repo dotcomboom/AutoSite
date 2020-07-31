@@ -49,6 +49,8 @@
         If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
             Me.BackColor = SystemColors.Control
         End If
+
+        Me.Font = Main.getFont()
     End Sub
 
     Private Sub AddConditional_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown

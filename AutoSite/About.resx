@@ -234,7 +234,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>5, 5, 5, 5</value>
   </data>
   <data name="OK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 27</value>
+    <value>75, 23</value>
   </data>
   <data name="OK.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -924,12 +924,15 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 Final?:
+    <value>1.0 RC4?:
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
    - Editor's auto indent will no longer affect existing lines
    - Sanitary Build message box has been revised
    - Insert Conditional window has been cleaned up
-   - A couple small bug fixes and optimizations
+   - Windows 98 compatibility greatly improved, UI and font tweaks for OSes without XP visual styles or Segoe UI
+   - Bug fixes pertaining to deleted/renamed files and the Editor
+   - Double-clicking a file in the Explorer while the Editor panel is not open will open it in its default program
+   - Other small bug fixes and optimizations
 
 1.0 RC3:
    + Modified date added as [#modified#]

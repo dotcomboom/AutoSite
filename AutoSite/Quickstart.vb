@@ -2,7 +2,6 @@
     Public usite As String = Main.SiteTree.Nodes(0).Tag
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.Close()
     End Sub
@@ -74,6 +73,10 @@
     End Sub
 
     Private Sub Quickstart_Load() Handles MyBase.Load
+        If My.Computer.Info.OSPlatform = "Win32Windows" Then   ' Detect non-NT Windows (98)
+            Main.refreshTree(Main.SiteTree.Nodes(0))
+        End If
+
         If My.Computer.FileSystem.FileExists(usite & "\templates\default.html") Then
             CreateTemplate.Text = "Created"
             CreateTemplate.Enabled = False
@@ -85,6 +88,12 @@
         If Not (indexmd.Enabled And indexhtml.Enabled) Then
             Label4.Text = "As the index page has already been created, you can change formats here."
         End If
+
+        If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
+            Me.BackColor = SystemColors.Control
+        End If
+
+        Me.Font = Main.getFont()
     End Sub
 
     Private Sub CreateTemplate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CreateTemplate.Click

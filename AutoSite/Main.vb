@@ -1605,4 +1605,11 @@ Public Class Main
         Dim q As New Quickstart
         q.ShowDialog()
     End Sub
+
+    Private Sub MenuItem2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doQuickInsert()
+        End If
+    End Sub
 End Class

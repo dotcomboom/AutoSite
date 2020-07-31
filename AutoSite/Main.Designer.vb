@@ -153,6 +153,7 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -295,7 +296,7 @@ Partial Class Main
         'EditMenu
         '
         Me.EditMenu.Index = 1
-        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.Find, Me.Replace, Me.GoToMnu, Me.EditSep4, Me.InsertConditional})
+        Me.EditMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.EditSep, Me.Cut, Me.Copy, Me.Paste, Me.EditSep2, Me.SelectAll, Me.EditSep3, Me.GoToMnu, Me.Find, Me.Replace, Me.MenuItem2, Me.EditSep4, Me.InsertConditional})
         resources.ApplyResources(Me.EditMenu, "EditMenu")
         '
         'Undo
@@ -345,27 +346,27 @@ Partial Class Main
         '
         'Find
         '
-        Me.Find.Index = 9
+        Me.Find.Index = 10
         resources.ApplyResources(Me.Find, "Find")
         '
         'Replace
         '
-        Me.Replace.Index = 10
+        Me.Replace.Index = 11
         resources.ApplyResources(Me.Replace, "Replace")
         '
         'GoToMnu
         '
-        Me.GoToMnu.Index = 11
+        Me.GoToMnu.Index = 9
         resources.ApplyResources(Me.GoToMnu, "GoToMnu")
         '
         'EditSep4
         '
-        Me.EditSep4.Index = 12
+        Me.EditSep4.Index = 13
         resources.ApplyResources(Me.EditSep4, "EditSep4")
         '
         'InsertConditional
         '
-        Me.InsertConditional.Index = 13
+        Me.InsertConditional.Index = 14
         resources.ApplyResources(Me.InsertConditional, "InsertConditional")
         '
         'FormatMenu
@@ -899,6 +900,11 @@ Partial Class Main
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
+        'MenuItem2
+        '
+        Me.MenuItem2.Index = 12
+        resources.ApplyResources(Me.MenuItem2, "MenuItem2")
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -1054,4 +1060,5 @@ Partial Class Main
     Friend WithEvents QuickstartMnu As System.Windows.Forms.MenuItem
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents SanitaryBuildBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
 End Class

@@ -250,61 +250,65 @@ Public Class Editor
         End If
     End Sub
 
+    Private Sub prepMenu()
+        Dim items As New List(Of AutocompleteMenuNS.AutocompleteItem)
+
+        Dim internal As New List(Of String)
+        internal.Add("root")
+        internal.Add("path")
+        internal.Add("modified")
+        internal.Add("template")
+
+        If (Not Me.Parent.Text.StartsWith("includes\")) And Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
+            ' Internal
+            If Me.Parent.Text.StartsWith("templates\") And Not Code.Text.Contains("[#content#]") Then
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#content#]", 2, "content", "Content", "Outputs the page's content." & Environment.NewLine & Environment.NewLine & "Use once in templates."))
+            End If
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "root", "Relative path to root", "Outputs the relative path from the page to the site root." & Environment.NewLine & "Use this to begin paths to stylesheets, images, and other" & Environment.NewLine & "pages." & Environment.NewLine & Environment.NewLine & rootCalc()))
+            'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & Environment.NewLine & Environment.NewLine & "Example: default"))
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "modified", "Last modified date", "Outputs the date the page was last modified on." & Environment.NewLine & Environment.NewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "path", "Path", "Outputs the page's relative path from root." & Environment.NewLine & Environment.NewLine & pathCalc()))
+            For Each Attribute As TreeNode In Main.AttributeTree.Nodes
+                If Not internal.Contains(Attribute.Text) Then
+                    If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or Me.Parent.Text.StartsWith("templates\") Then
+                        items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, Attribute.Text, Attribute.Text, "Outputs the page's value for the " & Attribute.Text & " attribute."))
+                    End If
+                End If
+                'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
+            Next
+        End If
+
+        ' Internal define option
+        If Me.Parent.Text.StartsWith("pages\") Then
+            If Not Code.Text.Contains("<!-- attrib template:") Then
+                items.Insert(0, New AutocompleteMenuNS.AutocompleteItem("<!-- attrib template: default -->", 1, "Define template", "Define template", "Defines the template used by the current page." & Environment.NewLine & Environment.NewLine & "Default is default, which tells AutoSite to use default.html in the templates folder."))
+            End If
+
+            For Each Attribute As TreeNode In Main.AttributeTree.Nodes
+                If Not internal.Contains(Attribute.Text) Then
+                    If Not Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Then
+                        items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib " & Attribute.Text & ": ... -->", 1, "Define " & Attribute.Text, "Define " & Attribute.Text, "Defines the " & Attribute.Text & " attribute for this page." & Environment.NewLine & Environment.NewLine & "Example: <!-- attrib " & Attribute.Text & ": ... -->"))
+                    End If
+                End If
+                'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
+            Next
+
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib ...: ... -->", 5, "Define a new attribute", "Define a new attribute", "Adds an attribute definition." & Environment.NewLine & Environment.NewLine & "Example: <!-- attrib ...: ... -->"))
+        End If
+
+        If Not Me.Parent.Text.StartsWith("includes\") Then
+            If Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert conditional...", 4, "Insert conditional", "Insert conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
+            End If
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build for more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & "your site and populate the Attribute Map."))
+        End If
+
+        Autocomplete.SetAutocompleteItems(items)
+    End Sub
+
     Private Sub Code_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles Code.KeyDown
         If e.Control Then
-            Dim items As New List(Of AutocompleteMenuNS.AutocompleteItem)
-
-            Dim internal As New List(Of String)
-            internal.Add("root")
-            internal.Add("path")
-            internal.Add("modified")
-            internal.Add("template")
-
-            If (Not Me.Parent.Text.StartsWith("includes\")) And Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
-                ' Internal
-                If Me.Parent.Text.StartsWith("templates\") And Not Code.Text.Contains("[#content#]") Then
-                    items.Add(New AutocompleteMenuNS.AutocompleteItem("[#content#]", 2, "content", "Content", "Outputs the page's content." & Environment.NewLine & Environment.NewLine & "Use once in templates."))
-                End If
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "root", "Relative path to root", "Outputs the relative path from the page to the site root." & Environment.NewLine & "Use this to begin paths to stylesheets, images, and other" & Environment.NewLine & "pages." & Environment.NewLine & Environment.NewLine & rootCalc()))
-                'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & Environment.NewLine & Environment.NewLine & "Example: default"))
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "modified", "Last modified date", "Outputs the date the page was last modified on." & Environment.NewLine & Environment.NewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "path", "Path", "Outputs the page's relative path from root." & Environment.NewLine & Environment.NewLine & pathCalc()))
-                For Each Attribute As TreeNode In Main.AttributeTree.Nodes
-                    If Not internal.Contains(Attribute.Text) Then
-                        If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or Me.Parent.Text.StartsWith("templates\") Then
-                            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, Attribute.Text, Attribute.Text, "Outputs the page's value for the " & Attribute.Text & " attribute."))
-                        End If
-                    End If
-                    'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
-                Next
-            End If
-
-            ' Internal define option
-            If Me.Parent.Text.StartsWith("pages\") Then
-                If Not Code.Text.Contains("<!-- attrib template:") Then
-                    items.Insert(0, New AutocompleteMenuNS.AutocompleteItem("<!-- attrib template: default -->", 1, "Define template", "Define template", "Defines the template used by the current page." & Environment.NewLine & Environment.NewLine & "Default is default, which tells AutoSite to use default.html in the templates folder."))
-                End If
-
-                For Each Attribute As TreeNode In Main.AttributeTree.Nodes
-                    If Not internal.Contains(Attribute.Text) Then
-                        If Not Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Then
-                            items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib " & Attribute.Text & ": ... -->", 1, "Define " & Attribute.Text, "Define " & Attribute.Text, "Defines the " & Attribute.Text & " attribute for this page." & Environment.NewLine & Environment.NewLine & "Example: <!-- attrib " & Attribute.Text & ": ... -->"))
-                        End If
-                    End If
-                    'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
-                Next
-
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib ...: ... -->", 5, "Define a new attribute", "Define a new attribute", "Adds an attribute definition." & Environment.NewLine & Environment.NewLine & "Example: <!-- attrib ...: ... -->"))
-            End If
-
-            If Not Me.Parent.Text.StartsWith("includes\") Then
-                If Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
-                    items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert conditional...", 4, "Insert conditional", "Insert Conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
-                End If
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build for more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & "your site and populate the Attribute Map."))
-            End If
-
-            Autocomplete.SetAutocompleteItems(items)
+            prepMenu()
         End If
     End Sub
 
@@ -343,4 +347,9 @@ Public Class Editor
         Return toreturn
     End Function
 
+    Public Sub doQuickInsert() Handles QuickInsert.Click
+        Code.Focus()
+        prepMenu()
+        Autocomplete.Show(Code, True)
+    End Sub
 End Class

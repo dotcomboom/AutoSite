@@ -40,6 +40,7 @@ Partial Class Editor
         Me.Find = New System.Windows.Forms.ToolStripButton()
         Me.GTo = New System.Windows.Forms.ToolStripButton()
         Me.Replace = New System.Windows.Forms.ToolStripButton()
+        Me.QuickInsert = New System.Windows.Forms.ToolStripButton()
         Me.Sep4 = New System.Windows.Forms.ToolStripSeparator()
         Me.Preview = New System.Windows.Forms.ToolStripSplitButton()
         Me.LivePreview = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +70,7 @@ Partial Class Editor
         '
         Me.Strip.BackColor = System.Drawing.SystemColors.Window
         Me.Strip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveBtn, Me.Sep, Me.UndoBtn, Me.RedoBtn, Me.Sep2, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.CloseBtn, Me.Sep3, Me.Find, Me.GTo, Me.Replace, Me.Sep4, Me.Preview, Me.Sep5, Me.Build, Me.ViewOutput})
+        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveBtn, Me.Sep, Me.UndoBtn, Me.RedoBtn, Me.Sep2, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.CloseBtn, Me.Sep3, Me.Find, Me.GTo, Me.Replace, Me.QuickInsert, Me.Sep4, Me.Preview, Me.Sep5, Me.Build, Me.ViewOutput})
         Me.Strip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         resources.ApplyResources(Me.Strip, "Strip")
         Me.Strip.Name = "Strip"
@@ -161,6 +162,12 @@ Partial Class Editor
         Me.Replace.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         resources.ApplyResources(Me.Replace, "Replace")
         Me.Replace.Name = "Replace"
+        '
+        'QuickInsert
+        '
+        Me.QuickInsert.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.QuickInsert, "QuickInsert")
+        Me.QuickInsert.Name = "QuickInsert"
         '
         'Sep4
         '
@@ -342,7 +349,7 @@ Partial Class Editor
     Friend WithEvents Sep3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Find As System.Windows.Forms.ToolStripButton
     Friend WithEvents GTo As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Replace As System.Windows.Forms.ToolStripButton
+    Friend WithEvents QuickInsert As System.Windows.Forms.ToolStripButton
     Friend WithEvents Sep4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Preview As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents LivePreview As System.Windows.Forms.ToolStripMenuItem
@@ -354,5 +361,6 @@ Partial Class Editor
     Friend WithEvents ViewinDefaultBrowser As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Autocomplete As AutocompleteMenuNS.AutocompleteMenu
     Friend WithEvents PopupIcons As System.Windows.Forms.ImageList
+    Friend WithEvents Replace As System.Windows.Forms.ToolStripButton
 
 End Class

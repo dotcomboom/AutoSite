@@ -258,10 +258,10 @@ Public Class Main
 
         Dim tab As New TabPage With {
             .Tag = path,
-            .BackColor = Color.White
+            .BackColor = Color.White,
+            .ToolTipText = path,
+            .Text = path.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
         }
-        tab.ToolTipText = tab.Tag
-        tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
         EditTabs.TabPages.Add(tab)
         EditTabs.SelectedTab = tab
         Dim game As Boolean = False

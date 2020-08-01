@@ -61,20 +61,21 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to .
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property iconTheme() As String
+        Friend ReadOnly Property autosite_mixer() As System.Drawing.Bitmap
             Get
-                Return ResourceManager.GetString("iconTheme", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("autosite_mixer", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to .
         '''</summary>
-        Friend ReadOnly Property openProject() As String
+        Friend ReadOnly Property non() As String
             Get
-                Return ResourceManager.GetString("openProject", resourceCulture)
+                Return ResourceManager.GetString("non", resourceCulture)
             End Get
         End Property
     End Module

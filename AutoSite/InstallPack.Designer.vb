@@ -82,7 +82,7 @@ Partial Class InstallPack
         '
         resources.ApplyResources(Me.Description, "Description")
         Me.Description.Name = "Description"
-        Me.Description.Text = Global.AutoSite.My.Resources.Resources.openProject
+        Me.Description.Text = ""
         '
         'TreeView1
         '

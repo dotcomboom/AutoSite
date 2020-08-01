@@ -18,7 +18,8 @@
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ApplicationIcon>autosite.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -61,6 +62,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="autosite.ico" />
+    <None Include="Resources\BuildSolution_16x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

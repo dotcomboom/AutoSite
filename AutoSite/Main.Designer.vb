@@ -598,14 +598,9 @@ Partial Class Main
         Me.XP.TransparentColor = System.Drawing.Color.Transparent
         Me.XP.Images.SetKeyName(0, "Folder")
         Me.XP.Images.SetKeyName(1, "Template")
-        Me.XP.Images.SetKeyName(2, "Template")
-        Me.XP.Images.SetKeyName(3, "Page")
-        Me.XP.Images.SetKeyName(4, "Include")
-        Me.XP.Images.SetKeyName(5, "Include")
-        Me.XP.Images.SetKeyName(6, "Include")
-        Me.XP.Images.SetKeyName(7, "Include")
-        Me.XP.Images.SetKeyName(8, "Include")
-        Me.XP.Images.SetKeyName(9, "Build")
+        Me.XP.Images.SetKeyName(2, "Page")
+        Me.XP.Images.SetKeyName(3, "Include")
+        Me.XP.Images.SetKeyName(4, "Build")
         '
         'Context
         '
@@ -800,7 +795,7 @@ Partial Class Main
         resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.iconTheme
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.non
         '
         'LogMenuBridge
         '

@@ -21,9 +21,11 @@
         Else
             Console.WriteLine(System.IO.Directory.GetCurrentDirectory())
             Console.WriteLine()
-            Console.Write("To build, strike any key. ")
-            Console.ReadKey()
-            Console.WriteLine()
+            If Not (args.Length > 1 And String.Join(" ", args).Contains(" -a")) Then
+                Console.Write("To build, strike any key. ")
+                Console.ReadKey()
+                Console.WriteLine()
+            End If
             Apricot.buildSite(System.IO.Directory.GetCurrentDirectory())
         End If
     End Sub

@@ -123,8 +123,9 @@
     <Compile Include="InstallPack.Designer.vb">
       <DependentUpon>InstallPack.vb</DependentUpon>
     </Compile>
-    <Compile Include="InstallPack.vb">
-    </Compile>
+    <None Include="InstallPack.vb">
+      <SubType>Form</SubType>
+    </None>
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
@@ -171,9 +172,9 @@
       <DependentUpon>Editor.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstallPack.resx">
+    <None Include="InstallPack.resx">
       <DependentUpon>InstallPack.vb</DependentUpon>
-    </EmbeddedResource>
+    </None>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
       <SubType>Designer</SubType>

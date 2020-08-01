@@ -1669,4 +1669,8 @@ Public Class Main
         End If
         Return uiFont
     End Function
+
+    Private Sub SiteTree_NodeMouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick, AttributeTree.NodeMouseDoubleClick
+
+    End Sub
 End Class

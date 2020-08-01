@@ -134,13 +134,7 @@ Partial Class Main
         Me.Preview = New System.Windows.Forms.WebBrowser()
         Me.ExSplit = New System.Windows.Forms.SplitContainer()
         Me.SiteTree = New System.Windows.Forms.TreeView()
-        Me.ApricotTabs = New System.Windows.Forms.TabControl()
-        Me.LogPage = New System.Windows.Forms.TabPage()
-        Me.Log = New System.Windows.Forms.RichTextBox()
         Me.LogMenuBridge = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.MapPage = New System.Windows.Forms.TabPage()
-        Me.AttributeExplanation = New System.Windows.Forms.Label()
-        Me.AttributeTree = New System.Windows.Forms.TreeView()
         Me.BuildProgress = New System.Windows.Forms.ProgressBar()
         Me.BuildStrip = New System.Windows.Forms.ToolStrip()
         Me.Build = New System.Windows.Forms.ToolStripButton()
@@ -154,6 +148,12 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
+        Me.MapPage = New System.Windows.Forms.TabPage()
+        Me.AttributeTree = New System.Windows.Forms.TreeView()
+        Me.AttributeExplanation = New System.Windows.Forms.Label()
+        Me.LogPage = New System.Windows.Forms.TabPage()
+        Me.Log = New System.Windows.Forms.RichTextBox()
+        Me.ApricotTabs = New System.Windows.Forms.TabControl()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -161,13 +161,13 @@ Partial Class Main
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
-        Me.ApricotTabs.SuspendLayout()
-        Me.LogPage.SuspendLayout()
-        Me.MapPage.SuspendLayout()
         Me.BuildStrip.SuspendLayout()
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
+        Me.MapPage.SuspendLayout()
+        Me.LogPage.SuspendLayout()
+        Me.ApricotTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'VS2017
@@ -772,55 +772,10 @@ Partial Class Main
         Me.SiteTree.LabelEdit = True
         Me.SiteTree.Name = "SiteTree"
         '
-        'ApricotTabs
-        '
-        Me.ApricotTabs.Controls.Add(Me.LogPage)
-        Me.ApricotTabs.Controls.Add(Me.MapPage)
-        resources.ApplyResources(Me.ApricotTabs, "ApricotTabs")
-        Me.ApricotTabs.Name = "ApricotTabs"
-        Me.ApricotTabs.SelectedIndex = 0
-        '
-        'LogPage
-        '
-        Me.LogPage.Controls.Add(Me.Log)
-        resources.ApplyResources(Me.LogPage, "LogPage")
-        Me.LogPage.Name = "LogPage"
-        Me.LogPage.UseVisualStyleBackColor = True
-        '
-        'Log
-        '
-        Me.Log.BackColor = System.Drawing.SystemColors.Window
-        Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Log.ContextMenuStrip = Me.LogMenuBridge
-        resources.ApplyResources(Me.Log, "Log")
-        Me.Log.Name = "Log"
-        Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.non
-        '
         'LogMenuBridge
         '
         Me.LogMenuBridge.Name = "LogMenuBridge"
         resources.ApplyResources(Me.LogMenuBridge, "LogMenuBridge")
-        '
-        'MapPage
-        '
-        Me.MapPage.Controls.Add(Me.AttributeExplanation)
-        Me.MapPage.Controls.Add(Me.AttributeTree)
-        resources.ApplyResources(Me.MapPage, "MapPage")
-        Me.MapPage.Name = "MapPage"
-        Me.MapPage.UseVisualStyleBackColor = True
-        '
-        'AttributeExplanation
-        '
-        resources.ApplyResources(Me.AttributeExplanation, "AttributeExplanation")
-        Me.AttributeExplanation.Name = "AttributeExplanation"
-        '
-        'AttributeTree
-        '
-        Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
-        resources.ApplyResources(Me.AttributeTree, "AttributeTree")
-        Me.AttributeTree.ImageList = Me.VS2017
-        Me.AttributeTree.Name = "AttributeTree"
         '
         'BuildProgress
         '
@@ -903,6 +858,51 @@ Partial Class Main
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
+        'MapPage
+        '
+        Me.MapPage.Controls.Add(Me.AttributeExplanation)
+        Me.MapPage.Controls.Add(Me.AttributeTree)
+        resources.ApplyResources(Me.MapPage, "MapPage")
+        Me.MapPage.Name = "MapPage"
+        Me.MapPage.UseVisualStyleBackColor = True
+        '
+        'AttributeTree
+        '
+        Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
+        resources.ApplyResources(Me.AttributeTree, "AttributeTree")
+        Me.AttributeTree.ImageList = Me.VS2017
+        Me.AttributeTree.Name = "AttributeTree"
+        '
+        'AttributeExplanation
+        '
+        resources.ApplyResources(Me.AttributeExplanation, "AttributeExplanation")
+        Me.AttributeExplanation.Name = "AttributeExplanation"
+        '
+        'LogPage
+        '
+        Me.LogPage.Controls.Add(Me.Log)
+        resources.ApplyResources(Me.LogPage, "LogPage")
+        Me.LogPage.Name = "LogPage"
+        Me.LogPage.UseVisualStyleBackColor = True
+        '
+        'Log
+        '
+        Me.Log.BackColor = System.Drawing.SystemColors.Window
+        Me.Log.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Log.ContextMenuStrip = Me.LogMenuBridge
+        resources.ApplyResources(Me.Log, "Log")
+        Me.Log.Name = "Log"
+        Me.Log.ReadOnly = True
+        Me.Log.Text = Global.AutoSite.My.Resources.Resources.non
+        '
+        'ApricotTabs
+        '
+        Me.ApricotTabs.Controls.Add(Me.LogPage)
+        Me.ApricotTabs.Controls.Add(Me.MapPage)
+        resources.ApplyResources(Me.ApricotTabs, "ApricotTabs")
+        Me.ApricotTabs.Name = "ApricotTabs"
+        Me.ApricotTabs.SelectedIndex = 0
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -918,14 +918,14 @@ Partial Class Main
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
         Me.ExSplit.ResumeLayout(False)
-        Me.ApricotTabs.ResumeLayout(False)
-        Me.LogPage.ResumeLayout(False)
-        Me.MapPage.ResumeLayout(False)
         Me.BuildStrip.ResumeLayout(False)
         Me.BuildStrip.PerformLayout()
         Me.CoreSplit.Panel1.ResumeLayout(False)
         Me.CoreSplit.Panel2.ResumeLayout(False)
         Me.CoreSplit.ResumeLayout(False)
+        Me.MapPage.ResumeLayout(False)
+        Me.LogPage.ResumeLayout(False)
+        Me.ApricotTabs.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -981,11 +981,6 @@ Partial Class Main
     Friend WithEvents CoreSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents ExSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents SiteTree As System.Windows.Forms.TreeView
-    Friend WithEvents ApricotTabs As System.Windows.Forms.TabControl
-    Friend WithEvents LogPage As System.Windows.Forms.TabPage
-    Friend WithEvents Log As System.Windows.Forms.RichTextBox
-    Friend WithEvents MapPage As System.Windows.Forms.TabPage
-    Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
     Friend WithEvents BuildProgress As System.Windows.Forms.ProgressBar
     Friend WithEvents BuildStrip As System.Windows.Forms.ToolStrip
     Friend WithEvents OpenOutput As System.Windows.Forms.ToolStripButton
@@ -1053,10 +1048,15 @@ Partial Class Main
     Friend WithEvents SystemIcons As System.Windows.Forms.MenuItem
     Friend WithEvents NewSite As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
-    Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     Friend WithEvents QuickstartMnu As System.Windows.Forms.MenuItem
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents SanitaryBuildBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents QuickInsertMnu As System.Windows.Forms.MenuItem
+    Friend WithEvents ApricotTabs As System.Windows.Forms.TabControl
+    Friend WithEvents LogPage As System.Windows.Forms.TabPage
+    Friend WithEvents Log As System.Windows.Forms.RichTextBox
+    Friend WithEvents MapPage As System.Windows.Forms.TabPage
+    Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
+    Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
 End Class

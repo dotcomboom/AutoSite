@@ -209,7 +209,7 @@ Partial Class StartPage
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Image = Global.AutoSite.My.Resources.Resources.NewSite
         Me.PictureBox1.Location = New System.Drawing.Point(34, 66)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(16, 16)
@@ -231,7 +231,7 @@ Partial Class StartPage
         'R1
         '
         Me.R1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.R1.Image = CType(resources.GetObject("R1.Image"), System.Drawing.Image)
+        Me.R1.Image = Global.AutoSite.My.Resources.Resources.Web
         Me.R1.Location = New System.Drawing.Point(161, 66)
         Me.R1.Name = "R1"
         Me.R1.Size = New System.Drawing.Size(16, 16)
@@ -242,7 +242,7 @@ Partial Class StartPage
         'R2
         '
         Me.R2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.R2.Image = CType(resources.GetObject("R2.Image"), System.Drawing.Image)
+        Me.R2.Image = Global.AutoSite.My.Resources.Resources.Web
         Me.R2.Location = New System.Drawing.Point(161, 92)
         Me.R2.Name = "R2"
         Me.R2.Size = New System.Drawing.Size(16, 16)
@@ -253,7 +253,7 @@ Partial Class StartPage
         'R3
         '
         Me.R3.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.R3.Image = CType(resources.GetObject("R3.Image"), System.Drawing.Image)
+        Me.R3.Image = Global.AutoSite.My.Resources.Resources.Web
         Me.R3.Location = New System.Drawing.Point(161, 118)
         Me.R3.Name = "R3"
         Me.R3.Size = New System.Drawing.Size(16, 16)
@@ -264,7 +264,7 @@ Partial Class StartPage
         'R4
         '
         Me.R4.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.R4.Image = CType(resources.GetObject("R4.Image"), System.Drawing.Image)
+        Me.R4.Image = Global.AutoSite.My.Resources.Resources.Web
         Me.R4.Location = New System.Drawing.Point(161, 144)
         Me.R4.Name = "R4"
         Me.R4.Size = New System.Drawing.Size(16, 16)
@@ -275,7 +275,7 @@ Partial Class StartPage
         'R5
         '
         Me.R5.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.R5.Image = CType(resources.GetObject("R5.Image"), System.Drawing.Image)
+        Me.R5.Image = Global.AutoSite.My.Resources.Resources.Web
         Me.R5.Location = New System.Drawing.Point(161, 170)
         Me.R5.Name = "R5"
         Me.R5.Size = New System.Drawing.Size(16, 16)

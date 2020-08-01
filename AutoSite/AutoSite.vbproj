@@ -289,6 +289,42 @@
   <ItemGroup>
     <None Include="Resources\InsertPanel_16x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageBody_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewWeb_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\value.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xp_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xp_includes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xp_template.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

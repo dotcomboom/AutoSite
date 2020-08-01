@@ -214,7 +214,7 @@ Partial Class Editor
         'ViewOutput
         '
         Me.ViewOutput.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
-        Me.ViewOutput.Image = Global.AutoSite.My.Resources.Resources.OpenOutput
+        Me.ViewOutput.Image = Global.AutoSite.My.Resources.Resources.Web
         resources.ApplyResources(Me.ViewOutput, "ViewOutput")
         Me.ViewOutput.Name = "ViewOutput"
         '

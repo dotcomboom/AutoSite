@@ -869,6 +869,7 @@ Partial Class Main
         '
         Me.BrowseSite.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BrowseSite.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BrowseSite.Image = Global.AutoSite.My.Resources.Resources.PreviewWebTab
         resources.ApplyResources(Me.BrowseSite, "BrowseSite")
         Me.BrowseSite.Name = "BrowseSite"
         '

@@ -81,17 +81,20 @@ Partial Class Editor
         Me.SaveBtn.AutoToolTip = False
         Me.SaveBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem, Me.SaveAllToolStripMenuItem})
         resources.ApplyResources(Me.SaveBtn, "SaveBtn")
+        Me.SaveBtn.Image = Global.AutoSite.My.Resources.Resources.Save
         Me.SaveBtn.Name = "SaveBtn"
         '
         'SaveToolStripMenuItem
         '
-        resources.ApplyResources(Me.SaveToolStripMenuItem, "SaveToolStripMenuItem")
+        Me.SaveToolStripMenuItem.Image = Global.AutoSite.My.Resources.Resources.Save
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        resources.ApplyResources(Me.SaveToolStripMenuItem, "SaveToolStripMenuItem")
         '
         'SaveAllToolStripMenuItem
         '
-        resources.ApplyResources(Me.SaveAllToolStripMenuItem, "SaveAllToolStripMenuItem")
+        Me.SaveAllToolStripMenuItem.Image = Global.AutoSite.My.Resources.Resources.SaveAll
         Me.SaveAllToolStripMenuItem.Name = "SaveAllToolStripMenuItem"
+        resources.ApplyResources(Me.SaveAllToolStripMenuItem, "SaveAllToolStripMenuItem")
         '
         'Sep
         '
@@ -101,12 +104,14 @@ Partial Class Editor
         'UndoBtn
         '
         Me.UndoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.UndoBtn.Image = Global.AutoSite.My.Resources.Resources.Undo
         resources.ApplyResources(Me.UndoBtn, "UndoBtn")
         Me.UndoBtn.Name = "UndoBtn"
         '
         'RedoBtn
         '
         Me.RedoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.RedoBtn.Image = Global.AutoSite.My.Resources.Resources.Redo
         resources.ApplyResources(Me.RedoBtn, "RedoBtn")
         Me.RedoBtn.Name = "RedoBtn"
         '
@@ -118,18 +123,21 @@ Partial Class Editor
         'CutBtn
         '
         Me.CutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CutBtn.Image = Global.AutoSite.My.Resources.Resources.Cut
         resources.ApplyResources(Me.CutBtn, "CutBtn")
         Me.CutBtn.Name = "CutBtn"
         '
         'CopyBtn
         '
         Me.CopyBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CopyBtn.Image = Global.AutoSite.My.Resources.Resources.Copy
         resources.ApplyResources(Me.CopyBtn, "CopyBtn")
         Me.CopyBtn.Name = "CopyBtn"
         '
         'PasteBtn
         '
         Me.PasteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PasteBtn.Image = Global.AutoSite.My.Resources.Resources.Paste
         resources.ApplyResources(Me.PasteBtn, "PasteBtn")
         Me.PasteBtn.Name = "PasteBtn"
         '
@@ -148,24 +156,28 @@ Partial Class Editor
         'Find
         '
         Me.Find.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Find.Image = Global.AutoSite.My.Resources.Resources.Search
         resources.ApplyResources(Me.Find, "Find")
         Me.Find.Name = "Find"
         '
         'GTo
         '
         Me.GTo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GTo.Image = Global.AutoSite.My.Resources.Resources.GotoRow
         resources.ApplyResources(Me.GTo, "GTo")
         Me.GTo.Name = "GTo"
         '
         'Replace
         '
         Me.Replace.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Replace.Image = Global.AutoSite.My.Resources.Resources.ReplaceAll
         resources.ApplyResources(Me.Replace, "Replace")
         Me.Replace.Name = "Replace"
         '
         'QuickInsert
         '
         Me.QuickInsert.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.QuickInsert.Image = Global.AutoSite.My.Resources.Resources.InsertPanel
         resources.ApplyResources(Me.QuickInsert, "QuickInsert")
         Me.QuickInsert.Name = "QuickInsert"
         '
@@ -178,6 +190,7 @@ Partial Class Editor
         '
         Me.Preview.AutoToolTip = False
         Me.Preview.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LivePreview})
+        Me.Preview.Image = Global.AutoSite.My.Resources.Resources.WebTest
         resources.ApplyResources(Me.Preview, "Preview")
         Me.Preview.Name = "Preview"
         '
@@ -194,12 +207,14 @@ Partial Class Editor
         '
         'Build
         '
+        Me.Build.Image = Global.AutoSite.My.Resources.Resources.Build
         resources.ApplyResources(Me.Build, "Build")
         Me.Build.Name = "Build"
         '
         'ViewOutput
         '
         Me.ViewOutput.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
+        Me.ViewOutput.Image = Global.AutoSite.My.Resources.Resources.OpenOutput
         resources.ApplyResources(Me.ViewOutput, "ViewOutput")
         Me.ViewOutput.Name = "ViewOutput"
         '
@@ -213,7 +228,7 @@ Partial Class Editor
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
         Me.Autocomplete.SetAutocompleteMenu(Me.Code, Me.Autocomplete)
-        Me.Code.AutoIndentCharsPatterns = ""
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.non
         Me.Code.AutoIndentExistingLines = False
         resources.ApplyResources(Me.Code, "Code")
         Me.Code.BackBrush = Nothing

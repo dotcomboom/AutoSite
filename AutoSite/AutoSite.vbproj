@@ -247,6 +247,48 @@
       <Name>AutoSite Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web_16x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PreviewWebTab_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebTest_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAll_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GotoRow_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplaceAll_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertPanel_16x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

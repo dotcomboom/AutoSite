@@ -17,7 +17,7 @@
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
-    <ApplicationIcon>autosite.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\autosite_32.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <SignManifests>false</SignManifests>
     <SignAssembly>false</SignAssembly>
@@ -202,7 +202,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="autosite.ico" />
+    <None Include="Resources\autosite_32.ico" />
     <None Include="Resources\Tag_16x.png" />
     <None Include="Resources\OpenFolder_16x.png" />
     <None Include="Resources\Browse_16x.png" />

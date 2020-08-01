@@ -18,8 +18,7 @@
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>autosite_32.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -146,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="autosite.ico" />
+    <Content Include="autosite_32.ico" />
     <None Include="Resources\BuildSolution_16x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -118,9 +118,11 @@ Public Class Main
         'settings.SelectedImageKey = "Build"
         'settings.Tag = root.Text & "\apricot.xml
 
+        SiteTree.BeginUpdate()
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(inPath), "*", pages, "Page", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(includePath), "*", includes, "Include", False)
+        SiteTree.EndUpdate()
 
         root.Expand()
         pages.Expand()
@@ -698,7 +700,8 @@ Public Class Main
 
     Public Sub doBuild() Handles BuildSite.Click, Build.Click
             Log.Clear()
-            AttributeTree.Nodes.Clear()
+        AttributeTree.Nodes.Clear()
+        AttributeTree.BeginUpdate()
             Try
                 ApricotWorker.RunWorkerAsync()
         Catch ex As Exception
@@ -1083,6 +1086,7 @@ Public Class Main
     End Sub
 
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ApricotWorker.RunWorkerCompleted
+        AttributeTree.EndUpdate()
         BuildProgress.Visible = False
         BuildMenu.Enabled = True
         BuildSite.Enabled = True

@@ -57,7 +57,7 @@ Partial Class About
         '
         'Logo
         '
-        Me.Logo.Image = Global.AutoSite.My.Resources.Resources.autosite_mixer
+        Me.Logo.Image = Global.AutoSite.My.Resources.Resources.Logo_128
         resources.ApplyResources(Me.Logo, "Logo")
         Me.Logo.Name = "Logo"
         Me.Logo.TabStop = False

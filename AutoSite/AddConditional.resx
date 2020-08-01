@@ -282,14 +282,6 @@
   <data name="&gt;&gt;Attribute.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="AttIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAAI9JREFUOE9j+P//P0UYqyApGKsgKRhMfPv27T8J+C4Q8zPAAMwAJycnovDy5ctB
-        hqyBaifdADc3t/8XLlwAGZJDlgEgHBkZ+f/Vq1c/gfqMiTbgxfMXYAzjV1VVgcODfgYgY6gXfgH1mVAS
-        iAVkBSI0GtcDMSOKASTg+0AsCNYMAiADKMFYBUnBWAWJx/8ZAJTvnaUbCipuAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="AttIcon.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 12</value>
   </data>
@@ -352,9 +344,6 @@
   </data>
   <data name="Display.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
     <value>27, 14</value>
-  </data>
-  <data name="Display.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Courier New, 9.75pt</value>
   </data>
   <data name="Display.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 116</value>
@@ -499,9 +488,6 @@
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>

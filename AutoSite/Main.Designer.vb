@@ -838,12 +838,14 @@ Partial Class Main
         '
         'Build
         '
+        Me.Build.Image = Global.AutoSite.My.Resources.Resources.Build
         resources.ApplyResources(Me.Build, "Build")
         Me.Build.Name = "Build"
         '
         'SanitaryBuildBtn
         '
         Me.SanitaryBuildBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SanitaryBuildBtn.Image = Global.AutoSite.My.Resources.Resources.SanitaryBuild
         resources.ApplyResources(Me.SanitaryBuildBtn, "SanitaryBuildBtn")
         Me.SanitaryBuildBtn.Name = "SanitaryBuildBtn"
         '
@@ -851,6 +853,7 @@ Partial Class Main
         '
         Me.OpenOutput.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.OpenOutput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenOutput.Image = Global.AutoSite.My.Resources.Resources.OpenFolder
         resources.ApplyResources(Me.OpenOutput, "OpenOutput")
         Me.OpenOutput.Name = "OpenOutput"
         '
@@ -858,6 +861,7 @@ Partial Class Main
         '
         Me.BrowseSitePreview.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BrowseSitePreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BrowseSitePreview.Image = Global.AutoSite.My.Resources.Resources.Browse
         resources.ApplyResources(Me.BrowseSitePreview, "BrowseSitePreview")
         Me.BrowseSitePreview.Name = "BrowseSitePreview"
         '

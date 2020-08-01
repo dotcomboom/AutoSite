@@ -962,7 +962,7 @@ Public Class Main
         If e.UserState.GetType() Is GetType(System.String) Then
             BuildProgress.Visible = True
             BuildMenu.Enabled = False
-            Build.Enabled = False
+            BuildSite.Enabled = False
             SanitaryBuild.Enabled = False
             SanitaryBuildBtn.Enabled = False
             BuildProgress.Value = e.ProgressPercentage
@@ -1070,7 +1070,7 @@ Public Class Main
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ApricotWorker.RunWorkerCompleted
         BuildProgress.Visible = False
         BuildMenu.Enabled = True
-        Build.Enabled = True
+        BuildSite.Enabled = True
         SanitaryBuild.Enabled = True
         SanitaryBuildBtn.Enabled = True
     End Sub

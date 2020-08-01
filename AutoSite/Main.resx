@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAm
-        GAAAAk1TRnQBSQFMAgEBCAEAAUgBBgFIAQYBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        GAAAAk1TRnQBSQFMAgEBCAEAAbgBBgG4AQYBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABMAMAAQEBAAEgBgABMP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8AJgAD8QH/A/EB/wPx
         Af8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/A/EB/8gAA/EB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wPxAf/IAAPxAf8DAAH/A/EB/wPx
@@ -595,7 +595,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB0
-        FAAAAk1TRnQBSQFMAgEBBQEAATgBBgE4AQYBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        FAAAAk1TRnQBSQFMAgEBBQEAAagBBgGoAQYBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABIAMAAQEBAAEgBgABICIAAwoBDQM2AVkDRwGCA1sBwwNgAd4DVAGsAwoBDQMKAQ3cAAMGAQgDWQH1
         Af8ByAHJAf8DXwHzAdQBrAGdAv8CxwH/A18B4ANbAcMDWwHEAzIBUdQAAwoBDgNKAYkDfwH+Af8CwgL/
         AsAC/wLAAv8CwAH/Af4BwAG/Af8B/QG+Ab0C/wLAAf8DUgGpAwIBA9AAA38B/gH/AbkBugH/AfgBtwG1
@@ -851,11 +851,14 @@
   <data name="&gt;&gt;LogMenuBridge.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Log.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="Log.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>5, 5</value>
   </data>
   <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 96</value>
+    <value>262, 91</value>
   </data>
   <data name="Log.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1064,15 +1067,6 @@ Build your site to populate the Attribute Map.</value>
   <metadata name="BuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="Build.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVDhPtZA9EoMgEIU5Us5AT29vzwGs0nALT+EJchMy
-        Y0mTMGi78ZElQ34UzCQ782bX59sPVKxVCOE0zzNB0zQd2a4vALTW1Pf9fsCyfFhOviSA9/4Mj19vF4Lj
-        OF6ttZQAmAGsguA0YwwppahpGuq6Ls7DMMSbcOy50s+C0g3atiUpZRRmePxpjyyv3wEIJjOH5MufsrFy
-        M5dzLurV3wSg18zovP5jQI2KAMylZ3Re/wOgpFXAHr0BvpEQQtwAqZs1YF3M/RkAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -1084,18 +1078,6 @@ Build your site to populate the Attribute Map.</value>
   </data>
   <data name="Build.ToolTipText" xml:space="preserve">
     <value>Build</value>
-  </data>
-  <data name="SanitaryBuildBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFQSURBVDhPlVKxTsJQFG3iZFz9BL+EXyAE1g6lg5uTE6GE
-        NP4FNA1WiSQMbiWUH+mgjopUWtqtx3eaiyhIrSdpmr57z7nvnlPtvwBwstlshlEUIU3TRzmuBiGPgiBA
-        rVYDRaT0N/bJfPMmUi7HEfKI59KyQ57np0mSGKrBUY+r9rxS37eVyFmWXcRxHM7nc9i2jV6vh+l0itls
-        Vk5er9fnqnCjTEn6/T6azSYcx4Hn3cEwjILs+z54kwPyluh5Hur1etHc6XTwvlwhWn3g7XWJdtvEZDJh
-        bNdC20FdGaZpFsRFsMDz0wt0XUe3a32JjO/HhagSeBDaDlQNwxCNRgODwbAg7Iu4rgvLsriCJ7SfKBPh
-        5FarVXig1r0UyiGOiXA1Gst0VMRn0v479kXoCY2lyYxY2srxXYTTmQ6TknI1bEWYDqfzP5FSdVCEEZdP
-        17RPt+mZVcL0nHcAAAAASUVORK5CYII=
-</value>
   </data>
   <data name="SanitaryBuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1109,17 +1091,6 @@ Build your site to populate the Attribute Map.</value>
   <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
     <value>Sanitary Build...</value>
   </data>
-  <data name="OpenOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEqSURBVDhPY0AHX758Mfj27duH79+/J0CFiAcwzdmzDv8/
-        cf3pf5IN+fr1awDQgP+6hWv/88UuJM4QoIYJIE3omGhDQIp3nL0PVswQPAcDy6UvBxsI8h5UCyoAScI0
-        w2yHiYHwsSv3/79/dh1FDoonwA0Aaa5echIuiez817cO/L+zrQoFPzu3AqwO6DUFuAtgGkB8WCyA2F8+
-        vQO7ABmDDAHJwV0wY9t5sAHIrsCHMQy4v68TLHD90WsUhbgwzAAQBhsAE3hz7ziYTQy+t6sR04BHx2Zi
-        KMSFQQEJTHgL4AZ8fvcMQxE+/PHVfVAsOMANeH5pA4YiXPjhoYn/P3369AAWiB9AAiA/YVOMDYPCCuj8
-        ArABQEYDMK4/osc1PgxOG+/fCzAwMDAAAMDUoyNGO9ZHAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -1128,17 +1099,6 @@ Build your site to populate the Attribute Map.</value>
   </data>
   <data name="OpenOutput.Text" xml:space="preserve">
     <value>Open Output Folder</value>
-  </data>
-  <data name="BrowseSitePreview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVDhPjZM9coMwEIU5is9Czx0y8S1onaGndG4SN6mp
-        5NZJm59SVgGUij6h1SzIM2Fn3iB239s/RLW1eZ6fxnF8n6bJa+AjlmilheAhEM0wDL5tW1/X9Qr4iDnn
-        jLX2kGSLJbHt+74QCpqm8Ze3i79b5++/LuRQSajcdV0mn8+v/vvrZyEHcJb3j9tnfNJJFDMXrYnYmGsW
-        auA/nV7imU7QxJ2wHJmZylshwC/J6YRx0KCl/Vxdtw0QHJ+Pq+RwhI92lUCLgfhJ8si/O8F2L+IvEmxH
-        eIRihD1L1JCF5iXu/YyAmPDyZ8RCK0bfQqrocThLZQAXTRRje66yIIktmiRfLCX592eCU4i1MRfLCcS4
-        ZQE+YomWrKr+AGiZpQrywE/bAAAAAElFTkSuQmCC
-</value>
   </data>
   <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>

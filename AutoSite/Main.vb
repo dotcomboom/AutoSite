@@ -254,8 +254,11 @@ Public Class Main
         Next
     End Sub
     Public Sub openEditor(ByVal path As String)
+        EditTabs.SuspendLayout()
+
         Dim tab As New TabPage With {
-            .Tag = path
+            .Tag = path,
+            .BackColor = Color.White
         }
         tab.ToolTipText = tab.Tag
         tab.Text = tab.Tag.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
@@ -294,6 +297,8 @@ Public Class Main
             End If
             openFiles.Add(path)
         End If
+
+        EditTabs.ResumeLayout()
     End Sub
 
     Public Sub browseForSite(ByVal n As Boolean)

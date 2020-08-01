@@ -172,16 +172,9 @@ Partial Class Main
         '
         'VS2017
         '
-        Me.VS2017.ImageStream = CType(resources.GetObject("VS2017.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.VS2017.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
+        resources.ApplyResources(Me.VS2017, "VS2017")
         Me.VS2017.TransparentColor = System.Drawing.Color.Transparent
-        Me.VS2017.Images.SetKeyName(0, "Folder")
-        Me.VS2017.Images.SetKeyName(1, "Template")
-        Me.VS2017.Images.SetKeyName(2, "Page")
-        Me.VS2017.Images.SetKeyName(3, "Include")
-        Me.VS2017.Images.SetKeyName(4, "Build")
-        Me.VS2017.Images.SetKeyName(5, "Attribute")
-        Me.VS2017.Images.SetKeyName(6, "Value")
-        Me.VS2017.Images.SetKeyName(7, "Blank")
         '
         'FolderBrowser
         '
@@ -594,13 +587,9 @@ Partial Class Main
         '
         'XP
         '
-        Me.XP.ImageStream = CType(resources.GetObject("XP.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.XP.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
+        resources.ApplyResources(Me.XP, "XP")
         Me.XP.TransparentColor = System.Drawing.Color.Transparent
-        Me.XP.Images.SetKeyName(0, "Folder")
-        Me.XP.Images.SetKeyName(1, "Template")
-        Me.XP.Images.SetKeyName(2, "Page")
-        Me.XP.Images.SetKeyName(3, "Include")
-        Me.XP.Images.SetKeyName(4, "Build")
         '
         'Context
         '

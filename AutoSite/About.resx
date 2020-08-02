@@ -427,6 +427,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
    + Editor's auto indent will no longer affect existing lines
    + Windows 98 compatibility has been greatly improved
+   + Folder icon changed
    + Optimizations under the hood for the main program
    - Open panels are now saved correctly
    - System default font (typically Tahoma) is now used if Segoe UI is not available

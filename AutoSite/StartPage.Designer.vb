@@ -286,7 +286,6 @@ Partial Class StartPage
         'RWarn
         '
         Me.RWarn.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.RWarn.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RWarn.ForeColor = System.Drawing.Color.White
         Me.RWarn.Location = New System.Drawing.Point(158, 66)
         Me.RWarn.Name = "RWarn"

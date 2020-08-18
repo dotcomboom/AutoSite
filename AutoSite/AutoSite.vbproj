@@ -129,6 +129,7 @@
     <Compile Include="InstallPack.Designer.vb">
       <DependentUpon>InstallPack.vb</DependentUpon>
     </Compile>
+    <Compile Include="ToolStripOverride.vb" />
     <None Include="InstallPack.vb">
       <SubType>Form</SubType>
     </None>

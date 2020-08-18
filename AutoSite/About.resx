@@ -429,6 +429,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
    + Windows 98 compatibility has been greatly improved
    + Folder icon changed
    + Optimizations under the hood for the main program
+   + 1px white border around the Build toolstrip has been fixed (finally!)
    - Open panels are now saved correctly
    - System default font (typically Tahoma) is now used if Segoe UI is not available
    - Bug fixes pertaining to how the editor reacts to deleted/renamed files

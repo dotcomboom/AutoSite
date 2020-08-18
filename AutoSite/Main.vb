@@ -528,6 +528,8 @@ Public Class Main
             tab.Parent = EditTabs
         End If
 
+        BuildStrip.Renderer = New OverrideControls.ToolStripOverride()
+
         updateRecents()
     End Sub
 

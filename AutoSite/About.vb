@@ -21,8 +21,8 @@ Public Class About
 
         Me.Font = Main.getFont()
 
+        Sysinfo.Text = System.Environment.OSVersion.VersionString & Environment.NewLine & System.Environment.Version.ToString
         If Main.InspectorBtn.Enabled = True Then
-            Sysinfo.Text = System.Environment.OSVersion.VersionString & Environment.NewLine & System.Environment.Version.ToString
             Sysinfo.Show()
         End If
     End Sub

@@ -1701,13 +1701,14 @@ Public Class Main
         Inspector.TopMost = False
     End Sub
 
-    Private Sub cDark_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDark.Click
-        cDefault.Checked = False
-        cDark.Checked = True
-
-        Dim bk As Color = Color.FromArgb(61, 61, 61)
-        Dim fc As Color = Color.White
-        Me.BackColor = bk
+    Private Sub setTheme(ByVal bk As Color, ByVal fc As Color, Optional ByVal mebk As Color = Nothing)
+        If Not mebk = Nothing Then
+            Me.BackColor = mebk
+            BuildStrip.BackColor = mebk
+        Else
+            Me.BackColor = bk
+            BuildStrip.BackColor = bk
+        End If
 
         AttributeTree.BackColor = bk
         AttributeTree.ForeColor = fc
@@ -1722,15 +1723,23 @@ Public Class Main
         SiteTree.ForeColor = fc
         SiteTree.HotTracking = False
 
-        Me.Refresh()
-
         Me.ForeColor = fc
-        BuildStrip.BackColor = bk
-        '       Build.ForeColor = fc
+
+        Me.Refresh()
+    End Sub
+
+    Private Sub cDark_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDark.Click
+        cDefault.Checked = False
+        cDark.Checked = True
+
+        setTheme(Color.FromArgb(61, 61, 61), Color.White)
     End Sub
 
     Private Sub cDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDefault.Click
         cDefault.Checked = True
         cDark.Checked = False
+
+        setTheme(Color.White, SystemColors.ControlText, SystemColors.Control)
     End Sub
+
 End Class

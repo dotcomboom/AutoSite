@@ -33,6 +33,7 @@ Partial Class About
         Me.License = New System.Windows.Forms.TabPage()
         Me.Changelog = New System.Windows.Forms.TabPage()
         Me.ChangelogBox = New System.Windows.Forms.RichTextBox()
+        Me.Sysinfo = New System.Windows.Forms.Label()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tabs.SuspendLayout()
         Me.License.SuspendLayout()
@@ -110,12 +111,18 @@ Partial Class About
         Me.ChangelogBox.Name = "ChangelogBox"
         Me.ChangelogBox.ReadOnly = True
         '
+        'Sysinfo
+        '
+        resources.ApplyResources(Me.Sysinfo, "Sysinfo")
+        Me.Sysinfo.Name = "Sysinfo"
+        '
         'About
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.OK
+        Me.Controls.Add(Me.Sysinfo)
         Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.WebsiteLink)
         Me.Controls.Add(Me.GithubLink)
@@ -142,4 +149,5 @@ Partial Class About
     Friend WithEvents License As System.Windows.Forms.TabPage
     Friend WithEvents Changelog As System.Windows.Forms.TabPage
     Friend WithEvents ChangelogBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents Sysinfo As System.Windows.Forms.Label
 End Class

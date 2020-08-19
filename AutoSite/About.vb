@@ -20,6 +20,11 @@ Public Class About
         End If
 
         Me.Font = Main.getFont()
+
+        If Main.InspectorBtn.Enabled = True Then
+            Sysinfo.Text = System.Environment.OSVersion.VersionString & Environment.NewLine & System.Environment.Version.ToString
+            Sysinfo.Show()
+        End If
     End Sub
 
     Private Sub GithubLink_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles GithubLink.LinkClicked
@@ -51,5 +56,6 @@ Public Class About
     Private Sub Logo_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Logo.DoubleClick
         Main.InspectorBtn.Enabled = True
         Main.ColorScheme.Visible = True
+        Sysinfo.Show()
     End Sub
 End Class

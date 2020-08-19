@@ -252,7 +252,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;OK.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Logo.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 10</value>
@@ -279,7 +279,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Logo.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Version.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 7.8pt, style=Bold</value>
@@ -312,7 +312,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Version.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="GithubLink.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 174</value>
@@ -342,7 +342,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GithubLink.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="WebsiteLink.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 207</value>
@@ -372,7 +372,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WebsiteLink.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Tabs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -655,6 +655,36 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Sysinfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="Sysinfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 321</value>
+  </data>
+  <data name="Sysinfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 38</value>
+  </data>
+  <data name="Sysinfo.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Sysinfo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="Sysinfo.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Sysinfo.Name" xml:space="preserve">
+    <value>Sysinfo</value>
+  </data>
+  <data name="&gt;&gt;Sysinfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sysinfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Sysinfo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

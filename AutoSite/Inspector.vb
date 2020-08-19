@@ -45,4 +45,10 @@
             MsgBox(ex.ToString)
         End Try
     End Sub
+
+    Private Sub ComboBox1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ComboBox1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            iterateControls(Main, "select", ComboBox1.SelectedItem)
+        End If
+    End Sub
 End Class

@@ -29,7 +29,6 @@ Partial Class Inspector
         Me.PropertyGrid1 = New System.Windows.Forms.PropertyGrid()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        Me.Icon = Global.AutoSite.My.Resources.Resources.autosite_32
         '
         'TextBox1
         '
@@ -91,6 +90,7 @@ Partial Class Inspector
         Me.Controls.Add(Me.PropertyGrid1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.TextBox1)
+        Me.Icon = Global.AutoSite.My.Resources.Resources.autosite_32
         Me.Name = "Inspector"
         Me.Text = "Inspector"
         Me.TableLayoutPanel1.ResumeLayout(False)

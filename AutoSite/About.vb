@@ -48,4 +48,8 @@ Public Class About
         End If
     End Sub
 
+    Private Sub Logo_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Logo.DoubleClick
+        Main.InspectorBtn.Enabled = True
+        Main.ColorScheme.Visible = True
+    End Sub
 End Class

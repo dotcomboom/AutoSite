@@ -81,6 +81,9 @@ Partial Class Main
         Me.IconThemeMenu = New System.Windows.Forms.MenuItem()
         Me.VS2017item = New System.Windows.Forms.MenuItem()
         Me.XPitem = New System.Windows.Forms.MenuItem()
+        Me.ColorScheme = New System.Windows.Forms.MenuItem()
+        Me.cDefault = New System.Windows.Forms.MenuItem()
+        Me.cDark = New System.Windows.Forms.MenuItem()
         Me.SystemIcons = New System.Windows.Forms.MenuItem()
         Me.RefreshItem = New System.Windows.Forms.MenuItem()
         Me.ViewSep2 = New System.Windows.Forms.MenuItem()
@@ -104,6 +107,7 @@ Partial Class Main
         Me.SendFeedback = New System.Windows.Forms.MenuItem()
         Me.HelpSep2 = New System.Windows.Forms.MenuItem()
         Me.AboutItem = New System.Windows.Forms.MenuItem()
+        Me.InspectorBtn = New System.Windows.Forms.MenuItem()
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu()
         Me.OpenContext = New System.Windows.Forms.MenuItem()
@@ -417,7 +421,7 @@ Partial Class Main
         'ViewMenu
         '
         Me.ViewMenu.Index = 3
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewSep, Me.IconThemeMenu, Me.SystemIcons, Me.RefreshItem, Me.ViewSep2, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewSep, Me.IconThemeMenu, Me.ColorScheme, Me.SystemIcons, Me.RefreshItem, Me.ViewSep2, Me.PreviewPage, Me.ViewFileOutput, Me.ViewSep3, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
         resources.ApplyResources(Me.ViewMenu, "ViewMenu")
         '
         'ExplorerPanel
@@ -467,45 +471,62 @@ Partial Class Main
         Me.XPitem.RadioCheck = True
         resources.ApplyResources(Me.XPitem, "XPitem")
         '
+        'ColorScheme
+        '
+        Me.ColorScheme.Index = 6
+        Me.ColorScheme.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.cDefault, Me.cDark})
+        resources.ApplyResources(Me.ColorScheme, "ColorScheme")
+        '
+        'cDefault
+        '
+        Me.cDefault.Checked = True
+        Me.cDefault.Index = 0
+        resources.ApplyResources(Me.cDefault, "cDefault")
+        '
+        'cDark
+        '
+        Me.cDark.Index = 1
+        resources.ApplyResources(Me.cDark, "cDark")
+        '
         'SystemIcons
         '
         Me.SystemIcons.Checked = True
-        Me.SystemIcons.Index = 6
+        Me.SystemIcons.Index = 7
         resources.ApplyResources(Me.SystemIcons, "SystemIcons")
         '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 7
+        Me.RefreshItem.Index = 8
         resources.ApplyResources(Me.RefreshItem, "RefreshItem")
         '
         'ViewSep2
         '
-        Me.ViewSep2.Index = 8
+        Me.ViewSep2.Index = 9
         resources.ApplyResources(Me.ViewSep2, "ViewSep2")
         '
         'PreviewPage
         '
-        Me.PreviewPage.Index = 9
+        Me.PreviewPage.Index = 10
         resources.ApplyResources(Me.PreviewPage, "PreviewPage")
         '
         'ViewFileOutput
         '
-        Me.ViewFileOutput.Index = 10
+        Me.ViewFileOutput.Index = 11
         resources.ApplyResources(Me.ViewFileOutput, "ViewFileOutput")
         '
         'ViewSep3
         '
-        Me.ViewSep3.Index = 11
+        Me.ViewSep3.Index = 12
         resources.ApplyResources(Me.ViewSep3, "ViewSep3")
         '
         'BrowseSiteMnu
         '
-        Me.BrowseSiteMnu.Index = 12
+        Me.BrowseSiteMnu.Index = 13
         resources.ApplyResources(Me.BrowseSiteMnu, "BrowseSiteMnu")
         '
         'BrowseSitePreviewMnu
         '
-        Me.BrowseSitePreviewMnu.Index = 13
+        Me.BrowseSitePreviewMnu.Index = 14
         resources.ApplyResources(Me.BrowseSitePreviewMnu, "BrowseSitePreviewMnu")
         '
         'BuildMenu
@@ -547,7 +568,7 @@ Partial Class Main
         'HelpMenu
         '
         Me.HelpMenu.Index = 5
-        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.AboutItem})
+        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.AboutItem, Me.InspectorBtn})
         resources.ApplyResources(Me.HelpMenu, "HelpMenu")
         '
         'HelpTopics
@@ -584,6 +605,11 @@ Partial Class Main
         '
         Me.AboutItem.Index = 6
         resources.ApplyResources(Me.AboutItem, "AboutItem")
+        '
+        'InspectorBtn
+        '
+        resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
+        Me.InspectorBtn.Index = 7
         '
         'XP
         '
@@ -771,10 +797,10 @@ Partial Class Main
         '
         'LogPage
         '
+        Me.LogPage.BackColor = System.Drawing.Color.White
         Me.LogPage.Controls.Add(Me.Log)
         resources.ApplyResources(Me.LogPage, "LogPage")
         Me.LogPage.Name = "LogPage"
-        Me.LogPage.UseVisualStyleBackColor = True
         '
         'Log
         '
@@ -793,11 +819,11 @@ Partial Class Main
         '
         'MapPage
         '
+        Me.MapPage.BackColor = System.Drawing.SystemColors.Window
         Me.MapPage.Controls.Add(Me.AttributeExplanation)
         Me.MapPage.Controls.Add(Me.AttributeTree)
         resources.ApplyResources(Me.MapPage, "MapPage")
         Me.MapPage.Name = "MapPage"
-        Me.MapPage.UseVisualStyleBackColor = True
         '
         'AttributeExplanation
         '
@@ -1048,6 +1074,10 @@ Partial Class Main
     Friend WithEvents LogPage As System.Windows.Forms.TabPage
     Friend WithEvents Log As System.Windows.Forms.RichTextBox
     Friend WithEvents MapPage As System.Windows.Forms.TabPage
+    Friend WithEvents InspectorBtn As System.Windows.Forms.MenuItem
+    Friend WithEvents ColorScheme As System.Windows.Forms.MenuItem
+    Friend WithEvents cDefault As System.Windows.Forms.MenuItem
+    Friend WithEvents cDark As System.Windows.Forms.MenuItem
     Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
     Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
 End Class

@@ -114,6 +114,12 @@
     <Compile Include="CheatGame.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Inspector.Designer.vb">
+      <DependentUpon>Inspector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inspector.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Quickstart.Designer.vb">
       <DependentUpon>Quickstart.vb</DependentUpon>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheatGame.resx">
       <DependentUpon>CheatGame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inspector.resx">
+      <DependentUpon>Inspector.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Quickstart.resx">
       <DependentUpon>Quickstart.vb</DependentUpon>

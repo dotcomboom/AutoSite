@@ -1695,7 +1695,42 @@ Public Class Main
         Return uiFont
     End Function
 
-    Private Sub SiteTree_NodeMouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles SiteTree.NodeMouseDoubleClick, AttributeTree.NodeMouseDoubleClick
+    Private Sub InspectorBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InspectorBtn.Click  ' F12 when enabled
+        Inspector.Show()
+        Inspector.TopMost = True
+        Inspector.TopMost = False
+    End Sub
 
+    Private Sub cDark_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDark.Click
+        cDefault.Checked = False
+        cDark.Checked = True
+
+        Dim bk As Color = Color.FromArgb(61, 61, 61)
+        Dim fc As Color = Color.White
+        Me.BackColor = bk
+
+        AttributeTree.BackColor = bk
+        AttributeTree.ForeColor = fc
+
+        MapPage.BackColor = bk
+
+        LogPage.BackColor = bk
+        Log.BackColor = bk
+        Log.ForeColor = fc
+
+        SiteTree.BackColor = bk
+        SiteTree.ForeColor = fc
+        SiteTree.HotTracking = False
+
+        Me.Refresh()
+
+        Me.ForeColor = fc
+        BuildStrip.BackColor = bk
+        '       Build.ForeColor = fc
+    End Sub
+
+    Private Sub cDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDefault.Click
+        cDefault.Checked = True
+        cDark.Checked = False
     End Sub
 End Class

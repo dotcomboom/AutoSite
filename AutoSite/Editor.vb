@@ -31,7 +31,7 @@ Public Class Editor
                 unlocker.Close()
                 Code.SaveToFile(path, Main.encodingType)
             Catch ex As Exception
-                MsgBox("The file could not be saved.", MsgBoxStyle.Critical, "AutoSite XL")
+                MsgBox("The file could not be saved.", MsgBoxStyle.Critical, "AutoSite")
             End Try
         End Try
     End Sub

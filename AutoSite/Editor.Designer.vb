@@ -81,6 +81,7 @@ Partial Class Editor
         Me.SaveBtn.AutoToolTip = False
         Me.SaveBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem, Me.SaveAllToolStripMenuItem})
         resources.ApplyResources(Me.SaveBtn, "SaveBtn")
+        Me.SaveBtn.ForeColor = System.Drawing.Color.Black
         Me.SaveBtn.Image = Global.AutoSite.My.Resources.Resources.Save
         Me.SaveBtn.Name = "SaveBtn"
         '
@@ -98,12 +99,14 @@ Partial Class Editor
         '
         'Sep
         '
+        Me.Sep.ForeColor = System.Drawing.Color.Black
         Me.Sep.Name = "Sep"
         resources.ApplyResources(Me.Sep, "Sep")
         '
         'UndoBtn
         '
         Me.UndoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.UndoBtn.ForeColor = System.Drawing.Color.Black
         Me.UndoBtn.Image = Global.AutoSite.My.Resources.Resources.Undo
         resources.ApplyResources(Me.UndoBtn, "UndoBtn")
         Me.UndoBtn.Name = "UndoBtn"
@@ -111,18 +114,21 @@ Partial Class Editor
         'RedoBtn
         '
         Me.RedoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.RedoBtn.ForeColor = System.Drawing.Color.Black
         Me.RedoBtn.Image = Global.AutoSite.My.Resources.Resources.Redo
         resources.ApplyResources(Me.RedoBtn, "RedoBtn")
         Me.RedoBtn.Name = "RedoBtn"
         '
         'Sep2
         '
+        Me.Sep2.ForeColor = System.Drawing.Color.Black
         Me.Sep2.Name = "Sep2"
         resources.ApplyResources(Me.Sep2, "Sep2")
         '
         'CutBtn
         '
         Me.CutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CutBtn.ForeColor = System.Drawing.Color.Black
         Me.CutBtn.Image = Global.AutoSite.My.Resources.Resources.Cut
         resources.ApplyResources(Me.CutBtn, "CutBtn")
         Me.CutBtn.Name = "CutBtn"
@@ -130,6 +136,7 @@ Partial Class Editor
         'CopyBtn
         '
         Me.CopyBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CopyBtn.ForeColor = System.Drawing.Color.Black
         Me.CopyBtn.Image = Global.AutoSite.My.Resources.Resources.Copy
         resources.ApplyResources(Me.CopyBtn, "CopyBtn")
         Me.CopyBtn.Name = "CopyBtn"
@@ -137,6 +144,7 @@ Partial Class Editor
         'PasteBtn
         '
         Me.PasteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PasteBtn.ForeColor = System.Drawing.Color.Black
         Me.PasteBtn.Image = Global.AutoSite.My.Resources.Resources.Paste
         resources.ApplyResources(Me.PasteBtn, "PasteBtn")
         Me.PasteBtn.Name = "PasteBtn"
@@ -145,17 +153,20 @@ Partial Class Editor
         '
         Me.CloseBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.CloseBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CloseBtn.ForeColor = System.Drawing.Color.Black
         resources.ApplyResources(Me.CloseBtn, "CloseBtn")
         Me.CloseBtn.Name = "CloseBtn"
         '
         'Sep3
         '
+        Me.Sep3.ForeColor = System.Drawing.Color.Black
         Me.Sep3.Name = "Sep3"
         resources.ApplyResources(Me.Sep3, "Sep3")
         '
         'Find
         '
         Me.Find.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Find.ForeColor = System.Drawing.Color.Black
         Me.Find.Image = Global.AutoSite.My.Resources.Resources.Search
         resources.ApplyResources(Me.Find, "Find")
         Me.Find.Name = "Find"
@@ -163,6 +174,7 @@ Partial Class Editor
         'GTo
         '
         Me.GTo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GTo.ForeColor = System.Drawing.Color.Black
         Me.GTo.Image = Global.AutoSite.My.Resources.Resources.GotoRow
         resources.ApplyResources(Me.GTo, "GTo")
         Me.GTo.Name = "GTo"
@@ -170,6 +182,7 @@ Partial Class Editor
         'Replace
         '
         Me.Replace.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Replace.ForeColor = System.Drawing.Color.Black
         Me.Replace.Image = Global.AutoSite.My.Resources.Resources.ReplaceAll
         resources.ApplyResources(Me.Replace, "Replace")
         Me.Replace.Name = "Replace"
@@ -177,12 +190,14 @@ Partial Class Editor
         'QuickInsert
         '
         Me.QuickInsert.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.QuickInsert.ForeColor = System.Drawing.Color.Black
         Me.QuickInsert.Image = Global.AutoSite.My.Resources.Resources.InsertPanel
         resources.ApplyResources(Me.QuickInsert, "QuickInsert")
         Me.QuickInsert.Name = "QuickInsert"
         '
         'Sep4
         '
+        Me.Sep4.ForeColor = System.Drawing.Color.Black
         Me.Sep4.Name = "Sep4"
         resources.ApplyResources(Me.Sep4, "Sep4")
         '
@@ -190,6 +205,7 @@ Partial Class Editor
         '
         Me.Preview.AutoToolTip = False
         Me.Preview.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LivePreview})
+        Me.Preview.ForeColor = System.Drawing.Color.Black
         Me.Preview.Image = Global.AutoSite.My.Resources.Resources.WebTest
         resources.ApplyResources(Me.Preview, "Preview")
         Me.Preview.Name = "Preview"
@@ -202,11 +218,13 @@ Partial Class Editor
         '
         'Sep5
         '
+        Me.Sep5.ForeColor = System.Drawing.Color.Black
         Me.Sep5.Name = "Sep5"
         resources.ApplyResources(Me.Sep5, "Sep5")
         '
         'Build
         '
+        Me.Build.ForeColor = System.Drawing.Color.Black
         Me.Build.Image = Global.AutoSite.My.Resources.Resources.Build
         resources.ApplyResources(Me.Build, "Build")
         Me.Build.Name = "Build"
@@ -214,6 +232,7 @@ Partial Class Editor
         'ViewOutput
         '
         Me.ViewOutput.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
+        Me.ViewOutput.ForeColor = System.Drawing.Color.Black
         Me.ViewOutput.Image = Global.AutoSite.My.Resources.Resources.Web
         resources.ApplyResources(Me.ViewOutput, "ViewOutput")
         Me.ViewOutput.Name = "ViewOutput"
@@ -237,6 +256,7 @@ Partial Class Editor
         Me.Code.CommentPrefix = Nothing
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Code.ForeColor = System.Drawing.Color.Black
         Me.Code.IndentBackColor = System.Drawing.SystemColors.Window
         Me.Code.IsReplaceMode = False
         Me.Code.Language = FastColoredTextBoxNS.Language.HTML
@@ -329,6 +349,7 @@ Partial Class Editor
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.Controls.Add(Me.Code)
         Me.Controls.Add(Me.Strip)
         Me.Name = "Editor"

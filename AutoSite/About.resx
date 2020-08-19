@@ -423,18 +423,18 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 RC4?:
+    <value>1.0 RC4:
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
    + Editor's auto indent will no longer affect existing lines
-   + Windows 98 compatibility has been greatly improved
-   + Folder icon changed
    + Optimizations under the hood for the main program
-   + 1px white border around the Build toolstrip has been fixed (finally!)
+   + Folder icon changed
+   + Windows 98 compatibility has been greatly improved
+   + 1px white border around the Build toolstrip has been fixed
    - Open panels are now saved correctly
-   - System default font (typically Tahoma) is now used if Segoe UI is not available
+   - System default font (typically Tahoma) is now used in the interface if Segoe UI is not available
    - Bug fixes pertaining to how the editor reacts to deleted/renamed files
    - Double-clicking a file in the Explorer while the Editor panel is closed will open it in its default program
-   - Sanitary Build message box and Insert Conditional window have been revised
+   - Wording in the Sanitary Build message box and Insert Conditional window has been revised
    - Build buttons are disabled while a build is in progress
 
 1.0 RC3:

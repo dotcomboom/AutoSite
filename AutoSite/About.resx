@@ -436,6 +436,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
    - Double-clicking a file in the Explorer while the Editor panel is closed will open it in its default program
    - Wording in the Sanitary Build message box and Insert Conditional window has been revised
    - Build buttons are disabled while a build is in progress
+   - Dragging Markdown pages from the explorer into the editor will give the correct html extension now
 
 1.0 RC3:
    + Modified date added as [#modified#]

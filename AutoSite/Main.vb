@@ -826,7 +826,9 @@ Public Class Main
                         newFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(oldnewFile), System.IO.Path.GetFileNameWithoutExtension(oldnewFile) & " (" & number & ")" & System.IO.Path.GetExtension(oldnewFile))
                     End While
                     My.Computer.FileSystem.CopyFile(s, newFile, False)
-                    refreshTree(SiteTree.Nodes(0))
+                    If Watcher.EnableRaisingEvents = False Then
+                        refreshTree(SiteTree.Nodes(0))
+                    End If
                 Next
             End If
         Catch ex As Exception
@@ -864,7 +866,7 @@ Public Class Main
             End Try
         End If
         MarkDeletedAsUnsaved()
-        If My.Computer.Info.OSPlatform = "Win32Windows" Then   ' Detect non-NT Windows (98)
+        If Watcher.EnableRaisingEvents = False Then
             refreshTree(SiteTree.Nodes(0))
         End If
     End Sub
@@ -910,7 +912,9 @@ Public Class Main
             add = " (" & num & ")"
         End While
         My.Computer.FileSystem.WriteAllText(System.IO.Path.Combine(dir, base & add & ext), contents, False)
-        refreshTree(SiteTree.Nodes(0))
+        If Watcher.EnableRaisingEvents = False Then  ' Refresh tree if FilesystemWatcher is not active
+            refreshTree(SiteTree.Nodes(0))
+        End If
     End Sub
 
     Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
@@ -973,7 +977,9 @@ Public Class Main
                         MsgBox(ex.Message)
                     End Try
                 Next
-                refreshTree(SiteTree.Nodes(0))
+                If Watcher.EnableRaisingEvents = False Then
+                    refreshTree(SiteTree.Nodes(0))
+                End If
             End If
         End If
     End Sub

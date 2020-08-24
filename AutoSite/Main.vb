@@ -895,6 +895,9 @@ Public Class Main
             End While
             My.Computer.FileSystem.CreateDirectory(System.IO.Path.Combine(dir, "new_folder" & add))
         End If
+        If Watcher.EnableRaisingEvents = False Then  ' Refresh tree if FilesystemWatcher is not active
+            refreshTree(SiteTree.Nodes(0))
+        End If
     End Sub
 
     Private Sub NewFile(ByVal base As String, ByVal ext As String, ByVal contents As String)

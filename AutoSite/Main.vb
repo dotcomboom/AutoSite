@@ -1666,7 +1666,11 @@ Public Class Main
                 If My.Computer.FileSystem.DirectoryExists(e.Item.tag) Then
                     slash = "/"
                 End If
-                DoDragDrop("[#root#]" & e.Item.Tag.Replace(SiteTree.Nodes(0).Tag & "\pages\", "").Replace(SiteTree.Nodes(0).Tag & "\includes\", "").Replace("\", "/") & slash, DragDropEffects.Link)
+                Dim pth As String = e.Item.Tag.Replace(SiteTree.Nodes(0).Tag & "\pages\", "").Replace(SiteTree.Nodes(0).Tag & "\includes\", "").Replace("\", "/")
+                If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & "\pages\") Then
+                    pth = Apricot.ReplaceLast(pth, ".md", ".html")
+                End If
+                DoDragDrop("[#root#]" & pth & slash, DragDropEffects.Link)
             End If
         End If
     End Sub

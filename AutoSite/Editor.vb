@@ -112,7 +112,7 @@ Public Class Editor
 
     Public Sub Close() Handles CloseBtn.Click
         If Not Code.Text = Snapshot Then
-            Dim d As DialogResult = MsgBox("Save changes to " & openFile.Replace(siteRoot & "\", "") & "?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel, "AutoSite XL")
+            Dim d As DialogResult = MsgBox("Save changes to " & openFile.Replace(siteRoot & "\", "") & "?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel, "AutoSite")
             If d = DialogResult.Yes Then
                 Save()
             End If

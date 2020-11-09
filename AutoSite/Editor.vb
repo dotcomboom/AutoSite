@@ -31,7 +31,7 @@ Public Class Editor
                 unlocker.Close()
                 Code.SaveToFile(path, Main.encodingType)
             Catch ex As Exception
-                MsgBox("The file could not be saved.", MsgBoxStyle.Critical, "AutoSite")
+                MsgBox("The file could not be saved.", MsgBoxStyle.Critical)
             End Try
         End Try
     End Sub
@@ -112,7 +112,7 @@ Public Class Editor
 
     Public Sub Close() Handles CloseBtn.Click
         If Not Code.Text = Snapshot Then
-            Dim d As DialogResult = MsgBox("Save changes to " & openFile.Replace(siteRoot & "\", "") & "?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel, "AutoSite")
+            Dim d As DialogResult = MsgBox("Save changes to " & openFile.Replace(siteRoot & "\", "") & "?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
             If d = DialogResult.Yes Then
                 Save()
             End If
@@ -226,7 +226,11 @@ Public Class Editor
         If rel.EndsWith(".md") Then
             rel = Apricot.ReplaceLast(rel, ".md", ".html")
         End If
-        Process.Start(siteRoot & "\out\" & rel)
+        Try
+            Process.Start(siteRoot & "\out\" & rel)
+        Catch ex As Exception
+            MsgBox("Build the site first to view output.", MsgBoxStyle.Exclamation)
+        End Try
     End Sub
 
     Private Sub Autocomplete_Selecting(ByVal sender As System.Object, ByVal e As AutocompleteMenuNS.SelectingEventArgs) Handles Autocomplete.Selecting

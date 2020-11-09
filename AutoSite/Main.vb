@@ -335,7 +335,7 @@ Public Class Main
             End If
         Next
         If Not saved Then
-            Dim d As DialogResult = MsgBox("Some files have unsaved changes. Save them?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel, "AutoSite")
+            Dim d As DialogResult = MsgBox("Some files have unsaved changes. Save them?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
 
             If d = DialogResult.Yes Then
                 DoSaveAll()
@@ -674,7 +674,7 @@ Public Class Main
                             Dim edit As Editor = c
                             If edit.openFile = oldpath Then
                                 edit.openFile = newpath
-                                
+
                                 openFiles.Remove(oldpath)
                                 openFiles.Add(newpath)
 
@@ -706,11 +706,11 @@ Public Class Main
     End Sub
 
     Public Sub doBuild() Handles BuildSite.Click, Build.Click
-            Log.Clear()
+        Log.Clear()
         AttributeTree.Nodes.Clear()
         AttributeTree.BeginUpdate()
-            Try
-                ApricotWorker.RunWorkerAsync()
+        Try
+            ApricotWorker.RunWorkerAsync()
         Catch ex As Exception
             MsgBox("Apricot returned this exception:" & Environment.NewLine & Environment.NewLine & ex.ToString, MsgBoxStyle.Exclamation, "Build failed")
         End Try
@@ -1118,7 +1118,7 @@ Public Class Main
             End If
         Next
         If Not saved Then
-            Dim d As DialogResult = MsgBox("Some files have unsaved changes. Save them?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel, "AutoSite")
+            Dim d As DialogResult = MsgBox("Some files have unsaved changes. Save them?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
 
             If d = DialogResult.Yes Then
                 DoSaveAll()
@@ -1386,7 +1386,7 @@ Public Class Main
     End Sub
 
     Public Sub doSanitaryBuild() Handles SanitaryBuild.Click, SanitaryBuildBtn.Click
-        If MsgBox("A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel, "AutoSite") = MsgBoxResult.Ok Then
+        If MsgBox("A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
             Catch ex As Exception

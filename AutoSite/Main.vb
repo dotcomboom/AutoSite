@@ -1249,6 +1249,7 @@ Public Class Main
                 node.SelectedImageKey = "Page"
             End If
             pnode.Nodes.Add(node)
+            pnode.Expand()
             If fileAddContext = "rename" Then
                 fileAddContext = ""
                 node.BeginEdit()
@@ -1270,6 +1271,7 @@ Public Class Main
                 node.SelectedImageKey = "Template"
             End If
             pnode.Nodes.Add(node)
+            pnode.Expand()
             If fileAddContext = "rename" Then
                 fileAddContext = ""
                 node.BeginEdit()
@@ -1291,6 +1293,7 @@ Public Class Main
                 node.SelectedImageKey = "Include"
             End If
             pnode.Nodes.Add(node)
+            pnode.Expand()
             If fileAddContext = "rename" Then
                 fileAddContext = ""
                 node.BeginEdit()

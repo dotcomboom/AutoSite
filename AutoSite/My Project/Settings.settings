@@ -1,64 +1,66 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
-  <Profiles />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
   <Settings>
-    <Setting Name="openProject" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="iconTheme" Type="System.String" Scope="User">
-      <Value Profile="(Default)">vs2017</Value>
-    </Setting>
-    <Setting Name="explorerOpen" Type="System.Boolean" Scope="User">
+    <Setting Name="browserOpen" Type="System.Boolean" Scope="User" Roaming="false">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="editorOpen" Type="System.Boolean" Scope="User">
+    <Setting Name="buildOpen" Type="System.Boolean" Scope="User" Roaming="false">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="browserOpen" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+    <Setting Name="coreSplitterDistance" Type="System.Int32" Scope="User" Roaming="false">
+      <Value Profile="(Default)">280</Value>
     </Setting>
-    <Setting Name="buildOpen" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="WordWrap" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="VirtualSpace" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="WideCaret" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="SyntaxHighlight" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="LivePreview" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="editorFont" Type="System.Drawing.Font" Scope="User">
+    <Setting Name="editorFont" Type="System.Drawing.Font" Scope="User" Roaming="false">
       <Value Profile="(Default)">Courier New, 9.75pt</Value>
     </Setting>
-    <Setting Name="recents" Type="System.Collections.Specialized.StringCollection" Scope="User">
+    <Setting Name="editorOpen" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="edSplitterDistance" Type="System.Int32" Scope="User" Roaming="false">
+      <Value Profile="(Default)">260</Value>
+    </Setting>
+    <Setting Name="explorerOpen" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="exSplitterDistance" Type="System.Int32" Scope="User" Roaming="false">
+      <Value Profile="(Default)">260</Value>
+    </Setting>
+    <Setting Name="iconTheme" Type="System.String" Scope="User" Roaming="false">
+      <Value Profile="(Default)">vs2017</Value>
+    </Setting>
+    <Setting Name="LivePreview" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="maximized" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="openProject" Type="System.String" Scope="User" Roaming="false">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="recents" Type="System.Collections.Specialized.StringCollection" Scope="User" Roaming="false">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</Value>
     </Setting>
-    <Setting Name="windowLocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="maximized" Type="System.Boolean" Scope="User">
+    <Setting Name="SyntaxHighlight" Type="System.Boolean" Scope="User" Roaming="false">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="systemIcons" Type="System.Boolean" Scope="User">
+    <Setting Name="systemIcons" Type="System.Boolean" Scope="User" Roaming="false">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="exSplitterDistance" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">214</Value>
+    <Setting Name="VirtualSpace" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="edSplitterDistance" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">214</Value>
+    <Setting Name="WideCaret" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="coreSplitterDistance" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">280</Value>
+    <Setting Name="windowLocation" Type="System.String" Scope="User" Roaming="false">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="WordWrap" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

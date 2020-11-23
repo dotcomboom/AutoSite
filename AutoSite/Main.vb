@@ -929,9 +929,9 @@ Public Class Main
         End If
         Dim html = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: New HTML Page -->" & Environment.NewLine
         If dir = SiteTree.Nodes(0).Nodes(1).Tag Then
-            html = "<!DOCTYPE html>" & Environment.NewLine & "<html>" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>[#title#]</title>" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>[#title#]</h1>" & Environment.NewLine & "    [#content#]" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
+            html = "<!DOCTYPE html>" & Environment.NewLine & "<html lang=""en"">" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>[#title#]</title>" & Environment.NewLine & "    <meta charset=""utf-8"">" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>[#title#]</h1>" & Environment.NewLine & "    [#content#]" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
         ElseIf dir = SiteTree.Nodes(0).Nodes(2).Tag Then
-            html = "<!DOCTYPE html>" & Environment.NewLine & "<html>" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>New HTML Page</title>" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>Include Page</h1>" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
+            html = "<!DOCTYPE html>" & Environment.NewLine & "<html lang=""en"">" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>New HTML Page</title>" & Environment.NewLine & "    <meta charset=""utf-8"">" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>Include Page</h1>" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
         End If
         If dir = SiteTree.Nodes(0).Nodes(1).Tag And Not My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Nodes(1).Tag & "\default.html") Then
             NewFile("default", ".html", html)

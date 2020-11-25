@@ -171,6 +171,7 @@ Public Class Editor
             Main.Preview.Navigate(siteRoot & "out\" & rel)
             Preview.Enabled = False
             ViewOutput.Enabled = False
+            template_cache.Clear()
             PreviewWorker.RunWorkerAsync({Code.Text, rel})
         End If
     End Sub
@@ -365,7 +366,6 @@ Public Class Editor
     End Sub
 
     Private Sub PreviewWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles PreviewWorker.DoWork
-        template_cache.Clear()
         e.Result = Apricot.Compile(e.Argument(0), e.Argument(1), siteRoot, True, Now, Nothing).HTML()
     End Sub
 

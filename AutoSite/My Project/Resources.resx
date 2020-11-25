@@ -154,7 +154,7 @@
   <data name="autosite_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="QuickInsert_content_toolTipTitle" xml:space="preserve">
+  <data name="QuickInsert_content_Tip" xml:space="preserve">
     <value>Content</value>
   </data>
   <data name="GotoRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -214,15 +214,86 @@
   <data name="XP_Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Error_BuildToViewOutput" xml:space="preserve">
+    <value>Build the site first to view output.</value>
+  </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
     <value>The file could not be saved.</value>
   </data>
-  <data name="Prompt_SaveChanges" xml:space="preserve">
+  <data name="Prompt_SaveChangesToFile" xml:space="preserve">
     <value>Save changes to {0}?</value>
   </data>
-  <data name="QuickInsert_content_toolTipText" xml:space="preserve">
+  <data name="QuickInsert_Build" xml:space="preserve">
+    <value>Build for more options</value>
+  </data>
+  <data name="QuickInsert_Build_Tip" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="QuickInsert_Build_TipText" xml:space="preserve">
+    <value>AutoSite can give you more suggestions when you build
+your site and populate the Attribute Map.</value>
+  </data>
+  <data name="QuickInsert_content_TipText" xml:space="preserve">
     <value>Outputs the page's content.
 
 Use once in templates.</value>
+  </data>
+  <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
+    <value>Define {0}</value>
+  </data>
+  <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
+    <value>Defines the {0} attribute for this page.</value>
+  </data>
+  <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
+    <value>Define a new attribute</value>
+  </data>
+  <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
+    <value>Adds an attribute definition.</value>
+  </data>
+  <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
+    <value>Defines the template used by the current page.
+
+Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
+  </data>
+  <data name="QuickInsert_Generic_TipText" xml:space="preserve">
+    <value>Outputs the page's value for the {0} attribute.</value>
+  </data>
+  <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
+    <value>Insert conditional</value>
+  </data>
+  <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
+    <value>Open the Insert Conditional dialog.
+
+Conditionals allow you to output text if an attribute has a certain value.</value>
+  </data>
+  <data name="QuickInsert_modified_Tip" xml:space="preserve">
+    <value>Last modified date</value>
+  </data>
+  <data name="QuickInsert_modified_TipText" xml:space="preserve">
+    <value>Outputs the date the page was last modified on.</value>
+  </data>
+  <data name="QuickInsert_path_Tip" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="QuickInsert_path_TipText" xml:space="preserve">
+    <value>Outputs the page's relative path from root.</value>
+  </data>
+  <data name="QuickInsert_root_Tip" xml:space="preserve">
+    <value>Relative path to root</value>
+  </data>
+  <data name="QuickInsert_root_TipText" xml:space="preserve">
+    <value>Outputs the relative path from the page to the site root.
+
+Use this to begin paths to stylesheets, images, and other 
+pages.</value>
+  </data>
+  <data name="QuickInsert__Example" xml:space="preserve">
+    <value>Example: {0}</value>
+  </data>
+  <data name="QuickInsert__Output" xml:space="preserve">
+    <value>Output: {0}</value>
+  </data>
+  <data name="__" xml:space="preserve">
+    <value />
   </data>
 </root>

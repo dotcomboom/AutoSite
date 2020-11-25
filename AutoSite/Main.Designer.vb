@@ -811,7 +811,6 @@ Partial Class Main
         resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.QuickInsert_content_toolTipTitle
         '
         'LogMenuBridge
         '

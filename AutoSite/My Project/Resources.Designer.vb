@@ -61,6 +61,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Friend ReadOnly Property __() As String
+            Get
+                Return ResourceManager.GetString("__", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
         Friend ReadOnly Property autosite_32() As System.Drawing.Icon
@@ -238,22 +247,189 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Outputs the page&apos;s content.
-        '''
-        '''Use once in templates..
+        '''  Looks up a localized string similar to Example: {0}.
         '''</summary>
-        Friend ReadOnly Property QuickInsert_content_toolTipText() As String
+        Friend ReadOnly Property QuickInsert__Example() As String
             Get
-                Return ResourceManager.GetString("QuickInsert_content_toolTipText", resourceCulture)
+                Return ResourceManager.GetString("QuickInsert__Example", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Output: {0}.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert__Output() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert__Output", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Build for more options.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_Build() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_Build", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Build.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_Build_Tip() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_Build_Tip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to AutoSite can give you more suggestions when you build
+        '''your site and populate the Attribute Map..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_Build_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_Build_TipText", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to Content.
         '''</summary>
-        Friend ReadOnly Property QuickInsert_content_toolTipTitle() As String
+        Friend ReadOnly Property QuickInsert_content_Tip() As String
             Get
-                Return ResourceManager.GetString("QuickInsert_content_toolTipTitle", resourceCulture)
+                Return ResourceManager.GetString("QuickInsert_content_Tip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Outputs the page&apos;s content.
+        '''
+        '''Use once in templates..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_content_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_content_TipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Define {0}.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_DefineGeneric_Tip() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_DefineGeneric_Tip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Defines the {0} attribute for this page..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_DefineGeneric_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_DefineGeneric_TipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Define a new attribute.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_DefineNew_Tip() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_DefineNew_Tip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Adds an attribute definition..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_DefineNew_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_DefineNew_TipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Defines the template used by the current page.
+        '''
+        '''Default is {0}, which tells AutoSite to use {1} in the templates folder..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_DefineTemplate_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_DefineTemplate_TipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Outputs the page&apos;s value for the {0} attribute..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_Generic_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_Generic_TipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Insert conditional.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_InsertConditional_Tip() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_InsertConditional_Tip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Open the Insert Conditional dialog.
+        '''
+        '''Conditionals allow you to output text if an attribute has a certain value..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_InsertConditional_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_InsertConditional_TipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Last modified date.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_modified_Tip() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_modified_Tip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Outputs the date the page was last modified on..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_modified_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_modified_TipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Path.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_path_Tip() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_path_Tip", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Outputs the page&apos;s relative path from root..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_path_TipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_path_TipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Relative path to root.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_root_Tip() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_root_Tip", resourceCulture)
             End Get
         End Property
         
@@ -263,18 +439,9 @@ Namespace My.Resources
         '''Use this to begin paths to stylesheets, images, and other 
         '''pages..
         '''</summary>
-        Friend ReadOnly Property QuickInsert_root_toolTipText() As String
+        Friend ReadOnly Property QuickInsert_root_TipText() As String
             Get
-                Return ResourceManager.GetString("QuickInsert_root_toolTipText", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Relative path to root.
-        '''</summary>
-        Friend ReadOnly Property QuickInsert_root_toolTipTitle() As String
-            Get
-                Return ResourceManager.GetString("QuickInsert_root_toolTipTitle", resourceCulture)
+                Return ResourceManager.GetString("QuickInsert_root_TipText", resourceCulture)
             End Get
         End Property
         

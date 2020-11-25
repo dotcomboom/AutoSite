@@ -687,6 +687,9 @@
   <data name="Log.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="Log.Text" xml:space="preserve">
+    <value> </value>
+  </data>
   <data name="&gt;&gt;Log.Name" xml:space="preserve">
     <value>Log</value>
   </data>

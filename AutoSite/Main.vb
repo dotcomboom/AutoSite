@@ -668,26 +668,6 @@ Public Class Main
             Try
                 My.Computer.FileSystem.MoveFile(e.Node.Tag, newpath)
 
-                For Each t As TabPage In EditTabs.TabPages
-                    For Each c In t.Controls
-                        If c.GetType() Is GetType(Editor) Then
-                            Dim edit As Editor = c
-                            If edit.openFile = oldpath Then
-                                edit.openFile = newpath
-
-                                openFiles.Remove(oldpath)
-                                openFiles.Add(newpath)
-
-                                If t.Text.Contains("*") Then
-                                    t.Text = newpath.Replace(SiteTree.Nodes(0).Text & "\", "") & "*"
-                                Else
-                                    t.Text = newpath.Replace(SiteTree.Nodes(0).Text & "\", "")
-                                End If
-                            End If
-                        End If
-                    Next
-                Next
-
                 e.Node.Tag = newpath
             Catch exx As Exception
                 Try
@@ -697,8 +677,42 @@ Public Class Main
                     e.CancelEdit = True
                 End Try
             End Try
+
+            If Not e.CancelEdit Then
+                iterateUpdateNodePaths(e.Node, oldpath, newpath)
+            End If
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub iterateUpdateNodePaths(node As TreeNode, oldpath As String, newpath As String)
+        node.Tag = Apricot.ReplaceFirst(node.Tag, oldpath, newpath) 'update path/tag
+        node.Text = node.Tag.Split("\")(UBound(node.Tag.Split("\"))) 'update text
+
+        'update editors
+        For Each t As TabPage In EditTabs.TabPages
+            For Each c In t.Controls
+                If c.GetType() Is GetType(Editor) Then
+                    Dim edit As Editor = c
+                    If edit.openFile.Contains(oldpath) Then
+                        openFiles.Remove(edit.openFile)
+                        edit.openFile = Apricot.ReplaceFirst(edit.openFile, oldpath, newpath)
+                        openFiles.Add(edit.openFile)
+
+                        If t.Text.Contains("*") Then
+                            t.Text = edit.openFile.Replace(SiteTree.Nodes(0).Text & "\", "") & "*"
+                        Else
+                            t.Text = edit.openFile.Replace(SiteTree.Nodes(0).Text & "\", "")
+                        End If
+                    End If
+                End If
+            Next
+        Next
+
+        'iterate for children nodes
+        For Each subnode As TreeNode In node.Nodes
+            iterateUpdateNodePaths(subnode, oldpath, newpath)
+        Next
     End Sub
 
     Private Sub ExitItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitItem.Click
@@ -1329,13 +1343,7 @@ Public Class Main
         foundNode = Nothing
         FindNodeTag(SiteTree.Nodes(0), e.OldFullPath)
         If Not foundNode Is Nothing Then
-            If openFiles.Contains(foundNode.Tag) Then
-                openFiles.Remove(foundNode.Tag)
-                openFiles.Add(e.FullPath)
-            End If
-            Dim arr As Array = e.Name.Split("\")
-            foundNode.Text = arr(arr.Length - 1)
-            foundNode.Tag = e.FullPath
+            iterateUpdateNodePaths(foundNode, e.OldFullPath, e.FullPath)
         End If
     End Sub
 

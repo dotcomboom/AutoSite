@@ -20,6 +20,9 @@ Public Module Apricot
     'https://bytes.com/topic/visual-basic-net/answers/370586-replace-first-occurrance-substring#post1428786
     Public Function ReplaceFirst(ByVal expression As String, ByVal find As String, ByVal replacement As String) As String
         Dim index As Integer = expression.IndexOf(find)
+        If index < 0 Then
+            Return expression
+        End If
         Return expression.Remove(index, find.Length).Insert(index, replacement)
     End Function
 

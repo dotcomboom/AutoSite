@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Editor
     Inherits System.Windows.Forms.UserControl
 
@@ -62,6 +62,8 @@ Partial Class Editor
         Me.InsertConditional = New System.Windows.Forms.MenuItem()
         Me.Autocomplete = New AutocompleteMenuNS.AutocompleteMenu()
         Me.PopupIcons = New System.Windows.Forms.ImageList(Me.components)
+        Me.PreviewWorker = New System.ComponentModel.BackgroundWorker()
+        Me.OutWorker = New System.ComponentModel.BackgroundWorker()
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -345,6 +347,12 @@ Partial Class Editor
         Me.PopupIcons.Images.SetKeyName(5, "NewAttribute")
         Me.PopupIcons.Images.SetKeyName(6, "Conditional")
         '
+        'PreviewWorker
+        '
+        '
+        'OutWorker
+        '
+        '
         'Editor
         '
         resources.ApplyResources(Me, "$this")
@@ -398,5 +406,7 @@ Partial Class Editor
     Friend WithEvents Autocomplete As AutocompleteMenuNS.AutocompleteMenu
     Friend WithEvents PopupIcons As System.Windows.Forms.ImageList
     Friend WithEvents Replace As System.Windows.Forms.ToolStripButton
+    Friend WithEvents PreviewWorker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents OutWorker As System.ComponentModel.BackgroundWorker
 
 End Class

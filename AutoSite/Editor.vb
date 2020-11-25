@@ -168,9 +168,10 @@ Public Class Editor
             Main.Preview.Navigate(Path.Combine(Main.SiteTree.Nodes(0).Text, "out\"))
             Main.Preview.DocumentText = Code.Text
         Else
-            template_cache.Clear()
             Main.Preview.Navigate(siteRoot & "out\" & rel)
-            Main.Preview.DocumentText = Apricot.Compile(Code.Text, rel, siteRoot, True, Now, Nothing).HTML
+            Preview.Enabled = False
+            ViewOutput.Enabled = False
+            PreviewWorker.RunWorkerAsync({Code.Text, rel})
         End If
     End Sub
 
@@ -201,19 +202,14 @@ Public Class Editor
     End Sub
 
     Public Sub doViewOutput() Handles ViewOutput.ButtonClick
-        Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        Preview.Enabled = False
+        ViewOutput.Enabled = False
+
+        OutWorker.RunWorkerAsync()
 
         If Not Main.PreviewPanel.Checked Then
             Main.PreviewPanel.Checked = True
             Main.panelUpdate()
-        End If
-
-        If rel.EndsWith(".md") Then
-            rel = Apricot.ReplaceLast(rel, ".md", ".html")
-        End If
-
-        If My.Computer.FileSystem.FileExists(siteRoot & "\out\" & rel) Then
-            Main.Preview.Navigate(siteRoot & "\out\" & rel)
         End If
     End Sub
 
@@ -366,5 +362,39 @@ Public Class Editor
         Code.Focus()
         prepMenu()
         Autocomplete.Show(Code, True)
+    End Sub
+
+    Private Sub PreviewWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles PreviewWorker.DoWork
+        template_cache.Clear()
+        e.Result = Apricot.Compile(e.Argument(0), e.Argument(1), siteRoot, True, Now, Nothing).HTML()
+    End Sub
+
+    Private Sub PreviewWorker_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles PreviewWorker.RunWorkerCompleted
+        Main.Preview.DocumentText = e.Result
+        Preview.Enabled = True
+        ViewOutput.Enabled = True
+    End Sub
+
+    Private Sub OutWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles OutWorker.DoWork
+        Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+
+        'If rel.EndsWith(".md") Then
+        'rel = Apricot.ReplaceLast(rel, ".md", ".html")
+        'End If
+        If rel.EndsWith(".md") Then
+            rel = rel.Substring(0, rel.Length - 3) & ".html"
+        End If
+
+        If My.Computer.FileSystem.FileExists(siteRoot & "\out\" & rel) Then
+            e.Result = siteRoot & "\out\" & rel
+        Else
+            e.Result = "#"
+        End If
+    End Sub
+
+    Private Sub OutWorker_RunWorkerCompleted(sender As System.Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles OutWorker.RunWorkerCompleted
+        Main.Preview.Navigate(e.Result)
+        Preview.Enabled = True
+        ViewOutput.Enabled = True
     End Sub
 End Class

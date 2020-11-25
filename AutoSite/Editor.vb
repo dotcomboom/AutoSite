@@ -200,7 +200,7 @@ Public Class Editor
         End If
     End Sub
 
-    Public Sub doViewOutput() Handles ViewOutput.Click
+    Public Sub doViewOutput() Handles ViewOutput.ButtonClick
         Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
         If Not Main.PreviewPanel.Checked Then

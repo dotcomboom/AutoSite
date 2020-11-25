@@ -697,6 +697,7 @@ Public Class Main
                     If edit.openFile.Contains(oldpath) Then
                         openFiles.Remove(edit.openFile)
                         edit.openFile = Apricot.ReplaceFirst(edit.openFile, oldpath, newpath)
+                        t.Tag = edit.openFile
                         openFiles.Add(edit.openFile)
 
                         If t.Text.Contains("*") Then

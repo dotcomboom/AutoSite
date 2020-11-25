@@ -89,7 +89,7 @@ Partial Class AddConditional
         '
         resources.ApplyResources(Me.Display, "Display")
         Me.Display.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Display.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.non
+        Me.Display.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.QuickInsert_content_toolTipTitle
         Me.Display.BackBrush = Nothing
         Me.Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Display.CharHeight = 14

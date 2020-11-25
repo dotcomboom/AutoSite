@@ -154,8 +154,8 @@
   <data name="autosite_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="non" xml:space="preserve">
-    <value />
+  <data name="QuickInsert_content_toolTipTitle" xml:space="preserve">
+    <value>Content</value>
   </data>
   <data name="GotoRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GotoRow_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,7 +187,6 @@
   <data name="NewSite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewWeb_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\copy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,5 +213,16 @@
   </data>
   <data name="XP_Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Error_CouldNotSaveFile" xml:space="preserve">
+    <value>The file could not be saved.</value>
+  </data>
+  <data name="Prompt_SaveChanges" xml:space="preserve">
+    <value>Save changes to {0}?</value>
+  </data>
+  <data name="QuickInsert_content_toolTipText" xml:space="preserve">
+    <value>Outputs the page's content.
+
+Use once in templates.</value>
   </data>
 </root>

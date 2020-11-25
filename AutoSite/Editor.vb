@@ -31,7 +31,7 @@ Public Class Editor
                 unlocker.Close()
                 Code.SaveToFile(path, Main.encodingType)
             Catch ex As Exception
-                MsgBox("The file could not be saved.", MsgBoxStyle.Critical)
+                MsgBox(My.Resources.Error_CouldNotSaveFile, MsgBoxStyle.Critical)
             End Try
         End Try
     End Sub
@@ -112,7 +112,7 @@ Public Class Editor
 
     Public Sub Close() Handles CloseBtn.Click
         If Not Code.Text = Snapshot Then
-            Dim d As DialogResult = MsgBox("Save changes to " & openFile.Replace(siteRoot & "\", "") & "?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
+            Dim d As DialogResult = MsgBox(String.Format(My.Resources.Prompt_SaveChangesToFile, openFile.Replace(siteRoot & "\", "")), MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
             If d = DialogResult.Yes Then
                 Save()
             End If
@@ -226,7 +226,7 @@ Public Class Editor
         Try
             Process.Start(siteRoot & "\out\" & rel)
         Catch ex As Exception
-            MsgBox("Build the site first to view output.", MsgBoxStyle.Exclamation)
+            MsgBox(My.Resources.Error_BuildToViewOutput, MsgBoxStyle.Exclamation)
         End Try
     End Sub
 
@@ -274,9 +274,9 @@ Public Class Editor
         If (Not Me.Parent.Text.StartsWith("includes\")) And Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
             ' Internal
             If Me.Parent.Text.StartsWith("templates\") And Not Code.Text.Contains("[#content#]") Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#content#]", 2, "content", "Content", "Outputs the page's content." & Environment.NewLine & Environment.NewLine & "Use once in templates."))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#content#]", 2, "content", My.Resources.QuickInsert_content_toolTipTitle, My.Resources.QuickInsert_content_toolTipText))
             End If
-            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "root", "Relative path to root", "Outputs the relative path from the page to the site root." & Environment.NewLine & "Use this to begin paths to stylesheets, images, and other" & Environment.NewLine & "pages." & Environment.NewLine & Environment.NewLine & rootCalc()))
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "root", My.Resources.QuickInsert_root_toolTipTitle, My.Resources.QuickInsert_root_toolTipText & Environment.NewLine & Environment.NewLine & rootCalc()))
             'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & Environment.NewLine & Environment.NewLine & "Example: default"))
             items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "modified", "Last modified date", "Outputs the date the page was last modified on." & Environment.NewLine & Environment.NewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
             items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "path", "Path", "Outputs the page's relative path from root." & Environment.NewLine & Environment.NewLine & pathCalc()))

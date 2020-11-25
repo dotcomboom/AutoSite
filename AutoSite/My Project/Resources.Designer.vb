@@ -111,6 +111,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Build the site first to view output..
+        '''</summary>
+        Friend ReadOnly Property Error_BuildToViewOutput() As String
+            Get
+                Return ResourceManager.GetString("Error_BuildToViewOutput", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to The file could not be saved..
+        '''</summary>
+        Friend ReadOnly Property Error_CouldNotSaveFile() As String
+            Get
+                Return ResourceManager.GetString("Error_CouldNotSaveFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Folder() As System.Drawing.Bitmap
@@ -171,15 +189,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to .
-        '''</summary>
-        Friend ReadOnly Property non() As String
-            Get
-                Return ResourceManager.GetString("non", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property OpenFolder() As System.Drawing.Bitmap
@@ -216,6 +225,56 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("PreviewWebTab", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Save changes to {0}?.
+        '''</summary>
+        Friend ReadOnly Property Prompt_SaveChangesToFile() As String
+            Get
+                Return ResourceManager.GetString("Prompt_SaveChangesToFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Outputs the page&apos;s content.
+        '''
+        '''Use once in templates..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_content_toolTipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_content_toolTipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Content.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_content_toolTipTitle() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_content_toolTipTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Outputs the relative path from the page to the site root.
+        '''
+        '''Use this to begin paths to stylesheets, images, and other 
+        '''pages..
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_root_toolTipText() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_root_toolTipText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Relative path to root.
+        '''</summary>
+        Friend ReadOnly Property QuickInsert_root_toolTipTitle() As String
+            Get
+                Return ResourceManager.GetString("QuickInsert_root_toolTipTitle", resourceCulture)
             End Get
         End Property
         

@@ -249,7 +249,7 @@ Partial Class Editor
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
         Me.Autocomplete.SetAutocompleteMenu(Me.Code, Me.Autocomplete)
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.non
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.QuickInsert_content_toolTipTitle
         Me.Code.AutoIndentExistingLines = False
         resources.ApplyResources(Me.Code, "Code")
         Me.Code.BackBrush = Nothing

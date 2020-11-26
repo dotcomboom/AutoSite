@@ -393,7 +393,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>0</value>
   </data>
   <data name="License.Text" xml:space="preserve">
-    <value>Licenses</value>
+    <value>Licencias</value>
   </data>
   <data name="&gt;&gt;License.Name" xml:space="preserve">
     <value>License</value>

@@ -460,6 +460,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Changes will be applied on restart..
+        '''</summary>
+        Friend ReadOnly Property Prompt_ChangesOnRestart() As String
+            Get
+                Return ResourceManager.GetString("Prompt_ChangesOnRestart", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to AutoSite will create a site in the folder located at {0}. Is this OK?.
         '''</summary>
         Friend ReadOnly Property Prompt_CreateSite() As String

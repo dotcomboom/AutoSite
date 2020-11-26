@@ -108,6 +108,9 @@ Partial Class Main
         Me.HelpSep2 = New System.Windows.Forms.MenuItem()
         Me.AboutItem = New System.Windows.Forms.MenuItem()
         Me.InspectorBtn = New System.Windows.Forms.MenuItem()
+        Me.LanguageMenu = New System.Windows.Forms.MenuItem()
+        Me.EnglishLang = New System.Windows.Forms.MenuItem()
+        Me.SpanishLang = New System.Windows.Forms.MenuItem()
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu()
         Me.OpenContext = New System.Windows.Forms.MenuItem()
@@ -158,9 +161,6 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem3 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem4 = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -189,7 +189,7 @@ Partial Class Main
         '
         'MenuBar
         '
-        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu, Me.MenuItem2})
+        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu, Me.LanguageMenu})
         '
         'FileMenu
         '
@@ -614,6 +614,22 @@ Partial Class Main
         resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
         Me.InspectorBtn.Index = 7
         '
+        'LanguageMenu
+        '
+        Me.LanguageMenu.Index = 6
+        Me.LanguageMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnglishLang, Me.SpanishLang})
+        resources.ApplyResources(Me.LanguageMenu, "LanguageMenu")
+        '
+        'EnglishLang
+        '
+        Me.EnglishLang.Index = 0
+        resources.ApplyResources(Me.EnglishLang, "EnglishLang")
+        '
+        'SpanishLang
+        '
+        Me.SpanishLang.Index = 1
+        resources.ApplyResources(Me.SpanishLang, "SpanishLang")
+        '
         'XP
         '
         Me.XP.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
@@ -923,22 +939,6 @@ Partial Class Main
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
-        'MenuItem2
-        '
-        Me.MenuItem2.Index = 6
-        Me.MenuItem2.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem3, Me.MenuItem4})
-        resources.ApplyResources(Me.MenuItem2, "MenuItem2")
-        '
-        'MenuItem3
-        '
-        Me.MenuItem3.Index = 0
-        resources.ApplyResources(Me.MenuItem3, "MenuItem3")
-        '
-        'MenuItem4
-        '
-        Me.MenuItem4.Index = 1
-        resources.ApplyResources(Me.MenuItem4, "MenuItem4")
-        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -1100,7 +1100,7 @@ Partial Class Main
     Friend WithEvents cDark As System.Windows.Forms.MenuItem
     Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
     Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
-    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
+    Friend WithEvents LanguageMenu As System.Windows.Forms.MenuItem
+    Friend WithEvents EnglishLang As System.Windows.Forms.MenuItem
+    Friend WithEvents SpanishLang As System.Windows.Forms.MenuItem
 End Class

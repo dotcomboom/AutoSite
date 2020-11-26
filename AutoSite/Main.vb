@@ -1794,13 +1794,13 @@ Public Class Main
         setTheme(Color.White, SystemColors.ControlText, SystemColors.Control)
     End Sub
 
-    Private Sub MenuItem3_Click(sender As System.Object, e As System.EventArgs) Handles MenuItem3.Click
-        My.Settings.language = ""
-        MsgBox("Changes will be applied on restart.", MsgBoxStyle.Information)
+    Private Sub EnglishLang_Click(sender As System.Object, e As System.EventArgs) Handles EnglishLang.Click
+        My.Settings.language = "EN-us"
+        MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information)
     End Sub
 
-    Private Sub MenuItem4_Click(sender As System.Object, e As System.EventArgs) Handles MenuItem4.Click
+    Private Sub SpanishLang_Click(sender As System.Object, e As System.EventArgs) Handles SpanishLang.Click
         My.Settings.language = "ES-es"
-        MsgBox("Changes will be applied on restart.", MsgBoxStyle.Information)
+        MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information)
     End Sub
 End Class

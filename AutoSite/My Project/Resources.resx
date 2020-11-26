@@ -413,4 +413,7 @@ pages.</value>
   <data name="Explorer_Templates" xml:space="preserve">
     <value>Templates</value>
   </data>
+  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
+    <value>Changes will be applied on restart.</value>
+  </data>
 </root>

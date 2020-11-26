@@ -347,10 +347,10 @@ Use once in templates.</value>
     <value>Zdefiniuje atrybut {0} dla tej strony.</value>
   </data>
   <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
-    <value>Define a new attribute</value>
+    <value>Zdefiniuj nowy atrybut</value>
   </data>
   <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
-    <value>Adds an attribute definition.</value>
+    <value>Dodaje definicję atrybutu.</value>
   </data>
   <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
     <value>Defines the template used by the current page.
@@ -381,7 +381,7 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>Outputs the page's relative path from root.</value>
   </data>
   <data name="QuickInsert_root_Tip" xml:space="preserve">
-    <value>Relative path to root</value>
+    <value>Względna ścieżka do katalogu głównego</value>
   </data>
   <data name="QuickInsert_root_TipText" xml:space="preserve">
     <value>Outputs the relative path from the page to the site root.

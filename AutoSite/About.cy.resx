@@ -240,7 +240,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="OK.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>Iawn</value>
   </data>
   <data name="&gt;&gt;OK.Name" xml:space="preserve">
     <value>OK</value>
@@ -393,7 +393,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>0</value>
   </data>
   <data name="License.Text" xml:space="preserve">
-    <value>Licenses</value>
+    <value>Trwyddedau</value>
   </data>
   <data name="&gt;&gt;License.Name" xml:space="preserve">
     <value>License</value>
@@ -620,7 +620,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="Changelog.Text" xml:space="preserve">
-    <value>Changelog</value>
+    <value>Log Newid</value>
   </data>
   <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
     <value>Changelog</value>

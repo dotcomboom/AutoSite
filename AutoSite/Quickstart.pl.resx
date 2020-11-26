@@ -262,7 +262,7 @@
     <value>4</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>To zadanie utworzy default.html w folderze Szablony. To powinno wystarczyć dla większości strony, ale zawsze możesz dodać więcej.</value>
+    <value>To zadanie utworzy default.html w folderze Szablony. To powinno wystarczyć dla większości stron, ale zawsze możesz dodać więcej.</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
@@ -490,7 +490,7 @@
     <value>12</value>
   </data>
   <data name="CreateTemplate.Text" xml:space="preserve">
-    <value>Stwórz default.html</value>
+    <value>Utwórz default.html</value>
   </data>
   <data name="&gt;&gt;CreateTemplate.Name" xml:space="preserve">
     <value>CreateTemplate</value>

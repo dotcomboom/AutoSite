@@ -341,7 +341,7 @@ your site and populate the Attribute Map.</value>
 Use once in templates.</value>
   </data>
   <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
-    <value>Define {0}</value>
+    <value>Zdefiniuj {0}</value>
   </data>
   <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
     <value>Defines the {0} attribute for this page.</value>
@@ -369,7 +369,7 @@ Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
 Conditionals allow you to output text if an attribute has a certain value.</value>
   </data>
   <data name="QuickInsert_modified_Tip" xml:space="preserve">
-    <value>Last modified date</value>
+    <value>Data ostatniej modyfikacji</value>
   </data>
   <data name="QuickInsert_modified_TipText" xml:space="preserve">
     <value>Outputs the date the page was last modified on.</value>
@@ -408,12 +408,12 @@ pages.</value>
     <value>Includes</value>
   </data>
   <data name="Explorer_Pages" xml:space="preserve">
-    <value>Pages</value>
+    <value>Strony</value>
   </data>
   <data name="Explorer_Templates" xml:space="preserve">
-    <value>Templates</value>
+    <value>Szablony</value>
   </data>
   <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Changes will be applied on restart.</value>
+    <value>Zmiany zostaną zastosowane po ponownym uruchomieniu.</value>
   </data>
 </root>

@@ -580,7 +580,7 @@
     <value>14</value>
   </data>
   <data name="Label12.Text" xml:space="preserve">
-    <value>Add includes</value>
+    <value>Añadir incluye</value>
   </data>
   <data name="&gt;&gt;Label12.Name" xml:space="preserve">
     <value>Label12</value>
@@ -643,7 +643,7 @@
     <value>20</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Compilar</value>
   </data>
   <data name="&gt;&gt;Build.Name" xml:space="preserve">
     <value>Build</value>
@@ -670,7 +670,7 @@
     <value>19</value>
   </data>
   <data name="Label9.Text" xml:space="preserve">
-    <value>AutoSite has two options for building your site. Sanitary Build cleans your output folder of any old files and is recommended before publishing.</value>
+    <value>AutoSite tiene dos opciones para construir su sitio. Construcción Sanitaria limpia su carpeta de salida de cualquier archivo antiguo y se recomienda antes de publicar.</value>
   </data>
   <data name="&gt;&gt;Label9.Name" xml:space="preserve">
     <value>Label9</value>
@@ -703,7 +703,7 @@
     <value>18</value>
   </data>
   <data name="Label10.Text" xml:space="preserve">
-    <value>Build your site</value>
+    <value>Crea tu sitio</value>
   </data>
   <data name="&gt;&gt;Label10.Name" xml:space="preserve">
     <value>Label10</value>
@@ -763,7 +763,7 @@
     <value>21</value>
   </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
-    <value>Markdown guide</value>
+    <value>Guía Markdown</value>
   </data>
   <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
     <value>LinkLabel1</value>
@@ -793,7 +793,7 @@
     <value>22</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construcción sanitaria...</value>
   </data>
   <data name="&gt;&gt;SanitaryBuild.Name" xml:space="preserve">
     <value>SanitaryBuild</value>
@@ -823,7 +823,7 @@
     <value>23</value>
   </data>
   <data name="LinkLabel2.Text" xml:space="preserve">
-    <value>HTML guide</value>
+    <value>Guía HTML</value>
   </data>
   <data name="&gt;&gt;LinkLabel2.Name" xml:space="preserve">
     <value>LinkLabel2</value>
@@ -874,7 +874,7 @@
     <value>25</value>
   </data>
   <data name="Label15.Text" xml:space="preserve">
-    <value>You can go back to this dialog or rename the file to change formats at any time.</value>
+    <value>Puede volver a este diálogo o renombrar el archivo para cambiar los formatos en cualquier momento.</value>
   </data>
   <data name="&gt;&gt;Label15.Name" xml:space="preserve">
     <value>Label15</value>
@@ -907,7 +907,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Quickstart</value>
+    <value>Inicio rápido</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Quickstart</value>

@@ -238,7 +238,7 @@
     <value>2</value>
   </data>
   <data name="AttLabel.Text" xml:space="preserve">
-    <value>Attribute to check:</value>
+    <value>Atributo a comprobar:</value>
   </data>
   <data name="&gt;&gt;AttLabel.Name" xml:space="preserve">
     <value>AttLabel</value>
@@ -325,7 +325,7 @@
     <value>11</value>
   </data>
   <data name="PassLabel.Text" xml:space="preserve">
-    <value>If the attribute passes this condition, output:</value>
+    <value>Si el atributo pasa esta condición, salida:</value>
   </data>
   <data name="&gt;&gt;PassLabel.Name" xml:space="preserve">
     <value>PassLabel</value>

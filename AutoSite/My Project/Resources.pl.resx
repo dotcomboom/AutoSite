@@ -357,10 +357,10 @@ Użyj jednokrotnie w szablonach.</value>
 Domyślnym jest {0}, który wskazuje AutoSite użycie {1} w folderze szablonów.</value>
   </data>
   <data name="QuickInsert_Generic_TipText" xml:space="preserve">
-    <value>Outputs the page's value for the {0} attribute.</value>
+    <value>Wyświetla wartość strony dla atrybutu {0}.</value>
   </data>
   <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
-    <value>Insert conditional</value>
+    <value>Wstaw warunkową</value>
   </data>
   <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
     <value>Open the Insert Conditional dialog.
@@ -371,28 +371,27 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>Data ostatniej modyfikacji</value>
   </data>
   <data name="QuickInsert_modified_TipText" xml:space="preserve">
-    <value>Outputs the date the page was last modified on.</value>
+    <value>Wyświetla datę ostatniej modyfikacji strony.</value>
   </data>
   <data name="QuickInsert_path_Tip" xml:space="preserve">
     <value>Ścieżka</value>
   </data>
   <data name="QuickInsert_path_TipText" xml:space="preserve">
-    <value>Outputs the page's relative path from root.</value>
+    <value>Wyświetla względną ścieżkę strony od katalogu głównego.</value>
   </data>
   <data name="QuickInsert_root_Tip" xml:space="preserve">
     <value>Względna ścieżka do katalogu głównego</value>
   </data>
   <data name="QuickInsert_root_TipText" xml:space="preserve">
-    <value>Outputs the relative path from the page to the site root.
+    <value>Wyświetla ścieżkę względną od strony do katalogu głównego strony.
 
-Use this to begin paths to stylesheets, images, and other 
-pages.</value>
+Użyj tego, aby rozpocząć ścieżki do arkuszy stylów, obrazów i innych stron.</value>
   </data>
   <data name="QuickInsert__Example" xml:space="preserve">
     <value>Przykład: {0}</value>
   </data>
   <data name="QuickInsert__Output" xml:space="preserve">
-    <value>Output: {0}</value>
+    <value>Wyjście: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
     <value>Dodaj pliki do {0}</value>

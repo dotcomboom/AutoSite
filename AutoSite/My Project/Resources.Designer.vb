@@ -333,6 +333,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Incluye.
+        '''</summary>
+        Friend ReadOnly Property Explorer_Includes() As String
+            Get
+                Return ResourceManager.GetString("Explorer_Includes", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Paginas.
+        '''</summary>
+        Friend ReadOnly Property Explorer_Pages() As String
+            Get
+                Return ResourceManager.GetString("Explorer_Pages", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Plantillas.
+        '''</summary>
+        Friend ReadOnly Property Explorer_Templates() As String
+            Get
+                Return ResourceManager.GetString("Explorer_Templates", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Folder() As System.Drawing.Bitmap

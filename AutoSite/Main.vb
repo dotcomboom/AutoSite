@@ -98,17 +98,17 @@ Public Class Main
 
         root.Nodes.Clear()
 
-        Dim pages = root.Nodes.Add("Pages")
+        Dim pages = root.Nodes.Add(My.Resources.Explorer_Pages)
         pages.ImageKey = "Page"
         pages.SelectedImageKey = "Page"
         pages.Tag = inPath
 
-        Dim templates = root.Nodes.Add("Templates")
+        Dim templates = root.Nodes.Add(My.Resources.Explorer_Templates)
         templates.ImageKey = "Template"
         templates.SelectedImageKey = "Template"
         templates.Tag = templatePath
 
-        Dim includes = root.Nodes.Add("Includes")
+        Dim includes = root.Nodes.Add(My.Resources.Explorer_Includes)
         includes.ImageKey = "Include"
         includes.SelectedImageKey = "Include"
         includes.Tag = includePath

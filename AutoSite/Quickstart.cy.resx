@@ -238,7 +238,7 @@
     <value>3</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Create your first template</value>
+    <value>Creu eich templed cyntaf</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -262,7 +262,7 @@
     <value>4</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>This task will create default.html in your Templates folder. This should be enough for most sites, though you may always add more later.</value>
+    <value>Bydd y dasg hon yn creu default.html yn eich ffolder Templedi. Dylai hyn fod yn ddigon i'r mwyafrif o wefannau, er efallai y byddwch yn ychwanegu mwy yn y dyfodol.</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
@@ -289,7 +289,7 @@
     <value>7</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>This task will create an index page in your Pages folder.</value>
+    <value>Bydd y dasg hon yn creu tudalen mynegai yn eich ffolder Tudalennau.</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -643,7 +643,7 @@
     <value>20</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Adeiladu</value>
   </data>
   <data name="&gt;&gt;Build.Name" xml:space="preserve">
     <value>Build</value>

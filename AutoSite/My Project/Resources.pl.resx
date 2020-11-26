@@ -215,23 +215,23 @@
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewCss" xml:space="preserve">
-    <value>new-style</value>
+    <value>nowy-styl</value>
   </data>
   <data name="Defaults_NewFile" xml:space="preserve">
-    <value>new-file</value>
+    <value>nowy-plik</value>
   </data>
   <data name="Defaults_NewHtml" xml:space="preserve">
-    <value>new-page</value>
+    <value>nowa-strona</value>
   </data>
   <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
-    &lt;title&gt;New HTML Page&lt;/title&gt;
+    &lt;title&gt;Nowa strona HTML&lt;/title&gt;
     &lt;meta charset="utf-8"&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;New HTML Page&lt;/h1&gt;
+    &lt;h1&gt;Nowa strona HTML&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
@@ -254,10 +254,10 @@
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewJs" xml:space="preserve">
-    <value>new-script</value>
+    <value>nowy-skrypt</value>
   </data>
   <data name="Defaults_NewMd" xml:space="preserve">
-    <value>new-page</value>
+    <value>nowa-strona</value>
   </data>
   <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
@@ -265,7 +265,7 @@
 </value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
-    <value>new-page</value>
+    <value>nowa-strona</value>
   </data>
   <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
     <value>&lt;?php
@@ -291,7 +291,7 @@
     <value>Build the site first to view output.</value>
   </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>The file could not be saved.</value>
+    <value>Plik nie mógł zostać zapisany.</value>
   </data>
   <data name="Error_LogSaveFail" xml:space="preserve">
     <value>Something went wrong when trying to save the log:
@@ -329,7 +329,7 @@
     <value>Build for more options</value>
   </data>
   <data name="QuickInsert_Build_Tip" xml:space="preserve">
-    <value>Build</value>
+    <value>Zbuduj</value>
   </data>
   <data name="QuickInsert_Build_TipText" xml:space="preserve">
     <value>AutoSite can give you more suggestions when you build
@@ -375,7 +375,7 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>Outputs the date the page was last modified on.</value>
   </data>
   <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Path</value>
+    <value>Ścieżka</value>
   </data>
   <data name="QuickInsert_path_TipText" xml:space="preserve">
     <value>Outputs the page's relative path from root.</value>
@@ -390,16 +390,16 @@ Use this to begin paths to stylesheets, images, and other
 pages.</value>
   </data>
   <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Example: {0}</value>
+    <value>Przykład: {0}</value>
   </data>
   <data name="QuickInsert__Output" xml:space="preserve">
     <value>Output: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add Files to {0}</value>
+    <value>Dodaj pliki do {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
-    <value>Start Page</value>
+    <value>Strona startowa</value>
   </data>
   <data name="__" xml:space="preserve">
     <value></value>

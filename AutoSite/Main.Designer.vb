@@ -108,6 +108,9 @@ Partial Class Main
         Me.HelpSep2 = New System.Windows.Forms.MenuItem()
         Me.AboutItem = New System.Windows.Forms.MenuItem()
         Me.InspectorBtn = New System.Windows.Forms.MenuItem()
+        Me.LanguageMenu = New System.Windows.Forms.MenuItem()
+        Me.EnglishLang = New System.Windows.Forms.MenuItem()
+        Me.SpanishLang = New System.Windows.Forms.MenuItem()
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu()
         Me.OpenContext = New System.Windows.Forms.MenuItem()
@@ -186,7 +189,7 @@ Partial Class Main
         '
         'MenuBar
         '
-        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu})
+        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu, Me.LanguageMenu})
         '
         'FileMenu
         '
@@ -610,6 +613,22 @@ Partial Class Main
         '
         resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
         Me.InspectorBtn.Index = 7
+        '
+        'LanguageMenu
+        '
+        Me.LanguageMenu.Index = 6
+        Me.LanguageMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnglishLang, Me.SpanishLang})
+        resources.ApplyResources(Me.LanguageMenu, "LanguageMenu")
+        '
+        'EnglishLang
+        '
+        Me.EnglishLang.Index = 0
+        resources.ApplyResources(Me.EnglishLang, "EnglishLang")
+        '
+        'SpanishLang
+        '
+        Me.SpanishLang.Index = 1
+        resources.ApplyResources(Me.SpanishLang, "SpanishLang")
         '
         'XP
         '
@@ -1081,4 +1100,7 @@ Partial Class Main
     Friend WithEvents cDark As System.Windows.Forms.MenuItem
     Friend WithEvents AttributeExplanation As System.Windows.Forms.Label
     Friend WithEvents AttributeTree As System.Windows.Forms.TreeView
+    Friend WithEvents LanguageMenu As System.Windows.Forms.MenuItem
+    Friend WithEvents EnglishLang As System.Windows.Forms.MenuItem
+    Friend WithEvents SpanishLang As System.Windows.Forms.MenuItem
 End Class

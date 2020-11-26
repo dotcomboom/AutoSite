@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="Cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cut_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -155,7 +155,7 @@
     <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_content_Tip" xml:space="preserve">
-    <value>Content</value>
+    <value>Contenido</value>
   </data>
   <data name="GotoRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GotoRow_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -215,29 +215,29 @@
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewCss" xml:space="preserve">
-    <value>new-style</value>
+    <value>nuevo-estilo</value>
   </data>
   <data name="Defaults_NewFile" xml:space="preserve">
-    <value>new-file</value>
+    <value>nuevo-archivo</value>
   </data>
   <data name="Defaults_NewHtml" xml:space="preserve">
-    <value>new-page</value>
+    <value>nueva-página</value>
   </data>
   <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
-    &lt;title&gt;New HTML Page&lt;/title&gt;
+    &lt;title&gt;Nueva Página HTML&lt;/title&gt;
     &lt;meta charset="utf-8"&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;New HTML Page&lt;/h1&gt;
+    &lt;h1&gt;Nueva Página HTML&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New HTML Page --&gt;
+&lt;!-- attrib title: Nueva Página HTML --&gt;
 </value>
   </data>
   <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
@@ -254,166 +254,163 @@
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewJs" xml:space="preserve">
-    <value>new-script</value>
+    <value>nuevo-script</value>
   </data>
   <data name="Defaults_NewMd" xml:space="preserve">
-    <value>new-page</value>
+    <value>nueva-página</value>
   </data>
   <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New Markdown Page --&gt;
+&lt;!-- attrib title: Nueva Página de Markdown --&gt;
 </value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
-    <value>new-page</value>
+    <value>nueva-página</value>
   </data>
   <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
     <value>&lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
+      echo "Esto será interpretado por el servidor. Hola universo!";
 ?&gt;</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New PHP Page --&gt;
-&lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
+    <value>&lt;!-- plantilla attrib: default --&gt;
+&lt;! - attrib title: Nueva página PHP --&gt;
+&lt;? hp
+      echo "Esto será interpretado por el servidor. Hola universo!";
 ?&gt;</value>
   </data>
   <data name="Error_BuildFailed" xml:space="preserve">
-    <value>Apricot returned this exception:
+    <value>Apricot devolvió esta excepción:
 
 {0}</value>
   </data>
   <data name="Error_BuildFailed_Title" xml:space="preserve">
-    <value>Build failed</value>
+    <value>Error de compilación</value>
   </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
-    <value>Build the site first to view output.</value>
+    <value>Construye el sitio primero para ver la salida.</value>
   </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>The file could not be saved.</value>
+    <value>El archivo no se ha podido guardar.</value>
   </data>
   <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Something went wrong when trying to save the log:
+    <value>Algo salió mal al intentar guardar el registro:
 
 {0}</value>
   </data>
   <data name="Error_LogSaveFail_Title" xml:space="preserve">
-    <value>Failed to save</value>
+    <value>Error al guardar</value>
   </data>
   <data name="Error_UpgradeFail" xml:space="preserve">
-    <value>AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again.</value>
+    <value>AutoSite no pudo renombrar la carpeta in\ a pages\. Por favor, renombra la carpeta manualmente y vuelva a abrir el sitio.</value>
   </data>
   <data name="Error_UpgradeFail_Title" xml:space="preserve">
-    <value>Unable to convert</value>
+    <value>No se puede convertir</value>
   </data>
   <data name="Prompt_CreateSite" xml:space="preserve">
-    <value>AutoSite will create a site in the folder located at {0}. Is this OK?</value>
+    <value>AutoSite creará un sitio en la carpeta que se encuentra en {0}. ¿Está bien?</value>
   </data>
   <data name="Prompt_ProjectUpgrade" xml:space="preserve">
-    <value>AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.</value>
+    <value>AutoSite ahora utiliza la ruta de las pages\ para la carpeta de páginas. La compatibilidad con versiones anteriores de AutoSite se verá afectada por esta conversión.</value>
   </data>
   <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
-    <value>Update Site</value>
+    <value>Actualizar Sitio</value>
   </data>
   <data name="Prompt_SanitaryBuild" xml:space="preserve">
-    <value>A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.</value>
+    <value>Una construcción sanitaria moverá la carpeta de salida a la papelera de reciclaje antes de construir, eliminando cualquier archivo perdido.</value>
   </data>
   <data name="Prompt_SaveChangesToFile" xml:space="preserve">
-    <value>Save changes to {0}?</value>
+    <value>¿Guardar cambios en {0}?</value>
   </data>
   <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
-    <value>Some files have unsaved changes. Save them?</value>
+    <value>Algunos archivos tienen cambios sin guardar. ¿Guardarlos?</value>
   </data>
   <data name="QuickInsert_Build" xml:space="preserve">
-    <value>Build for more options</value>
+    <value>Compilar para más opciones</value>
   </data>
   <data name="QuickInsert_Build_Tip" xml:space="preserve">
-    <value>Build</value>
+    <value>Compilar</value>
   </data>
   <data name="QuickInsert_Build_TipText" xml:space="preserve">
-    <value>AutoSite can give you more suggestions when you build
-your site and populate the Attribute Map.</value>
+    <value>AutoSite puede darte más sugerencias cuando construyes
+tu sitio y rellenar el mapa de atributos.</value>
   </data>
   <data name="QuickInsert_content_TipText" xml:space="preserve">
-    <value>Outputs the page's content.
+    <value>Sale el contenido de la página.
 
-Use once in templates.</value>
+Úselo una vez en las plantillas.</value>
   </data>
   <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
-    <value>Define {0}</value>
+    <value>Definir {0}</value>
   </data>
   <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
-    <value>Defines the {0} attribute for this page.</value>
+    <value>Define el atributo {0} para esta página.</value>
   </data>
   <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
-    <value>Define a new attribute</value>
+    <value>Crear un nuevo atributo</value>
   </data>
   <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
-    <value>Adds an attribute definition.</value>
+    <value>Añade una definición de atributo.</value>
   </data>
   <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
-    <value>Defines the template used by the current page.
+    <value>Define la plantilla utilizada por la página actual.
 
-Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
+Por defecto es {0}, que le dice a AutoSite que use {1} en la carpeta de plantillas.</value>
   </data>
   <data name="QuickInsert_Generic_TipText" xml:space="preserve">
-    <value>Outputs the page's value for the {0} attribute.</value>
+    <value>Sale el valor de la página para el atributo {0}.</value>
   </data>
   <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
-    <value>Insert conditional</value>
+    <value>Insertar condicional</value>
   </data>
   <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
-    <value>Open the Insert Conditional dialog.
+    <value>Abra el cuadro de diálogo condicional.
 
-Conditionals allow you to output text if an attribute has a certain value.</value>
+Los condicionales le permiten mostrar texto si un atributo tiene cierto valor.</value>
   </data>
   <data name="QuickInsert_modified_Tip" xml:space="preserve">
-    <value>Last modified date</value>
+    <value>Fecha de última modificación</value>
   </data>
   <data name="QuickInsert_modified_TipText" xml:space="preserve">
-    <value>Outputs the date the page was last modified on.</value>
+    <value>Sale la fecha en la que la página fue modificada por última vez.</value>
   </data>
   <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Path</value>
+    <value>Ruta</value>
   </data>
   <data name="QuickInsert_path_TipText" xml:space="preserve">
-    <value>Outputs the page's relative path from root.</value>
+    <value>Sale la ruta relativa de la página desde la raíz.</value>
   </data>
   <data name="QuickInsert_root_Tip" xml:space="preserve">
-    <value>Relative path to root</value>
+    <value>Ruta relativa a la raíz</value>
   </data>
   <data name="QuickInsert_root_TipText" xml:space="preserve">
-    <value>Outputs the relative path from the page to the site root.
+    <value>Sale la ruta relativa de la página a la raíz del sitio.
 
-Use this to begin paths to stylesheets, images, and other 
-pages.</value>
+Utilice esto para comenzar rutas a hojas de estilo, imágenes y otras 
+páginas.</value>
   </data>
   <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Example: {0}</value>
+    <value>Ejemplo: {0}</value>
   </data>
   <data name="QuickInsert__Output" xml:space="preserve">
-    <value>Output: {0}</value>
+    <value>Salida: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add Files to {0}</value>
+    <value>Añadir archivos a {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
-    <value>Start Page</value>
+    <value>Página de inicio</value>
   </data>
   <data name="__" xml:space="preserve">
-    <value />
+    <value></value>
   </data>
   <data name="Explorer_Includes" xml:space="preserve">
-    <value>Includes</value>
+    <value>Incluye</value>
   </data>
   <data name="Explorer_Pages" xml:space="preserve">
-    <value>Pages</value>
+    <value>Páginas</value>
   </data>
   <data name="Explorer_Templates" xml:space="preserve">
-    <value>Templates</value>
-  </data>
-  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Changes will be applied on restart.</value>
+    <value>Plantillas</value>
   </data>
 </root>

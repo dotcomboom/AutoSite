@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -120,7 +120,7 @@
   <metadata name="VS2017.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>382, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="VS2017.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
@@ -128,31 +128,31 @@
     <value>474, 17</value>
   </metadata>
   <data name="FolderBrowser.Description" xml:space="preserve">
-    <value>Pick a folder in which to store your site's assets. If no site exists in that folder, one will be created.</value>
+    <value>Elija una carpeta en la que guardar los recursos de su sitio. Si no existe ningún sitio en esa carpeta, se creará una.</value>
   </data>
   <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
   </metadata>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="NewSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftN</value>
   </data>
   <data name="NewSite.Text" xml:space="preserve">
-    <value>New Site...</value>
+    <value>Nuevo sitio...</value>
   </data>
   <data name="OpenFolder.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftO</value>
   </data>
   <data name="OpenFolder.Text" xml:space="preserve">
-    <value>Open Site...</value>
+    <value>Abrir sitio...</value>
   </data>
   <data name="CloseFile.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlW</value>
   </data>
   <data name="CloseFile.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>Cerrar</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="CloseSite.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -160,7 +160,7 @@
     <value>CtrlShiftW</value>
   </data>
   <data name="CloseSite.Text" xml:space="preserve">
-    <value>Close Site</value>
+    <value>Cerrar sitio</value>
   </data>
   <data name="FileSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -169,13 +169,13 @@
     <value>CtrlS</value>
   </data>
   <data name="Save.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Guardar</value>
   </data>
   <data name="SaveAll.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftS</value>
   </data>
   <data name="SaveAll.Text" xml:space="preserve">
-    <value>Save All</value>
+    <value>Guardar todo</value>
   </data>
   <data name="FileSep3.Text" xml:space="preserve">
     <value>-</value>
@@ -217,13 +217,13 @@
     <value>-</value>
   </data>
   <data name="ClearRecents.Text" xml:space="preserve">
-    <value>Clear Recent Sites</value>
+    <value>Limpiar sitios recientes</value>
   </data>
   <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Recent Sites</value>
+    <value>Sitios recientes</value>
   </data>
   <data name="InstallPackMnu.Text" xml:space="preserve">
-    <value>Install Pack...</value>
+    <value>Instalar paquete...</value>
   </data>
   <data name="InstallPackMnu.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -235,22 +235,22 @@
     <value>AltF4</value>
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
-    <value>Exit</value>
+    <value>Salir</value>
   </data>
   <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;File</value>
+    <value>&amp;Archivo</value>
   </data>
   <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlZ</value>
   </data>
   <data name="Undo.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Deshacer</value>
   </data>
   <data name="Redo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlY</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Rehacer</value>
   </data>
   <data name="EditSep.Text" xml:space="preserve">
     <value>-</value>
@@ -259,19 +259,19 @@
     <value>CtrlX</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Cortar</value>
   </data>
   <data name="Copy.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlC</value>
   </data>
   <data name="Copy.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiar</value>
   </data>
   <data name="Paste.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlV</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Pegar</value>
   </data>
   <data name="EditSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -280,7 +280,7 @@
     <value>CtrlA</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>Seleccionar todo</value>
   </data>
   <data name="EditSep3.Text" xml:space="preserve">
     <value>-</value>
@@ -289,19 +289,19 @@
     <value>CtrlG</value>
   </data>
   <data name="GoToMnu.Text" xml:space="preserve">
-    <value>Go To...</value>
+    <value>Ir a...</value>
   </data>
   <data name="Find.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlF</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Find...</value>
+    <value>Buscar...</value>
   </data>
   <data name="Replace.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlH</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Replace...</value>
+    <value>Reemplazar...</value>
   </data>
   <data name="EditSep4.Text" xml:space="preserve">
     <value>-</value>
@@ -316,37 +316,37 @@
     <value>CtrlShiftI</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insert Conditional...</value>
+    <value>Insertar condicional...</value>
   </data>
   <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
+    <value>Editar</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
-    <value>Word Wrap</value>
+    <value>Ajuste de palabras</value>
   </data>
   <data name="VirtualSpace.Text" xml:space="preserve">
-    <value>Virtual Space</value>
+    <value>Espacio virtual</value>
   </data>
   <data name="WideCaret.Text" xml:space="preserve">
-    <value>Wide Caret</value>
+    <value>Cuidado ancho</value>
   </data>
   <data name="FormatSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="SyntaxHighlight.Text" xml:space="preserve">
-    <value>Experimental Syntax Highlighting</value>
+    <value>Resaltado sintáctico experimental</value>
   </data>
   <data name="SyntaxHighlight.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
+    <value>Vista previa en vivo</value>
   </data>
   <data name="FormatSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
-    <value>Monospace Font...</value>
+    <value>Fuentes monoespaciales...</value>
   </data>
   <data name="FormatMenu.Text" xml:space="preserve">
     <value>F&amp;ormat</value>
@@ -355,7 +355,7 @@
     <value>Alt1</value>
   </data>
   <data name="ExplorerPanel.Text" xml:space="preserve">
-    <value>Explorer</value>
+    <value>Explorador</value>
   </data>
   <data name="BuildPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt2</value>
@@ -373,7 +373,7 @@
     <value>Alt4</value>
   </data>
   <data name="PreviewPanel.Text" xml:space="preserve">
-    <value>Preview</value>
+    <value>Vista previa</value>
   </data>
   <data name="ViewSep.Text" xml:space="preserve">
     <value>-</value>
@@ -382,31 +382,31 @@
     <value>Visual Studio 2017</value>
   </data>
   <data name="XPitem.Text" xml:space="preserve">
-    <value>XP</value>
+    <value>EP</value>
   </data>
   <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Explorer Icon Theme</value>
+    <value>Tema de icono de explorador</value>
   </data>
   <data name="cDefault.Text" xml:space="preserve">
-    <value>Default</value>
+    <value>Predeterminado</value>
   </data>
   <data name="cDark.Text" xml:space="preserve">
-    <value>Dark</value>
+    <value>Oscuro</value>
   </data>
   <data name="ColorScheme.Text" xml:space="preserve">
-    <value>Color Scheme (beta)</value>
+    <value>Esquema de color (beta)</value>
   </data>
   <data name="ColorScheme.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
-    <value>Use System Icons</value>
+    <value>Usar iconos del sistema</value>
   </data>
   <data name="RefreshItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlR</value>
   </data>
   <data name="RefreshItem.Text" xml:space="preserve">
-    <value>Refresh Explorer</value>
+    <value>Actualizar Explorador</value>
   </data>
   <data name="ViewSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -415,37 +415,37 @@
     <value>CtrlP</value>
   </data>
   <data name="PreviewPage.Text" xml:space="preserve">
-    <value>Preview File</value>
+    <value>Previsualizar archivo</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Ver salida</value>
   </data>
   <data name="ViewSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="BrowseSiteMnu.Text" xml:space="preserve">
-    <value>Browse Site in Default Browser</value>
+    <value>Navegar por el sitio en el navegador por defecto</value>
   </data>
   <data name="BrowseSitePreviewMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftP</value>
   </data>
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Navegar por el sitio en vista previa</value>
   </data>
   <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;View</value>
+    <value>&amp;Ver</value>
   </data>
   <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlB</value>
   </data>
   <data name="BuildSite.Text" xml:space="preserve">
-    <value>Build Site</value>
+    <value>Construir sitio</value>
   </data>
   <data name="SanitaryBuild.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftB</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construcción sanitaria...</value>
   </data>
   <data name="BuildSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -454,40 +454,40 @@
     <value>CtrlShiftO</value>
   </data>
   <data name="OpenOutputMnu.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
+    <value>Abrir carpeta de salida</value>
   </data>
   <data name="MenuItem1.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="QuickstartMnu.Text" xml:space="preserve">
-    <value>Quickstart</value>
+    <value>Inicio rápido</value>
   </data>
   <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
+    <value>&amp;Herramientas</value>
   </data>
   <data name="HelpTopics.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
-    <value>AutoSite Manual</value>
+    <value>Manual del AutoSite</value>
   </data>
   <data name="HelpSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="Website.Text" xml:space="preserve">
-    <value>Website</value>
+    <value>Sitio web</value>
   </data>
   <data name="GitHub.Text" xml:space="preserve">
-    <value>GitHub Repository</value>
+    <value>Repositorio de GitHub</value>
   </data>
   <data name="SendFeedback.Text" xml:space="preserve">
-    <value>Send Feedback</value>
+    <value>Enviar Comentarios</value>
   </data>
   <data name="HelpSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="AboutItem.Text" xml:space="preserve">
-    <value>About AutoSite</value>
+    <value>Acerca de AutoSite</value>
   </data>
   <data name="InspectorBtn.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -496,22 +496,13 @@
     <value>F12</value>
   </data>
   <data name="InspectorBtn.Text" xml:space="preserve">
-    <value>GUI Inspector</value>
+    <value>Inspector de GUI</value>
   </data>
   <data name="InspectorBtn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="HelpMenu.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="EnglishLang.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="SpanishLang.Text" xml:space="preserve">
-    <value>Español (experimental)</value>
-  </data>
-  <data name="LanguageMenu.Text" xml:space="preserve">
-    <value>🌐</value>
+    <value>&amp;Ayuda</value>
   </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>316, 17</value>
@@ -523,73 +514,73 @@
     <value>121, 17</value>
   </metadata>
   <data name="OpenContext.Text" xml:space="preserve">
-    <value>Open</value>
+    <value>Abrir</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Open in Default Program</value>
+    <value>Abrir en programa predeterminado</value>
   </data>
   <data name="ContextSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="CopyCon.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiar</value>
   </data>
   <data name="PasteCon.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Pegar</value>
   </data>
   <data name="AddFilesCon.Text" xml:space="preserve">
-    <value>Add Files...</value>
+    <value>Añadir archivos...</value>
   </data>
   <data name="ContextSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="DeleteCon.Text" xml:space="preserve">
-    <value>Delete</value>
+    <value>Eliminar</value>
   </data>
   <data name="RenameCon.Text" xml:space="preserve">
-    <value>Rename</value>
+    <value>Renombrar</value>
   </data>
   <data name="ContextSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
-    <value>Folder</value>
+    <value>Carpeta</value>
   </data>
   <data name="NewSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewHTMLCon.Text" xml:space="preserve">
-    <value>HTML Page (.html)</value>
+    <value>Página HTML (.html)</value>
   </data>
   <data name="NewMDCon.Text" xml:space="preserve">
-    <value>Markdown Page (.md)</value>
+    <value>Página Markdown (.md)</value>
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>PHP Script (.php)</value>
+    <value>Guión PHP (.php)</value>
   </data>
   <data name="NewSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>CSS Stylesheet (.css)</value>
+    <value>Hojas de estilo CSS (.css)</value>
   </data>
   <data name="NewJSCon.Text" xml:space="preserve">
-    <value>JS Script (.js)</value>
+    <value>Guión JS (.js)</value>
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
-    <value>Plain Text (.txt)</value>
+    <value>Texto simple (.txt)</value>
   </data>
   <data name="NewCon.Text" xml:space="preserve">
-    <value>New</value>
+    <value>Nuevo</value>
   </data>
   <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>603, 17</value>
   </metadata>
   <data name="AddFilesDialog.Filter" xml:space="preserve">
-    <value>All files (*.*)|*.*</value>
+    <value>Todos los archivos (*.*)|*.*</value>
   </data>
   <data name="AddFilesDialog.Title" xml:space="preserve">
-    <value>Add Files to Folder</value>
+    <value>Añadir archivos a la carpeta</value>
   </data>
   <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>736, 17</value>
@@ -727,7 +718,7 @@
     <value>0</value>
   </data>
   <data name="LogPage.Text" xml:space="preserve">
-    <value>Log</value>
+    <value>Logo</value>
   </data>
   <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
     <value>LogPage</value>
@@ -758,9 +749,9 @@
   </data>
   <data name="AttributeExplanation.Text" xml:space="preserve">
     <value>
-The Attribute Map allows you to view all of the Attributes used in your site. 
+El Mapa de Atributos le permite ver todos los atributos utilizados en su sitio. 
 
-Build your site to populate the Attribute Map.</value>
+Compila su sitio para poblar el Mapa de Atributos.</value>
   </data>
   <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -826,7 +817,7 @@ Build your site to populate the Attribute Map.</value>
     <value>1</value>
   </data>
   <data name="MapPage.Text" xml:space="preserve">
-    <value>Attribute Map</value>
+    <value>Mapa de atributos</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -910,10 +901,10 @@ Build your site to populate the Attribute Map.</value>
     <value>54, 22</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="Build.ToolTipText" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="SanitaryBuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -922,10 +913,10 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="SanitaryBuildBtn.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construcción sanitaria...</value>
   </data>
   <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construcción sanitaria...</value>
   </data>
   <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -934,7 +925,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="OpenOutput.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
+    <value>Abrir carpeta de salida</value>
   </data>
   <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -943,7 +934,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="BrowseSitePreview.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Navegar por el sitio en vista previa</value>
   </data>
   <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -952,7 +943,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Browse Site</value>
+    <value>Ver sitio</value>
   </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -964,7 +955,7 @@ Build your site to populate the Attribute Map.</value>
     <value>3</value>
   </data>
   <data name="BuildStrip.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Compilar</value>
   </data>
   <data name="&gt;&gt;BuildStrip.Name" xml:space="preserve">
     <value>BuildStrip</value>
@@ -1701,24 +1692,6 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;InspectorBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LanguageMenu.Name" xml:space="preserve">
-    <value>LanguageMenu</value>
-  </data>
-  <data name="&gt;&gt;LanguageMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EnglishLang.Name" xml:space="preserve">
-    <value>EnglishLang</value>
-  </data>
-  <data name="&gt;&gt;EnglishLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SpanishLang.Name" xml:space="preserve">
-    <value>SpanishLang</value>
-  </data>
-  <data name="&gt;&gt;SpanishLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;XP.Name" xml:space="preserve">
     <value>XP</value>
   </data>
@@ -1942,21 +1915,21 @@ Build your site to populate the Attribute Map.</value>
     <value>222, 56</value>
   </metadata>
   <data name="SaveLog.Text" xml:space="preserve">
-    <value>Save...</value>
+    <value>Guardar...</value>
   </data>
   <metadata name="SaveLogDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>325, 56</value>
   </metadata>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
-    <value>Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt</value>
+    <value>Texto rico (*.rtf)|*.rtf|Texto plano (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
-    <value>Save Log</value>
+    <value>Guardar Log</value>
   </data>
   <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>597, 56</value>
   </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
-    <value>AutoSite Zip package (*.zip)|*.zip</value>
+    <value>Paquete Zip AutoSite (*.zip)|*.zip</value>
   </data>
 </root>

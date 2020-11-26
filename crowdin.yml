@@ -1,3 +1,10 @@
-files:
-  - source: AutoSite/**.resx
-    translation: /AutoSite/%file_name%.%locale%.resx
+"files": [
+  {
+    "source": "/AutoSite/**.resx",
+    "translation": "/AutoSite/%file_name%.%locale%.resx"
+  },
+  {
+    "source": "/AutoSite/My Project/Resources.resx",
+    "translation": "/AutoSite/My Project/Resources.%locale%.resx"
+  },
+]

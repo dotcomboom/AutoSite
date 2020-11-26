@@ -496,7 +496,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Insert Conditional</value>
+    <value>Wstaw warunek</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddConditional</value>

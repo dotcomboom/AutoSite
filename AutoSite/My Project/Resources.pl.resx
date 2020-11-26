@@ -269,7 +269,7 @@
   </data>
   <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
     <value>&lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
+      echo "To będzie interpretowane przez serwer. Witaj świecie!";
 ?&gt;</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
@@ -326,19 +326,18 @@
     <value>Niektóre pliki zawierają niezapisane zmiany. Zapisać je?</value>
   </data>
   <data name="QuickInsert_Build" xml:space="preserve">
-    <value>Build for more options</value>
+    <value>Zbuduj, aby uzyskać więcej opcji</value>
   </data>
   <data name="QuickInsert_Build_Tip" xml:space="preserve">
     <value>Zbuduj</value>
   </data>
   <data name="QuickInsert_Build_TipText" xml:space="preserve">
-    <value>AutoSite can give you more suggestions when you build
-your site and populate the Attribute Map.</value>
+    <value>AutoSite może dać Ci więcej sugestii gdy budujesz swoją stronę i jak wypełniasz mapę atrybutów.</value>
   </data>
   <data name="QuickInsert_content_TipText" xml:space="preserve">
-    <value>Outputs the page's content.
+    <value>Wyjściowa zawartość strony. 
 
-Use once in templates.</value>
+Użyj jednokrotnie w szablonach.</value>
   </data>
   <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
     <value>Zdefiniuj {0}</value>
@@ -353,9 +352,9 @@ Use once in templates.</value>
     <value>Dodaje definicję atrybutu.</value>
   </data>
   <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
-    <value>Defines the template used by the current page.
+    <value>Definiuje szablon używany przez bieżącą stronę.
 
-Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
+Domyślnym jest {0}, który wskazuje AutoSite użycie {1} w folderze szablonów.</value>
   </data>
   <data name="QuickInsert_Generic_TipText" xml:space="preserve">
     <value>Outputs the page's value for the {0} attribute.</value>

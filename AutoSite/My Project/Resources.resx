@@ -405,12 +405,12 @@ pages.</value>
     <value />
   </data>
   <data name="Explorer_Includes" xml:space="preserve">
-    <value>Incluye</value>
+    <value>Includes</value>
   </data>
   <data name="Explorer_Pages" xml:space="preserve">
-    <value>Paginas</value>
+    <value>Pages</value>
   </data>
   <data name="Explorer_Templates" xml:space="preserve">
-    <value>Plantillas</value>
+    <value>Templates</value>
   </data>
 </root>

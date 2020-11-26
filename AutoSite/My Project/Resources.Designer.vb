@@ -333,7 +333,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Incluye.
+        '''  Looks up a localized string similar to Includes.
         '''</summary>
         Friend ReadOnly Property Explorer_Includes() As String
             Get
@@ -342,7 +342,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Paginas.
+        '''  Looks up a localized string similar to Pages.
         '''</summary>
         Friend ReadOnly Property Explorer_Pages() As String
             Get
@@ -351,7 +351,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Plantillas.
+        '''  Looks up a localized string similar to Templates.
         '''</summary>
         Friend ReadOnly Property Explorer_Templates() As String
             Get

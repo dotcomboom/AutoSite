@@ -145,7 +145,7 @@
     <value>5</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
-    <value>OK</value>
+    <value>Iawn</value>
   </data>
   <data name="&gt;&gt;OK_Button.Name" xml:space="preserve">
     <value>OK_Button</value>
@@ -178,7 +178,7 @@
     <value>6</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Canslo</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
     <value>Cancel_Button</value>
@@ -238,7 +238,7 @@
     <value>2</value>
   </data>
   <data name="AttLabel.Text" xml:space="preserve">
-    <value>Attribute to check:</value>
+    <value>Priodoledd i wirio:</value>
   </data>
   <data name="&gt;&gt;AttLabel.Name" xml:space="preserve">
     <value>AttLabel</value>
@@ -325,7 +325,7 @@
     <value>11</value>
   </data>
   <data name="PassLabel.Text" xml:space="preserve">
-    <value>If the attribute passes this condition, output:</value>
+    <value>Os yw'r priodoledd yn pasio'r amod hwn, allbwn:</value>
   </data>
   <data name="&gt;&gt;PassLabel.Name" xml:space="preserve">
     <value>PassLabel</value>
@@ -403,7 +403,7 @@
     <value>2</value>
   </data>
   <data name="NotChk.Text" xml:space="preserve">
-    <value>NOT</value>
+    <value>NID</value>
   </data>
   <data name="&gt;&gt;NotChk.Name" xml:space="preserve">
     <value>NotChk</value>
@@ -463,7 +463,7 @@
     <value>12</value>
   </data>
   <data name="Empty.Text" xml:space="preserve">
-    <value>Empty</value>
+    <value>Gwag</value>
   </data>
   <data name="&gt;&gt;Empty.Name" xml:space="preserve">
     <value>Empty</value>
@@ -496,7 +496,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Insert Conditional</value>
+    <value>Mewnosod Rhan Amodol</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddConditional</value>

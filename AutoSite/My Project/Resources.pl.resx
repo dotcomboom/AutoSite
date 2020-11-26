@@ -236,8 +236,8 @@
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New HTML Page --&gt;
+    <value>&lt;!-- attrib template: domyślny --&gt;
+&lt;!-- attrib title: Nowa strona HTML --&gt;
 </value>
   </data>
   <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
@@ -285,7 +285,7 @@
 {0}</value>
   </data>
   <data name="Error_BuildFailed_Title" xml:space="preserve">
-    <value>Build failed</value>
+    <value>Budowanie nie powiodło się</value>
   </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
     <value>Build the site first to view output.</value>
@@ -299,13 +299,13 @@
 {0}</value>
   </data>
   <data name="Error_LogSaveFail_Title" xml:space="preserve">
-    <value>Failed to save</value>
+    <value>Nie udało się zapisać</value>
   </data>
   <data name="Error_UpgradeFail" xml:space="preserve">
-    <value>AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again.</value>
+    <value>Autosite nie może zmienić nazwy folderu in\ na strony\. Zmień nazwę folderu manualnie i otwórz swoją stronę ponownie.</value>
   </data>
   <data name="Error_UpgradeFail_Title" xml:space="preserve">
-    <value>Unable to convert</value>
+    <value>Nie udało się przekonwertować</value>
   </data>
   <data name="Prompt_CreateSite" xml:space="preserve">
     <value>AutoSite will create a site in the folder located at {0}. Is this OK?</value>

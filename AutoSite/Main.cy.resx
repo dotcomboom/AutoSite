@@ -568,34 +568,34 @@
     <value>Tudalen HTML (.html)</value>
   </data>
   <data name="NewMDCon.Text" xml:space="preserve">
-    <value>Markdown Page (.md)</value>
+    <value>Tudalen Markdown (.md)</value>
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>PHP Script (.php)</value>
+    <value>Sgript PHP (.php)</value>
   </data>
   <data name="NewSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>CSS Stylesheet (.css)</value>
+    <value>Dalenarddull CSS (.css)</value>
   </data>
   <data name="NewJSCon.Text" xml:space="preserve">
-    <value>JS Script (.js)</value>
+    <value>Sgript JS (.js)</value>
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
-    <value>Plain Text (.txt)</value>
+    <value>Testun Plaen (.txt)</value>
   </data>
   <data name="NewCon.Text" xml:space="preserve">
-    <value>New</value>
+    <value>Newydd</value>
   </data>
   <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>603, 17</value>
   </metadata>
   <data name="AddFilesDialog.Filter" xml:space="preserve">
-    <value>All files (*.*)|*.*</value>
+    <value>Pob ffeil (*.*)|*.*</value>
   </data>
   <data name="AddFilesDialog.Title" xml:space="preserve">
-    <value>Add Files to Folder</value>
+    <value>Adiwch Ffeiliau i Ffolder</value>
   </data>
   <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>736, 17</value>
@@ -764,9 +764,9 @@
   </data>
   <data name="AttributeExplanation.Text" xml:space="preserve">
     <value>
-The Attribute Map allows you to view all of the Attributes used in your site. 
+Mae'r Map Priodoleddau yn caniatáu ichi weld yr holl Briodoleddau a ddefnyddir ar eich gwefan. 
 
-Build your site to populate the Attribute Map.</value>
+Adeiladu eich gwefan i boblogi'r Map Priodoledd.</value>
   </data>
   <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -832,7 +832,7 @@ Build your site to populate the Attribute Map.</value>
     <value>1</value>
   </data>
   <data name="MapPage.Text" xml:space="preserve">
-    <value>Attribute Map</value>
+    <value>Map Priodoleddau</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -916,10 +916,10 @@ Build your site to populate the Attribute Map.</value>
     <value>54, 22</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Adeiladu</value>
   </data>
   <data name="Build.ToolTipText" xml:space="preserve">
-    <value>Build</value>
+    <value>Adeiladu</value>
   </data>
   <data name="SanitaryBuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -958,7 +958,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Browse Site</value>
+    <value>Porwch Gwefan</value>
   </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -970,7 +970,7 @@ Build your site to populate the Attribute Map.</value>
     <value>3</value>
   </data>
   <data name="BuildStrip.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Adeiladu</value>
   </data>
   <data name="&gt;&gt;BuildStrip.Name" xml:space="preserve">
     <value>BuildStrip</value>
@@ -1966,15 +1966,15 @@ Build your site to populate the Attribute Map.</value>
     <value>325, 56</value>
   </metadata>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
-    <value>Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt</value>
+    <value>Testun Cyfoethog (*.rtf)|*.rtf|Testun Plaen (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
-    <value>Save Log</value>
+    <value>Arbed Log</value>
   </data>
   <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>597, 56</value>
   </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
-    <value>AutoSite Zip package (*.zip)|*.zip</value>
+    <value>Pecyn Zip AutoSite (*.zip)|*.zip</value>
   </data>
 </root>

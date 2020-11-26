@@ -155,7 +155,7 @@
     <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_content_Tip" xml:space="preserve">
-    <value>Contenido</value>
+    <value>Zawartość</value>
   </data>
   <data name="GotoRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GotoRow_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -215,29 +215,29 @@
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewCss" xml:space="preserve">
-    <value>nuevo-estilo</value>
+    <value>nowy-styl</value>
   </data>
   <data name="Defaults_NewFile" xml:space="preserve">
-    <value>nuevo-archivo</value>
+    <value>nowy-plik</value>
   </data>
   <data name="Defaults_NewHtml" xml:space="preserve">
-    <value>nueva-página</value>
+    <value>nowa-strona</value>
   </data>
   <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
-    &lt;title&gt;Nueva Página HTML&lt;/title&gt;
+    &lt;title&gt;Nowa strona HTML&lt;/title&gt;
     &lt;meta charset="utf-8"&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;Nueva Página HTML&lt;/h1&gt;
+    &lt;h1&gt;Nowa strona HTML&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: Nueva Página HTML --&gt;
+&lt;!-- attrib title: Nowa strona HTML --&gt;
 </value>
   </data>
   <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
@@ -254,166 +254,164 @@
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewJs" xml:space="preserve">
-    <value>nuevo-script</value>
+    <value>nowy-skrypt</value>
   </data>
   <data name="Defaults_NewMd" xml:space="preserve">
-    <value>nueva-página</value>
+    <value>nowa-strona</value>
   </data>
   <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: Nueva Página de Markdown --&gt;
+&lt;!-- attrib title: Nowa strona Markdown --&gt;
 </value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
-    <value>nueva-página</value>
+    <value>nowa-strona</value>
   </data>
   <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
     <value>&lt;?php
-      echo "Esto será interpretado por el servidor. Hola universo!";
+      echo "To będzie interpretowane przez serwer. Witaj świecie!";
 ?&gt;</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
-    <value>&lt;!-- plantilla attrib: default --&gt;
-&lt;! - attrib title: Nueva página PHP --&gt;
-&lt;? hp
-      echo "Esto será interpretado por el servidor. Hola universo!";
+    <value>&lt;!-- attrib template: default --&gt;
+&lt;!-- attrib title: Nowa Strona PHP --&gt;
+&lt;?php
+      echo "To będzie interpretowane przez serwer. Witaj świecie!";
 ?&gt;</value>
   </data>
   <data name="Error_BuildFailed" xml:space="preserve">
-    <value>Apricot devolvió esta excepción:
+    <value>Apricot zwócił ten wyjątek:
 
 {0}</value>
   </data>
   <data name="Error_BuildFailed_Title" xml:space="preserve">
-    <value>Error de compilación</value>
+    <value>Budowanie nie powiodło się</value>
   </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
-    <value>Construye el sitio primero para ver la salida.</value>
+    <value>Najpierw zbuduj stronę, aby wyświetlić dane wyjściowe.</value>
   </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>El archivo no se ha podido guardar.</value>
+    <value>Plik nie mógł zostać zapisany.</value>
   </data>
   <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Algo salió mal al intentar guardar el registro:
+    <value>Coś nie powiodło się podczas próby zapisania dziennika zdarzeń:
 
 {0}</value>
   </data>
   <data name="Error_LogSaveFail_Title" xml:space="preserve">
-    <value>Error al guardar</value>
+    <value>Nie udało się zapisać</value>
   </data>
   <data name="Error_UpgradeFail" xml:space="preserve">
-    <value>AutoSite no pudo renombrar la carpeta in\ a pages\. Por favor, renombra la carpeta manualmente y vuelva a abrir el sitio.</value>
+    <value>Autosite nie może zmienić nazwy folderu in\ na pages\. Zmień nazwę folderu manualnie i otwórz swoją stronę ponownie.</value>
   </data>
   <data name="Error_UpgradeFail_Title" xml:space="preserve">
-    <value>No se puede convertir</value>
+    <value>Nie udało się przekonwertować</value>
   </data>
   <data name="Prompt_CreateSite" xml:space="preserve">
-    <value>AutoSite creará un sitio en la carpeta que se encuentra en {0}. ¿Está bien?</value>
+    <value>AutoSite stworzy stronę w folderze znajdującym się w {0}. W porządku?</value>
   </data>
   <data name="Prompt_ProjectUpgrade" xml:space="preserve">
-    <value>AutoSite ahora utiliza la ruta de las pages\ para la carpeta de páginas. La compatibilidad con versiones anteriores de AutoSite se verá afectada por esta conversión.</value>
+    <value>AutoSite używa teraz ścieżki pages\ dla folderu Strony. Ta konwersja będzie miała wpływ na kompatybilność ze starszymi wersjami AutoSite.</value>
   </data>
   <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
-    <value>Actualizar Sitio</value>
+    <value>Zaktualizuj stronę</value>
   </data>
   <data name="Prompt_SanitaryBuild" xml:space="preserve">
-    <value>Una construcción sanitaria moverá la carpeta de salida a la papelera de reciclaje antes de construir, eliminando cualquier archivo perdido.</value>
+    <value>Czysta kompilacja przeniesie folder wyjściowy do kosza przed budową, usuwając wszystkie osierocone pliki.</value>
   </data>
   <data name="Prompt_SaveChangesToFile" xml:space="preserve">
-    <value>¿Guardar cambios en {0}?</value>
+    <value>Zapisać zmiany do {0}?</value>
   </data>
   <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
-    <value>Algunos archivos tienen cambios sin guardar. ¿Guardarlos?</value>
+    <value>Niektóre pliki zawierają niezapisane zmiany. Zapisać je?</value>
   </data>
   <data name="QuickInsert_Build" xml:space="preserve">
-    <value>Compilar para más opciones</value>
+    <value>Zbuduj, aby uzyskać więcej opcji</value>
   </data>
   <data name="QuickInsert_Build_Tip" xml:space="preserve">
-    <value>Compilar</value>
+    <value>Zbuduj</value>
   </data>
   <data name="QuickInsert_Build_TipText" xml:space="preserve">
-    <value>AutoSite puede darte más sugerencias cuando construyes
-tu sitio y rellenar el mapa de atributos.</value>
+    <value>AutoSite może dać Ci więcej sugestii gdy budujesz swoją stronę i jak wypełniasz mapę atrybutów.</value>
   </data>
   <data name="QuickInsert_content_TipText" xml:space="preserve">
-    <value>Sale el contenido de la página.
+    <value>Pokazuje wyjściową zawartość strony. 
 
-Úselo una vez en las plantillas.</value>
+Użyj jednokrotnie w szablonach.</value>
   </data>
   <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
-    <value>Definir {0}</value>
+    <value>Zdefiniuj {0}</value>
   </data>
   <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
-    <value>Define el atributo {0} para esta página.</value>
+    <value>Zdefiniuje atrybut {0} dla tej strony.</value>
   </data>
   <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
-    <value>Crear un nuevo atributo</value>
+    <value>Zdefiniuj nowy atrybut</value>
   </data>
   <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
-    <value>Añade una definición de atributo.</value>
+    <value>Dodaje definicję atrybutu.</value>
   </data>
   <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
-    <value>Define la plantilla utilizada por la página actual.
+    <value>Definiuje szablon używany przez bieżącą stronę.
 
-Por defecto es {0}, que le dice a AutoSite que use {1} en la carpeta de plantillas.</value>
+Domyślnym jest {0}, który wskazuje AutoSite użycie {1} w folderze szablonów.</value>
   </data>
   <data name="QuickInsert_Generic_TipText" xml:space="preserve">
-    <value>Sale el valor de la página para el atributo {0}.</value>
+    <value>Wyświetla wartość strony dla atrybutu {0}.</value>
   </data>
   <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
-    <value>Insertar condicional</value>
+    <value>Wstaw warunkową</value>
   </data>
   <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
-    <value>Abra el cuadro de diálogo condicional.
+    <value>Otwórz okno dialogowe Wstaw warunkowe.
 
-Los condicionales le permiten mostrar texto si un atributo tiene cierto valor.</value>
+Warunkowe pozwalają na wyświetlenie tekstu jeśli dany atrybut ma określoną wartość.</value>
   </data>
   <data name="QuickInsert_modified_Tip" xml:space="preserve">
-    <value>Fecha de última modificación</value>
+    <value>Data ostatniej modyfikacji</value>
   </data>
   <data name="QuickInsert_modified_TipText" xml:space="preserve">
-    <value>Sale la fecha en la que la página fue modificada por última vez.</value>
+    <value>Wyświetla datę ostatniej modyfikacji strony.</value>
   </data>
   <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Ruta</value>
+    <value>Ścieżka</value>
   </data>
   <data name="QuickInsert_path_TipText" xml:space="preserve">
-    <value>Sale la ruta relativa de la página desde la raíz.</value>
+    <value>Wyświetla względną ścieżkę strony od katalogu głównego.</value>
   </data>
   <data name="QuickInsert_root_Tip" xml:space="preserve">
-    <value>Ruta relativa a la raíz</value>
+    <value>Względna ścieżka do katalogu głównego</value>
   </data>
   <data name="QuickInsert_root_TipText" xml:space="preserve">
-    <value>Sale la ruta relativa de la página a la raíz del sitio.
+    <value>Wyświetla ścieżkę względną od strony do katalogu głównego strony.
 
-Utilice esto para comenzar rutas a hojas de estilo, imágenes y otras 
-páginas.</value>
+Użyj tego, aby rozpocząć ścieżki do arkuszy stylów, obrazów i innych stron.</value>
   </data>
   <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Ejemplo: {0}</value>
+    <value>Przykład: {0}</value>
   </data>
   <data name="QuickInsert__Output" xml:space="preserve">
-    <value>Salida: {0}</value>
+    <value>Wyjście: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Añadir archivos a {0}</value>
+    <value>Dodaj pliki do {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
-    <value>Página de inicio</value>
+    <value>Strona startowa</value>
   </data>
   <data name="__" xml:space="preserve">
     <value></value>
   </data>
   <data name="Explorer_Includes" xml:space="preserve">
-    <value>Incluye</value>
+    <value>Zawartość</value>
   </data>
   <data name="Explorer_Pages" xml:space="preserve">
-    <value>Páginas</value>
+    <value>Strony</value>
   </data>
   <data name="Explorer_Templates" xml:space="preserve">
-    <value>Plantillas</value>
+    <value>Szablony</value>
   </data>
   <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Los cambios se aplicarán después de reiniciar.</value>
+    <value>Zmiany zostaną zastosowane po ponownym uruchomieniu.</value>
   </data>
 </root>

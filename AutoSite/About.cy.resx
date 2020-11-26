@@ -707,7 +707,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Amdan Autosite</value>
+    <value>Amdan AutoSite</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>About</value>

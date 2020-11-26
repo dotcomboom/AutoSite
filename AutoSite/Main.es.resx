@@ -502,7 +502,16 @@
     <value>False</value>
   </data>
   <data name="HelpMenu.Text" xml:space="preserve">
-    <value>&amp;Ayuda</value>
+    <value>Help</value>
+  </data>
+  <data name="EnglishLang.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="SpanishLang.Text" xml:space="preserve">
+    <value>Español (experimental)</value>
+  </data>
+  <data name="LanguageMenu.Text" xml:space="preserve">
+    <value>🌐</value>
   </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>316, 17</value>
@@ -1690,6 +1699,24 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>InspectorBtn</value>
   </data>
   <data name="&gt;&gt;InspectorBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageMenu.Name" xml:space="preserve">
+    <value>LanguageMenu</value>
+  </data>
+  <data name="&gt;&gt;LanguageMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnglishLang.Name" xml:space="preserve">
+    <value>EnglishLang</value>
+  </data>
+  <data name="&gt;&gt;EnglishLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SpanishLang.Name" xml:space="preserve">
+    <value>SpanishLang</value>
+  </data>
+  <data name="&gt;&gt;SpanishLang.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;XP.Name" xml:space="preserve">

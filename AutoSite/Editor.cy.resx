@@ -288,13 +288,13 @@
     <value>92, 24</value>
   </data>
   <data name="Preview.Text" xml:space="preserve">
-    <value>Preview</value>
+    <value>Rhagolowg</value>
   </data>
   <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 24</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
+    <value>Rhagolwg Byw</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>
@@ -315,7 +315,7 @@
     <value>123, 24</value>
   </data>
   <data name="ViewOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Gweld Allbwn</value>
   </data>
   <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 24</value>

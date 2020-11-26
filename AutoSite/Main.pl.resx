@@ -340,13 +340,13 @@
     <value>False</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
+    <value>Podgląd na żywo</value>
   </data>
   <data name="FormatSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
-    <value>Monospace Font...</value>
+    <value>Czcionka o stałej szerokości...</value>
   </data>
   <data name="FormatMenu.Text" xml:space="preserve">
     <value>F&amp;ormat</value>
@@ -355,7 +355,7 @@
     <value>Alt1</value>
   </data>
   <data name="ExplorerPanel.Text" xml:space="preserve">
-    <value>Explorer</value>
+    <value>Eksplorator</value>
   </data>
   <data name="BuildPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt2</value>
@@ -385,7 +385,7 @@
     <value>XP</value>
   </data>
   <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Explorer Icon Theme</value>
+    <value>Motyw ikon eksploratora</value>
   </data>
   <data name="cDefault.Text" xml:space="preserve">
     <value>Domyślny</value>
@@ -406,7 +406,7 @@
     <value>CtrlR</value>
   </data>
   <data name="RefreshItem.Text" xml:space="preserve">
-    <value>Refresh Explorer</value>
+    <value>Odśwież eksplorator</value>
   </data>
   <data name="ViewSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -430,7 +430,7 @@
     <value>CtrlShiftP</value>
   </data>
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Przeglądaj stronę w podglądzie</value>
   </data>
   <data name="ViewMenu.Text" xml:space="preserve">
     <value>&amp;Widok</value>
@@ -478,7 +478,7 @@
     <value>Strona internetowa</value>
   </data>
   <data name="GitHub.Text" xml:space="preserve">
-    <value>GitHub Repository</value>
+    <value>Repozytorium GitHub</value>
   </data>
   <data name="SendFeedback.Text" xml:space="preserve">
     <value>Prześlij opinię</value>
@@ -559,22 +559,22 @@
     <value>-</value>
   </data>
   <data name="NewHTMLCon.Text" xml:space="preserve">
-    <value>HTML Page (.html)</value>
+    <value>Strona HTML (.html)</value>
   </data>
   <data name="NewMDCon.Text" xml:space="preserve">
     <value>Markdown Page (.md)</value>
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>PHP Script (.php)</value>
+    <value>Skrypt PHP (.php)</value>
   </data>
   <data name="NewSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>CSS Stylesheet (.css)</value>
+    <value>Arkusz stylów CSS (.css)</value>
   </data>
   <data name="NewJSCon.Text" xml:space="preserve">
-    <value>JS Script (.js)</value>
+    <value>Skrypt JS (.js)</value>
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
     <value>Plain Text (.txt)</value>
@@ -586,7 +586,7 @@
     <value>603, 17</value>
   </metadata>
   <data name="AddFilesDialog.Filter" xml:space="preserve">
-    <value>All files (*.*)|*.*</value>
+    <value>Wszystkie pliki (*.*)|*.*</value>
   </data>
   <data name="AddFilesDialog.Title" xml:space="preserve">
     <value>Dodaj pliki do folderu</value>
@@ -943,7 +943,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="BrowseSitePreview.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Przeglądaj stronę w podglądzie</value>
   </data>
   <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -952,7 +952,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Browse Site</value>
+    <value>Przeglądaj stronę</value>
   </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1948,7 +1948,7 @@ Build your site to populate the Attribute Map.</value>
     <value>325, 56</value>
   </metadata>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
-    <value>Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt</value>
+    <value>Dokument sformatowany (*rtf)|*.rtf|Dokument tekstowy (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
     <value>Save Log</value>

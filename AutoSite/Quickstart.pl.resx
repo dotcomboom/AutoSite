@@ -670,7 +670,7 @@
     <value>19</value>
   </data>
   <data name="Label9.Text" xml:space="preserve">
-    <value>AutoSite has two options for building your site. Sanitary Build cleans your output folder of any old files and is recommended before publishing.</value>
+    <value>AutoSite ma dwie opcje budowania twojej strony. Czysta kompilacja usuwa stare pliki w folderze i jest zalecana przed publikacją.</value>
   </data>
   <data name="&gt;&gt;Label9.Name" xml:space="preserve">
     <value>Label9</value>
@@ -793,7 +793,7 @@
     <value>22</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Czysta kompilacja...</value>
   </data>
   <data name="&gt;&gt;SanitaryBuild.Name" xml:space="preserve">
     <value>SanitaryBuild</value>

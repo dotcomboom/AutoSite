@@ -310,7 +310,7 @@
     <value>CtrlJ</value>
   </data>
   <data name="QuickInsertMnu.Text" xml:space="preserve">
-    <value>Quick Insert</value>
+    <value>Szybkie wstawianie</value>
   </data>
   <data name="InsertConditional.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftI</value>

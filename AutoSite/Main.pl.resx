@@ -562,7 +562,7 @@
     <value>Strona HTML (.html)</value>
   </data>
   <data name="NewMDCon.Text" xml:space="preserve">
-    <value>Plik Markdown (.md)</value>
+    <value>Strona Markdown (.md)</value>
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
     <value>Skrypt PHP (.php)</value>

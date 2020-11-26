@@ -413,7 +413,4 @@ páginas.</value>
   <data name="Explorer_Templates" xml:space="preserve">
     <value>Plantillas</value>
   </data>
-  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Los cambios se aplicarán después de reiniciar.</value>
-  </data>
 </root>

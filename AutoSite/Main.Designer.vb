@@ -111,8 +111,6 @@ Partial Class Main
         Me.LanguageMenu = New System.Windows.Forms.MenuItem()
         Me.EnglishLang = New System.Windows.Forms.MenuItem()
         Me.SpanishLang = New System.Windows.Forms.MenuItem()
-        Me.PolishLang = New System.Windows.Forms.MenuItem()
-        Me.WelshLang = New System.Windows.Forms.MenuItem()
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu()
         Me.OpenContext = New System.Windows.Forms.MenuItem()
@@ -619,32 +617,18 @@ Partial Class Main
         'LanguageMenu
         '
         Me.LanguageMenu.Index = 6
-        Me.LanguageMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnglishLang, Me.SpanishLang, Me.PolishLang, Me.WelshLang})
+        Me.LanguageMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnglishLang, Me.SpanishLang})
         resources.ApplyResources(Me.LanguageMenu, "LanguageMenu")
         '
         'EnglishLang
         '
         Me.EnglishLang.Index = 0
-        Me.EnglishLang.Tag = "en-US"
         resources.ApplyResources(Me.EnglishLang, "EnglishLang")
         '
         'SpanishLang
         '
         Me.SpanishLang.Index = 1
-        Me.SpanishLang.Tag = "es-ES"
         resources.ApplyResources(Me.SpanishLang, "SpanishLang")
-        '
-        'PolishLang
-        '
-        Me.PolishLang.Index = 2
-        Me.PolishLang.Tag = "pl-PL"
-        resources.ApplyResources(Me.PolishLang, "PolishLang")
-        '
-        'WelshLang
-        '
-        Me.WelshLang.Index = 3
-        Me.WelshLang.Tag = "cy-GB"
-        resources.ApplyResources(Me.WelshLang, "WelshLang")
         '
         'XP
         '
@@ -1119,6 +1103,4 @@ Partial Class Main
     Friend WithEvents LanguageMenu As System.Windows.Forms.MenuItem
     Friend WithEvents EnglishLang As System.Windows.Forms.MenuItem
     Friend WithEvents SpanishLang As System.Windows.Forms.MenuItem
-    Friend WithEvents PolishLang As System.Windows.Forms.MenuItem
-    Friend WithEvents WelshLang As System.Windows.Forms.MenuItem
 End Class

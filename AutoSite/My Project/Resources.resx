@@ -416,7 +416,4 @@ pages.</value>
   <data name="Prompt_ChangesOnRestart" xml:space="preserve">
     <value>Changes will be applied on restart.</value>
   </data>
-  <data name="UI_Editor_ViewFile" xml:space="preserve">
-    <value>View</value>
-  </data>
 </root>

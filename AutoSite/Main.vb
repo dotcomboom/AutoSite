@@ -303,11 +303,11 @@ Public Class Main
             editor.openFile = tab.Tag
             If tab.Text.StartsWith("templates\") Then
                 editor.ViewOutput.Visible = False
-                editor.Preview.Text = My.Resources.UI_Editor_ViewFile
+                editor.Preview.Text = "Debug"
             End If
             If tab.Text.StartsWith("includes\") Then
                 editor.InsertConditional.Enabled = False
-                editor.Preview.Text = My.Resources.UI_Editor_ViewFile
+                editor.Preview.Text = "View"
             End If
             openFiles.Add(path)
         End If
@@ -1794,8 +1794,13 @@ Public Class Main
         setTheme(Color.White, SystemColors.ControlText, SystemColors.Control)
     End Sub
 
-    Private Sub ChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles EnglishLang.Click, SpanishLang.Click, PolishLang.Click, WelshLang.Click
-        My.Settings.language = sender.Tag
+    Private Sub EnglishLang_Click(sender As System.Object, e As System.EventArgs) Handles EnglishLang.Click
+        My.Settings.language = "EN-us"
         MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information)
+
+    End Sub
+    Private Sub SpanishLang_Click(sender As System.Object, e As System.EventArgs) Handles SpanishLang.Click
+        MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information)
+        My.Settings.language = "ES-es"
     End Sub
 End Class

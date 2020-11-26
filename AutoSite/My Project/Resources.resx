@@ -214,14 +214,116 @@
   <data name="XP_Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Defaults_NewCss" xml:space="preserve">
+    <value>new-style</value>
+  </data>
+  <data name="Defaults_NewFile" xml:space="preserve">
+    <value>new-file</value>
+  </data>
+  <data name="Defaults_NewHtml" xml:space="preserve">
+    <value>new-page</value>
+  </data>
+  <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;New HTML Page&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;New HTML Page&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
+    <value>&lt;!-- attrib template: default --&gt;
+&lt;!-- attrib title: New HTML Page --&gt;
+</value>
+  </data>
+  <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;[#title#]&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;[#title#]&lt;/h1&gt;
+    [#content#]
+  &lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="Defaults_NewJs" xml:space="preserve">
+    <value>new-script</value>
+  </data>
+  <data name="Defaults_NewMd" xml:space="preserve">
+    <value>new-page</value>
+  </data>
+  <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
+    <value>&lt;!-- attrib template: default --&gt;
+&lt;!-- attrib title: New Markdown Page --&gt;
+</value>
+  </data>
+  <data name="Defaults_NewPhp" xml:space="preserve">
+    <value>new-page</value>
+  </data>
+  <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
+    <value>&lt;?php
+      echo "This will be interpreted by the server. Hello universe!";
+?&gt;</value>
+  </data>
+  <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
+    <value>&lt;!-- attrib template: default --&gt;
+&lt;!-- attrib title: New PHP Page --&gt;
+&lt;?php
+      echo "This will be interpreted by the server. Hello universe!";
+?&gt;</value>
+  </data>
+  <data name="Error_BuildFailed" xml:space="preserve">
+    <value>Apricot returned this exception:
+
+{0}</value>
+  </data>
+  <data name="Error_BuildFailed_Title" xml:space="preserve">
+    <value>Build failed</value>
+  </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
     <value>Build the site first to view output.</value>
   </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
     <value>The file could not be saved.</value>
   </data>
+  <data name="Error_LogSaveFail" xml:space="preserve">
+    <value>Something went wrong when trying to save the log:
+
+{0}</value>
+  </data>
+  <data name="Error_LogSaveFail_Title" xml:space="preserve">
+    <value>Failed to save</value>
+  </data>
+  <data name="Error_UpgradeFail" xml:space="preserve">
+    <value>AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again.</value>
+  </data>
+  <data name="Error_UpgradeFail_Title" xml:space="preserve">
+    <value>Unable to convert</value>
+  </data>
+  <data name="Prompt_CreateSite" xml:space="preserve">
+    <value>AutoSite will create a site in the folder located at {0}. Is this OK?</value>
+  </data>
+  <data name="Prompt_ProjectUpgrade" xml:space="preserve">
+    <value>AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.</value>
+  </data>
+  <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
+    <value>Update Site</value>
+  </data>
+  <data name="Prompt_SanitaryBuild" xml:space="preserve">
+    <value>A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.</value>
+  </data>
   <data name="Prompt_SaveChangesToFile" xml:space="preserve">
     <value>Save changes to {0}?</value>
+  </data>
+  <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
+    <value>Some files have unsaved changes. Save them?</value>
   </data>
   <data name="QuickInsert_Build" xml:space="preserve">
     <value>Build for more options</value>
@@ -292,6 +394,12 @@ pages.</value>
   </data>
   <data name="QuickInsert__Output" xml:space="preserve">
     <value>Output: {0}</value>
+  </data>
+  <data name="UI_AddFilesDialog_Title" xml:space="preserve">
+    <value>Add Files to {0}</value>
+  </data>
+  <data name="UI_StartPage_Title" xml:space="preserve">
+    <value>Start Page</value>
   </data>
   <data name="__" xml:space="preserve">
     <value />

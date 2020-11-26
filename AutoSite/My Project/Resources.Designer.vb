@@ -120,6 +120,163 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to new-style.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewCss() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewCss", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to new-file.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewFile() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to new-page.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewHtml() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewHtml", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        '''&lt;html lang=&quot;en&quot;&gt;
+        '''  &lt;head&gt;
+        '''    &lt;title&gt;New HTML Page&lt;/title&gt;
+        '''    &lt;meta charset=&quot;utf-8&quot;&gt;
+        '''  &lt;/head&gt;
+        '''  &lt;body&gt;
+        '''    &lt;h1&gt;New HTML Page&lt;/h1&gt;
+        '''  &lt;/body&gt;
+        '''&lt;/html&gt;.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewHtmlInclude_Contents() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewHtmlInclude_Contents", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;!-- attrib template: default --&gt;
+        '''&lt;!-- attrib title: New HTML Page --&gt;
+        '''.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewHtmlPage_Contents() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewHtmlPage_Contents", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        '''&lt;html lang=&quot;en&quot;&gt;
+        '''  &lt;head&gt;
+        '''    &lt;title&gt;[#title#]&lt;/title&gt;
+        '''    &lt;meta charset=&quot;utf-8&quot;&gt;
+        '''  &lt;/head&gt;
+        '''  &lt;body&gt;
+        '''    &lt;h1&gt;[#title#]&lt;/h1&gt;
+        '''    [#content#]
+        '''  &lt;/body&gt;
+        '''&lt;/html&gt;.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewHtmlTemplate_Contents() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewHtmlTemplate_Contents", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to new-script.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewJs() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewJs", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to new-page.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewMd() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewMd", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;!-- attrib template: default --&gt;
+        '''&lt;!-- attrib title: New Markdown Page --&gt;
+        '''.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewMdPage_Contents() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewMdPage_Contents", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to new-page.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewPhp() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewPhp", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;?php
+        '''      echo &quot;This will be interpreted by the server. Hello universe!&quot;;
+        '''?&gt;.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewPhpOther_Contents() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewPhpOther_Contents", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;!-- attrib template: default --&gt;
+        '''&lt;!-- attrib title: New PHP Page --&gt;
+        '''&lt;?php
+        '''      echo &quot;This will be interpreted by the server. Hello universe!&quot;;
+        '''?&gt;.
+        '''</summary>
+        Friend ReadOnly Property Defaults_NewPhpPage_Contents() As String
+            Get
+                Return ResourceManager.GetString("Defaults_NewPhpPage_Contents", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Apricot returned this exception:
+        '''
+        '''{0}.
+        '''</summary>
+        Friend ReadOnly Property Error_BuildFailed() As String
+            Get
+                Return ResourceManager.GetString("Error_BuildFailed", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Build failed.
+        '''</summary>
+        Friend ReadOnly Property Error_BuildFailed_Title() As String
+            Get
+                Return ResourceManager.GetString("Error_BuildFailed_Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Build the site first to view output..
         '''</summary>
         Friend ReadOnly Property Error_BuildToViewOutput() As String
@@ -134,6 +291,44 @@ Namespace My.Resources
         Friend ReadOnly Property Error_CouldNotSaveFile() As String
             Get
                 Return ResourceManager.GetString("Error_CouldNotSaveFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Something went wrong when trying to save the log:
+        '''
+        '''{0}.
+        '''</summary>
+        Friend ReadOnly Property Error_LogSaveFail() As String
+            Get
+                Return ResourceManager.GetString("Error_LogSaveFail", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Failed to save.
+        '''</summary>
+        Friend ReadOnly Property Error_LogSaveFail_Title() As String
+            Get
+                Return ResourceManager.GetString("Error_LogSaveFail_Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again..
+        '''</summary>
+        Friend ReadOnly Property Error_UpgradeFail() As String
+            Get
+                Return ResourceManager.GetString("Error_UpgradeFail", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Unable to convert.
+        '''</summary>
+        Friend ReadOnly Property Error_UpgradeFail_Title() As String
+            Get
+                Return ResourceManager.GetString("Error_UpgradeFail_Title", resourceCulture)
             End Get
         End Property
         
@@ -238,11 +433,56 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to AutoSite will create a site in the folder located at {0}. Is this OK?.
+        '''</summary>
+        Friend ReadOnly Property Prompt_CreateSite() As String
+            Get
+                Return ResourceManager.GetString("Prompt_CreateSite", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion..
+        '''</summary>
+        Friend ReadOnly Property Prompt_ProjectUpgrade() As String
+            Get
+                Return ResourceManager.GetString("Prompt_ProjectUpgrade", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Update Site.
+        '''</summary>
+        Friend ReadOnly Property Prompt_ProjectUpgrade_Title() As String
+            Get
+                Return ResourceManager.GetString("Prompt_ProjectUpgrade_Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files..
+        '''</summary>
+        Friend ReadOnly Property Prompt_SanitaryBuild() As String
+            Get
+                Return ResourceManager.GetString("Prompt_SanitaryBuild", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Save changes to {0}?.
         '''</summary>
         Friend ReadOnly Property Prompt_SaveChangesToFile() As String
             Get
                 Return ResourceManager.GetString("Prompt_SaveChangesToFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Some files have unsaved changes. Save them?.
+        '''</summary>
+        Friend ReadOnly Property Prompt_SaveFilesBeforeClosing() As String
+            Get
+                Return ResourceManager.GetString("Prompt_SaveFilesBeforeClosing", resourceCulture)
             End Get
         End Property
         
@@ -522,6 +762,24 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("Template", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Add Files to {0}.
+        '''</summary>
+        Friend ReadOnly Property UI_AddFilesDialog_Title() As String
+            Get
+                Return ResourceManager.GetString("UI_AddFilesDialog_Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Start Page.
+        '''</summary>
+        Friend ReadOnly Property UI_StartPage_Title() As String
+            Get
+                Return ResourceManager.GetString("UI_StartPage_Title", resourceCulture)
             End Get
         End Property
         

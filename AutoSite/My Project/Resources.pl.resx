@@ -363,9 +363,9 @@ Domyślnym jest {0}, który wskazuje AutoSite użycie {1} w folderze szablonów.
     <value>Wstaw warunkową</value>
   </data>
   <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
-    <value>Open the Insert Conditional dialog.
+    <value>Otwórz okno dialogowe Wstaw warunkowe.
 
-Conditionals allow you to output text if an attribute has a certain value.</value>
+Warunkowe pozwalają na wyświetlenie tekstu jeśli dany atrybut ma określoną wartość.</value>
   </data>
   <data name="QuickInsert_modified_Tip" xml:space="preserve">
     <value>Data ostatniej modyfikacji</value>

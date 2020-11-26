@@ -47,9 +47,9 @@
     End Sub
 
     
-    Sub StartPagePaint(sender As Object, e As PaintEventArgs)
-    	Dim s = RWarn.Size
+    Sub StartPagePaint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
+        Dim s = RWarn.Size
         s.Width = Me.Width - RWarn.Location.X - 16
-    	RWarn.Size = s
+        RWarn.Size = s
     End Sub
 End Class

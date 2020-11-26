@@ -2,6 +2,7 @@ Imports System.Text.RegularExpressions
 Imports System.IO
 Imports System.Text
 Imports Microsoft.Win32
+Imports System.Globalization
 
 Public Class Main
 
@@ -10,6 +11,19 @@ Public Class Main
     Public editExtensions() As String = Apricot.knownExtensions
     Public encodingType As Encoding = New UTF8Encoding(False)
     Public args As String() = Environment.GetCommandLineArgs()
+
+    Public Sub New()
+
+        If My.Settings.language.Length > 0 Then
+            System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(My.Settings.language)
+        End If
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
 
     ' https://stackoverflow.com/a/8182507
     Sub walkTree(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal parentNode As TreeNode, ByVal key As String, ByVal incRoot As Boolean)
@@ -1780,4 +1794,13 @@ Public Class Main
         setTheme(Color.White, SystemColors.ControlText, SystemColors.Control)
     End Sub
 
+    Private Sub MenuItem3_Click(sender As System.Object, e As System.EventArgs) Handles MenuItem3.Click
+        My.Settings.language = ""
+        MsgBox("Changes will be applied on restart.", MsgBoxStyle.Information)
+    End Sub
+
+    Private Sub MenuItem4_Click(sender As System.Object, e As System.EventArgs) Handles MenuItem4.Click
+        My.Settings.language = "ES-es"
+        MsgBox("Changes will be applied on restart.", MsgBoxStyle.Information)
+    End Sub
 End Class

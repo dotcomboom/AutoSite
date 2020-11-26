@@ -60,5 +60,8 @@
     <Setting Name="edSplitterDistance" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">214</Value>
     </Setting>
+    <Setting Name="language" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

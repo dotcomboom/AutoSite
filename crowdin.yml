@@ -1,7 +1,10 @@
 "files": [
   {
     "source": "/AutoSite/**.resx",
-    "translation": "/AutoSite/%file_name%.%two_letters_code%.resx"
+    "translation": "/AutoSite/%file_name%.%two_letters_code%.resx",
+    "ignore": [
+      "/AutoSite/%file_name%.%two_letters_code%.resx", #ignore the translated files
+    ]
   },
   {
     "source": "/AutoSite/My Project/Resources.resx",

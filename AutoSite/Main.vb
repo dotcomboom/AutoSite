@@ -1797,10 +1797,10 @@ Public Class Main
     Private Sub EnglishLang_Click(sender As System.Object, e As System.EventArgs) Handles EnglishLang.Click
         My.Settings.language = "EN-us"
         MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information)
-    End Sub
 
+    End Sub
     Private Sub SpanishLang_Click(sender As System.Object, e As System.EventArgs) Handles SpanishLang.Click
-        My.Settings.language = "ES-es"
         MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information)
+        My.Settings.language = "ES-es"
     End Sub
 End Class

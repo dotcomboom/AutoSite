@@ -135,7 +135,7 @@
     <value>0</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>Start</value>
+    <value>Dechrau</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
@@ -238,7 +238,7 @@
     <value>9</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Open recent</value>
+    <value>Agor diweddar</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -625,7 +625,7 @@
     <value>14</value>
   </data>
   <data name="RWarn.Text" xml:space="preserve">
-    <value>Sites you work on will show up here for quick access.</value>
+    <value>Bydd gwefanau rydych yn gweithio arnyn i'w gweld yma am mynediad cyflym.</value>
   </data>
   <data name="RWarn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>

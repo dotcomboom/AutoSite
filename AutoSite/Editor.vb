@@ -31,7 +31,7 @@ Public Class Editor
                 unlocker.Close()
                 Code.SaveToFile(path, Main.encodingType)
             Catch ex As Exception
-                MsgBox("The file could not be saved.", MsgBoxStyle.Critical)
+                MsgBox(My.Resources.Error_CouldNotSaveFile, MsgBoxStyle.Critical)
             End Try
         End Try
     End Sub
@@ -112,7 +112,7 @@ Public Class Editor
 
     Public Sub Close() Handles CloseBtn.Click
         If Not Code.Text = Snapshot Then
-            Dim d As DialogResult = MsgBox("Save changes to " & openFile.Replace(siteRoot & "\", "") & "?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
+            Dim d As DialogResult = MsgBox(String.Format(My.Resources.Prompt_SaveChangesToFile, openFile.Replace(siteRoot & "\", "")), MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
             If d = DialogResult.Yes Then
                 Save()
             End If
@@ -226,7 +226,7 @@ Public Class Editor
         Try
             Process.Start(siteRoot & "\out\" & rel)
         Catch ex As Exception
-            MsgBox("Build the site first to view output.", MsgBoxStyle.Exclamation)
+            MsgBox(My.Resources.Error_BuildToViewOutput, MsgBoxStyle.Exclamation)
         End Try
     End Sub
 
@@ -274,45 +274,43 @@ Public Class Editor
         If (Not Me.Parent.Text.StartsWith("includes\")) And Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
             ' Internal
             If Me.Parent.Text.StartsWith("templates\") And Not Code.Text.Contains("[#content#]") Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#content#]", 2, "content", "Content", "Outputs the page's content." & Environment.NewLine & Environment.NewLine & "Use once in templates."))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem("[#content#]", 2, "content", My.Resources.QuickInsert_content_Tip, My.Resources.QuickInsert_content_TipText))
             End If
-            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "root", "Relative path to root", "Outputs the relative path from the page to the site root." & Environment.NewLine & "Use this to begin paths to stylesheets, images, and other" & Environment.NewLine & "pages." & Environment.NewLine & Environment.NewLine & rootCalc()))
-            'items.Add(New AutocompleteMenuNS.AutocompleteItem("[#template#]", 2, "[#template#]", "Reference template", "Outputs the page's used template." & Environment.NewLine & Environment.NewLine & "Example: default"))
-            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "modified", "Last modified date", "Outputs the date the page was last modified on." & Environment.NewLine & Environment.NewLine & "Example: " & Date.Now.ToString.Split(" ")(0)))
-            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "path", "Path", "Outputs the page's relative path from root." & Environment.NewLine & Environment.NewLine & pathCalc()))
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "root", My.Resources.QuickInsert_root_Tip, My.Resources.QuickInsert_root_TipText & Environment.NewLine & Environment.NewLine & rootCalc()))
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#modified#]", 2, "modified", My.Resources.QuickInsert_modified_Tip, My.Resources.QuickInsert_modified_TipText & Environment.NewLine & Environment.NewLine & String.Format(My.Resources.QuickInsert__Example, Date.Now.ToString.Split(" ")(0))))
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "path", My.Resources.QuickInsert_path_Tip, My.Resources.QuickInsert_path_TipText & Environment.NewLine & Environment.NewLine & pathCalc()))
             For Each Attribute As TreeNode In Main.AttributeTree.Nodes
                 If Not internal.Contains(Attribute.Text) Then
                     If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or Me.Parent.Text.StartsWith("templates\") Then
-                        items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, Attribute.Text, Attribute.Text, "Outputs the page's value for the " & Attribute.Text & " attribute."))
+                        items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, Attribute.Text, Attribute.Text, String.Format(My.Resources.QuickInsert_Generic_TipText, Attribute.Text)))
                     End If
                 End If
-                'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
             Next
         End If
 
         ' Internal define option
         If Me.Parent.Text.StartsWith("pages\") Then
             If Not Code.Text.Contains("<!-- attrib template:") Then
-                items.Insert(0, New AutocompleteMenuNS.AutocompleteItem("<!-- attrib template: default -->", 1, "Define template", "Define template", "Defines the template used by the current page." & Environment.NewLine & Environment.NewLine & "Default is default, which tells AutoSite to use default.html in the templates folder."))
+                items.Insert(0, New AutocompleteMenuNS.AutocompleteItem("<!-- attrib template: default -->", 1, String.Format(My.Resources.QuickInsert_DefineGeneric_Tip, "template"), String.Format(My.Resources.QuickInsert_DefineGeneric_Tip, "template"), String.Format(My.Resources.QuickInsert_DefineTemplate_TipText, "default", "default.html")))
             End If
 
             For Each Attribute As TreeNode In Main.AttributeTree.Nodes
                 If Not internal.Contains(Attribute.Text) Then
                     If Not Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Then
-                        items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib " & Attribute.Text & ": ... -->", 1, "Define " & Attribute.Text, "Define " & Attribute.Text, "Defines the " & Attribute.Text & " attribute for this page." & Environment.NewLine & Environment.NewLine & "Example: <!-- attrib " & Attribute.Text & ": ... -->"))
+                        items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib " & Attribute.Text & ": ... -->", 1, String.Format(My.Resources.QuickInsert_DefineGeneric_Tip, Attribute.Text), String.Format(My.Resources.QuickInsert_DefineGeneric_Tip, Attribute.Text), String.Format(My.Resources.QuickInsert_DefineGeneric_TipText, Attribute.Text) & Environment.NewLine & Environment.NewLine & String.Format(My.Resources.QuickInsert_DefineGeneric_TipText, "<!-- attrib " & Attribute.Text & ": ... -->")))
                     End If
                 End If
                 'items.Add(New AutocompleteMenuNS.AutocompleteItem(Attribute.Text))
             Next
 
-            items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib ...: ... -->", 5, "Define a new attribute", "Define a new attribute", "Adds an attribute definition." & Environment.NewLine & Environment.NewLine & "Example: <!-- attrib ...: ... -->"))
+            items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib ...: ... -->", 5, My.Resources.QuickInsert_DefineNew_Tip, My.Resources.QuickInsert_DefineNew_Tip, My.Resources.QuickInsert_DefineNew_TipText & Environment.NewLine & Environment.NewLine & String.Format(My.Resources.QuickInsert__Example, "<!-- attrib ...: ... -->")))
         End If
 
         If Not Me.Parent.Text.StartsWith("includes\") Then
             If Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
-                items.Add(New AutocompleteMenuNS.AutocompleteItem("Insert conditional...", 4, "Insert conditional", "Insert conditional", "Open the Insert Conditional dialog." & Environment.NewLine & "Conditionals allow you to output text if an attribute has a certain value."))
+                items.Add(New AutocompleteMenuNS.AutocompleteItem(My.Resources.QuickInsert_InsertConditional_Tip, 4, My.Resources.QuickInsert_InsertConditional_Tip, My.Resources.QuickInsert_InsertConditional_Tip, My.Resources.QuickInsert_InsertConditional_TipText))
             End If
-            items.Add(New AutocompleteMenuNS.AutocompleteItem("Build", 3, "Build for more options", "Build", "AutoSite can give you more suggestions when you build" & Environment.NewLine & "your site and populate the Attribute Map."))
+            items.Add(New AutocompleteMenuNS.AutocompleteItem(My.Resources.QuickInsert_Build, 3, My.Resources.QuickInsert_Build, My.Resources.QuickInsert_Build_Tip, My.Resources.QuickInsert_Build_TipText))
         End If
 
         Autocomplete.SetAutocompleteItems(items)
@@ -326,7 +324,7 @@ Public Class Editor
 
     Private Function rootCalc() As String
         ' Estimates [#root#] attribute output
-        Dim toreturn = "Example: ../"
+        Dim toreturn = String.Format(My.Resources.QuickInsert__Example, "../")
 
         If Not Me.Parent.Text.StartsWith("templates\") Then
             Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
@@ -339,7 +337,7 @@ Public Class Editor
 
             toreturn = toreturn.Substring(3) ' clip off first ../
 
-            toreturn = "Output: " & toreturn
+            toreturn = String.Format(My.Resources.QuickInsert__Output, toreturn)
         End If
 
         Return toreturn
@@ -347,12 +345,12 @@ Public Class Editor
 
     Private Function pathCalc() As String
         ' Estimates [#path#] attribute output
-        Dim toreturn = "Example: about/index.md"
+        Dim toreturn = String.Format(My.Resources.QuickInsert__Example, "about/index.md")
 
         If Not Me.Parent.Text.StartsWith("templates\") Then
             Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
-            toreturn = "Output: " & rel
+            toreturn = String.Format(My.Resources.QuickInsert__Output, rel)
 
             Return toreturn
         End If
@@ -378,9 +376,6 @@ Public Class Editor
     Private Sub OutWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles OutWorker.DoWork
         Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
-        'If rel.EndsWith(".md") Then
-        'rel = Apricot.ReplaceLast(rel, ".md", ".html")
-        'End If
         If rel.EndsWith(".md") Then
             rel = rel.Substring(0, rel.Length - 3) & ".html"
         End If

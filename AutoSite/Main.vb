@@ -140,11 +140,11 @@ Public Class Main
                 Dim includePath = path & "\includes"
 
                 If Not My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(path & "\in") Then
-                    If MsgBox("AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.", MsgBoxStyle.OkCancel + MsgBoxStyle.Exclamation, "Update Site") = MsgBoxResult.Ok Then
+                    If MsgBox(My.Resources.Prompt_ProjectUpgrade, MsgBoxStyle.OkCancel + MsgBoxStyle.Exclamation, My.Resources.Prompt_ProjectUpgrade_Title) = MsgBoxResult.Ok Then
                         Try
                             My.Computer.FileSystem.RenameDirectory(path & "\in", "pages")
                         Catch ex As Exception
-                            MsgBox("AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again.", MsgBoxStyle.Exclamation, "Unable to convert")
+                            MsgBox(My.Resources.Error_UpgradeFail, MsgBoxStyle.Exclamation, My.Resources.Error_UpgradeFail_Title)
                             doClose()
                             Exit Sub
                         End Try
@@ -156,7 +156,7 @@ Public Class Main
 
                 If Not (My.Computer.FileSystem.DirectoryExists(templatePath) And My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(includePath)) Then
                     If autoload = False Then
-                        If MsgBox("AutoSite will create a site in the folder located at " & path & ". Is this OK?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then
+                        If MsgBox(My.Resources.Prompt_CreateSite, MsgBoxStyle.Question + MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then
                             Exit Sub
                         End If
                     Else
@@ -335,7 +335,7 @@ Public Class Main
             End If
         Next
         If Not saved Then
-            Dim d As DialogResult = MsgBox("Some files have unsaved changes. Save them?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
+            Dim d As DialogResult = MsgBox(My.Resources.Prompt_SaveFilesBeforeClosing, MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
 
             If d = DialogResult.Yes Then
                 DoSaveAll()
@@ -355,7 +355,7 @@ Public Class Main
         Watcher.Filter = ""
 
         Dim tab As New TabPage With {
-            .Text = "Start Page"
+            .Text = My.Resources.UI_StartPage_Title
         }
         Dim start As New StartPage With {
             .Parent = tab,
@@ -519,7 +519,7 @@ Public Class Main
             openSite(My.Settings.openProject, True)
         Else
             Dim tab As New TabPage With {
-                .Text = "Start Page"
+                .Text = My.Resources.UI_StartPage_Title
             }
             Dim start As New StartPage With {
                 .Dock = DockStyle.Fill,
@@ -727,7 +727,7 @@ Public Class Main
         Try
             ApricotWorker.RunWorkerAsync()
         Catch ex As Exception
-            MsgBox("Apricot returned this exception:" & Environment.NewLine & Environment.NewLine & ex.ToString, MsgBoxStyle.Exclamation, "Build failed")
+            MsgBox(String.Format(My.Resources.Error_BuildFailed, ex.ToString), MsgBoxStyle.Exclamation, My.Resources.Error_BuildFailed_Title)
         End Try
     End Sub
 
@@ -942,39 +942,52 @@ Public Class Main
         ElseIf My.Computer.FileSystem.FileExists(Context.Tag) Then
             dir = My.Computer.FileSystem.GetFileInfo(Context.Tag).DirectoryName
         End If
-        Dim html = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: New HTML Page -->" & Environment.NewLine
-        If dir = SiteTree.Nodes(0).Nodes(1).Tag Then
-            html = "<!DOCTYPE html>" & Environment.NewLine & "<html lang=""en"">" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>[#title#]</title>" & Environment.NewLine & "    <meta charset=""utf-8"">" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>[#title#]</h1>" & Environment.NewLine & "    [#content#]" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
-        ElseIf dir = SiteTree.Nodes(0).Nodes(2).Tag Then
-            html = "<!DOCTYPE html>" & Environment.NewLine & "<html lang=""en"">" & Environment.NewLine & "  <head>" & Environment.NewLine & "    <title>New HTML Page</title>" & Environment.NewLine & "    <meta charset=""utf-8"">" & Environment.NewLine & "  </head>" & Environment.NewLine & "  <body>" & Environment.NewLine & "    <h1>Include Page</h1>" & Environment.NewLine & "  </body>" & Environment.NewLine & "</html>"
+
+        Dim html = My.Resources.Defaults_NewHtmlPage_Contents ' Page
+
+        If dir.Contains(SiteTree.Nodes(0).Nodes(1).Tag) Then ' Template
+
+            html = My.Resources.Defaults_NewHtmlTemplate_Contents
+
+        ElseIf dir.Contains(SiteTree.Nodes(0).Nodes(2).Tag) Then ' Include
+
+            html = My.Resources.Defaults_NewHtmlInclude_Contents
+
         End If
-        If dir = SiteTree.Nodes(0).Nodes(1).Tag And Not My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Nodes(1).Tag & "\default.html") Then
+
+        If dir.Contains(SiteTree.Nodes(0).Nodes(1).Tag) And Not My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Nodes(1).Tag & "\default.html") Then ' Template
             NewFile("default", ".html", html)
         Else
-            NewFile("new-page", ".html", html)
+            NewFile(My.Resources.Defaults_NewHtml, ".html", html)
         End If
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
-        Dim md = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: New Markdown Page -->" & Environment.NewLine
-        NewFile("new-page", ".md", md)
+        If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then ' check if page, otherwise empty
+            NewFile(My.Resources.Defaults_NewMd, ".md", My.Resources.Defaults_NewMdPage_Contents)
+        Else
+            NewFile(My.Resources.Defaults_NewMd, ".md", "")
+        End If
     End Sub
 
     Private Sub NewPHPCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewPHPCon.Click
-        Dim php = "<!-- attrib template: default -->" & Environment.NewLine & "<!-- attrib title: New PHP Page -->" & Environment.NewLine & "<?php" & Environment.NewLine & vbTab & "  echo ""This will be interpreted by the server. Hello universe!"";" & Environment.NewLine & "?>"
-        NewFile("new-page", ".php", php)
+        If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then ' check if page, otherwise other default
+            NewFile(My.Resources.Defaults_NewMd, ".php", My.Resources.Defaults_NewPhpPage_Contents)
+        Else
+            NewFile(My.Resources.Defaults_NewMd, ".php", My.Resources.Defaults_NewPhpOther_Contents)
+        End If
     End Sub
 
     Private Sub NewCSSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCSSCon.Click
-        NewFile("new-style", ".css", "")
+        NewFile(My.Resources.Defaults_NewCss, ".css", "")
     End Sub
 
     Private Sub NewJSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewJSCon.Click
-        NewFile("new-script", ".js", "")
+        NewFile(My.Resources.Defaults_NewJs, ".js", "")
     End Sub
 
     Private Sub NewTXTCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewTXTCon.Click
-        NewFile("new-file", ".txt", "")
+        NewFile(My.Resources.Defaults_NewFile, ".txt", "")
     End Sub
 
     Private Sub AddFilesCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddFilesCon.Click
@@ -986,7 +999,7 @@ Public Class Main
             dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
         End If
         If My.Computer.FileSystem.DirectoryExists(dir) Then
-            AddFilesDialog.Title = "Add Files to " & dir
+            AddFilesDialog.Title = String.Format(My.Resources.UI_AddFilesDialog_Title, dir)
             If AddFilesDialog.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
                 For Each file In AddFilesDialog.FileNames
                     Try
@@ -1133,7 +1146,7 @@ Public Class Main
             End If
         Next
         If Not saved Then
-            Dim d As DialogResult = MsgBox("Some files have unsaved changes. Save them?", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
+            Dim d As DialogResult = MsgBox(My.Resources.Prompt_SaveFilesBeforeClosing, MsgBoxStyle.Exclamation + MsgBoxStyle.YesNoCancel)
 
             If d = DialogResult.Yes Then
                 DoSaveAll()
@@ -1398,7 +1411,7 @@ Public Class Main
     End Sub
 
     Public Sub doSanitaryBuild() Handles SanitaryBuild.Click, SanitaryBuildBtn.Click
-        If MsgBox("A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+        If MsgBox(My.Resources.Prompt_SanitaryBuild, MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
             Catch ex As Exception
@@ -1654,7 +1667,7 @@ Public Class Main
                     My.Computer.FileSystem.WriteAllText(SaveLogDialog.FileName, Log.Text, False)
                 End If
             Catch ex As Exception
-                MsgBox("Something went wrong when trying to save the log:" & Environment.NewLine & Environment.NewLine & ex.Message, MsgBoxStyle.Exclamation, "Failed to save")
+                MsgBox(String.Format(My.Resources.Error_LogSaveFail, ex.Message), MsgBoxStyle.Exclamation, My.Resources.Error_LogSaveFail_Title)
             End Try
         End If
     End Sub

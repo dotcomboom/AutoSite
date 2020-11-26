@@ -547,7 +547,7 @@
     <value>15</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
-    <value>Use this task or select and right-click on Includes in the Explorer to add files. These can be referenced in your templates and pages like [#root#]image.png or [#root#]subdir/image.png.</value>
+    <value>Użyj tego zadania lub zaznacz i kliknij prawym przyciskiem myszy na Zawartość w eksplorerze aby dodać pliki. Można się do nich odnieść w szablonach i stronach jako [#root]image.png albo [#root]subdir/image.png.</value>
   </data>
   <data name="&gt;&gt;Label11.Name" xml:space="preserve">
     <value>Label11</value>
@@ -580,7 +580,7 @@
     <value>14</value>
   </data>
   <data name="Label12.Text" xml:space="preserve">
-    <value>Add includes</value>
+    <value>Dodaj zawartość</value>
   </data>
   <data name="&gt;&gt;Label12.Name" xml:space="preserve">
     <value>Label12</value>

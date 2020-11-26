@@ -262,7 +262,7 @@
     <value>4</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>This task will create default.html in your Templates folder. This should be enough for most sites, though you may always add more later.</value>
+    <value>To zadanie utworzy default.html w folderze Szablony. To powinno wystarczyć dla większości strony, ale zawsze możesz dodać więcej.</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
@@ -289,7 +289,7 @@
     <value>7</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>This task will create an index page in your Pages folder.</value>
+    <value>To zadanie utworzy stronę indeksową w folderze Strony.</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -322,7 +322,7 @@
     <value>6</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
-    <value>Create your first page</value>
+    <value>Stwórz swoją pierwszą stronę</value>
   </data>
   <data name="&gt;&gt;Label5.Name" xml:space="preserve">
     <value>Label5</value>
@@ -436,7 +436,7 @@
     <value>10</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
-    <value>Choose this extension if you would like to use exclusively HTML.</value>
+    <value>Wybierz to rozszerzenie jeśli wyłącznie chcesz używać HTML.</value>
   </data>
   <data name="&gt;&gt;Label7.Name" xml:space="preserve">
     <value>Label7</value>
@@ -463,7 +463,7 @@
     <value>11</value>
   </data>
   <data name="Label8.Text" xml:space="preserve">
-    <value>Choose this extension if you would like to use Markdown for simplified formatting. HTML can also be used as needed.</value>
+    <value>Wybierz to rozszerzenie jeśli chcesz używać Markdown dla uproszczonego formatowania. HTML również może być użyty w razie potrzeby.</value>
   </data>
   <data name="&gt;&gt;Label8.Name" xml:space="preserve">
     <value>Label8</value>
@@ -490,7 +490,7 @@
     <value>12</value>
   </data>
   <data name="CreateTemplate.Text" xml:space="preserve">
-    <value>Create default.html</value>
+    <value>Stwórz default.html</value>
   </data>
   <data name="&gt;&gt;CreateTemplate.Name" xml:space="preserve">
     <value>CreateTemplate</value>
@@ -643,7 +643,7 @@
     <value>20</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Zbuduj</value>
   </data>
   <data name="&gt;&gt;Build.Name" xml:space="preserve">
     <value>Build</value>
@@ -703,7 +703,7 @@
     <value>18</value>
   </data>
   <data name="Label10.Text" xml:space="preserve">
-    <value>Build your site</value>
+    <value>Zbuduj swoją stronę</value>
   </data>
   <data name="&gt;&gt;Label10.Name" xml:space="preserve">
     <value>Label10</value>
@@ -763,7 +763,7 @@
     <value>21</value>
   </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
-    <value>Markdown guide</value>
+    <value>Podręcznik Markdown</value>
   </data>
   <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
     <value>LinkLabel1</value>
@@ -823,7 +823,7 @@
     <value>23</value>
   </data>
   <data name="LinkLabel2.Text" xml:space="preserve">
-    <value>HTML guide</value>
+    <value>Podręcznik HTML</value>
   </data>
   <data name="&gt;&gt;LinkLabel2.Name" xml:space="preserve">
     <value>LinkLabel2</value>
@@ -874,7 +874,7 @@
     <value>25</value>
   </data>
   <data name="Label15.Text" xml:space="preserve">
-    <value>You can go back to this dialog or rename the file to change formats at any time.</value>
+    <value>Możesz wrócić do tego okna dialogowego lub zmienić nazwę pliku żeby zmienić rozszerzenie w dowolnym momencie.</value>
   </data>
   <data name="&gt;&gt;Label15.Name" xml:space="preserve">
     <value>Label15</value>
@@ -907,7 +907,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Quickstart</value>
+    <value>Szybki start</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Quickstart</value>

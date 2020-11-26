@@ -128,7 +128,7 @@
     <value>474, 17</value>
   </metadata>
   <data name="FolderBrowser.Description" xml:space="preserve">
-    <value>Pick a folder in which to store your site's assets. If no site exists in that folder, one will be created.</value>
+    <value>Dewiswch ffolder i storio asedau eich gwefan ynddo. Os nad oes gwefan yn bodoli yn y ffolder honno, bydd un yn cael ei greu.</value>
   </data>
   <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
@@ -138,13 +138,13 @@
     <value>CtrlShiftN</value>
   </data>
   <data name="NewSite.Text" xml:space="preserve">
-    <value>New Site...</value>
+    <value>Gwefan Newydd...</value>
   </data>
   <data name="OpenFolder.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftO</value>
   </data>
   <data name="OpenFolder.Text" xml:space="preserve">
-    <value>Open Site...</value>
+    <value>Agor Gwefan...</value>
   </data>
   <data name="CloseFile.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlW</value>
@@ -160,7 +160,7 @@
     <value>CtrlShiftW</value>
   </data>
   <data name="CloseSite.Text" xml:space="preserve">
-    <value>Close Site</value>
+    <value>Cau Gwefan</value>
   </data>
   <data name="FileSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -217,13 +217,13 @@
     <value>-</value>
   </data>
   <data name="ClearRecents.Text" xml:space="preserve">
-    <value>Clear Recent Sites</value>
+    <value>Cliriwch Gwefanau Diweddar</value>
   </data>
   <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Recent Sites</value>
+    <value>Gwefanau Diweddar</value>
   </data>
   <data name="InstallPackMnu.Text" xml:space="preserve">
-    <value>Install Pack...</value>
+    <value>Gosod Pecyn...</value>
   </data>
   <data name="InstallPackMnu.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -235,22 +235,22 @@
     <value>AltF4</value>
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
-    <value>Exit</value>
+    <value>Gadael</value>
   </data>
   <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;File</value>
+    <value>&amp;Ffeil</value>
   </data>
   <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlZ</value>
   </data>
   <data name="Undo.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Dadwneud</value>
   </data>
   <data name="Redo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlY</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Ail-wneud</value>
   </data>
   <data name="EditSep.Text" xml:space="preserve">
     <value>-</value>
@@ -259,19 +259,19 @@
     <value>CtrlX</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Torri</value>
   </data>
   <data name="Copy.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlC</value>
   </data>
   <data name="Copy.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiwch</value>
   </data>
   <data name="Paste.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlV</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Pastiwch</value>
   </data>
   <data name="EditSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -280,7 +280,7 @@
     <value>CtrlA</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>Dewisiwch Popeth</value>
   </data>
   <data name="EditSep3.Text" xml:space="preserve">
     <value>-</value>
@@ -289,19 +289,19 @@
     <value>CtrlG</value>
   </data>
   <data name="GoToMnu.Text" xml:space="preserve">
-    <value>Go To...</value>
+    <value>Mynd i...</value>
   </data>
   <data name="Find.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlF</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Find...</value>
+    <value>Dod o hyd...</value>
   </data>
   <data name="Replace.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlH</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Replace...</value>
+    <value>Disodli...</value>
   </data>
   <data name="EditSep4.Text" xml:space="preserve">
     <value>-</value>
@@ -310,19 +310,19 @@
     <value>CtrlJ</value>
   </data>
   <data name="QuickInsertMnu.Text" xml:space="preserve">
-    <value>Quick Insert</value>
+    <value>Mewnosodiad Cyflym</value>
   </data>
   <data name="InsertConditional.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftI</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insert Conditional...</value>
+    <value>Mewnosod Rhan Amodol...</value>
   </data>
   <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
+    <value>&amp;Golygu</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
-    <value>Word Wrap</value>
+    <value>Lapio Gair</value>
   </data>
   <data name="VirtualSpace.Text" xml:space="preserve">
     <value>Virtual Space</value>
@@ -510,6 +510,12 @@
   <data name="SpanishLang.Text" xml:space="preserve">
     <value>Español (experimental)</value>
   </data>
+  <data name="PolishLang.Text" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+  <data name="WelshLang.Text" xml:space="preserve">
+    <value>Gymraeg</value>
+  </data>
   <data name="LanguageMenu.Text" xml:space="preserve">
     <value>🌐</value>
   </data>
@@ -532,10 +538,10 @@
     <value>-</value>
   </data>
   <data name="CopyCon.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiwch</value>
   </data>
   <data name="PasteCon.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Pastiwch</value>
   </data>
   <data name="AddFilesCon.Text" xml:space="preserve">
     <value>Add Files...</value>
@@ -1717,6 +1723,18 @@ Build your site to populate the Attribute Map.</value>
     <value>SpanishLang</value>
   </data>
   <data name="&gt;&gt;SpanishLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PolishLang.Name" xml:space="preserve">
+    <value>PolishLang</value>
+  </data>
+  <data name="&gt;&gt;PolishLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WelshLang.Name" xml:space="preserve">
+    <value>WelshLang</value>
+  </data>
+  <data name="&gt;&gt;WelshLang.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;XP.Name" xml:space="preserve">

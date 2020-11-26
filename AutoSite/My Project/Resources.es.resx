@@ -375,42 +375,42 @@ Los condicionales le permiten mostrar texto si un atributo tiene cierto valor.</
     <value>Sale la fecha en la que la página fue modificada por última vez.</value>
   </data>
   <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Path</value>
+    <value>Ruta</value>
   </data>
   <data name="QuickInsert_path_TipText" xml:space="preserve">
-    <value>Outputs the page's relative path from root.</value>
+    <value>Sale la ruta relativa de la página desde la raíz.</value>
   </data>
   <data name="QuickInsert_root_Tip" xml:space="preserve">
-    <value>Relative path to root</value>
+    <value>Ruta relativa a la raíz</value>
   </data>
   <data name="QuickInsert_root_TipText" xml:space="preserve">
-    <value>Outputs the relative path from the page to the site root.
+    <value>Sale la ruta relativa de la página a la raíz del sitio.
 
-Use this to begin paths to stylesheets, images, and other 
-pages.</value>
+Utilice esto para comenzar rutas a hojas de estilo, imágenes y otras 
+páginas.</value>
   </data>
   <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Example: {0}</value>
+    <value>Ejemplo: {0}</value>
   </data>
   <data name="QuickInsert__Output" xml:space="preserve">
-    <value>Output: {0}</value>
+    <value>Salida: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add Files to {0}</value>
+    <value>Añadir archivos a {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
-    <value>Start Page</value>
+    <value>Página de inicio</value>
   </data>
   <data name="__" xml:space="preserve">
     <value></value>
   </data>
   <data name="Explorer_Includes" xml:space="preserve">
-    <value>Includes</value>
+    <value>Incluye</value>
   </data>
   <data name="Explorer_Pages" xml:space="preserve">
-    <value>Pages</value>
+    <value>Páginas</value>
   </data>
   <data name="Explorer_Templates" xml:space="preserve">
-    <value>Templates</value>
+    <value>Plantillas</value>
   </data>
 </root>

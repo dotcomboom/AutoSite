@@ -128,7 +128,7 @@
     <value>474, 17</value>
   </metadata>
   <data name="FolderBrowser.Description" xml:space="preserve">
-    <value>Pick a folder in which to store your site's assets. If no site exists in that folder, one will be created.</value>
+    <value>Wybierz folder w którym będą przechowywane zasoby strony. Jeśli w tym folderze nie istnieje żadna strona, nowy folder zostanie utworzony.</value>
   </data>
   <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
@@ -577,7 +577,7 @@
     <value>Skrypt JS (.js)</value>
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
-    <value>Plain Text (.txt)</value>
+    <value>Dokument tekstowy (.txt)</value>
   </data>
   <data name="NewCon.Text" xml:space="preserve">
     <value>Nowy</value>

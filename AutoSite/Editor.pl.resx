@@ -315,7 +315,7 @@
     <value>123, 24</value>
   </data>
   <data name="ViewOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Wyświetl dane wyjściowe</value>
   </data>
   <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 24</value>

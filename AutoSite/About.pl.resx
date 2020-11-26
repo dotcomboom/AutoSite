@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="LicenseBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <data name="LicenseBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="LicenseBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="LicenseBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 272</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="LicenseBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LicenseBox.Text" xml:space="preserve">
+    <value>AutoSite is powered by these most excellent open source libraries:
+  - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
+  - AutoComplete Menu: https://www.codeproject.com/articles/365974/autocomplete-menu (LGPLv3)
+  - CommonMark.NET: https://github.com/Knagis/CommonMark.NET (BSD 3-Clause)
+
+Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced in the source) is licensed under the MIT License.
+
+---
+
+MIT License
+
+Copyright (c) 2020 dotcomboom
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-----
+
+CommonMark.NET License
+
+Copyright (c) 2014, Kārlis Gaņģis
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+   * Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+
+   * Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+   * Neither the name of Kārlis Gaņģis nor the names of other contributors 
+     may be used to endorse or promote products derived from this software 
+     without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+--- 
+
+FastColoredTextBox and AutoComplete Menu License
+
+  THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+  KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+  PURPOSE.
+
+License: GNU Lesser General Public License (LGPLv3)
+
+Copyright (C) Pavel Torgashov, 2011-2016. </value>
+  </data>
+  <data name="&gt;&gt;LicenseBox.Name" xml:space="preserve">
+    <value>LicenseBox</value>
+  </data>
+  <data name="&gt;&gt;LicenseBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LicenseBox.Parent" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="&gt;&gt;LicenseBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="OK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="OK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>402, 333</value>
+  </data>
+  <data name="OK.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="OK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="OK.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="OK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;OK.Name" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;OK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;OK.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Logo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="Logo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Logo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 128</value>
+  </data>
+  <data name="Logo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="Logo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Logo.Name" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="&gt;&gt;Logo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Logo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Logo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Version.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 7.8pt, style=Bold</value>
+  </data>
+  <data name="Version.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 143</value>
+  </data>
+  <data name="Version.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="Version.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 21</value>
+  </data>
+  <data name="Version.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Version.Text" xml:space="preserve">
+    <value>0.0.0.0</value>
+  </data>
+  <data name="Version.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;Version.Name" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="&gt;&gt;Version.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Version.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Version.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GithubLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 174</value>
+  </data>
+  <data name="GithubLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="GithubLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 20</value>
+  </data>
+  <data name="GithubLink.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="GithubLink.Text" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="GithubLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;GithubLink.Name" xml:space="preserve">
+    <value>GithubLink</value>
+  </data>
+  <data name="&gt;&gt;GithubLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GithubLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GithubLink.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="WebsiteLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 207</value>
+  </data>
+  <data name="WebsiteLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="WebsiteLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 20</value>
+  </data>
+  <data name="WebsiteLink.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="WebsiteLink.Text" xml:space="preserve">
+    <value>Strona internetowa</value>
+  </data>
+  <data name="WebsiteLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;WebsiteLink.Name" xml:space="preserve">
+    <value>WebsiteLink</value>
+  </data>
+  <data name="&gt;&gt;WebsiteLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WebsiteLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WebsiteLink.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Tabs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="License.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="License.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="License.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="License.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 282</value>
+  </data>
+  <data name="License.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="License.Text" xml:space="preserve">
+    <value>Licencje</value>
+  </data>
+  <data name="&gt;&gt;License.Name" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="&gt;&gt;License.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;License.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;License.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ChangelogBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ChangelogBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="ChangelogBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="ChangelogBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 272</value>
+  </data>
+  <data name="ChangelogBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ChangelogBox.Text" xml:space="preserve">
+    <value>1.0 RC4:
+   + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
+   + Editor's auto indent will no longer affect existing lines
+   + Optimizations under the hood for the main program
+   + Folder icon changed
+   + Windows 98 compatibility has been greatly improved
+   + 1px white border around the Build toolstrip has been fixed
+   - Open panels are now saved correctly
+   - System default font (typically Tahoma) is now used in the interface if Segoe UI is not available
+   - Bug fixes pertaining to how the editor reacts to deleted/renamed files
+   - Double-clicking a file in the Explorer while the Editor panel is closed will open it in its default program
+   - Wording in the Sanitary Build message box and Insert Conditional window has been revised
+   - Build buttons are disabled while a build is in progress
+   - Dragging Markdown pages from the explorer into the editor will give the correct html extension now
+
+1.0 RC3:
+   + Modified date added as [#modified#]
+   + Quickstart dialog added; get started with AutoSite faster
+   + Pages folder now has the path pages\ instead of in\
+   - Window will no longer open offscreen and get stuck (if you remove an attached second display for example)
+   - Pack installation has been removed for the time being (compatibility reasons)
+   - Sanitary Build can now be performed with the Ctrl+Shift+B keyboard shortcut, and as a button in the Apricot panel
+   - Legacy build engine removed
+   - Debug stuff removed from internal template
+   - Build menu renamed to Tools
+   - Preview panel will open when a button such as Preview, View Output or Browse Site is pressed
+   - Browse Site button is more intelligent; will use the first HTML file it finds in output if it can't find an HTML or PHP index page
+
+1.0 RC2:
+   + View Output in Default Browser added to editor
+   + Pages and Includes can be dragged into the editor as paths from [#root#]
+   + Site Tree node hover (hottracking) effect
+   + Numerous system icon improvements
+       - Load File Icons rephrased to Use System Icons
+       - System icons switching to a folder icon when selected has been fixed, as well as 
+       - Newly added files now use system icons properly
+       - System icons are now used by default
+   - Markdown [#root#] links in previews are now rendered out properly
+   - Start menu tile small icon fixed
+   - More About box tweaks
+   - Preview button text is now "Preview" for pages, "Debug" for templates, and "View" for include files
+
+1.0 RC1:
+   + New Windows 10 Start menu tile
+   + Apricot is now its own DLL library
+   + AutoSite Core now included, also uses Apricot
+
+   + Segoe UI now used throughout the UI, and dialogs will be white on systems that support XP visual styles
+   + Apricot Log is now formatted with rich text, can now be saved
+   + Files can be opened in the editor through context menu
+   + Internet Explorer compatibility mode is disabled automagically
+   + Window location, size, and maximization status is now saved for next run
+   + Site folders dragged onto the AutoSite executable will be opened
+   + System file type icons can now be used if desired; View -&gt; Load File Icons
+   + Window title now includes path of site folder
+   + Start and elapsed times are now logged
+   + Packs can be installed through File &gt; Install Pack...
+
+   - Website/GitHub links updated
+   - Ctrl+Shift+O is the new shortcut for opening a site folder
+   - Experimental/buggy syntax highlighting disabled
+   
+   - Additional fixes/changes probably
+
+0.9.8.2 - Chocolate Malt:
+   + Plain UTF-8 (no BOM) is now used
+
+0.9.8.1 - Malt:
+   + Conditionals can now check if attributes are empty/non-existent properly
+   + Empty option added to Add Conditional dialog
+
+0.9.8 - Milkshake:
+   + Double clicking any file while the editor is collapsed will open it with the default program/shell behavior
+   + Sanitary Build added
+   + Engine selection moved to top-level of Build menu
+   + Up to 5 recent sites now shown in File menu
+   + Many more functions can be done from the main menu; among them, Editor-related tasks (Edit menu), opening the output folder, and previews
+   + Website, GitHub, and Send Feedback added to Help menu
+
+   - Opening a site will close the currently open one and its files first
+   - About dialog is sizable again, can now be closed with Escape key, other changes
+   - Main menu is now Alt-key friendly
+   - Format menu moved to the left of the View menu
+   - Edit and Format menus hid if Editor isn't open
+
+0.9.7 - Cola Float:
+   + More editor keyboard shortcuts added! CTRL+F for Find, CTRL+H for Replace, CTRL+G for Goto, CTRL+P for Preview
+   + Panels can now be toggled with Alt+1 through 4
+   + Add Conditional dialog Value box is now a dropdown that is populated with what values are used for the selected attribute in the tree
+   + Pressing Delete with a file in the Site Tree selected will send it to the Recycle Bin
+   + Files that are renamed while opened will be updated to the new path in the editor
+   + Files that are deleted while opened will be marked as having unsaved changes in the editor
+
+   - Default template has been tweaked and cleaned up
+   - Plain Text context option is disabled in the Templates folder
+   - Editor will load settings correctly on load now
+   - View Output disabled when editing templates, Add Conditional disabled when editing includes
+   - Build icon changed to VS2017 style for consistency
+   - Site creation confirmation box now has an icon
+   - About box now has an icon
+   - About is now a FixedDialog
+   - Font selection menu item named to "Monospace Font..."
+   - Panel toggles moved to top-level of View menu
+   
+0.9.6 - Vanilla:
+   + New plain text file option
+   + Preview now links to included files
+
+0.9.5.2 - Peppermint:
+   * Fixed exception on Add Conditional dialog when using main editor options
+
+0.9.5.1 - Cocoa:
+   * Removed debug PropertyGrid from editor
+
+0.9.5 - Chocolate Milk:
+   + Editor previews now slot stuff in like Apricot does (exception is Live Preview, which works the same as before for performance reasons)
+   + Build and View Output buttons added to editor for easy access
+   + Editor font can now be changed (only works with monospaced fonts)
+   * Code editor in Add Conditional dialog now uses the same settings as the main editor
+
+0.9.4 - Macchiato:
+   * Creating duplicate files in the site tree other than .html is fixed
+   * Application is no longer blurry on high DPI displays
+   * Apricot will now close input files after reading to prevent locking (finally!)
+   * If a page's template is not found, an internal default template is used
+   * Title bar is not updated during build
+   * Browse Site will not error if there is no index.html, and instead will just open Windows Explorer
+   * Debug conditional removed from default template
+   * Editor now opens on double-click depending on the file's extension, and Preview does not open files on double-click anymore
+
+   + Dragging an attribute from the Attribute Tree into the editor will insert it; dragging its value will insert a definition
+   + Conditionals can now be inserted from the editor's context menu
+
+0.9.3 - Caramel Mocha:
+   * Fixed Markdown file building
+   * Fixed editor toolbar buttons (Cut/Copy/Paste)
+   * New CSS files are now blank instead of the PHP starter
+   * Don't show About window in taskbar
+   * Loading files in the editor should now no longer "lock" them and cause "in use by another process" errors
+
+0.9.2.1 - Butternut Squash:
+   * Removed debug message boxes during build process that were introduced in 0.9.2
+   * Internal version number fix
+
+0.9.2 - Zucchini Squash:
+   + Double clicking on a file that's already open in the editor will switch to its tab
+   + You can open the root folder in external program/Explorer
+   + Close Site now prompts to save  
+   + Save All is now disabled when no site is open
+   + You can create a new folder/file when the default name already exists and a (1) or similar will be appended to its filename
+   * New files now don't have spaces with the exception of the above
+   * Right clicking on the root no longer errors out
+   * "Icon Theme" renamed to "Explorer Icon Theme" as it's not yet throughout the whole UI
+
+   * Inequality conditionals are finally actually positively for real fixed now I promise
+
+0.9.1 - The Touch Up:
+   + About box is larger, changelog tab added
+   + Context menu improvements; code of new HTML files made is different based on whether it is a page, template or include
+   + Version number is now shown in title bar
+   * About box can now be maximized
+   * Visual Studio 2017 icon theme used by default as it's used throughout the UI outside of the explorer view
+
+   * Attributes that aren't defined in the page are removed from the template (feature parity)
+   * Inequality conditionals are fixed
+
+0.9 - The First One:
+   * Initial stable release, first version number</value>
+  </data>
+  <data name="&gt;&gt;ChangelogBox.Name" xml:space="preserve">
+    <value>ChangelogBox</value>
+  </data>
+  <data name="&gt;&gt;ChangelogBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChangelogBox.Parent" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="&gt;&gt;ChangelogBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Changelog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="Changelog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Changelog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Changelog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 282</value>
+  </data>
+  <data name="Changelog.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Changelog.Text" xml:space="preserve">
+    <value>Lista zmian</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Changelog.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 10</value>
+  </data>
+  <data name="Tabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 310</value>
+  </data>
+  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Sysinfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="Sysinfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 321</value>
+  </data>
+  <data name="Sysinfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 38</value>
+  </data>
+  <data name="Sysinfo.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Sysinfo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="Sysinfo.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Sysinfo.Name" xml:space="preserve">
+    <value>Sysinfo</value>
+  </data>
+  <data name="&gt;&gt;Sysinfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sysinfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Sysinfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>491, 370</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>O AutoSite</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

@@ -510,6 +510,12 @@
   <data name="SpanishLang.Text" xml:space="preserve">
     <value>Español (experimental)</value>
   </data>
+  <data name="PolishLang.Text" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+  <data name="WelshLang.Text" xml:space="preserve">
+    <value>Gymraeg</value>
+  </data>
   <data name="LanguageMenu.Text" xml:space="preserve">
     <value>🌐</value>
   </data>
@@ -1717,6 +1723,18 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>SpanishLang</value>
   </data>
   <data name="&gt;&gt;SpanishLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PolishLang.Name" xml:space="preserve">
+    <value>PolishLang</value>
+  </data>
+  <data name="&gt;&gt;PolishLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WelshLang.Name" xml:space="preserve">
+    <value>WelshLang</value>
+  </data>
+  <data name="&gt;&gt;WelshLang.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;XP.Name" xml:space="preserve">

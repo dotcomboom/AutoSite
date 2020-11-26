@@ -414,6 +414,6 @@ páginas.</value>
     <value>Plantillas</value>
   </data>
   <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Changes will be applied on restart.</value>
+    <value>Los cambios se aplicarán después de reiniciar.</value>
   </data>
 </root>

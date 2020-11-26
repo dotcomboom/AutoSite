@@ -220,7 +220,7 @@
     <value>Limpiar sitios recientes</value>
   </data>
   <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Recent Sites</value>
+    <value>Sitios recientes</value>
   </data>
   <data name="InstallPackMnu.Text" xml:space="preserve">
     <value>Instalar paquete...</value>
@@ -388,19 +388,19 @@
     <value>Tema de icono de explorador</value>
   </data>
   <data name="cDefault.Text" xml:space="preserve">
-    <value>Default</value>
+    <value>Predeterminado</value>
   </data>
   <data name="cDark.Text" xml:space="preserve">
-    <value>Dark</value>
+    <value>Oscuro</value>
   </data>
   <data name="ColorScheme.Text" xml:space="preserve">
-    <value>Color Scheme (beta)</value>
+    <value>Esquema de color (beta)</value>
   </data>
   <data name="ColorScheme.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
-    <value>Use System Icons</value>
+    <value>Usar iconos del sistema</value>
   </data>
   <data name="RefreshItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlR</value>
@@ -460,16 +460,16 @@
     <value>-</value>
   </data>
   <data name="QuickstartMnu.Text" xml:space="preserve">
-    <value>Quickstart</value>
+    <value>Inicio rápido</value>
   </data>
   <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
+    <value>&amp;Herramientas</value>
   </data>
   <data name="HelpTopics.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
-    <value>AutoSite Manual</value>
+    <value>Manual del AutoSite</value>
   </data>
   <data name="HelpSep.Text" xml:space="preserve">
     <value>-</value>
@@ -496,7 +496,7 @@
     <value>F12</value>
   </data>
   <data name="InspectorBtn.Text" xml:space="preserve">
-    <value>GUI Inspector</value>
+    <value>Inspector de GUI</value>
   </data>
   <data name="InspectorBtn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -749,9 +749,9 @@
   </data>
   <data name="AttributeExplanation.Text" xml:space="preserve">
     <value>
-The Attribute Map allows you to view all of the Attributes used in your site. 
+El Mapa de Atributos le permite ver todos los atributos utilizados en su sitio. 
 
-Build your site to populate the Attribute Map.</value>
+Compila su sitio para poblar el Mapa de Atributos.</value>
   </data>
   <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -901,7 +901,7 @@ Build your site to populate the Attribute Map.</value>
     <value>54, 22</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="Build.ToolTipText" xml:space="preserve">
     <value>Construir</value>
@@ -913,10 +913,10 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="SanitaryBuildBtn.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construcción sanitaria...</value>
   </data>
   <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construcción sanitaria...</value>
   </data>
   <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -955,7 +955,7 @@ Build your site to populate the Attribute Map.</value>
     <value>3</value>
   </data>
   <data name="BuildStrip.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Compilar</value>
   </data>
   <data name="&gt;&gt;BuildStrip.Name" xml:space="preserve">
     <value>BuildStrip</value>

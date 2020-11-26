@@ -238,7 +238,7 @@
     <value>9</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Otwórz ostatnie</value>
+    <value>Ostatnio otwierane</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>

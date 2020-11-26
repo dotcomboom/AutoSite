@@ -238,7 +238,7 @@
     <value>2</value>
   </data>
   <data name="AttLabel.Text" xml:space="preserve">
-    <value>Attribute to check:</value>
+    <value>Atrybut do sprawdzenia:</value>
   </data>
   <data name="&gt;&gt;AttLabel.Name" xml:space="preserve">
     <value>AttLabel</value>
@@ -403,7 +403,7 @@
     <value>2</value>
   </data>
   <data name="NotChk.Text" xml:space="preserve">
-    <value>NOT</value>
+    <value>NIE</value>
   </data>
   <data name="&gt;&gt;NotChk.Name" xml:space="preserve">
     <value>NotChk</value>

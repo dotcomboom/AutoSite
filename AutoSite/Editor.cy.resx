@@ -156,19 +156,19 @@
     <value>72, 24</value>
   </data>
   <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Cadw</value>
   </data>
   <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 24</value>
   </data>
   <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Cadw</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 24</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save All</value>
+    <value>Cadw'r cwbl</value>
   </data>
   <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>
@@ -237,7 +237,7 @@
     <value>23, 24</value>
   </data>
   <data name="CloseBtn.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>Cau</value>
   </data>
   <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>

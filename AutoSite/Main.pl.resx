@@ -325,10 +325,10 @@
     <value>Zawijanie wierszy</value>
   </data>
   <data name="VirtualSpace.Text" xml:space="preserve">
-    <value>Virtual Space</value>
+    <value>Przestrzeń wirtualna</value>
   </data>
   <data name="WideCaret.Text" xml:space="preserve">
-    <value>Wide Caret</value>
+    <value>Szeroka kareta</value>
   </data>
   <data name="FormatSep.Text" xml:space="preserve">
     <value>-</value>
@@ -418,7 +418,7 @@
     <value>Podgląd pliku</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Wyświetl dane wyjściowe</value>
   </data>
   <data name="ViewSep3.Text" xml:space="preserve">
     <value>-</value>
@@ -445,7 +445,7 @@
     <value>CtrlShiftB</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Czysta kompilacja...</value>
   </data>
   <data name="BuildSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -727,7 +727,7 @@
     <value>0</value>
   </data>
   <data name="LogPage.Text" xml:space="preserve">
-    <value>Log</value>
+    <value>Dziennik zdarzeń</value>
   </data>
   <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
     <value>LogPage</value>
@@ -922,10 +922,10 @@ Zbuduj swoją stronę, aby wypełnić mapę atrybutów.</value>
     <value>23, 22</value>
   </data>
   <data name="SanitaryBuildBtn.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Czysta kompilacja...</value>
   </data>
   <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Czysta kompilacja...</value>
   </data>
   <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1951,7 +1951,7 @@ Zbuduj swoją stronę, aby wypełnić mapę atrybutów.</value>
     <value>Dokument sformatowany (*rtf)|*.rtf|Dokument tekstowy (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
-    <value>Save Log</value>
+    <value>Zapisz dziennik zdarzeń</value>
   </data>
   <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>597, 56</value>

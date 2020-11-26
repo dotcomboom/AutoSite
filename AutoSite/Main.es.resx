@@ -445,7 +445,7 @@
     <value>CtrlShiftB</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Edición sanitaria...</value>
+    <value>Construcción sanitaria...</value>
   </data>
   <data name="BuildSep2.Text" xml:space="preserve">
     <value>-</value>

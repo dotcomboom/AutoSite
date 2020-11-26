@@ -260,8 +260,8 @@
     <value>nowa-strona</value>
   </data>
   <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New Markdown Page --&gt;
+    <value>&lt;!-- attrib template: domyślny --&gt;
+&lt;!-- attrib title: Nowa strona Markdown --&gt;
 </value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
@@ -273,14 +273,14 @@
 ?&gt;</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New PHP Page --&gt;
+    <value>&lt;!-- attrib template: domyślny --&gt;
+&lt;!-- attrib title: Nowa Strona PHP --&gt;
 &lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
+      echo "To będzie interpretowane przez serwer. Witaj świecie!";
 ?&gt;</value>
   </data>
   <data name="Error_BuildFailed" xml:space="preserve">
-    <value>Apricot returned this exception:
+    <value>Apricot zwócił ten wyjątek:
 
 {0}</value>
   </data>
@@ -288,13 +288,13 @@
     <value>Budowanie nie powiodło się</value>
   </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
-    <value>Build the site first to view output.</value>
+    <value>Najpierw zbuduj stronę, aby wyświetlić dane wyjściowe.</value>
   </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
     <value>Plik nie mógł zostać zapisany.</value>
   </data>
   <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Something went wrong when trying to save the log:
+    <value>Coś nie powiodło się podczas próby zapisania dziennika zdarzeń:
 
 {0}</value>
   </data>

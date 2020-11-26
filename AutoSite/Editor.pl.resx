@@ -249,7 +249,7 @@
     <value>23, 24</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Find</value>
+    <value>Znajdź</value>
   </data>
   <data name="GTo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -258,7 +258,7 @@
     <value>23, 24</value>
   </data>
   <data name="GTo.Text" xml:space="preserve">
-    <value>Go To</value>
+    <value>Idź do</value>
   </data>
   <data name="Replace.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -267,7 +267,7 @@
     <value>23, 24</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Replace</value>
+    <value>Zamień</value>
   </data>
   <data name="QuickInsert.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -276,7 +276,7 @@
     <value>23, 24</value>
   </data>
   <data name="QuickInsert.Text" xml:space="preserve">
-    <value>Quick Insert</value>
+    <value>Szybkie wstawianie</value>
   </data>
   <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>
@@ -321,7 +321,7 @@
     <value>236, 24</value>
   </data>
   <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>View in Default Browser</value>
+    <value>Wyświetl w domyślnej przeglądarce</value>
   </data>
   <metadata name="Autocomplete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>213, 17</value>

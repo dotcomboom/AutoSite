@@ -215,13 +215,13 @@
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewCss" xml:space="preserve">
-    <value>new-style</value>
+    <value>steil-newydd</value>
   </data>
   <data name="Defaults_NewFile" xml:space="preserve">
-    <value>new-file</value>
+    <value>ffeil-newydd</value>
   </data>
   <data name="Defaults_NewHtml" xml:space="preserve">
-    <value>new-page</value>
+    <value>tudalen-newydd</value>
   </data>
   <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -254,10 +254,10 @@
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewJs" xml:space="preserve">
-    <value>new-script</value>
+    <value>sgript-newydd</value>
   </data>
   <data name="Defaults_NewMd" xml:space="preserve">
-    <value>new-page</value>
+    <value>tudalen-newydd</value>
   </data>
   <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
@@ -265,7 +265,7 @@
 </value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
-    <value>new-page</value>
+    <value>tudalen-newydd</value>
   </data>
   <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
     <value>&lt;?php
@@ -280,26 +280,26 @@
 ?&gt;</value>
   </data>
   <data name="Error_BuildFailed" xml:space="preserve">
-    <value>Apricot returned this exception:
+    <value>Dychwelodd Apricot yr eithriad hwn:
 
 {0}</value>
   </data>
   <data name="Error_BuildFailed_Title" xml:space="preserve">
-    <value>Build failed</value>
+    <value>Adeiladu wedi methu</value>
   </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
-    <value>Build the site first to view output.</value>
+    <value>Adeiladu'r wefan yn gyntaf i weld allbwn.</value>
   </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>The file could not be saved.</value>
+    <value>Ni ellid arbed y ffeil.</value>
   </data>
   <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Something went wrong when trying to save the log:
+    <value>Aeth rhywbeth o'i le wrth geisio arbed y log:
 
 {0}</value>
   </data>
   <data name="Error_LogSaveFail_Title" xml:space="preserve">
-    <value>Failed to save</value>
+    <value>Methu arbed</value>
   </data>
   <data name="Error_UpgradeFail" xml:space="preserve">
     <value>AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again.</value>

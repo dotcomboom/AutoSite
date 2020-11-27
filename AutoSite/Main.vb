@@ -408,6 +408,13 @@ Public Class Main
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+        LanguageMenu.Text = Threading.Thread.CurrentThread.CurrentUICulture.Name
+
+        If System.Environment.Version.Major < 4 Then
+            WelshLang.Enabled = False
+            WelshLang.Text &= " (.NET 4.0)"
+        End If
+
         Try
             ' https://www.codeproject.com/Tips/543631/Save-and-restore-your-form-size-and-location
             Dim initLocation As String = My.Settings.windowLocation

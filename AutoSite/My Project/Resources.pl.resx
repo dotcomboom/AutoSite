@@ -414,4 +414,7 @@ Użyj tego, aby rozpocząć ścieżki do arkuszy stylów, obrazów i innych stro
   <data name="Prompt_ChangesOnRestart" xml:space="preserve">
     <value>Zmiany zostaną zastosowane po ponownym uruchomieniu.</value>
   </data>
+  <data name="UI_Editor_ViewFile" xml:space="preserve">
+    <value>Widok</value>
+  </data>
 </root>

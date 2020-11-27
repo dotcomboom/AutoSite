@@ -155,7 +155,7 @@
     <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_content_Tip" xml:space="preserve">
-    <value>Content</value>
+    <value>Cynnwys</value>
   </data>
   <data name="GotoRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GotoRow_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -215,29 +215,29 @@
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewCss" xml:space="preserve">
-    <value>new-style</value>
+    <value>steil-newydd</value>
   </data>
   <data name="Defaults_NewFile" xml:space="preserve">
-    <value>new-file</value>
+    <value>ffeil-newydd</value>
   </data>
   <data name="Defaults_NewHtml" xml:space="preserve">
-    <value>new-page</value>
+    <value>tudalen-newydd</value>
   </data>
   <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
-    &lt;title&gt;New HTML Page&lt;/title&gt;
+    &lt;title&gt;Tudalen HTML Newydd&lt;/title&gt;
     &lt;meta charset="utf-8"&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;New HTML Page&lt;/h1&gt;
+    &lt;h1&gt;Tudalen HTML Newydd&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New HTML Page --&gt;
+&lt;!-- attrib title: Tudalen HTML Newydd --&gt;
 </value>
   </data>
   <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
@@ -254,166 +254,168 @@
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewJs" xml:space="preserve">
-    <value>new-script</value>
+    <value>sgript-newydd</value>
   </data>
   <data name="Defaults_NewMd" xml:space="preserve">
-    <value>new-page</value>
+    <value>tudalen-newydd</value>
   </data>
   <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New Markdown Page --&gt;
+&lt;!-- attrib title: Tudalen Markdown Newydd --&gt;
 </value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
-    <value>new-page</value>
+    <value>tudalen-newydd</value>
   </data>
   <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
     <value>&lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
+      echo "Bydd hyn yn cael ei ddehongli gan y gweinydd. Helo bydysawd!";
 ?&gt;</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New PHP Page --&gt;
+&lt;!-- attrib title: Tudalen PHP Newydd --&gt;
 &lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
+      echo "Bydd hyn yn cael ei ddehongli gan y gweinydd. Helo bydysawd!";
 ?&gt;</value>
   </data>
   <data name="Error_BuildFailed" xml:space="preserve">
-    <value>Apricot returned this exception:
+    <value>Dychwelodd Apricot yr eithriad hwn:
 
 {0}</value>
   </data>
   <data name="Error_BuildFailed_Title" xml:space="preserve">
-    <value>Build failed</value>
+    <value>Adeiladu wedi methu</value>
   </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
-    <value>Build the site first to view output.</value>
+    <value>Adeiladu'r wefan yn gyntaf i weld allbwn.</value>
   </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>The file could not be saved.</value>
+    <value>Ni ellid arbed y ffeil.</value>
   </data>
   <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Something went wrong when trying to save the log:
+    <value>Aeth rhywbeth o'i le wrth geisio arbed y log:
 
 {0}</value>
   </data>
   <data name="Error_LogSaveFail_Title" xml:space="preserve">
-    <value>Failed to save</value>
+    <value>Methu arbed</value>
   </data>
   <data name="Error_UpgradeFail" xml:space="preserve">
-    <value>AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again.</value>
+    <value>Ni allai AutoSite ailenwi'r mewn\ ffolder i tudalennau\. Ail-enwi'r ffolder â llaw ac agor eich gwefan eto, os gwelwch yn dda.</value>
   </data>
   <data name="Error_UpgradeFail_Title" xml:space="preserve">
-    <value>Unable to convert</value>
+    <value>Methu trosi</value>
   </data>
   <data name="Prompt_CreateSite" xml:space="preserve">
-    <value>AutoSite will create a site in the folder located at {0}. Is this OK?</value>
+    <value>Bydd AutoSite yn creu safle yn y ffolder sydd wedi'i leoli yn {0}. A yw hyn yn iawn?</value>
   </data>
   <data name="Prompt_ProjectUpgrade" xml:space="preserve">
-    <value>AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.</value>
+    <value>Mae AutoSite bellach yn defnyddio'r llwybr pages\ ar gyfer y ffolder Tudalennau. Bydd y trawsnewidiad hwn yn effeithio ar gydnawsedd â datganiadau hŷn o AutoSite.</value>
   </data>
   <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
-    <value>Update Site</value>
+    <value>Diweddaru Gwefan</value>
   </data>
   <data name="Prompt_SanitaryBuild" xml:space="preserve">
-    <value>A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.</value>
+    <value>Bydd adeiladu iechydol yn symud y ffolder allbwn i'r Bin Ailgylchu cyn ei adeiladu, gan gael gwared ar unrhyw ffeiliau crwydr.</value>
   </data>
   <data name="Prompt_SaveChangesToFile" xml:space="preserve">
-    <value>Save changes to {0}?</value>
+    <value>Arbed newidiadau i {0}?</value>
   </data>
   <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
-    <value>Some files have unsaved changes. Save them?</value>
+    <value>Mae gan rai ffeiliau newidiadau heb eu cadw. Arbedwch nhw?</value>
   </data>
   <data name="QuickInsert_Build" xml:space="preserve">
-    <value>Build for more options</value>
+    <value>Adeiladu am fwy o opsiynau</value>
   </data>
   <data name="QuickInsert_Build_Tip" xml:space="preserve">
-    <value>Build</value>
+    <value>Adeiladu</value>
   </data>
   <data name="QuickInsert_Build_TipText" xml:space="preserve">
-    <value>AutoSite can give you more suggestions when you build
-your site and populate the Attribute Map.</value>
+    <value>Gall AutoSite roi mwy o awgrymiadau i chi pan fyddwch chi'n adeiladu
+eich gwefan a phoblogi'r Map Priodoledd.</value>
   </data>
   <data name="QuickInsert_content_TipText" xml:space="preserve">
-    <value>Outputs the page's content.
+    <value>Yn allbynnu cynnwys y dudalen.
 
-Use once in templates.</value>
+Defnyddiwch unwaith mewn templedi.</value>
   </data>
   <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
-    <value>Define {0}</value>
+    <value>Diffinio {0}</value>
   </data>
   <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
-    <value>Defines the {0} attribute for this page.</value>
+    <value>Yn diffinio'r priodoledd {0} ar gyfer y dudalen hon.</value>
   </data>
   <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
-    <value>Define a new attribute</value>
+    <value>Diffinio priodoledd newydd</value>
   </data>
   <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
-    <value>Adds an attribute definition.</value>
+    <value>Yn ychwanegu diffiniad priodoledd.</value>
   </data>
   <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
-    <value>Defines the template used by the current page.
+    <value>Yn diffinio'r templed a ddefnyddir gan y dudalen gyfredol.
 
-Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
+Y rhagosodiad yw {0}, sy'n dweud wrth AutoSite i ddefnyddio {1} yn y ffolder templedi.</value>
   </data>
   <data name="QuickInsert_Generic_TipText" xml:space="preserve">
-    <value>Outputs the page's value for the {0} attribute.</value>
+    <value>Yn allbynnu gwerth y dudalen am y priodoledd {0}.</value>
   </data>
   <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
-    <value>Insert conditional</value>
+    <value>Mewnosod rhan amodol</value>
   </data>
   <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
-    <value>Open the Insert Conditional dialog.
+    <value>Mewnosod deialog rhan amodol.
 
-Conditionals allow you to output text if an attribute has a certain value.</value>
+Mae amodau yn caniatáu ichi allbynnu testun os oes gan briodoledd werth penodol.</value>
   </data>
   <data name="QuickInsert_modified_Tip" xml:space="preserve">
-    <value>Last modified date</value>
+    <value>Y dyddiad o addasiad ddiwethaf</value>
   </data>
   <data name="QuickInsert_modified_TipText" xml:space="preserve">
-    <value>Outputs the date the page was last modified on.</value>
+    <value>Yn allbwn y dyddiad y cafodd y dudalen ei haddasu ddiwethaf.</value>
   </data>
   <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Path</value>
+    <value>Llwybr</value>
   </data>
   <data name="QuickInsert_path_TipText" xml:space="preserve">
-    <value>Outputs the page's relative path from root.</value>
+    <value>Yn allbynnu llwybr cymharol y dudalen o'r gwraidd.</value>
   </data>
   <data name="QuickInsert_root_Tip" xml:space="preserve">
-    <value>Relative path to root</value>
+    <value>Llwybr cymharol i'r gwreiddyn</value>
   </data>
   <data name="QuickInsert_root_TipText" xml:space="preserve">
-    <value>Outputs the relative path from the page to the site root.
+    <value>Yn allbynnu'r llwybr cymharol o'r dudalen i wraidd y wefan.
 
-Use this to begin paths to stylesheets, images, and other 
-pages.</value>
+Defnyddiwch hwn i ddechrau llwybrau i daflenni arddull, delweddau a thudalennau eraill.</value>
   </data>
   <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Example: {0}</value>
+    <value>Enghraifft: {0}</value>
   </data>
   <data name="QuickInsert__Output" xml:space="preserve">
-    <value>Output: {0}</value>
+    <value>Allbwn: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add Files to {0}</value>
+    <value>Ychwanegu Ffeiliau i {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
-    <value>Start Page</value>
+    <value>Tudalen Gychwyn</value>
   </data>
   <data name="__" xml:space="preserve">
     <value></value>
   </data>
   <data name="Explorer_Includes" xml:space="preserve">
-    <value>Includes</value>
+    <value>Cynnwys</value>
   </data>
   <data name="Explorer_Pages" xml:space="preserve">
-    <value>Pages</value>
+    <value>Tudalennau</value>
   </data>
   <data name="Explorer_Templates" xml:space="preserve">
-    <value>Templates</value>
+    <value>Templedi</value>
   </data>
   <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Changes will be applied on restart.</value>
+    <value>Bydd newidiadau yn cael eu gweithredu wrth ailgychwyn.</value>
+  </data>
+  <data name="UI_Editor_ViewFile" xml:space="preserve">
+    <value>Gweld</value>
   </data>
 </root>

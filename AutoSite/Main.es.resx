@@ -1704,6 +1704,12 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
   <data name="&gt;&gt;AboutItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;HelpSep3.Name" xml:space="preserve">
+    <value>HelpSep3</value>
+  </data>
+  <data name="&gt;&gt;HelpSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;InspectorBtn.Name" xml:space="preserve">
     <value>InspectorBtn</value>
   </data>
@@ -1949,12 +1955,6 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
   </data>
   <data name="&gt;&gt;OpenPack.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HelpSep3.Name" xml:space="preserve">
-    <value>HelpSep3</value>
-  </data>
-  <data name="&gt;&gt;HelpSep3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

@@ -400,9 +400,6 @@ Defnyddiwch hwn i ddechrau llwybrau i daflenni arddull, delweddau a thudalennau 
   <data name="UI_StartPage_Title" xml:space="preserve">
     <value>Tudalen Gychwyn</value>
   </data>
-  <data name="__" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Explorer_Includes" xml:space="preserve">
     <value>Cynnwys</value>
   </data>

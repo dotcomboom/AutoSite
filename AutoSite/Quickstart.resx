@@ -160,7 +160,7 @@
     <value>0</value>
   </data>
   <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 388</value>
+    <value>437, 393</value>
   </data>
   <data name="TableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -403,7 +403,7 @@
     <value>NoControl</value>
   </data>
   <data name="indexhtml.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 315</value>
+    <value>36, 326</value>
   </data>
   <data name="indexhtml.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -427,7 +427,7 @@
     <value>16</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 319</value>
+    <value>119, 330</value>
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>186, 52</value>
@@ -457,7 +457,7 @@
     <value>125, 221</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 67</value>
+    <value>186, 87</value>
   </data>
   <data name="Label8.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -511,10 +511,10 @@
     <value>NoControl</value>
   </data>
   <data name="Button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>461, 113</value>
+    <value>461, 125</value>
   </data>
   <data name="Button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>97, 23</value>
   </data>
   <data name="Button5.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -541,7 +541,7 @@
     <value>317, 45</value>
   </data>
   <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 65</value>
+    <value>290, 87</value>
   </data>
   <data name="Label11.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -634,7 +634,7 @@
     <value>NoControl</value>
   </data>
   <data name="Build.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 237</value>
+    <value>344, 267</value>
   </data>
   <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -661,10 +661,10 @@
     <value>NoControl</value>
   </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 179</value>
+    <value>317, 197</value>
   </data>
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 65</value>
+    <value>290, 81</value>
   </data>
   <data name="Label9.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -694,7 +694,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>339, 151</value>
+    <value>339, 169</value>
   </data>
   <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 25</value>
@@ -727,7 +727,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 147</value>
+    <value>313, 165</value>
   </data>
   <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 32</value>
@@ -750,20 +750,20 @@
   <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="LinkLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 288</value>
+    <value>174, 304</value>
   </data>
   <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 15</value>
+    <value>131, 15</value>
   </data>
   <data name="LinkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
     <value>Markdown guide</value>
+  </data>
+  <data name="LinkLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
   </data>
   <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
     <value>LinkLabel1</value>
@@ -784,10 +784,10 @@
     <value>NoControl</value>
   </data>
   <data name="SanitaryBuild.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 270</value>
+    <value>344, 300</value>
   </data>
   <data name="SanitaryBuild.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 23</value>
+    <value>146, 23</value>
   </data>
   <data name="SanitaryBuild.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -807,23 +807,23 @@
   <data name="&gt;&gt;SanitaryBuild.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="LinkLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="LinkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 117</value>
+    <value>171, 117</value>
   </data>
   <data name="LinkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 15</value>
+    <value>134, 15</value>
   </data>
   <data name="LinkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
   <data name="LinkLabel2.Text" xml:space="preserve">
     <value>HTML guide</value>
+  </data>
+  <data name="LinkLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
   </data>
   <data name="&gt;&gt;LinkLabel2.Name" xml:space="preserve">
     <value>LinkLabel2</value>
@@ -838,7 +838,7 @@
     <value>2</value>
   </data>
   <data name="relpath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 113</value>
+    <value>320, 125</value>
   </data>
   <data name="relpath.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 23</value>
@@ -865,10 +865,10 @@
     <value>NoControl</value>
   </data>
   <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 374</value>
+    <value>9, 382</value>
   </data>
   <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 49</value>
+    <value>290, 52</value>
   </data>
   <data name="Label15.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -895,7 +895,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>613, 431</value>
+    <value>613, 436</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>

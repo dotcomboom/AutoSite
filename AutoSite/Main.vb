@@ -1,4 +1,4 @@
-Imports System.Text.RegularExpressions
+﻿Imports System.Text.RegularExpressions
 Imports System.IO
 Imports System.Text
 Imports Microsoft.Win32
@@ -408,7 +408,7 @@ Public Class Main
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
-        LanguageMenu.Text = Threading.Thread.CurrentThread.CurrentUICulture.Name
+        LanguageMenu.Text = "🌐 " & Threading.Thread.CurrentThread.CurrentUICulture.Name
 
         If System.Environment.Version.Major < 4 Then
             WelshLang.Enabled = False

@@ -95,9 +95,9 @@ Partial Class Main
         Me.BuildMenu = New System.Windows.Forms.MenuItem()
         Me.BuildSite = New System.Windows.Forms.MenuItem()
         Me.SanitaryBuild = New System.Windows.Forms.MenuItem()
-        Me.BuildSep2 = New System.Windows.Forms.MenuItem()
+        Me.ToolsSep = New System.Windows.Forms.MenuItem()
         Me.OpenOutputMnu = New System.Windows.Forms.MenuItem()
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.ToolsSep2 = New System.Windows.Forms.MenuItem()
         Me.QuickstartMnu = New System.Windows.Forms.MenuItem()
         Me.HelpMenu = New System.Windows.Forms.MenuItem()
         Me.HelpTopics = New System.Windows.Forms.MenuItem()
@@ -163,6 +163,7 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
+        Me.HelpSep3 = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -191,7 +192,7 @@ Partial Class Main
         '
         'MenuBar
         '
-        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu, Me.LanguageMenu})
+        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu})
         '
         'FileMenu
         '
@@ -537,7 +538,7 @@ Partial Class Main
         'BuildMenu
         '
         Me.BuildMenu.Index = 4
-        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildSep2, Me.OpenOutputMnu, Me.MenuItem1, Me.QuickstartMnu})
+        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.ToolsSep, Me.OpenOutputMnu, Me.ToolsSep2, Me.QuickstartMnu})
         resources.ApplyResources(Me.BuildMenu, "BuildMenu")
         '
         'BuildSite
@@ -550,20 +551,20 @@ Partial Class Main
         Me.SanitaryBuild.Index = 1
         resources.ApplyResources(Me.SanitaryBuild, "SanitaryBuild")
         '
-        'BuildSep2
+        'ToolsSep
         '
-        Me.BuildSep2.Index = 2
-        resources.ApplyResources(Me.BuildSep2, "BuildSep2")
+        Me.ToolsSep.Index = 2
+        resources.ApplyResources(Me.ToolsSep, "ToolsSep")
         '
         'OpenOutputMnu
         '
         Me.OpenOutputMnu.Index = 3
         resources.ApplyResources(Me.OpenOutputMnu, "OpenOutputMnu")
         '
-        'MenuItem1
+        'ToolsSep2
         '
-        Me.MenuItem1.Index = 4
-        resources.ApplyResources(Me.MenuItem1, "MenuItem1")
+        Me.ToolsSep2.Index = 4
+        resources.ApplyResources(Me.ToolsSep2, "ToolsSep2")
         '
         'QuickstartMnu
         '
@@ -573,7 +574,7 @@ Partial Class Main
         'HelpMenu
         '
         Me.HelpMenu.Index = 5
-        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.AboutItem, Me.InspectorBtn})
+        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.AboutItem, Me.HelpSep3, Me.InspectorBtn, Me.LanguageMenu})
         resources.ApplyResources(Me.HelpMenu, "HelpMenu")
         '
         'HelpTopics
@@ -614,11 +615,11 @@ Partial Class Main
         'InspectorBtn
         '
         resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
-        Me.InspectorBtn.Index = 7
+        Me.InspectorBtn.Index = 8
         '
         'LanguageMenu
         '
-        Me.LanguageMenu.Index = 6
+        Me.LanguageMenu.Index = 9
         Me.LanguageMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnglishLang, Me.SpanishLang, Me.PolishLang, Me.WelshLang})
         resources.ApplyResources(Me.LanguageMenu, "LanguageMenu")
         '
@@ -955,6 +956,11 @@ Partial Class Main
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
+        'HelpSep3
+        '
+        Me.HelpSep3.Index = 7
+        resources.ApplyResources(Me.HelpSep3, "HelpSep3")
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -1061,7 +1067,7 @@ Partial Class Main
     Friend WithEvents HelpTopics As System.Windows.Forms.MenuItem
     Friend WithEvents SendFeedback As System.Windows.Forms.MenuItem
     Friend WithEvents HelpSep2 As System.Windows.Forms.MenuItem
-    Friend WithEvents BuildSep2 As System.Windows.Forms.MenuItem
+    Friend WithEvents ToolsSep As System.Windows.Forms.MenuItem
     Friend WithEvents BrowseSiteMnu As System.Windows.Forms.MenuItem
     Friend WithEvents BrowseSitePreviewMnu As System.Windows.Forms.MenuItem
     Friend WithEvents OpenOutputMnu As System.Windows.Forms.MenuItem
@@ -1101,7 +1107,7 @@ Partial Class Main
     Friend WithEvents SystemIcons As System.Windows.Forms.MenuItem
     Friend WithEvents NewSite As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFolder As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
+    Friend WithEvents ToolsSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents QuickstartMnu As System.Windows.Forms.MenuItem
     Friend WithEvents Build As System.Windows.Forms.ToolStripButton
     Friend WithEvents SanitaryBuildBtn As System.Windows.Forms.ToolStripButton
@@ -1121,4 +1127,5 @@ Partial Class Main
     Friend WithEvents SpanishLang As System.Windows.Forms.MenuItem
     Friend WithEvents PolishLang As System.Windows.Forms.MenuItem
     Friend WithEvents WelshLang As System.Windows.Forms.MenuItem
+    Friend WithEvents HelpSep3 As System.Windows.Forms.MenuItem
 End Class

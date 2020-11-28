@@ -302,7 +302,7 @@
     <value>Nie udało się zapisać</value>
   </data>
   <data name="Error_UpgradeFail" xml:space="preserve">
-    <value>Autosite nie może zmienić nazwy folderu in\ na pages\. Zmień nazwę folderu manualnie i otwórz swoją stronę ponownie.</value>
+    <value>AutoSite nie może zmienić nazwy folderu in\ na pages\. Zmień nazwę folderu manualnie i otwórz swoją stronę ponownie.</value>
   </data>
   <data name="Error_UpgradeFail_Title" xml:space="preserve">
     <value>Nie udało się przekonwertować</value>

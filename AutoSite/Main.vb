@@ -1,4 +1,4 @@
-﻿Imports System.Text.RegularExpressions
+Imports System.Text.RegularExpressions
 Imports System.IO
 Imports System.Text
 Imports Microsoft.Win32
@@ -95,7 +95,9 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub iconTheme()
+    Private Sub loadIconTheme()
+        VS2017item.Checked = False
+        XPitem.Checked = False
         If My.Settings.iconTheme = "xp" Then
             XPitem.Checked = True
             SiteTree.ImageList = XP
@@ -409,6 +411,7 @@ Public Class Main
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         LanguageMenu.Text = "🌐 " & Threading.Thread.CurrentThread.CurrentUICulture.Name
+        loadTheme()
 
         If System.Environment.Version.Major < 4 Then
             WelshLang.Enabled = False
@@ -657,20 +660,16 @@ Public Class Main
 
     Private Sub VS2017item_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VS2017item.Click
         If Not VS2017item.Checked Then
-            VS2017item.Checked = True
-            XPitem.Checked = False
             My.Settings.iconTheme = "vs2017"
         End If
-        iconTheme()
+        loadIconTheme()
     End Sub
 
     Private Sub XPitem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles XPitem.Click
         If Not XPitem.Checked Then
-            VS2017item.Checked = False
-            XPitem.Checked = True
             My.Settings.iconTheme = "xp"
         End If
-        iconTheme()
+        loadIconTheme()
     End Sub
 
     Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.BeforeLabelEdit
@@ -1788,17 +1787,25 @@ Public Class Main
     End Sub
 
     Private Sub cDark_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDark.Click
-        cDefault.Checked = False
-        cDark.Checked = True
-
-        setTheme(Color.FromArgb(61, 61, 61), Color.White)
+        My.Settings.theme = "Dark"
+        loadTheme()
     End Sub
 
     Private Sub cDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDefault.Click
-        cDefault.Checked = True
-        cDark.Checked = False
+        My.Settings.theme = ""
+        loadTheme()
+    End Sub
 
-        setTheme(Color.White, SystemColors.ControlText, SystemColors.Control)
+    Private Sub loadTheme()
+        cDefault.Checked = False
+        cDark.Checked = False
+        If My.Settings.theme = "Dark" Then
+            setTheme(Color.FromArgb(61, 61, 61), Color.White)
+            cDark.Checked = True
+        Else
+            setTheme(Color.White, SystemColors.ControlText, SystemColors.Control)
+            cDefault.Checked = True
+        End If
     End Sub
 
     Private Sub ChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles EnglishLang.Click, SpanishLang.Click, PolishLang.Click, WelshLang.Click

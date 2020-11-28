@@ -1,4 +1,4 @@
-Imports System.Text.RegularExpressions
+﻿Imports System.Text.RegularExpressions
 Imports System.IO
 Imports System.Text
 Imports Microsoft.Win32
@@ -522,11 +522,8 @@ Public Class Main
         VS2017.Images.Add("Template", My.Resources.Template)
         VS2017.Images.Add("Page", My.Resources.Page)
         VS2017.Images.Add("Include", My.Resources.Include)
-        VS2017.Images.Add("Build", My.Resources.Build)
-        VS2017.Images.Add("Attribute", My.Resources.Tag)
-        VS2017.Images.Add("Value", My.Resources.Value)
 
-        iconTheme()
+        loadIconTheme()
         checkOpen()
 
         WordWrap.Checked = My.Settings.WordWrap

@@ -193,7 +193,7 @@
     <value>1</value>
   </data>
   <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 274</value>
+    <value>153, 274</value>
   </data>
   <data name="TableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -256,7 +256,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="Attribute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 9</value>
+    <value>169, 9</value>
   </data>
   <data name="Attribute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -283,7 +283,7 @@
     <value>6</value>
   </data>
   <data name="AttIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 12</value>
+    <value>148, 12</value>
   </data>
   <data name="AttIcon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -345,6 +345,9 @@
   <data name="Display.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
     <value>27, 14</value>
   </data>
+  <data name="Display.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 9.75pt</value>
+  </data>
   <data name="Display.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 116</value>
   </data>
@@ -370,7 +373,7 @@
 </value>
   </data>
   <data name="Display.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 154</value>
+    <value>310, 154</value>
   </data>
   <data name="Display.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -427,7 +430,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 23</value>
+    <value>252, 23</value>
   </data>
   <data name="Value.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -484,10 +487,13 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>314, 321</value>
+    <value>332, 321</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>

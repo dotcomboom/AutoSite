@@ -22,6 +22,9 @@ Public Class About
         Me.Font = Main.getFont()
 
         Sysinfo.Text = System.Environment.OSVersion.VersionString & Environment.NewLine & System.Environment.Version.ToString
+        If System.Environment.Version.ToString = "4.0.30319.42000" Then
+            Sysinfo.Text &= " (or later .NET)" 'microsoft decided to deprecate system.environment.version when 4.5 came out for some reason
+        End If
         If Main.InspectorBtn.Enabled = True Then
             Sysinfo.Show()
         End If

@@ -1803,6 +1803,6 @@ Public Class Main
 
     Private Sub ChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles EnglishLang.Click, SpanishLang.Click, PolishLang.Click, WelshLang.Click
         My.Settings.language = sender.Tag
-        MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information)
+        MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information, Application.ProductName) ' Added ProductName because for some reason my installed version of .NET (4.8?) has System.Windows.Forms as the title/caption by default
     End Sub
 End Class

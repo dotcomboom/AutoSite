@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -112,29 +112,11 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="LicenseBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <data name="LicenseBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="LicenseBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="LicenseBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 272</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="LicenseBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="LicenseBox.Text" xml:space="preserve">
     <value>AutoSite is powered by these most excellent open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
@@ -212,334 +194,25 @@ License: GNU Lesser General Public License (LGPLv3)
 
 Copyright (C) Pavel Torgashov, 2011-2016. </value>
   </data>
-  <data name="&gt;&gt;LicenseBox.Name" xml:space="preserve">
-    <value>LicenseBox</value>
-  </data>
-  <data name="&gt;&gt;LicenseBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LicenseBox.Parent" xml:space="preserve">
-    <value>License</value>
-  </data>
-  <data name="&gt;&gt;LicenseBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="OK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="OK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 333</value>
-  </data>
-  <data name="OK.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="OK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="OK.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="OK.Text" xml:space="preserve">
     <value>Iawn</value>
-  </data>
-  <data name="&gt;&gt;OK.Name" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="&gt;&gt;OK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OK.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;OK.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 10</value>
-  </data>
-  <data name="Logo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 128</value>
-  </data>
-  <data name="Logo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="Logo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Logo.Name" xml:space="preserve">
-    <value>Logo</value>
-  </data>
-  <data name="&gt;&gt;Logo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Logo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Logo.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Version.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 7.8pt, style=Bold</value>
-  </data>
-  <data name="Version.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 143</value>
-  </data>
-  <data name="Version.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="Version.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 21</value>
-  </data>
-  <data name="Version.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="Version.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;Version.Name" xml:space="preserve">
-    <value>Version</value>
-  </data>
-  <data name="&gt;&gt;Version.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Version.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Version.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="GithubLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 174</value>
-  </data>
-  <data name="GithubLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="GithubLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 20</value>
-  </data>
-  <data name="GithubLink.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
   </data>
   <data name="GithubLink.Text" xml:space="preserve">
     <value>GitHub</value>
   </data>
-  <data name="GithubLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;GithubLink.Name" xml:space="preserve">
-    <value>GithubLink</value>
-  </data>
-  <data name="&gt;&gt;GithubLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GithubLink.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GithubLink.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="WebsiteLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 207</value>
-  </data>
-  <data name="WebsiteLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="WebsiteLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 20</value>
-  </data>
-  <data name="WebsiteLink.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="WebsiteLink.Text" xml:space="preserve">
     <value>Gwefan</value>
-  </data>
-  <data name="WebsiteLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;WebsiteLink.Name" xml:space="preserve">
-    <value>WebsiteLink</value>
-  </data>
-  <data name="&gt;&gt;WebsiteLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WebsiteLink.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;WebsiteLink.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Tabs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="License.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="License.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="License.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="License.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 282</value>
-  </data>
-  <data name="License.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="License.Text" xml:space="preserve">
     <value>Trwyddedau</value>
   </data>
-  <data name="&gt;&gt;License.Name" xml:space="preserve">
-    <value>License</value>
-  </data>
-  <data name="&gt;&gt;License.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;License.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;License.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ChangelogBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ChangelogBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="ChangelogBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="ChangelogBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 272</value>
-  </data>
-  <data name="ChangelogBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ChangelogBox.Name" xml:space="preserve">
-    <value>ChangelogBox</value>
-  </data>
-  <data name="&gt;&gt;ChangelogBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChangelogBox.Parent" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="&gt;&gt;ChangelogBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Changelog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="Changelog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Changelog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Changelog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 282</value>
-  </data>
-  <data name="Changelog.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="Changelog.Text" xml:space="preserve">
     <value>Log Newid</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;Changelog.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 10</value>
-  </data>
-  <data name="Tabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 310</value>
-  </data>
-  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Sysinfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="Sysinfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 321</value>
-  </data>
-  <data name="Sysinfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 38</value>
-  </data>
-  <data name="Sysinfo.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="Sysinfo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomLeft</value>
-  </data>
-  <data name="Sysinfo.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;Sysinfo.Name" xml:space="preserve">
-    <value>Sysinfo</value>
-  </data>
-  <data name="&gt;&gt;Sysinfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Sysinfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Sysinfo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>491, 370</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Amdan AutoSite</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

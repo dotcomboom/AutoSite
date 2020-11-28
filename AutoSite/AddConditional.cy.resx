@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -112,378 +112,39 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="TableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="TableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="OK_Button.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="OK_Button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 6</value>
-  </data>
-  <data name="OK_Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="OK_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>Iawn</value>
-  </data>
-  <data name="&gt;&gt;OK_Button.Name" xml:space="preserve">
-    <value>OK_Button</value>
-  </data>
-  <data name="&gt;&gt;OK_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OK_Button.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;OK_Button.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Cancel_Button.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="Cancel_Button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 6</value>
-  </data>
-  <data name="Cancel_Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="Cancel_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Canslo</value>
   </data>
-  <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
-    <value>Cancel_Button</value>
-  </data>
-  <data name="&gt;&gt;Cancel_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Cancel_Button.Parent" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 274</value>
-  </data>
-  <data name="TableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="TableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 35</value>
-  </data>
-  <data name="TableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel1.Name" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="TableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="OK_Button" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Cancel_Button" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="AttLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AttLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="AttLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="AttLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 15</value>
-  </data>
-  <data name="AttLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="AttLabel.Text" xml:space="preserve">
     <value>Priodoledd i wirio:</value>
-  </data>
-  <data name="&gt;&gt;AttLabel.Name" xml:space="preserve">
-    <value>AttLabel</value>
-  </data>
-  <data name="&gt;&gt;AttLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;AttLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="Attribute.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="Attribute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 9</value>
-  </data>
-  <data name="Attribute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Attribute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 23</value>
-  </data>
-  <data name="Attribute.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="Attribute.Text" xml:space="preserve">
     <value>path</value>
   </data>
-  <data name="&gt;&gt;Attribute.Name" xml:space="preserve">
-    <value>Attribute</value>
-  </data>
-  <data name="&gt;&gt;Attribute.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Attribute.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Attribute.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="AttIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 12</value>
-  </data>
-  <data name="AttIcon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="AttIcon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 16</value>
-  </data>
-  <data name="AttIcon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="AttIcon.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;AttIcon.Name" xml:space="preserve">
-    <value>AttIcon</value>
-  </data>
-  <data name="&gt;&gt;AttIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttIcon.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;AttIcon.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PassLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PassLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 96</value>
-  </data>
-  <data name="PassLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="PassLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 15</value>
-  </data>
-  <data name="PassLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
   <data name="PassLabel.Text" xml:space="preserve">
     <value>Os yw'r priodoledd yn pasio'r amod hwn, allbwn:</value>
-  </data>
-  <data name="&gt;&gt;PassLabel.Name" xml:space="preserve">
-    <value>PassLabel</value>
-  </data>
-  <data name="&gt;&gt;PassLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PassLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PassLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Display.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="Display.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
-    <value>27, 14</value>
-  </data>
-  <data name="Display.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 116</value>
-  </data>
-  <data name="Display.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Display.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 154</value>
-  </data>
-  <data name="Display.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Display.Name" xml:space="preserve">
-    <value>Display</value>
-  </data>
-  <data name="&gt;&gt;Display.Type" xml:space="preserve">
-    <value>FastColoredTextBoxNS.FastColoredTextBox, FastColoredTextBox, Version=2.16.26.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b</value>
-  </data>
-  <data name="&gt;&gt;Display.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Display.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="NotChk.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="NotChk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 42</value>
-  </data>
-  <data name="NotChk.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="NotChk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
-  </data>
-  <data name="NotChk.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="NotChk.Text" xml:space="preserve">
     <value>NID</value>
   </data>
-  <data name="&gt;&gt;NotChk.Name" xml:space="preserve">
-    <value>NotChk</value>
-  </data>
-  <data name="&gt;&gt;NotChk.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NotChk.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;NotChk.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 40</value>
-  </data>
-  <data name="Value.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 23</value>
-  </data>
-  <data name="Value.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="Value.Text" xml:space="preserve">
     <value>index.md</value>
-  </data>
-  <data name="&gt;&gt;Value.Name" xml:space="preserve">
-    <value>Value</value>
-  </data>
-  <data name="&gt;&gt;Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Value.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Empty.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Empty.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 68</value>
-  </data>
-  <data name="Empty.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="Empty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 19</value>
-  </data>
-  <data name="Empty.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
   </data>
   <data name="Empty.Text" xml:space="preserve">
     <value>Gwag</value>
   </data>
-  <data name="&gt;&gt;Empty.Name" xml:space="preserve">
-    <value>Empty</value>
-  </data>
-  <data name="&gt;&gt;Empty.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Empty.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Empty.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>314, 321</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Mewnosod Rhan Amodol</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AddConditional</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

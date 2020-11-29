@@ -132,11 +132,17 @@
   <data name="CloseSite.Text" xml:space="preserve">
     <value>Cerrar sitio</value>
   </data>
+  <data name="FileSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="Save.Text" xml:space="preserve">
     <value>Guardar</value>
   </data>
   <data name="SaveAll.Text" xml:space="preserve">
     <value>Guardar todo</value>
+  </data>
+  <data name="FileSep3.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="Recent1.Text" xml:space="preserve">
     <value>Recent 1</value>
@@ -153,6 +159,9 @@
   <data name="Recent5.Text" xml:space="preserve">
     <value>Recent 5</value>
   </data>
+  <data name="RecentSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="ClearRecents.Text" xml:space="preserve">
     <value>Limpiar sitios recientes</value>
   </data>
@@ -161,6 +170,9 @@
   </data>
   <data name="InstallPackMnu.Text" xml:space="preserve">
     <value>Instalar paquete...</value>
+  </data>
+  <data name="FileSep4.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
     <value>Salir</value>
@@ -174,6 +186,9 @@
   <data name="Redo.Text" xml:space="preserve">
     <value>Rehacer</value>
   </data>
+  <data name="EditSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="Cut.Text" xml:space="preserve">
     <value>Cortar</value>
   </data>
@@ -183,8 +198,14 @@
   <data name="Paste.Text" xml:space="preserve">
     <value>Pegar</value>
   </data>
+  <data name="EditSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="SelectAll.Text" xml:space="preserve">
     <value>Seleccionar todo</value>
+  </data>
+  <data name="EditSep3.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="GoToMnu.Text" xml:space="preserve">
     <value>Ir a...</value>
@@ -194,6 +215,9 @@
   </data>
   <data name="Replace.Text" xml:space="preserve">
     <value>Reemplazar...</value>
+  </data>
+  <data name="EditSep4.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="QuickInsertMnu.Text" xml:space="preserve">
     <value>Quick Insert</value>
@@ -213,11 +237,17 @@
   <data name="WideCaret.Text" xml:space="preserve">
     <value>Cuidado ancho</value>
   </data>
+  <data name="FormatSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="SyntaxHighlight.Text" xml:space="preserve">
     <value>Resaltado sintáctico experimental</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
     <value>Vista previa en vivo</value>
+  </data>
+  <data name="FormatSep2.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Fuentes monoespaciales...</value>
@@ -236,6 +266,9 @@
   </data>
   <data name="PreviewPanel.Text" xml:space="preserve">
     <value>Vista previa</value>
+  </data>
+  <data name="ViewSep.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="VS2017item.Text" xml:space="preserve">
     <value>Visual Studio 2017</value>
@@ -261,11 +294,17 @@
   <data name="RefreshItem.Text" xml:space="preserve">
     <value>Actualizar Explorador</value>
   </data>
+  <data name="ViewSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="PreviewPage.Text" xml:space="preserve">
     <value>Previsualizar archivo</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
     <value>Ver salida</value>
+  </data>
+  <data name="ViewSep3.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="BrowseSiteMnu.Text" xml:space="preserve">
     <value>Navegar por el sitio en el navegador por defecto</value>
@@ -282,8 +321,14 @@
   <data name="SanitaryBuild.Text" xml:space="preserve">
     <value>Construcción sanitaria...</value>
   </data>
+  <data name="ToolsSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="OpenOutputMnu.Text" xml:space="preserve">
     <value>Abrir carpeta de salida</value>
+  </data>
+  <data name="ToolsSep2.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="QuickstartMnu.Text" xml:space="preserve">
     <value>Inicio rápido</value>
@@ -294,6 +339,9 @@
   <data name="HelpTopics.Text" xml:space="preserve">
     <value>Manual del AutoSite</value>
   </data>
+  <data name="HelpSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="Website.Text" xml:space="preserve">
     <value>Sitio web</value>
   </data>
@@ -303,14 +351,17 @@
   <data name="SendFeedback.Text" xml:space="preserve">
     <value>Enviar Comentarios</value>
   </data>
+  <data name="HelpSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="AboutItem.Text" xml:space="preserve">
     <value>Acerca de AutoSite</value>
   </data>
+  <data name="HelpSep3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="InspectorBtn.Text" xml:space="preserve">
     <value>Inspector de GUI</value>
-  </data>
-  <data name="HelpMenu.Text" xml:space="preserve">
-    <value>Ayuda</value>
   </data>
   <data name="EnglishLang.Text" xml:space="preserve">
     <value>English</value>
@@ -327,11 +378,17 @@
   <data name="LanguageMenu.Text" xml:space="preserve">
     <value>🌐</value>
   </data>
+  <data name="HelpMenu.Text" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
   <data name="OpenContext.Text" xml:space="preserve">
     <value>Abrir</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
     <value>Abrir en programa predeterminado</value>
+  </data>
+  <data name="ContextSep.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="CopyCon.Text" xml:space="preserve">
     <value>Copiar</value>
@@ -342,14 +399,23 @@
   <data name="AddFilesCon.Text" xml:space="preserve">
     <value>Añadir archivos...</value>
   </data>
+  <data name="ContextSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="DeleteCon.Text" xml:space="preserve">
     <value>Eliminar</value>
   </data>
   <data name="RenameCon.Text" xml:space="preserve">
     <value>Renombrar</value>
   </data>
+  <data name="ContextSep3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
     <value>Carpeta</value>
+  </data>
+  <data name="NewSep.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="NewHTMLCon.Text" xml:space="preserve">
     <value>Página HTML (.html)</value>
@@ -359,6 +425,9 @@
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
     <value>Guión PHP (.php)</value>
+  </data>
+  <data name="NewSep2.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
     <value>Hojas de estilo CSS (.css)</value>

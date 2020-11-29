@@ -132,11 +132,17 @@
   <data name="CloseSite.Text" xml:space="preserve">
     <value>Cau Gwefan</value>
   </data>
+  <data name="FileSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="Save.Text" xml:space="preserve">
     <value>Cadw</value>
   </data>
   <data name="SaveAll.Text" xml:space="preserve">
     <value>Cadw'r cwbl</value>
+  </data>
+  <data name="FileSep3.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="Recent1.Text" xml:space="preserve">
     <value>Recent 1</value>
@@ -153,6 +159,9 @@
   <data name="Recent5.Text" xml:space="preserve">
     <value>Recent 5</value>
   </data>
+  <data name="RecentSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="ClearRecents.Text" xml:space="preserve">
     <value>Cliriwch Gwefanau Diweddar</value>
   </data>
@@ -161,6 +170,9 @@
   </data>
   <data name="InstallPackMnu.Text" xml:space="preserve">
     <value>Gosod Pecyn...</value>
+  </data>
+  <data name="FileSep4.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
     <value>Gadael</value>
@@ -174,6 +186,9 @@
   <data name="Redo.Text" xml:space="preserve">
     <value>Ail-wneud</value>
   </data>
+  <data name="EditSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="Cut.Text" xml:space="preserve">
     <value>Torri</value>
   </data>
@@ -183,8 +198,14 @@
   <data name="Paste.Text" xml:space="preserve">
     <value>Pastiwch</value>
   </data>
+  <data name="EditSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="SelectAll.Text" xml:space="preserve">
     <value>Dewisiwch Popeth</value>
+  </data>
+  <data name="EditSep3.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="GoToMnu.Text" xml:space="preserve">
     <value>Mynd i...</value>
@@ -194,6 +215,9 @@
   </data>
   <data name="Replace.Text" xml:space="preserve">
     <value>Disodli...</value>
+  </data>
+  <data name="EditSep4.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="QuickInsertMnu.Text" xml:space="preserve">
     <value>Mewnosodiad Cyflym</value>
@@ -213,11 +237,17 @@
   <data name="WideCaret.Text" xml:space="preserve">
     <value>Gofal Eang</value>
   </data>
+  <data name="FormatSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="SyntaxHighlight.Text" xml:space="preserve">
     <value>Tynnu sylw Cystrawen Arbrofol</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
     <value>Rhagolwg Byw</value>
+  </data>
+  <data name="FormatSep2.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Ffont Monospace...</value>
@@ -236,6 +266,9 @@
   </data>
   <data name="PreviewPanel.Text" xml:space="preserve">
     <value>Rhagolowg</value>
+  </data>
+  <data name="ViewSep.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="VS2017item.Text" xml:space="preserve">
     <value>Visual Studio 2017</value>
@@ -261,11 +294,17 @@
   <data name="RefreshItem.Text" xml:space="preserve">
     <value>Adnewyddu Archwiliwr</value>
   </data>
+  <data name="ViewSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="PreviewPage.Text" xml:space="preserve">
     <value>Ffeil Rhagolwg</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
     <value>Gweld Allbwn</value>
+  </data>
+  <data name="ViewSep3.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="BrowseSiteMnu.Text" xml:space="preserve">
     <value>Porwch Gwefan yn y Porwr Diofyn</value>
@@ -282,8 +321,14 @@
   <data name="SanitaryBuild.Text" xml:space="preserve">
     <value>Adeilad Iechydol...</value>
   </data>
+  <data name="ToolsSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="OpenOutputMnu.Text" xml:space="preserve">
     <value>Agor Ffolder Allbwn</value>
+  </data>
+  <data name="ToolsSep2.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="QuickstartMnu.Text" xml:space="preserve">
     <value>Dechrau Gyflym</value>
@@ -294,6 +339,9 @@
   <data name="HelpTopics.Text" xml:space="preserve">
     <value>Llawlyfr AutoSite</value>
   </data>
+  <data name="HelpSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="Website.Text" xml:space="preserve">
     <value>Gwefan</value>
   </data>
@@ -303,14 +351,17 @@
   <data name="SendFeedback.Text" xml:space="preserve">
     <value>Anfon Adborth</value>
   </data>
+  <data name="HelpSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="AboutItem.Text" xml:space="preserve">
     <value>Amdan AutoSite</value>
   </data>
+  <data name="HelpSep3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="InspectorBtn.Text" xml:space="preserve">
     <value>Arolygydd GUI</value>
-  </data>
-  <data name="HelpMenu.Text" xml:space="preserve">
-    <value>Help</value>
   </data>
   <data name="EnglishLang.Text" xml:space="preserve">
     <value>English</value>
@@ -327,11 +378,17 @@
   <data name="LanguageMenu.Text" xml:space="preserve">
     <value>🌐</value>
   </data>
+  <data name="HelpMenu.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
   <data name="OpenContext.Text" xml:space="preserve">
     <value>Agor</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
     <value>Agor yn Rhaglen Ddiofyn</value>
+  </data>
+  <data name="ContextSep.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="CopyCon.Text" xml:space="preserve">
     <value>Copiwch</value>
@@ -342,14 +399,23 @@
   <data name="AddFilesCon.Text" xml:space="preserve">
     <value>Ychwanegu Ffeiliau...</value>
   </data>
+  <data name="ContextSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="DeleteCon.Text" xml:space="preserve">
     <value>Dileu</value>
   </data>
   <data name="RenameCon.Text" xml:space="preserve">
     <value>Ailenwi</value>
   </data>
+  <data name="ContextSep3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
     <value>Ffolder</value>
+  </data>
+  <data name="NewSep.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="NewHTMLCon.Text" xml:space="preserve">
     <value>Tudalen HTML (.html)</value>
@@ -359,6 +425,9 @@
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
     <value>Sgript PHP (.php)</value>
+  </data>
+  <data name="NewSep2.Text" xml:space="preserve">
+    <value>-</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
     <value>Dalenarddull CSS (.css)</value>

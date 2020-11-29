@@ -120,6 +120,9 @@
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Zamknij</value>
   </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>Stwórz swój pierwszy szablon</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Label5.Text" xml:space="preserve">
     <value>Stwórz swoją pierwszą stronę</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="indexmd.Text" xml:space="preserve">
     <value>index.md</value>
@@ -156,6 +162,9 @@
   <data name="Label12.Text" xml:space="preserve">
     <value>Dodaj zawartość</value>
   </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="Build.Text" xml:space="preserve">
     <value>Zbuduj</value>
   </data>
@@ -164,6 +173,9 @@
   </data>
   <data name="Label10.Text" xml:space="preserve">
     <value>Zbuduj swoją stronę</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
     <value>Podręcznik Markdown</value>

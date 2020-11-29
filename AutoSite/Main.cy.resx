@@ -142,79 +142,39 @@
   <data name="FormatMenu.Text" xml:space="preserve">
     <value>Ff&amp;ormat</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>Alt1</value>
-  </data>
-  <data name="ExplorerPanel.Text" xml:space="preserve">
-    <value>Archwiliwr</value>
-  </data>
-  <data name="BuildPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>Alt2</value>
-  </data>
-  <data name="BuildPanel.Text" xml:space="preserve">
-    <value>Apricot</value>
-  </data>
-  <data name="EditorPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>Alt3</value>
-  </data>
-  <data name="EditorPanel.Text" xml:space="preserve">
-    <value>Golygydd</value>
-  </data>
-  <data name="PreviewPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>Alt4</value>
-  </data>
-  <data name="PreviewPanel.Text" xml:space="preserve">
-    <value>Rhagolowg</value>
-  </data>
-  <data name="ViewSep.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Thema Explorer Eicon</value>
-  </data>
-  <data name="ColorScheme.Text" xml:space="preserve">
-    <value>Cynllun Lliw (beta)</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="ColorScheme.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SystemIcons.Text" xml:space="preserve">
-    <value>Defnyddiwch Eiconau System</value>
-  </data>
-  <data name="RefreshItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlR</value>
-  </data>
-  <data name="RefreshItem.Text" xml:space="preserve">
-    <value>Adnewyddu Archwiliwr</value>
-  </data>
-  <data name="ViewSep2.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="PreviewPage.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlP</value>
-  </data>
-  <data name="PreviewPage.Text" xml:space="preserve">
-    <value>Ffeil Rhagolwg</value>
-  </data>
-  <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>Gweld Allbwn</value>
-  </data>
-  <data name="ViewSep3.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="BrowseSiteMnu.Text" xml:space="preserve">
-    <value>Porwch Gwefan yn y Porwr Diofyn</value>
-  </data>
-  <data name="BrowseSitePreviewMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlShiftP</value>
-  </data>
-  <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Porwch Gwefan yn Rhagolwg</value>
-  </data>
   <data name="ViewMenu.Text" xml:space="preserve">
     <value>&amp;Gweld</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlB</value>
+  </data>
+  <data name="BuildSite.Text" xml:space="preserve">
+    <value>Adeiladu Gwefan</value>
+  </data>
+  <data name="SanitaryBuild.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlShiftB</value>
+  </data>
+  <data name="SanitaryBuild.Text" xml:space="preserve">
+    <value>Adeilad Iechydol...</value>
+  </data>
+  <data name="ToolsSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="OpenOutputMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlShiftO</value>
+  </data>
+  <data name="OpenOutputMnu.Text" xml:space="preserve">
+    <value>Agor Ffolder Allbwn</value>
+  </data>
+  <data name="ToolsSep2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="QuickstartMnu.Text" xml:space="preserve">
+    <value>Dechrau Gyflym</value>
+  </data>
+  <data name="ShowVersion.Text" xml:space="preserve">
+    <value>Show version</value>
   </data>
   <data name="BuildMenu.Text" xml:space="preserve">
     <value>&amp;Offer</value>
@@ -240,6 +200,7 @@
   <data name="CloseFile.Text" xml:space="preserve">
     <value>Cau</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="CloseSite.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -429,11 +390,47 @@
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Ffont Monospace...</value>
   </data>
+  <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>Alt1</value>
+  </data>
+  <data name="ExplorerPanel.Text" xml:space="preserve">
+    <value>Archwiliwr</value>
+  </data>
+  <data name="BuildPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>Alt2</value>
+  </data>
+  <data name="BuildPanel.Text" xml:space="preserve">
+    <value>Apricot</value>
+  </data>
+  <data name="EditorPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>Alt3</value>
+  </data>
+  <data name="EditorPanel.Text" xml:space="preserve">
+    <value>Golygydd</value>
+  </data>
+  <data name="PreviewPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>Alt4</value>
+  </data>
+  <data name="PreviewPanel.Text" xml:space="preserve">
+    <value>Rhagolowg</value>
+  </data>
+  <data name="ViewSep.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="IconThemeMenu.Text" xml:space="preserve">
+    <value>Thema Explorer Eicon</value>
+  </data>
   <data name="VS2017item.Text" xml:space="preserve">
     <value>Visual Studio 2017</value>
   </data>
   <data name="XPitem.Text" xml:space="preserve">
     <value>XP</value>
+  </data>
+  <data name="ColorScheme.Text" xml:space="preserve">
+    <value>Cynllun Lliw (beta)</value>
+  </data>
+  <data name="ColorScheme.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="cDefault.Text" xml:space="preserve">
     <value>Diofyn</value>
@@ -441,32 +438,38 @@
   <data name="cDark.Text" xml:space="preserve">
     <value>Tywyll</value>
   </data>
-  <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlB</value>
+  <data name="SystemIcons.Text" xml:space="preserve">
+    <value>Defnyddiwch Eiconau System</value>
   </data>
-  <data name="BuildSite.Text" xml:space="preserve">
-    <value>Adeiladu Gwefan</value>
+  <data name="RefreshItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlR</value>
   </data>
-  <data name="SanitaryBuild.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlShiftB</value>
+  <data name="RefreshItem.Text" xml:space="preserve">
+    <value>Adnewyddu Archwiliwr</value>
   </data>
-  <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Adeilad Iechydol...</value>
-  </data>
-  <data name="ToolsSep.Text" xml:space="preserve">
+  <data name="ViewSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="OpenOutputMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlShiftO</value>
+  <data name="PreviewPage.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlP</value>
   </data>
-  <data name="OpenOutputMnu.Text" xml:space="preserve">
-    <value>Agor Ffolder Allbwn</value>
+  <data name="PreviewPage.Text" xml:space="preserve">
+    <value>Ffeil Rhagolwg</value>
   </data>
-  <data name="ToolsSep2.Text" xml:space="preserve">
+  <data name="ViewFileOutput.Text" xml:space="preserve">
+    <value>Gweld Allbwn</value>
+  </data>
+  <data name="ViewSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="QuickstartMnu.Text" xml:space="preserve">
-    <value>Dechrau Gyflym</value>
+  <data name="BrowseSiteMnu.Text" xml:space="preserve">
+    <value>Porwch Gwefan yn y Porwr Diofyn</value>
+  </data>
+  <data name="BrowseSitePreviewMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlShiftP</value>
+  </data>
+  <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
+    <value>Porwch Gwefan yn Rhagolwg</value>
   </data>
   <data name="HelpTopics.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1461,6 +1464,12 @@
   <data name="&gt;&gt;QuickstartMnu.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ShowVersion.Name" xml:space="preserve">
+    <value>ShowVersion</value>
+  </data>
+  <data name="&gt;&gt;ShowVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;HelpMenu.Name" xml:space="preserve">
     <value>HelpMenu</value>
   </data>
@@ -1761,12 +1770,6 @@
   <data name="&gt;&gt;OpenPack.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ShowVersion.Name" xml:space="preserve">
-    <value>ShowVersion</value>
-  </data>
-  <data name="&gt;&gt;ShowVersion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
@@ -2051,8 +2054,5 @@ Adeiladu eich gwefan i boblogi'r Map Priodoledd.</value>
   </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
     <value>Pecyn Zip AutoSite (*.zip)|*.zip</value>
-  </data>
-  <data name="ShowVersion.Text" xml:space="preserve">
-    <value>Show version</value>
   </data>
 </root>

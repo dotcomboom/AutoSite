@@ -99,6 +99,7 @@ Partial Class Main
         Me.OpenOutputMnu = New System.Windows.Forms.MenuItem()
         Me.ToolsSep2 = New System.Windows.Forms.MenuItem()
         Me.QuickstartMnu = New System.Windows.Forms.MenuItem()
+        Me.ShowVersion = New System.Windows.Forms.MenuItem()
         Me.HelpMenu = New System.Windows.Forms.MenuItem()
         Me.HelpTopics = New System.Windows.Forms.MenuItem()
         Me.HelpSep = New System.Windows.Forms.MenuItem()
@@ -164,7 +165,6 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
-        Me.ShowVersion = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -434,35 +434,35 @@ Partial Class Main
         'ExplorerPanel
         '
         Me.ExplorerPanel.Checked = True
-        Me.ExplorerPanel.Index = 1
+        Me.ExplorerPanel.Index = 0
         resources.ApplyResources(Me.ExplorerPanel, "ExplorerPanel")
         '
         'BuildPanel
         '
         Me.BuildPanel.Checked = True
-        Me.BuildPanel.Index = 2
+        Me.BuildPanel.Index = 1
         resources.ApplyResources(Me.BuildPanel, "BuildPanel")
         '
         'EditorPanel
         '
         Me.EditorPanel.Checked = True
-        Me.EditorPanel.Index = 3
+        Me.EditorPanel.Index = 2
         resources.ApplyResources(Me.EditorPanel, "EditorPanel")
         '
         'PreviewPanel
         '
         Me.PreviewPanel.Checked = True
-        Me.PreviewPanel.Index = 4
+        Me.PreviewPanel.Index = 3
         resources.ApplyResources(Me.PreviewPanel, "PreviewPanel")
         '
         'ViewSep
         '
-        Me.ViewSep.Index = 5
+        Me.ViewSep.Index = 4
         resources.ApplyResources(Me.ViewSep, "ViewSep")
         '
         'IconThemeMenu
         '
-        Me.IconThemeMenu.Index = 6
+        Me.IconThemeMenu.Index = 5
         Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
         resources.ApplyResources(Me.IconThemeMenu, "IconThemeMenu")
         '
@@ -480,7 +480,7 @@ Partial Class Main
         '
         'ColorScheme
         '
-        Me.ColorScheme.Index = 7
+        Me.ColorScheme.Index = 6
         Me.ColorScheme.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.cDefault, Me.cDark})
         resources.ApplyResources(Me.ColorScheme, "ColorScheme")
         '
@@ -498,42 +498,42 @@ Partial Class Main
         'SystemIcons
         '
         Me.SystemIcons.Checked = True
-        Me.SystemIcons.Index = 8
+        Me.SystemIcons.Index = 7
         resources.ApplyResources(Me.SystemIcons, "SystemIcons")
         '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 9
+        Me.RefreshItem.Index = 8
         resources.ApplyResources(Me.RefreshItem, "RefreshItem")
         '
         'ViewSep2
         '
-        Me.ViewSep2.Index = 10
+        Me.ViewSep2.Index = 9
         resources.ApplyResources(Me.ViewSep2, "ViewSep2")
         '
         'PreviewPage
         '
-        Me.PreviewPage.Index = 11
+        Me.PreviewPage.Index = 10
         resources.ApplyResources(Me.PreviewPage, "PreviewPage")
         '
         'ViewFileOutput
         '
-        Me.ViewFileOutput.Index = 12
+        Me.ViewFileOutput.Index = 11
         resources.ApplyResources(Me.ViewFileOutput, "ViewFileOutput")
         '
         'ViewSep3
         '
-        Me.ViewSep3.Index = 13
+        Me.ViewSep3.Index = 12
         resources.ApplyResources(Me.ViewSep3, "ViewSep3")
         '
         'BrowseSiteMnu
         '
-        Me.BrowseSiteMnu.Index = 14
+        Me.BrowseSiteMnu.Index = 13
         resources.ApplyResources(Me.BrowseSiteMnu, "BrowseSiteMnu")
         '
         'BrowseSitePreviewMnu
         '
-        Me.BrowseSitePreviewMnu.Index = 15
+        Me.BrowseSitePreviewMnu.Index = 14
         resources.ApplyResources(Me.BrowseSitePreviewMnu, "BrowseSitePreviewMnu")
         '
         'BuildMenu
@@ -571,6 +571,11 @@ Partial Class Main
         '
         Me.QuickstartMnu.Index = 5
         resources.ApplyResources(Me.QuickstartMnu, "QuickstartMnu")
+        '
+        'ShowVersion
+        '
+        Me.ShowVersion.Index = 6
+        resources.ApplyResources(Me.ShowVersion, "ShowVersion")
         '
         'HelpMenu
         '
@@ -961,11 +966,6 @@ Partial Class Main
         'OpenPack
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
-        '
-        'ShowVersion
-        '
-        Me.ShowVersion.Index = 6
-        resources.ApplyResources(Me.ShowVersion, "ShowVersion")
         '
         'Main
         '

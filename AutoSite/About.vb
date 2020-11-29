@@ -61,16 +61,4 @@ Public Class About
         Main.ColorScheme.Visible = True
         Sysinfo.Show()
     End Sub
-
-    Private Sub Version_DoubleClick(sender As System.Object, e As MouseEventArgs) Handles Version.MouseDoubleClick
-        If e.Button = Windows.Forms.MouseButtons.Right Then
-            Dim oldwtitle As String = Main.wTitle
-            Main.wTitle = "AutoSite"
-            Dim v = InputBox("Enter a version number to display, or leave blank")
-            If v.Length > 0 Then
-                Main.wTitle &= " " & v
-            End If
-            Main.Text = Main.Text.Replace(oldwtitle, Main.wTitle)
-        End If
-    End Sub
 End Class

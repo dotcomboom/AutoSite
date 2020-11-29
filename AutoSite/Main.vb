@@ -461,15 +461,7 @@ Public Class Main
 
         Me.Font = getFont()
 
-        wTitle &= " " & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
-        If My.Application.Info.Version.Build > 0 Then
-            wTitle &= "." & My.Application.Info.Version.Build
-        End If
-        If My.Application.Info.Version.Revision > 0 Then
-            wTitle &= "." & My.Application.Info.Version.Revision
-        End If
-        wTitle &= " " & My.Application.Info.Description
-        Me.Text = wTitle
+        updatewTitle()
 
         If My.Settings.explorerOpen Then
             ExplorerPanel.Checked = True
@@ -1815,4 +1807,28 @@ Public Class Main
         My.Settings.language = sender.Tag
         MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information, Application.ProductName) ' Added ProductName because for some reason my installed version of .NET (4.8?) has System.Windows.Forms as the title/caption by default
     End Sub
+
+    Private Sub ShowVersion_Click(sender As System.Object, e As System.EventArgs) Handles ShowVersion.Click
+        My.Settings.showVersion = Not My.Settings.showVersion
+        updatewTitle()
+    End Sub
+
+    Private Sub updatewTitle()
+        ShowVersion.Checked = My.Settings.showVersion
+
+        Dim oldwtitle As String = wTitle
+        wTitle = "AutoSite"
+        If My.Settings.showVersion Then
+            wTitle &= " " & My.Application.Info.Version.Major & "." & My.Application.Info.Version.Minor
+            If My.Application.Info.Version.Build > 0 Then
+                wTitle &= "." & My.Application.Info.Version.Build
+            End If
+            If My.Application.Info.Version.Revision > 0 Then
+                wTitle &= "." & My.Application.Info.Version.Revision
+            End If
+            wTitle &= " " & My.Application.Info.Description
+        End If
+        Me.Text = Me.Text.Replace(oldwtitle, wTitle)
+    End Sub
+
 End Class

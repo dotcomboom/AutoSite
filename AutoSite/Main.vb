@@ -517,11 +517,17 @@ Public Class Main
         XP.Images.Add("Template", My.Resources.XP_Template)
         XP.Images.Add("Page", My.Resources.XP_Page)
         XP.Images.Add("Include", My.Resources.XP_Include)
+        XP.Images.Add("Build", My.Resources.Build)
+        XP.Images.Add("Attribute", My.Resources.Tag)
+        XP.Images.Add("Value", My.Resources.Value)
 
         VS2017.Images.Add("Folder", My.Resources.Folder)
         VS2017.Images.Add("Template", My.Resources.Template)
         VS2017.Images.Add("Page", My.Resources.Page)
         VS2017.Images.Add("Include", My.Resources.Include)
+        VS2017.Images.Add("Build", My.Resources.Build)
+        VS2017.Images.Add("Attribute", My.Resources.Tag)
+        VS2017.Images.Add("Value", My.Resources.Value)
 
         loadIconTheme()
         checkOpen()

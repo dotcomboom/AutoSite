@@ -538,10 +538,10 @@
     <value>Abrir</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Open with default program</value>
+    <value>Abrir en programa predeterminado</value>
   </data>
   <data name="OpenFileLocation.Text" xml:space="preserve">
-    <value>Open file location</value>
+    <value>Abrir la ubicación del archivo</value>
   </data>
   <data name="ContextSep.Text" xml:space="preserve">
     <value>-</value>

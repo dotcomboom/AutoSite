@@ -394,10 +394,13 @@ Użyj tego, aby rozpocząć ścieżki do arkuszy stylów, obrazów i innych stro
     <value>Wyjście: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Dodaj pliki do {0}</value>
+    <value>Add files to {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
     <value>Strona startowa</value>
+  </data>
+  <data name="__" xml:space="preserve">
+    <value></value>
   </data>
   <data name="Explorer_Includes" xml:space="preserve">
     <value>Zawartość</value>
@@ -413,5 +416,17 @@ Użyj tego, aby rozpocząć ścieżki do arkuszy stylów, obrazów i innych stro
   </data>
   <data name="UI_Editor_ViewFile" xml:space="preserve">
     <value>Widok</value>
+  </data>
+  <data name="UI_Open" xml:space="preserve">
+    <value>Otwórz</value>
+  </data>
+  <data name="UI_OpenFileLocation" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="UI_OpenFolderLocation" xml:space="preserve">
+    <value>Open folder location</value>
+  </data>
+  <data name="UI_OpenWithDefault" xml:space="preserve">
+    <value>Open with default program</value>
   </data>
 </root>

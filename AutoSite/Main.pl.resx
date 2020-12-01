@@ -463,7 +463,7 @@
     <value>Szybki start</value>
   </data>
   <data name="ShowVersion.Text" xml:space="preserve">
-    <value>Show version</value>
+    <value>Pokaż wersję</value>
   </data>
   <data name="BuildMenu.Text" xml:space="preserve">
     <value>&amp;Narzędzia</value>
@@ -538,10 +538,10 @@
     <value>Otwórz</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Open with default program</value>
+    <value>Otwórz w domyślnym programie</value>
   </data>
   <data name="OpenFileLocation.Text" xml:space="preserve">
-    <value>Open file location</value>
+    <value>Otwórz lokalizację pliku</value>
   </data>
   <data name="ContextSep.Text" xml:space="preserve">
     <value>-</value>

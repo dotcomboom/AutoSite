@@ -423,12 +423,12 @@ páginas.</value>
     <value>Abrir</value>
   </data>
   <data name="UI_OpenFileLocation" xml:space="preserve">
-    <value>Open file location</value>
+    <value>Abrir la ubicación del archivo</value>
   </data>
   <data name="UI_OpenFolderLocation" xml:space="preserve">
-    <value>Abrir ubicación de carpeta</value>
+    <value>Abrir la ubicación de la carpeta</value>
   </data>
   <data name="UI_OpenWithDefault" xml:space="preserve">
-    <value>Open with default program</value>
+    <value>Abrir en programa predeterminado</value>
   </data>
 </root>

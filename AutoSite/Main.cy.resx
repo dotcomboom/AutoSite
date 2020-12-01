@@ -538,7 +538,10 @@
     <value>Agor</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Agor yn Rhaglen Ddiofyn</value>
+    <value>Open with default program</value>
+  </data>
+  <data name="OpenFileLocation.Text" xml:space="preserve">
+    <value>Open file location</value>
   </data>
   <data name="ContextSep.Text" xml:space="preserve">
     <value>-</value>
@@ -550,7 +553,7 @@
     <value>Pastiwch</value>
   </data>
   <data name="AddFilesCon.Text" xml:space="preserve">
-    <value>Ychwanegu Ffeiliau...</value>
+    <value>Rhoi ffeiliau...</value>
   </data>
   <data name="ContextSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -1777,6 +1780,12 @@ Adeiladu eich gwefan i boblogi'r Map Priodoledd.</value>
     <value>OpenInDefault</value>
   </data>
   <data name="&gt;&gt;OpenInDefault.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenFileLocation.Name" xml:space="preserve">
+    <value>OpenFileLocation</value>
+  </data>
+  <data name="&gt;&gt;OpenFileLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ContextSep.Name" xml:space="preserve">

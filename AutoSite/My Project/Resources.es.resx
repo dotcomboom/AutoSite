@@ -396,10 +396,13 @@ páginas.</value>
     <value>Salida: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Añadir archivos a {0}</value>
+    <value>Add files to {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
     <value>Página de inicio</value>
+  </data>
+  <data name="__" xml:space="preserve">
+    <value></value>
   </data>
   <data name="Explorer_Includes" xml:space="preserve">
     <value>Incluye</value>
@@ -415,5 +418,17 @@ páginas.</value>
   </data>
   <data name="UI_Editor_ViewFile" xml:space="preserve">
     <value>Ver</value>
+  </data>
+  <data name="UI_Open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="UI_OpenFileLocation" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="UI_OpenFolderLocation" xml:space="preserve">
+    <value>Open folder location</value>
+  </data>
+  <data name="UI_OpenWithDefault" xml:space="preserve">
+    <value>Open with default program</value>
   </data>
 </root>

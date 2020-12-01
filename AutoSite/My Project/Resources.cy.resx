@@ -395,7 +395,7 @@ Defnyddiwch hwn i ddechrau llwybrau i daflenni arddull, delweddau a thudalennau 
     <value>Allbwn: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add files to {0}</value>
+    <value>Ychwanegu ffeiliau i {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
     <value>Tudalen Gychwyn</value>
@@ -428,6 +428,6 @@ Defnyddiwch hwn i ddechrau llwybrau i daflenni arddull, delweddau a thudalennau 
     <value>Open folder location</value>
   </data>
   <data name="UI_OpenWithDefault" xml:space="preserve">
-    <value>Open with default program</value>
+    <value>Agor yn rhaglen ddiofyn</value>
   </data>
 </root>

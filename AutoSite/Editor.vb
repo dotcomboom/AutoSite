@@ -218,14 +218,15 @@ Public Class Editor
 
     Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
         Dim url As String = siteRoot & "\out\" & _rel()
-        Try
-            Process.Start(url)
-        Catch ex As Exception
+        If Not My.Computer.FileSystem.FileExists(url) Then
             If Build.Enabled Then
                 Main.afterBuildLaunch = url
                 Main.doBuild()
             End If
-        End Try
+            Exit Sub
+        End If
+
+        Process.Start(url)
     End Sub
 
     Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Build.Click

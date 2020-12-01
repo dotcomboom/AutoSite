@@ -1156,8 +1156,8 @@ Public Class Main
 
         If afterBuildNavigatePreview.Length > 0 Then
             Preview.Navigate(afterBuildNavigatePreview)
-        ElseIf afterBuildNavigatePreview.Length > 0 Then
-            Process.Start(afterBuildNavigatePreview)
+        ElseIf afterBuildLaunch.Length > 0 Then
+            Process.Start(afterBuildLaunch)
         End If
         afterBuildLaunch = ""
         afterBuildNavigatePreview = ""

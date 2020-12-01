@@ -538,7 +538,7 @@
     <value>Agor</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Open with default program</value>
+    <value>Agor yn rhaglen ddiofyn</value>
   </data>
   <data name="OpenFileLocation.Text" xml:space="preserve">
     <value>Open file location</value>

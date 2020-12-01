@@ -1850,4 +1850,8 @@ Public Class Main
             panelUpdate()
         End If
     End Sub
+
+    Private Sub OpenFileLocation_Click(sender As System.Object, e As System.EventArgs) Handles OpenFileLocation.Click
+        Process.Start(Path.GetDirectoryName(Context.Tag))
+    End Sub
 End Class

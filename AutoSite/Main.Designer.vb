@@ -165,6 +165,7 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
+        Me.OpenFileLocation = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -666,7 +667,7 @@ Partial Class Main
         '
         'Context
         '
-        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenContext, Me.OpenInDefault, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.RenameCon, Me.ContextSep3, Me.NewCon})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.OpenContext, Me.OpenInDefault, Me.OpenFileLocation, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.RenameCon, Me.ContextSep3, Me.NewCon})
         '
         'OpenContext
         '
@@ -680,47 +681,47 @@ Partial Class Main
         '
         'ContextSep
         '
-        Me.ContextSep.Index = 2
+        Me.ContextSep.Index = 3
         resources.ApplyResources(Me.ContextSep, "ContextSep")
         '
         'CopyCon
         '
-        Me.CopyCon.Index = 3
+        Me.CopyCon.Index = 4
         resources.ApplyResources(Me.CopyCon, "CopyCon")
         '
         'PasteCon
         '
-        Me.PasteCon.Index = 4
+        Me.PasteCon.Index = 5
         resources.ApplyResources(Me.PasteCon, "PasteCon")
         '
         'AddFilesCon
         '
-        Me.AddFilesCon.Index = 5
+        Me.AddFilesCon.Index = 6
         resources.ApplyResources(Me.AddFilesCon, "AddFilesCon")
         '
         'ContextSep2
         '
-        Me.ContextSep2.Index = 6
+        Me.ContextSep2.Index = 7
         resources.ApplyResources(Me.ContextSep2, "ContextSep2")
         '
         'DeleteCon
         '
-        Me.DeleteCon.Index = 7
+        Me.DeleteCon.Index = 8
         resources.ApplyResources(Me.DeleteCon, "DeleteCon")
         '
         'RenameCon
         '
-        Me.RenameCon.Index = 8
+        Me.RenameCon.Index = 9
         resources.ApplyResources(Me.RenameCon, "RenameCon")
         '
         'ContextSep3
         '
-        Me.ContextSep3.Index = 9
+        Me.ContextSep3.Index = 10
         resources.ApplyResources(Me.ContextSep3, "ContextSep3")
         '
         'NewCon
         '
-        Me.NewCon.Index = 10
+        Me.NewCon.Index = 11
         Me.NewCon.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.NewSep2, Me.NewCSSCon, Me.NewJSCon, Me.NewTXTCon})
         resources.ApplyResources(Me.NewCon, "NewCon")
         '
@@ -967,6 +968,11 @@ Partial Class Main
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
+        'OpenFileLocation
+        '
+        Me.OpenFileLocation.Index = 2
+        resources.ApplyResources(Me.OpenFileLocation, "OpenFileLocation")
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -1135,4 +1141,5 @@ Partial Class Main
     Friend WithEvents WelshLang As System.Windows.Forms.MenuItem
     Friend WithEvents HelpSep3 As System.Windows.Forms.MenuItem
     Friend WithEvents ShowVersion As System.Windows.Forms.MenuItem
+    Friend WithEvents OpenFileLocation As System.Windows.Forms.MenuItem
 End Class

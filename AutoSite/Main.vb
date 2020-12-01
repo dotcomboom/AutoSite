@@ -1678,6 +1678,18 @@ Public Class Main
         OpenContext.Visible = edit
         OpenContext.DefaultItem = edit
         OpenInDefault.DefaultItem = Not edit
+
+        If OpenContext.Visible = False Then
+            OpenInDefault.Text = My.Resources.UI_Open
+        Else
+            OpenInDefault.Text = My.Resources.UI_OpenWithDefault
+        End If
+
+        If My.Computer.FileSystem.DirectoryExists(Context.Tag) Then
+            OpenFileLocation.Text = My.Resources.UI_OpenFolderLocation
+        Else
+            OpenFileLocation.Text = My.Resources.UI_OpenFileLocation
+        End If
     End Sub
 
     Private Sub SaveLog_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveLog.Click

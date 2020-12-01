@@ -119,6 +119,7 @@ Partial Class Main
         Me.Context = New System.Windows.Forms.ContextMenu()
         Me.OpenContext = New System.Windows.Forms.MenuItem()
         Me.OpenInDefault = New System.Windows.Forms.MenuItem()
+        Me.OpenFileLocation = New System.Windows.Forms.MenuItem()
         Me.ContextSep = New System.Windows.Forms.MenuItem()
         Me.CopyCon = New System.Windows.Forms.MenuItem()
         Me.PasteCon = New System.Windows.Forms.MenuItem()
@@ -165,7 +166,6 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
-        Me.OpenFileLocation = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -679,6 +679,11 @@ Partial Class Main
         Me.OpenInDefault.Index = 1
         resources.ApplyResources(Me.OpenInDefault, "OpenInDefault")
         '
+        'OpenFileLocation
+        '
+        Me.OpenFileLocation.Index = 2
+        resources.ApplyResources(Me.OpenFileLocation, "OpenFileLocation")
+        '
         'ContextSep
         '
         Me.ContextSep.Index = 3
@@ -967,11 +972,6 @@ Partial Class Main
         'OpenPack
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
-        '
-        'OpenFileLocation
-        '
-        Me.OpenFileLocation.Index = 2
-        resources.ApplyResources(Me.OpenFileLocation, "OpenFileLocation")
         '
         'Main
         '

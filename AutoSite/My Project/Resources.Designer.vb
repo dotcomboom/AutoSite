@@ -802,7 +802,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Add Files to {0}.
+        '''  Looks up a localized string similar to Add files to {0}.
         '''</summary>
         Friend ReadOnly Property UI_AddFilesDialog_Title() As String
             Get
@@ -816,6 +816,42 @@ Namespace My.Resources
         Friend ReadOnly Property UI_Editor_ViewFile() As String
             Get
                 Return ResourceManager.GetString("UI_Editor_ViewFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Open.
+        '''</summary>
+        Friend ReadOnly Property UI_Open() As String
+            Get
+                Return ResourceManager.GetString("UI_Open", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Open file location.
+        '''</summary>
+        Friend ReadOnly Property UI_OpenFileLocation() As String
+            Get
+                Return ResourceManager.GetString("UI_OpenFileLocation", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Open folder location.
+        '''</summary>
+        Friend ReadOnly Property UI_OpenFolderLocation() As String
+            Get
+                Return ResourceManager.GetString("UI_OpenFolderLocation", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Open with default program.
+        '''</summary>
+        Friend ReadOnly Property UI_OpenWithDefault() As String
+            Get
+                Return ResourceManager.GetString("UI_OpenWithDefault", resourceCulture)
             End Get
         End Property
         

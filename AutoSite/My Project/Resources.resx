@@ -396,7 +396,7 @@ pages.</value>
     <value>Output: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add Files to {0}</value>
+    <value>Add files to {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
     <value>Start Page</value>
@@ -418,5 +418,17 @@ pages.</value>
   </data>
   <data name="UI_Editor_ViewFile" xml:space="preserve">
     <value>View</value>
+  </data>
+  <data name="UI_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="UI_OpenFileLocation" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="UI_OpenFolderLocation" xml:space="preserve">
+    <value>Open folder location</value>
+  </data>
+  <data name="UI_OpenWithDefault" xml:space="preserve">
+    <value>Open with default program</value>
   </data>
 </root>

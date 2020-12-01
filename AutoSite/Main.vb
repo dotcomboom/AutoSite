@@ -11,6 +11,8 @@ Public Class Main
     Public editExtensions() As String = Apricot.knownExtensions
     Public encodingType As Encoding = New UTF8Encoding(False)
     Public args As String() = Environment.GetCommandLineArgs()
+    Friend afterBuildNavigatePreview As String = ""
+    Friend afterBuildLaunch As String = ""
 
     Public Sub New()
 
@@ -1151,6 +1153,14 @@ Public Class Main
         BuildSite.Enabled = True
         SanitaryBuild.Enabled = True
         SanitaryBuildBtn.Enabled = True
+
+        If afterBuildNavigatePreview.Length > 0 Then
+            Preview.Navigate(afterBuildNavigatePreview)
+        ElseIf afterBuildNavigatePreview.Length > 0 Then
+            Process.Start(afterBuildNavigatePreview)
+        End If
+        afterBuildLaunch = ""
+        afterBuildNavigatePreview = ""
     End Sub
 
     Private Sub Form1_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
@@ -1831,4 +1841,13 @@ Public Class Main
         Me.Text = Me.Text.Replace(oldwtitle, wTitle)
     End Sub
 
+    Public Sub Preview_Navigate(url As String)
+        ' hooked into by editor
+        Preview.Navigate(url)
+
+        If Not PreviewPanel.Checked Then
+            PreviewPanel.Checked = True
+            panelUpdate()
+        End If
+    End Sub
 End Class

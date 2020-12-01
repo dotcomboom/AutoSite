@@ -203,31 +203,33 @@ Public Class Editor
     End Sub
 
     Public Sub doViewOutput() Handles ViewOutput.ButtonClick
-        Preview.Enabled = False
-        ViewOutput.Enabled = False
-
-        OutWorker.RunWorkerAsync()
-
-        If Not Main.PreviewPanel.Checked Then
-            Main.PreviewPanel.Checked = True
-            Main.panelUpdate()
+        Dim url As String = siteRoot & "\out\" & _rel()
+        If Not My.Computer.FileSystem.FileExists(url) Then
+            If Build.Enabled Then
+                Main.afterBuildNavigatePreview = url
+                Main.doBuild()
+            End If
+            Exit Sub
         End If
+
+        Main.Preview_Navigate(url)
+
+    End Sub
+
+    Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
+        Dim url As String = siteRoot & "\out\" & _rel()
+        Try
+            Process.Start(url)
+        Catch ex As Exception
+            If Build.Enabled Then
+                Main.afterBuildLaunch = url
+                Main.doBuild()
+            End If
+        End Try
     End Sub
 
     Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Build.Click
         Main.doBuild()
-    End Sub
-
-    Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
-        Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
-        If rel.EndsWith(".md") Then
-            rel = Apricot.ReplaceLast(rel, ".md", ".html")
-        End If
-        Try
-            Process.Start(siteRoot & "\out\" & rel)
-        Catch ex As Exception
-            MsgBox(My.Resources.Error_BuildToViewOutput, MsgBoxStyle.Exclamation)
-        End Try
     End Sub
 
     Private Sub Autocomplete_Selecting(ByVal sender As System.Object, ByVal e As AutocompleteMenuNS.SelectingEventArgs) Handles Autocomplete.Selecting
@@ -373,23 +375,13 @@ Public Class Editor
         ViewOutput.Enabled = True
     End Sub
 
-    Private Sub OutWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles OutWorker.DoWork
-        Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+    Private Function _rel()
+        Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
         If rel.EndsWith(".md") Then
             rel = rel.Substring(0, rel.Length - 3) & ".html"
         End If
 
-        If My.Computer.FileSystem.FileExists(siteRoot & "\out\" & rel) Then
-            e.Result = siteRoot & "\out\" & rel
-        Else
-            e.Result = "#"
-        End If
-    End Sub
-
-    Private Sub OutWorker_RunWorkerCompleted(sender As System.Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles OutWorker.RunWorkerCompleted
-        Main.Preview.Navigate(e.Result)
-        Preview.Enabled = True
-        ViewOutput.Enabled = True
-    End Sub
+        Return rel
+    End Function
 End Class

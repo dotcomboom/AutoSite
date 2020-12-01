@@ -63,7 +63,6 @@ Partial Class Editor
         Me.Autocomplete = New AutocompleteMenuNS.AutocompleteMenu()
         Me.PopupIcons = New System.Windows.Forms.ImageList(Me.components)
         Me.PreviewWorker = New System.ComponentModel.BackgroundWorker()
-        Me.OutWorker = New System.ComponentModel.BackgroundWorker()
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -249,7 +248,7 @@ Partial Class Editor
         Me.Code.AllowSeveralTextStyleDrawing = True
         Me.Code.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
         Me.Autocomplete.SetAutocompleteMenu(Me.Code, Me.Autocomplete)
-        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.QuickInsert_content_Tip
+        Me.Code.AutoIndentCharsPatterns = Global.AutoSite.My.Resources.Resources.__
         Me.Code.AutoIndentExistingLines = False
         resources.ApplyResources(Me.Code, "Code")
         Me.Code.BackBrush = Nothing
@@ -350,9 +349,6 @@ Partial Class Editor
         'PreviewWorker
         '
         '
-        'OutWorker
-        '
-        '
         'Editor
         '
         resources.ApplyResources(Me, "$this")
@@ -407,6 +403,5 @@ Partial Class Editor
     Friend WithEvents PopupIcons As System.Windows.Forms.ImageList
     Friend WithEvents Replace As System.Windows.Forms.ToolStripButton
     Friend WithEvents PreviewWorker As System.ComponentModel.BackgroundWorker
-    Friend WithEvents OutWorker As System.ComponentModel.BackgroundWorker
 
 End Class

@@ -394,7 +394,7 @@ Użyj tego, aby rozpocząć ścieżki do arkuszy stylów, obrazów i innych stro
     <value>Wyjście: {0}</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add files to {0}</value>
+    <value>Dodaj pliki do {0}</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
     <value>Strona startowa</value>
@@ -421,12 +421,12 @@ Użyj tego, aby rozpocząć ścieżki do arkuszy stylów, obrazów i innych stro
     <value>Otwórz</value>
   </data>
   <data name="UI_OpenFileLocation" xml:space="preserve">
-    <value>Open file location</value>
+    <value>Otwórz lokalizację pliku</value>
   </data>
   <data name="UI_OpenFolderLocation" xml:space="preserve">
-    <value>Open folder location</value>
+    <value>Otwórz lokalizację folderu</value>
   </data>
   <data name="UI_OpenWithDefault" xml:space="preserve">
-    <value>Open with default program</value>
+    <value>Otwórz w domyślnym programie</value>
   </data>
 </root>

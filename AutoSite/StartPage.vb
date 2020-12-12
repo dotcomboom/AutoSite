@@ -1,6 +1,6 @@
 ﻿Public Class StartPage
 
-    Private Sub StartPage_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub StartPage_Load() Handles MyBase.Load
         Recent1.Visible = My.Settings.recents.Count > 0
         Recent2.Visible = My.Settings.recents.Count > 1
         Recent3.Visible = My.Settings.recents.Count > 2
@@ -43,10 +43,18 @@
     End Sub
 
     Private Sub Recent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Recent1.Click, Recent2.Click, Recent3.Click, Recent4.Click, Recent5.Click
-        Main.openSite(sender.Tag, False)
+        If My.Computer.FileSystem.DirectoryExists(sender.tag) Then
+            Main.openSite(sender.Tag, False)
+        Else
+            If MsgBox(String.Format(My.Resources.Question_RemoveFromRecents, sender.Tag), MsgBoxStyle.Question + MsgBoxStyle.YesNo, Application.ProductName) = MsgBoxResult.Yes Then
+                My.Settings.recents.Remove(sender.Tag)
+                Me.StartPage_Load()
+                Main.updateRecents()
+            End If
+        End If
     End Sub
 
-    
+
     Sub StartPagePaint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
         Dim s = RWarn.Size
         s.Width = Me.Width - RWarn.Location.X - 16

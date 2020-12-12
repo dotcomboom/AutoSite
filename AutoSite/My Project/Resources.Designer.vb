@@ -523,6 +523,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to The site located in {0} could not be opened. Do you want to remove it from the Recent Sites list?.
+        '''</summary>
+        Friend ReadOnly Property Question_RemoveFromRecents() As String
+            Get
+                Return ResourceManager.GetString("Question_RemoveFromRecents", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Example: {0}.
         '''</summary>
         Friend ReadOnly Property QuickInsert__Example() As String

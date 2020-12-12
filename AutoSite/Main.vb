@@ -174,7 +174,7 @@ Public Class Main
 
                 If Not (My.Computer.FileSystem.DirectoryExists(templatePath) And My.Computer.FileSystem.DirectoryExists(inPath) And My.Computer.FileSystem.DirectoryExists(includePath)) Then
                     If autoload = False Then
-                        If MsgBox(My.Resources.Prompt_CreateSite, MsgBoxStyle.Question + MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then
+                        If MsgBox(String.Format(My.Resources.Prompt_CreateSite, path), MsgBoxStyle.Question + MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then
                             Exit Sub
                         End If
                     Else
@@ -1446,7 +1446,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub updateRecents()
+    Sub updateRecents()
         Try
             OpenRecent.Enabled = My.Settings.recents.Count > 0
             Recent1.Visible = My.Settings.recents.Count > 0
@@ -1481,7 +1481,14 @@ Public Class Main
     End Sub
 
     Private Sub Recent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Recent1.Click, Recent2.Click, Recent3.Click, Recent4.Click, Recent5.Click
-        openSite(sender.Tag, False)
+        If My.Computer.FileSystem.DirectoryExists(sender.tag) Then
+            openSite(sender.Tag, False)
+        Else
+            If MsgBox(String.Format(My.Resources.Question_RemoveFromRecents, sender.Tag), MsgBoxStyle.Question + MsgBoxStyle.YesNo, Application.ProductName) = MsgBoxResult.Yes Then
+                My.Settings.recents.Remove(sender.Tag)
+                updateRecents()
+            End If
+        End If
     End Sub
 
     Private Sub ClearRecents_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClearRecents.Click

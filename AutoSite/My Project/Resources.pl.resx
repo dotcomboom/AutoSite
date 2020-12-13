@@ -429,4 +429,7 @@ Użyj tego, aby rozpocząć ścieżki do arkuszy stylów, obrazów i innych stro
   <data name="UI_OpenWithDefault" xml:space="preserve">
     <value>Otwórz w domyślnym programie</value>
   </data>
+  <data name="Question_RemoveFromRecents" xml:space="preserve">
+    <value>The site located in {0} could not be opened. Do you want to remove it from the Recent Sites list?</value>
+  </data>
 </root>

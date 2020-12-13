@@ -430,4 +430,7 @@ Defnyddiwch hwn i ddechrau llwybrau i daflenni arddull, delweddau a thudalennau 
   <data name="UI_OpenWithDefault" xml:space="preserve">
     <value>Agor yn rhaglen ddiofyn</value>
   </data>
+  <data name="Question_RemoveFromRecents" xml:space="preserve">
+    <value>The site located in {0} could not be opened. Do you want to remove it from the Recent Sites list?</value>
+  </data>
 </root>

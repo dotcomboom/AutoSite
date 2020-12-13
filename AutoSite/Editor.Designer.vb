@@ -328,6 +328,7 @@ Partial Class Editor
         'Autocomplete
         '
         Me.Autocomplete.AllowsTabKey = True
+        Me.Autocomplete.CaptureFocus = True
         Me.Autocomplete.Colors = CType(resources.GetObject("Autocomplete.Colors"), AutocompleteMenuNS.Colors)
         Me.Autocomplete.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Autocomplete.ImageList = Me.PopupIcons

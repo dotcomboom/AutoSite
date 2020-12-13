@@ -377,54 +377,6 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="Tabs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;License.Name" xml:space="preserve">
-    <value>License</value>
-  </data>
-  <data name="&gt;&gt;License.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;License.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;License.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;Changelog.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 10</value>
-  </data>
-  <data name="Tabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 310</value>
-  </data>
-  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="License.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
   </data>
@@ -455,48 +407,6 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="&gt;&gt;License.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ChangelogBox.Name" xml:space="preserve">
-    <value>ChangelogBox</value>
-  </data>
-  <data name="&gt;&gt;ChangelogBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChangelogBox.Parent" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="&gt;&gt;ChangelogBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Changelog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="Changelog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Changelog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Changelog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 282</value>
-  </data>
-  <data name="Changelog.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Changelog.Text" xml:space="preserve">
-    <value>Log Newid</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;Changelog.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="ChangelogBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -513,7 +423,22 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 RC4:
+    <value>1.0 RC5:
+   + Localization support added
+        + Polish translations by matfloor.net
+        + Welsh translations by caby.somnolescent.net
+   + Added Open file location to Explorer context menu
+   - Handling of renamed, open files has been vastly improved
+   - Opening an inexistent recent site now handled
+   - When a new file is added to a folder, the folder's node is now expanded if it isn't already
+   - Panel sizing behavior adjusted with some default settings tweaked
+   - Using View Output when the output file doesn't exist is now handled
+   - Default new HTML template adjusted to be more standards-compliant
+   - .NET Framework 4.0 to 4.8 added to targeted versions
+   - Start page no recents text now wraps based on window size
+   - Version number can now be shown/hid
+
+1.0 RC4:
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
    + Editor's auto indent will no longer affect existing lines
    + Optimizations under the hood for the main program
@@ -693,6 +618,60 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   </data>
   <data name="&gt;&gt;ChangelogBox.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="Changelog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="Changelog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Changelog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Changelog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 282</value>
+  </data>
+  <data name="Changelog.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Changelog.Text" xml:space="preserve">
+    <value>Log Newid</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Changelog.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 10</value>
+  </data>
+  <data name="Tabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 310</value>
+  </data>
+  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="Sysinfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>

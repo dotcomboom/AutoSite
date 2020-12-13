@@ -64,22 +64,26 @@ Public Class Editor
         End If
     End Sub
 
+    Private AttributeStyle As New TextStyle(Nothing, Nothing, FontStyle.Italic)
+    Private ConditionalStyle As New TextStyle(Brushes.ForestGreen, Nothing, FontStyle.Italic)
+
     Private Sub Editor_TextChanged(ByVal sender As System.Object, ByVal e As FastColoredTextBoxNS.TextChangedEventArgs) Handles Code.TextChanged
         If (Not Code.Text = Snapshot) And (Not openFile Is Nothing) Then
             Me.Parent.Text = openFile.Replace(siteRoot & "\", "") & "*"
             SaveBtn.Enabled = True
         End If
-        'If My.Settings.SyntaxHighlight Then
-        '    Dim GreenStyle As New TextStyle(Brushes.Green, Nothing, FontStyle.Regular)
-        '    Dim TurqStyle As New TextStyle(Brushes.Turquoise, Nothing, FontStyle.Regular)
-        '    'clear style of changed range
-        '    'Code.Range.ClearStyle(TurqStyle)
-        '    'Code.Range.ClearStyle(GreenStyle)
-        '    'comment highlighting
-        '    Code.Range.SetStyle(TurqStyle, "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]", RegexOptions.Singleline)
-        '    Code.Range.SetStyle(GreenStyle, "\[#.*?#\]", RegexOptions.Singleline)
-        '    'for atteql, value, text in re.findall(r'\[(.*)=(.*?)\](.*)\[\/\1.*\]', template):
-        'End If
+        If My.Settings.SyntaxHighlight Then
+            '    'clear style of changed range
+            'Code.Range.ClearStyle(ItalicStyle)
+            Code.Range.ClearStyle()
+
+            Code.Range.SetStyle(AttributeStyle, "\[#\S*?#\]", RegexOptions.Singleline)
+            'Code.Range.SetStyle(ItalicStyle, "\[(\S*?)=(\S*?)\](.*?)\[\/\1(.{1,2})\]", RegexOptions.Singleline)
+            Code.Range.SetStyle(ConditionalStyle, "\[(\S*?)=([^\<\s]*?)\]", RegexOptions.Singleline)
+            Code.Range.SetStyle(ConditionalStyle, "\[(\S*?)=\]", RegexOptions.Singleline)
+            '\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]
+            'for atteql, value, text in re.findall(r'\[(.*)=(.*?)\](.*)\[\/\1.*\]', template):
+        End If
         Try
             If My.Settings.LivePreview Then
                 If Me.Parent.Text.Replace("*", "").EndsWith(".md") Then

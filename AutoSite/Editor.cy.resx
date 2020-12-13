@@ -121,19 +121,31 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 22</value>
+  <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cadw</value>
-  </data>
-  <data name="SaveAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 22</value>
-  </data>
-  <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cadw'r cwbl</value>
+  <data name="Strip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>649, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="Strip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Strip.Text" xml:space="preserve">
+    <value>ToolStrip1</value>
+  </data>
+  <data name="&gt;&gt;Strip.Name" xml:space="preserve">
+    <value>Strip</value>
+  </data>
+  <data name="&gt;&gt;Strip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Strip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Strip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -145,6 +157,18 @@
   </data>
   <data name="SaveBtn.Text" xml:space="preserve">
     <value>Cadw</value>
+  </data>
+  <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cadw</value>
+  </data>
+  <data name="SaveAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cadw'r cwbl</value>
   </data>
   <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -257,12 +281,6 @@
   <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="LivePreview.Text" xml:space="preserve">
-    <value>Rhagolwg Byw</value>
-  </data>
   <data name="Preview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -271,6 +289,12 @@
   </data>
   <data name="Preview.Text" xml:space="preserve">
     <value>Rhagolowg</value>
+  </data>
+  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="LivePreview.Text" xml:space="preserve">
+    <value>Rhagolwg Byw</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -284,12 +308,6 @@
   <data name="Build.Text" xml:space="preserve">
     <value>Adeiladu</value>
   </data>
-  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>Gweld yn y Porwr Diofyn</value>
-  </data>
   <data name="ViewOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -299,29 +317,11 @@
   <data name="ViewOutput.Text" xml:space="preserve">
     <value>Gweld Allbwn</value>
   </data>
-  <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
   </data>
-  <data name="Strip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 25</value>
-  </data>
-  <data name="Strip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Strip.Text" xml:space="preserve">
-    <value>ToolStrip1</value>
-  </data>
-  <data name="&gt;&gt;Strip.Name" xml:space="preserve">
-    <value>Strip</value>
-  </data>
-  <data name="&gt;&gt;Strip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Strip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Strip.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
+    <value>Gweld yn y Porwr Diofyn</value>
   </data>
   <metadata name="Autocomplete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>213, 17</value>
@@ -351,7 +351,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD4
-        DgAAAk1TRnQBSQFMAgEBBwEAAQgBAQEIAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DgAAAk1TRnQBSQFMAgEBBwEAARABAQEQAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -423,9 +423,6 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="Code.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="Code.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Courier New, 9.75pt</value>
   </data>
   <data name="Code.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>

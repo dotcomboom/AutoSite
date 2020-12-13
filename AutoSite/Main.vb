@@ -200,6 +200,12 @@ Public Class Main
                 root.SelectedImageKey = "Folder"
                 root.Tag = path
 
+                ' Clear system icon cache
+                While VS2017.Images.Count > 7
+                    VS2017.Images.RemoveAt(7)
+                    XP.Images.RemoveAt(7)
+                End While
+
                 refreshTree(root)
             End If
         End If

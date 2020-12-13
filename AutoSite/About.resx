@@ -432,6 +432,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
    - Opening an inexistent recent site now handled
    - When a new file is added to a folder, the folder's node is now expanded if it isn't already
    - Panel sizing behavior adjusted with some default settings tweaked
+   - System icon cache now cleared when a site is opened
    - Using View Output when the output file doesn't exist is now handled
    - Default new HTML template adjusted to be more standards-compliant
    - .NET Framework 4.0 to 4.8 added to targeted versions

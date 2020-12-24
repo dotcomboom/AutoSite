@@ -112,27 +112,18 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="VS2017.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>382, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="VS2017.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
-  <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>474, 17</value>
-  </metadata>
   <data name="FolderBrowser.Description" xml:space="preserve">
     <value>Pick a folder in which to store your site's assets. If no site exists in that folder, one will be created.</value>
   </data>
-  <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 17</value>
-  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NewSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftN</value>
@@ -525,15 +516,9 @@
   <data name="HelpMenu.Text" xml:space="preserve">
     <value>Help</value>
   </data>
-  <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>316, 17</value>
-  </metadata>
   <data name="XP.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
-  <metadata name="Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>121, 17</value>
-  </metadata>
   <data name="OpenContext.Text" xml:space="preserve">
     <value>Open</value>
   </data>
@@ -597,24 +582,12 @@
   <data name="NewCon.Text" xml:space="preserve">
     <value>New</value>
   </data>
-  <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>603, 17</value>
-  </metadata>
   <data name="AddFilesDialog.Filter" xml:space="preserve">
     <value>All files (*.*)|*.*</value>
   </data>
   <data name="AddFilesDialog.Title" xml:space="preserve">
     <value>Add Files to Folder</value>
   </data>
-  <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>736, 17</value>
-  </metadata>
-  <metadata name="Watcher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 15</value>
   </data>
@@ -687,9 +660,6 @@
   <data name="&gt;&gt;ExSplit.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>458, 56</value>
-  </metadata>
   <data name="LogMenuBridge.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 4</value>
   </data>
@@ -915,9 +885,6 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;BuildProgress.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="BuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -1980,28 +1947,61 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="SelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 56</value>
-  </metadata>
-  <metadata name="LogMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>222, 56</value>
-  </metadata>
   <data name="SaveLog.Text" xml:space="preserve">
     <value>Save...</value>
   </data>
-  <metadata name="SaveLogDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>325, 56</value>
-  </metadata>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
     <value>Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
     <value>Save Log</value>
   </data>
-  <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>597, 56</value>
-  </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
     <value>AutoSite Zip package (*.zip)|*.zip</value>
   </data>
+  <metadata name="VS2017.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>382, 17</value>
+  </metadata>
+  <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>474, 17</value>
+  </metadata>
+  <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>215, 17</value>
+  </metadata>
+  <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>316, 17</value>
+  </metadata>
+  <metadata name="Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>121, 17</value>
+  </metadata>
+  <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>603, 17</value>
+  </metadata>
+  <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>736, 17</value>
+  </metadata>
+  <metadata name="Watcher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>458, 56</value>
+  </metadata>
+  <metadata name="BuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="SelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 56</value>
+  </metadata>
+  <metadata name="LogMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>222, 56</value>
+  </metadata>
+  <metadata name="SaveLogDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>325, 56</value>
+  </metadata>
+  <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>597, 56</value>
+  </metadata>
 </root>

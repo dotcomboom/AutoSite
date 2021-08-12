@@ -472,10 +472,10 @@
     <value>CtrlF1</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
-    <value>View Manual</value>
+    <value>Ver manual</value>
   </data>
   <data name="OpenSampleSite.Text" xml:space="preserve">
-    <value>Open Sample Site...</value>
+    <value>Abrir sitio de ejemplo...</value>
   </data>
   <data name="HelpSep.Text" xml:space="preserve">
     <value>-</value>

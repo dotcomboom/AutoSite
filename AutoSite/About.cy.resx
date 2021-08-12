@@ -118,81 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LicenseBox.Text" xml:space="preserve">
-    <value>Mae AutoSite yn cael ei bweru gan y llyfrgelloedd ffynhonnell agored mwyaf rhagorol hyn:
+    <value>This release is dedicated to Somnolescent and its mutuals for their testing, support and contributions to this project, including but not limited to:
+  - Website &amp; manual: mariteaux (http://mariteaux.somnolescent.net)
+  - Welsh translation: Caby (http://caby.somnolescent.net)
+  - Polish translation: devon (http://matfloor.net)
+
+----
+
+AutoSite is also made possible by these open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
-  - Dewislen AutoComplete: https://www.codeproject.com/articles/365974/autocomplete-menu (LGPLv3)
-  - CommonMark.NET: https://github.com/Knagis/CommonMark.NET (BSD 3-Cymal)
+  - AutoComplete Menu: https://www.codeproject.com/articles/365974/autocomplete-menu (LGPLv3)
+  - CommonMark.NET: https://github.com/Knagis/CommonMark.NET (BSD 3-Clause)
 
-Cod Apricot, AutoSite Core, a chod AutoSite ac eithrio'r llyfrgelloedd a ddefnyddir uchod, ac mae'r cod a ddefnyddir o StackOverflow a gwefannau eraill (y cyfeirir atynt yn y ffynhonnell) wedi'i drwyddedu o dan y Drwydded MIT.
+----
 
----
+Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced in the source) is licensed under the MIT License.
 
-Trwydded MIT
+MIT License
 
-Hawlfraint (c) 2020 dotcomboom
+Copyright (c) 2021 dotcomboom
 
-Rhoddir caniatâd trwy hyn, yn rhad ac am ddim, i unrhyw berson sy'n cael copi
-o'r feddalwedd hon a ffeiliau dogfennaeth gysylltiedig (y "Meddalwedd"), i ddelio
-yn y Meddalwedd heb gyfyngiad, gan gynnwys heb gyfyngu ar yr hawliau
-defnyddio, copïo, addasu, uno, cyhoeddi, dosbarthu, is-drwyddedu a / neu werthu
-copïau o'r Meddalwedd, ac i ganiatáu unigolion y mae'r Meddalwedd iddynt
-wedi'i ddodrefnu i wneud hynny, yn ddarostyngedig i'r amodau canlynol:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Rhaid cynnwys yr hysbysiad hawlfraint uchod a'r hysbysiad caniatâd hwn i gyd
-copïau neu ddognau sylweddol o'r Meddalwedd.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-DARPARIR Y MEDDALWEDD "FEL Y MAE", HEB RHYFEDD O UNRHYW FATH, MYNEGAI NEU
-GWEITHREDOL, GAN GYNNWYS OND NID YW'N CYFYNGEDIG I RHYBUDDION MASNACHWR,
-FFITRWYDD AM DDIBEN RHANBARTHOL A DIDDORDEB. MEWN DIM DIGWYDDIAD YN RHANNU'R
-BOD AWDURDODAU NEU DEILIAID HAWLFRAINT YN RHWYMEDIG AM UNRHYW HAWLIO, DAMAGAU NEU ERAILL
-RHWYMEDIGAETH, SYDD YN GWEITHREDU CONTRACT, TORT NEU ERAILL, YN CODI GAN,
-TU ALLAN I NEU MEWN CYSYLLTU Â'R MEDDALWEDD NEU'R DEFNYDD NEU DELIO ERAILL YN Y
-MEDDALWEDD.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 -----
 
-Trwydded CommonMark.NET
+CommonMark.NET License
 
-Hawlfraint (c) 2014, Kārlis Gaņģis
-Cedwir pob hawl.
+Copyright (c) 2014, Kārlis Gaņģis
+All rights reserved.
 
-Ailddosbarthu a defnyddio mewn ffurfiau ffynhonnell a deuaidd, gyda neu hebddo
-caniateir addasu ar yr amod bod yr amodau canlynol yn cael eu bodloni:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-   * Rhaid i ailddosbarthiadau cod ffynhonnell gadw'r hawlfraint uchod
-     rhybudd, y rhestr hon o amodau a'r ymwadiad canlynol.
+   * Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
 
-   * Rhaid i ailddosbarthiadau ar ffurf ddeuaidd atgynhyrchu'r hawlfraint uchod
-     rhybudd, y rhestr hon o amodau a'r ymwadiad canlynol yn y
-     dogfennaeth a / neu ddeunyddiau eraill a ddarperir gyda'r dosbarthiad.
+   * Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
 
-   * Nid enw Kārlis Gaņģis nac enwau cyfranwyr eraill
-     gellir ei ddefnyddio i gymeradwyo neu hyrwyddo cynhyrchion sy'n deillio o'r feddalwedd hon
-     heb ganiatâd ysgrifenedig penodol ymlaen llaw.
+   * Neither the name of Kārlis Gaņģis nor the names of other contributors 
+     may be used to endorse or promote products derived from this software 
+     without specific prior written permission.
 
-DARPARIR Y MEDDALWEDD HON GAN Y DEILIAID A CHYFRANOGWYR HAWLFRAINT "FEL Y MAE" AC
-UNRHYW RHYBUDDION NEU RHYBUDDION GWEITHREDOL, GAN GYNNWYS, OND NID YW CYFYNGEDIG I, Y GWEITHREDOL
-MAE RHYBUDDION O AMRYWIOLDEB A HYFFORDDIANT AR GYFER PWRPAS RHANBARTHOL
-DATGELU. NI FYDD DIM DIGWYDDIAD YN DERBYN DEILIWR COPYRIGHT NEU RHEOLWYR YN DERBYN AM UNRHYW UN
-DAMAGAU UNIONGYRCHOL, UNIGOL, DIGWYDDIADOL, ARBENNIG, EITHRIADOL, NEU CANLYNOL
-(GAN GYNNWYS, OND NID YW'N CYFYNGEDIG, CAFFAEL NWYDDAU NEU WASANAETHAU SYLWEDDOL;
-COLLI DEFNYDDIO, DATA, NEU PROFFITIAU; NEU DEHONGLIAD BUSNES) SUT Y ACHOSIR AC
-AR UNRHYW ddamcaniaeth RHWYMEDIGAETH, SYDD YN RHEOLI, RHWYMEDIGAETH STRICT, NEU TORT
-(GAN GYNNWYS DIGWYDDIAD NEU ERAILL) YN CODI YN UNRHYW FFORDD Y TU ALLAN I DDEFNYDDIO HWN
-MEDDALWEDD, NOSON OS YDYCH YN YMGYNGHORI Â PHOSIBLIAETH DIFROD O'R FATH.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
----
+--- 
 
-Trwydded Dewislen FastColoredTextBox a AutoComplete
+FastColoredTextBox and AutoComplete Menu License
 
-  DARPARIR Y CÔD A GWYBODAETH HWN "FEL Y MAE" HEB RHYFEDD O UNRHYW UN
-  KIND, NAILL AI SY'N MYNEGI NEU'N GWEITHREDU, YN CYNNWYS OND NID YW'N CYFYNGEDIG I'R
-  RHYBUDDION GWEITHREDOL O AMRYWIOLDEB A / NEU HYFFORDDIANT AR GYFER RHANBARTHOL
-  PWRPAS.
+  THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+  KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+  PURPOSE.
 
-Trwydded: Trwydded Gyhoeddus Gyffredinol Llai GNU (LGPLv3)
+License: GNU Lesser General Public License (LGPLv3)
 
-Hawlfraint (C) Pavel Torgashov, 2011-2016. </value>
+Copyright (C) Pavel Torgashov, 2011-2016. </value>
   </data>
   <data name="OK.Text" xml:space="preserve">
     <value>Iawn</value>
@@ -206,11 +213,15 @@ Hawlfraint (C) Pavel Torgashov, 2011-2016. </value>
   <data name="WebsiteLink.Text" xml:space="preserve">
     <value>Gwefan</value>
   </data>
-  <data name="License.Text" xml:space="preserve">
-    <value>Trwyddedau</value>
+  <data name="Credits.Text" xml:space="preserve">
+    <value>Credydau</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 RC5:
+    <value>1.0 Gold:
+   + Help manual (CTRL+F1) and sample site added
+   + About box prettified and updated
+
+1.0 RC5:
    + Localization support added
         + Polish translations by matfloor.net
         + Welsh translations by caby.somnolescent.net
@@ -227,7 +238,6 @@ Hawlfraint (C) Pavel Torgashov, 2011-2016. </value>
    - Using View Output when the output file doesn't exist is now handled
    - Default new HTML template adjusted to be more standards-compliant
 
-   
 1.0 RC4:
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
    + Editor's auto indent will no longer affect existing lines

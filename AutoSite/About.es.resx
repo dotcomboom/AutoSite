@@ -118,18 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LicenseBox.Text" xml:space="preserve">
-    <value>AutoSite is powered by these most excellent open source libraries:
+    <value>This release is dedicated to Somnolescent and its mutuals for their testing, support and contributions to this project, including but not limited to:
+  - Website &amp; manual: mariteaux (http://mariteaux.somnolescent.net)
+  - Welsh translation: Caby (http://caby.somnolescent.net)
+  - Polish translation: devon (http://matfloor.net)
+
+----
+
+AutoSite is also made possible by these open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
   - AutoComplete Menu: https://www.codeproject.com/articles/365974/autocomplete-menu (LGPLv3)
   - CommonMark.NET: https://github.com/Knagis/CommonMark.NET (BSD 3-Clause)
 
-Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced in the source) is licensed under the MIT License.
+----
 
----
+Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced in the source) is licensed under the MIT License.
 
 MIT License
 
-Copyright (c) 2020 dotcomboom
+Copyright (c) 2021 dotcomboom
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -206,11 +213,15 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="WebsiteLink.Text" xml:space="preserve">
     <value>Sitio Web</value>
   </data>
-  <data name="License.Text" xml:space="preserve">
-    <value>Licencias</value>
+  <data name="Credits.Text" xml:space="preserve">
+    <value>Créditos</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 RC5:
+    <value>1.0 Gold:
+   + Help manual (CTRL+F1) and sample site added
+   + About box prettified and updated
+
+1.0 RC5:
    + Localization support added
         + Polish translations by matfloor.net
         + Welsh translations by caby.somnolescent.net
@@ -227,7 +238,6 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
    - Using View Output when the output file doesn't exist is now handled
    - Default new HTML template adjusted to be more standards-compliant
 
-   
 1.0 RC4:
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
    + Editor's auto indent will no longer affect existing lines

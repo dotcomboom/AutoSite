@@ -102,19 +102,20 @@ Partial Class Main
         Me.ShowVersion = New System.Windows.Forms.MenuItem()
         Me.HelpMenu = New System.Windows.Forms.MenuItem()
         Me.HelpTopics = New System.Windows.Forms.MenuItem()
+        Me.OpenSampleSite = New System.Windows.Forms.MenuItem()
         Me.HelpSep = New System.Windows.Forms.MenuItem()
         Me.Website = New System.Windows.Forms.MenuItem()
         Me.GitHub = New System.Windows.Forms.MenuItem()
         Me.SendFeedback = New System.Windows.Forms.MenuItem()
         Me.HelpSep2 = New System.Windows.Forms.MenuItem()
-        Me.AboutItem = New System.Windows.Forms.MenuItem()
-        Me.HelpSep3 = New System.Windows.Forms.MenuItem()
-        Me.InspectorBtn = New System.Windows.Forms.MenuItem()
         Me.LanguageMenu = New System.Windows.Forms.MenuItem()
         Me.EnglishLang = New System.Windows.Forms.MenuItem()
         Me.SpanishLang = New System.Windows.Forms.MenuItem()
         Me.PolishLang = New System.Windows.Forms.MenuItem()
         Me.WelshLang = New System.Windows.Forms.MenuItem()
+        Me.InspectorBtn = New System.Windows.Forms.MenuItem()
+        Me.HelpSep3 = New System.Windows.Forms.MenuItem()
+        Me.AboutItem = New System.Windows.Forms.MenuItem()
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu()
         Me.OpenContext = New System.Windows.Forms.MenuItem()
@@ -581,57 +582,47 @@ Partial Class Main
         'HelpMenu
         '
         Me.HelpMenu.Index = 5
-        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.AboutItem, Me.HelpSep3, Me.InspectorBtn, Me.LanguageMenu})
+        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.OpenSampleSite, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.LanguageMenu, Me.InspectorBtn, Me.HelpSep3, Me.AboutItem})
         resources.ApplyResources(Me.HelpMenu, "HelpMenu")
         '
         'HelpTopics
         '
-        resources.ApplyResources(Me.HelpTopics, "HelpTopics")
         Me.HelpTopics.Index = 0
+        resources.ApplyResources(Me.HelpTopics, "HelpTopics")
+        '
+        'OpenSampleSite
+        '
+        Me.OpenSampleSite.Index = 1
+        resources.ApplyResources(Me.OpenSampleSite, "OpenSampleSite")
         '
         'HelpSep
         '
-        Me.HelpSep.Index = 1
+        Me.HelpSep.Index = 2
         resources.ApplyResources(Me.HelpSep, "HelpSep")
         '
         'Website
         '
-        Me.Website.Index = 2
+        Me.Website.Index = 3
         resources.ApplyResources(Me.Website, "Website")
         '
         'GitHub
         '
-        Me.GitHub.Index = 3
+        Me.GitHub.Index = 4
         resources.ApplyResources(Me.GitHub, "GitHub")
         '
         'SendFeedback
         '
-        Me.SendFeedback.Index = 4
+        Me.SendFeedback.Index = 5
         resources.ApplyResources(Me.SendFeedback, "SendFeedback")
         '
         'HelpSep2
         '
-        Me.HelpSep2.Index = 5
+        Me.HelpSep2.Index = 6
         resources.ApplyResources(Me.HelpSep2, "HelpSep2")
-        '
-        'AboutItem
-        '
-        Me.AboutItem.Index = 6
-        resources.ApplyResources(Me.AboutItem, "AboutItem")
-        '
-        'HelpSep3
-        '
-        Me.HelpSep3.Index = 7
-        resources.ApplyResources(Me.HelpSep3, "HelpSep3")
-        '
-        'InspectorBtn
-        '
-        resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
-        Me.InspectorBtn.Index = 8
         '
         'LanguageMenu
         '
-        Me.LanguageMenu.Index = 9
+        Me.LanguageMenu.Index = 7
         Me.LanguageMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnglishLang, Me.SpanishLang, Me.PolishLang, Me.WelshLang})
         resources.ApplyResources(Me.LanguageMenu, "LanguageMenu")
         '
@@ -658,6 +649,21 @@ Partial Class Main
         Me.WelshLang.Index = 3
         Me.WelshLang.Tag = "cy-GB"
         resources.ApplyResources(Me.WelshLang, "WelshLang")
+        '
+        'InspectorBtn
+        '
+        resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
+        Me.InspectorBtn.Index = 8
+        '
+        'HelpSep3
+        '
+        Me.HelpSep3.Index = 9
+        resources.ApplyResources(Me.HelpSep3, "HelpSep3")
+        '
+        'AboutItem
+        '
+        Me.AboutItem.Index = 10
+        resources.ApplyResources(Me.AboutItem, "AboutItem")
         '
         'XP
         '
@@ -1142,4 +1148,5 @@ Partial Class Main
     Friend WithEvents HelpSep3 As System.Windows.Forms.MenuItem
     Friend WithEvents ShowVersion As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFileLocation As System.Windows.Forms.MenuItem
+    Friend WithEvents OpenSampleSite As System.Windows.Forms.MenuItem
 End Class

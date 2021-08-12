@@ -1879,4 +1879,12 @@ Public Class Main
     Private Sub OpenFileLocation_Click(sender As System.Object, e As System.EventArgs) Handles OpenFileLocation.Click
         Process.Start(Path.GetDirectoryName(Context.Tag))
     End Sub
+
+    Private Sub HelpTopics_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HelpTopics.Click
+        Preview_Navigate(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "SampleSite\out\manual\index.html"))
+    End Sub
+
+    Private Sub OpenSampleSite_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenSampleSite.Click
+        openSite(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "SampleSite"), False)
+    End Sub
 End Class

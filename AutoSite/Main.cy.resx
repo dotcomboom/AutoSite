@@ -340,7 +340,10 @@
     <value>&amp;Offer</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
-    <value>Llawlyfr AutoSite</value>
+    <value>Gweld Llawlyfr</value>
+  </data>
+  <data name="OpenSampleSite.Text" xml:space="preserve">
+    <value>Agor Gwefan Enghraifft...</value>
   </data>
   <data name="HelpSep.Text" xml:space="preserve">
     <value>-</value>
@@ -357,15 +360,6 @@
   <data name="HelpSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="AboutItem.Text" xml:space="preserve">
-    <value>Amdan AutoSite</value>
-  </data>
-  <data name="HelpSep3.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="InspectorBtn.Text" xml:space="preserve">
-    <value>GUI Inspector (F12)</value>
-  </data>
   <data name="EnglishLang.Text" xml:space="preserve">
     <value>English</value>
   </data>
@@ -380,6 +374,15 @@
   </data>
   <data name="LanguageMenu.Text" xml:space="preserve">
     <value>🌐</value>
+  </data>
+  <data name="InspectorBtn.Text" xml:space="preserve">
+    <value>GUI Inspector (F12)</value>
+  </data>
+  <data name="HelpSep3.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="AboutItem.Text" xml:space="preserve">
+    <value>Amdan AutoSite</value>
   </data>
   <data name="HelpMenu.Text" xml:space="preserve">
     <value>Help</value>

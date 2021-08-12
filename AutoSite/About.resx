@@ -136,18 +136,25 @@
     <value>0</value>
   </data>
   <data name="LicenseBox.Text" xml:space="preserve">
-    <value>AutoSite is powered by these most excellent open source libraries:
+    <value>This release is dedicated to Somnolescent and its mutuals for their testing, support and contributions to this project, including but not limited to:
+  - Website &amp; manual: mariteaux (http://mariteaux.somnolescent.net)
+  - Welsh translation: Caby (http://caby.somnolescent.net)
+  - Polish translation: devon (http://matfloor.net)
+
+----
+
+AutoSite is also made possible by these open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
   - AutoComplete Menu: https://www.codeproject.com/articles/365974/autocomplete-menu (LGPLv3)
   - CommonMark.NET: https://github.com/Knagis/CommonMark.NET (BSD 3-Clause)
 
-Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced in the source) is licensed under the MIT License.
+----
 
----
+Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced in the source) is licensed under the MIT License.
 
 MIT License
 
-Copyright (c) 2020 dotcomboom
+Copyright (c) 2021 dotcomboom
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -219,7 +226,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LicenseBox.Parent" xml:space="preserve">
-    <value>License</value>
+    <value>Credits</value>
   </data>
   <data name="&gt;&gt;LicenseBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -252,7 +259,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;OK.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="Logo.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 10</value>
@@ -279,13 +286,13 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Logo.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="Version.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 7.8pt, style=Bold</value>
   </data>
   <data name="Version.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 143</value>
+    <value>12, 145</value>
   </data>
   <data name="Version.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
@@ -309,13 +316,13 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Version.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>Panel1</value>
   </data>
   <data name="&gt;&gt;Version.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="GithubLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 174</value>
+    <value>12, 175</value>
   </data>
   <data name="GithubLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
@@ -339,13 +346,13 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GithubLink.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>Panel1</value>
   </data>
   <data name="&gt;&gt;GithubLink.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="WebsiteLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 207</value>
+    <value>12, 209</value>
   </data>
   <data name="WebsiteLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
@@ -369,7 +376,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;WebsiteLink.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>Panel1</value>
   </data>
   <data name="&gt;&gt;WebsiteLink.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -377,34 +384,34 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="Tabs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="License.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Credits.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
   </data>
-  <data name="License.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Credits.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
-  <data name="License.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Credits.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
-  <data name="License.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Credits.Size" type="System.Drawing.Size, System.Drawing">
     <value>349, 282</value>
   </data>
-  <data name="License.TabIndex" type="System.Int32, mscorlib">
+  <data name="Credits.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="License.Text" xml:space="preserve">
-    <value>Licenses</value>
+  <data name="Credits.Text" xml:space="preserve">
+    <value>Credits</value>
   </data>
-  <data name="&gt;&gt;License.Name" xml:space="preserve">
-    <value>License</value>
+  <data name="&gt;&gt;Credits.Name" xml:space="preserve">
+    <value>Credits</value>
   </data>
-  <data name="&gt;&gt;License.Type" xml:space="preserve">
+  <data name="&gt;&gt;Credits.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;License.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Credits.Parent" xml:space="preserve">
     <value>Tabs</value>
   </data>
-  <data name="&gt;&gt;License.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Credits.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="ChangelogBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -423,7 +430,11 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 RC5:
+    <value>1.0 Gold:
+   + Help manual (CTRL+F1) and sample site included
+   + About box prettified and updated
+
+1.0 RC5:
    + Localization support added
         + Polish translations by matfloor.net
         + Welsh translations by caby.somnolescent.net
@@ -440,7 +451,6 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
    - Using View Output when the output file doesn't exist is now handled
    - Default new HTML template adjusted to be more standards-compliant
 
-   
 1.0 RC4:
    + Brand new Quick Insert menu, press CTRL+Space or CTRL+J in the editor or click on the new icon in the toolbar
    + Editor's auto indent will no longer affect existing lines
@@ -653,7 +663,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 10</value>
+    <value>129, 10</value>
   </data>
   <data name="Tabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -680,7 +690,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>Bottom, Left</value>
   </data>
   <data name="Sysinfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 321</value>
+    <value>127, 323</value>
   </data>
   <data name="Sysinfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 38</value>
@@ -705,6 +715,30 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   </data>
   <data name="&gt;&gt;Sysinfo.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="Panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, -2</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 379</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -156,19 +156,19 @@
     <value>63, 22</value>
   </data>
   <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Salvar</value>
   </data>
   <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 22</value>
   </data>
   <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Salvar</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 22</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save All</value>
+    <value>Salvar Tudo</value>
   </data>
   <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -180,7 +180,7 @@
     <value>23, 22</value>
   </data>
   <data name="UndoBtn.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Desfazer</value>
   </data>
   <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -189,7 +189,7 @@
     <value>23, 22</value>
   </data>
   <data name="RedoBtn.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Refazer</value>
   </data>
   <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -201,7 +201,7 @@
     <value>23, 22</value>
   </data>
   <data name="CutBtn.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Recortar</value>
   </data>
   <data name="CopyBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -210,7 +210,7 @@
     <value>23, 22</value>
   </data>
   <data name="CopyBtn.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiar</value>
   </data>
   <data name="PasteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -219,7 +219,7 @@
     <value>23, 22</value>
   </data>
   <data name="PasteBtn.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Colar</value>
   </data>
   <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -237,7 +237,7 @@
     <value>23, 22</value>
   </data>
   <data name="CloseBtn.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>Fechar</value>
   </data>
   <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -294,7 +294,7 @@
     <value>139, 22</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
+    <value>Pré-visualização ao vivo</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -470,34 +470,34 @@
     <value>119, 17</value>
   </metadata>
   <data name="Undo.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Desfazer</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Refazer</value>
   </data>
   <data name="ConSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Recortar</value>
   </data>
   <data name="Copy.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiar</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Colar</value>
   </data>
   <data name="ConSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>Selecionar Todos</value>
   </data>
   <data name="ConSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insert Conditional...</value>
+    <value>Inserir Condicional...</value>
   </data>
   <metadata name="PreviewWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>475, 17</value>

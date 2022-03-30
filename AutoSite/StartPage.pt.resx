@@ -169,7 +169,7 @@
     <value>7</value>
   </data>
   <data name="NewSite.Text" xml:space="preserve">
-    <value>New Site...</value>
+    <value>Novo Site...</value>
   </data>
   <data name="NewSite.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -415,7 +415,7 @@
     <value>19</value>
   </data>
   <data name="OpenSite.Text" xml:space="preserve">
-    <value>Open Site...</value>
+    <value>Abrir Site...</value>
   </data>
   <data name="OpenSite.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>

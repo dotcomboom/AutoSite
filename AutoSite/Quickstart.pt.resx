@@ -643,7 +643,7 @@
     <value>20</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="&gt;&gt;Build.Name" xml:space="preserve">
     <value>Build</value>
@@ -793,7 +793,7 @@
     <value>22</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construção Sanitária...</value>
   </data>
   <data name="&gt;&gt;SanitaryBuild.Name" xml:space="preserve">
     <value>SanitaryBuild</value>
@@ -907,7 +907,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Quickstart</value>
+    <value>Inicio Rápido</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Quickstart</value>

@@ -541,7 +541,7 @@
     <value>Colar</value>
   </data>
   <data name="AddFilesCon.Text" xml:space="preserve">
-    <value>Add files...</value>
+    <value>Adicionar arquivos...</value>
   </data>
   <data name="ContextSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -1959,13 +1959,13 @@ Construa seu site para popular o Mapa de Atributos.</value>
     <value>Salvar...</value>
   </data>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
-    <value>Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt</value>
+    <value>Texto Formatado (*.rtf)|*.rtf|Texto não Formatado (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
-    <value>Save Log</value>
+    <value>Salvar Registro</value>
   </data>
   <data name="OpenPack.Filter" xml:space="preserve">
-    <value>AutoSite Zip package (*.zip)|*.zip</value>
+    <value>Pacote Zip do AutoSite (*.zip)|*.zip</value>
   </data>
   <metadata name="VS2017.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>382, 17</value>

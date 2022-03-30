@@ -329,7 +329,7 @@
     <value>Build for more options</value>
   </data>
   <data name="QuickInsert_Build_Tip" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="QuickInsert_Build_TipText" xml:space="preserve">
     <value>AutoSite can give you more suggestions when you build
@@ -420,16 +420,16 @@ pages.</value>
     <value>View</value>
   </data>
   <data name="UI_Open" xml:space="preserve">
-    <value>Open</value>
+    <value>Abrir</value>
   </data>
   <data name="UI_OpenFileLocation" xml:space="preserve">
-    <value>Open file location</value>
+    <value>Abrir local do arquivo</value>
   </data>
   <data name="UI_OpenFolderLocation" xml:space="preserve">
     <value>Open folder location</value>
   </data>
   <data name="UI_OpenWithDefault" xml:space="preserve">
-    <value>Open with default program</value>
+    <value>Abrir com o programa padrão</value>
   </data>
   <data name="Question_RemoveFromRecents" xml:space="preserve">
     <value>The site located in {0} could not be opened. Do you want to remove it from the Recent Sites list?</value>

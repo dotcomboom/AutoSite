@@ -288,13 +288,13 @@
     <value>80, 22</value>
   </data>
   <data name="Preview.Text" xml:space="preserve">
-    <value>Preview</value>
+    <value>Visualizar</value>
   </data>
   <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 22</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Pré-visualização ao vivo</value>
+    <value>Visualização em tempo real</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -306,7 +306,7 @@
     <value>54, 22</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="ViewOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -315,7 +315,7 @@
     <value>105, 22</value>
   </data>
   <data name="ViewOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Ver Saída</value>
   </data>
   <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 22</value>

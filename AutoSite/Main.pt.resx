@@ -229,7 +229,7 @@
     <value>Sair</value>
   </data>
   <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;File</value>
+    <value>&amp;Arquivo</value>
   </data>
   <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlZ</value>
@@ -310,7 +310,7 @@
     <value>Inserir Condicional...</value>
   </data>
   <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
+    <value>Editar</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
     <value>Quebra de Linha</value>
@@ -319,7 +319,7 @@
     <value>Espaço Virtual</value>
   </data>
   <data name="WideCaret.Text" xml:space="preserve">
-    <value>Wide Caret</value>
+    <value>Seta Larga</value>
   </data>
   <data name="FormatSep.Text" xml:space="preserve">
     <value>-</value>
@@ -331,7 +331,7 @@
     <value>False</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Pré-visualização ao vivo</value>
+    <value>Visualização em tempo real</value>
   </data>
   <data name="FormatSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -364,7 +364,7 @@
     <value>Alt4</value>
   </data>
   <data name="PreviewPanel.Text" xml:space="preserve">
-    <value>Preview</value>
+    <value>Visualizar</value>
   </data>
   <data name="ViewSep.Text" xml:space="preserve">
     <value>-</value>
@@ -376,28 +376,28 @@
     <value>XP</value>
   </data>
   <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Explorer Icon Theme</value>
+    <value>Tema do Ícone do Navegador</value>
   </data>
   <data name="cDefault.Text" xml:space="preserve">
-    <value>Default</value>
+    <value>Padrão</value>
   </data>
   <data name="cDark.Text" xml:space="preserve">
-    <value>Dark</value>
+    <value>Escuro</value>
   </data>
   <data name="ColorScheme.Text" xml:space="preserve">
-    <value>Color Scheme (beta)</value>
+    <value>Esquema de Cores (beta)</value>
   </data>
   <data name="ColorScheme.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
-    <value>Use System Icons</value>
+    <value>Usar Ícones do Sistema</value>
   </data>
   <data name="RefreshItem.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlR</value>
   </data>
   <data name="RefreshItem.Text" xml:space="preserve">
-    <value>Refresh Explorer</value>
+    <value>Atualizar Navegador</value>
   </data>
   <data name="ViewSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -406,37 +406,37 @@
     <value>CtrlP</value>
   </data>
   <data name="PreviewPage.Text" xml:space="preserve">
-    <value>Preview File</value>
+    <value>Pré-visualizar Arquivo</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Ver Saída</value>
   </data>
   <data name="ViewSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="BrowseSiteMnu.Text" xml:space="preserve">
-    <value>Browse Site in Default Browser</value>
+    <value>Abrir Site no Navegador Padrão</value>
   </data>
   <data name="BrowseSitePreviewMnu.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftP</value>
   </data>
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Abrir Site na Pré-visualização</value>
   </data>
   <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;View</value>
+    <value>Visualizar</value>
   </data>
   <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlB</value>
   </data>
   <data name="BuildSite.Text" xml:space="preserve">
-    <value>Build Site</value>
+    <value>Construir Site</value>
   </data>
   <data name="SanitaryBuild.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftB</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construção Sanitária...</value>
   </data>
   <data name="ToolsSep.Text" xml:space="preserve">
     <value>-</value>
@@ -445,28 +445,28 @@
     <value>CtrlShiftO</value>
   </data>
   <data name="OpenOutputMnu.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
+    <value>Abrir Pasta de Saída</value>
   </data>
   <data name="ToolsSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="QuickstartMnu.Text" xml:space="preserve">
-    <value>Quickstart</value>
+    <value>Inicio Rápido</value>
   </data>
   <data name="ShowVersion.Text" xml:space="preserve">
-    <value>Show version</value>
+    <value>Exibir Versão</value>
   </data>
   <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
+    <value>&amp;Ferramentas</value>
   </data>
   <data name="HelpTopics.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlF1</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
-    <value>View Manual</value>
+    <value>Ver Manual</value>
   </data>
   <data name="OpenSampleSite.Text" xml:space="preserve">
-    <value>Open Sample Site...</value>
+    <value>Abrir Site Modelo...</value>
   </data>
   <data name="HelpSep.Text" xml:space="preserve">
     <value>-</value>
@@ -475,10 +475,10 @@
     <value>Website</value>
   </data>
   <data name="GitHub.Text" xml:space="preserve">
-    <value>GitHub Repository</value>
+    <value>Repositório no GitHub</value>
   </data>
   <data name="SendFeedback.Text" xml:space="preserve">
-    <value>Send Feedback</value>
+    <value>Enviar Feedback</value>
   </data>
   <data name="HelpSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -514,22 +514,22 @@
     <value>-</value>
   </data>
   <data name="AboutItem.Text" xml:space="preserve">
-    <value>About AutoSite</value>
+    <value>Sobre o AutoSite</value>
   </data>
   <data name="HelpMenu.Text" xml:space="preserve">
-    <value>Help</value>
+    <value>Ajuda</value>
   </data>
   <data name="XP.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
   <data name="OpenContext.Text" xml:space="preserve">
-    <value>Open</value>
+    <value>Abrir</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Open with default program</value>
+    <value>Abrir com o programa padrão</value>
   </data>
   <data name="OpenFileLocation.Text" xml:space="preserve">
-    <value>Open file location</value>
+    <value>Abrir local do arquivo</value>
   </data>
   <data name="ContextSep.Text" xml:space="preserve">
     <value>-</value>
@@ -547,49 +547,49 @@
     <value>-</value>
   </data>
   <data name="DeleteCon.Text" xml:space="preserve">
-    <value>Delete</value>
+    <value>Excluir</value>
   </data>
   <data name="RenameCon.Text" xml:space="preserve">
-    <value>Rename</value>
+    <value>Renomear</value>
   </data>
   <data name="ContextSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
-    <value>Folder</value>
+    <value>Pasta</value>
   </data>
   <data name="NewSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewHTMLCon.Text" xml:space="preserve">
-    <value>HTML Page (.html)</value>
+    <value>Página HTML (.html)</value>
   </data>
   <data name="NewMDCon.Text" xml:space="preserve">
-    <value>Markdown Page (.md)</value>
+    <value>Página Markdown (.md)</value>
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>PHP Script (.php)</value>
+    <value>Script PHP (.php)</value>
   </data>
   <data name="NewSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>CSS Stylesheet (.css)</value>
+    <value>Stylesheet CSS (.css)</value>
   </data>
   <data name="NewJSCon.Text" xml:space="preserve">
-    <value>JS Script (.js)</value>
+    <value>Script JS (.js)</value>
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
-    <value>Plain Text (.txt)</value>
+    <value>Texto Sem Formatação (.txt)</value>
   </data>
   <data name="NewCon.Text" xml:space="preserve">
-    <value>New</value>
+    <value>Novo</value>
   </data>
   <data name="AddFilesDialog.Filter" xml:space="preserve">
-    <value>All files (*.*)|*.*</value>
+    <value>Todos os arquivos (*.*)|*.*</value>
   </data>
   <data name="AddFilesDialog.Title" xml:space="preserve">
-    <value>Add Files to Folder</value>
+    <value>Adicionar Arquivos à Pasta</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 15</value>
@@ -715,7 +715,7 @@
     <value>0</value>
   </data>
   <data name="LogPage.Text" xml:space="preserve">
-    <value>Log</value>
+    <value>Registro</value>
   </data>
   <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
     <value>LogPage</value>
@@ -746,9 +746,8 @@
   </data>
   <data name="AttributeExplanation.Text" xml:space="preserve">
     <value>
-The Attribute Map allows you to view all of the Attributes used in your site. 
-
-Build your site to populate the Attribute Map.</value>
+O Mapa de Atributos lhe permite ver todos os Atributos utilizados em seu site.
+Construa seu site para popular o Mapa de Atributos.</value>
   </data>
   <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -814,7 +813,7 @@ Build your site to populate the Attribute Map.</value>
     <value>1</value>
   </data>
   <data name="MapPage.Text" xml:space="preserve">
-    <value>Attribute Map</value>
+    <value>Mapa de Atributos</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -895,10 +894,10 @@ Build your site to populate the Attribute Map.</value>
     <value>54, 22</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="Build.ToolTipText" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="SanitaryBuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -907,10 +906,10 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="SanitaryBuildBtn.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construção Sanitária...</value>
   </data>
   <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Construção Sanitária...</value>
   </data>
   <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -919,7 +918,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="OpenOutput.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
+    <value>Abrir Pasta de Saída</value>
   </data>
   <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -928,7 +927,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="BrowseSitePreview.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Abrir Site na Pré-visualização</value>
   </data>
   <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -937,7 +936,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 22</value>
   </data>
   <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Browse Site</value>
+    <value>Navegar no Site</value>
   </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -949,7 +948,7 @@ Build your site to populate the Attribute Map.</value>
     <value>3</value>
   </data>
   <data name="BuildStrip.Text" xml:space="preserve">
-    <value>Build</value>
+    <value>Construir</value>
   </data>
   <data name="&gt;&gt;BuildStrip.Name" xml:space="preserve">
     <value>BuildStrip</value>
@@ -1957,7 +1956,7 @@ Build your site to populate the Attribute Map.</value>
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="SaveLog.Text" xml:space="preserve">
-    <value>Save...</value>
+    <value>Salvar...</value>
   </data>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
     <value>Rich Text (*.rtf)|*.rtf|Plain Text (*.txt)|*.txt</value>

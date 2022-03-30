@@ -215,7 +215,7 @@
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewCss" xml:space="preserve">
-    <value>novo-estilo</value>
+    <value>new-style</value>
   </data>
   <data name="Defaults_NewFile" xml:space="preserve">
     <value>new-file</value>
@@ -227,17 +227,17 @@
     <value>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
-    &lt;title&gt;New HTML Page&lt;/title&gt;
+    &lt;title&gt;Nova Pagina HTML&lt;/title&gt;
     &lt;meta charset="utf-8"&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;New HTML Page&lt;/h1&gt;
+    &lt;h1&gt;Nova Pagina HTML&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New HTML Page --&gt;
+    <value>&lt;!-- attrib template: padrao --&gt;
+&lt;!-- attrib title: Nova Pagina HTML --&gt;
 </value>
   </data>
   <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
@@ -260,8 +260,8 @@
     <value>new-page</value>
   </data>
   <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New Markdown Page --&gt;
+    <value>&lt;!-- attrib template: padrao --&gt;
+&lt;!-- attrib title: Nova Pagina Markdown --&gt;
 </value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
@@ -269,52 +269,52 @@
   </data>
   <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
     <value>&lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
+      echo "Isto será interpretado pelo servidor. Olá universo!";
 ?&gt;</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New PHP Page --&gt;
+    <value>&lt;!-- attrib template: padrao --&gt;
+&lt;!-- attrib title: Nova Pagina PHP --&gt;
 &lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
+      echo "Isto será interpretado pelo servidor. Olá universo!";
 ?&gt;</value>
   </data>
   <data name="Error_BuildFailed" xml:space="preserve">
-    <value>Apricot returned this exception:
+    <value>Apricot retornou a seguinte exceção:
 
 {0}</value>
   </data>
   <data name="Error_BuildFailed_Title" xml:space="preserve">
-    <value>Build failed</value>
+    <value>Construção falhou</value>
   </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
-    <value>Build the site first to view output.</value>
+    <value>Construa o site primeiro para visualizar a saída.</value>
   </data>
   <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>The file could not be saved.</value>
+    <value>Não foi possível salvar o arquivo.</value>
   </data>
   <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Something went wrong when trying to save the log:
+    <value>Algo deu errado ao tentar salvar o registro:
 
 {0}</value>
   </data>
   <data name="Error_LogSaveFail_Title" xml:space="preserve">
-    <value>Failed to save</value>
+    <value>Falha ao salvar</value>
   </data>
   <data name="Error_UpgradeFail" xml:space="preserve">
-    <value>AutoSite could not rename the in\ folder to pages\. Please rename the folder manually and open your site again.</value>
+    <value>AutoSite não pôde renomear a pasta. Por favor renomeie a pasta manualmente e abra seu site novamente.</value>
   </data>
   <data name="Error_UpgradeFail_Title" xml:space="preserve">
-    <value>Unable to convert</value>
+    <value>Não foi possível converter</value>
   </data>
   <data name="Prompt_CreateSite" xml:space="preserve">
-    <value>AutoSite will create a site in the folder located at {0}. Is this OK?</value>
+    <value>AutoSite criará um site na pasta localizada em {0}. Prosseguir?</value>
   </data>
   <data name="Prompt_ProjectUpgrade" xml:space="preserve">
-    <value>AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.</value>
+    <value>AutoSite agora utiliza o caminho pages\ para a pasta de Paginas. A compatibilidade com versões anteriores do AutoSite será afetada por esta conversão.</value>
   </data>
   <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
-    <value>Update Site</value>
+    <value>Atualizar Site</value>
   </data>
   <data name="Prompt_SanitaryBuild" xml:space="preserve">
     <value>A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.</value>

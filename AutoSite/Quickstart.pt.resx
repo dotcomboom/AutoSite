@@ -547,7 +547,7 @@
     <value>15</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
-    <value>Use this task or select and right-click on Includes in the Explorer to add files. These can be referenced in your templates and pages like [#root#]image.png or [#root#]subdir/image.png.</value>
+    <value>Use esta tarefa ou selecione com o botão direito em Includes no Navegador para adicionar arquivos. Estes arquivos poderão ser referenciados em seus modelos e páginas como [#root#]image.png ou [#root#]subdir/image.png.</value>
   </data>
   <data name="&gt;&gt;Label11.Name" xml:space="preserve">
     <value>Label11</value>
@@ -580,7 +580,7 @@
     <value>14</value>
   </data>
   <data name="Label12.Text" xml:space="preserve">
-    <value>Add includes</value>
+    <value>Adicionar Inclusões</value>
   </data>
   <data name="&gt;&gt;Label12.Name" xml:space="preserve">
     <value>Label12</value>
@@ -670,7 +670,7 @@
     <value>19</value>
   </data>
   <data name="Label9.Text" xml:space="preserve">
-    <value>AutoSite has two options for building your site. Sanitary Build cleans your output folder of any old files and is recommended before publishing.</value>
+    <value>AutoSite tem duas opções para a construção do seu site. Construção Sanitária limpa sua pasta de saída de quaisquer arquivos antigos e é recomendada antes de publicar.</value>
   </data>
   <data name="&gt;&gt;Label9.Name" xml:space="preserve">
     <value>Label9</value>
@@ -703,7 +703,7 @@
     <value>18</value>
   </data>
   <data name="Label10.Text" xml:space="preserve">
-    <value>Build your site</value>
+    <value>Construa seu site</value>
   </data>
   <data name="&gt;&gt;Label10.Name" xml:space="preserve">
     <value>Label10</value>
@@ -760,7 +760,7 @@
     <value>21</value>
   </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
-    <value>Markdown guide</value>
+    <value>Guia Markdown</value>
   </data>
   <data name="LinkLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
@@ -820,7 +820,7 @@
     <value>23</value>
   </data>
   <data name="LinkLabel2.Text" xml:space="preserve">
-    <value>HTML guide</value>
+    <value>Guia HTML</value>
   </data>
   <data name="LinkLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
@@ -874,7 +874,7 @@
     <value>25</value>
   </data>
   <data name="Label15.Text" xml:space="preserve">
-    <value>You can go back to this dialog or rename the file to change formats at any time.</value>
+    <value>Você pode voltar para este diálogo ou renomear o arquivo para mudar os formatos a qualquer momento.</value>
   </data>
   <data name="&gt;&gt;Label15.Name" xml:space="preserve">
     <value>Label15</value>

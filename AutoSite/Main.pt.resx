@@ -129,19 +129,19 @@
     <value>CtrlShiftN</value>
   </data>
   <data name="NewSite.Text" xml:space="preserve">
-    <value>New Site...</value>
+    <value>Novo Site...</value>
   </data>
   <data name="OpenFolder.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftO</value>
   </data>
   <data name="OpenFolder.Text" xml:space="preserve">
-    <value>Open Site...</value>
+    <value>Abrir Site...</value>
   </data>
   <data name="CloseFile.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlW</value>
   </data>
   <data name="CloseFile.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>Fechar</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="CloseSite.Enabled" type="System.Boolean, mscorlib">
@@ -151,7 +151,7 @@
     <value>CtrlShiftW</value>
   </data>
   <data name="CloseSite.Text" xml:space="preserve">
-    <value>Close Site</value>
+    <value>Fechar Site</value>
   </data>
   <data name="FileSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -160,13 +160,13 @@
     <value>CtrlS</value>
   </data>
   <data name="Save.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Salvar</value>
   </data>
   <data name="SaveAll.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlShiftS</value>
   </data>
   <data name="SaveAll.Text" xml:space="preserve">
-    <value>Save All</value>
+    <value>Salvar Tudo</value>
   </data>
   <data name="FileSep3.Text" xml:space="preserve">
     <value>-</value>
@@ -208,13 +208,13 @@
     <value>-</value>
   </data>
   <data name="ClearRecents.Text" xml:space="preserve">
-    <value>Clear Recent Sites</value>
+    <value>Limpar Sites Recentes</value>
   </data>
   <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Recent Sites</value>
+    <value>Sites Recentes</value>
   </data>
   <data name="InstallPackMnu.Text" xml:space="preserve">
-    <value>Install Pack...</value>
+    <value>Instalar Pacote...</value>
   </data>
   <data name="InstallPackMnu.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -226,7 +226,7 @@
     <value>AltF4</value>
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
-    <value>Exit</value>
+    <value>Sair</value>
   </data>
   <data name="FileMenu.Text" xml:space="preserve">
     <value>&amp;File</value>
@@ -235,13 +235,13 @@
     <value>CtrlZ</value>
   </data>
   <data name="Undo.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>Desfazer</value>
   </data>
   <data name="Redo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlY</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
-    <value>Redo</value>
+    <value>Refazer</value>
   </data>
   <data name="EditSep.Text" xml:space="preserve">
     <value>-</value>
@@ -250,19 +250,19 @@
     <value>CtrlX</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cut</value>
+    <value>Recortar</value>
   </data>
   <data name="Copy.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlC</value>
   </data>
   <data name="Copy.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiar</value>
   </data>
   <data name="Paste.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlV</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Colar</value>
   </data>
   <data name="EditSep2.Text" xml:space="preserve">
     <value>-</value>
@@ -271,7 +271,7 @@
     <value>CtrlA</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>Selecionar Todos</value>
   </data>
   <data name="EditSep3.Text" xml:space="preserve">
     <value>-</value>
@@ -280,19 +280,19 @@
     <value>CtrlG</value>
   </data>
   <data name="GoToMnu.Text" xml:space="preserve">
-    <value>Go To...</value>
+    <value>Ir Para...</value>
   </data>
   <data name="Find.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlF</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Find...</value>
+    <value>Encontrar...</value>
   </data>
   <data name="Replace.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlH</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Replace...</value>
+    <value>Substituir...</value>
   </data>
   <data name="EditSep4.Text" xml:space="preserve">
     <value>-</value>
@@ -307,16 +307,16 @@
     <value>CtrlShiftI</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insert Conditional...</value>
+    <value>Inserir Condicional...</value>
   </data>
   <data name="EditMenu.Text" xml:space="preserve">
     <value>&amp;Edit</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
-    <value>Word Wrap</value>
+    <value>Quebra de Linha</value>
   </data>
   <data name="VirtualSpace.Text" xml:space="preserve">
-    <value>Virtual Space</value>
+    <value>Espaço Virtual</value>
   </data>
   <data name="WideCaret.Text" xml:space="preserve">
     <value>Wide Caret</value>
@@ -325,28 +325,28 @@
     <value>-</value>
   </data>
   <data name="SyntaxHighlight.Text" xml:space="preserve">
-    <value>Experimental Syntax Highlighting</value>
+    <value>Realce de Sintaxe Experimental</value>
   </data>
   <data name="SyntaxHighlight.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Live Preview</value>
+    <value>Pré-visualização ao vivo</value>
   </data>
   <data name="FormatSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
-    <value>Monospace Font...</value>
+    <value>Fonte Monoespaçada...</value>
   </data>
   <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
+    <value>Formatar</value>
   </data>
   <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt1</value>
   </data>
   <data name="ExplorerPanel.Text" xml:space="preserve">
-    <value>Explorer</value>
+    <value>Navegador</value>
   </data>
   <data name="BuildPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt2</value>
@@ -535,10 +535,10 @@
     <value>-</value>
   </data>
   <data name="CopyCon.Text" xml:space="preserve">
-    <value>Copy</value>
+    <value>Copiar</value>
   </data>
   <data name="PasteCon.Text" xml:space="preserve">
-    <value>Paste</value>
+    <value>Colar</value>
   </data>
   <data name="AddFilesCon.Text" xml:space="preserve">
     <value>Add files...</value>

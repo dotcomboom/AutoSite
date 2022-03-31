@@ -340,7 +340,7 @@
     <value>Fonte Monoespaçada...</value>
   </data>
   <data name="FormatMenu.Text" xml:space="preserve">
-    <value>Formatar</value>
+    <value>F&amp;ormatar</value>
   </data>
   <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt1</value>

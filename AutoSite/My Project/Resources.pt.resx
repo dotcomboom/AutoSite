@@ -236,7 +236,7 @@
 &lt;/html&gt;</value>
   </data>
   <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: padrao --&gt;
+    <value>&lt;!-- attrib template: default --&gt;
 &lt;!-- attrib title: Nova Pagina HTML --&gt;
 </value>
   </data>
@@ -260,7 +260,7 @@
     <value>new-page</value>
   </data>
   <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: padrao --&gt;
+    <value>&lt;!-- attrib template: default --&gt;
 &lt;!-- attrib title: Nova Pagina Markdown --&gt;
 </value>
   </data>
@@ -273,7 +273,7 @@
 ?&gt;</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: padrao --&gt;
+    <value>&lt;!-- attrib template: default --&gt;
 &lt;!-- attrib title: Nova Pagina PHP --&gt;
 &lt;?php
       echo "Isto será interpretado pelo servidor. Olá universo!";

@@ -424,7 +424,7 @@
     <value>Abrir Site na Pré-visualização</value>
   </data>
   <data name="ViewMenu.Text" xml:space="preserve">
-    <value>Visualizar</value>
+    <value>&amp;Visualizar</value>
   </data>
   <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlB</value>
@@ -747,6 +747,7 @@
   <data name="AttributeExplanation.Text" xml:space="preserve">
     <value>
 O Mapa de Atributos lhe permite ver todos os Atributos utilizados em seu site.
+
 Construa seu site para popular o Mapa de Atributos.</value>
   </data>
   <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">

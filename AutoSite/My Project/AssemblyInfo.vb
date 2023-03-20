@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("AutoSite")>
-<Assembly: AssemblyDescription("Gold")> 
+<Assembly: AssemblyDescription("WebView2 Edition")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("AutoSite")>
-<Assembly: AssemblyCopyright("Copyright © dotcomboom 2020")>
+<Assembly: AssemblyCopyright("Copyright © dotcomboom 2023")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

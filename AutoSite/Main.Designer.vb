@@ -144,7 +144,6 @@ Partial Class Main
         Me.Watcher = New System.IO.FileSystemWatcher()
         Me.EdSplit = New System.Windows.Forms.SplitContainer()
         Me.EditTabs = New System.Windows.Forms.TabControl()
-        Me.Preview = New System.Windows.Forms.WebBrowser()
         Me.ExSplit = New System.Windows.Forms.SplitContainer()
         Me.SiteTree = New System.Windows.Forms.TreeView()
         Me.ApricotTabs = New System.Windows.Forms.TabControl()
@@ -167,10 +166,13 @@ Partial Class Main
         Me.SaveLog = New System.Windows.Forms.MenuItem()
         Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
+        Me.Preview = New Microsoft.Web.WebView2.WinForms.WebView2()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EdSplit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
         Me.EdSplit.SuspendLayout()
+        CType(Me.ExSplit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
@@ -178,9 +180,11 @@ Partial Class Main
         Me.LogPage.SuspendLayout()
         Me.MapPage.SuspendLayout()
         Me.BuildStrip.SuspendLayout()
+        CType(Me.CoreSplit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
+        CType(Me.Preview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'VS2017
@@ -816,13 +820,6 @@ Partial Class Main
         Me.EditTabs.Name = "EditTabs"
         Me.EditTabs.SelectedIndex = 0
         '
-        'Preview
-        '
-        resources.ApplyResources(Me.Preview, "Preview")
-        Me.Preview.Name = "Preview"
-        Me.Preview.ScriptErrorsSuppressed = True
-        Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
-        '
         'ExSplit
         '
         resources.ApplyResources(Me.ExSplit, "ExSplit")
@@ -979,6 +976,15 @@ Partial Class Main
         '
         resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
+        'Preview
+        '
+        Me.Preview.AllowExternalDrop = True
+        Me.Preview.CreationProperties = Nothing
+        Me.Preview.DefaultBackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        resources.ApplyResources(Me.Preview, "Preview")
+        Me.Preview.Name = "Preview"
+        Me.Preview.ZoomFactor = 1.0R
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -990,10 +996,12 @@ Partial Class Main
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EdSplit.Panel1.ResumeLayout(False)
         Me.EdSplit.Panel2.ResumeLayout(False)
+        CType(Me.EdSplit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EdSplit.ResumeLayout(False)
         Me.ExSplit.Panel1.ResumeLayout(False)
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
+        CType(Me.ExSplit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ExSplit.ResumeLayout(False)
         Me.ApricotTabs.ResumeLayout(False)
         Me.LogPage.ResumeLayout(False)
@@ -1002,7 +1010,9 @@ Partial Class Main
         Me.BuildStrip.PerformLayout()
         Me.CoreSplit.Panel1.ResumeLayout(False)
         Me.CoreSplit.Panel2.ResumeLayout(False)
+        CType(Me.CoreSplit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CoreSplit.ResumeLayout(False)
+        CType(Me.Preview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1065,7 +1075,6 @@ Partial Class Main
     Friend WithEvents BrowseSite As System.Windows.Forms.ToolStripButton
     Friend WithEvents EdSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents EditTabs As System.Windows.Forms.TabControl
-    Friend WithEvents Preview As System.Windows.Forms.WebBrowser
     Friend WithEvents FormatSep2 As System.Windows.Forms.MenuItem
     Friend WithEvents EditorFont As System.Windows.Forms.MenuItem
     Friend WithEvents SelectFont As System.Windows.Forms.FontDialog
@@ -1149,4 +1158,5 @@ Partial Class Main
     Friend WithEvents ShowVersion As System.Windows.Forms.MenuItem
     Friend WithEvents OpenFileLocation As System.Windows.Forms.MenuItem
     Friend WithEvents OpenSampleSite As System.Windows.Forms.MenuItem
+    Friend WithEvents Preview As Microsoft.Web.WebView2.WinForms.WebView2
 End Class

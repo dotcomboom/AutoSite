@@ -49,6 +49,7 @@ Partial Class About
         Me.LicenseBox.Cursor = System.Windows.Forms.Cursors.Default
         resources.ApplyResources(Me.LicenseBox, "LicenseBox")
         Me.LicenseBox.Name = "LicenseBox"
+        Me.LicenseBox.ReadOnly = True
         '
         'OK
         '

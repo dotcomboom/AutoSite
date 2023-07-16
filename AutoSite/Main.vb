@@ -250,10 +250,13 @@ Public Class Main
         EditMenu.Visible = EditorPanel.Checked
         FormatMenu.Visible = EditorPanel.Checked
 
+        StatusBar.Visible = StatusBarMnu.Checked
+
         My.Settings.explorerOpen = ExplorerPanel.Checked
         My.Settings.editorOpen = EditorPanel.Checked
         My.Settings.browserOpen = PreviewPanel.Checked
         My.Settings.buildOpen = BuildPanel.Checked
+        My.Settings.statusBar = StatusBarMnu.Checked
 
         My.Settings.WordWrap = WordWrap.Checked
         My.Settings.VirtualSpace = VirtualSpace.Checked
@@ -661,6 +664,15 @@ Public Class Main
         panelUpdate()
     End Sub
 
+    Private Sub StatusBarMnu_Click(ByVal sender As Object, ByVal e As EventArgs) Handles StatusBarMnu.Click
+        If StatusBarMnu.Checked Then
+            StatusBarMnu.Checked = False
+        Else
+            StatusBarMnu.Checked = True
+        End If
+        panelUpdate()
+    End Sub
+
     Private Sub VS2017item_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VS2017item.Click
         If Not VS2017item.Checked Then
             My.Settings.iconTheme = "vs2017"
@@ -1045,6 +1057,7 @@ Public Class Main
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles ApricotWorker.ProgressChanged
         AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
         If e.UserState.GetType() Is GetType(System.String) Then
+            'ToolStripProgressBar1.Value = e.ProgressPercentage
             BuildProgress.Visible = True
             BuildSite.Enabled = False
             Build.Enabled = False
@@ -1061,6 +1074,8 @@ Public Class Main
             End If
             If s.Contains(":") Then
                 Log.SelectionColor = Color.Green
+            Else
+                ApriStatus.Text = e.UserState
             End If
             If s.Contains("WARN:") Then
                 Log.SelectionColor = Color.OrangeRed
@@ -1243,14 +1258,14 @@ Public Class Main
         Next
     End Sub
 
-    Private Sub OpenDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenOutput.Click, OpenOutputMnu.Click
+    Private Sub OpenDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenOutput.Click, OpenOutputMnu.Click, OpenOutputFolderBtn.Click
         Try
             Process.Start(SiteTree.Nodes(0).Text & "\out\")
         Catch ex As Exception
         End Try
     End Sub
 
-    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click
+    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click, BrowseSitePreviewMnu.Click
         If Not PreviewPanel.Checked Then
             PreviewPanel.Checked = True
             panelUpdate()

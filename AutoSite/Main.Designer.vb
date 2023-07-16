@@ -76,6 +76,7 @@ Partial Class Main
         Me.BuildPanel = New System.Windows.Forms.MenuItem()
         Me.EditorPanel = New System.Windows.Forms.MenuItem()
         Me.PreviewPanel = New System.Windows.Forms.MenuItem()
+        Me.StatusBarMnu = New System.Windows.Forms.MenuItem()
         Me.ViewSep = New System.Windows.Forms.MenuItem()
         Me.IconThemeMenu = New System.Windows.Forms.MenuItem()
         Me.VS2017item = New System.Windows.Forms.MenuItem()
@@ -208,9 +209,12 @@ Partial Class Main
         Me.PreviewBtn = New System.Windows.Forms.ToolStripSplitButton()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildBtn = New System.Windows.Forms.ToolStripButton()
+        Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripButton()
         Me.CleanBuildBtn = New System.Windows.Forms.ToolStripButton()
         Me.ViewOutBtn = New System.Windows.Forms.ToolStripSplitButton()
         Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusBar = New System.Windows.Forms.StatusStrip()
+        Me.ApriStatus = New System.Windows.Forms.ToolStripStatusLabel()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -226,6 +230,7 @@ Partial Class Main
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
         Me.Strip.SuspendLayout()
+        Me.StatusBar.SuspendLayout()
         Me.SuspendLayout()
         '
         'VS2017
@@ -470,7 +475,7 @@ Partial Class Main
         'ViewMenu
         '
         Me.ViewMenu.Index = 3
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.ViewSep, Me.IconThemeMenu, Me.ColorScheme, Me.SystemIcons, Me.RefreshItem})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.StatusBarMnu, Me.ViewSep, Me.IconThemeMenu, Me.ColorScheme, Me.SystemIcons, Me.RefreshItem})
         resources.ApplyResources(Me.ViewMenu, "ViewMenu")
         '
         'ExplorerPanel
@@ -497,14 +502,20 @@ Partial Class Main
         Me.PreviewPanel.Index = 3
         resources.ApplyResources(Me.PreviewPanel, "PreviewPanel")
         '
+        'StatusBarMnu
+        '
+        Me.StatusBarMnu.Checked = True
+        Me.StatusBarMnu.Index = 4
+        resources.ApplyResources(Me.StatusBarMnu, "StatusBarMnu")
+        '
         'ViewSep
         '
-        Me.ViewSep.Index = 4
+        Me.ViewSep.Index = 5
         resources.ApplyResources(Me.ViewSep, "ViewSep")
         '
         'IconThemeMenu
         '
-        Me.IconThemeMenu.Index = 5
+        Me.IconThemeMenu.Index = 6
         Me.IconThemeMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.VS2017item, Me.XPitem})
         resources.ApplyResources(Me.IconThemeMenu, "IconThemeMenu")
         '
@@ -522,7 +533,7 @@ Partial Class Main
         '
         'ColorScheme
         '
-        Me.ColorScheme.Index = 6
+        Me.ColorScheme.Index = 7
         Me.ColorScheme.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.cDefault, Me.cDark})
         resources.ApplyResources(Me.ColorScheme, "ColorScheme")
         '
@@ -540,12 +551,12 @@ Partial Class Main
         'SystemIcons
         '
         Me.SystemIcons.Checked = True
-        Me.SystemIcons.Index = 7
+        Me.SystemIcons.Index = 8
         resources.ApplyResources(Me.SystemIcons, "SystemIcons")
         '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 8
+        Me.RefreshItem.Index = 9
         resources.ApplyResources(Me.RefreshItem, "RefreshItem")
         '
         'BuildMenu
@@ -1018,7 +1029,7 @@ Partial Class Main
         '
         Me.Strip.BackColor = System.Drawing.SystemColors.MenuBar
         Me.Strip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.NewItemBtn, Me.ScriptingDropdown, Me.SaveBtn, Me.SaveAllBtn, Me.Sep, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.InsertBtn, Me.Sep2, Me.CloseBtn, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.ToolStripSeparator2, Me.UndoBtn, Me.RedoBtn, Me.Sep3, Me.PreviewBtn, Me.BuildBtn, Me.CleanBuildBtn, Me.ViewOutBtn})
+        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.NewItemBtn, Me.ScriptingDropdown, Me.SaveBtn, Me.SaveAllBtn, Me.Sep, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.InsertBtn, Me.Sep2, Me.CloseBtn, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.ToolStripSeparator2, Me.UndoBtn, Me.RedoBtn, Me.Sep3, Me.PreviewBtn, Me.BuildBtn, Me.CleanBuildBtn, Me.ViewOutBtn, Me.OpenOutputFolderBtn})
         Me.Strip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         resources.ApplyResources(Me.Strip, "Strip")
         Me.Strip.Name = "Strip"
@@ -1048,8 +1059,9 @@ Partial Class Main
         '
         'NewFolderTool
         '
-        resources.ApplyResources(Me.NewFolderTool, "NewFolderTool")
+        Me.NewFolderTool.Image = Global.AutoSite.My.Resources.Resources.Folder
         Me.NewFolderTool.Name = "NewFolderTool"
+        resources.ApplyResources(Me.NewFolderTool, "NewFolderTool")
         '
         'SepNewItem0
         '
@@ -1283,7 +1295,6 @@ Partial Class Main
         '
         'PreviewBtn
         '
-        Me.PreviewBtn.AutoToolTip = False
         Me.PreviewBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.PreviewBtn.ForeColor = System.Drawing.Color.Black
         Me.PreviewBtn.Image = Global.AutoSite.My.Resources.Resources.WebTest
@@ -1303,9 +1314,15 @@ Partial Class Main
         resources.ApplyResources(Me.BuildBtn, "BuildBtn")
         Me.BuildBtn.Name = "BuildBtn"
         '
+        'OpenOutputFolderBtn
+        '
+        Me.OpenOutputFolderBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenOutputFolderBtn.Image = Global.AutoSite.My.Resources.Resources.OpenFolder
+        resources.ApplyResources(Me.OpenOutputFolderBtn, "OpenOutputFolderBtn")
+        Me.OpenOutputFolderBtn.Name = "OpenOutputFolderBtn"
+        '
         'CleanBuildBtn
         '
-        Me.CleanBuildBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.CleanBuildBtn.Image = Global.AutoSite.My.Resources.Resources.SanitaryBuild
         resources.ApplyResources(Me.CleanBuildBtn, "CleanBuildBtn")
         Me.CleanBuildBtn.Name = "CleanBuildBtn"
@@ -1323,10 +1340,22 @@ Partial Class Main
         Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
         resources.ApplyResources(Me.ViewinDefaultBrowser, "ViewinDefaultBrowser")
         '
+        'StatusBar
+        '
+        Me.StatusBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApriStatus})
+        resources.ApplyResources(Me.StatusBar, "StatusBar")
+        Me.StatusBar.Name = "StatusBar"
+        '
+        'ApriStatus
+        '
+        Me.ApriStatus.Name = "ApriStatus"
+        resources.ApplyResources(Me.ApriStatus, "ApriStatus")
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.StatusBar)
         Me.Controls.Add(Me.Strip)
         Me.Controls.Add(Me.CoreSplit)
         Me.Icon = Global.AutoSite.My.Resources.Resources.autosite_32
@@ -1350,6 +1379,8 @@ Partial Class Main
         Me.CoreSplit.ResumeLayout(False)
         Me.Strip.ResumeLayout(False)
         Me.Strip.PerformLayout()
+        Me.StatusBar.ResumeLayout(False)
+        Me.StatusBar.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1541,4 +1572,8 @@ Partial Class Main
     Friend WithEvents MenuItem5 As System.Windows.Forms.MenuItem
     Friend WithEvents BrowseSiteMnu As System.Windows.Forms.MenuItem
     Friend WithEvents BrowseSitePreviewMnu As System.Windows.Forms.MenuItem
+    Friend WithEvents StatusBar As System.Windows.Forms.StatusStrip
+    Friend WithEvents ApriStatus As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents StatusBarMnu As System.Windows.Forms.MenuItem
+    Friend WithEvents OpenOutputFolderBtn As System.Windows.Forms.ToolStripButton
 End Class

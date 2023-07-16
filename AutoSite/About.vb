@@ -60,6 +60,7 @@ Public Class About
         Main.InspectorBtn.Enabled = True
         Main.ColorScheme.Visible = True
         Main.SyntaxHighlight.Visible = True
+        Main.ScriptingDropdown.Enabled = True
         Sysinfo.Show()
     End Sub
 End Class

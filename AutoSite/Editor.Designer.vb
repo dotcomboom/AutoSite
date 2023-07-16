@@ -60,6 +60,7 @@ Partial Class Editor
         Me.SelectAll = New System.Windows.Forms.MenuItem()
         Me.ConSep3 = New System.Windows.Forms.MenuItem()
         Me.InsertConditional = New System.Windows.Forms.MenuItem()
+        Me.Insert = New System.Windows.Forms.MenuItem()
         Me.Autocomplete = New AutocompleteMenuNS.AutocompleteMenu()
         Me.PopupIcons = New System.Windows.Forms.ImageList(Me.components)
         Me.PreviewWorker = New System.ComponentModel.BackgroundWorker()
@@ -273,7 +274,7 @@ Partial Class Editor
         '
         'Context
         '
-        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.ConSep, Me.Cut, Me.Copy, Me.Paste, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertConditional})
+        Me.Context.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.Undo, Me.Redo, Me.ConSep, Me.Cut, Me.Copy, Me.Paste, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertConditional, Me.Insert})
         '
         'Undo
         '
@@ -324,6 +325,11 @@ Partial Class Editor
         '
         Me.InsertConditional.Index = 9
         resources.ApplyResources(Me.InsertConditional, "InsertConditional")
+        '
+        'Insert
+        '
+        Me.Insert.Index = 10
+        resources.ApplyResources(Me.Insert, "Insert")
         '
         'Autocomplete
         '
@@ -405,5 +411,6 @@ Partial Class Editor
     Friend WithEvents PopupIcons As System.Windows.Forms.ImageList
     Friend WithEvents Replace As System.Windows.Forms.ToolStripButton
     Friend WithEvents PreviewWorker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Insert As System.Windows.Forms.MenuItem
 
 End Class

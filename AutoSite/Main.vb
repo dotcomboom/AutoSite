@@ -77,7 +77,7 @@ Public Class Main
         Build.Enabled = (SiteTree.Nodes.Count > 0)
         SanitaryBuild.Enabled = (SiteTree.Nodes.Count > 0)
         SanitaryBuildBtn.Enabled = (SiteTree.Nodes.Count > 0)
-        InstallPackMnu.Enabled = (SiteTree.Nodes.Count > 0)
+        'InstallPackMnu.Enabled = (SiteTree.Nodes.Count > 0)
         QuickstartMnu.Enabled = (SiteTree.Nodes.Count > 0)
 
         OpenOutput.Enabled = (SiteTree.Nodes.Count > 0)
@@ -85,7 +85,7 @@ Public Class Main
         BrowseSite.Enabled = (SiteTree.Nodes.Count > 0)
 
         OpenOutputMnu.Enabled = (SiteTree.Nodes.Count > 0)
-        BrowseSiteMnu.Enabled = (SiteTree.Nodes.Count > 0)
+        BrowseSitePreviewMnu.Enabled = (SiteTree.Nodes.Count > 0)
         BrowseSitePreviewMnu.Enabled = (SiteTree.Nodes.Count > 0)
 
         AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
@@ -338,11 +338,11 @@ Public Class Main
             End If
         End If
     End Sub
-    Private Sub NewSite_Click(sender As Object, e As EventArgs) Handles NewSite.Click
+    Private Sub NewSite_Click(sender As Object, e As EventArgs) Handles NewSite.Click, NewSiteBtn.Click
         browseForSite(True)
     End Sub
 
-    Private Sub OpenFolder_Click(sender As Object, e As EventArgs) Handles OpenFolder.Click
+    Private Sub OpenFolder_Click(sender As Object, e As EventArgs) Handles OpenFolder.Click, OpenSiteBtn.Click
         browseForSite(False)
     End Sub
 
@@ -743,7 +743,7 @@ Public Class Main
         Me.Close()
     End Sub
 
-    Public Sub doBuild() Handles BuildSite.Click, Build.Click
+    Public Sub doBuild() Handles BuildSite.Click, Build.Click, BuildBtn.Click
         Log.Clear()
         AttributeTree.Nodes.Clear()
         AttributeTree.BeginUpdate()
@@ -958,7 +958,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
+    Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click, NewPageToolStripMenuItem.Click
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(Context.Tag) Then
             dir = Context.Tag
@@ -985,7 +985,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
+    Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click, NewMarkdownPageToolStripMenuItem.Click
         If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then ' check if page, otherwise empty
             NewFile(My.Resources.Defaults_NewMd, ".md", My.Resources.Defaults_NewMdPage_Contents)
         Else
@@ -1001,15 +1001,15 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub NewCSSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCSSCon.Click
+    Private Sub NewCSSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCSSCon.Click, NewStylesheetToolStripMenuItem.Click
         NewFile(My.Resources.Defaults_NewCss, ".css", "")
     End Sub
 
-    Private Sub NewJSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewJSCon.Click
+    Private Sub NewJSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewJSCon.Click, NewJavaScriptToolStripMenuItem.Click
         NewFile(My.Resources.Defaults_NewJs, ".js", "")
     End Sub
 
-    Private Sub NewTXTCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewTXTCon.Click
+    Private Sub NewTXTCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewTXTCon.Click, NewTextFileToolStripMenuItem.Click
         NewFile(My.Resources.Defaults_NewFile, ".txt", "")
     End Sub
 
@@ -1229,7 +1229,7 @@ Public Class Main
         panelUpdate()
     End Sub
 
-    Public Sub DoSaveAll() Handles SaveAll.Click
+    Public Sub DoSaveAll() Handles SaveAll.Click, SaveAllBtn.Click
         For Each page As TabPage In EditTabs.TabPages
             Dim point As New Point With {
                 .X = 0,
@@ -1250,7 +1250,7 @@ Public Class Main
         End Try
     End Sub
 
-    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click, BrowseSitePreviewMnu.Click
+    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click
         If Not PreviewPanel.Checked Then
             PreviewPanel.Checked = True
             panelUpdate()
@@ -1400,7 +1400,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click, BrowseSiteMnu.Click
+    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click
         Dim path = SiteTree.Nodes(0).Text & "\out\"
         If My.Computer.FileSystem.FileExists(path & "index.html") Then
             path &= "index.html"
@@ -1412,6 +1412,13 @@ Public Class Main
             Process.Start(path)
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
+          Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doViewinDefaultBrowser()
+        End If
     End Sub
 
     Private Sub AttributeTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles AttributeTree.ItemDrag
@@ -1441,8 +1448,8 @@ Public Class Main
         End If
     End Sub
 
-    Public Sub doSanitaryBuild() Handles SanitaryBuild.Click, SanitaryBuildBtn.Click
-        If MsgBox(My.Resources.Prompt_SanitaryBuild, MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+    Public Sub doSanitaryBuild() Handles SanitaryBuild.Click, SanitaryBuildBtn.Click, CleanBuildBtn.Click
+        If MsgBox(My.Resources.Prompt_SanitaryBuild, MsgBoxStyle.Information + MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
             Try
                 My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
             Catch ex As Exception
@@ -1559,7 +1566,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Undo.Click
+    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Undo.Click, UndoBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doUndo()
@@ -1568,28 +1575,28 @@ Public Class Main
 
     Public EverySpeciesofNeopet As String() = {"Acara", "Aisha", "Blumaroo", "Bori", "Bruce", "Buzz", "Chia", "Chomby", "Cybunny", "Draik", "Elephante", "Eyrie", "Flotsam", "Gelert", "Gnorbu", "Grarrl", "Grundo", "Hissi", "Ixi", "Jetsam", "JubJub", "Kacheek", "Kau", "Kiko", "Koi", "Korbat", "Kougra", "Krawk", "Kyrii", "Lenny", "Lupe", "Lutari", "Meerca", "Moehog", "Mynci", "Nimmo", "Ogrin", "Peophin", "Poogle", "Pteri", "Quiggle", "Ruki", "Scorchio", "Shoyru", "Skeith", "Techo", "Tonu", "Tuskaninny", "Uni", "Usul", "Vandagyre", "Wocky", "Xweetok", "Yurble", "Zafara"}
 
-    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click
+    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click, RedoBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doRedo()
         End If
     End Sub
 
-    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click
+    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click, CutBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doCut()
         End If
     End Sub
 
-    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click
+    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click, CopyBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doCopy()
         End If
     End Sub
 
-    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click
+    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click, PasteBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPaste()
@@ -1610,49 +1617,49 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Find_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Find.Click
+    Private Sub Find_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Find.Click, FindBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doFind()
         End If
     End Sub
 
-    Private Sub Replace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Replace.Click
+    Private Sub Replace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Replace.Click, ReplaceBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doReplace()
         End If
     End Sub
 
-    Private Sub GoToMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GoToMnu.Click
+    Private Sub GoToMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GoToMnu.Click, GotoBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doGoto()
         End If
     End Sub
 
-    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewPage.Click
+    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPreview()
         End If
     End Sub
 
-    Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click
+    Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click, SaveBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.Save()
         End If
     End Sub
 
-    Private Sub CloseFile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CloseFile.Click
+    Private Sub CloseFile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CloseFile.Click, CloseBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.Close()
         End If
     End Sub
 
-    Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewFileOutput.Click
+    Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doViewOutput()
@@ -1660,7 +1667,7 @@ Public Class Main
     End Sub
 
     Private Sub Website_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Website.Click
-        Process.Start("https://dotcomboom.somnolescent.net/autosite")
+        Process.Start("http://autosite.somnolescent.net")
     End Sub
 
     Private Sub GitHub_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GitHub.Click
@@ -1768,7 +1775,7 @@ Public Class Main
         q.ShowDialog()
     End Sub
 
-    Private Sub QuickInsertMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickInsertMnu.Click
+    Private Sub QuickInsertMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickInsertMnu.Click, InsertBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doQuickInsert()

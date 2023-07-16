@@ -81,6 +81,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\FastColoredTextBox.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -131,13 +132,7 @@
     <Compile Include="Editor.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InstallPack.Designer.vb">
-      <DependentUpon>InstallPack.vb</DependentUpon>
-    </Compile>
     <Compile Include="ToolStripOverride.vb" />
-    <None Include="InstallPack.vb">
-      <SubType>Form</SubType>
-    </None>
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
@@ -226,9 +221,6 @@
       <DependentUpon>Editor.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="InstallPack.resx">
-      <DependentUpon>InstallPack.vb</DependentUpon>
-    </None>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -407,6 +399,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\xp_include.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewWeb_16x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenWeb_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewFileCollection_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewImage_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewItem_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddBinaryFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PY_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkdownFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PYConsole_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddItem_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewFile_16x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextFile_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StyleSheet_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Script_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpApplication_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PYClassLibrary_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Structure_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snippet_16x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

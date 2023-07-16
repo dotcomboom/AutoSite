@@ -401,6 +401,13 @@ Public Module Apricot
         doLog("Processing input files", worker, 50)
         walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", folder, worker)
 
+        doLog("Running plugins!", worker, 80)
+        Dim plugins = Path.Combine(folder, "plugins\")
+        For Each plugin As String In My.Computer.FileSystem.GetFiles(plugins)
+            doLog("Plugin: " & plugin.Substring(plugins.Length), worker, 80)
+        Next
+        'TODO: implement
+
         doLog("Finished in " & Math.Round(Now.Subtract(startTime).TotalSeconds, 3) & " seconds.", worker, 100)
     End Sub
 

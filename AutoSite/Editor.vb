@@ -201,6 +201,7 @@ Public Class Editor
 
     Public Sub doInsertConditional() Handles InsertConditional.Click
         Dim conditionals = New AddConditional
+        conditionals.Display.Text = Code.SelectedText
         If conditionals.ShowDialog() = DialogResult.OK Then
             Code.InsertText(conditionals.output)
         End If
@@ -220,7 +221,7 @@ Public Class Editor
 
     End Sub
 
-    Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
+    Public Sub doViewinDefaultBrowser() Handles ViewinDefaultBrowser.Click
         Dim url As String = siteRoot & "\out\" & _rel()
         If Not My.Computer.FileSystem.FileExists(url) Then
             If Build.Enabled Then
@@ -389,4 +390,8 @@ Public Class Editor
 
         Return rel
     End Function
+
+    Private Sub Insert_Click(sender As System.Object, e As System.EventArgs) Handles Insert.Click
+        doQuickInsert()
+    End Sub
 End Class

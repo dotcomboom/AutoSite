@@ -91,7 +91,8 @@ Public Class Main
         AttributeExplanation.Visible = (AttributeTree.Nodes.Count < 1)
 
         If SiteTree.Nodes.Count > 0 Then
-            Me.Text = wTitle & " - " & SiteTree.Nodes(0).Text
+            'Me.Text = wTitle & " - " & SiteTree.Nodes(0).Text
+            Me.Text = SiteTree.Nodes(0).Text & " - " & wTitle
         Else
             Me.Text = wTitle
         End If
@@ -247,38 +248,56 @@ Public Class Main
         ExSplit.Panel1Collapsed = Not (ExplorerPanel.Checked)
         ExSplit.Panel2Collapsed = Not (BuildPanel.Checked)
 
-        EditMenu.Visible = EditorPanel.Checked
-        FormatMenu.Visible = EditorPanel.Checked
 
-        StatusBar.Visible = StatusBarMnu.Checked
+            EditMenu.Visible = EditorPanel.Checked
+            CutBtn.Visible = EditorPanel.Checked
+            CopyBtn.Visible = EditorPanel.Checked
+            PasteBtn.Visible = EditorPanel.Checked
+            FindBtn.Visible = EditorPanel.Checked
+            ReplaceBtn.Visible = EditorPanel.Checked
+            GotoBtn.Visible = EditorPanel.Checked
+            InsertBtn.Visible = EditorPanel.Checked
+            UndoBtn.Visible = EditorPanel.Checked
+            RedoBtn.Visible = EditorPanel.Checked
+        PreviewBtn.Visible = EditorPanel.Checked
+        ViewOutBtn.Visible = EditorPanel.Checked
+            Sep2.Visible = EditorPanel.Checked
+            Sep3.Visible = EditorPanel.Checked
+            Sep4.Visible = EditorPanel.Checked
+            SaveBtn.Visible = EditorPanel.Checked
+            CloseBtn.Visible = EditorPanel.Checked
 
-        My.Settings.explorerOpen = ExplorerPanel.Checked
-        My.Settings.editorOpen = EditorPanel.Checked
-        My.Settings.browserOpen = PreviewPanel.Checked
-        My.Settings.buildOpen = BuildPanel.Checked
-        My.Settings.statusBar = StatusBarMnu.Checked
+            FormatMenu.Visible = EditorPanel.Checked
 
-        My.Settings.WordWrap = WordWrap.Checked
-        My.Settings.VirtualSpace = VirtualSpace.Checked
-        My.Settings.WideCaret = WideCaret.Checked
-        My.Settings.SyntaxHighlight = SyntaxHighlight.Checked
-        My.Settings.LivePreview = LivePreview.Checked
+            StatusBar.Visible = StatusBarMnu.Checked
 
-        For Each page As TabPage In EditTabs.TabPages
-            Dim point As New Point With {
-                .X = 0,
-                .Y = 0
-            }
-            Dim child = page.GetChildAtPoint(point, GetChildAtPointSkip.None)
-            If TypeOf child Is Editor Then
-                Dim edit As Editor = child
-                edit.Code.WordWrap = My.Settings.WordWrap
-                edit.Code.VirtualSpace = My.Settings.VirtualSpace
-                edit.Code.WideCaret = My.Settings.WideCaret
-                edit.Code.Font = My.Settings.editorFont
-                edit.LivePreview.Checked = My.Settings.LivePreview
-            End If
-        Next
+            My.Settings.explorerOpen = ExplorerPanel.Checked
+            My.Settings.editorOpen = EditorPanel.Checked
+            My.Settings.browserOpen = PreviewPanel.Checked
+            My.Settings.buildOpen = BuildPanel.Checked
+            My.Settings.statusBar = StatusBarMnu.Checked
+
+            My.Settings.WordWrap = WordWrap.Checked
+            My.Settings.VirtualSpace = VirtualSpace.Checked
+            My.Settings.WideCaret = WideCaret.Checked
+            My.Settings.SyntaxHighlight = SyntaxHighlight.Checked
+            My.Settings.LivePreview = LivePreview.Checked
+
+            For Each page As TabPage In EditTabs.TabPages
+                Dim point As New Point With {
+                    .X = 0,
+                    .Y = 0
+                }
+                Dim child = page.GetChildAtPoint(point, GetChildAtPointSkip.None)
+                If TypeOf child Is Editor Then
+                    Dim edit As Editor = child
+                    edit.Code.WordWrap = My.Settings.WordWrap
+                    edit.Code.VirtualSpace = My.Settings.VirtualSpace
+                    edit.Code.WideCaret = My.Settings.WideCaret
+                    edit.Code.Font = My.Settings.editorFont
+                    edit.LivePreview.Checked = My.Settings.LivePreview
+                End If
+            Next
     End Sub
     Public Sub openEditor(ByVal path As String)
         EditTabs.SuspendLayout()
@@ -561,6 +580,7 @@ Public Class Main
         BuildStrip.Renderer = New OverrideControls.ToolStripOverride()
 
         updateRecents()
+        panelUpdate()
     End Sub
 
     Private foundNode As TreeNode = Nothing

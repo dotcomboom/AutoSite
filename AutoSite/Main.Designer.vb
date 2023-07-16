@@ -202,17 +202,17 @@ Partial Class Main
         Me.FindBtn = New System.Windows.Forms.ToolStripButton()
         Me.ReplaceBtn = New System.Windows.Forms.ToolStripButton()
         Me.GotoBtn = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Sep3 = New System.Windows.Forms.ToolStripSeparator()
         Me.UndoBtn = New System.Windows.Forms.ToolStripButton()
         Me.RedoBtn = New System.Windows.Forms.ToolStripButton()
-        Me.Sep3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Sep4 = New System.Windows.Forms.ToolStripSeparator()
         Me.PreviewBtn = New System.Windows.Forms.ToolStripSplitButton()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildBtn = New System.Windows.Forms.ToolStripButton()
-        Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripButton()
         Me.CleanBuildBtn = New System.Windows.Forms.ToolStripButton()
         Me.ViewOutBtn = New System.Windows.Forms.ToolStripSplitButton()
         Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripButton()
         Me.StatusBar = New System.Windows.Forms.StatusStrip()
         Me.ApriStatus = New System.Windows.Forms.ToolStripStatusLabel()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1029,7 +1029,7 @@ Partial Class Main
         '
         Me.Strip.BackColor = System.Drawing.SystemColors.MenuBar
         Me.Strip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.NewItemBtn, Me.ScriptingDropdown, Me.SaveBtn, Me.SaveAllBtn, Me.Sep, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.InsertBtn, Me.Sep2, Me.CloseBtn, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.ToolStripSeparator2, Me.UndoBtn, Me.RedoBtn, Me.Sep3, Me.PreviewBtn, Me.BuildBtn, Me.CleanBuildBtn, Me.ViewOutBtn, Me.OpenOutputFolderBtn})
+        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.NewItemBtn, Me.ScriptingDropdown, Me.SaveBtn, Me.SaveAllBtn, Me.Sep, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.InsertBtn, Me.Sep2, Me.CloseBtn, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.Sep3, Me.UndoBtn, Me.RedoBtn, Me.Sep4, Me.PreviewBtn, Me.BuildBtn, Me.CleanBuildBtn, Me.ViewOutBtn, Me.OpenOutputFolderBtn})
         Me.Strip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         resources.ApplyResources(Me.Strip, "Strip")
         Me.Strip.Name = "Strip"
@@ -1265,11 +1265,11 @@ Partial Class Main
         resources.ApplyResources(Me.GotoBtn, "GotoBtn")
         Me.GotoBtn.Name = "GotoBtn"
         '
-        'ToolStripSeparator2
+        'Sep3
         '
-        Me.ToolStripSeparator2.ForeColor = System.Drawing.Color.Black
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        Me.Sep3.ForeColor = System.Drawing.Color.Black
+        Me.Sep3.Name = "Sep3"
+        resources.ApplyResources(Me.Sep3, "Sep3")
         '
         'UndoBtn
         '
@@ -1287,11 +1287,11 @@ Partial Class Main
         resources.ApplyResources(Me.RedoBtn, "RedoBtn")
         Me.RedoBtn.Name = "RedoBtn"
         '
-        'Sep3
+        'Sep4
         '
-        Me.Sep3.ForeColor = System.Drawing.Color.Black
-        Me.Sep3.Name = "Sep3"
-        resources.ApplyResources(Me.Sep3, "Sep3")
+        Me.Sep4.ForeColor = System.Drawing.Color.Black
+        Me.Sep4.Name = "Sep4"
+        resources.ApplyResources(Me.Sep4, "Sep4")
         '
         'PreviewBtn
         '
@@ -1314,13 +1314,6 @@ Partial Class Main
         resources.ApplyResources(Me.BuildBtn, "BuildBtn")
         Me.BuildBtn.Name = "BuildBtn"
         '
-        'OpenOutputFolderBtn
-        '
-        Me.OpenOutputFolderBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OpenOutputFolderBtn.Image = Global.AutoSite.My.Resources.Resources.OpenFolder
-        resources.ApplyResources(Me.OpenOutputFolderBtn, "OpenOutputFolderBtn")
-        Me.OpenOutputFolderBtn.Name = "OpenOutputFolderBtn"
-        '
         'CleanBuildBtn
         '
         Me.CleanBuildBtn.Image = Global.AutoSite.My.Resources.Resources.SanitaryBuild
@@ -1339,6 +1332,13 @@ Partial Class Main
         '
         Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
         resources.ApplyResources(Me.ViewinDefaultBrowser, "ViewinDefaultBrowser")
+        '
+        'OpenOutputFolderBtn
+        '
+        Me.OpenOutputFolderBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenOutputFolderBtn.Image = Global.AutoSite.My.Resources.Resources.OpenFolder
+        resources.ApplyResources(Me.OpenOutputFolderBtn, "OpenOutputFolderBtn")
+        Me.OpenOutputFolderBtn.Name = "OpenOutputFolderBtn"
         '
         'StatusBar
         '
@@ -1529,7 +1529,7 @@ Partial Class Main
     Friend WithEvents CopyBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents PasteBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents CloseBtn As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Sep3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Sep4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents FindBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents GotoBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents ReplaceBtn As System.Windows.Forms.ToolStripButton
@@ -1542,7 +1542,7 @@ Partial Class Main
     Friend WithEvents NewSiteBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents SaveBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents SaveAllBtn As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Sep3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents OpenSiteBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents ScriptingDropdown As System.Windows.Forms.ToolStripDropDownButton
     Friend WithEvents SpicesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

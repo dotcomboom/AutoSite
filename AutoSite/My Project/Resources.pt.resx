@@ -112,116 +112,91 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="Cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cut_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SanitaryBuild" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CleanData_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PageBody_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Folder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Redo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\autosite_mixer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WebTest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WebTest_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Build" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BuildSolution_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tag_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Browse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Browse_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="autosite_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="QuickInsert_Build" xml:space="preserve">
+    <value>Build for more options</value>
   </data>
   <data name="QuickInsert_content_Tip" xml:space="preserve">
     <value>Conteúdo</value>
   </data>
-  <data name="GotoRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GotoRow_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PreviewWebTab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PreviewWebTab_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SaveAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SaveAll_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ReplaceAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReplaceAll_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OpenFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OpenFolder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Include" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Undo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="InsertPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\InsertPanel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NewSite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewWeb_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="Paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paste.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UI_OpenFileLocation" xml:space="preserve">
+    <value>Abrir local do arquivo</value>
   </data>
-  <data name="Value" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\value.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WebTest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WebTest_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Web" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Web_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XP_Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xp_folder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XP_Include" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xp_include.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="QuickInsert_Generic_TipText" xml:space="preserve">
+    <value>Outputs the page's value for the {0} attribute.</value>
   </data>
   <data name="XP_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xp_page.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="XP_Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UI_StartPage_Title" xml:space="preserve">
+    <value>Start Page</value>
   </data>
-  <data name="Defaults_NewCss" xml:space="preserve">
-    <value>new-style</value>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Defaults_NewFile" xml:space="preserve">
-    <value>new-file</value>
+  <data name="NewWeb_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewWeb_16x1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Defaults_NewHtml" xml:space="preserve">
+  <data name="Defaults_NewMd" xml:space="preserve">
     <value>new-page</value>
+  </data>
+  <data name="QuickInsert_path_TipText" xml:space="preserve">
+    <value>Outputs the page's relative path from root.</value>
+  </data>
+  <data name="SaveAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveAll_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cut_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XP_Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xp_folder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
+    <value>&lt;?php
+      echo "Isto será interpretado pelo servidor. Olá universo!";
+?&gt;</value>
+  </data>
+  <data name="QuickInsert_root_TipText" xml:space="preserve">
+    <value>Outputs the relative path from the page to the site root.
+
+Use this to begin paths to stylesheets, images, and other 
+pages.</value>
+  </data>
+  <data name="Redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Redo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SanitaryBuild" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CleanData_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_AddFilesDialog_Title" xml:space="preserve">
+    <value>Add files to {0}</value>
+  </data>
+  <data name="QuickInsert__Output" xml:space="preserve">
+    <value>Output: {0}</value>
+  </data>
+  <data name="Explorer_Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
+    <value>Atualizar Site</value>
+  </data>
+  <data name="autosite_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Error_CouldNotSaveFile" xml:space="preserve">
+    <value>Não foi possível salvar o arquivo.</value>
   </data>
   <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -235,10 +210,64 @@
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
-  <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: Nova Pagina HTML --&gt;
-</value>
+  <data name="QuickInsert_path_Tip" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="Script_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Script_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Explorer_Templates" xml:space="preserve">
+    <value>Templates</value>
+  </data>
+  <data name="Defaults_NewJs" xml:space="preserve">
+    <value>new-script</value>
+  </data>
+  <data name="Error_BuildFailed_Title" xml:space="preserve">
+    <value>Construção falhou</value>
+  </data>
+  <data name="AddItem_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddItem_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_content_TipText" xml:space="preserve">
+    <value>Outputs the page's content.
+
+Use once in templates.</value>
+  </data>
+  <data name="QuickInsert_root_Tip" xml:space="preserve">
+    <value>Relative path to root</value>
+  </data>
+  <data name="QuickInsert_modified_Tip" xml:space="preserve">
+    <value>Last modified date</value>
+  </data>
+  <data name="Question_RemoveFromRecents" xml:space="preserve">
+    <value>The site located in {0} could not be opened. Do you want to remove it from the Recent Sites list?</value>
+  </data>
+  <data name="Include" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewFile_16x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewFile_16x1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Prompt_CreateSite" xml:space="preserve">
+    <value>AutoSite criará um site na pasta localizada em {0}. Prosseguir?</value>
+  </data>
+  <data name="NewItem_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewItem_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Defaults_NewCss" xml:space="preserve">
+    <value>new-style</value>
+  </data>
+  <data name="Defaults_NewHtml" xml:space="preserve">
+    <value>new-page</value>
+  </data>
+  <data name="TextFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_Open" xml:space="preserve">
+    <value>Abrir</value>
   </data>
   <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -253,24 +282,49 @@
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
-  <data name="Defaults_NewJs" xml:space="preserve">
-    <value>new-script</value>
+  <data name="InsertPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InsertPanel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Defaults_NewMd" xml:space="preserve">
-    <value>new-page</value>
+  <data name="PYClassLibrary_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PYClassLibrary_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
+  <data name="HelpApplication_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpApplication_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: Nova Pagina Markdown --&gt;
+&lt;!-- attrib title: Nova Pagina HTML --&gt;
 </value>
+  </data>
+  <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
+    <value>Some files have unsaved changes. Save them?</value>
+  </data>
+  <data name="PreviewWebTab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PreviewWebTab_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PYConsole_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PYConsole_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReplaceAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReplaceAll_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GotoRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GotoRow_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tag_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
     <value>new-page</value>
   </data>
-  <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
-    <value>&lt;?php
-      echo "Isto será interpretado pelo servidor. Olá universo!";
-?&gt;</value>
+  <data name="Value" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\value.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_OpenFolderLocation" xml:space="preserve">
+    <value>Open folder location</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
@@ -279,24 +333,114 @@
       echo "Isto será interpretado pelo servidor. Olá universo!";
 ?&gt;</value>
   </data>
-  <data name="Error_BuildFailed" xml:space="preserve">
-    <value>Apricot retornou a seguinte exceção:
-
-{0}</value>
+  <data name="NewFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Error_BuildFailed_Title" xml:space="preserve">
-    <value>Construção falhou</value>
+  <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
+    <value>Define {0}</value>
+  </data>
+  <data name="Web" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Web_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert__Example" xml:space="preserve">
+    <value>Example: {0}</value>
+  </data>
+  <data name="Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Undo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MarkdownFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MarkdownFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XP_Include" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xp_include.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
+    <value>Adds an attribute definition.</value>
+  </data>
+  <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
+    <value>Insert conditional</value>
+  </data>
+  <data name="Prompt_ProjectUpgrade" xml:space="preserve">
+    <value>AutoSite agora utiliza o caminho pages\ para a pasta de Paginas. A compatibilidade com versões anteriores do AutoSite será afetada por esta conversão.</value>
+  </data>
+  <data name="PY_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PY_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
+    <value>Changes will be applied on restart.</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\autosite_mixer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Structure_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Structure_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
+    <value>Defines the template used by the current page.
+
+Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
+  </data>
+  <data name="Build" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuildSolution_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StyleSheet_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StyleSheet_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HTMLFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HTMLFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Explorer_Includes" xml:space="preserve">
+    <value>Includes</value>
+  </data>
+  <data name="NewFileCollection_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewFileCollection_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_modified_TipText" xml:space="preserve">
+    <value>Outputs the date the page was last modified on.</value>
+  </data>
+  <data name="Browse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Browse_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PageBody_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Prompt_SaveChangesToFile" xml:space="preserve">
+    <value>Save changes to {0}?</value>
+  </data>
+  <data name="NewImage_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewImage_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpenFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OpenFolder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_OpenWithDefault" xml:space="preserve">
+    <value>Abrir com o programa padrão</value>
   </data>
   <data name="Error_BuildToViewOutput" xml:space="preserve">
     <value>Construa o site primeiro para visualizar a saída.</value>
   </data>
-  <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>Não foi possível salvar o arquivo.</value>
+  <data name="AddBinaryFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddBinaryFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Algo deu errado ao tentar salvar o registro:
+  <data name="Error_UpgradeFail_Title" xml:space="preserve">
+    <value>Não foi possível converter</value>
+  </data>
+  <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
+    <value>Open the Insert Conditional dialog.
 
-{0}</value>
+Conditionals allow you to output text if an attribute has a certain value.</value>
+  </data>
+  <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
+    <value>Defines the {0} attribute for this page.</value>
+  </data>
+  <data name="Prompt_SanitaryBuild" xml:space="preserve">
+    <value>A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.</value>
+  </data>
+  <data name="NewSite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewWeb_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Error_LogSaveFail_Title" xml:space="preserve">
     <value>Falha ao salvar</value>
@@ -304,134 +448,51 @@
   <data name="Error_UpgradeFail" xml:space="preserve">
     <value>AutoSite não pôde renomear a pasta. Por favor renomeie a pasta manualmente e abra seu site novamente.</value>
   </data>
-  <data name="Error_UpgradeFail_Title" xml:space="preserve">
-    <value>Não foi possível converter</value>
-  </data>
-  <data name="Prompt_CreateSite" xml:space="preserve">
-    <value>AutoSite criará um site na pasta localizada em {0}. Prosseguir?</value>
-  </data>
-  <data name="Prompt_ProjectUpgrade" xml:space="preserve">
-    <value>AutoSite agora utiliza o caminho pages\ para a pasta de Paginas. A compatibilidade com versões anteriores do AutoSite será afetada por esta conversão.</value>
-  </data>
-  <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
-    <value>Atualizar Site</value>
-  </data>
-  <data name="Prompt_SanitaryBuild" xml:space="preserve">
-    <value>A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.</value>
-  </data>
-  <data name="Prompt_SaveChangesToFile" xml:space="preserve">
-    <value>Save changes to {0}?</value>
-  </data>
-  <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
-    <value>Some files have unsaved changes. Save them?</value>
-  </data>
-  <data name="QuickInsert_Build" xml:space="preserve">
-    <value>Build for more options</value>
+  <data name="Error_BuildFailed" xml:space="preserve">
+    <value>Apricot retornou a seguinte exceção:
+
+{0}</value>
   </data>
   <data name="QuickInsert_Build_Tip" xml:space="preserve">
     <value>Construir</value>
+  </data>
+  <data name="OpenWeb_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OpenWeb_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Defaults_NewFile" xml:space="preserve">
+    <value>new-file</value>
+  </data>
+  <data name="Error_LogSaveFail" xml:space="preserve">
+    <value>Algo deu errado ao tentar salvar o registro:
+
+{0}</value>
+  </data>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
+    <value>&lt;!-- attrib template: default --&gt;
+&lt;!-- attrib title: Nova Pagina Markdown --&gt;
+</value>
+  </data>
+  <data name="__" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="UI_Editor_ViewFile" xml:space="preserve">
+    <value>View</value>
   </data>
   <data name="QuickInsert_Build_TipText" xml:space="preserve">
     <value>AutoSite can give you more suggestions when you build
 your site and populate the Attribute Map.</value>
   </data>
-  <data name="QuickInsert_content_TipText" xml:space="preserve">
-    <value>Outputs the page's content.
-
-Use once in templates.</value>
-  </data>
-  <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
-    <value>Define {0}</value>
-  </data>
-  <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
-    <value>Defines the {0} attribute for this page.</value>
+  <data name="XP_Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
     <value>Define a new attribute</value>
   </data>
-  <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
-    <value>Adds an attribute definition.</value>
-  </data>
-  <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
-    <value>Defines the template used by the current page.
-
-Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
-  </data>
-  <data name="QuickInsert_Generic_TipText" xml:space="preserve">
-    <value>Outputs the page's value for the {0} attribute.</value>
-  </data>
-  <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
-    <value>Insert conditional</value>
-  </data>
-  <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
-    <value>Open the Insert Conditional dialog.
-
-Conditionals allow you to output text if an attribute has a certain value.</value>
-  </data>
-  <data name="QuickInsert_modified_Tip" xml:space="preserve">
-    <value>Last modified date</value>
-  </data>
-  <data name="QuickInsert_modified_TipText" xml:space="preserve">
-    <value>Outputs the date the page was last modified on.</value>
-  </data>
-  <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Path</value>
-  </data>
-  <data name="QuickInsert_path_TipText" xml:space="preserve">
-    <value>Outputs the page's relative path from root.</value>
-  </data>
-  <data name="QuickInsert_root_Tip" xml:space="preserve">
-    <value>Relative path to root</value>
-  </data>
-  <data name="QuickInsert_root_TipText" xml:space="preserve">
-    <value>Outputs the relative path from the page to the site root.
-
-Use this to begin paths to stylesheets, images, and other 
-pages.</value>
-  </data>
-  <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Example: {0}</value>
-  </data>
-  <data name="QuickInsert__Output" xml:space="preserve">
-    <value>Output: {0}</value>
-  </data>
-  <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add files to {0}</value>
-  </data>
-  <data name="UI_StartPage_Title" xml:space="preserve">
-    <value>Start Page</value>
-  </data>
-  <data name="__" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="Explorer_Includes" xml:space="preserve">
-    <value>Includes</value>
-  </data>
-  <data name="Explorer_Pages" xml:space="preserve">
-    <value>Pages</value>
-  </data>
-  <data name="Explorer_Templates" xml:space="preserve">
-    <value>Templates</value>
-  </data>
-  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Changes will be applied on restart.</value>
-  </data>
-  <data name="UI_Editor_ViewFile" xml:space="preserve">
-    <value>View</value>
-  </data>
-  <data name="UI_Open" xml:space="preserve">
-    <value>Abrir</value>
-  </data>
-  <data name="UI_OpenFileLocation" xml:space="preserve">
-    <value>Abrir local do arquivo</value>
-  </data>
-  <data name="UI_OpenFolderLocation" xml:space="preserve">
-    <value>Open folder location</value>
-  </data>
-  <data name="UI_OpenWithDefault" xml:space="preserve">
-    <value>Abrir com o programa padrão</value>
-  </data>
-  <data name="Question_RemoveFromRecents" xml:space="preserve">
-    <value>The site located in {0} could not be opened. Do you want to remove it from the Recent Sites list?</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="Snippet_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snippet_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

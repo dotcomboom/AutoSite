@@ -121,43 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Strip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 25</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="Strip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Strip.Text" xml:space="preserve">
-    <value>ToolStrip1</value>
-  </data>
-  <data name="&gt;&gt;Strip.Name" xml:space="preserve">
-    <value>Strip</value>
-  </data>
-  <data name="&gt;&gt;Strip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Strip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Strip.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 22</value>
-  </data>
-  <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Zapisz</value>
-  </data>
   <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 22</value>
   </data>
@@ -169,6 +132,19 @@
   </data>
   <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Zapisz wszystko</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 22</value>
+  </data>
+  <data name="SaveBtn.Text" xml:space="preserve">
+    <value>Zapisz</value>
   </data>
   <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -281,6 +257,12 @@
   <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
+  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="LivePreview.Text" xml:space="preserve">
+    <value>Podgląd na żywo</value>
+  </data>
   <data name="Preview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -289,12 +271,6 @@
   </data>
   <data name="Preview.Text" xml:space="preserve">
     <value>Podgląd</value>
-  </data>
-  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="LivePreview.Text" xml:space="preserve">
-    <value>Podgląd na żywo</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -308,6 +284,12 @@
   <data name="Build.Text" xml:space="preserve">
     <value>Zbuduj</value>
   </data>
+  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
+    <value>Wyświetl w domyślnej przeglądarce</value>
+  </data>
   <data name="ViewOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -317,11 +299,32 @@
   <data name="ViewOutput.Text" xml:space="preserve">
     <value>Wyświetl dane wyjściowe</value>
   </data>
-  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
+  <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>Wyświetl w domyślnej przeglądarce</value>
+  <data name="Strip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>649, 25</value>
+  </data>
+  <data name="Strip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Strip.Text" xml:space="preserve">
+    <value>ToolStrip1</value>
+  </data>
+  <data name="Strip.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Strip.Name" xml:space="preserve">
+    <value>Strip</value>
+  </data>
+  <data name="&gt;&gt;Strip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Strip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Strip.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="Autocomplete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>213, 17</value>
@@ -351,7 +354,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD4
-        DgAAAk1TRnQBSQFMAgEBBwEAARABAQEQAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DgAAAk1TRnQBSQFMAgEBBwEAATABAQEwAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -425,7 +428,7 @@
     <value>Fill</value>
   </data>
   <data name="Code.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
+    <value>0, 0</value>
   </data>
   <data name="Code.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -449,7 +452,7 @@
 </value>
   </data>
   <data name="Code.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 470</value>
+    <value>649, 495</value>
   </data>
   <data name="Code.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -498,6 +501,9 @@
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
     <value>Wstaw warunek...</value>
+  </data>
+  <data name="Insert.Text" xml:space="preserve">
+    <value>Szybkie wstawianie</value>
   </data>
   <metadata name="PreviewWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>475, 17</value>
@@ -719,6 +725,12 @@
     <value>InsertConditional</value>
   </data>
   <data name="&gt;&gt;InsertConditional.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Insert.Name" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="&gt;&gt;Insert.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Autocomplete.Name" xml:space="preserve">

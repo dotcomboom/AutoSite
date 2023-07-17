@@ -262,8 +262,9 @@ Public Class Main
         PreviewBtn.Visible = EditorPanel.Checked
         ViewOutBtn.Visible = EditorPanel.Checked
             Sep2.Visible = EditorPanel.Checked
-            Sep3.Visible = EditorPanel.Checked
-            Sep4.Visible = EditorPanel.Checked
+        Sep3.Visible = EditorPanel.Checked
+        Sep4.Visible = EditorPanel.Checked
+        Sep5.Visible = EditorPanel.Checked
             SaveBtn.Visible = EditorPanel.Checked
             CloseBtn.Visible = EditorPanel.Checked
 

@@ -405,7 +405,7 @@ Public Module Apricot
         If My.Computer.FileSystem.DirectoryExists(plugins) Then
             doLog("Post-run scripts are enabled", worker, 80)
             For Each plugin As String In My.Computer.FileSystem.GetFiles(plugins)
-                doLog("Running script: " & plugin.Substring(plugins.Length), worker, 80)
+                doLog("Running script " & plugin.Substring(plugins.Length), worker, 80)
             Next
         End If
         'TODO: implement

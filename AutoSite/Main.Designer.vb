@@ -215,6 +215,7 @@ Partial Class Main
         Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripButton()
         Me.StatusBar = New System.Windows.Forms.StatusStrip()
         Me.ApriStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Sep5 = New System.Windows.Forms.ToolStripSeparator()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -1029,7 +1030,7 @@ Partial Class Main
         '
         Me.Strip.BackColor = System.Drawing.SystemColors.MenuBar
         Me.Strip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.NewItemBtn, Me.ScriptingDropdown, Me.SaveBtn, Me.SaveAllBtn, Me.Sep, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.InsertBtn, Me.Sep2, Me.CloseBtn, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.Sep3, Me.UndoBtn, Me.RedoBtn, Me.Sep4, Me.PreviewBtn, Me.BuildBtn, Me.CleanBuildBtn, Me.ViewOutBtn, Me.OpenOutputFolderBtn})
+        Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.NewItemBtn, Me.ScriptingDropdown, Me.SaveBtn, Me.SaveAllBtn, Me.Sep, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.InsertBtn, Me.Sep2, Me.CloseBtn, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.Sep3, Me.UndoBtn, Me.RedoBtn, Me.Sep4, Me.PreviewBtn, Me.ViewOutBtn, Me.Sep5, Me.BuildBtn, Me.CleanBuildBtn, Me.OpenOutputFolderBtn})
         Me.Strip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         resources.ApplyResources(Me.Strip, "Strip")
         Me.Strip.Name = "Strip"
@@ -1351,6 +1352,11 @@ Partial Class Main
         Me.ApriStatus.Name = "ApriStatus"
         resources.ApplyResources(Me.ApriStatus, "ApriStatus")
         '
+        'Sep5
+        '
+        Me.Sep5.Name = "Sep5"
+        resources.ApplyResources(Me.Sep5, "Sep5")
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -1576,4 +1582,5 @@ Partial Class Main
     Friend WithEvents ApriStatus As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents StatusBarMnu As System.Windows.Forms.MenuItem
     Friend WithEvents OpenOutputFolderBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Sep5 As System.Windows.Forms.ToolStripSeparator
 End Class

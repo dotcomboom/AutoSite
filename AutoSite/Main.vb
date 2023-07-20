@@ -776,7 +776,7 @@ Public Class Main
         Me.Close()
     End Sub
 
-    Public Sub doBuild() Handles BuildSite.Click, Build.Click, BuildBtn.Click
+    Public Sub doBuild() Handles BuildSite.Click, Build.Click, BuildBtn.ButtonClick
         Log.Clear()
         AttributeTree.Nodes.Clear()
         AttributeTree.BeginUpdate()
@@ -1674,7 +1674,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.Click
+    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.ButtonClick
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPreview()
@@ -1695,7 +1695,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.Click
+    Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.ButtonClick
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doViewOutput()
@@ -1929,5 +1929,16 @@ Public Class Main
 
     Private Sub OpenSampleSite_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenSampleSite.Click
         openSite(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "SampleSite"), False)
+    End Sub
+
+    Private Sub BuildShortcut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildShortcut.Click
+        'Dim n As New SaveFileDialog
+        'n.Title = "Save Build Shortcut"
+        'n.Filter = "Shortcut (.lnk)|*.lnk"
+        'n.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
+        'If n.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+        'End If
+        ' TODO
     End Sub
 End Class

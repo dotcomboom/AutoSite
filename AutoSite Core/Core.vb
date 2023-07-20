@@ -21,7 +21,7 @@
         Else
             Console.WriteLine(System.IO.Directory.GetCurrentDirectory())
             Console.WriteLine()
-            If Not (args.Length > 1 And String.Join(" ", args).Contains(" -a")) Then
+            If Not (args.Length > 1 And String.Join(" ", args).Contains(" /q")) Then
                 Console.Write("To build, strike any key. ")
                 Console.ReadKey()
                 Console.WriteLine()

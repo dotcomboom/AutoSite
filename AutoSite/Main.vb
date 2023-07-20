@@ -1098,6 +1098,9 @@ Public Class Main
             Else
                 ApriStatus.Text = e.UserState
             End If
+            If s.Contains("Finished") Then
+                ApriStatus.Text = ""
+            End If
             If s.Contains("WARN:") Then
                 Log.SelectionColor = Color.OrangeRed
             End If

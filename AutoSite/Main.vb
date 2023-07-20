@@ -1677,7 +1677,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.ButtonClick
+    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.ButtonClick, PreviewPage.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPreview()

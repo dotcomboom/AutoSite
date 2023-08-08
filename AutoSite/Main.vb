@@ -264,8 +264,8 @@ Public Class Main
             Sep2.Visible = EditorPanel.Checked
         Sep3.Visible = EditorPanel.Checked
         Sep4.Visible = EditorPanel.Checked
-        Sep5.Visible = EditorPanel.Checked
-            SaveBtn.Visible = EditorPanel.Checked
+        'Sep5.Visible = EditorPanel.Checked
+        SaveBtn.Visible = EditorPanel.Checked
             CloseBtn.Visible = EditorPanel.Checked
 
             FormatMenu.Visible = EditorPanel.Checked
@@ -491,6 +491,8 @@ Public Class Main
         End Try
 
         Me.Font = getFont()
+        EditTabs.Font = getFont()
+        ApricotTabs.Font = getFont()
 
         updatewTitle()
 
@@ -1289,7 +1291,7 @@ Public Class Main
         End Try
     End Sub
 
-    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click, BrowseSitePreviewMnu.Click
+    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click, BrowseSitePreviewMnu.Click, BrowseSiteToolStripMenuItem.Click
         If Not PreviewPanel.Checked Then
             PreviewPanel.Checked = True
             panelUpdate()
@@ -1439,7 +1441,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click
+    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click, BrowseSiteInExternalProgramToolStripMenuItem.Click
         Dim path = SiteTree.Nodes(0).Text & "\out\"
         If My.Computer.FileSystem.FileExists(path & "index.html") Then
             path &= "index.html"

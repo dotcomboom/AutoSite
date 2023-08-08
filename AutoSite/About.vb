@@ -14,9 +14,11 @@ Public Class About
         End If
         Version.Text &= " " & My.Application.Info.Description
         If Application.VisualStyleState = VisualStyles.VisualStyleState.NoneEnabled Then
-            Me.BackColor = SystemColors.Control
             LicenseBox.BackColor = SystemColors.Control
             ChangelogBox.BackColor = SystemColors.Control
+            OK.BackColor = SystemColors.Control
+            Me.BackColor = SystemColors.Control
+            Sysinfo.ForeColor = SystemColors.ControlText
         End If
 
         Me.Font = Main.getFont()

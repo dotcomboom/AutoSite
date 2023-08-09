@@ -114,6 +114,7 @@ Public Class Main
         Dim inPath = root.Text & "\pages"
         Dim templatePath = root.Text & "\templates"
         Dim includePath = root.Text & "\includes"
+        Dim outputPath = root.Text & "\out"
 
         root.Nodes.Clear()
 
@@ -131,6 +132,11 @@ Public Class Main
         includes.ImageKey = "Include"
         includes.SelectedImageKey = "Include"
         includes.Tag = includePath
+
+        Dim output_site = root.Nodes.Add(My.Resources.Explorer_OutputFolder)
+        output_site.ImageKey = "Output"
+        output_site.SelectedImageKey = "Output"
+        output_site.Tag = outputPath
 
         'Dim settings = root.Nodes.Add("Locale")
         'settings.ImageKey = "Build"
@@ -541,10 +547,11 @@ Public Class Main
         XP.Images.Add("Folder", My.Resources.XP_Folder)
         XP.Images.Add("Template", My.Resources.XP_Template)
         XP.Images.Add("Page", My.Resources.XP_Page)
-        XP.Images.Add("Include", My.Resources.XP_Include)
+        XP.Images.Add("Include", My.Resources.XP_Folder) 'may be illegal
         XP.Images.Add("Build", My.Resources.Build)
         XP.Images.Add("Attribute", My.Resources.Tag)
         XP.Images.Add("Value", My.Resources.Value)
+        XP.Images.Add("Output", My.Resources.XP_Output)
 
         VS2017.Images.Add("Folder", My.Resources.Folder)
         VS2017.Images.Add("Template", My.Resources.Template)
@@ -553,6 +560,7 @@ Public Class Main
         VS2017.Images.Add("Build", My.Resources.Build)
         VS2017.Images.Add("Attribute", My.Resources.Tag)
         VS2017.Images.Add("Value", My.Resources.Value)
+        VS2017.Images.Add("Output", My.Resources.Web)
 
         loadIconTheme()
         checkOpen()
@@ -612,7 +620,7 @@ Public Class Main
                 End If
             Catch ex As Exception
             End Try
-            If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
+            If My.Computer.FileSystem.FileExists(e.Node.Tag) Or (My.Computer.FileSystem.DirectoryExists(e.Node.Tag) And e.Node.Nodes.Count = 0) Then
                 If Not EditorPanel.Checked Then
                     Process.Start(e.Node.Tag)
                     Exit Sub
@@ -1326,6 +1334,7 @@ Public Class Main
         Dim pages = root.Nodes(0)
         Dim templates = root.Nodes(1)
         Dim includes = root.Nodes(2)
+        'Dim output_site = root.Nodes(3)
         Dim node As New TreeNode
         Dim arr As Array = e.Name.Split("\")
         node.Text = arr(arr.Length - 1)

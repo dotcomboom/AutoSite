@@ -213,10 +213,10 @@ Partial Class Main
         Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewOutBtn = New System.Windows.Forms.ToolStripSplitButton()
         Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusBar = New System.Windows.Forms.StatusStrip()
-        Me.ApriStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.BrowseSiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BrowseSiteInExternalProgramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusBar = New System.Windows.Forms.StatusStrip()
+        Me.ApriStatus = New System.Windows.Forms.ToolStripStatusLabel()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -1343,6 +1343,16 @@ Partial Class Main
         Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
         resources.ApplyResources(Me.ViewinDefaultBrowser, "ViewinDefaultBrowser")
         '
+        'BrowseSiteToolStripMenuItem
+        '
+        Me.BrowseSiteToolStripMenuItem.Name = "BrowseSiteToolStripMenuItem"
+        resources.ApplyResources(Me.BrowseSiteToolStripMenuItem, "BrowseSiteToolStripMenuItem")
+        '
+        'BrowseSiteInExternalProgramToolStripMenuItem
+        '
+        Me.BrowseSiteInExternalProgramToolStripMenuItem.Name = "BrowseSiteInExternalProgramToolStripMenuItem"
+        resources.ApplyResources(Me.BrowseSiteInExternalProgramToolStripMenuItem, "BrowseSiteInExternalProgramToolStripMenuItem")
+        '
         'StatusBar
         '
         Me.StatusBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApriStatus})
@@ -1353,16 +1363,6 @@ Partial Class Main
         '
         Me.ApriStatus.Name = "ApriStatus"
         resources.ApplyResources(Me.ApriStatus, "ApriStatus")
-        '
-        'BrowseSiteToolStripMenuItem
-        '
-        Me.BrowseSiteToolStripMenuItem.Name = "BrowseSiteToolStripMenuItem"
-        resources.ApplyResources(Me.BrowseSiteToolStripMenuItem, "BrowseSiteToolStripMenuItem")
-        '
-        'BrowseSiteInExternalProgramToolStripMenuItem
-        '
-        Me.BrowseSiteInExternalProgramToolStripMenuItem.Name = "BrowseSiteInExternalProgramToolStripMenuItem"
-        resources.ApplyResources(Me.BrowseSiteInExternalProgramToolStripMenuItem, "BrowseSiteInExternalProgramToolStripMenuItem")
         '
         'Main
         '

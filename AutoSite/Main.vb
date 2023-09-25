@@ -131,6 +131,7 @@ Public Class Main
         Dim inPath = root.Text & "\pages"
         Dim templatePath = root.Text & "\templates"
         Dim includePath = root.Text & "\includes"
+        Dim outputPath = root.Text & "\out"
 
         root.Nodes.Clear()
 
@@ -148,6 +149,11 @@ Public Class Main
         includes.ImageKey = "Include"
         includes.SelectedImageKey = "Include"
         includes.Tag = includePath
+
+        Dim output_site = root.Nodes.Add(My.Resources.Explorer_OutputFolder)
+        output_site.ImageKey = "Output"
+        output_site.SelectedImageKey = "Output"
+        output_site.Tag = outputPath
 
         'Dim settings = root.Nodes.Add("Locale")
         'settings.ImageKey = "Build"
@@ -515,6 +521,8 @@ Public Class Main
         End Try
 
         Me.Font = getFont()
+        EditTabs.Font = getFont()
+        ApricotTabs.Font = getFont()
 
         updatewTitle()
 
@@ -563,10 +571,11 @@ Public Class Main
         XP.Images.Add("Folder", My.Resources.XP_Folder)
         XP.Images.Add("Template", My.Resources.XP_Template)
         XP.Images.Add("Page", My.Resources.XP_Page)
-        XP.Images.Add("Include", My.Resources.XP_Include)
+        XP.Images.Add("Include", My.Resources.XP_Folder) 'may be illegal
         XP.Images.Add("Build", My.Resources.Build)
         XP.Images.Add("Attribute", My.Resources.Tag)
         XP.Images.Add("Value", My.Resources.Value)
+        XP.Images.Add("Output", My.Resources.XP_Output)
 
         VS2017.Images.Add("Folder", My.Resources.Folder)
         VS2017.Images.Add("Template", My.Resources.Template)
@@ -575,6 +584,7 @@ Public Class Main
         VS2017.Images.Add("Build", My.Resources.Build)
         VS2017.Images.Add("Attribute", My.Resources.Tag)
         VS2017.Images.Add("Value", My.Resources.Value)
+        VS2017.Images.Add("Output", My.Resources.Web)
 
         loadIconTheme()
         checkOpen()
@@ -634,7 +644,7 @@ Public Class Main
                 End If
             Catch ex As Exception
             End Try
-            If My.Computer.FileSystem.FileExists(e.Node.Tag) Then
+            If My.Computer.FileSystem.FileExists(e.Node.Tag) Or (My.Computer.FileSystem.DirectoryExists(e.Node.Tag) And e.Node.Nodes.Count = 0) Then
                 If Not EditorPanel.Checked Then
                     Process.Start(e.Node.Tag)
                     Exit Sub
@@ -1122,6 +1132,9 @@ Public Class Main
             Else
                 ApriStatus.Text = e.UserState
             End If
+            If s.Contains("Finished") Then
+                ApriStatus.Text = ""
+            End If
             If s.Contains("WARN:") Then
                 Log.SelectionColor = Color.OrangeRed
             End If
@@ -1234,7 +1247,7 @@ Public Class Main
         End Try
     End Sub
 
-    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click, BrowseSitePreviewMnu.Click
+    Private Sub BrowseOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSitePreview.Click, BrowseSitePreviewMnu.Click ', BrowseSiteToolStripMenuItem.Click
         If Not PreviewPanel.Checked Then
             PreviewPanel.Checked = True
             panelUpdate()
@@ -1270,6 +1283,7 @@ Public Class Main
         Dim pages = root.Nodes(0)
         Dim templates = root.Nodes(1)
         Dim includes = root.Nodes(2)
+        'Dim output_site = root.Nodes(3)
         Dim node As New TreeNode
         Dim arr As Array = e.Name.Split("\")
         node.Text = arr(arr.Length - 1)
@@ -1385,7 +1399,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click
+    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click ', BrowseSiteInExternalProgramToolStripMenuItem.Click
         Dim path = SiteTree.Nodes(0).Text & "\out\"
         If My.Computer.FileSystem.FileExists(path & "index.html") Then
             path &= "index.html"
@@ -1623,7 +1637,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.ButtonClick
+    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.ButtonClick, PreviewPage.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPreview()

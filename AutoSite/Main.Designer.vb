@@ -101,22 +101,24 @@ Partial Class Main
         Me.cDark = New System.Windows.Forms.MenuItem()
         Me.MenuItem20 = New System.Windows.Forms.MenuItem()
         Me.MenuItem4 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem21 = New System.Windows.Forms.MenuItem()
         Me.ExplorerAttributes = New System.Windows.Forms.MenuItem()
+        Me.MenuItem21 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem17 = New System.Windows.Forms.MenuItem()
         Me.MenuItem22 = New System.Windows.Forms.MenuItem()
         Me.MenuItem3 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem18 = New System.Windows.Forms.MenuItem()
         Me.MenuItem6 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem7 = New System.Windows.Forms.MenuItem()
         Me.MenuItem8 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem7 = New System.Windows.Forms.MenuItem()
         Me.MenuItem9 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem10 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         Me.MenuItem11 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem10 = New System.Windows.Forms.MenuItem()
         Me.MenuItem12 = New System.Windows.Forms.MenuItem()
         Me.MenuItem13 = New System.Windows.Forms.MenuItem()
         Me.MenuItem15 = New System.Windows.Forms.MenuItem()
         Me.MenuItem16 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem17 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem18 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem14 = New System.Windows.Forms.MenuItem()
         Me.HelpMenu = New System.Windows.Forms.MenuItem()
         Me.HelpTopics = New System.Windows.Forms.MenuItem()
         Me.QuickstartMnu = New System.Windows.Forms.MenuItem()
@@ -235,8 +237,6 @@ Partial Class Main
         Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusBar = New System.Windows.Forms.StatusStrip()
         Me.ApriStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem14 = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -628,8 +628,8 @@ Partial Class Main
         '
         'InspectorBtn
         '
-        Me.InspectorBtn.Index = 2
         resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
+        Me.InspectorBtn.Index = 2
         '
         'ColorScheme
         '
@@ -660,15 +660,20 @@ Partial Class Main
         Me.MenuItem4.Index = 5
         resources.ApplyResources(Me.MenuItem4, "MenuItem4")
         '
+        'ExplorerAttributes
+        '
+        Me.ExplorerAttributes.Index = 6
+        resources.ApplyResources(Me.ExplorerAttributes, "ExplorerAttributes")
+        '
         'MenuItem21
         '
         Me.MenuItem21.Index = 7
         resources.ApplyResources(Me.MenuItem21, "MenuItem21")
         '
-        'ExplorerAttributes
+        'MenuItem17
         '
-        Me.ExplorerAttributes.Index = 6
-        resources.ApplyResources(Me.ExplorerAttributes, "ExplorerAttributes")
+        Me.MenuItem17.Index = 8
+        resources.ApplyResources(Me.MenuItem17, "MenuItem17")
         '
         'MenuItem22
         '
@@ -680,35 +685,45 @@ Partial Class Main
         Me.MenuItem3.Index = 10
         resources.ApplyResources(Me.MenuItem3, "MenuItem3")
         '
+        'MenuItem18
+        '
+        Me.MenuItem18.Index = 11
+        resources.ApplyResources(Me.MenuItem18, "MenuItem18")
+        '
         'MenuItem6
         '
         Me.MenuItem6.Index = 12
         resources.ApplyResources(Me.MenuItem6, "MenuItem6")
-        '
-        'MenuItem7
-        '
-        Me.MenuItem7.Index = 14
-        resources.ApplyResources(Me.MenuItem7, "MenuItem7")
         '
         'MenuItem8
         '
         Me.MenuItem8.Index = 13
         resources.ApplyResources(Me.MenuItem8, "MenuItem8")
         '
+        'MenuItem7
+        '
+        Me.MenuItem7.Index = 14
+        resources.ApplyResources(Me.MenuItem7, "MenuItem7")
+        '
         'MenuItem9
         '
         Me.MenuItem9.Index = 15
         resources.ApplyResources(Me.MenuItem9, "MenuItem9")
         '
-        'MenuItem10
+        'MenuItem2
         '
-        Me.MenuItem10.Index = 18
-        resources.ApplyResources(Me.MenuItem10, "MenuItem10")
+        Me.MenuItem2.Index = 16
+        resources.ApplyResources(Me.MenuItem2, "MenuItem2")
         '
         'MenuItem11
         '
         Me.MenuItem11.Index = 17
         resources.ApplyResources(Me.MenuItem11, "MenuItem11")
+        '
+        'MenuItem10
+        '
+        Me.MenuItem10.Index = 18
+        resources.ApplyResources(Me.MenuItem10, "MenuItem10")
         '
         'MenuItem12
         '
@@ -730,15 +745,10 @@ Partial Class Main
         Me.MenuItem16.Index = 22
         resources.ApplyResources(Me.MenuItem16, "MenuItem16")
         '
-        'MenuItem17
+        'MenuItem14
         '
-        Me.MenuItem17.Index = 8
-        resources.ApplyResources(Me.MenuItem17, "MenuItem17")
-        '
-        'MenuItem18
-        '
-        Me.MenuItem18.Index = 11
-        resources.ApplyResources(Me.MenuItem18, "MenuItem18")
+        Me.MenuItem14.Index = 23
+        resources.ApplyResources(Me.MenuItem14, "MenuItem14")
         '
         'HelpMenu
         '
@@ -790,7 +800,7 @@ Partial Class Main
         '
         Me.LanguageMenu.Index = 8
         Me.LanguageMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnglishLang, Me.SpanishLang, Me.PolishLang, Me.WelshLang})
-        resources.ApplyResources(Me.LanguageMenu, "LanguageMenu")
+        Me.LanguageMenu.Text = Global.AutoSite.My.Resources.Resources.__
         '
         'EnglishLang
         '
@@ -1477,16 +1487,6 @@ Partial Class Main
         '
         Me.ApriStatus.Name = "ApriStatus"
         resources.ApplyResources(Me.ApriStatus, "ApriStatus")
-        '
-        'MenuItem2
-        '
-        Me.MenuItem2.Index = 16
-        resources.ApplyResources(Me.MenuItem2, "MenuItem2")
-        '
-        'MenuItem14
-        '
-        Me.MenuItem14.Index = 23
-        resources.ApplyResources(Me.MenuItem14, "MenuItem14")
         '
         'Main
         '

@@ -460,6 +460,12 @@
   <ItemGroup>
     <None Include="Resources\Snippet_16x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mfc90u.dll_14_17105-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\netshell.dll_14_1907-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

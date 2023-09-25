@@ -123,13 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 14.25pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>28, 28</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 25</value>
+    <value>51, 24</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -226,13 +226,13 @@
     <value>True</value>
   </data>
   <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>157, 31</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 21</value>
+    <value>108, 20</value>
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -458,14 +458,15 @@
   </data>
   <data name="PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAUxJREFUOE+tUrtOw0AQ9B/AJ/AFiG9w74rGlqBzScUXIIWKAtMmsoQEaSiCC1dp
-        aNLQoJSRoOAhHIognYNf5caz3EYXywkIMdLIJ9/M7N7eWf+KsizHNclkURSXevtnKKW2syx73j0ekLUf
-        0sHFnYScaMl61MJAqn58ptQM0VToqKqqHW37Rr0R3Iweaevwik1NnkVjiuOYPM+jMAw5KM/zPW3nADaj
-        2uRtxtWOeiM2o5PpTFFwHpDrumTbNvm+zyHLTmCAePjwwmYEifnpNaF5+kXJ+5TN0W3EX3SyHLDZwf0k
-        4RAhqsHQpOM43IUErMwAxv51n1I1ZzG+5rrb7fEaOg4AEIJE/ARF/OsAAULQHgSbuHIEExgMBgSRDAwD
-        3DhEE7gaJMvwcHWdzilz7TU2gUcCAaqYx8G69SG1AeloEeKaPDCsW5/y32FZCyR637KCi1BPAAAAAElF
-        TkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwgAA
+        DsIBFShKgAAAAU5JREFUOE+tU7tOw0AQ9B/AJ/AFiG9w74rGlqBzScUXIIWKAtMmsoQEaSjAhSsamjQ0
+        KGUkKHgIhyJI5+BXufGsctb65DwKLK3udL6ZnZ3ds6z//MqyHNdBMoqiuN46h1JqN8uy9/3Te7IOQzq6
+        emKymuRsI0l9MdCZf35TMkmW/xQUVVW11yIE+G70SjvHN5zZjItoTHEck+d5FIYhVKk8zw8aErADDMmT
+        rxnLPhmMmAhKpjNFwWVAruuSbdvk+z6TNEoAwOXHlw8Gg0iD3z4Tmqd/lHxPGRw9RLxCSWOwVPA8SVpd
+        QDYAzHAch1VwGaYHIBzeDilVcwZilft+f8DnrFx/yy4o3QkN3JpAECnI65Itz1olyJ7CGBgkDYOBa02U
+        BGgNzNHmoXW93jnHyjaaY4ohAQmUyHKw7xykrjmHEpQDIvG4ukd540NZc2EBJHrfsiyRaHAAAAAASUVO
+        RK5CYII=
 </value>
   </data>
   <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">

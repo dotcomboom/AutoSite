@@ -67,7 +67,6 @@ Partial Class Main
         Me.VirtualSpace = New System.Windows.Forms.MenuItem()
         Me.WideCaret = New System.Windows.Forms.MenuItem()
         Me.FormatSep = New System.Windows.Forms.MenuItem()
-        Me.SyntaxHighlight = New System.Windows.Forms.MenuItem()
         Me.LivePreview = New System.Windows.Forms.MenuItem()
         Me.FormatSep2 = New System.Windows.Forms.MenuItem()
         Me.EditorFont = New System.Windows.Forms.MenuItem()
@@ -81,15 +80,11 @@ Partial Class Main
         Me.IconThemeMenu = New System.Windows.Forms.MenuItem()
         Me.VS2017item = New System.Windows.Forms.MenuItem()
         Me.XPitem = New System.Windows.Forms.MenuItem()
-        Me.ColorScheme = New System.Windows.Forms.MenuItem()
-        Me.cDefault = New System.Windows.Forms.MenuItem()
-        Me.cDark = New System.Windows.Forms.MenuItem()
         Me.SystemIcons = New System.Windows.Forms.MenuItem()
         Me.RefreshItem = New System.Windows.Forms.MenuItem()
         Me.BuildMenu = New System.Windows.Forms.MenuItem()
         Me.BuildSite = New System.Windows.Forms.MenuItem()
         Me.SanitaryBuild = New System.Windows.Forms.MenuItem()
-        Me.BuildShortcut = New System.Windows.Forms.MenuItem()
         Me.ToolsSep = New System.Windows.Forms.MenuItem()
         Me.PreviewPage = New System.Windows.Forms.MenuItem()
         Me.ViewFileOutput = New System.Windows.Forms.MenuItem()
@@ -97,6 +92,31 @@ Partial Class Main
         Me.MenuItem5 = New System.Windows.Forms.MenuItem()
         Me.BrowseSiteMnu = New System.Windows.Forms.MenuItem()
         Me.BrowseSitePreviewMnu = New System.Windows.Forms.MenuItem()
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.SyntaxHighlight = New System.Windows.Forms.MenuItem()
+        Me.ShowVersion = New System.Windows.Forms.MenuItem()
+        Me.InspectorBtn = New System.Windows.Forms.MenuItem()
+        Me.ColorScheme = New System.Windows.Forms.MenuItem()
+        Me.cDefault = New System.Windows.Forms.MenuItem()
+        Me.cDark = New System.Windows.Forms.MenuItem()
+        Me.MenuItem20 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem4 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem21 = New System.Windows.Forms.MenuItem()
+        Me.ExplorerAttributes = New System.Windows.Forms.MenuItem()
+        Me.MenuItem22 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem3 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem6 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem7 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem8 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem9 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem10 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem11 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem12 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem13 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem15 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem16 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem17 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem18 = New System.Windows.Forms.MenuItem()
         Me.HelpMenu = New System.Windows.Forms.MenuItem()
         Me.HelpTopics = New System.Windows.Forms.MenuItem()
         Me.QuickstartMnu = New System.Windows.Forms.MenuItem()
@@ -106,15 +126,14 @@ Partial Class Main
         Me.GitHub = New System.Windows.Forms.MenuItem()
         Me.SendFeedback = New System.Windows.Forms.MenuItem()
         Me.HelpSep2 = New System.Windows.Forms.MenuItem()
-        Me.InspectorBtn = New System.Windows.Forms.MenuItem()
         Me.LanguageMenu = New System.Windows.Forms.MenuItem()
         Me.EnglishLang = New System.Windows.Forms.MenuItem()
         Me.SpanishLang = New System.Windows.Forms.MenuItem()
         Me.PolishLang = New System.Windows.Forms.MenuItem()
         Me.WelshLang = New System.Windows.Forms.MenuItem()
-        Me.ShowVersion = New System.Windows.Forms.MenuItem()
         Me.HelpSep3 = New System.Windows.Forms.MenuItem()
         Me.AboutItem = New System.Windows.Forms.MenuItem()
+        Me.MenuItem19 = New System.Windows.Forms.MenuItem()
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
         Me.Context = New System.Windows.Forms.ContextMenu()
         Me.OpenContext = New System.Windows.Forms.MenuItem()
@@ -216,6 +235,8 @@ Partial Class Main
         Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusBar = New System.Windows.Forms.StatusStrip()
         Me.ApriStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem14 = New System.Windows.Forms.MenuItem()
         CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
@@ -246,7 +267,7 @@ Partial Class Main
         '
         'MenuBar
         '
-        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.HelpMenu})
+        Me.MenuBar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.FileMenu, Me.EditMenu, Me.FormatMenu, Me.ViewMenu, Me.BuildMenu, Me.MenuItem1, Me.HelpMenu})
         '
         'FileMenu
         '
@@ -429,7 +450,7 @@ Partial Class Main
         'FormatMenu
         '
         Me.FormatMenu.Index = 2
-        Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatSep, Me.SyntaxHighlight, Me.LivePreview, Me.FormatSep2, Me.EditorFont})
+        Me.FormatMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.WordWrap, Me.VirtualSpace, Me.WideCaret, Me.FormatSep, Me.LivePreview, Me.FormatSep2, Me.EditorFont})
         resources.ApplyResources(Me.FormatMenu, "FormatMenu")
         '
         'WordWrap
@@ -453,30 +474,25 @@ Partial Class Main
         Me.FormatSep.Index = 3
         resources.ApplyResources(Me.FormatSep, "FormatSep")
         '
-        'SyntaxHighlight
-        '
-        Me.SyntaxHighlight.Index = 4
-        resources.ApplyResources(Me.SyntaxHighlight, "SyntaxHighlight")
-        '
         'LivePreview
         '
-        Me.LivePreview.Index = 5
+        Me.LivePreview.Index = 4
         resources.ApplyResources(Me.LivePreview, "LivePreview")
         '
         'FormatSep2
         '
-        Me.FormatSep2.Index = 6
+        Me.FormatSep2.Index = 5
         resources.ApplyResources(Me.FormatSep2, "FormatSep2")
         '
         'EditorFont
         '
-        Me.EditorFont.Index = 7
+        Me.EditorFont.Index = 6
         resources.ApplyResources(Me.EditorFont, "EditorFont")
         '
         'ViewMenu
         '
         Me.ViewMenu.Index = 3
-        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.StatusBarMnu, Me.ViewSep, Me.IconThemeMenu, Me.ColorScheme, Me.SystemIcons, Me.RefreshItem})
+        Me.ViewMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.ExplorerPanel, Me.BuildPanel, Me.EditorPanel, Me.PreviewPanel, Me.StatusBarMnu, Me.ViewSep, Me.IconThemeMenu, Me.SystemIcons, Me.RefreshItem})
         resources.ApplyResources(Me.ViewMenu, "ViewMenu")
         '
         'ExplorerPanel
@@ -532,38 +548,21 @@ Partial Class Main
         Me.XPitem.RadioCheck = True
         resources.ApplyResources(Me.XPitem, "XPitem")
         '
-        'ColorScheme
-        '
-        Me.ColorScheme.Index = 7
-        Me.ColorScheme.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.cDefault, Me.cDark})
-        resources.ApplyResources(Me.ColorScheme, "ColorScheme")
-        '
-        'cDefault
-        '
-        Me.cDefault.Checked = True
-        Me.cDefault.Index = 0
-        resources.ApplyResources(Me.cDefault, "cDefault")
-        '
-        'cDark
-        '
-        Me.cDark.Index = 1
-        resources.ApplyResources(Me.cDark, "cDark")
-        '
         'SystemIcons
         '
         Me.SystemIcons.Checked = True
-        Me.SystemIcons.Index = 8
+        Me.SystemIcons.Index = 7
         resources.ApplyResources(Me.SystemIcons, "SystemIcons")
         '
         'RefreshItem
         '
-        Me.RefreshItem.Index = 9
+        Me.RefreshItem.Index = 8
         resources.ApplyResources(Me.RefreshItem, "RefreshItem")
         '
         'BuildMenu
         '
         Me.BuildMenu.Index = 4
-        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.BuildShortcut, Me.ToolsSep, Me.PreviewPage, Me.ViewFileOutput, Me.OpenOutputMnu, Me.MenuItem5, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
+        Me.BuildMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.BuildSite, Me.SanitaryBuild, Me.ToolsSep, Me.PreviewPage, Me.ViewFileOutput, Me.OpenOutputMnu, Me.MenuItem5, Me.BrowseSiteMnu, Me.BrowseSitePreviewMnu})
         resources.ApplyResources(Me.BuildMenu, "BuildMenu")
         '
         'BuildSite
@@ -576,50 +575,175 @@ Partial Class Main
         Me.SanitaryBuild.Index = 1
         resources.ApplyResources(Me.SanitaryBuild, "SanitaryBuild")
         '
-        'BuildShortcut
-        '
-        Me.BuildShortcut.Index = 2
-        resources.ApplyResources(Me.BuildShortcut, "BuildShortcut")
-        '
         'ToolsSep
         '
-        Me.ToolsSep.Index = 3
+        Me.ToolsSep.Index = 2
         resources.ApplyResources(Me.ToolsSep, "ToolsSep")
         '
         'PreviewPage
         '
-        Me.PreviewPage.Index = 4
+        Me.PreviewPage.Index = 3
         resources.ApplyResources(Me.PreviewPage, "PreviewPage")
         '
         'ViewFileOutput
         '
-        Me.ViewFileOutput.Index = 5
+        Me.ViewFileOutput.Index = 4
         resources.ApplyResources(Me.ViewFileOutput, "ViewFileOutput")
         '
         'OpenOutputMnu
         '
-        Me.OpenOutputMnu.Index = 6
+        Me.OpenOutputMnu.Index = 5
         resources.ApplyResources(Me.OpenOutputMnu, "OpenOutputMnu")
         '
         'MenuItem5
         '
-        Me.MenuItem5.Index = 7
+        Me.MenuItem5.Index = 6
         resources.ApplyResources(Me.MenuItem5, "MenuItem5")
         '
         'BrowseSiteMnu
         '
-        Me.BrowseSiteMnu.Index = 8
+        Me.BrowseSiteMnu.Index = 7
         resources.ApplyResources(Me.BrowseSiteMnu, "BrowseSiteMnu")
         '
         'BrowseSitePreviewMnu
         '
-        Me.BrowseSitePreviewMnu.Index = 9
+        Me.BrowseSitePreviewMnu.Index = 8
         resources.ApplyResources(Me.BrowseSitePreviewMnu, "BrowseSitePreviewMnu")
+        '
+        'MenuItem1
+        '
+        Me.MenuItem1.Index = 5
+        Me.MenuItem1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.SyntaxHighlight, Me.ShowVersion, Me.InspectorBtn, Me.ColorScheme, Me.MenuItem20, Me.MenuItem4, Me.ExplorerAttributes, Me.MenuItem21, Me.MenuItem17, Me.MenuItem22, Me.MenuItem3, Me.MenuItem18, Me.MenuItem6, Me.MenuItem8, Me.MenuItem7, Me.MenuItem9, Me.MenuItem2, Me.MenuItem11, Me.MenuItem10, Me.MenuItem12, Me.MenuItem13, Me.MenuItem15, Me.MenuItem16, Me.MenuItem14})
+        resources.ApplyResources(Me.MenuItem1, "MenuItem1")
+        '
+        'SyntaxHighlight
+        '
+        Me.SyntaxHighlight.Index = 0
+        resources.ApplyResources(Me.SyntaxHighlight, "SyntaxHighlight")
+        '
+        'ShowVersion
+        '
+        Me.ShowVersion.Index = 1
+        resources.ApplyResources(Me.ShowVersion, "ShowVersion")
+        '
+        'InspectorBtn
+        '
+        Me.InspectorBtn.Index = 2
+        resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
+        '
+        'ColorScheme
+        '
+        Me.ColorScheme.Index = 3
+        Me.ColorScheme.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.cDefault, Me.cDark})
+        resources.ApplyResources(Me.ColorScheme, "ColorScheme")
+        '
+        'cDefault
+        '
+        Me.cDefault.Checked = True
+        Me.cDefault.Index = 0
+        Me.cDefault.RadioCheck = True
+        resources.ApplyResources(Me.cDefault, "cDefault")
+        '
+        'cDark
+        '
+        Me.cDark.Index = 1
+        resources.ApplyResources(Me.cDark, "cDark")
+        '
+        'MenuItem20
+        '
+        Me.MenuItem20.Index = 4
+        resources.ApplyResources(Me.MenuItem20, "MenuItem20")
+        '
+        'MenuItem4
+        '
+        Me.MenuItem4.Checked = True
+        Me.MenuItem4.Index = 5
+        resources.ApplyResources(Me.MenuItem4, "MenuItem4")
+        '
+        'MenuItem21
+        '
+        Me.MenuItem21.Index = 7
+        resources.ApplyResources(Me.MenuItem21, "MenuItem21")
+        '
+        'ExplorerAttributes
+        '
+        Me.ExplorerAttributes.Index = 6
+        resources.ApplyResources(Me.ExplorerAttributes, "ExplorerAttributes")
+        '
+        'MenuItem22
+        '
+        Me.MenuItem22.Index = 9
+        resources.ApplyResources(Me.MenuItem22, "MenuItem22")
+        '
+        'MenuItem3
+        '
+        Me.MenuItem3.Index = 10
+        resources.ApplyResources(Me.MenuItem3, "MenuItem3")
+        '
+        'MenuItem6
+        '
+        Me.MenuItem6.Index = 12
+        resources.ApplyResources(Me.MenuItem6, "MenuItem6")
+        '
+        'MenuItem7
+        '
+        Me.MenuItem7.Index = 14
+        resources.ApplyResources(Me.MenuItem7, "MenuItem7")
+        '
+        'MenuItem8
+        '
+        Me.MenuItem8.Index = 13
+        resources.ApplyResources(Me.MenuItem8, "MenuItem8")
+        '
+        'MenuItem9
+        '
+        Me.MenuItem9.Index = 15
+        resources.ApplyResources(Me.MenuItem9, "MenuItem9")
+        '
+        'MenuItem10
+        '
+        Me.MenuItem10.Index = 18
+        resources.ApplyResources(Me.MenuItem10, "MenuItem10")
+        '
+        'MenuItem11
+        '
+        Me.MenuItem11.Index = 17
+        resources.ApplyResources(Me.MenuItem11, "MenuItem11")
+        '
+        'MenuItem12
+        '
+        Me.MenuItem12.Index = 19
+        resources.ApplyResources(Me.MenuItem12, "MenuItem12")
+        '
+        'MenuItem13
+        '
+        Me.MenuItem13.Index = 20
+        resources.ApplyResources(Me.MenuItem13, "MenuItem13")
+        '
+        'MenuItem15
+        '
+        Me.MenuItem15.Index = 21
+        resources.ApplyResources(Me.MenuItem15, "MenuItem15")
+        '
+        'MenuItem16
+        '
+        Me.MenuItem16.Index = 22
+        resources.ApplyResources(Me.MenuItem16, "MenuItem16")
+        '
+        'MenuItem17
+        '
+        Me.MenuItem17.Index = 8
+        resources.ApplyResources(Me.MenuItem17, "MenuItem17")
+        '
+        'MenuItem18
+        '
+        Me.MenuItem18.Index = 11
+        resources.ApplyResources(Me.MenuItem18, "MenuItem18")
         '
         'HelpMenu
         '
-        Me.HelpMenu.Index = 5
-        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.QuickstartMnu, Me.OpenSampleSite, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.InspectorBtn, Me.LanguageMenu, Me.ShowVersion, Me.HelpSep3, Me.AboutItem})
+        Me.HelpMenu.Index = 6
+        Me.HelpMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.HelpTopics, Me.QuickstartMnu, Me.OpenSampleSite, Me.HelpSep, Me.Website, Me.GitHub, Me.SendFeedback, Me.HelpSep2, Me.LanguageMenu, Me.HelpSep3, Me.AboutItem, Me.MenuItem19})
         resources.ApplyResources(Me.HelpMenu, "HelpMenu")
         '
         'HelpTopics
@@ -662,14 +786,9 @@ Partial Class Main
         Me.HelpSep2.Index = 7
         resources.ApplyResources(Me.HelpSep2, "HelpSep2")
         '
-        'InspectorBtn
-        '
-        resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
-        Me.InspectorBtn.Index = 8
-        '
         'LanguageMenu
         '
-        Me.LanguageMenu.Index = 9
+        Me.LanguageMenu.Index = 8
         Me.LanguageMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.EnglishLang, Me.SpanishLang, Me.PolishLang, Me.WelshLang})
         resources.ApplyResources(Me.LanguageMenu, "LanguageMenu")
         '
@@ -697,20 +816,20 @@ Partial Class Main
         Me.WelshLang.Tag = "cy-GB"
         resources.ApplyResources(Me.WelshLang, "WelshLang")
         '
-        'ShowVersion
-        '
-        Me.ShowVersion.Index = 10
-        resources.ApplyResources(Me.ShowVersion, "ShowVersion")
-        '
         'HelpSep3
         '
-        Me.HelpSep3.Index = 11
+        Me.HelpSep3.Index = 9
         resources.ApplyResources(Me.HelpSep3, "HelpSep3")
         '
         'AboutItem
         '
-        Me.AboutItem.Index = 12
+        Me.AboutItem.Index = 10
         resources.ApplyResources(Me.AboutItem, "AboutItem")
+        '
+        'MenuItem19
+        '
+        Me.MenuItem19.Index = 11
+        resources.ApplyResources(Me.MenuItem19, "MenuItem19")
         '
         'XP
         '
@@ -941,6 +1060,7 @@ Partial Class Main
         Me.AttributeTree.BorderStyle = System.Windows.Forms.BorderStyle.None
         resources.ApplyResources(Me.AttributeTree, "AttributeTree")
         Me.AttributeTree.ImageList = Me.VS2017
+        Me.AttributeTree.LabelEdit = True
         Me.AttributeTree.Name = "AttributeTree"
         '
         'BuildProgress
@@ -1358,6 +1478,16 @@ Partial Class Main
         Me.ApriStatus.Name = "ApriStatus"
         resources.ApplyResources(Me.ApriStatus, "ApriStatus")
         '
+        'MenuItem2
+        '
+        Me.MenuItem2.Index = 16
+        resources.ApplyResources(Me.MenuItem2, "MenuItem2")
+        '
+        'MenuItem14
+        '
+        Me.MenuItem14.Index = 23
+        resources.ApplyResources(Me.MenuItem14, "MenuItem14")
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -1557,7 +1687,6 @@ Partial Class Main
     Friend WithEvents ScriptingGuideToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ScriptGalleryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BuildShortcut As System.Windows.Forms.MenuItem
     Friend WithEvents NewItemBtn As System.Windows.Forms.ToolStripDropDownButton
     Friend WithEvents NewFolderTool As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SepNewItem0 As System.Windows.Forms.ToolStripSeparator
@@ -1584,4 +1713,26 @@ Partial Class Main
     Friend WithEvents BuildBtn As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents CleanBuildBtn As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OpenOutputFolderBtn As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
+    Friend WithEvents ExplorerAttributes As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem3 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem6 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem7 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem8 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem9 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem10 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem11 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem12 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem13 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem15 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem16 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem17 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem18 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem19 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem20 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem21 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem22 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem14 As System.Windows.Forms.MenuItem
 End Class

@@ -133,7 +133,107 @@
   <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
   </metadata>
+  <data name="FileMenu.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="EditMenu.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="FormatMenu.Text" xml:space="preserve">
+    <value>F&amp;ormat</value>
+  </data>
+  <data name="ViewMenu.Text" xml:space="preserve">
+    <value>&amp;View</value>
+  </data>
+  <data name="BuildMenu.Text" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="SyntaxHighlight.Text" xml:space="preserve">
+    <value>Syntax highlighting in the editor</value>
+  </data>
+  <data name="ShowVersion.Text" xml:space="preserve">
+    <value>Show version in titlebar</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="InspectorBtn.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>F12</value>
+  </data>
+  <data name="InspectorBtn.Text" xml:space="preserve">
+    <value>Inspect form controls</value>
+  </data>
+  <data name="ColorScheme.Text" xml:space="preserve">
+    <value>Change color scheme</value>
+  </data>
+  <data name="MenuItem20.Text" xml:space="preserve">
+    <value>Insert attribute tokens from editor context menu</value>
+  </data>
+  <data name="MenuItem4.Text" xml:space="preserve">
+    <value>Use global toolbar (stuck)</value>
+  </data>
+  <data name="ExplorerAttributes.Text" xml:space="preserve">
+    <value>Attributes in Explorer view (more efficient algo coming soon!)</value>
+  </data>
+  <data name="MenuItem21.Text" xml:space="preserve">
+    <value>---- the below options do not do anything ----</value>
+  </data>
+  <data name="MenuItem17.Text" xml:space="preserve">
+    <value>Check for conditionals before launching Add Conditional dialog</value>
+  </data>
+  <data name="MenuItem22.Text" xml:space="preserve">
+    <value>Create index page with folders in Pages</value>
+  </data>
+  <data name="MenuItem3.Text" xml:space="preserve">
+    <value>Combine folders into index pages</value>
+  </data>
+  <data name="MenuItem18.Text" xml:space="preserve">
+    <value>Use MenuStrip instead of MenuBar</value>
+  </data>
+  <data name="MenuItem6.Text" xml:space="preserve">
+    <value>Use WebKit rendering engine</value>
+  </data>
+  <data name="MenuItem8.Text" xml:space="preserve">
+    <value>Build with AutoSite Legacy</value>
+  </data>
+  <data name="MenuItem7.Text" xml:space="preserve">
+    <value>Macro support</value>
+  </data>
+  <data name="MenuItem9.Text" xml:space="preserve">
+    <value>WYSIWYG editor</value>
+  </data>
+  <data name="MenuItem2.Text" xml:space="preserve">
+    <value>Remove Herobrine</value>
+  </data>
+  <data name="MenuItem11.Text" xml:space="preserve">
+    <value>Allow reordering of tabs</value>
+  </data>
+  <data name="MenuItem10.Text" xml:space="preserve">
+    <value>Show close button on tabs</value>
+  </data>
+  <data name="MenuItem12.Text" xml:space="preserve">
+    <value>Tab context menu</value>
+  </data>
+  <data name="MenuItem13.Text" xml:space="preserve">
+    <value>Allow dragging of files in Explorer</value>
+  </data>
+  <data name="MenuItem15.Text" xml:space="preserve">
+    <value>Create shortcut for building project</value>
+  </data>
+  <data name="MenuItem16.Text" xml:space="preserve">
+    <value>Dockable panels</value>
+  </data>
+  <data name="MenuItem14.Text" xml:space="preserve">
+    <value>Todo - Refactor these so the names are not MenuItem1-20</value>
+  </data>
+  <data name="MenuItem1.Text" xml:space="preserve">
+    <value>E&amp;xperiments</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuItem1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="HelpMenu.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
   <data name="NewSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlN</value>
   </data>
@@ -152,7 +252,6 @@
   <data name="CloseFile.Text" xml:space="preserve">
     <value>Close</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CloseSite.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -182,6 +281,9 @@
   </data>
   <data name="FileSep3.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="OpenRecent.Text" xml:space="preserve">
+    <value>Recent Sites</value>
   </data>
   <data name="Recent1.Text" xml:space="preserve">
     <value>Recent 1</value>
@@ -219,9 +321,6 @@
   <data name="ClearRecents.Text" xml:space="preserve">
     <value>Clear Recent Sites</value>
   </data>
-  <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Recent Sites</value>
-  </data>
   <data name="FileSep4.Text" xml:space="preserve">
     <value>-</value>
   </data>
@@ -230,9 +329,6 @@
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
     <value>Exit</value>
-  </data>
-  <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;File</value>
   </data>
   <data name="Undo.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlZ</value>
@@ -312,9 +408,6 @@
   <data name="InsertConditional.Text" xml:space="preserve">
     <value>Insert Conditional...</value>
   </data>
-  <data name="EditMenu.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
-  </data>
   <data name="WordWrap.Text" xml:space="preserve">
     <value>Word Wrap</value>
   </data>
@@ -327,12 +420,6 @@
   <data name="FormatSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="SyntaxHighlight.Text" xml:space="preserve">
-    <value>Experimental Syntax Highlighting</value>
-  </data>
-  <data name="SyntaxHighlight.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="LivePreview.Text" xml:space="preserve">
     <value>Live Preview</value>
   </data>
@@ -341,9 +428,6 @@
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Monospace Font...</value>
-  </data>
-  <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
   </data>
   <data name="ExplorerPanel.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>Alt1</value>
@@ -378,26 +462,14 @@
   <data name="ViewSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
+  <data name="IconThemeMenu.Text" xml:space="preserve">
+    <value>Icon Theme</value>
+  </data>
   <data name="VS2017item.Text" xml:space="preserve">
     <value>Visual Studio 2017</value>
   </data>
   <data name="XPitem.Text" xml:space="preserve">
     <value>XP</value>
-  </data>
-  <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Icon Theme</value>
-  </data>
-  <data name="cDefault.Text" xml:space="preserve">
-    <value>Default</value>
-  </data>
-  <data name="cDark.Text" xml:space="preserve">
-    <value>Dark</value>
-  </data>
-  <data name="ColorScheme.Text" xml:space="preserve">
-    <value>Color Scheme</value>
-  </data>
-  <data name="ColorScheme.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
     <value>Use System Icons</value>
@@ -407,9 +479,6 @@
   </data>
   <data name="RefreshItem.Text" xml:space="preserve">
     <value>Refresh Explorer</value>
-  </data>
-  <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;View</value>
   </data>
   <data name="BuildSite.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>CtrlB</value>
@@ -421,16 +490,13 @@
     <value>CtrlShiftB</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Build Cleanly</value>
-  </data>
-  <data name="BuildShortcut.Text" xml:space="preserve">
-    <value>Build Shortcut...</value>
+    <value>Clean Build</value>
   </data>
   <data name="ToolsSep.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="PreviewPage.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlP</value>
+    <value>F5</value>
   </data>
   <data name="PreviewPage.Text" xml:space="preserve">
     <value>Preview File</value>
@@ -453,8 +519,11 @@
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
     <value>Browse Site in Preview</value>
   </data>
-  <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
+  <data name="cDefault.Text" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="cDark.Text" xml:space="preserve">
+    <value>Dark</value>
   </data>
   <data name="HelpTopics.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
     <value>F1</value>
@@ -483,17 +552,8 @@
   <data name="HelpSep2.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="InspectorBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="InspectorBtn.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>F12</value>
-  </data>
-  <data name="InspectorBtn.Text" xml:space="preserve">
-    <value>GUI Inspector (F12)</value>
-  </data>
-  <data name="InspectorBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="LanguageMenu.Text" xml:space="preserve">
+    <value>🌐</value>
   </data>
   <data name="EnglishLang.Text" xml:space="preserve">
     <value>English</value>
@@ -507,20 +567,14 @@
   <data name="WelshLang.Text" xml:space="preserve">
     <value>Cymraeg</value>
   </data>
-  <data name="LanguageMenu.Text" xml:space="preserve">
-    <value>🌐</value>
-  </data>
-  <data name="ShowVersion.Text" xml:space="preserve">
-    <value>Show version</value>
-  </data>
   <data name="HelpSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="AboutItem.Text" xml:space="preserve">
     <value>About AutoSite</value>
   </data>
-  <data name="HelpMenu.Text" xml:space="preserve">
-    <value>Help</value>
+  <data name="MenuItem19.Text" xml:space="preserve">
+    <value>Show experiments</value>
   </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>316, 17</value>
@@ -564,6 +618,9 @@
   <data name="ContextSep3.Text" xml:space="preserve">
     <value>-</value>
   </data>
+  <data name="NewCon.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
     <value>Folder</value>
   </data>
@@ -591,9 +648,6 @@
   <data name="NewTXTCon.Text" xml:space="preserve">
     <value>Plain Text (.txt)</value>
   </data>
-  <data name="NewCon.Text" xml:space="preserve">
-    <value>New</value>
-  </data>
   <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>603, 17</value>
   </metadata>
@@ -612,6 +666,9 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>91</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 15</value>
   </data>
@@ -621,9 +678,6 @@
   <metadata name="StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>781, 56</value>
   </metadata>
-  <data name="ApriStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 17</value>
-  </data>
   <data name="StatusBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 452</value>
   </data>
@@ -651,354 +705,6 @@
   <metadata name="Strip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>704, 56</value>
   </metadata>
-  <data name="NewSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="NewSiteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="NewSiteBtn.Text" xml:space="preserve">
-    <value>New Site (Ctrl+N)</value>
-  </data>
-  <data name="OpenSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="OpenSiteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="OpenSiteBtn.Text" xml:space="preserve">
-    <value>Open Site (Ctrl+O)</value>
-  </data>
-  <data name="NewFolderTool.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewFolderTool.Text" xml:space="preserve">
-    <value>Folder</value>
-  </data>
-  <data name="SepNewItem0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 6</value>
-  </data>
-  <data name="NewPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewPageToolStripMenuItem.Text" xml:space="preserve">
-    <value>HTML Page (.html)</value>
-  </data>
-  <data name="NewMarkdownPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewMarkdownPageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Markdown Page (.md)</value>
-  </data>
-  <data name="SepNewItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 6</value>
-  </data>
-  <data name="NewTemplateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewTemplateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Template (.html)</value>
-  </data>
-  <data name="ToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="ToolStripMenuItem2.Text" xml:space="preserve">
-    <value>Template Gallery...</value>
-  </data>
-  <data name="SepNewItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 6</value>
-  </data>
-  <data name="NewTextFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewTextFileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Text File (.txt)</value>
-  </data>
-  <data name="NewStylesheetToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewStylesheetToolStripMenuItem.Text" xml:space="preserve">
-    <value>Stylesheet (.css)</value>
-  </data>
-  <data name="NewJavaScriptToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewJavaScriptToolStripMenuItem.Text" xml:space="preserve">
-    <value>Script (.js)</value>
-  </data>
-  <data name="SepNewItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 6</value>
-  </data>
-  <data name="AddFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="AddFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add Existing Files...</value>
-  </data>
-  <data name="NewItemBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="NewItemBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 22</value>
-  </data>
-  <data name="NewItemBtn.Text" xml:space="preserve">
-    <value>New File</value>
-  </data>
-  <data name="NewItemBtn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ScriptingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
-  </data>
-  <data name="ScriptingToolStripMenuItem.Text" xml:space="preserve">
-    <value>Run Build Scripts</value>
-  </data>
-  <data name="NewSpiceToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAINJREFUOE9j/P//
-        PwNFAGQACH/79q0fiP/jweeBcgIwy2D6wJqhBvzvm+P0v32aGVZ89MwikOEgQxRAhmA1AKT5w/uPGBhm
-        6MZddSBD3gOxAVkGgAyCGUK2ASBDQOFEkgHI3ho14CM4jQziQMSXlGGpEaQGlxcIZSbkjNaPkZBgAqTS
-        AK67C5N+LvJfAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="NewSpiceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
-  </data>
-  <data name="NewSpiceToolStripMenuItem.Text" xml:space="preserve">
-    <value>New Script (.py)</value>
-  </data>
-  <data name="ScriptGalleryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
-  </data>
-  <data name="ScriptGalleryToolStripMenuItem.Text" xml:space="preserve">
-    <value>Script Gallery...</value>
-  </data>
-  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 6</value>
-  </data>
-  <data name="SpicesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
-  </data>
-  <data name="SpicesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Configure Python...</value>
-  </data>
-  <data name="ScriptingGuideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
-  </data>
-  <data name="ScriptingGuideToolStripMenuItem.Text" xml:space="preserve">
-    <value>Scripting Guide</value>
-  </data>
-  <data name="ScriptingDropdown.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ScriptingDropdown.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ScriptingDropdown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 22</value>
-  </data>
-  <data name="ScriptingDropdown.Text" xml:space="preserve">
-    <value>Python</value>
-  </data>
-  <data name="ScriptingDropdown.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Save (Ctrl+S)</value>
-  </data>
-  <data name="SaveAllBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="SaveAllBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="SaveAllBtn.Text" xml:space="preserve">
-    <value>Save All (Ctrl+Shift+S)</value>
-  </data>
-  <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="CutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="CutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="CutBtn.Text" xml:space="preserve">
-    <value>Cut (Ctrl+X)</value>
-  </data>
-  <data name="CopyBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="CopyBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="CopyBtn.Text" xml:space="preserve">
-    <value>Copy (Ctrl+C)</value>
-  </data>
-  <data name="PasteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="PasteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="PasteBtn.Text" xml:space="preserve">
-    <value>Paste (Ctrl+V)</value>
-  </data>
-  <data name="InsertBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="InsertBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 22</value>
-  </data>
-  <data name="InsertBtn.Text" xml:space="preserve">
-    <value>Insert</value>
-  </data>
-  <data name="InsertBtn.ToolTipText" xml:space="preserve">
-    <value>Open the Quick Insert panel in the editor.</value>
-  </data>
-  <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAIBJREFUOE9jYBh+
-        4OvXrzJA3PX//39mmO9AbJAYSA6vj0EKvnz5cufq1av/geylII1QzUtv3LjxHySH1xCQLSDNXl5e//fv
-        3w82BIRBbJAYyBCQGpyugNkG0wCikdkwV+H1BrohyK5BDheiXUGSARR7geJApDgaQQFDUUIamvkKAKCH
-        EIBcPapoAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="CloseBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="CloseBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="CloseBtn.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="FindBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="FindBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="FindBtn.Text" xml:space="preserve">
-    <value>Find (Ctrl+F)</value>
-  </data>
-  <data name="ReplaceBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ReplaceBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="ReplaceBtn.Text" xml:space="preserve">
-    <value>Replace (Ctrl+H)</value>
-  </data>
-  <data name="GotoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="GotoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="GotoBtn.Text" xml:space="preserve">
-    <value>Go To (Ctrl+G)</value>
-  </data>
-  <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="UndoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="UndoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="UndoBtn.Text" xml:space="preserve">
-    <value>Undo (Ctrl+Z)</value>
-  </data>
-  <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="RedoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="RedoBtn.Text" xml:space="preserve">
-    <value>Redo (Ctrl+Y)</value>
-  </data>
-  <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="ToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Live Preview</value>
-  </data>
-  <data name="PreviewBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="PreviewBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 22</value>
-  </data>
-  <data name="PreviewBtn.Text" xml:space="preserve">
-    <value>Preview</value>
-  </data>
-  <data name="PreviewBtn.ToolTipText" xml:space="preserve">
-    <value>View this page before building.</value>
-  </data>
-  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 22</value>
-  </data>
-  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>Open in default browser</value>
-  </data>
-  <data name="ViewOutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ViewOutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 22</value>
-  </data>
-  <data name="ViewOutBtn.Text" xml:space="preserve">
-    <value>View</value>
-  </data>
-  <data name="ViewOutBtn.ToolTipText" xml:space="preserve">
-    <value>View this page's built version.</value>
-  </data>
-  <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="CleanBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="CleanBuildBtn.Text" xml:space="preserve">
-    <value>Clean and build...</value>
-  </data>
-  <data name="OpenOutputFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
-    <value>Open folder</value>
-  </data>
-  <data name="BuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BuildBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 22</value>
-  </data>
-  <data name="BuildBtn.Text" xml:space="preserve">
-    <value>Build</value>
-  </data>
-  <data name="BuildBtn.ToolTipText" xml:space="preserve">
-    <value>Build your site's files.</value>
-  </data>
   <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1089,63 +795,6 @@
   <data name="&gt;&gt;ExSplit.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>458, 56</value>
-  </metadata>
-  <data name="LogMenuBridge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 4</value>
-  </data>
-  <data name="&gt;&gt;LogMenuBridge.Name" xml:space="preserve">
-    <value>LogMenuBridge</value>
-  </data>
-  <data name="&gt;&gt;LogMenuBridge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Log.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Log.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 145</value>
-  </data>
-  <data name="Log.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Log.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="&gt;&gt;Log.Name" xml:space="preserve">
-    <value>Log</value>
-  </data>
-  <data name="&gt;&gt;Log.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
-    <value>LogPage</value>
-  </data>
-  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LogPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="LogPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="LogPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="LogPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 155</value>
-  </data>
-  <data name="LogPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="LogPage.Text" xml:space="preserve">
-    <value>Log</value>
-  </data>
   <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
     <value>LogPage</value>
   </data>
@@ -1157,93 +806,6 @@
   </data>
   <data name="&gt;&gt;LogPage.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="AttributeExplanation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="AttributeExplanation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="AttributeExplanation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="AttributeExplanation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 145</value>
-  </data>
-  <data name="AttributeExplanation.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="AttributeExplanation.Text" xml:space="preserve">
-    <value>
-The Attribute Map allows you to see all of the Attributes used in your site, and insert them with drag and drop. 
-
-Build your site to populate the Attribute Map.</value>
-  </data>
-  <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
-    <value>AttributeExplanation</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="AttributeTree.ImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="AttributeTree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="AttributeTree.SelectedImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AttributeTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 145</value>
-  </data>
-  <data name="AttributeTree.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
-    <value>AttributeTree</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
-    <value>MapPage</value>
-  </data>
-  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="MapPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="MapPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="MapPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="MapPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 155</value>
-  </data>
-  <data name="MapPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MapPage.Text" xml:space="preserve">
-    <value>Attributes</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -1320,57 +882,6 @@ Build your site to populate the Attribute Map.</value>
   <metadata name="BuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 22</value>
-  </data>
-  <data name="Build.Text" xml:space="preserve">
-    <value>Build</value>
-  </data>
-  <data name="Build.ToolTipText" xml:space="preserve">
-    <value>Build</value>
-  </data>
-  <data name="SanitaryBuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="SanitaryBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="SanitaryBuildBtn.Text" xml:space="preserve">
-    <value>Build cleanly</value>
-  </data>
-  <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
-    <value>Sanitary Build...</value>
-  </data>
-  <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="OpenOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="OpenOutput.Text" xml:space="preserve">
-    <value>Open Output Folder</value>
-  </data>
-  <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BrowseSitePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BrowseSitePreview.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
-  </data>
-  <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BrowseSite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Browse Site</value>
-  </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1872,12 +1383,6 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;FormatSep.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SyntaxHighlight.Name" xml:space="preserve">
-    <value>SyntaxHighlight</value>
-  </data>
-  <data name="&gt;&gt;SyntaxHighlight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;LivePreview.Name" xml:space="preserve">
     <value>LivePreview</value>
   </data>
@@ -1956,24 +1461,6 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;XPitem.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ColorScheme.Name" xml:space="preserve">
-    <value>ColorScheme</value>
-  </data>
-  <data name="&gt;&gt;ColorScheme.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cDefault.Name" xml:space="preserve">
-    <value>cDefault</value>
-  </data>
-  <data name="&gt;&gt;cDefault.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cDark.Name" xml:space="preserve">
-    <value>cDark</value>
-  </data>
-  <data name="&gt;&gt;cDark.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;SystemIcons.Name" xml:space="preserve">
     <value>SystemIcons</value>
   </data>
@@ -2002,12 +1489,6 @@ Build your site to populate the Attribute Map.</value>
     <value>SanitaryBuild</value>
   </data>
   <data name="&gt;&gt;SanitaryBuild.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildShortcut.Name" xml:space="preserve">
-    <value>BuildShortcut</value>
-  </data>
-  <data name="&gt;&gt;BuildShortcut.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolsSep.Name" xml:space="preserve">
@@ -2050,6 +1531,156 @@ Build your site to populate the Attribute Map.</value>
     <value>BrowseSitePreviewMnu</value>
   </data>
   <data name="&gt;&gt;BrowseSitePreviewMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem1.Name" xml:space="preserve">
+    <value>MenuItem1</value>
+  </data>
+  <data name="&gt;&gt;MenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SyntaxHighlight.Name" xml:space="preserve">
+    <value>SyntaxHighlight</value>
+  </data>
+  <data name="&gt;&gt;SyntaxHighlight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ShowVersion.Name" xml:space="preserve">
+    <value>ShowVersion</value>
+  </data>
+  <data name="&gt;&gt;ShowVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InspectorBtn.Name" xml:space="preserve">
+    <value>InspectorBtn</value>
+  </data>
+  <data name="&gt;&gt;InspectorBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorScheme.Name" xml:space="preserve">
+    <value>ColorScheme</value>
+  </data>
+  <data name="&gt;&gt;ColorScheme.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cDefault.Name" xml:space="preserve">
+    <value>cDefault</value>
+  </data>
+  <data name="&gt;&gt;cDefault.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cDark.Name" xml:space="preserve">
+    <value>cDark</value>
+  </data>
+  <data name="&gt;&gt;cDark.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem20.Name" xml:space="preserve">
+    <value>MenuItem20</value>
+  </data>
+  <data name="&gt;&gt;MenuItem20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem4.Name" xml:space="preserve">
+    <value>MenuItem4</value>
+  </data>
+  <data name="&gt;&gt;MenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem21.Name" xml:space="preserve">
+    <value>MenuItem21</value>
+  </data>
+  <data name="&gt;&gt;MenuItem21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExplorerAttributes.Name" xml:space="preserve">
+    <value>ExplorerAttributes</value>
+  </data>
+  <data name="&gt;&gt;ExplorerAttributes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem22.Name" xml:space="preserve">
+    <value>MenuItem22</value>
+  </data>
+  <data name="&gt;&gt;MenuItem22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Name" xml:space="preserve">
+    <value>MenuItem3</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem6.Name" xml:space="preserve">
+    <value>MenuItem6</value>
+  </data>
+  <data name="&gt;&gt;MenuItem6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem7.Name" xml:space="preserve">
+    <value>MenuItem7</value>
+  </data>
+  <data name="&gt;&gt;MenuItem7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem8.Name" xml:space="preserve">
+    <value>MenuItem8</value>
+  </data>
+  <data name="&gt;&gt;MenuItem8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem9.Name" xml:space="preserve">
+    <value>MenuItem9</value>
+  </data>
+  <data name="&gt;&gt;MenuItem9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem10.Name" xml:space="preserve">
+    <value>MenuItem10</value>
+  </data>
+  <data name="&gt;&gt;MenuItem10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem11.Name" xml:space="preserve">
+    <value>MenuItem11</value>
+  </data>
+  <data name="&gt;&gt;MenuItem11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem12.Name" xml:space="preserve">
+    <value>MenuItem12</value>
+  </data>
+  <data name="&gt;&gt;MenuItem12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem13.Name" xml:space="preserve">
+    <value>MenuItem13</value>
+  </data>
+  <data name="&gt;&gt;MenuItem13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem15.Name" xml:space="preserve">
+    <value>MenuItem15</value>
+  </data>
+  <data name="&gt;&gt;MenuItem15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem16.Name" xml:space="preserve">
+    <value>MenuItem16</value>
+  </data>
+  <data name="&gt;&gt;MenuItem16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem17.Name" xml:space="preserve">
+    <value>MenuItem17</value>
+  </data>
+  <data name="&gt;&gt;MenuItem17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem18.Name" xml:space="preserve">
+    <value>MenuItem18</value>
+  </data>
+  <data name="&gt;&gt;MenuItem18.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HelpMenu.Name" xml:space="preserve">
@@ -2106,12 +1737,6 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;HelpSep2.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InspectorBtn.Name" xml:space="preserve">
-    <value>InspectorBtn</value>
-  </data>
-  <data name="&gt;&gt;InspectorBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;LanguageMenu.Name" xml:space="preserve">
     <value>LanguageMenu</value>
   </data>
@@ -2142,12 +1767,6 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;WelshLang.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ShowVersion.Name" xml:space="preserve">
-    <value>ShowVersion</value>
-  </data>
-  <data name="&gt;&gt;ShowVersion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;HelpSep3.Name" xml:space="preserve">
     <value>HelpSep3</value>
   </data>
@@ -2158,6 +1777,12 @@ Build your site to populate the Attribute Map.</value>
     <value>AboutItem</value>
   </data>
   <data name="&gt;&gt;AboutItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem19.Name" xml:space="preserve">
+    <value>MenuItem19</value>
+  </data>
+  <data name="&gt;&gt;MenuItem19.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;XP.Name" xml:space="preserve">
@@ -2664,11 +2289,278 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;ApriStatus.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MenuItem2.Name" xml:space="preserve">
+    <value>MenuItem2</value>
+  </data>
+  <data name="&gt;&gt;MenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem14.Name" xml:space="preserve">
+    <value>MenuItem14</value>
+  </data>
+  <data name="&gt;&gt;MenuItem14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Log.Name" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;Log.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
+    <value>LogPage</value>
+  </data>
+  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LogPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="LogPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="LogPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="LogPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 155</value>
+  </data>
+  <data name="LogPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LogPage.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
+    <value>LogPage</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Parent" xml:space="preserve">
+    <value>ApricotTabs</value>
+  </data>
+  <data name="&gt;&gt;LogPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>458, 56</value>
+  </metadata>
+  <data name="LogMenuBridge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="&gt;&gt;LogMenuBridge.Name" xml:space="preserve">
+    <value>LogMenuBridge</value>
+  </data>
+  <data name="&gt;&gt;LogMenuBridge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Log.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Log.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 145</value>
+  </data>
+  <data name="Log.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Log.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="&gt;&gt;Log.Name" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;Log.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
+    <value>LogPage</value>
+  </data>
+  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
+    <value>AttributeExplanation</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
+    <value>AttributeTree</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MapPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="MapPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="MapPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="MapPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 155</value>
+  </data>
+  <data name="MapPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MapPage.Text" xml:space="preserve">
+    <value>Attributes</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Parent" xml:space="preserve">
+    <value>ApricotTabs</value>
+  </data>
+  <data name="&gt;&gt;MapPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="AttributeExplanation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AttributeExplanation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AttributeExplanation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="AttributeExplanation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 145</value>
+  </data>
+  <data name="AttributeExplanation.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="AttributeExplanation.Text" xml:space="preserve">
+    <value>
+The Attribute Map gives you a birds-eye view of all the attributes used in your site.
+
+Build your site or enable Attributes in Explorer to populate the Attribute Map.</value>
+  </data>
+  <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
+    <value>AttributeExplanation</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AttributeTree.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="AttributeTree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="AttributeTree.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 145</value>
+  </data>
+  <data name="AttributeTree.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
+    <value>AttributeTree</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 22</value>
+  </data>
+  <data name="Build.Text" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Build.ToolTipText" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="SanitaryBuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SanitaryBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="SanitaryBuildBtn.Text" xml:space="preserve">
+    <value>Build cleanly</value>
+  </data>
+  <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
+    <value>Sanitary Build...</value>
+  </data>
+  <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="OpenOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="OpenOutput.Text" xml:space="preserve">
+    <value>Open Output Folder</value>
+  </data>
+  <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BrowseSitePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BrowseSitePreview.Text" xml:space="preserve">
+    <value>Browse Site in Preview</value>
+  </data>
+  <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BrowseSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BrowseSite.Text" xml:space="preserve">
+    <value>Browse Site</value>
   </data>
   <metadata name="SelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>114, 56</value>
@@ -2693,5 +2585,349 @@ Build your site to populate the Attribute Map.</value>
   </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
     <value>AutoSite Zip package (*.zip)|*.zip</value>
+  </data>
+  <data name="NewSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="NewSiteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="NewSiteBtn.Text" xml:space="preserve">
+    <value>New Site (Ctrl+N)</value>
+  </data>
+  <data name="OpenSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="OpenSiteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="OpenSiteBtn.Text" xml:space="preserve">
+    <value>Open Site (Ctrl+O)</value>
+  </data>
+  <data name="NewItemBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="NewItemBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 22</value>
+  </data>
+  <data name="NewItemBtn.Text" xml:space="preserve">
+    <value>New File</value>
+  </data>
+  <data name="NewItemBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="NewFolderTool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewFolderTool.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="SepNewItem0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 6</value>
+  </data>
+  <data name="NewPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewPageToolStripMenuItem.Text" xml:space="preserve">
+    <value>HTML Page (.html)</value>
+  </data>
+  <data name="NewMarkdownPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewMarkdownPageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Markdown Page (.md)</value>
+  </data>
+  <data name="SepNewItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 6</value>
+  </data>
+  <data name="NewTemplateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewTemplateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Template (.html)</value>
+  </data>
+  <data name="ToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="ToolStripMenuItem2.Text" xml:space="preserve">
+    <value>Template Gallery...</value>
+  </data>
+  <data name="SepNewItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 6</value>
+  </data>
+  <data name="NewTextFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewTextFileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Text File (.txt)</value>
+  </data>
+  <data name="NewStylesheetToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewStylesheetToolStripMenuItem.Text" xml:space="preserve">
+    <value>Stylesheet (.css)</value>
+  </data>
+  <data name="NewJavaScriptToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewJavaScriptToolStripMenuItem.Text" xml:space="preserve">
+    <value>Script (.js)</value>
+  </data>
+  <data name="SepNewItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 6</value>
+  </data>
+  <data name="AddFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="AddFilesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add Existing Files...</value>
+  </data>
+  <data name="ScriptingDropdown.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ScriptingDropdown.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ScriptingDropdown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 22</value>
+  </data>
+  <data name="ScriptingDropdown.Text" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="ScriptingDropdown.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ScriptingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 22</value>
+  </data>
+  <data name="ScriptingToolStripMenuItem.Text" xml:space="preserve">
+    <value>Run macro</value>
+  </data>
+  <data name="NewSpiceToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAbklEQVQ4T2P4//8/RRjO+PbtWz8Q/8eD
+        zwOxAAMUYDPgf98cp//t08yw4qNnFsEMUcBpAEjhh/cfMTDMkI276kCGvAdiA7IMQDaEbANAGKSWJAOQ
+        8agBg94AfEkZhkFqcBlAKDMh434MA8jD/xkA2iU4ZRHNxfMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="NewSpiceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 22</value>
+  </data>
+  <data name="NewSpiceToolStripMenuItem.Text" xml:space="preserve">
+    <value>New macro (.lua)</value>
+  </data>
+  <data name="ScriptGalleryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 22</value>
+  </data>
+  <data name="ScriptGalleryToolStripMenuItem.Text" xml:space="preserve">
+    <value>Macro gallery...</value>
+  </data>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 6</value>
+  </data>
+  <data name="SpicesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 22</value>
+  </data>
+  <data name="SpicesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Configure PATH</value>
+  </data>
+  <data name="ScriptingGuideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 22</value>
+  </data>
+  <data name="ScriptingGuideToolStripMenuItem.Text" xml:space="preserve">
+    <value>Macro scripting guide</value>
+  </data>
+  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="SaveBtn.Text" xml:space="preserve">
+    <value>Save (Ctrl+S)</value>
+  </data>
+  <data name="SaveAllBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SaveAllBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="SaveAllBtn.Text" xml:space="preserve">
+    <value>Save All (Ctrl+Shift+S)</value>
+  </data>
+  <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="CutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="CutBtn.Text" xml:space="preserve">
+    <value>Cut (Ctrl+X)</value>
+  </data>
+  <data name="CopyBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CopyBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="CopyBtn.Text" xml:space="preserve">
+    <value>Copy (Ctrl+C)</value>
+  </data>
+  <data name="PasteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="PasteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="PasteBtn.Text" xml:space="preserve">
+    <value>Paste (Ctrl+V)</value>
+  </data>
+  <data name="InsertBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="InsertBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 22</value>
+  </data>
+  <data name="InsertBtn.Text" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="InsertBtn.ToolTipText" xml:space="preserve">
+    <value>Open the Quick Insert panel in the editor.</value>
+  </data>
+  <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACHSURBVDhP3ZJbCoAgEEWFttGKXJr7cB2uQvCjZej3NCcU
+        pKIov+rC4GXuQ3qYH6KUMus4EZnqysDZodXVOTDknJcYoyj3BGvYp5QE7bJERUfYWishhK2EgbOjBE+1
+        H9FuawHOnqP1j3aKfcmjMBgq2Ic5e35booaxl6ji2GcEGHTe/UhfhDEroIcQgNyBAocAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="CloseBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CloseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="CloseBtn.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="FindBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="FindBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="FindBtn.Text" xml:space="preserve">
+    <value>Find (Ctrl+F)</value>
+  </data>
+  <data name="ReplaceBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ReplaceBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="ReplaceBtn.Text" xml:space="preserve">
+    <value>Replace (Ctrl+H)</value>
+  </data>
+  <data name="GotoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="GotoBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="GotoBtn.Text" xml:space="preserve">
+    <value>Go To (Ctrl+G)</value>
+  </data>
+  <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="UndoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="UndoBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="UndoBtn.Text" xml:space="preserve">
+    <value>Undo (Ctrl+Z)</value>
+  </data>
+  <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="RedoBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="RedoBtn.Text" xml:space="preserve">
+    <value>Redo (Ctrl+Y)</value>
+  </data>
+  <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="PreviewBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="PreviewBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="PreviewBtn.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="ToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Live Preview</value>
+  </data>
+  <data name="ViewOutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ViewOutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 22</value>
+  </data>
+  <data name="ViewOutBtn.Text" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 22</value>
+  </data>
+  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
+    <value>Open in default browser</value>
+  </data>
+  <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="BuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BuildBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
+  </data>
+  <data name="BuildBtn.Text" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="BuildBtn.ToolTipText" xml:space="preserve">
+    <value>Build your site's files.</value>
+  </data>
+  <data name="CleanBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 22</value>
+  </data>
+  <data name="CleanBuildBtn.Text" xml:space="preserve">
+    <value>Clean and build...</value>
+  </data>
+  <data name="OpenOutputFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 22</value>
+  </data>
+  <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
+    <value>Open folder</value>
+  </data>
+  <data name="ApriStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 17</value>
   </data>
 </root>

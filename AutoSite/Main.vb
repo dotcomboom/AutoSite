@@ -39,6 +39,23 @@ Public Class Main
             node.Tag = file.FullName
             node.ImageKey = key
             node.SelectedImageKey = key
+            If key = "Page" And ExplorerAttributes.Checked Then
+                Dim apricott As Apricot.ApricotOutput = Apricot.Compile(My.Computer.FileSystem.ReadAllText(node.Tag), file.Name, incRoot, True)
+
+                For Each att As KeyValuePair(Of String, String) In apricott.Attributes
+                    Dim keynode = node.Nodes.Add(att.Key & ": " & att.Value)
+                    keynode.ImageKey = "Attribute"
+                    'Dim valnode = keynode.Nodes.Add(att.Value)
+                    'valnode.ImageKey = "Value"
+
+                    Dim tn As New Apricot.TNode With {
+                        .relPath = file.Name,
+                        .Attribute = att.Key,
+                        .Value = att.Value
+                    }
+                    AttributeMapAdd(tn)
+                Next
+            End If
             If My.Settings.systemIcons Then
                 Try
                     Dim splt = node.Text.Split(".")
@@ -138,10 +155,15 @@ Public Class Main
         'settings.Tag = root.Text & "\apricot.xml
 
         SiteTree.BeginUpdate()
+        AttributeTree.BeginUpdate()
+        If ExplorerAttributes.Checked Then
+            AttributeTree.Nodes.Clear()
+        End If
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(inPath), "*", pages, "Page", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(includePath), "*", includes, "Include", False)
         SiteTree.EndUpdate()
+        AttributeTree.EndUpdate()
 
         root.Expand()
         pages.Expand()
@@ -249,56 +271,56 @@ Public Class Main
         ExSplit.Panel2Collapsed = Not (BuildPanel.Checked)
 
 
-            EditMenu.Visible = EditorPanel.Checked
-            CutBtn.Visible = EditorPanel.Checked
-            CopyBtn.Visible = EditorPanel.Checked
-            PasteBtn.Visible = EditorPanel.Checked
-            FindBtn.Visible = EditorPanel.Checked
-            ReplaceBtn.Visible = EditorPanel.Checked
-            GotoBtn.Visible = EditorPanel.Checked
-            InsertBtn.Visible = EditorPanel.Checked
-            UndoBtn.Visible = EditorPanel.Checked
-            RedoBtn.Visible = EditorPanel.Checked
+        EditMenu.Visible = EditorPanel.Checked
+        CutBtn.Visible = EditorPanel.Checked
+        CopyBtn.Visible = EditorPanel.Checked
+        PasteBtn.Visible = EditorPanel.Checked
+        FindBtn.Visible = EditorPanel.Checked
+        ReplaceBtn.Visible = EditorPanel.Checked
+        GotoBtn.Visible = EditorPanel.Checked
+        InsertBtn.Visible = EditorPanel.Checked
+        UndoBtn.Visible = EditorPanel.Checked
+        RedoBtn.Visible = EditorPanel.Checked
         PreviewBtn.Visible = EditorPanel.Checked
         ViewOutBtn.Visible = EditorPanel.Checked
-            Sep2.Visible = EditorPanel.Checked
+        Sep2.Visible = EditorPanel.Checked
         Sep3.Visible = EditorPanel.Checked
         Sep4.Visible = EditorPanel.Checked
         Sep5.Visible = EditorPanel.Checked
-            SaveBtn.Visible = EditorPanel.Checked
-            CloseBtn.Visible = EditorPanel.Checked
+        SaveBtn.Visible = EditorPanel.Checked
+        CloseBtn.Visible = EditorPanel.Checked
 
-            FormatMenu.Visible = EditorPanel.Checked
+        FormatMenu.Visible = EditorPanel.Checked
 
-            StatusBar.Visible = StatusBarMnu.Checked
+        StatusBar.Visible = StatusBarMnu.Checked
 
-            My.Settings.explorerOpen = ExplorerPanel.Checked
-            My.Settings.editorOpen = EditorPanel.Checked
-            My.Settings.browserOpen = PreviewPanel.Checked
-            My.Settings.buildOpen = BuildPanel.Checked
-            My.Settings.statusBar = StatusBarMnu.Checked
+        My.Settings.explorerOpen = ExplorerPanel.Checked
+        My.Settings.editorOpen = EditorPanel.Checked
+        My.Settings.browserOpen = PreviewPanel.Checked
+        My.Settings.buildOpen = BuildPanel.Checked
+        My.Settings.statusBar = StatusBarMnu.Checked
 
-            My.Settings.WordWrap = WordWrap.Checked
-            My.Settings.VirtualSpace = VirtualSpace.Checked
-            My.Settings.WideCaret = WideCaret.Checked
-            My.Settings.SyntaxHighlight = SyntaxHighlight.Checked
-            My.Settings.LivePreview = LivePreview.Checked
+        My.Settings.WordWrap = WordWrap.Checked
+        My.Settings.VirtualSpace = VirtualSpace.Checked
+        My.Settings.WideCaret = WideCaret.Checked
+        My.Settings.SyntaxHighlight = SyntaxHighlight.Checked
+        My.Settings.LivePreview = LivePreview.Checked
 
-            For Each page As TabPage In EditTabs.TabPages
-                Dim point As New Point With {
-                    .X = 0,
-                    .Y = 0
-                }
-                Dim child = page.GetChildAtPoint(point, GetChildAtPointSkip.None)
-                If TypeOf child Is Editor Then
-                    Dim edit As Editor = child
-                    edit.Code.WordWrap = My.Settings.WordWrap
-                    edit.Code.VirtualSpace = My.Settings.VirtualSpace
-                    edit.Code.WideCaret = My.Settings.WideCaret
-                    edit.Code.Font = My.Settings.editorFont
-                    edit.LivePreview.Checked = My.Settings.LivePreview
-                End If
-            Next
+        For Each page As TabPage In EditTabs.TabPages
+            Dim point As New Point With {
+                .X = 0,
+                .Y = 0
+            }
+            Dim child = page.GetChildAtPoint(point, GetChildAtPointSkip.None)
+            If TypeOf child Is Editor Then
+                Dim edit As Editor = child
+                edit.Code.WordWrap = My.Settings.WordWrap
+                edit.Code.VirtualSpace = My.Settings.VirtualSpace
+                edit.Code.WideCaret = My.Settings.WideCaret
+                edit.Code.Font = My.Settings.editorFont
+                edit.LivePreview.Checked = My.Settings.LivePreview
+            End If
+        Next
     End Sub
     Public Sub openEditor(ByVal path As String)
         EditTabs.SuspendLayout()
@@ -482,6 +504,8 @@ Public Class Main
         ExSplit.SplitterDistance = My.Settings.exSplitterDistance
         EdSplit.SplitterDistance = My.Settings.edSplitterDistance
         CoreSplit.SplitterDistance = My.Settings.coreSplitterDistance
+
+        ExplorerAttributes.Checked = My.Settings.explorerAttributes
 
         Try
             Dim key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
@@ -861,7 +885,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub RefreshItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshItem.Click
+    Private Sub RefreshItem_Click() Handles RefreshItem.Click
         If SiteTree.Nodes.Count > 0 Then
             refreshTree(SiteTree.Nodes(0))
         End If
@@ -1107,84 +1131,8 @@ Public Class Main
             End If
             Log.DeselectAll()
         ElseIf e.UserState.GetType() Is GetType(Apricot.TNode) Then
-            Dim tn As Apricot.TNode = e.UserState
+            AttributeMapAdd(e.UserState)
 
-            Dim aNode As New TreeNode
-            Dim exists As Boolean = False
-            For Each node As TreeNode In AttributeTree.Nodes
-                If node.Text = tn.Attribute Then
-                    aNode = node
-                    exists = True
-                End If
-            Next
-
-            If Not exists Then
-                aNode = New TreeNode With {
-                    .Text = tn.Attribute,
-                    .ImageKey = "Attribute",
-                    .SelectedImageKey = "Attribute"
-                }
-                AttributeTree.Nodes.Add(aNode)
-            End If
-
-            Dim vNode As New TreeNode
-            Dim txt = tn.Value
-
-            exists = False
-            For Each node As TreeNode In aNode.Nodes
-                If node.Text = txt Then
-                    vNode = node
-                    exists = True
-                End If
-            Next
-
-            If Not exists Then
-                vNode = New TreeNode With {
-                    .Text = txt,
-                    .ImageKey = "Value",
-                    .SelectedImageKey = "Value"
-                }
-                aNode.Nodes.Add(vNode)
-            End If
-
-            Dim pNode = vNode
-            Dim rPath = tn.relPath
-            While rPath.Contains("\")
-                Dim folderName = rPath.Split("\")(0)
-                Dim npExists = False
-                Dim npNode As New TreeNode
-                For Each node As TreeNode In pNode.Nodes
-                    If node.Text = folderName Then
-                        npNode = node
-                        npExists = True
-                    End If
-                Next
-                If Not npExists Then
-                    npNode.Text = folderName
-                    npNode.ImageKey = "Folder"
-                    npNode.SelectedImageKey = "Folder"
-                    pNode.Nodes.Add(npNode)
-                End If
-                pNode = npNode
-                rPath = Apricot.ReplaceFirst(rPath, folderName & "\", "")
-            End While
-
-            Dim fNode As New TreeNode With {
-                .Text = rPath,
-                .ImageKey = "Page",
-                .SelectedImageKey = "Page",
-                .Tag = Path.Combine(SiteTree.Nodes(0).Text, "pages\" & tn.relPath)
-            }
-
-            Dim add = True
-            For Each node As TreeNode In pNode.Nodes
-                If node.Tag = fNode.Tag Then
-                    add = False
-                End If
-            Next
-            If add Then
-                pNode.Nodes.Add(fNode)
-            End If
         End If
     End Sub
 
@@ -1310,9 +1258,10 @@ Public Class Main
     End Sub
 
     Private Sub Preview_Navigating(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserNavigatingEventArgs) Handles Preview.Navigating
-        If My.Computer.FileSystem.FileExists(e.Url.AbsolutePath & "\index.html") Then
+        ' This check routes directories that contain a index.html to that index.html instead of a directory listing
+        If My.Computer.FileSystem.FileExists(e.Url.AbsolutePath.Replace("/", "\").Replace("%20", " ") & "\index.html") Then
             e.Cancel = True
-            Preview.Navigate(e.Url.AbsolutePath & "\index.html")
+            Preview.Navigate(e.Url.AbsolutePath.Replace("%20", " ") & "/index.html")
         End If
     End Sub
 
@@ -1451,7 +1400,7 @@ Public Class Main
     End Sub
 
     Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
-          Dim edit As Editor = activeEditor()
+        Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doViewinDefaultBrowser()
         End If
@@ -1836,9 +1785,11 @@ Public Class Main
         If Not mebk = Nothing Then
             Me.BackColor = mebk
             BuildStrip.BackColor = mebk
+            Strip.BackColor = mebk
         Else
             Me.BackColor = bk
             BuildStrip.BackColor = bk
+            Strip.BackColor = bk
         End If
 
         AttributeTree.BackColor = bk
@@ -1855,6 +1806,9 @@ Public Class Main
         SiteTree.HotTracking = False
 
         Me.ForeColor = fc
+        For Each item As ToolStripItem In Strip.Items
+            item.ForeColor = fc
+        Next
 
         Me.Refresh()
     End Sub
@@ -1931,7 +1885,7 @@ Public Class Main
         openSite(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "SampleSite"), False)
     End Sub
 
-    Private Sub BuildShortcut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildShortcut.Click
+    Private Sub BuildShortcut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'Dim n As New SaveFileDialog
         'n.Title = "Save Build Shortcut"
         'n.Filter = "Shortcut (.lnk)|*.lnk"
@@ -1940,5 +1894,114 @@ Public Class Main
 
         'End If
         ' TODO
+    End Sub
+
+    Private Sub ScriptingToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ScriptingToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub AttributeTree_BeforeLabelEdit(sender As System.Object, e As System.Windows.Forms.NodeLabelEditEventArgs) Handles AttributeTree.BeforeLabelEdit
+
+    End Sub
+
+    Private Sub AttributeTree_AfterLabelEdit(sender As System.Object, e As System.Windows.Forms.NodeLabelEditEventArgs) Handles AttributeTree.AfterLabelEdit
+
+    End Sub
+
+    Private Sub MenuItem19_Click(sender As System.Object, e As System.EventArgs) Handles MenuItem19.Click
+        MenuItem19.Checked = Not MenuItem19.Checked
+        MenuItem1.Visible = MenuItem19.Checked
+    End Sub
+
+    Private Sub AttributeMapAdd(tn As Apricot.TNode)
+        Dim aNode As New TreeNode
+        Dim exists As Boolean = False
+        For Each node As TreeNode In AttributeTree.Nodes
+            If node.Text = tn.Attribute Then
+                aNode = node
+                exists = True
+            End If
+        Next
+
+        If Not exists Then
+            aNode = New TreeNode With {
+                .Text = tn.Attribute,
+                .ImageKey = "Attribute",
+                .SelectedImageKey = "Attribute"
+            }
+            AttributeTree.Nodes.Add(aNode)
+        End If
+
+        Dim vNode As New TreeNode
+        Dim txt = tn.Value
+
+        exists = False
+        For Each node As TreeNode In aNode.Nodes
+            If node.Text = txt Then
+                vNode = node
+                exists = True
+            End If
+        Next
+
+        If Not exists Then
+            vNode = New TreeNode With {
+                .Text = txt,
+                .ImageKey = "Value",
+                .SelectedImageKey = "Value"
+            }
+            aNode.Nodes.Add(vNode)
+        End If
+
+        Dim pNode = vNode
+        Dim rPath = tn.relPath
+        While rPath.Contains("\")
+            Dim folderName = rPath.Split("\")(0)
+            Dim npExists = False
+            Dim npNode As New TreeNode
+            For Each node As TreeNode In pNode.Nodes
+                If node.Text = folderName Then
+                    npNode = node
+                    npExists = True
+                End If
+            Next
+            If Not npExists Then
+                npNode.Text = folderName
+                npNode.ImageKey = "Folder"
+                npNode.SelectedImageKey = "Folder"
+                pNode.Nodes.Add(npNode)
+            End If
+            pNode = npNode
+            rPath = Apricot.ReplaceFirst(rPath, folderName & "\", "")
+        End While
+
+        Dim fNode As New TreeNode With {
+            .Text = rPath,
+            .ImageKey = "Page",
+            .SelectedImageKey = "Page",
+            .Tag = Path.Combine(SiteTree.Nodes(0).Text, "pages\" & tn.relPath)
+        }
+
+        Dim add = True
+        For Each node As TreeNode In pNode.Nodes
+            If node.Tag = fNode.Tag Then
+                add = False
+            End If
+        Next
+        If add Then
+            pNode.Nodes.Add(fNode)
+        End If
+    End Sub
+
+    Private Sub MenuItem2_Click(sender As System.Object, e As System.EventArgs) Handles ExplorerAttributes.Click
+        ExplorerAttributes.Checked = Not ExplorerAttributes.Checked
+        RefreshItem_Click()
+        My.Settings.explorerAttributes = ExplorerAttributes.Checked
+    End Sub
+
+    Private Sub MenuItem2_Click_1(sender As System.Object, e As System.EventArgs) Handles MenuItem2.Click
+        EditTabs.TabPages.Add("You found the level select! Sorry I couldn't come up with a new easter egg..")
+        Dim cheat As New CheatGame
+        cheat.Parent = EditTabs.TabPages.Item(EditTabs.TabPages.Count - 1)
+        cheat.Dock = DockStyle.Fill
     End Sub
 End Class

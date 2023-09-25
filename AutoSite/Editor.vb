@@ -394,4 +394,20 @@ Public Class Editor
     Private Sub Insert_Click(sender As System.Object, e As System.EventArgs) Handles Insert.Click
         doQuickInsert()
     End Sub
+
+    Private Sub plopAttributeToken(sender As System.Object, e As System.EventArgs)
+        Code.InsertText(sender.text)
+    End Sub
+
+    Private Sub Context_Popup(sender As System.Object, e As System.EventArgs) Handles Context.Popup
+        InsertAttribute.Visible = Main.MenuItem20.Checked
+        If Main.MenuItem20.Checked Then
+            InsertAttribute.MenuItems.Clear()
+            InsertAttribute.MenuItems.Add("[#content#]", AddressOf plopAttributeToken)
+            InsertAttribute.MenuItems.Add("[#root#]", AddressOf plopAttributeToken)
+            For Each att As TreeNode In Main.AttributeTree.Nodes
+                InsertAttribute.MenuItems.Add("[#" & att.Text & "#]", AddressOf plopAttributeToken)
+            Next
+        End If
+    End Sub
 End Class

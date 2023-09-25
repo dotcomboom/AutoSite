@@ -136,13 +136,11 @@
     <value>0</value>
   </data>
   <data name="LicenseBox.Text" xml:space="preserve">
-    <value>This release is dedicated to my friends and colleagues at Somnolescent for their testing, contributions and support for this project.
-Their contributions include, (but are not limited to!)
+    <value>Many thanks to my friends at Somnolescent for their testing, contributions and camaraderie for this project.
   - Website &amp; manual: mariteaux (http://mariteaux.somnolescent.net)
   - Welsh translation: Caby (http://caby.somnolescent.net)
   - Polish translation: devon (http://matfloor.net)
-
-And of course, to every website in the wild that I learn uses AutoSite.. thank you! More to come in the future.
+And every site in the wild that uses AutoSite- thank you!
 ----
 AutoSite is also made possible by these open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
@@ -426,7 +424,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>Unnamed Planned Release:
+    <value>Unnamed Planned Release: (changelog out of date)
    + Global toolbar (60%)
    + Run scripts after build (0%)
    + Dockable panels (0%)

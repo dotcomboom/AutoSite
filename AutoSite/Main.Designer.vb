@@ -1492,9 +1492,9 @@ Partial Class Main
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.CoreSplit)
         Me.Controls.Add(Me.StatusBar)
         Me.Controls.Add(Me.Strip)
-        Me.Controls.Add(Me.CoreSplit)
         Me.Icon = Global.AutoSite.My.Resources.Resources.autosite_32
         Me.Menu = Me.MenuBar
         Me.Name = "Main"

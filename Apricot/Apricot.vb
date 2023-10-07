@@ -311,7 +311,7 @@ Public Module Apricot
         Return output
     End Function
 
-    Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As Object = Nothing)
+    Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As ComponentModel.BackgroundWorker = Nothing)
         Dim input = Path.Combine(siteRoot, "pages\")
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim includes = Path.Combine(siteRoot, "includes\")

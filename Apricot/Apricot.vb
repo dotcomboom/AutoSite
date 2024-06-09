@@ -241,49 +241,55 @@ Public Module Apricot
             Dim key = m.Groups(1).Value
             Dim value = m.Groups(2).Value
             Dim html = m.Groups(3).Value
-            Dim equality = (Not key.EndsWith("!"))
+            Dim equality = (Not key.EndsWith("!")) ' whether the conditional is checking for equality (true) or inequality (false)
             If equality = False Then
                 key = ReplaceLast(key, "!", "")
             End If
             Dim pass = False
+
             If attribs.ContainsKey(key) Then
                 If attribs.Item(key) = value Then
                     pass = True
+                Else
+                    pass = False
                 End If
             End If
 
-            ' check emptiness
-            If fullStr.StartsWith("[" & key & "=]") Then
-                If attribs.ContainsKey(key) Then
-                    If attribs.Item(key) = "" Then
+            If Not equality Then  ' if checking for inequality invert
+                pass = Not pass
+            End If
+
+            ' separate emptiness checks
+            If fullStr.StartsWith("[" & key & "=]") Then ' Check if attribute is empty
+                If attribs.ContainsKey(key) Then    ' Attribute exists
+                    If attribs.Item(key) = "" Then  ' Attribute exists and is empty
                         pass = True
+                    Else
+                        pass = False
                     End If
                 Else
-                    pass = True
+                    pass = True ' Attribute does not exist, is empty
                 End If
             End If
-            If fullStr.StartsWith("[" & key & "!=]") Then
-                If attribs.ContainsKey(key) Then
-                    If attribs.Item(key) = "" Then
+            If fullStr.StartsWith("[" & key & "!=]") Then ' Check if attribute is NOT empty
+                If attribs.ContainsKey(key) Then ' Attribute exists
+                    If attribs.Item(key) = "" Then ' Attribute defined, and it is empty
+                        pass = False
+                    Else                           ' Attribute defined, and it is NOT empty
                         pass = True
                     End If
-                Else
-                    pass = True
+                Else                              ' Attribute does NOT exist
+                    pass = False
                 End If
             End If
+
+            'doLog(fullStr, worker)
+            'doLog(pass, worker)
 
             If pass Then
-                If equality = True Then
                     newHtml = newHtml.Replace(fullStr, html)
-                Else
-                    newHtml = newHtml.Replace(fullStr, "")
-                End If
             Else
-                If equality = True Then
-                    newHtml = newHtml.Replace(fullStr, "")
-                Else
-                    newHtml = newHtml.Replace(fullStr, html)
-                End If
+                newHtml = newHtml.Replace(fullStr, "")
             End If
         Next
         ' Attribute Process 2 (Whole Page)

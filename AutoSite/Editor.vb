@@ -36,11 +36,11 @@ Public Class Editor
         End Try
     End Sub
 
-    Public Sub doUndo() Handles UndoBtn.Click, Undo.Click
+    Public Sub doUndo() Handles UndoBtn.Click ', Undo.Click
         Code.Undo()
     End Sub
 
-    Public Sub doRedo() Handles RedoBtn.Click, Redo.Click
+    Public Sub doRedo() Handles RedoBtn.Click ', Redo.Click
         Code.Redo()
     End Sub
 
@@ -399,14 +399,14 @@ Public Class Editor
         Code.InsertText(sender.text)
     End Sub
 
-    Private Sub Context_Popup(sender As System.Object, e As System.EventArgs) Handles Context.Popup
-        InsertAttribute.Visible = Main.MenuItem20.Checked
-        If Main.MenuItem20.Checked Then
-            InsertAttribute.MenuItems.Clear()
-            InsertAttribute.MenuItems.Add("[#content#]", AddressOf plopAttributeToken)
-            InsertAttribute.MenuItems.Add("[#root#]", AddressOf plopAttributeToken)
+    Private Sub Context_Popup(sender As System.Object, e As System.EventArgs) Handles Context.Opening
+        InsertAttribute.Visible = Main.MenuItem1.Checked
+        If Main.MenuItem1.Checked Then
+            InsertAttribute.DropDownItems.Clear()
+            InsertAttribute.DropDownItems.Add("[#content#]")
+            InsertAttribute.DropDownItems.Add("[#root#]")
             For Each att As TreeNode In Main.AttributeTree.Nodes
-                InsertAttribute.MenuItems.Add("[#" & att.Text & "#]", AddressOf plopAttributeToken)
+                InsertAttribute.DropDownItems.Add("[#" & att.Text & "#]")
             Next
         End If
     End Sub

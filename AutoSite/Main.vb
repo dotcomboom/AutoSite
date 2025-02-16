@@ -109,7 +109,10 @@ Public Class Main
 
         If SiteTree.Nodes.Count > 0 Then
             'Me.Text = wTitle & " - " & SiteTree.Nodes(0).Text
-            Me.Text = SiteTree.Nodes(0).Text & " - " & wTitle
+            Dim projPath As String = SiteTree.Nodes(0).Text
+            Dim projPathSplit As String() = projPath.Split("\")
+            ' Sets window title to the name of the current project/folder
+            Me.Text = projPathSplit(projPathSplit.Length - 1) & " - " & wTitle
         Else
             Me.Text = wTitle
         End If
@@ -168,6 +171,7 @@ Public Class Main
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(inPath), "*", pages, "Page", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(includePath), "*", includes, "Include", False)
+        walkTree(My.Computer.FileSystem.GetDirectoryInfo(outputPath), "*", output_site, "Include", False)
         SiteTree.EndUpdate()
         AttributeTree.EndUpdate()
 
@@ -235,6 +239,10 @@ Public Class Main
                     XP.Images.RemoveAt(7)
                 End While
 
+                If My.Settings.browserOpen And My.Computer.FileSystem.FileExists(root.Text & "\out\index.html") Then
+                    Preview.Navigate(root.Text & "\out\index.html")
+                End If
+
                 refreshTree(root)
             End If
         End If
@@ -298,18 +306,18 @@ Public Class Main
 
         FormatMenu.Visible = EditorPanel.Checked
 
-        StatusBar.Visible = StatusBarMnu.Checked
+        'StatusBar.Visible = StatusBarMnu.Checked
 
         My.Settings.explorerOpen = ExplorerPanel.Checked
         My.Settings.editorOpen = EditorPanel.Checked
         My.Settings.browserOpen = PreviewPanel.Checked
         My.Settings.buildOpen = BuildPanel.Checked
-        My.Settings.statusBar = StatusBarMnu.Checked
+        'My.Settings.statusBar = StatusBarMnu.Checked
 
         My.Settings.WordWrap = WordWrap.Checked
         My.Settings.VirtualSpace = VirtualSpace.Checked
         My.Settings.WideCaret = WideCaret.Checked
-        My.Settings.SyntaxHighlight = SyntaxHighlight.Checked
+        'My.Settings.SyntaxHighlight = SyntaxHighlight.Checked
         My.Settings.LivePreview = LivePreview.Checked
 
         For Each page As TabPage In EditTabs.TabPages
@@ -515,7 +523,11 @@ Public Class Main
 
         Try
             Dim key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
-            key.SetValue(Path.GetFileName(Application.ExecutablePath), 11001, Microsoft.Win32.RegistryValueKind.DWord)
+            key.SetValue(Path.GetFileName(Application.ExecutablePath), 11000, Microsoft.Win32.RegistryValueKind.DWord)
+            If My.Computer.FileSystem.FileExists("AutoSite.vshost.exe") Then
+                ' Basic debugging check
+                key.SetValue("AutoSite.vshost.exe", 11000, Microsoft.Win32.RegistryValueKind.DWord)
+            End If
             key.Close()
         Catch ex As Exception
         End Try
@@ -592,7 +604,7 @@ Public Class Main
         WordWrap.Checked = My.Settings.WordWrap
         VirtualSpace.Checked = My.Settings.VirtualSpace
         WideCaret.Checked = My.Settings.WideCaret
-        SyntaxHighlight.Checked = My.Settings.SyntaxHighlight
+        'SyntaxHighlight.Checked = My.Settings.SyntaxHighlight
         LivePreview.Checked = My.Settings.LivePreview
         SystemIcons.Checked = My.Settings.systemIcons
 
@@ -719,12 +731,12 @@ Public Class Main
         panelUpdate()
     End Sub
 
-    Private Sub StatusBarMnu_Click(ByVal sender As Object, ByVal e As EventArgs) Handles StatusBarMnu.Click
-        If StatusBarMnu.Checked Then
-            StatusBarMnu.Checked = False
-        Else
-            StatusBarMnu.Checked = True
-        End If
+    Private Sub StatusBarMnu_Click(ByVal sender As Object, ByVal e As EventArgs)
+        'If StatusBarMnu.Checked Then
+        '    StatusBarMnu.Checked = False
+        'Else
+        '    StatusBarMnu.Checked = True
+        'End If
         panelUpdate()
     End Sub
 
@@ -742,7 +754,7 @@ Public Class Main
         loadIconTheme()
     End Sub
 
-    Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.BeforeLabelEdit
+    Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
         If e.Node.Tag = "" Then
             e.CancelEdit = True
         End If
@@ -751,7 +763,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.AfterLabelEdit
+    Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
         Try
             Dim oldpath = e.Node.Tag
             Dim newpath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(e.Node.Tag), e.Label)
@@ -814,11 +826,16 @@ Public Class Main
         Log.Clear()
         AttributeTree.Nodes.Clear()
         AttributeTree.BeginUpdate()
-        Try
+        If Not ApricotWorker.IsBusy Then
             ApricotWorker.RunWorkerAsync()
-        Catch ex As Exception
-            MsgBox(String.Format(My.Resources.Error_BuildFailed, ex.ToString), MsgBoxStyle.Exclamation, My.Resources.Error_BuildFailed_Title)
-        End Try
+        End If
+        'Try
+        'Catch ex As Exception
+        '    MsgBox(String.Format(My.Resources.Error_BuildFailed, ex.ToString), MsgBoxStyle.Exclamation, My.Resources.Error_BuildFailed_Title)
+        'End Try
+        If ViewFileOutput.Enabled Then
+            ViewFileOutput_Click()
+        End If
     End Sub
 
     Private Sub OpenInDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenInDefault.Click
@@ -928,7 +945,7 @@ Public Class Main
                     Dim oldnewFile = newFile
                     While My.Computer.FileSystem.FileExists(newFile)
                         number += 1
-                        newFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(oldnewFile), System.IO.Path.GetFileNameWithoutExtension(oldnewFile) & " (" & number & ")" & System.IO.Path.GetExtension(oldnewFile))
+                        newFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(oldnewFile), System.IO.Path.GetFileNameWithoutExtension(oldnewFile) & "_" & number & System.IO.Path.GetExtension(oldnewFile))
                     End While
                     My.Computer.FileSystem.CopyFile(s, newFile, False)
                     If Watcher.EnableRaisingEvents = False Then
@@ -1114,8 +1131,9 @@ Public Class Main
         If e.UserState.GetType() Is GetType(System.String) Then
             'ToolStripProgressBar1.Value = e.ProgressPercentage
             BuildProgress.Visible = True
-            BuildSite.Enabled = False
+            'BuildSite.Enabled = False
             Build.Enabled = False
+            BuildBtn.Enabled = False
             SanitaryBuild.Enabled = False
             SanitaryBuildBtn.Enabled = False
             BuildProgress.Value = e.ProgressPercentage
@@ -1130,10 +1148,10 @@ Public Class Main
             If s.Contains(":") Then
                 Log.SelectionColor = Color.Green
             Else
-                ApriStatus.Text = e.UserState
+                'ApriStatus.Text = e.UserState
             End If
             If s.Contains("Finished") Then
-                ApriStatus.Text = ""
+                'ApriStatus.Text = ""
             End If
             If s.Contains("WARN:") Then
                 Log.SelectionColor = Color.OrangeRed
@@ -1208,12 +1226,12 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub SyntaxHighlight_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SyntaxHighlight.Click
-        If SyntaxHighlight.Checked Then
-            SyntaxHighlight.Checked = False
-        Else
-            SyntaxHighlight.Checked = True
-        End If
+    Private Sub SyntaxHighlight_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        'If SyntaxHighlight.Checked Then
+        '    SyntaxHighlight.Checked = False
+        'Else
+        '    SyntaxHighlight.Checked = True
+        'End If
         panelUpdate()
     End Sub
 
@@ -1438,7 +1456,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub SiteTree_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles SiteTree.KeyDown
+    Private Sub SiteTree_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs)
         If e.KeyCode = Keys.Delete Then
             Try
                 deleteFile(SiteTree.SelectedNode.Tag)
@@ -1524,18 +1542,18 @@ Public Class Main
         Return Nothing
     End Function
 
-    Private Sub EditMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditMenu.Popup
+    Private Sub EditMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditMenu.DropDownOpening
         Dim edit As Editor = activeEditor()
         If edit Is Nothing Then
-            For Each item As MenuItem In EditMenu.MenuItems
+            For Each item As ToolStripItem In EditMenu.DropDownItems
                 item.Enabled = False
             Next
         Else
-            For Each item As MenuItem In EditMenu.MenuItems
+            For Each item As ToolStripItem In EditMenu.DropDownItems
                 item.Enabled = True
             Next
-            Undo.Enabled = edit.Undo.Enabled
-            Redo.Enabled = edit.Redo.Enabled
+            'Undo.Enabled = edit.Undo.Enabled
+            'Redo.Enabled = edit.Redo.Enabled
             'Delete.Enabled = False
             Cut.Enabled = edit.Code.SelectionLength > 0
             Copy.Enabled = edit.Code.SelectionLength > 0
@@ -1543,7 +1561,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub ViewMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewMenu.Popup
+    Private Sub ViewMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewMenu.DropDownOpening
         Dim edit = activeEditor()
         If edit Is Nothing Then
             PreviewPage.Enabled = False
@@ -1554,7 +1572,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub FileMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FileMenu.Popup
+    Private Sub FileMenu_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FileMenu.DropDownOpening
         Dim edit = activeEditor()
         If edit Is Nothing Then
             Save.Enabled = False
@@ -1658,7 +1676,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.ButtonClick
+    Private Sub ViewFileOutput_Click() Handles ViewOutBtn.ButtonClick
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doViewOutput()
@@ -1679,7 +1697,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Context_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Context.Popup
+    Private Sub Context_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Context.Opening
         Dim edit = False
         If Context.Tag.StartsWith(".") Then
             edit = True
@@ -1695,13 +1713,12 @@ Public Class Main
             edit = False
         End If
         OpenContext.Visible = edit
-        OpenContext.DefaultItem = edit
-        OpenInDefault.DefaultItem = Not edit
 
-        If OpenContext.Visible = False Then
-            OpenInDefault.Text = My.Resources.UI_Open
+        If edit Then
+            OpenContext.Font = New Font(OpenInDefault.Font, FontStyle.Bold)
+            OpenInDefault.Font = New Font(OpenInDefault.Font, FontStyle.Regular)
         Else
-            OpenInDefault.Text = My.Resources.UI_OpenWithDefault
+            OpenInDefault.Font = New Font(OpenInDefault.Font, FontStyle.Bold)
         End If
 
         If My.Computer.FileSystem.DirectoryExists(Context.Tag) Then
@@ -1749,7 +1766,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub SiteTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles SiteTree.ItemDrag
+    Private Sub SiteTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs)
         If e.Button = Windows.Forms.MouseButtons.Left Then
             If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & "\pages\") Or e.Item.tag.contains(SiteTree.Nodes(0).Tag & "\includes\") Then
                 Dim slash = ""
@@ -1922,11 +1939,6 @@ Public Class Main
 
     End Sub
 
-    Private Sub MenuItem19_Click(sender As System.Object, e As System.EventArgs) Handles MenuItem19.Click
-        MenuItem19.Checked = Not MenuItem19.Checked
-        MenuItem1.Visible = MenuItem19.Checked
-    End Sub
-
     Private Sub AttributeMapAdd(tn As Apricot.TNode)
         Dim aNode As New TreeNode
         Dim exists As Boolean = False
@@ -2012,10 +2024,23 @@ Public Class Main
         My.Settings.explorerAttributes = ExplorerAttributes.Checked
     End Sub
 
-    Private Sub MenuItem2_Click_1(sender As System.Object, e As System.EventArgs) Handles MenuItem2.Click
+    Private Sub MenuItem2_Click_1(sender As System.Object, e As System.EventArgs)
         EditTabs.TabPages.Add("You found the level select! Sorry I couldn't come up with a new easter egg..")
         Dim cheat As New CheatGame
         cheat.Parent = EditTabs.TabPages.Item(EditTabs.TabPages.Count - 1)
         cheat.Dock = DockStyle.Fill
+    End Sub
+
+    Private Sub MenuItem23_Click(sender As System.Object, e As System.EventArgs) Handles MenuItem23.Click, ToolStripButton1.Click
+        ' icons tk
+        If EdSplit.Orientation = Orientation.Horizontal Then
+            EdSplit.Orientation = Orientation.Vertical
+            ToolStripButton1.Image = My.Resources.application_split
+        Else
+            EdSplit.Orientation = Orientation.Horizontal
+            ToolStripButton1.Image = My.Resources.application_tile_horizontal
+        End If
+        MenuItem23.Checked = EdSplit.Orientation = Orientation.Vertical
+
     End Sub
 End Class

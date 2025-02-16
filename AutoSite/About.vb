@@ -59,10 +59,10 @@ Public Class About
     End Sub
 
     Private Sub Logo_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Logo.DoubleClick
-        Main.InspectorBtn.Enabled = True
-        Main.ColorScheme.Visible = True
-        Main.SyntaxHighlight.Visible = True
-        Main.ScriptingDropdown.Enabled = True
+        'Main.InspectorBtn.Enabled = True
+        'Main.ColorScheme.Visible = True
+        'Main.SyntaxHighlight.Visible = True
+        'Main.ScriptingDropdown.Enabled = True
         Sysinfo.Show()
     End Sub
 End Class

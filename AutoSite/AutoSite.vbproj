@@ -120,6 +120,12 @@
     <Compile Include="Inspector.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewSite.Designer.vb">
+      <DependentUpon>NewSite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewSite.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Quickstart.Designer.vb">
       <DependentUpon>Quickstart.vb</DependentUpon>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inspector.resx">
       <DependentUpon>Inspector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSite.resx">
+      <DependentUpon>NewSite.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Quickstart.resx">
       <DependentUpon>Quickstart.vb</DependentUpon>
@@ -465,6 +474,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\netshell.dll_14_1907-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_split.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_tile_horizontal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

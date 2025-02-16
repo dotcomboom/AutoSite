@@ -313,6 +313,8 @@ Public Class Main
 
         FormatMenu.Visible = EditorPanel.Checked
 
+        ToolStripButton1.Visible = EditorPanel.Checked And PreviewPanel.Checked
+
         'StatusBar.Visible = StatusBarMnu.Checked
 
         My.Settings.explorerOpen = ExplorerPanel.Checked

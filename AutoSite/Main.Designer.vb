@@ -437,8 +437,8 @@ Partial Class Main
         '
         'ToolStripContainer1.TopToolStripPanel
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MenuBar)
         Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.Strip)
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MenuBar)
         '
         'MenuBar
         '

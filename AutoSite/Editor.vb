@@ -111,6 +111,11 @@ Public Class Editor
             Snapshot = Code.Text
             Me.Parent.Text = openFile.Replace(siteRoot & "\", "")
             SaveBtn.Enabled = False
+
+                If Snapshot.Contains("<!-- attrib title: ") And Snapshot.Contains("-->") Then
+                ' Get the title of the page thru apricot or regex todo tk
+                ' Main.updateExplorerFileTitle(title, openFile)
+            End If
         End If
     End Sub
 

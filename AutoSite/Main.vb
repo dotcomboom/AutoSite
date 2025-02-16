@@ -53,6 +53,13 @@ Public Class Main
                         .Attribute = att.Key,
                         .Value = att.Value
                     }
+
+                    If ExplorerAttributes.Checked Then
+                        If tn.Attribute = "title" Then
+                            node.Text = tn.Value
+                            node.ToolTipText = file.Name
+                        End If
+                    End If
                     AttributeMapAdd(tn)
                 Next
             End If
@@ -674,7 +681,7 @@ Public Class Main
                             edit = True
                         Else
                             For Each extension In editExtensions
-                                If e.Node.Text.EndsWith(extension) Or e.Node.Text = extension Then
+                                If e.Node.Tag.EndsWith(extension) Or e.Node.Tag = extension Then
                                     edit = True
                                     Exit For
                                 End If
@@ -761,6 +768,9 @@ Public Class Main
         If e.Node.Level < 2 Then    ' don't edit root nodes
             e.CancelEdit = True
         End If
+        If ExplorerAttributes.Checked Then
+            e.CancelEdit = True
+        End If
     End Sub
 
     Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
@@ -833,9 +843,9 @@ Public Class Main
         'Catch ex As Exception
         '    MsgBox(String.Format(My.Resources.Error_BuildFailed, ex.ToString), MsgBoxStyle.Exclamation, My.Resources.Error_BuildFailed_Title)
         'End Try
-        If ViewFileOutput.Enabled Then
-            ViewFileOutput_Click()
-        End If
+        'If ViewFileOutput.Enabled Then
+        '    ViewFileOutput_Click()
+        'End If
     End Sub
 
     Private Sub OpenInDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenInDefault.Click
@@ -1171,6 +1181,7 @@ Public Class Main
         AttributeTree.EndUpdate()
         BuildProgress.Visible = False
         Build.Enabled = True
+        BuildBtn.Enabled = True
         BuildSite.Enabled = True
         SanitaryBuild.Enabled = True
         SanitaryBuildBtn.Enabled = True
@@ -2043,4 +2054,21 @@ Public Class Main
         MenuItem23.Checked = EdSplit.Orientation = Orientation.Vertical
 
     End Sub
+
+    Private Sub updateExplorerFileTitleHelper(node As TreeNode, title As String, openfile As String)
+        If node.Tag = openfile Then
+            node.Text = title
+            Exit Sub
+        End If
+        For Each node2 As TreeNode In node.Nodes
+            updateExplorerFileTitleHelper(node2, title, openfile)
+        Next
+    End Sub
+
+    Public Sub updateExplorerFileTitle(title As String, openFile As String)
+        If ExplorerAttributes.Checked = False Then Exit Sub
+
+        updateExplorerFileTitleHelper(SiteTree.Nodes(0), title, openFile)
+    End Sub
+
 End Class

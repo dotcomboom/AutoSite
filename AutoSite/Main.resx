@@ -723,11 +723,77 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;CoreSplit.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>474, 17</value>
-  </metadata>
-  <data name="FolderBrowser.Description" xml:space="preserve">
-    <value>Choose the location for your site's files. If it doesn't have the AutoSite folder structure, we'll make one there.</value>
+  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.BottomToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ToolStripContainer1.ContentPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ToolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 449</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToolStripContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ToolStripContainer1.LeftToolStripPanel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.LeftToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ToolStripContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.RightToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ToolStripContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>751, 474</value>
+  </data>
+  <data name="ToolStripContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ToolStripContainer1.Text" xml:space="preserve">
+    <value>ToolStripContainer1</value>
   </data>
   <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>215, 17</value>
@@ -1183,25 +1249,25 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>194, 6</value>
   </data>
   <data name="EnglishLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>122, 22</value>
   </data>
   <data name="EnglishLang.Text" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="SpanishLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>122, 22</value>
   </data>
   <data name="SpanishLang.Text" xml:space="preserve">
     <value>Español</value>
   </data>
   <data name="PolishLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>122, 22</value>
   </data>
   <data name="PolishLang.Text" xml:space="preserve">
     <value>Polski</value>
   </data>
   <data name="WelshLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>122, 22</value>
   </data>
   <data name="WelshLang.Text" xml:space="preserve">
     <value>Cymraeg</value>
@@ -1258,235 +1324,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>ToolStripContainer1.TopToolStripPanel</value>
   </data>
   <data name="&gt;&gt;MenuBar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>316, 17</value>
-  </metadata>
-  <data name="XP.ImageSize" type="System.Drawing.Size, System.Drawing">
-    <value>16, 16</value>
-  </data>
-  <metadata name="Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>121, 17</value>
-  </metadata>
-  <data name="OpenContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="OpenContext.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="OpenInDefault.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Open with default program</value>
-  </data>
-  <data name="OpenFileLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="OpenFileLocation.Text" xml:space="preserve">
-    <value>Open file location</value>
-  </data>
-  <data name="ContextSep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 6</value>
-  </data>
-  <data name="CopyCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="CopyCon.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="PasteCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="PasteCon.Text" xml:space="preserve">
-    <value>Paste</value>
-  </data>
-  <data name="AddFilesCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="AddFilesCon.Text" xml:space="preserve">
-    <value>Add files...</value>
-  </data>
-  <data name="ContextSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 6</value>
-  </data>
-  <data name="DeleteCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="DeleteCon.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="RenameCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="RenameCon.Text" xml:space="preserve">
-    <value>Rename</value>
-  </data>
-  <data name="ContextSep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 6</value>
-  </data>
-  <data name="NewFolderCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewFolderCon.Text" xml:space="preserve">
-    <value>Folder</value>
-  </data>
-  <data name="NewSep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 6</value>
-  </data>
-  <data name="NewHTMLCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewHTMLCon.Text" xml:space="preserve">
-    <value>HTML Page (.html)</value>
-  </data>
-  <data name="NewMDCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewMDCon.Text" xml:space="preserve">
-    <value>Markdown Page (.md)</value>
-  </data>
-  <data name="NewPHPCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>PHP Script (.php)</value>
-  </data>
-  <data name="NewSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 6</value>
-  </data>
-  <data name="NewCSSCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>CSS Stylesheet (.css)</value>
-  </data>
-  <data name="NewJSCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewJSCon.Text" xml:space="preserve">
-    <value>JS Script (.js)</value>
-  </data>
-  <data name="NewTXTCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="NewTXTCon.Text" xml:space="preserve">
-    <value>Plain Text (.txt)</value>
-  </data>
-  <data name="NewCon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 22</value>
-  </data>
-  <data name="NewCon.Text" xml:space="preserve">
-    <value>New</value>
-  </data>
-  <data name="Context.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 220</value>
-  </data>
-  <data name="&gt;&gt;Context.Name" xml:space="preserve">
-    <value>Context</value>
-  </data>
-  <data name="&gt;&gt;Context.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>603, 17</value>
-  </metadata>
-  <data name="AddFilesDialog.Filter" xml:space="preserve">
-    <value>All files (*.*)|*.*</value>
-  </data>
-  <data name="AddFilesDialog.Title" xml:space="preserve">
-    <value>Add Files to Folder</value>
-  </data>
-  <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>736, 17</value>
-  </metadata>
-  <metadata name="Watcher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>867, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>160</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>751, 474</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Name" xml:space="preserve">
-    <value>ToolStripContainer1.BottomToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="ToolStripContainer1.ContentPanel.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ToolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 449</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Name" xml:space="preserve">
-    <value>ToolStripContainer1.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="ToolStripContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ToolStripContainer1.LeftToolStripPanel.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Name" xml:space="preserve">
-    <value>ToolStripContainer1.LeftToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ToolStripContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Name" xml:space="preserve">
-    <value>ToolStripContainer1.RightToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ToolStripContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 474</value>
-  </data>
-  <data name="ToolStripContainer1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="ToolStripContainer1.Text" xml:space="preserve">
-    <value>ToolStripContainer1</value>
   </data>
   <metadata name="Strip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>263, 56</value>
@@ -1832,14 +1670,14 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="ToolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVDhPxY3JS0JBAIf9z9ooqMAoWmizjZAwooWyg7RY
-        aYWVLfJSekhhy6teYatWli1WFBTRQps9fZ4yu3mVX+bMbfDUoQ8GPn7MfKP4MzVGt2b+RIpa9kIYXH+G
-        YeUJvcIDzOJVtKrPJdg8/ujIVhDDG0Ho5u6gtd+gm/dFi7SiJhGwH0ox4fIbSxfkLJ5HMO+LwHEWAeeS
-        MXv6BfvxF3hvGDNHYdgOw5j2fKJp6iiWCFjcIUzFz6QrhPFdGeYdGaPbMkybv78GMOQMwLguYWBNgn71
-        Az0rfnQJfqhNXiQCE/EHyTCIEjWWmv59EhjbCtCJRb/8To2lvHuHBEzODzqxdC28UmMp1jpJwCC+0Yml
-        c/aJGktBs0gCeuGFTixt/D01FqVmiQR0jkc6sTRN31JjyVE7SKCdT35Jbb6kxpJZzZNAC3dNJ5a6IR81
-        loxKKwloxpP/ouo/psaSWsaRgLLRIdQOelHVd4C8xgXkNswhu96OrFoeaRVWuUTnRmHHNvJbN5ChsiG9
-        nENqKYeUUouQCPwzCsUPwiOk8/EibYQAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVDhPxY3JS0JBAIf9z9ooqMAoWrA9IySsaKHsIFlW
+        tmClpbyMHlJY+apX2KqttthCUEQLbS49T5ndvMYvc+Y2eOrQBwMfP2a+kf2ZmgGPeu44ELPuhDG4+gTD
+        0iN6hHuYxMtYVa9bsO2/xUY23jG89g7t7C009mvopn2xIo2oTgTsB4Fv4eILznNyFs6imPNF4TiNgnNL
+        mDn5hP3oE7w3gunDCKYOIpjc/0Cj5fA7EbB6wrDEz4Q7DPO2BNOWhNFNCcb1319DGHKFMLAaRP9KEPrl
+        ALqX/OgS/FAZvUgExuMPkmEQg9RYavp2SWBsI0QnFv3iGzWWMt0WCRhdATqxdM2/UGMp1rhIwCC+0oml
+        c+aRGktBs0gCeuGZTixt/B01FrnaSQJaxwOdWJomb6ix5KgcJNDOJ7+kMl1QY8ms5kmghbuiE0vtkI8a
+        S0aFjQTU5uS/VPYdUWNJLeVIQN7gEJSDXlT17iGvYR659bPIrrMjS8kjrdwmlWg9KOzYRH7rGjIqp5Be
+        xiFVwSFFYRUSgX9GJvsBqNSk7C0ROZoAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="ToolStripButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -1873,7 +1711,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>ToolStripContainer1.TopToolStripPanel</value>
   </data>
   <data name="&gt;&gt;Strip.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer1.TopToolStripPanel.Name" xml:space="preserve">
     <value>ToolStripContainer1.TopToolStripPanel</value>
@@ -1897,7 +1735,169 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
+  </data>
+  <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>474, 17</value>
+  </metadata>
+  <data name="FolderBrowser.Description" xml:space="preserve">
+    <value>Choose the location for your site's files. If it doesn't have the AutoSite folder structure, we'll make one there.</value>
+  </data>
+  <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>316, 17</value>
+  </metadata>
+  <data name="XP.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <metadata name="Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>121, 17</value>
+  </metadata>
+  <data name="OpenContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="OpenContext.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="OpenInDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="OpenInDefault.Text" xml:space="preserve">
+    <value>Open with default program</value>
+  </data>
+  <data name="OpenFileLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="OpenFileLocation.Text" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="ContextSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 6</value>
+  </data>
+  <data name="CopyCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="CopyCon.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="PasteCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="PasteCon.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="AddFilesCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="AddFilesCon.Text" xml:space="preserve">
+    <value>Add files...</value>
+  </data>
+  <data name="ContextSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 6</value>
+  </data>
+  <data name="DeleteCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="DeleteCon.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="RenameCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="RenameCon.Text" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="ContextSep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 6</value>
+  </data>
+  <data name="NewFolderCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewFolderCon.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="NewSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 6</value>
+  </data>
+  <data name="NewHTMLCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewHTMLCon.Text" xml:space="preserve">
+    <value>HTML Page (.html)</value>
+  </data>
+  <data name="NewMDCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewMDCon.Text" xml:space="preserve">
+    <value>Markdown Page (.md)</value>
+  </data>
+  <data name="NewPHPCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewPHPCon.Text" xml:space="preserve">
+    <value>PHP Script (.php)</value>
+  </data>
+  <data name="NewSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 6</value>
+  </data>
+  <data name="NewCSSCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewCSSCon.Text" xml:space="preserve">
+    <value>CSS Stylesheet (.css)</value>
+  </data>
+  <data name="NewJSCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewJSCon.Text" xml:space="preserve">
+    <value>JS Script (.js)</value>
+  </data>
+  <data name="NewTXTCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="NewTXTCon.Text" xml:space="preserve">
+    <value>Plain Text (.txt)</value>
+  </data>
+  <data name="NewCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 22</value>
+  </data>
+  <data name="NewCon.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Context.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 220</value>
+  </data>
+  <data name="&gt;&gt;Context.Name" xml:space="preserve">
+    <value>Context</value>
+  </data>
+  <data name="&gt;&gt;Context.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>603, 17</value>
+  </metadata>
+  <data name="AddFilesDialog.Filter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="AddFilesDialog.Title" xml:space="preserve">
+    <value>Add Files to Folder</value>
+  </data>
+  <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>736, 17</value>
+  </metadata>
+  <metadata name="Watcher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>867, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>160</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>751, 474</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -1947,12 +1947,6 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;BrowseSite.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FolderBrowser.Name" xml:space="preserve">
-    <value>FolderBrowser</value>
-  </data>
-  <data name="&gt;&gt;FolderBrowser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;FileMenu.Name" xml:space="preserve">
     <value>FileMenu</value>
   </data>
@@ -1983,6 +1977,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;CloseSite.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;FileSep2.Name" xml:space="preserve">
+    <value>FileSep2</value>
+  </data>
+  <data name="&gt;&gt;FileSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Save.Name" xml:space="preserve">
     <value>Save</value>
   </data>
@@ -1994,6 +1994,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   </data>
   <data name="&gt;&gt;SaveAll.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileSep3.Name" xml:space="preserve">
+    <value>FileSep3</value>
+  </data>
+  <data name="&gt;&gt;FileSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;OpenRecent.Name" xml:space="preserve">
     <value>OpenRecent</value>
@@ -2031,11 +2037,23 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;Recent5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;RecentSep.Name" xml:space="preserve">
+    <value>RecentSep</value>
+  </data>
+  <data name="&gt;&gt;RecentSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ClearRecents.Name" xml:space="preserve">
     <value>ClearRecents</value>
   </data>
   <data name="&gt;&gt;ClearRecents.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileSep4.Name" xml:space="preserve">
+    <value>FileSep4</value>
+  </data>
+  <data name="&gt;&gt;FileSep4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ExitItem.Name" xml:space="preserve">
     <value>ExitItem</value>
@@ -2061,6 +2079,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;Redo.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;EditSep.Name" xml:space="preserve">
+    <value>EditSep</value>
+  </data>
+  <data name="&gt;&gt;EditSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Cut.Name" xml:space="preserve">
     <value>Cut</value>
   </data>
@@ -2079,11 +2103,23 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;Paste.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;EditSep2.Name" xml:space="preserve">
+    <value>EditSep2</value>
+  </data>
+  <data name="&gt;&gt;EditSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;SelectAll.Name" xml:space="preserve">
     <value>SelectAll</value>
   </data>
   <data name="&gt;&gt;SelectAll.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditSep3.Name" xml:space="preserve">
+    <value>EditSep3</value>
+  </data>
+  <data name="&gt;&gt;EditSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Find.Name" xml:space="preserve">
     <value>Find</value>
@@ -2102,6 +2138,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   </data>
   <data name="&gt;&gt;GoToMnu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditSep4.Name" xml:space="preserve">
+    <value>EditSep4</value>
+  </data>
+  <data name="&gt;&gt;EditSep4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;QuickInsertMnu.Name" xml:space="preserve">
     <value>QuickInsertMnu</value>
@@ -2145,11 +2187,23 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;WideCaret.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;FormatSep.Name" xml:space="preserve">
+    <value>FormatSep</value>
+  </data>
+  <data name="&gt;&gt;FormatSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;LivePreview.Name" xml:space="preserve">
     <value>LivePreview</value>
   </data>
   <data name="&gt;&gt;LivePreview.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FormatSep2.Name" xml:space="preserve">
+    <value>FormatSep2</value>
+  </data>
+  <data name="&gt;&gt;FormatSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;EditorFont.Name" xml:space="preserve">
     <value>EditorFont</value>
@@ -2187,6 +2241,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;PreviewPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MenuItem3.Name" xml:space="preserve">
+    <value>MenuItem3</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;MenuItem23.Name" xml:space="preserve">
     <value>MenuItem23</value>
   </data>
@@ -2204,6 +2264,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   </data>
   <data name="&gt;&gt;SystemIcons.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ViewSep.Name" xml:space="preserve">
+    <value>ViewSep</value>
+  </data>
+  <data name="&gt;&gt;ViewSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;IconThemeMenu.Name" xml:space="preserve">
     <value>IconThemeMenu</value>
@@ -2265,6 +2331,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;SanitaryBuild.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ToolsSep.Name" xml:space="preserve">
+    <value>ToolsSep</value>
+  </data>
+  <data name="&gt;&gt;ToolsSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;PreviewPage.Name" xml:space="preserve">
     <value>PreviewPage</value>
   </data>
@@ -2282,6 +2354,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   </data>
   <data name="&gt;&gt;OpenOutputMnu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Name" xml:space="preserve">
+    <value>MenuItem5</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BrowseSiteMnu.Name" xml:space="preserve">
     <value>BrowseSiteMnu</value>
@@ -2319,6 +2397,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;OpenSampleSite.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;HelpSep.Name" xml:space="preserve">
+    <value>HelpSep</value>
+  </data>
+  <data name="&gt;&gt;HelpSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Website.Name" xml:space="preserve">
     <value>Website</value>
   </data>
@@ -2336,6 +2420,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   </data>
   <data name="&gt;&gt;SendFeedback.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HelpSep2.Name" xml:space="preserve">
+    <value>HelpSep2</value>
+  </data>
+  <data name="&gt;&gt;HelpSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LanguageMenu.Name" xml:space="preserve">
     <value>LanguageMenu</value>
@@ -2367,6 +2457,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;WelshLang.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;HelpSep3.Name" xml:space="preserve">
+    <value>HelpSep3</value>
+  </data>
+  <data name="&gt;&gt;HelpSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;AboutItem.Name" xml:space="preserve">
     <value>AboutItem</value>
   </data>
@@ -2384,150 +2480,6 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   </data>
   <data name="&gt;&gt;InspectorBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;XP.Name" xml:space="preserve">
-    <value>XP</value>
-  </data>
-  <data name="&gt;&gt;XP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OpenContext.Name" xml:space="preserve">
-    <value>OpenContext</value>
-  </data>
-  <data name="&gt;&gt;OpenContext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OpenInDefault.Name" xml:space="preserve">
-    <value>OpenInDefault</value>
-  </data>
-  <data name="&gt;&gt;OpenInDefault.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OpenFileLocation.Name" xml:space="preserve">
-    <value>OpenFileLocation</value>
-  </data>
-  <data name="&gt;&gt;OpenFileLocation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CopyCon.Name" xml:space="preserve">
-    <value>CopyCon</value>
-  </data>
-  <data name="&gt;&gt;CopyCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PasteCon.Name" xml:space="preserve">
-    <value>PasteCon</value>
-  </data>
-  <data name="&gt;&gt;PasteCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddFilesCon.Name" xml:space="preserve">
-    <value>AddFilesCon</value>
-  </data>
-  <data name="&gt;&gt;AddFilesCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DeleteCon.Name" xml:space="preserve">
-    <value>DeleteCon</value>
-  </data>
-  <data name="&gt;&gt;DeleteCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenameCon.Name" xml:space="preserve">
-    <value>RenameCon</value>
-  </data>
-  <data name="&gt;&gt;RenameCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NewCon.Name" xml:space="preserve">
-    <value>NewCon</value>
-  </data>
-  <data name="&gt;&gt;NewCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NewFolderCon.Name" xml:space="preserve">
-    <value>NewFolderCon</value>
-  </data>
-  <data name="&gt;&gt;NewFolderCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NewHTMLCon.Name" xml:space="preserve">
-    <value>NewHTMLCon</value>
-  </data>
-  <data name="&gt;&gt;NewHTMLCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NewMDCon.Name" xml:space="preserve">
-    <value>NewMDCon</value>
-  </data>
-  <data name="&gt;&gt;NewMDCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NewPHPCon.Name" xml:space="preserve">
-    <value>NewPHPCon</value>
-  </data>
-  <data name="&gt;&gt;NewPHPCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NewCSSCon.Name" xml:space="preserve">
-    <value>NewCSSCon</value>
-  </data>
-  <data name="&gt;&gt;NewCSSCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NewJSCon.Name" xml:space="preserve">
-    <value>NewJSCon</value>
-  </data>
-  <data name="&gt;&gt;NewJSCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NewTXTCon.Name" xml:space="preserve">
-    <value>NewTXTCon</value>
-  </data>
-  <data name="&gt;&gt;NewTXTCon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddFilesDialog.Name" xml:space="preserve">
-    <value>AddFilesDialog</value>
-  </data>
-  <data name="&gt;&gt;AddFilesDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ApricotWorker.Name" xml:space="preserve">
-    <value>ApricotWorker</value>
-  </data>
-  <data name="&gt;&gt;ApricotWorker.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Watcher.Name" xml:space="preserve">
-    <value>Watcher</value>
-  </data>
-  <data name="&gt;&gt;Watcher.Type" xml:space="preserve">
-    <value>System.IO.FileSystemWatcher, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SelectFont.Name" xml:space="preserve">
-    <value>SelectFont</value>
-  </data>
-  <data name="&gt;&gt;SelectFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FontDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SaveLog.Name" xml:space="preserve">
-    <value>SaveLog</value>
-  </data>
-  <data name="&gt;&gt;SaveLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SaveLogDialog.Name" xml:space="preserve">
-    <value>SaveLogDialog</value>
-  </data>
-  <data name="&gt;&gt;SaveLogDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OpenPack.Name" xml:space="preserve">
-    <value>OpenPack</value>
-  </data>
-  <data name="&gt;&gt;OpenPack.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;NewSiteBtn.Name" xml:space="preserve">
     <value>NewSiteBtn</value>
@@ -2823,113 +2775,35 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;ToolStripButton1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EditSep.Name" xml:space="preserve">
-    <value>EditSep</value>
+  <data name="&gt;&gt;FolderBrowser.Name" xml:space="preserve">
+    <value>FolderBrowser</value>
   </data>
-  <data name="&gt;&gt;EditSep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;FolderBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EditSep2.Name" xml:space="preserve">
-    <value>EditSep2</value>
+  <data name="&gt;&gt;XP.Name" xml:space="preserve">
+    <value>XP</value>
   </data>
-  <data name="&gt;&gt;EditSep2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;XP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EditSep3.Name" xml:space="preserve">
-    <value>EditSep3</value>
+  <data name="&gt;&gt;OpenContext.Name" xml:space="preserve">
+    <value>OpenContext</value>
   </data>
-  <data name="&gt;&gt;EditSep3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;OpenContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EditSep4.Name" xml:space="preserve">
-    <value>EditSep4</value>
+  <data name="&gt;&gt;OpenInDefault.Name" xml:space="preserve">
+    <value>OpenInDefault</value>
   </data>
-  <data name="&gt;&gt;EditSep4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;OpenInDefault.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FormatSep.Name" xml:space="preserve">
-    <value>FormatSep</value>
+  <data name="&gt;&gt;OpenFileLocation.Name" xml:space="preserve">
+    <value>OpenFileLocation</value>
   </data>
-  <data name="&gt;&gt;FormatSep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FormatSep2.Name" xml:space="preserve">
-    <value>FormatSep2</value>
-  </data>
-  <data name="&gt;&gt;FormatSep2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuItem3.Name" xml:space="preserve">
-    <value>MenuItem3</value>
-  </data>
-  <data name="&gt;&gt;MenuItem3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ViewSep.Name" xml:space="preserve">
-    <value>ViewSep</value>
-  </data>
-  <data name="&gt;&gt;ViewSep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolsSep.Name" xml:space="preserve">
-    <value>ToolsSep</value>
-  </data>
-  <data name="&gt;&gt;ToolsSep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuItem5.Name" xml:space="preserve">
-    <value>MenuItem5</value>
-  </data>
-  <data name="&gt;&gt;MenuItem5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HelpSep.Name" xml:space="preserve">
-    <value>HelpSep</value>
-  </data>
-  <data name="&gt;&gt;HelpSep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HelpSep2.Name" xml:space="preserve">
-    <value>HelpSep2</value>
-  </data>
-  <data name="&gt;&gt;HelpSep2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HelpSep3.Name" xml:space="preserve">
-    <value>HelpSep3</value>
-  </data>
-  <data name="&gt;&gt;HelpSep3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileSep2.Name" xml:space="preserve">
-    <value>FileSep2</value>
-  </data>
-  <data name="&gt;&gt;FileSep2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileSep3.Name" xml:space="preserve">
-    <value>FileSep3</value>
-  </data>
-  <data name="&gt;&gt;FileSep3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileSep4.Name" xml:space="preserve">
-    <value>FileSep4</value>
-  </data>
-  <data name="&gt;&gt;FileSep4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ContextSep3.Name" xml:space="preserve">
-    <value>ContextSep3</value>
-  </data>
-  <data name="&gt;&gt;ContextSep3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ContextSep2.Name" xml:space="preserve">
-    <value>ContextSep2</value>
-  </data>
-  <data name="&gt;&gt;ContextSep2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;OpenFileLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ContextSep.Name" xml:space="preserve">
     <value>ContextSep</value>
@@ -2937,11 +2811,59 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;ContextSep.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RecentSep.Name" xml:space="preserve">
-    <value>RecentSep</value>
+  <data name="&gt;&gt;CopyCon.Name" xml:space="preserve">
+    <value>CopyCon</value>
   </data>
-  <data name="&gt;&gt;RecentSep.Type" xml:space="preserve">
+  <data name="&gt;&gt;CopyCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PasteCon.Name" xml:space="preserve">
+    <value>PasteCon</value>
+  </data>
+  <data name="&gt;&gt;PasteCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddFilesCon.Name" xml:space="preserve">
+    <value>AddFilesCon</value>
+  </data>
+  <data name="&gt;&gt;AddFilesCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextSep2.Name" xml:space="preserve">
+    <value>ContextSep2</value>
+  </data>
+  <data name="&gt;&gt;ContextSep2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteCon.Name" xml:space="preserve">
+    <value>DeleteCon</value>
+  </data>
+  <data name="&gt;&gt;DeleteCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenameCon.Name" xml:space="preserve">
+    <value>RenameCon</value>
+  </data>
+  <data name="&gt;&gt;RenameCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextSep3.Name" xml:space="preserve">
+    <value>ContextSep3</value>
+  </data>
+  <data name="&gt;&gt;ContextSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewCon.Name" xml:space="preserve">
+    <value>NewCon</value>
+  </data>
+  <data name="&gt;&gt;NewCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewFolderCon.Name" xml:space="preserve">
+    <value>NewFolderCon</value>
+  </data>
+  <data name="&gt;&gt;NewFolderCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;NewSep.Name" xml:space="preserve">
     <value>NewSep</value>
@@ -2949,11 +2871,89 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;NewSep.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;NewHTMLCon.Name" xml:space="preserve">
+    <value>NewHTMLCon</value>
+  </data>
+  <data name="&gt;&gt;NewHTMLCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewMDCon.Name" xml:space="preserve">
+    <value>NewMDCon</value>
+  </data>
+  <data name="&gt;&gt;NewMDCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewPHPCon.Name" xml:space="preserve">
+    <value>NewPHPCon</value>
+  </data>
+  <data name="&gt;&gt;NewPHPCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;NewSep2.Name" xml:space="preserve">
     <value>NewSep2</value>
   </data>
   <data name="&gt;&gt;NewSep2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewCSSCon.Name" xml:space="preserve">
+    <value>NewCSSCon</value>
+  </data>
+  <data name="&gt;&gt;NewCSSCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewJSCon.Name" xml:space="preserve">
+    <value>NewJSCon</value>
+  </data>
+  <data name="&gt;&gt;NewJSCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewTXTCon.Name" xml:space="preserve">
+    <value>NewTXTCon</value>
+  </data>
+  <data name="&gt;&gt;NewTXTCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddFilesDialog.Name" xml:space="preserve">
+    <value>AddFilesDialog</value>
+  </data>
+  <data name="&gt;&gt;AddFilesDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ApricotWorker.Name" xml:space="preserve">
+    <value>ApricotWorker</value>
+  </data>
+  <data name="&gt;&gt;ApricotWorker.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Watcher.Name" xml:space="preserve">
+    <value>Watcher</value>
+  </data>
+  <data name="&gt;&gt;Watcher.Type" xml:space="preserve">
+    <value>System.IO.FileSystemWatcher, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectFont.Name" xml:space="preserve">
+    <value>SelectFont</value>
+  </data>
+  <data name="&gt;&gt;SelectFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FontDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveLog.Name" xml:space="preserve">
+    <value>SaveLog</value>
+  </data>
+  <data name="&gt;&gt;SaveLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveLogDialog.Name" xml:space="preserve">
+    <value>SaveLogDialog</value>
+  </data>
+  <data name="&gt;&gt;SaveLogDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenPack.Name" xml:space="preserve">
+    <value>OpenPack</value>
+  </data>
+  <data name="&gt;&gt;OpenPack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

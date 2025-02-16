@@ -45,33 +45,41 @@ Partial Class Main
         Me.BrowseSitePreview = New System.Windows.Forms.ToolStripButton()
         Me.BrowseSite = New System.Windows.Forms.ToolStripButton()
         Me.CoreSplit = New System.Windows.Forms.SplitContainer()
-        Me.FolderBrowser = New System.Windows.Forms.FolderBrowserDialog()
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.MenuBar = New System.Windows.Forms.MenuStrip()
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewSite = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFolder = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseSite = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileSep2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Save = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAll = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileSep3 = New System.Windows.Forms.ToolStripSeparator()
         Me.OpenRecent = New System.Windows.Forms.ToolStripMenuItem()
         Me.Recent1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Recent2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Recent3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Recent4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Recent5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RecentSep = New System.Windows.Forms.ToolStripSeparator()
         Me.ClearRecents = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileSep4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.Undo = New System.Windows.Forms.ToolStripMenuItem()
         Me.Redo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditSep = New System.Windows.Forms.ToolStripSeparator()
         Me.Cut = New System.Windows.Forms.ToolStripMenuItem()
         Me.Copy = New System.Windows.Forms.ToolStripMenuItem()
         Me.Paste = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditSep2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAll = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditSep3 = New System.Windows.Forms.ToolStripSeparator()
         Me.Find = New System.Windows.Forms.ToolStripMenuItem()
         Me.Replace = New System.Windows.Forms.ToolStripMenuItem()
         Me.GoToMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditSep4 = New System.Windows.Forms.ToolStripSeparator()
         Me.QuickInsertMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertConditional = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,16 +87,20 @@ Partial Class Main
         Me.WordWrap = New System.Windows.Forms.ToolStripMenuItem()
         Me.VirtualSpace = New System.Windows.Forms.ToolStripMenuItem()
         Me.WideCaret = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FormatSep = New System.Windows.Forms.ToolStripSeparator()
         Me.LivePreview = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FormatSep2 = New System.Windows.Forms.ToolStripSeparator()
         Me.EditorFont = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExplorerPanel = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildPanel = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditorPanel = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreviewPanel = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItem3 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuItem23 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExplorerAttributes = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemIcons = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewSep = New System.Windows.Forms.ToolStripSeparator()
         Me.IconThemeMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.VS2017item = New System.Windows.Forms.ToolStripMenuItem()
         Me.XPitem = New System.Windows.Forms.ToolStripMenuItem()
@@ -99,52 +111,31 @@ Partial Class Main
         Me.BuildMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuildSite = New System.Windows.Forms.ToolStripMenuItem()
         Me.SanitaryBuild = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsSep = New System.Windows.Forms.ToolStripSeparator()
         Me.PreviewPage = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewFileOutput = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenOutputMnu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItem5 = New System.Windows.Forms.ToolStripSeparator()
         Me.BrowseSiteMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.BrowseSitePreviewMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpTopics = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuickstartMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenSampleSite = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpSep = New System.Windows.Forms.ToolStripSeparator()
         Me.Website = New System.Windows.Forms.ToolStripMenuItem()
         Me.GitHub = New System.Windows.Forms.ToolStripMenuItem()
         Me.SendFeedback = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpSep2 = New System.Windows.Forms.ToolStripSeparator()
         Me.LanguageMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnglishLang = New System.Windows.Forms.ToolStripMenuItem()
         Me.SpanishLang = New System.Windows.Forms.ToolStripMenuItem()
         Me.PolishLang = New System.Windows.Forms.ToolStripMenuItem()
         Me.WelshLang = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpSep3 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowVersion = New System.Windows.Forms.ToolStripMenuItem()
         Me.InspectorBtn = New System.Windows.Forms.ToolStripMenuItem()
-        Me.XP = New System.Windows.Forms.ImageList(Me.components)
-        Me.Context = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.OpenContext = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenInDefault = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenFileLocation = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PasteCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddFilesCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RenameCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewFolderCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewHTMLCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewMDCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewPHPCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewCSSCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewJSCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewTXTCon = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.ApricotWorker = New System.ComponentModel.BackgroundWorker()
-        Me.Watcher = New System.IO.FileSystemWatcher()
-        Me.SelectFont = New System.Windows.Forms.FontDialog()
-        Me.LogMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.SaveLog = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
-        Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
         Me.Strip = New System.Windows.Forms.ToolStrip()
         Me.NewSiteBtn = New System.Windows.Forms.ToolStripButton()
         Me.OpenSiteBtn = New System.Windows.Forms.ToolStripButton()
@@ -195,29 +186,38 @@ Partial Class Main
         Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
-        Me.EditSep = New System.Windows.Forms.ToolStripSeparator()
-        Me.EditSep2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.EditSep3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.EditSep4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.FormatSep = New System.Windows.Forms.ToolStripSeparator()
-        Me.FormatSep2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.MenuItem3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ViewSep = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolsSep = New System.Windows.Forms.ToolStripSeparator()
-        Me.MenuItem5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.HelpSep = New System.Windows.Forms.ToolStripSeparator()
-        Me.HelpSep2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.HelpSep3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.FileSep2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.FileSep3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.FileSep4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ContextSep3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ContextSep2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.FolderBrowser = New System.Windows.Forms.FolderBrowserDialog()
+        Me.XP = New System.Windows.Forms.ImageList(Me.components)
+        Me.Context = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.OpenContext = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenInDefault = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenFileLocation = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextSep = New System.Windows.Forms.ToolStripSeparator()
-        Me.RecentSep = New System.Windows.Forms.ToolStripSeparator()
+        Me.CopyCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddFilesCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextSep2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DeleteCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RenameCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextSep3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.NewCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewFolderCon = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewSep = New System.Windows.Forms.ToolStripSeparator()
+        Me.NewHTMLCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewMDCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewPHPCon = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewSep2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.NewCSSCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewJSCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewTXTCon = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddFilesDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.ApricotWorker = New System.ComponentModel.BackgroundWorker()
+        Me.Watcher = New System.IO.FileSystemWatcher()
+        Me.SelectFont = New System.Windows.Forms.FontDialog()
+        Me.LogMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SaveLog = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
+        Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
         Me.EdSplit.SuspendLayout()
@@ -231,14 +231,14 @@ Partial Class Main
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
-        Me.MenuBar.SuspendLayout()
-        Me.Context.SuspendLayout()
-        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.LogMenu.SuspendLayout()
-        Me.Strip.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
+        Me.MenuBar.SuspendLayout()
+        Me.Strip.SuspendLayout()
+        Me.Context.SuspendLayout()
+        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LogMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'EdSplit
@@ -419,9 +419,26 @@ Partial Class Main
         Me.CoreSplit.Panel2.Controls.Add(Me.EdSplit)
         resources.ApplyResources(Me.CoreSplit.Panel2, "CoreSplit.Panel2")
         '
-        'FolderBrowser
+        'ToolStripContainer1
         '
-        resources.ApplyResources(Me.FolderBrowser, "FolderBrowser")
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        resources.ApplyResources(Me.ToolStripContainer1.ContentPanel, "ToolStripContainer1.ContentPanel")
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.CoreSplit)
+        resources.ApplyResources(Me.ToolStripContainer1, "ToolStripContainer1")
+        '
+        'ToolStripContainer1.LeftToolStripPanel
+        '
+        resources.ApplyResources(Me.ToolStripContainer1.LeftToolStripPanel, "ToolStripContainer1.LeftToolStripPanel")
+        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.RightToolStripPanelVisible = False
+        '
+        'ToolStripContainer1.TopToolStripPanel
+        '
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MenuBar)
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.Strip)
         '
         'MenuBar
         '
@@ -462,6 +479,12 @@ Partial Class Main
         Me.CloseSite.MergeIndex = 3
         Me.CloseSite.Name = "CloseSite"
         '
+        'FileSep2
+        '
+        Me.FileSep2.MergeIndex = 4
+        Me.FileSep2.Name = "FileSep2"
+        resources.ApplyResources(Me.FileSep2, "FileSep2")
+        '
         'Save
         '
         Me.Save.MergeIndex = 5
@@ -473,6 +496,12 @@ Partial Class Main
         Me.SaveAll.MergeIndex = 6
         Me.SaveAll.Name = "SaveAll"
         resources.ApplyResources(Me.SaveAll, "SaveAll")
+        '
+        'FileSep3
+        '
+        Me.FileSep3.MergeIndex = 7
+        Me.FileSep3.Name = "FileSep3"
+        resources.ApplyResources(Me.FileSep3, "FileSep3")
         '
         'OpenRecent
         '
@@ -511,11 +540,23 @@ Partial Class Main
         Me.Recent5.Name = "Recent5"
         resources.ApplyResources(Me.Recent5, "Recent5")
         '
+        'RecentSep
+        '
+        Me.RecentSep.MergeIndex = 5
+        Me.RecentSep.Name = "RecentSep"
+        resources.ApplyResources(Me.RecentSep, "RecentSep")
+        '
         'ClearRecents
         '
         Me.ClearRecents.MergeIndex = 6
         Me.ClearRecents.Name = "ClearRecents"
         resources.ApplyResources(Me.ClearRecents, "ClearRecents")
+        '
+        'FileSep4
+        '
+        Me.FileSep4.MergeIndex = 9
+        Me.FileSep4.Name = "FileSep4"
+        resources.ApplyResources(Me.FileSep4, "FileSep4")
         '
         'ExitItem
         '
@@ -542,6 +583,12 @@ Partial Class Main
         Me.Redo.Name = "Redo"
         resources.ApplyResources(Me.Redo, "Redo")
         '
+        'EditSep
+        '
+        Me.EditSep.MergeIndex = 2
+        Me.EditSep.Name = "EditSep"
+        resources.ApplyResources(Me.EditSep, "EditSep")
+        '
         'Cut
         '
         Me.Cut.MergeIndex = 3
@@ -560,11 +607,23 @@ Partial Class Main
         Me.Paste.Name = "Paste"
         resources.ApplyResources(Me.Paste, "Paste")
         '
+        'EditSep2
+        '
+        Me.EditSep2.MergeIndex = 6
+        Me.EditSep2.Name = "EditSep2"
+        resources.ApplyResources(Me.EditSep2, "EditSep2")
+        '
         'SelectAll
         '
         Me.SelectAll.MergeIndex = 7
         Me.SelectAll.Name = "SelectAll"
         resources.ApplyResources(Me.SelectAll, "SelectAll")
+        '
+        'EditSep3
+        '
+        Me.EditSep3.MergeIndex = 8
+        Me.EditSep3.Name = "EditSep3"
+        resources.ApplyResources(Me.EditSep3, "EditSep3")
         '
         'Find
         '
@@ -583,6 +642,12 @@ Partial Class Main
         Me.GoToMnu.MergeIndex = 11
         Me.GoToMnu.Name = "GoToMnu"
         resources.ApplyResources(Me.GoToMnu, "GoToMnu")
+        '
+        'EditSep4
+        '
+        Me.EditSep4.MergeIndex = 12
+        Me.EditSep4.Name = "EditSep4"
+        resources.ApplyResources(Me.EditSep4, "EditSep4")
         '
         'QuickInsertMnu
         '
@@ -629,11 +694,23 @@ Partial Class Main
         Me.WideCaret.Name = "WideCaret"
         resources.ApplyResources(Me.WideCaret, "WideCaret")
         '
+        'FormatSep
+        '
+        Me.FormatSep.MergeIndex = 3
+        Me.FormatSep.Name = "FormatSep"
+        resources.ApplyResources(Me.FormatSep, "FormatSep")
+        '
         'LivePreview
         '
         Me.LivePreview.MergeIndex = 4
         Me.LivePreview.Name = "LivePreview"
         resources.ApplyResources(Me.LivePreview, "LivePreview")
+        '
+        'FormatSep2
+        '
+        Me.FormatSep2.MergeIndex = 5
+        Me.FormatSep2.Name = "FormatSep2"
+        resources.ApplyResources(Me.FormatSep2, "FormatSep2")
         '
         'EditorFont
         '
@@ -680,6 +757,12 @@ Partial Class Main
         Me.PreviewPanel.Name = "PreviewPanel"
         resources.ApplyResources(Me.PreviewPanel, "PreviewPanel")
         '
+        'MenuItem3
+        '
+        Me.MenuItem3.MergeIndex = 5
+        Me.MenuItem3.Name = "MenuItem3"
+        resources.ApplyResources(Me.MenuItem3, "MenuItem3")
+        '
         'MenuItem23
         '
         Me.MenuItem23.MergeIndex = 6
@@ -699,6 +782,12 @@ Partial Class Main
         Me.SystemIcons.MergeIndex = 8
         Me.SystemIcons.Name = "SystemIcons"
         resources.ApplyResources(Me.SystemIcons, "SystemIcons")
+        '
+        'ViewSep
+        '
+        Me.ViewSep.MergeIndex = 9
+        Me.ViewSep.Name = "ViewSep"
+        resources.ApplyResources(Me.ViewSep, "ViewSep")
         '
         'IconThemeMenu
         '
@@ -769,6 +858,12 @@ Partial Class Main
         Me.SanitaryBuild.Name = "SanitaryBuild"
         resources.ApplyResources(Me.SanitaryBuild, "SanitaryBuild")
         '
+        'ToolsSep
+        '
+        Me.ToolsSep.MergeIndex = 2
+        Me.ToolsSep.Name = "ToolsSep"
+        resources.ApplyResources(Me.ToolsSep, "ToolsSep")
+        '
         'PreviewPage
         '
         Me.PreviewPage.MergeIndex = 3
@@ -786,6 +881,12 @@ Partial Class Main
         Me.OpenOutputMnu.MergeIndex = 5
         Me.OpenOutputMnu.Name = "OpenOutputMnu"
         resources.ApplyResources(Me.OpenOutputMnu, "OpenOutputMnu")
+        '
+        'MenuItem5
+        '
+        Me.MenuItem5.MergeIndex = 6
+        Me.MenuItem5.Name = "MenuItem5"
+        resources.ApplyResources(Me.MenuItem5, "MenuItem5")
         '
         'BrowseSiteMnu
         '
@@ -824,6 +925,12 @@ Partial Class Main
         Me.OpenSampleSite.Name = "OpenSampleSite"
         resources.ApplyResources(Me.OpenSampleSite, "OpenSampleSite")
         '
+        'HelpSep
+        '
+        Me.HelpSep.MergeIndex = 3
+        Me.HelpSep.Name = "HelpSep"
+        resources.ApplyResources(Me.HelpSep, "HelpSep")
+        '
         'Website
         '
         Me.Website.MergeIndex = 4
@@ -841,6 +948,12 @@ Partial Class Main
         Me.SendFeedback.MergeIndex = 6
         Me.SendFeedback.Name = "SendFeedback"
         resources.ApplyResources(Me.SendFeedback, "SendFeedback")
+        '
+        'HelpSep2
+        '
+        Me.HelpSep2.MergeIndex = 7
+        Me.HelpSep2.Name = "HelpSep2"
+        resources.ApplyResources(Me.HelpSep2, "HelpSep2")
         '
         'LanguageMenu
         '
@@ -877,6 +990,12 @@ Partial Class Main
         resources.ApplyResources(Me.WelshLang, "WelshLang")
         Me.WelshLang.Tag = "cy-GB"
         '
+        'HelpSep3
+        '
+        Me.HelpSep3.MergeIndex = 9
+        Me.HelpSep3.Name = "HelpSep3"
+        resources.ApplyResources(Me.HelpSep3, "HelpSep3")
+        '
         'AboutItem
         '
         Me.AboutItem.MergeIndex = 10
@@ -894,151 +1013,6 @@ Partial Class Main
         Me.InspectorBtn.MergeIndex = 12
         Me.InspectorBtn.Name = "InspectorBtn"
         resources.ApplyResources(Me.InspectorBtn, "InspectorBtn")
-        '
-        'XP
-        '
-        Me.XP.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        resources.ApplyResources(Me.XP, "XP")
-        Me.XP.TransparentColor = System.Drawing.Color.Transparent
-        '
-        'Context
-        '
-        Me.Context.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenContext, Me.OpenInDefault, Me.OpenFileLocation, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.RenameCon, Me.ContextSep3, Me.NewCon})
-        Me.Context.Name = "Context"
-        resources.ApplyResources(Me.Context, "Context")
-        '
-        'OpenContext
-        '
-        Me.OpenContext.MergeIndex = 0
-        Me.OpenContext.Name = "OpenContext"
-        resources.ApplyResources(Me.OpenContext, "OpenContext")
-        '
-        'OpenInDefault
-        '
-        Me.OpenInDefault.MergeIndex = 1
-        Me.OpenInDefault.Name = "OpenInDefault"
-        resources.ApplyResources(Me.OpenInDefault, "OpenInDefault")
-        '
-        'OpenFileLocation
-        '
-        Me.OpenFileLocation.MergeIndex = 2
-        Me.OpenFileLocation.Name = "OpenFileLocation"
-        resources.ApplyResources(Me.OpenFileLocation, "OpenFileLocation")
-        '
-        'CopyCon
-        '
-        Me.CopyCon.MergeIndex = 4
-        Me.CopyCon.Name = "CopyCon"
-        resources.ApplyResources(Me.CopyCon, "CopyCon")
-        '
-        'PasteCon
-        '
-        Me.PasteCon.MergeIndex = 5
-        Me.PasteCon.Name = "PasteCon"
-        resources.ApplyResources(Me.PasteCon, "PasteCon")
-        '
-        'AddFilesCon
-        '
-        Me.AddFilesCon.MergeIndex = 6
-        Me.AddFilesCon.Name = "AddFilesCon"
-        resources.ApplyResources(Me.AddFilesCon, "AddFilesCon")
-        '
-        'DeleteCon
-        '
-        Me.DeleteCon.MergeIndex = 8
-        Me.DeleteCon.Name = "DeleteCon"
-        resources.ApplyResources(Me.DeleteCon, "DeleteCon")
-        '
-        'RenameCon
-        '
-        Me.RenameCon.MergeIndex = 9
-        Me.RenameCon.Name = "RenameCon"
-        resources.ApplyResources(Me.RenameCon, "RenameCon")
-        '
-        'NewCon
-        '
-        Me.NewCon.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.NewSep2, Me.NewCSSCon, Me.NewJSCon, Me.NewTXTCon})
-        Me.NewCon.MergeIndex = 11
-        Me.NewCon.Name = "NewCon"
-        resources.ApplyResources(Me.NewCon, "NewCon")
-        '
-        'NewFolderCon
-        '
-        Me.NewFolderCon.MergeIndex = 0
-        Me.NewFolderCon.Name = "NewFolderCon"
-        resources.ApplyResources(Me.NewFolderCon, "NewFolderCon")
-        '
-        'NewHTMLCon
-        '
-        Me.NewHTMLCon.MergeIndex = 2
-        Me.NewHTMLCon.Name = "NewHTMLCon"
-        resources.ApplyResources(Me.NewHTMLCon, "NewHTMLCon")
-        '
-        'NewMDCon
-        '
-        Me.NewMDCon.MergeIndex = 3
-        Me.NewMDCon.Name = "NewMDCon"
-        resources.ApplyResources(Me.NewMDCon, "NewMDCon")
-        '
-        'NewPHPCon
-        '
-        Me.NewPHPCon.MergeIndex = 4
-        Me.NewPHPCon.Name = "NewPHPCon"
-        resources.ApplyResources(Me.NewPHPCon, "NewPHPCon")
-        '
-        'NewCSSCon
-        '
-        Me.NewCSSCon.MergeIndex = 6
-        Me.NewCSSCon.Name = "NewCSSCon"
-        resources.ApplyResources(Me.NewCSSCon, "NewCSSCon")
-        '
-        'NewJSCon
-        '
-        Me.NewJSCon.MergeIndex = 7
-        Me.NewJSCon.Name = "NewJSCon"
-        resources.ApplyResources(Me.NewJSCon, "NewJSCon")
-        '
-        'NewTXTCon
-        '
-        Me.NewTXTCon.MergeIndex = 8
-        Me.NewTXTCon.Name = "NewTXTCon"
-        resources.ApplyResources(Me.NewTXTCon, "NewTXTCon")
-        '
-        'AddFilesDialog
-        '
-        resources.ApplyResources(Me.AddFilesDialog, "AddFilesDialog")
-        Me.AddFilesDialog.Multiselect = True
-        '
-        'ApricotWorker
-        '
-        Me.ApricotWorker.WorkerReportsProgress = True
-        '
-        'Watcher
-        '
-        Me.Watcher.EnableRaisingEvents = True
-        Me.Watcher.IncludeSubdirectories = True
-        Me.Watcher.SynchronizingObject = Me
-        '
-        'LogMenu
-        '
-        Me.LogMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveLog})
-        Me.LogMenu.Name = "LogMenu"
-        resources.ApplyResources(Me.LogMenu, "LogMenu")
-        '
-        'SaveLog
-        '
-        Me.SaveLog.MergeIndex = 0
-        Me.SaveLog.Name = "SaveLog"
-        resources.ApplyResources(Me.SaveLog, "SaveLog")
-        '
-        'SaveLogDialog
-        '
-        Me.SaveLogDialog.DefaultExt = "rtf"
-        resources.ApplyResources(Me.SaveLogDialog, "SaveLogDialog")
-        '
-        'OpenPack
-        '
-        resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
         'Strip
         '
@@ -1369,134 +1343,39 @@ Partial Class Main
         resources.ApplyResources(Me.ToolStripButton1, "ToolStripButton1")
         Me.ToolStripButton1.Name = "ToolStripButton1"
         '
-        'ToolStripContainer1
+        'FolderBrowser
         '
+        resources.ApplyResources(Me.FolderBrowser, "FolderBrowser")
         '
-        'ToolStripContainer1.ContentPanel
+        'XP
         '
-        resources.ApplyResources(Me.ToolStripContainer1.ContentPanel, "ToolStripContainer1.ContentPanel")
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.CoreSplit)
-        resources.ApplyResources(Me.ToolStripContainer1, "ToolStripContainer1")
+        Me.XP.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
+        resources.ApplyResources(Me.XP, "XP")
+        Me.XP.TransparentColor = System.Drawing.Color.Transparent
         '
-        'ToolStripContainer1.LeftToolStripPanel
+        'Context
         '
-        resources.ApplyResources(Me.ToolStripContainer1.LeftToolStripPanel, "ToolStripContainer1.LeftToolStripPanel")
-        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.RightToolStripPanelVisible = False
+        Me.Context.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenContext, Me.OpenInDefault, Me.OpenFileLocation, Me.ContextSep, Me.CopyCon, Me.PasteCon, Me.AddFilesCon, Me.ContextSep2, Me.DeleteCon, Me.RenameCon, Me.ContextSep3, Me.NewCon})
+        Me.Context.Name = "Context"
+        resources.ApplyResources(Me.Context, "Context")
         '
-        'ToolStripContainer1.TopToolStripPanel
+        'OpenContext
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MenuBar)
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.Strip)
+        Me.OpenContext.MergeIndex = 0
+        Me.OpenContext.Name = "OpenContext"
+        resources.ApplyResources(Me.OpenContext, "OpenContext")
         '
-        'EditSep
+        'OpenInDefault
         '
-        Me.EditSep.MergeIndex = 2
-        Me.EditSep.Name = "EditSep"
-        resources.ApplyResources(Me.EditSep, "EditSep")
+        Me.OpenInDefault.MergeIndex = 1
+        Me.OpenInDefault.Name = "OpenInDefault"
+        resources.ApplyResources(Me.OpenInDefault, "OpenInDefault")
         '
-        'EditSep2
+        'OpenFileLocation
         '
-        Me.EditSep2.MergeIndex = 6
-        Me.EditSep2.Name = "EditSep2"
-        resources.ApplyResources(Me.EditSep2, "EditSep2")
-        '
-        'EditSep3
-        '
-        Me.EditSep3.MergeIndex = 8
-        Me.EditSep3.Name = "EditSep3"
-        resources.ApplyResources(Me.EditSep3, "EditSep3")
-        '
-        'EditSep4
-        '
-        Me.EditSep4.MergeIndex = 12
-        Me.EditSep4.Name = "EditSep4"
-        resources.ApplyResources(Me.EditSep4, "EditSep4")
-        '
-        'FormatSep
-        '
-        Me.FormatSep.MergeIndex = 3
-        Me.FormatSep.Name = "FormatSep"
-        resources.ApplyResources(Me.FormatSep, "FormatSep")
-        '
-        'FormatSep2
-        '
-        Me.FormatSep2.MergeIndex = 5
-        Me.FormatSep2.Name = "FormatSep2"
-        resources.ApplyResources(Me.FormatSep2, "FormatSep2")
-        '
-        'MenuItem3
-        '
-        Me.MenuItem3.MergeIndex = 5
-        Me.MenuItem3.Name = "MenuItem3"
-        resources.ApplyResources(Me.MenuItem3, "MenuItem3")
-        '
-        'ViewSep
-        '
-        Me.ViewSep.MergeIndex = 9
-        Me.ViewSep.Name = "ViewSep"
-        resources.ApplyResources(Me.ViewSep, "ViewSep")
-        '
-        'ToolsSep
-        '
-        Me.ToolsSep.MergeIndex = 2
-        Me.ToolsSep.Name = "ToolsSep"
-        resources.ApplyResources(Me.ToolsSep, "ToolsSep")
-        '
-        'MenuItem5
-        '
-        Me.MenuItem5.MergeIndex = 6
-        Me.MenuItem5.Name = "MenuItem5"
-        resources.ApplyResources(Me.MenuItem5, "MenuItem5")
-        '
-        'HelpSep
-        '
-        Me.HelpSep.MergeIndex = 3
-        Me.HelpSep.Name = "HelpSep"
-        resources.ApplyResources(Me.HelpSep, "HelpSep")
-        '
-        'HelpSep2
-        '
-        Me.HelpSep2.MergeIndex = 7
-        Me.HelpSep2.Name = "HelpSep2"
-        resources.ApplyResources(Me.HelpSep2, "HelpSep2")
-        '
-        'HelpSep3
-        '
-        Me.HelpSep3.MergeIndex = 9
-        Me.HelpSep3.Name = "HelpSep3"
-        resources.ApplyResources(Me.HelpSep3, "HelpSep3")
-        '
-        'FileSep2
-        '
-        Me.FileSep2.MergeIndex = 4
-        Me.FileSep2.Name = "FileSep2"
-        resources.ApplyResources(Me.FileSep2, "FileSep2")
-        '
-        'FileSep3
-        '
-        Me.FileSep3.MergeIndex = 7
-        Me.FileSep3.Name = "FileSep3"
-        resources.ApplyResources(Me.FileSep3, "FileSep3")
-        '
-        'FileSep4
-        '
-        Me.FileSep4.MergeIndex = 9
-        Me.FileSep4.Name = "FileSep4"
-        resources.ApplyResources(Me.FileSep4, "FileSep4")
-        '
-        'ContextSep3
-        '
-        Me.ContextSep3.MergeIndex = 10
-        Me.ContextSep3.Name = "ContextSep3"
-        resources.ApplyResources(Me.ContextSep3, "ContextSep3")
-        '
-        'ContextSep2
-        '
-        Me.ContextSep2.MergeIndex = 7
-        Me.ContextSep2.Name = "ContextSep2"
-        resources.ApplyResources(Me.ContextSep2, "ContextSep2")
+        Me.OpenFileLocation.MergeIndex = 2
+        Me.OpenFileLocation.Name = "OpenFileLocation"
+        resources.ApplyResources(Me.OpenFileLocation, "OpenFileLocation")
         '
         'ContextSep
         '
@@ -1504,11 +1383,60 @@ Partial Class Main
         Me.ContextSep.Name = "ContextSep"
         resources.ApplyResources(Me.ContextSep, "ContextSep")
         '
-        'RecentSep
+        'CopyCon
         '
-        Me.RecentSep.MergeIndex = 5
-        Me.RecentSep.Name = "RecentSep"
-        resources.ApplyResources(Me.RecentSep, "RecentSep")
+        Me.CopyCon.MergeIndex = 4
+        Me.CopyCon.Name = "CopyCon"
+        resources.ApplyResources(Me.CopyCon, "CopyCon")
+        '
+        'PasteCon
+        '
+        Me.PasteCon.MergeIndex = 5
+        Me.PasteCon.Name = "PasteCon"
+        resources.ApplyResources(Me.PasteCon, "PasteCon")
+        '
+        'AddFilesCon
+        '
+        Me.AddFilesCon.MergeIndex = 6
+        Me.AddFilesCon.Name = "AddFilesCon"
+        resources.ApplyResources(Me.AddFilesCon, "AddFilesCon")
+        '
+        'ContextSep2
+        '
+        Me.ContextSep2.MergeIndex = 7
+        Me.ContextSep2.Name = "ContextSep2"
+        resources.ApplyResources(Me.ContextSep2, "ContextSep2")
+        '
+        'DeleteCon
+        '
+        Me.DeleteCon.MergeIndex = 8
+        Me.DeleteCon.Name = "DeleteCon"
+        resources.ApplyResources(Me.DeleteCon, "DeleteCon")
+        '
+        'RenameCon
+        '
+        Me.RenameCon.MergeIndex = 9
+        Me.RenameCon.Name = "RenameCon"
+        resources.ApplyResources(Me.RenameCon, "RenameCon")
+        '
+        'ContextSep3
+        '
+        Me.ContextSep3.MergeIndex = 10
+        Me.ContextSep3.Name = "ContextSep3"
+        resources.ApplyResources(Me.ContextSep3, "ContextSep3")
+        '
+        'NewCon
+        '
+        Me.NewCon.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewFolderCon, Me.NewSep, Me.NewHTMLCon, Me.NewMDCon, Me.NewPHPCon, Me.NewSep2, Me.NewCSSCon, Me.NewJSCon, Me.NewTXTCon})
+        Me.NewCon.MergeIndex = 11
+        Me.NewCon.Name = "NewCon"
+        resources.ApplyResources(Me.NewCon, "NewCon")
+        '
+        'NewFolderCon
+        '
+        Me.NewFolderCon.MergeIndex = 0
+        Me.NewFolderCon.Name = "NewFolderCon"
+        resources.ApplyResources(Me.NewFolderCon, "NewFolderCon")
         '
         'NewSep
         '
@@ -1516,11 +1444,83 @@ Partial Class Main
         Me.NewSep.Name = "NewSep"
         resources.ApplyResources(Me.NewSep, "NewSep")
         '
+        'NewHTMLCon
+        '
+        Me.NewHTMLCon.MergeIndex = 2
+        Me.NewHTMLCon.Name = "NewHTMLCon"
+        resources.ApplyResources(Me.NewHTMLCon, "NewHTMLCon")
+        '
+        'NewMDCon
+        '
+        Me.NewMDCon.MergeIndex = 3
+        Me.NewMDCon.Name = "NewMDCon"
+        resources.ApplyResources(Me.NewMDCon, "NewMDCon")
+        '
+        'NewPHPCon
+        '
+        Me.NewPHPCon.MergeIndex = 4
+        Me.NewPHPCon.Name = "NewPHPCon"
+        resources.ApplyResources(Me.NewPHPCon, "NewPHPCon")
+        '
         'NewSep2
         '
         Me.NewSep2.MergeIndex = 5
         Me.NewSep2.Name = "NewSep2"
         resources.ApplyResources(Me.NewSep2, "NewSep2")
+        '
+        'NewCSSCon
+        '
+        Me.NewCSSCon.MergeIndex = 6
+        Me.NewCSSCon.Name = "NewCSSCon"
+        resources.ApplyResources(Me.NewCSSCon, "NewCSSCon")
+        '
+        'NewJSCon
+        '
+        Me.NewJSCon.MergeIndex = 7
+        Me.NewJSCon.Name = "NewJSCon"
+        resources.ApplyResources(Me.NewJSCon, "NewJSCon")
+        '
+        'NewTXTCon
+        '
+        Me.NewTXTCon.MergeIndex = 8
+        Me.NewTXTCon.Name = "NewTXTCon"
+        resources.ApplyResources(Me.NewTXTCon, "NewTXTCon")
+        '
+        'AddFilesDialog
+        '
+        resources.ApplyResources(Me.AddFilesDialog, "AddFilesDialog")
+        Me.AddFilesDialog.Multiselect = True
+        '
+        'ApricotWorker
+        '
+        Me.ApricotWorker.WorkerReportsProgress = True
+        '
+        'Watcher
+        '
+        Me.Watcher.EnableRaisingEvents = True
+        Me.Watcher.IncludeSubdirectories = True
+        Me.Watcher.SynchronizingObject = Me
+        '
+        'LogMenu
+        '
+        Me.LogMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveLog})
+        Me.LogMenu.Name = "LogMenu"
+        resources.ApplyResources(Me.LogMenu, "LogMenu")
+        '
+        'SaveLog
+        '
+        Me.SaveLog.MergeIndex = 0
+        Me.SaveLog.Name = "SaveLog"
+        resources.ApplyResources(Me.SaveLog, "SaveLog")
+        '
+        'SaveLogDialog
+        '
+        Me.SaveLogDialog.DefaultExt = "rtf"
+        resources.ApplyResources(Me.SaveLogDialog, "SaveLogDialog")
+        '
+        'OpenPack
+        '
+        resources.ApplyResources(Me.OpenPack, "OpenPack")
         '
         'Main
         '
@@ -1545,18 +1545,18 @@ Partial Class Main
         Me.CoreSplit.Panel1.ResumeLayout(False)
         Me.CoreSplit.Panel2.ResumeLayout(False)
         Me.CoreSplit.ResumeLayout(False)
-        Me.MenuBar.ResumeLayout(False)
-        Me.MenuBar.PerformLayout()
-        Me.Context.ResumeLayout(False)
-        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.LogMenu.ResumeLayout(False)
-        Me.Strip.ResumeLayout(False)
-        Me.Strip.PerformLayout()
         Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
         Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
         Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
         Me.ToolStripContainer1.ResumeLayout(False)
         Me.ToolStripContainer1.PerformLayout()
+        Me.MenuBar.ResumeLayout(False)
+        Me.MenuBar.PerformLayout()
+        Me.Strip.ResumeLayout(False)
+        Me.Strip.PerformLayout()
+        Me.Context.ResumeLayout(False)
+        CType(Me.Watcher, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LogMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

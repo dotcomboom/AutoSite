@@ -120,12 +120,6 @@
     <Compile Include="Inspector.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewSite.Designer.vb">
-      <DependentUpon>NewSite.vb</DependentUpon>
-    </Compile>
-    <Compile Include="NewSite.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Quickstart.Designer.vb">
       <DependentUpon>Quickstart.vb</DependentUpon>
     </Compile>
@@ -171,12 +165,15 @@
   <ItemGroup>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="About.es.resx">
       <DependentUpon>About.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="About.pl.resx">
       <DependentUpon>About.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="About.cy.resx">
       <DependentUpon>About.vb</DependentUpon>
@@ -198,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inspector.resx">
       <DependentUpon>Inspector.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewSite.resx">
-      <DependentUpon>NewSite.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Quickstart.resx">
       <DependentUpon>Quickstart.vb</DependentUpon>

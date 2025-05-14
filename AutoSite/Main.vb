@@ -29,6 +29,9 @@ Public Class Main
 
     ' https://stackoverflow.com/a/8182507
     Sub walkTree(ByVal directory As IO.DirectoryInfo, ByVal pattern As String, ByVal parentNode As TreeNode, ByVal key As String, ByVal incRoot As Boolean)
+        If Not directory.Exists Then
+            Return
+        End If
         Dim dirnode = parentNode
         If incRoot Then
             dirnode = parentNode.Nodes.Add(directory.Name)
@@ -763,7 +766,7 @@ Public Class Main
         loadIconTheme()
     End Sub
 
-    Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
+    Private Sub SiteTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.BeforeLabelEdit
         If e.Node.Tag = "" Then
             e.CancelEdit = True
         End If
@@ -775,7 +778,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs)
+    Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.AfterLabelEdit
         Try
             Dim oldpath = e.Node.Tag
             Dim newpath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(e.Node.Tag), e.Label)

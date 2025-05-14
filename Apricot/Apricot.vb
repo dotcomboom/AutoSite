@@ -185,7 +185,26 @@ Public Module Apricot
         Dim line As String
         Do
             line = reader.ReadLine
-            Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("^<!-- attrib (.*): (.*) -->")
+            ' Quick rundown of the syntax:
+            ' As of current builds whitespace is handled VERY flexibly. So these are valid, but semantically equivalent:
+            ' <!-- attrib bagel: cream cheese -->
+            ' <!--attrib bagel cream cheese -->
+            ' <!--attrib bagel: cream cheese  -->
+            ' <!-- attrib bagel: cream cheese -->
+            ' <!--attrib bagel: cream cheese -->
+            ' <!--   attrib     bagel  :  cream cheese      -->
+            ' This purposefully doesn't match: <!-- attribbagel: cream cheese -->
+            ' Group 1 (value): "bagel"
+            ' Group 2 (key): "cream cheese"
+            ' Implementation note: Attributes are read anywhere in the file, i.e., don't stop after a line doesn't match.
+            ' (Possibly too generous, and Attribute declarations being at the top of the file might be enforced later.)
+            ' Flexible handling of whitespace in this way fixes automated programs that might not support the old, rigid style (as in this regex:)
+            ' <!-- attrib (.*): (.*) -->
+            ' If it was desired to support omitting the attrib keyword one can just change {1} to {0,1} but this might take
+            ' in any comment with a colon in it so I'm avoiding it for now. Rationale to enforce attributes in the top so body
+            ' comments don't get accidentally picked up.
+            ' BTW words are allowed in keys just like values, please don't do this though(?)
+            Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("<!--\s*(?:attrib\s){1}\s*(.*?)\s*:\s*(.*?)\s*-->")
             If Not line Is Nothing Then
                 Dim match As RegularExpressions.Match = regex.Match(line)
                 If match.Success Then

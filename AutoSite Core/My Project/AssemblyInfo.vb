@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("AutoSite Core")>
-<Assembly: AssemblyDescription("RC5")> 
+<Assembly: AssemblyDescription("Nightly")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("AutoSite Core")>
-<Assembly: AssemblyCopyright("Copyright © dotcomboom 2020")>
+<Assembly: AssemblyCopyright("Copyright © dotcomboom 2025")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -30,5 +30,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.1.0.0")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>

@@ -426,10 +426,6 @@ Public Module Apricot
                 keepFiles.Add(f.Replace(includes, out))
             Next
 
-            For Each f As String In keepFiles
-                doLog(f)
-            Next
-
             For Each f As String In My.Computer.FileSystem.GetFiles(out)
                 If Not keepFiles.Contains(f) Then
                     My.Computer.FileSystem.DeleteFile(f, FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.SendToRecycleBin)

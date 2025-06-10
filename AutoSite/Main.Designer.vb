@@ -88,13 +88,13 @@ Partial Class Main
 		Me.Sep4 = New System.Windows.Forms.ToolStripSeparator()
 		Me.PreviewBtn = New System.Windows.Forms.ToolStripSplitButton()
 		Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+		Me.ViewOutBtn = New System.Windows.Forms.ToolStripSplitButton()
+		Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
 		Me.Sep5 = New System.Windows.Forms.ToolStripSeparator()
 		Me.BuildBtn = New System.Windows.Forms.ToolStripSplitButton()
 		Me.CleanBuildBtn = New System.Windows.Forms.ToolStripMenuItem()
 		Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripMenuItem()
 		Me.LiveBuildToggle = New System.Windows.Forms.ToolStripButton()
-		Me.ViewOutBtn = New System.Windows.Forms.ToolStripSplitButton()
-		Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
 		Me.Sep6 = New System.Windows.Forms.ToolStripSeparator()
 		Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
 		Me.MenuBar = New System.Windows.Forms.MenuStrip()
@@ -220,6 +220,8 @@ Partial Class Main
 		Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
 		Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
 		Me.LiveBuildWorker = New System.ComponentModel.BackgroundWorker()
+		Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+		Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.EdSplit.Panel1.SuspendLayout()
 		Me.EdSplit.Panel2.SuspendLayout()
 		Me.EdSplit.SuspendLayout()
@@ -723,6 +725,19 @@ Partial Class Main
 		Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
 		resources.ApplyResources(Me.ToolStripMenuItem1, "ToolStripMenuItem1")
 		'
+		'ViewOutBtn
+		'
+		Me.ViewOutBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
+		Me.ViewOutBtn.ForeColor = System.Drawing.Color.Black
+		Me.ViewOutBtn.Image = Global.AutoSite.My.Resources.Resources.Web
+		resources.ApplyResources(Me.ViewOutBtn, "ViewOutBtn")
+		Me.ViewOutBtn.Name = "ViewOutBtn"
+		'
+		'ViewinDefaultBrowser
+		'
+		Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
+		resources.ApplyResources(Me.ViewinDefaultBrowser, "ViewinDefaultBrowser")
+		'
 		'Sep5
 		'
 		Me.Sep5.Name = "Sep5"
@@ -755,19 +770,6 @@ Partial Class Main
 		Me.LiveBuildToggle.Image = Global.AutoSite.My.Resources.Resources.Synchronize_grey_16x
 		resources.ApplyResources(Me.LiveBuildToggle, "LiveBuildToggle")
 		Me.LiveBuildToggle.Name = "LiveBuildToggle"
-		'
-		'ViewOutBtn
-		'
-		Me.ViewOutBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
-		Me.ViewOutBtn.ForeColor = System.Drawing.Color.Black
-		Me.ViewOutBtn.Image = Global.AutoSite.My.Resources.Resources.Web
-		resources.ApplyResources(Me.ViewOutBtn, "ViewOutBtn")
-		Me.ViewOutBtn.Name = "ViewOutBtn"
-		'
-		'ViewinDefaultBrowser
-		'
-		Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
-		resources.ApplyResources(Me.ViewinDefaultBrowser, "ViewinDefaultBrowser")
 		'
 		'Sep6
 		'
@@ -1513,7 +1515,7 @@ Partial Class Main
 		'
 		'LogMenu
 		'
-		Me.LogMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveLog})
+		Me.LogMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveLog, Me.ToolStripSeparator2, Me.ClearToolStripMenuItem})
 		Me.LogMenu.Name = "LogMenu"
 		resources.ApplyResources(Me.LogMenu, "LogMenu")
 		'
@@ -1534,6 +1536,16 @@ Partial Class Main
 		'
 		'LiveBuildWorker
 		'
+		'
+		'ToolStripSeparator2
+		'
+		Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+		resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+		'
+		'ClearToolStripMenuItem
+		'
+		Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
+		resources.ApplyResources(Me.ClearToolStripMenuItem, "ClearToolStripMenuItem")
 		'
 		'Main
 		'
@@ -1769,4 +1781,6 @@ Partial Class Main
     Friend WithEvents NewSep2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents LiveBuildToggle As ToolStripButton
 	Friend WithEvents LiveBuildWorker As System.ComponentModel.BackgroundWorker
+	Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+	Friend WithEvents ClearToolStripMenuItem As ToolStripMenuItem
 End Class

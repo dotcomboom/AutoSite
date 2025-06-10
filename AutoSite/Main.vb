@@ -1325,29 +1325,45 @@ Public Class Main
         If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
             If e.FullPath.Contains(SiteTree.Nodes(0).Text & "\includes") Then
                 My.Computer.FileSystem.CopyFile(e.FullPath, e.FullPath.Replace(SiteTree.Nodes(0).Text & "\includes", SiteTree.Nodes(0).Text & "\out"), True)
-                Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text & "\includes\", "") & " synced with output" & vbNewLine)
+                Log.AppendText("Synced " & e.FullPath.Replace(SiteTree.Nodes(0).Text & "\includes\", "") & " changes" & vbNewLine)
             ElseIf e.FullPath.Contains(SiteTree.Nodes(0).Text & "\pages") Then
                 Threading.Thread.Sleep(500)
 
                 Dim success = False
 
-                Dim s = ""
-                While (Not success)
-                    Try
-                        s = Apricot.Compile(My.Computer.FileSystem.ReadAllText(e.FullPath), e.FullPath.Replace(SiteTree.Nodes(0).Text & "\pages", ""), SiteTree.Nodes(0).Text, False, Now, Nothing).HTML()
-                        success = True
-                    Catch ex As Exception
-                    End Try
-                End While
+                Dim s = Apricot.Compile(My.Computer.FileSystem.ReadAllText(e.FullPath), e.FullPath.Replace(SiteTree.Nodes(0).Text & "\pages", ""), SiteTree.Nodes(0).Text, False, Now, Nothing).HTML()
 
-                If Not s = "" Then
-                    My.Computer.FileSystem.WriteAllText(
+
+                My.Computer.FileSystem.WriteAllText(
                     Apricot.ReplaceLast(
                     e.FullPath.Replace(SiteTree.Nodes(0).Text & "\pages",
                                        SiteTree.Nodes(0).Text & "\out"), ".md", ".html"), s, False)
-                    Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text & "\pages\", "") & " synced with output" & vbNewLine)
-                End If
+                Log.AppendText("Synced " & e.FullPath.Replace(SiteTree.Nodes(0).Text & "\pages\", "") & " changes" & vbNewLine)
 
+            End If
+        End If
+    End Sub
+
+    Private Sub HandleLiveBuildDelete(ByVal e As System.IO.FileSystemEventArgs)
+        If My.Computer.FileSystem.DirectoryExists(e.FullPath) Then
+            Exit Sub
+        End If
+        If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
+            Dim outPath = ""
+            If e.FullPath.Contains(SiteTree.Nodes(0).Text & "\includes") Then
+                outPath = e.FullPath.Replace(SiteTree.Nodes(0).Text & "\includes", SiteTree.Nodes(0).Text & "\out")
+            ElseIf e.FullPath.Contains(SiteTree.Nodes(0).Text & "\pages") Then
+                outPath = Apricot.ReplaceLast(e.FullPath, ".md", ".html").Replace(SiteTree.Nodes(0).Text & "\pages", SiteTree.Nodes(0).Text & "\out")
+            Else
+                Exit Sub
+            End If
+            If My.Computer.FileSystem.FileExists(outPath) Then
+                Try
+                    My.Computer.FileSystem.DeleteFile(outPath)
+                    Log.AppendText("Synced " & outPath.Replace(SiteTree.Nodes(0).Text & "\out\", "") & " removal" & vbNewLine)
+                Catch ex As Exception
+                    Log.AppendText("Unable to remove " & outPath.Replace(SiteTree.Nodes(0).Text & "\out\", "out/") & ": " & ex.Message & vbNewLine)
+                End Try
             End If
         End If
     End Sub
@@ -1478,7 +1494,7 @@ Public Class Main
 
         MarkDeletedAsUnsaved()
 
-        'HandleLiveBuildDelete(e)
+        HandleLiveBuildDelete(e)
     End Sub
 
     Private Sub Rename_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RenameCon.Click
@@ -2134,5 +2150,13 @@ Public Class Main
 
     Private Sub LiveBuildWorker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles LiveBuildWorker.DoWork
 
+    End Sub
+
+    Private Sub doBuild(sender As Object, e As EventArgs) Handles BuildSite.Click, BuildBtn.ButtonClick, Build.Click
+
+    End Sub
+
+    Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click
+        Log.Clear()
     End Sub
 End Class

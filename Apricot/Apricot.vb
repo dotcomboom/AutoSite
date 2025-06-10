@@ -382,10 +382,10 @@ Public Module Apricot
         'Next
     End Sub
 
-    Public Sub buildSite(ByVal folder As String, Optional ByVal worker As Object = Nothing)
+    Public Sub buildSite(ByVal folder As String, Optional ByVal worker As Object = Nothing, Optional ByVal removeStrays As Boolean = False)
         template_cache.Clear()
 
-        Dim input = Path.Combine(folder, "pages\")
+        Dim pages = Path.Combine(folder, "pages\")
         Dim templates = Path.Combine(folder, "templates\")
         Dim includes = Path.Combine(folder, "includes\")
         Dim out = Path.Combine(folder, "out\")
@@ -394,13 +394,13 @@ Public Module Apricot
         Dim startTime As Date = Now()
         doLog("Started " & My.Computer.Clock.LocalTime, worker, 0)
 
-        If Not My.Computer.FileSystem.DirectoryExists(input) Then
+        If Not My.Computer.FileSystem.DirectoryExists(pages) Then
             If My.Computer.FileSystem.DirectoryExists("in\") Then
                 doLog("Converting in\ to pages\", worker, 10)
                 My.Computer.FileSystem.RenameDirectory("in\", "pages")
             End If
             doLog("Creating pages\ folder", worker, 10)
-            My.Computer.FileSystem.CreateDirectory(input)
+            My.Computer.FileSystem.CreateDirectory(pages)
         End If
         If Not My.Computer.FileSystem.DirectoryExists(templates) Then
             doLog("Creating templates\ folder", worker, 10)
@@ -415,6 +415,29 @@ Public Module Apricot
             My.Computer.FileSystem.CreateDirectory(out)
         End If
 
+        If (removeStrays) Then
+            doLog("Removing stray output files if present")
+
+            Dim keepFiles As New System.Collections.Specialized.StringCollection
+            For Each f As String In My.Computer.FileSystem.GetFiles(pages)
+                keepFiles.Add(ReplaceLast(f.Replace(pages, out), ".md", ".html"))
+            Next
+            For Each f As String In My.Computer.FileSystem.GetFiles(includes)
+                keepFiles.Add(f.Replace(includes, out))
+            Next
+
+            For Each f As String In keepFiles
+                doLog(f)
+            Next
+
+            For Each f As String In My.Computer.FileSystem.GetFiles(out)
+                If Not keepFiles.Contains(f) Then
+                    My.Computer.FileSystem.DeleteFile(f, FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.SendToRecycleBin)
+                    doLog("- " & f)
+                End If
+            Next
+        End If
+
         doLog("Syncing includes", worker, 20)
 
         Dim s As New doSync(includes, out)
@@ -425,7 +448,7 @@ Public Module Apricot
         End If
 
         doLog("Processing input files", worker, 50)
-        walkInputs(My.Computer.FileSystem.GetDirectoryInfo(input), "*.*", folder, worker)
+        walkInputs(My.Computer.FileSystem.GetDirectoryInfo(pages), "*.*", folder, worker)
 
         Dim plugins = Path.Combine(folder, "plugins\")
         If My.Computer.FileSystem.DirectoryExists(plugins) Then

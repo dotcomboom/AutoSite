@@ -840,11 +840,17 @@ Public Class Main
 
     Private Const duringBuildWindowTitle = "# "
 
-    Public Sub doBuild() Handles BuildSite.Click, Build.Click, BuildBtn.ButtonClick
+    Public Sub Build_Click() Handles BuildSite.Click, Build.Click, BuildBtn.ButtonClick
+        doBuild()
+    End Sub
+
+    Public Sub doBuild(Optional doRemoveStrays = False)
         Me.Text = duringBuildWindowTitle & Me.Text
         Log.Clear()
         AttributeTree.Nodes.Clear()
         AttributeTree.BeginUpdate()
+
+        removeStrays = doRemoveStrays
         If Not ApricotWorker.IsBusy Then
             ApricotWorker.RunWorkerAsync()
         End If
@@ -1141,8 +1147,10 @@ Public Class Main
         End If
     End Sub
 
+    Shared removeStrays = False
+
     Private Sub Apricot_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ApricotWorker.DoWork
-        Apricot.buildSite(SiteTree.Nodes(0).Text, ApricotWorker)
+        Apricot.buildSite(SiteTree.Nodes(0).Text, ApricotWorker, removeStrays)
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles ApricotWorker.ProgressChanged
@@ -1174,6 +1182,9 @@ Public Class Main
             End If
             If s.Contains("WARN:") Then
                 Log.SelectionColor = Color.OrangeRed
+            End If
+            If s.Contains("Remov") Then
+                Log.SelectionColor = Color.DimGray
             End If
             If s.StartsWith("Apricot") Or s.StartsWith("Finished") Or s.StartsWith("Started") Then
                 Log.SelectionFont = New Font(Log.Font, FontStyle.Bold)
@@ -1554,14 +1565,15 @@ Public Class Main
     End Sub
 
     Public Sub doSanitaryBuild() Handles SanitaryBuild.Click, SanitaryBuildBtn.Click, CleanBuildBtn.Click
-        If MsgBox(My.Resources.Prompt_SanitaryBuild, MsgBoxStyle.Information + MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
-            Try
-                My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-            doBuild()
-        End If
+        'If MsgBox(My.Resources.Prompt_SanitaryBuild, MsgBoxStyle.Information + MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+        '    Try
+        '        My.Computer.FileSystem.DeleteDirectory(SiteTree.Nodes(0).Text & "\out", FileIO.UIOption.AllDialogs, FileIO.RecycleOption.SendToRecycleBin)
+        '    Catch ex As Exception
+        '        MsgBox(ex.Message)
+        '    End Try
+        '    doBuild()
+        'End If
+        doBuild(doRemoveStrays:=True)
     End Sub
 
     Sub updateRecents()
@@ -2146,14 +2158,6 @@ Public Class Main
         If ExplorerAttributes.Checked = False Then Exit Sub
 
         updateExplorerFileTitleHelper(SiteTree.Nodes(0), title, openFile)
-    End Sub
-
-    Private Sub LiveBuildWorker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles LiveBuildWorker.DoWork
-
-    End Sub
-
-    Private Sub doBuild(sender As Object, e As EventArgs) Handles BuildSite.Click, BuildBtn.ButtonClick, Build.Click
-
     End Sub
 
     Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click

@@ -145,9 +145,10 @@ Public Module Apricot
             Next
             If Not pass Then
                 If Not worker Is Nothing Then
-                    If MsgBox("The type of file " & filename & " is unknown. If this is an image or asset other than a Page, choose Cancel to skip processing it.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel, "Unknown Extension") = MsgBoxResult.Cancel Then
-                        Return False
-                    End If
+                    ' bypassing this
+                    'If MsgBox("The type of file " & filename & " is unknown. If this is an image or asset other than a Page, choose Cancel to skip processing it.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkCancel, "Unknown Extension") = MsgBoxResult.Cancel Then
+                    'Return False
+                    'End If
                 End If
                 doLog("WARN: The type " & extension & " is unknown. If this is an image or asset other than a page, place it in Includes. Further warnings will be suppressed.", worker, 40)
             End If

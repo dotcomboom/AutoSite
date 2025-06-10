@@ -477,9 +477,6 @@
     <None Include="Resources\application_tile_horizontal.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Synchronize_16x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Synchronize_grey_16x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

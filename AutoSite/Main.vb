@@ -837,7 +837,10 @@ Public Class Main
         Me.Close()
     End Sub
 
+    Private Const duringBuildWindowTitle = "# "
+
     Public Sub doBuild() Handles BuildSite.Click, Build.Click, BuildBtn.ButtonClick
+        Me.Text = duringBuildWindowTitle & Me.Text
         Log.Clear()
         AttributeTree.Nodes.Clear()
         AttributeTree.BeginUpdate()
@@ -1198,6 +1201,8 @@ Public Class Main
         End If
         afterBuildLaunch = ""
         afterBuildNavigatePreview = ""
+
+        Me.Text = Me.Text.Replace(duringBuildWindowTitle, "")
     End Sub
 
     Private Sub Form1_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
@@ -1405,6 +1410,31 @@ Public Class Main
             Catch ex As Exception
             End Try
         End If
+
+        If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
+            Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text, "") & vbNewLine)
+            BuildBtn.PerformButtonClick()
+        End If
+    End Sub
+
+    Private Sub Watcher_Changed(sender As Object, e As FileSystemEventArgs) Handles Watcher.Changed
+        If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
+            Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text, "") & vbNewLine)
+            BuildBtn.PerformButtonClick()
+        End If
+    End Sub
+
+    Private Sub Watcher_Renamed(ByVal sender As System.Object, ByVal e As System.IO.RenamedEventArgs) Handles Watcher.Renamed
+        foundNode = Nothing
+        FindNodeTag(SiteTree.Nodes(0), e.OldFullPath)
+        If Not foundNode Is Nothing Then
+            iterateUpdateNodePaths(foundNode, e.OldFullPath, e.FullPath)
+        End If
+
+        If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
+            Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text, "") & vbNewLine)
+            BuildBtn.PerformButtonClick()
+        End If
     End Sub
 
     Private Sub Watcher_Deleted(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Deleted
@@ -1415,14 +1445,6 @@ Public Class Main
         End If
 
         MarkDeletedAsUnsaved()
-    End Sub
-
-    Private Sub Watcher_Renamed(ByVal sender As System.Object, ByVal e As System.IO.RenamedEventArgs) Handles Watcher.Renamed
-        foundNode = Nothing
-        FindNodeTag(SiteTree.Nodes(0), e.OldFullPath)
-        If Not foundNode Is Nothing Then
-            iterateUpdateNodePaths(foundNode, e.OldFullPath, e.FullPath)
-        End If
     End Sub
 
     Private Sub Rename_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RenameCon.Click

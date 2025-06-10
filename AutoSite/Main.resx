@@ -1050,6 +1050,18 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
+  <data name="CleanBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="CleanBuildBtn.Text" xml:space="preserve">
+    <value>Clean and build...</value>
+  </data>
+  <data name="OpenOutputFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
+    <value>Open folder</value>
+  </data>
   <data name="BuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -1059,9 +1071,6 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="BuildBtn.Text" xml:space="preserve">
     <value>Build</value>
   </data>
-  <data name="BuildBtn.ToolTipText" xml:space="preserve">
-    <value>Build your site's files.</value>
-  </data>
   <data name="LiveBuildToggle.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -1069,7 +1078,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>23, 22</value>
   </data>
   <data name="LiveBuildToggle.Text" xml:space="preserve">
-    <value>Build on changed files</value>
+    <value>Build file changes</value>
   </data>
   <data name="Sep6.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -1283,18 +1292,6 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   </data>
   <data name="ToolStripMenuItem1.Text" xml:space="preserve">
     <value>Live Preview</value>
-  </data>
-  <data name="CleanBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="CleanBuildBtn.Text" xml:space="preserve">
-    <value>Clean and build...</value>
-  </data>
-  <data name="OpenOutputFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
-    <value>Open folder</value>
   </data>
   <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 22</value>
@@ -3108,6 +3105,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;OpenPack.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;LiveBuildWorker.Name" xml:space="preserve">
+    <value>LiveBuildWorker</value>
+  </data>
+  <data name="&gt;&gt;LiveBuildWorker.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
@@ -3150,4 +3153,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="OpenPack.Filter" xml:space="preserve">
     <value>AutoSite Zip package (*.zip)|*.zip</value>
   </data>
+  <metadata name="LiveBuildWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>340, 56</value>
+  </metadata>
 </root>

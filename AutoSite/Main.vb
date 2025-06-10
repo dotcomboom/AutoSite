@@ -163,10 +163,10 @@ Public Class Main
         includes.SelectedImageKey = "Include"
         includes.Tag = includePath
 
-        Dim output_site = root.Nodes.Add(My.Resources.Explorer_OutputFolder)
-        output_site.ImageKey = "Output"
-        output_site.SelectedImageKey = "Output"
-        output_site.Tag = outputPath
+        'Dim output_site = root.Nodes.Add(My.Resources.Explorer_OutputFolder)
+        'output_site.ImageKey = "Output"
+        'output_site.SelectedImageKey = "Output"
+        'output_site.Tag = outputPath
 
         'Dim settings = root.Nodes.Add("Locale")
         'settings.ImageKey = "Build"
@@ -181,7 +181,7 @@ Public Class Main
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(inPath), "*", pages, "Page", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(includePath), "*", includes, "Include", False)
-        walkTree(My.Computer.FileSystem.GetDirectoryInfo(outputPath), "*", output_site, "Include", False)
+        'walkTree(My.Computer.FileSystem.GetDirectoryInfo(outputPath), "*", output_site, "Include", False)
         SiteTree.EndUpdate()
         AttributeTree.EndUpdate()
 
@@ -1318,6 +1318,44 @@ Public Class Main
         End If
     End Sub
 
+    Private Sub HandleLiveBuildCreatedChanged(ByVal e As System.IO.FileSystemEventArgs)
+        If My.Computer.FileSystem.DirectoryExists(e.FullPath) Then
+            Exit Sub
+        End If
+        If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
+            If e.FullPath.Contains(SiteTree.Nodes(0).Text & "\includes") Then
+                My.Computer.FileSystem.CopyFile(e.FullPath, e.FullPath.Replace(SiteTree.Nodes(0).Text & "\includes", SiteTree.Nodes(0).Text & "\out"), True)
+                Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text & "\includes\", "") & " synced with output" & vbNewLine)
+            ElseIf e.FullPath.Contains(SiteTree.Nodes(0).Text & "\pages") Then
+                Threading.Thread.Sleep(500)
+
+                Dim success = False
+
+                Dim s = ""
+                While (Not success)
+                    Try
+                        s = Apricot.Compile(My.Computer.FileSystem.ReadAllText(e.FullPath), e.FullPath.Replace(SiteTree.Nodes(0).Text & "\pages", ""), SiteTree.Nodes(0).Text, False, Now, Nothing).HTML()
+                        success = True
+                    Catch ex As Exception
+                    End Try
+                End While
+
+                If Not s = "" Then
+                    My.Computer.FileSystem.WriteAllText(
+                    Apricot.ReplaceLast(
+                    e.FullPath.Replace(SiteTree.Nodes(0).Text & "\pages",
+                                       SiteTree.Nodes(0).Text & "\out"), ".md", ".html"), s, False)
+                    Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text & "\pages\", "") & " synced with output" & vbNewLine)
+                End If
+
+            End If
+        End If
+    End Sub
+
+    'Private Function HandleLiveBuildRename(ByVal e As System.IO.FileSystemEventArgs)
+    '    Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text, "") & " renamed in source folder but this will be reflected on next change or manual build" & vbNewLine)
+    'End Function
+
     Private Sub Watcher_Created(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Created
         Dim root = SiteTree.Nodes(0)
         Dim pages = root.Nodes(0)
@@ -1412,17 +1450,12 @@ Public Class Main
             End Try
         End If
 
-        If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
-            Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text, "") & vbNewLine)
-            BuildBtn.PerformButtonClick()
-        End If
+        ' this would be called twice in case of creation
+        'HandleLiveBuildCreatedChanged(e)
     End Sub
 
     Private Sub Watcher_Changed(sender As Object, e As FileSystemEventArgs) Handles Watcher.Changed
-        If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
-            Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text, "") & vbNewLine)
-            BuildBtn.PerformButtonClick()
-        End If
+        HandleLiveBuildCreatedChanged(e)
     End Sub
 
     Private Sub Watcher_Renamed(ByVal sender As System.Object, ByVal e As System.IO.RenamedEventArgs) Handles Watcher.Renamed
@@ -1432,10 +1465,8 @@ Public Class Main
             iterateUpdateNodePaths(foundNode, e.OldFullPath, e.FullPath)
         End If
 
-        If LiveBuildToggle.Checked And Not e.FullPath.Contains(SiteTree.Nodes(0).Text & "\out") Then
-            Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text, "") & vbNewLine)
-            BuildBtn.PerformButtonClick()
-        End If
+        'HandleLiveBuildRename(e)
+        HandleLiveBuildCreatedChanged(e)
     End Sub
 
     Private Sub Watcher_Deleted(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Deleted
@@ -1446,6 +1477,8 @@ Public Class Main
         End If
 
         MarkDeletedAsUnsaved()
+
+        'HandleLiveBuildDelete(e)
     End Sub
 
     Private Sub Rename_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RenameCon.Click
@@ -2099,4 +2132,7 @@ Public Class Main
         updateExplorerFileTitleHelper(SiteTree.Nodes(0), title, openFile)
     End Sub
 
+    Private Sub LiveBuildWorker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles LiveBuildWorker.DoWork
+
+    End Sub
 End Class

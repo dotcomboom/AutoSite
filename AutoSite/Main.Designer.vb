@@ -219,6 +219,7 @@ Partial Class Main
 		Me.SaveLog = New System.Windows.Forms.ToolStripMenuItem()
 		Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
 		Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
+		Me.LiveBuildWorker = New System.ComponentModel.BackgroundWorker()
 		Me.EdSplit.Panel1.SuspendLayout()
 		Me.EdSplit.Panel2.SuspendLayout()
 		Me.EdSplit.SuspendLayout()
@@ -1531,6 +1532,9 @@ Partial Class Main
 		'
 		resources.ApplyResources(Me.OpenPack, "OpenPack")
 		'
+		'LiveBuildWorker
+		'
+		'
 		'Main
 		'
 		resources.ApplyResources(Me, "$this")
@@ -1764,4 +1768,5 @@ Partial Class Main
     Friend WithEvents NewSep As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents NewSep2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents LiveBuildToggle As ToolStripButton
+	Friend WithEvents LiveBuildWorker As System.ComponentModel.BackgroundWorker
 End Class

@@ -148,7 +148,7 @@
     <value>True</value>
   </data>
   <data name="EditTabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 185</value>
+    <value>646, 185</value>
   </data>
   <data name="EditTabs.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -193,7 +193,7 @@
     <value>28, 34</value>
   </data>
   <data name="Preview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 234</value>
+    <value>646, 266</value>
   </data>
   <data name="Preview.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -226,7 +226,7 @@
     <value>1</value>
   </data>
   <data name="EdSplit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>454, 425</value>
+    <value>646, 457</value>
   </data>
   <data name="EdSplit.SplitterDistance" type="System.Int32, mscorlib">
     <value>185</value>
@@ -283,7 +283,7 @@
     <value>0</value>
   </data>
   <data name="SiteTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 135</value>
+    <value>292, 104</value>
   </data>
   <data name="SiteTree.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -349,7 +349,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="ApricotTabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 236</value>
+    <value>292, 299</value>
   </data>
   <data name="ApricotTabs.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -373,7 +373,7 @@
     <value>NoControl</value>
   </data>
   <data name="BuildProgress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 261</value>
+    <value>0, 324</value>
   </data>
   <data name="BuildProgress.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -442,10 +442,10 @@
     <value>1</value>
   </data>
   <data name="ExSplit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 425</value>
+    <value>292, 457</value>
   </data>
   <data name="ExSplit.SplitterDistance" type="System.Int32, mscorlib">
-    <value>135</value>
+    <value>104</value>
   </data>
   <data name="ExSplit.SplitterWidth" type="System.Int32, mscorlib">
     <value>6</value>
@@ -487,7 +487,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="LogPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 208</value>
+    <value>284, 271</value>
   </data>
   <data name="LogPage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -526,7 +526,7 @@
     <value>5, 5</value>
   </data>
   <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 198</value>
+    <value>274, 261</value>
   </data>
   <data name="Log.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -760,7 +760,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>1</value>
   </data>
   <data name="CoreSplit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 425</value>
+    <value>943, 457</value>
   </data>
   <data name="CoreSplit.SplitterDistance" type="System.Int32, mscorlib">
     <value>292</value>
@@ -799,7 +799,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>True</value>
   </data>
   <data name="ToolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 425</value>
+    <value>943, 457</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Name" xml:space="preserve">
     <value>ToolStripContainer1.ContentPanel</value>
@@ -847,7 +847,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>2</value>
   </data>
   <data name="ToolStripContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 474</value>
+    <value>943, 506</value>
   </data>
   <data name="ToolStripContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1038,6 +1038,15 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="PreviewBtn.Text" xml:space="preserve">
     <value>Preview</value>
   </data>
+  <data name="ViewOutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ViewOutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 22</value>
+  </data>
+  <data name="ViewOutBtn.Text" xml:space="preserve">
+    <value>View Output</value>
+  </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
@@ -1062,36 +1071,27 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="LiveBuildToggle.Text" xml:space="preserve">
     <value>Build on changed files</value>
   </data>
-  <data name="ViewOutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ViewOutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 22</value>
-  </data>
-  <data name="ViewOutBtn.Text" xml:space="preserve">
-    <value>View Output</value>
-  </data>
-  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Sep6.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
   <data name="ToolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVDhPxY3bL8JRAMf7z9zGho0xl+V+Gc0ycxl5aCHk
-        slCUH+a3xip++LESyjWXsNmYuZPKryfJW6/2Ree8nfXkwWc722ffnfM5sj9TPeBR2o78MfN2GINrj9At
-        36NHuIVB9MUqe93C5J4/NuJ6w7DzDer5a6gsl+ia9MUKVaIyHrDsP3wJ559YPCNn4TQKmy8K60kUnFvC
-        3PEHLIcf4L0RzB5EMLMfwdTeO+pNB1/xgNkThunnTLjDMG5JMGxKGN2QoF///TWEIUcIA2tB9K8GoV0J
-        oHv5FRrhFQq9F/HA+M+DROjEIDWW6r4dEhhzhejEol3yU2Mp7dokAb0jQCcWjf2ZGkuRykECOvGFTiyd
-        c/fUWPKbRRLQCk90Ymnjb6ix5CgXSUBtvaMTS9PUFTWWLIWVBNr5xJcUhnNqLOlVPAm0cBd0Yqkd8lFj
-        SSufJgGlMfEvFX2H1FiSSzgSyGm0CjWDXlT27iK30Y7shnlk1lmQUcMjpWxaKlZ7UNCxgbxWJ9IqZpBa
-        yiFZziFJbhbigX9GJvsGQbSkzyRdkVkAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPxY3bL8JRAMf7z1waGzbGXOZ+mzWrmcvIQxNF
+        YSGX+tH81lguP/xYiELkEjYbMzSXKL+eJG+9ti865+2sJw8+29k+++6cz5H9mXqjR7lwEoxb9iIY3HiE
+        YTWAPuEeZtEfr9W7Bas3GB/Zfsfw5js087dQ26+htfrjJWpRmQzYDwMJ4fILyxfkLJ3HsOCPwXEWA+eW
+        MHf6CfvxJ3hfFLNHUdgOo5j2fqBp6iiRDFg8EUz9nEl3BOO7Esw7EkZdEkxbv7+GMeQMw7gRwsB6CLq1
+        N/SuvqJHeIXC5EMyMPHzIBUGMUSNpb5/nwTGtsN0YtGtBKmxVGp3SMDkfKMTS8/iMzWWUrWTBAziC51Y
+        uucC1FiKWkUS0AlPdGLp4O+oseQrl0lA43igE0vL9A01llyFgwQ6+dSXFOZLaixZdTwJtHFXdGJpHPJT
+        Y5FXz5CAcjz1LzX9x9RY0is4EshXOYSGQR9q9QcoUC0ir3keOU12ZDfwyKiakco0HhR3uVDYvgl5jQ2Z
+        lRzSyzmklVuEZOCfkcm+ATrUpM2B4JpGAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="ToolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 20</value>
+    <value>88, 22</value>
   </data>
   <data name="ToolStripButton1.Text" xml:space="preserve">
     <value>Widescreen</value>
@@ -1100,7 +1100,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>3, 0</value>
   </data>
   <data name="Strip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>748, 25</value>
+    <value>854, 25</value>
   </data>
   <data name="Strip.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1279,7 +1279,7 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>Macro scripting guide</value>
   </data>
   <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="ToolStripMenuItem1.Text" xml:space="preserve">
     <value>Live Preview</value>
@@ -2041,10 +2041,13 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>751, 474</value>
+    <value>943, 506</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -2343,12 +2346,6 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;Sep5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LiveBuildToggle.Name" xml:space="preserve">
-    <value>LiveBuildToggle</value>
-  </data>
-  <data name="&gt;&gt;LiveBuildToggle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;BuildBtn.Name" xml:space="preserve">
     <value>BuildBtn</value>
   </data>
@@ -2367,6 +2364,12 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;OpenOutputFolderBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;LiveBuildToggle.Name" xml:space="preserve">
+    <value>LiveBuildToggle</value>
+  </data>
+  <data name="&gt;&gt;LiveBuildToggle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ViewOutBtn.Name" xml:space="preserve">
     <value>ViewOutBtn</value>
   </data>
@@ -2379,10 +2382,10 @@ Build your site or enable Attributes in Explorer to populate the Attribute Map.<
   <data name="&gt;&gt;ViewinDefaultBrowser.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
-    <value>ToolStripSeparator2</value>
+  <data name="&gt;&gt;Sep6.Name" xml:space="preserve">
+    <value>Sep6</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+  <data name="&gt;&gt;Sep6.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripButton1.Name" xml:space="preserve">

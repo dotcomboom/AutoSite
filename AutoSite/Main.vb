@@ -311,6 +311,7 @@ Public Class Main
         Sep3.Visible = EditorPanel.Checked
         Sep4.Visible = EditorPanel.Checked
         Sep5.Visible = EditorPanel.Checked
+        Sep6.Visible = EditorPanel.Checked
         SaveBtn.Visible = EditorPanel.Checked
         CloseBtn.Visible = EditorPanel.Checked
 

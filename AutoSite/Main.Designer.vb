@@ -89,13 +89,13 @@ Partial Class Main
 		Me.PreviewBtn = New System.Windows.Forms.ToolStripSplitButton()
 		Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.Sep5 = New System.Windows.Forms.ToolStripSeparator()
-		Me.LiveBuildToggle = New System.Windows.Forms.ToolStripButton()
 		Me.BuildBtn = New System.Windows.Forms.ToolStripSplitButton()
 		Me.CleanBuildBtn = New System.Windows.Forms.ToolStripMenuItem()
 		Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripMenuItem()
+		Me.LiveBuildToggle = New System.Windows.Forms.ToolStripButton()
 		Me.ViewOutBtn = New System.Windows.Forms.ToolStripSplitButton()
 		Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
-		Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+		Me.Sep6 = New System.Windows.Forms.ToolStripSeparator()
 		Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
 		Me.MenuBar = New System.Windows.Forms.MenuStrip()
 		Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -446,7 +446,7 @@ Partial Class Main
 		Me.Strip.AllowItemReorder = True
 		Me.Strip.BackColor = System.Drawing.SystemColors.MenuBar
 		resources.ApplyResources(Me.Strip, "Strip")
-		Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.NewItemBtn, Me.ScriptingDropdown, Me.SaveBtn, Me.SaveAllBtn, Me.CloseBtn, Me.Sep, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.InsertBtn, Me.Sep2, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.Sep3, Me.UndoBtn, Me.RedoBtn, Me.Sep4, Me.PreviewBtn, Me.Sep5, Me.BuildBtn, Me.LiveBuildToggle, Me.ViewOutBtn, Me.ToolStripSeparator2, Me.ToolStripButton1})
+		Me.Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.NewItemBtn, Me.ScriptingDropdown, Me.SaveBtn, Me.SaveAllBtn, Me.CloseBtn, Me.Sep, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.InsertBtn, Me.Sep2, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.Sep3, Me.UndoBtn, Me.RedoBtn, Me.Sep4, Me.PreviewBtn, Me.ViewOutBtn, Me.Sep5, Me.BuildBtn, Me.LiveBuildToggle, Me.Sep6, Me.ToolStripButton1})
 		Me.Strip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
 		Me.Strip.Name = "Strip"
 		'
@@ -727,14 +727,6 @@ Partial Class Main
 		Me.Sep5.Name = "Sep5"
 		resources.ApplyResources(Me.Sep5, "Sep5")
 		'
-		'LiveBuildToggle
-		'
-		Me.LiveBuildToggle.CheckOnClick = True
-		Me.LiveBuildToggle.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-		Me.LiveBuildToggle.Image = Global.AutoSite.My.Resources.Resources.Synchronize_grey_16x
-		resources.ApplyResources(Me.LiveBuildToggle, "LiveBuildToggle")
-		Me.LiveBuildToggle.Name = "LiveBuildToggle"
-		'
 		'BuildBtn
 		'
 		Me.BuildBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CleanBuildBtn, Me.OpenOutputFolderBtn})
@@ -755,6 +747,14 @@ Partial Class Main
 		Me.OpenOutputFolderBtn.Name = "OpenOutputFolderBtn"
 		resources.ApplyResources(Me.OpenOutputFolderBtn, "OpenOutputFolderBtn")
 		'
+		'LiveBuildToggle
+		'
+		Me.LiveBuildToggle.CheckOnClick = True
+		Me.LiveBuildToggle.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+		Me.LiveBuildToggle.Image = Global.AutoSite.My.Resources.Resources.Synchronize_grey_16x
+		resources.ApplyResources(Me.LiveBuildToggle, "LiveBuildToggle")
+		Me.LiveBuildToggle.Name = "LiveBuildToggle"
+		'
 		'ViewOutBtn
 		'
 		Me.ViewOutBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewinDefaultBrowser})
@@ -768,10 +768,10 @@ Partial Class Main
 		Me.ViewinDefaultBrowser.Name = "ViewinDefaultBrowser"
 		resources.ApplyResources(Me.ViewinDefaultBrowser, "ViewinDefaultBrowser")
 		'
-		'ToolStripSeparator2
+		'Sep6
 		'
-		Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-		resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+		Me.Sep6.Name = "Sep6"
+		resources.ApplyResources(Me.Sep6, "Sep6")
 		'
 		'ToolStripButton1
 		'
@@ -1738,7 +1738,7 @@ Partial Class Main
     Friend WithEvents ScriptingGuideToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Sep6 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripContainer1 As System.Windows.Forms.ToolStripContainer
     Friend WithEvents EditSep As System.Windows.Forms.ToolStripSeparator

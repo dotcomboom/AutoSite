@@ -17,7 +17,7 @@
         Console.WriteLine(" /_/  |_\__,_/ \__/ \____//____/ /_/  \__/ \___/ ")
         Console.WriteLine()
         If args.Length > 0 Then
-            Apricot.buildSite(args(0), removeStrays:=True)
+            Apricot.buildSite(args(0), Nothing, True)
         Else
             Console.WriteLine(System.IO.Directory.GetCurrentDirectory())
             Console.WriteLine()

@@ -217,11 +217,11 @@ Partial Class Main
 		Me.SelectFont = New System.Windows.Forms.FontDialog()
 		Me.LogMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
 		Me.SaveLog = New System.Windows.Forms.ToolStripMenuItem()
+		Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+		Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.SaveLogDialog = New System.Windows.Forms.SaveFileDialog()
 		Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
 		Me.LiveBuildWorker = New System.ComponentModel.BackgroundWorker()
-		Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-		Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.EdSplit.Panel1.SuspendLayout()
 		Me.EdSplit.Panel2.SuspendLayout()
 		Me.EdSplit.SuspendLayout()
@@ -1525,18 +1525,6 @@ Partial Class Main
 		Me.SaveLog.Name = "SaveLog"
 		resources.ApplyResources(Me.SaveLog, "SaveLog")
 		'
-		'SaveLogDialog
-		'
-		Me.SaveLogDialog.DefaultExt = "rtf"
-		resources.ApplyResources(Me.SaveLogDialog, "SaveLogDialog")
-		'
-		'OpenPack
-		'
-		resources.ApplyResources(Me.OpenPack, "OpenPack")
-		'
-		'LiveBuildWorker
-		'
-		'
 		'ToolStripSeparator2
 		'
 		Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
@@ -1546,6 +1534,15 @@ Partial Class Main
 		'
 		Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
 		resources.ApplyResources(Me.ClearToolStripMenuItem, "ClearToolStripMenuItem")
+		'
+		'SaveLogDialog
+		'
+		Me.SaveLogDialog.DefaultExt = "rtf"
+		resources.ApplyResources(Me.SaveLogDialog, "SaveLogDialog")
+		'
+		'OpenPack
+		'
+		resources.ApplyResources(Me.OpenPack, "OpenPack")
 		'
 		'Main
 		'

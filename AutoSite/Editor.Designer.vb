@@ -53,15 +53,14 @@ Partial Class Editor
         Me.Cut = New System.Windows.Forms.ToolStripMenuItem()
         Me.Copy = New System.Windows.Forms.ToolStripMenuItem()
         Me.Paste = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConSep2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAll = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConSep3 = New System.Windows.Forms.ToolStripSeparator()
         Me.InsertConditional = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InsertAttribute = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Insert = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InsertMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.Autocomplete = New AutocompleteMenuNS.AutocompleteMenu()
         Me.PopupIcons = New System.Windows.Forms.ImageList(Me.components)
         Me.PreviewWorker = New System.ComponentModel.BackgroundWorker()
-        Me.ConSep3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ConSep2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Strip.SuspendLayout()
         CType(Me.Code, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Context.SuspendLayout()
@@ -252,8 +251,8 @@ Partial Class Editor
         Me.Code.AutoIndentExistingLines = False
         resources.ApplyResources(Me.Code, "Code")
         Me.Code.BackBrush = Nothing
-        Me.Code.CharHeight = 14
-        Me.Code.CharWidth = 8
+        Me.Code.CharHeight = 18
+        Me.Code.CharWidth = 10
         Me.Code.CommentPrefix = Nothing
         Me.Code.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Code.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
@@ -273,7 +272,7 @@ Partial Class Editor
         '
         'Context
         '
-        Me.Context.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Cut, Me.Copy, Me.Paste, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertConditional, Me.InsertAttribute, Me.Insert})
+        Me.Context.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Cut, Me.Copy, Me.Paste, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertConditional, Me.InsertMnu})
         Me.Context.Name = "Context"
         resources.ApplyResources(Me.Context, "Context")
         '
@@ -295,11 +294,23 @@ Partial Class Editor
         Me.Paste.Name = "Paste"
         resources.ApplyResources(Me.Paste, "Paste")
         '
+        'ConSep2
+        '
+        Me.ConSep2.MergeIndex = 3
+        Me.ConSep2.Name = "ConSep2"
+        resources.ApplyResources(Me.ConSep2, "ConSep2")
+        '
         'SelectAll
         '
         Me.SelectAll.MergeIndex = 4
         Me.SelectAll.Name = "SelectAll"
         resources.ApplyResources(Me.SelectAll, "SelectAll")
+        '
+        'ConSep3
+        '
+        Me.ConSep3.MergeIndex = 5
+        Me.ConSep3.Name = "ConSep3"
+        resources.ApplyResources(Me.ConSep3, "ConSep3")
         '
         'InsertConditional
         '
@@ -307,17 +318,11 @@ Partial Class Editor
         Me.InsertConditional.Name = "InsertConditional"
         resources.ApplyResources(Me.InsertConditional, "InsertConditional")
         '
-        'InsertAttribute
+        'InsertMnu
         '
-        Me.InsertAttribute.MergeIndex = 7
-        Me.InsertAttribute.Name = "InsertAttribute"
-        resources.ApplyResources(Me.InsertAttribute, "InsertAttribute")
-        '
-        'Insert
-        '
-        Me.Insert.MergeIndex = 8
-        Me.Insert.Name = "Insert"
-        resources.ApplyResources(Me.Insert, "Insert")
+        Me.InsertMnu.MergeIndex = 8
+        Me.InsertMnu.Name = "InsertMnu"
+        resources.ApplyResources(Me.InsertMnu, "InsertMnu")
         '
         'Autocomplete
         '
@@ -344,18 +349,6 @@ Partial Class Editor
         '
         'PreviewWorker
         '
-        '
-        'ConSep3
-        '
-        Me.ConSep3.MergeIndex = 5
-        Me.ConSep3.Name = "ConSep3"
-        resources.ApplyResources(Me.ConSep3, "ConSep3")
-        '
-        'ConSep2
-        '
-        Me.ConSep2.MergeIndex = 3
-        Me.ConSep2.Name = "ConSep2"
-        resources.ApplyResources(Me.ConSep2, "ConSep2")
         '
         'Editor
         '
@@ -407,8 +400,7 @@ Partial Class Editor
     Friend WithEvents PopupIcons As System.Windows.Forms.ImageList
     Friend WithEvents Replace As System.Windows.Forms.ToolStripButton
     Friend WithEvents PreviewWorker As System.ComponentModel.BackgroundWorker
-    Friend WithEvents Insert As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents InsertAttribute As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents InsertMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConSep2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ConSep3 As System.Windows.Forms.ToolStripSeparator
 

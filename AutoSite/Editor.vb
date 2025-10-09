@@ -255,7 +255,12 @@ Public Class Editor
         ElseIf e.Item.ImageIndex = 1 Or e.Item.ImageIndex = 5 Then  ' Define attribute
             e.Cancel = True
 
-            If Code.GetLineText(Code.LineNumberStartValue - 1) = "" Then
+            If e.Item.Text = "<!-- attrib template: default -->" Then
+                Code.Selection.Start = New Place(0, 0)
+                Code.Selection.End = New Place(0, 0)
+                Code.ProcessKey(Keys.Home)
+                Code.InsertText(e.Item.Text & Environment.NewLine)
+            ElseIf Code.GetLineText(Code.LineNumberStartValue - 1) = "" Then
                 Code.InsertText(e.Item.Text)
             Else
                 Code.Selection.Start = New Place(0, 0)
@@ -396,7 +401,7 @@ Public Class Editor
         Return rel
     End Function
 
-    Private Sub Insert_Click(sender As System.Object, e As System.EventArgs) Handles Insert.Click
+    Private Sub Insert_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InsertMnu.Click
         doQuickInsert()
     End Sub
 
@@ -404,15 +409,16 @@ Public Class Editor
         Code.InsertText(sender.text)
     End Sub
 
-    Private Sub Context_Popup(sender As System.Object, e As System.EventArgs) Handles Context.Opening
-        InsertAttribute.Visible = Main.MenuItem1.Checked
-        If Main.MenuItem1.Checked Then
-            InsertAttribute.DropDownItems.Clear()
-            InsertAttribute.DropDownItems.Add("[#content#]")
-            InsertAttribute.DropDownItems.Add("[#root#]")
-            For Each att As TreeNode In Main.AttributeTree.Nodes
-                InsertAttribute.DropDownItems.Add("[#" & att.Text & "#]")
-            Next
-        End If
+    'Private Sub Context_Popup(sender As System.Object, e As System.EventArgs) Handles Context.Opening
+    '    InsertAttribute.DropDownItems.Clear()
+    '    InsertAttribute.DropDownItems.Add("[#content#]")
+    '    InsertAttribute.DropDownItems.Add("[#root#]")
+    '    For Each att As TreeNode In Main.AttributeTree.Nodes
+    '        InsertAttribute.DropDownItems.Add("[#" & att.Text & "#]")
+    '    Next
+    'End Sub
+
+    Private Sub doUndo(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UndoBtn.Click
+
     End Sub
 End Class

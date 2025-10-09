@@ -60,7 +60,7 @@ Partial Class About
         '
         'Logo
         '
-        Me.Logo.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.Logo.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.Logo.Image = Global.AutoSite.My.Resources.Resources.Logo
         resources.ApplyResources(Me.Logo, "Logo")
         Me.Logo.Name = "Logo"
@@ -74,15 +74,15 @@ Partial Class About
         '
         'GithubLink
         '
-        Me.GithubLink.LinkColor = System.Drawing.SystemColors.ButtonFace
         resources.ApplyResources(Me.GithubLink, "GithubLink")
+        Me.GithubLink.LinkColor = System.Drawing.SystemColors.ButtonFace
         Me.GithubLink.Name = "GithubLink"
         Me.GithubLink.TabStop = True
         '
         'WebsiteLink
         '
-        Me.WebsiteLink.LinkColor = System.Drawing.SystemColors.ButtonFace
         resources.ApplyResources(Me.WebsiteLink, "WebsiteLink")
+        Me.WebsiteLink.LinkColor = System.Drawing.SystemColors.ButtonFace
         Me.WebsiteLink.Name = "WebsiteLink"
         Me.WebsiteLink.TabStop = True
         '
@@ -126,7 +126,7 @@ Partial Class About
         'Panel1
         '
         resources.ApplyResources(Me.Panel1, "Panel1")
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Version)
         Me.Panel1.Controls.Add(Me.GithubLink)
         Me.Panel1.Controls.Add(Me.WebsiteLink)
@@ -136,7 +136,7 @@ Partial Class About
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(193, Byte), Integer))
         Me.CancelButton = Me.OK
         Me.Controls.Add(Me.Sysinfo)
         Me.Controls.Add(Me.Tabs)

@@ -42,30 +42,7 @@ Public Class Main
             node.Tag = file.FullName
             node.ImageKey = key
             node.SelectedImageKey = key
-            If key = "Page" And ExplorerAttributes.Checked Then
-                Dim apricott As Apricot.ApricotOutput = Apricot.Compile(My.Computer.FileSystem.ReadAllText(node.Tag), file.Name, incRoot, True)
-
-                For Each att As KeyValuePair(Of String, String) In apricott.Attributes
-                    Dim keynode = node.Nodes.Add(att.Key & ": " & att.Value)
-                    keynode.ImageKey = "Attribute"
-                    'Dim valnode = keynode.Nodes.Add(att.Value)
-                    'valnode.ImageKey = "Value"
-
-                    Dim tn As New Apricot.TNode With {
-                        .relPath = file.Name,
-                        .Attribute = att.Key,
-                        .Value = att.Value
-                    }
-
-                    If ExplorerAttributes.Checked Then
-                        If tn.Attribute = "title" Then
-                            node.Text = tn.Value
-                            node.ToolTipText = file.Name
-                        End If
-                    End If
-                    AttributeMapAdd(tn)
-                Next
-            End If
+            
             If My.Settings.systemIcons Then
                 Try
                     Dim splt = node.Text.Split(".")
@@ -175,9 +152,7 @@ Public Class Main
 
         SiteTree.BeginUpdate()
         AttributeTree.BeginUpdate()
-        If ExplorerAttributes.Checked Then
-            AttributeTree.Nodes.Clear()
-        End If
+
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(inPath), "*", pages, "Page", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(includePath), "*", includes, "Include", False)
@@ -296,28 +271,33 @@ Public Class Main
 
 
         EditMenu.Visible = EditorPanel.Checked
-        CutBtn.Visible = EditorPanel.Checked
-        CopyBtn.Visible = EditorPanel.Checked
-        PasteBtn.Visible = EditorPanel.Checked
-        FindBtn.Visible = EditorPanel.Checked
-        ReplaceBtn.Visible = EditorPanel.Checked
-        GotoBtn.Visible = EditorPanel.Checked
-        InsertBtn.Visible = EditorPanel.Checked
-        UndoBtn.Visible = EditorPanel.Checked
-        RedoBtn.Visible = EditorPanel.Checked
+        EditStrip.Visible = EditorPanel.Checked
+
+        TabStrip.Visible = EditorPanel.Checked
+
+        'CutBtn.Visible = EditorPanel.Checked
+        'CopyBtn.Visible = EditorPanel.Checked
+        'PasteBtn.Visible = EditorPanel.Checked
+        'FindBtn.Visible = EditorPanel.Checked
+        'ReplaceBtn.Visible = EditorPanel.Checked
+        'GotoBtn.Visible = EditorPanel.Checked
+        'InsertBtn.Visible = EditorPanel.Checked
+        'UndoBtn.Visible = EditorPanel.Checked
+        'RedoBtn.Visible = EditorPanel.Checked
         PreviewBtn.Visible = EditorPanel.Checked
+        ToolStripSeparator2.Visible = EditorPanel.Checked
         ViewOutBtn.Visible = EditorPanel.Checked
-        Sep2.Visible = EditorPanel.Checked
-        Sep3.Visible = EditorPanel.Checked
-        Sep4.Visible = EditorPanel.Checked
-        Sep5.Visible = EditorPanel.Checked
-        Sep6.Visible = EditorPanel.Checked
-        SaveBtn.Visible = EditorPanel.Checked
-        CloseBtn.Visible = EditorPanel.Checked
+        'Sep2.Visible = EditorPanel.Checked
+        'Sep3.Visible = EditorPanel.Checked
+        'ToolStripSeparator1.Visible = EditorPanel.Checked
+        'Sep5.Visible = EditorPanel.Checked
+        'ToolStripSeparator2.Visible = EditorPanel.Checked
+        'SaveBtn.Visible = EditorPanel.Checked
+        'CloseBtn.Visible = EditorPanel.Checked
 
         FormatMenu.Visible = EditorPanel.Checked
 
-        ToolStripButton1.Visible = EditorPanel.Checked And PreviewPanel.Checked
+        HorizontalBtn.Visible = EditorPanel.Checked And PreviewPanel.Checked
 
         'StatusBar.Visible = StatusBarMnu.Checked
 
@@ -350,6 +330,8 @@ Public Class Main
         Next
     End Sub
     Public Sub openEditor(ByVal path As String)
+        EditTabs.Show()
+
         EditTabs.SuspendLayout()
 
         Dim tab As New TabPage With {
@@ -410,11 +392,11 @@ Public Class Main
             End If
         End If
     End Sub
-    Private Sub NewSite_Click(sender As Object, e As EventArgs) Handles NewSite.Click, NewSiteBtn.Click
+    Private Sub NewSite_Click(ByVal sender As Object, ByVal e As EventArgs) Handles NewSite.Click, NewSiteBtn.Click
         browseForSite(True)
     End Sub
 
-    Private Sub OpenFolder_Click(sender As Object, e As EventArgs) Handles OpenFolder.Click, OpenSiteBtn.Click
+    Private Sub OpenFolder_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OpenFolder.Click, OpenSiteBtn.Click
         browseForSite(False)
     End Sub
 
@@ -458,6 +440,7 @@ Public Class Main
             .Dock = DockStyle.Fill
         }
         tab.Parent = EditTabs
+        EditTabs.Show()
         checkOpen()
         Return True
     End Function
@@ -490,8 +473,14 @@ Public Class Main
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+        Preview.Hide()
+
+        Me.Font = SystemFonts.IconTitleFont
+        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
+        Me.StartPosition = FormStartPosition.Manual
+
         LanguageMenu.Text = "🌐 " & Threading.Thread.CurrentThread.CurrentUICulture.Name
-        loadTheme()
+        'loadTheme()
 
         If System.Environment.Version.Major < 4 Then
             WelshLang.Enabled = False
@@ -531,8 +520,6 @@ Public Class Main
         ExSplit.SplitterDistance = My.Settings.exSplitterDistance
         EdSplit.SplitterDistance = My.Settings.edSplitterDistance
         CoreSplit.SplitterDistance = My.Settings.coreSplitterDistance
-
-        ExplorerAttributes.Checked = My.Settings.explorerAttributes
 
         Try
             Dim key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
@@ -635,12 +622,15 @@ Public Class Main
                 .Parent = tab
             }
             tab.Parent = EditTabs
+            EditTabs.Show()
         End If
 
         BuildStrip.Renderer = New OverrideControls.ToolStripOverride()
 
         updateRecents()
         panelUpdate()
+
+        Preview.Show()
     End Sub
 
     Private foundNode As TreeNode = Nothing
@@ -774,9 +764,6 @@ Public Class Main
         If e.Node.Level < 2 Then    ' don't edit root nodes
             e.CancelEdit = True
         End If
-        If ExplorerAttributes.Checked Then
-            e.CancelEdit = True
-        End If
     End Sub
 
     Private Sub SiteTree_AfterLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles SiteTree.AfterLabelEdit
@@ -803,7 +790,7 @@ Public Class Main
         End Try
     End Sub
 
-    Private Sub iterateUpdateNodePaths(node As TreeNode, oldpath As String, newpath As String)
+    Private Sub iterateUpdateNodePaths(ByVal node As TreeNode, ByVal oldpath As String, ByVal newpath As String)
         node.Tag = Apricot.ReplaceFirst(node.Tag, oldpath, newpath) 'update path/tag
         node.Text = node.Tag.Split("\")(UBound(node.Tag.Split("\"))) 'update text
 
@@ -844,7 +831,7 @@ Public Class Main
         doBuild()
     End Sub
 
-    Public Sub doBuild(Optional doRemoveStrays = False)
+    Public Sub doBuild(Optional ByVal doRemoveStrays = False)
         Me.Text = duringBuildWindowTitle & Me.Text
         Log.Clear()
         AttributeTree.Nodes.Clear()
@@ -1067,7 +1054,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click, NewPageToolStripMenuItem.Click
+    Private Sub NewHTMLCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewHTMLCon.Click
         Dim dir = ""
         If My.Computer.FileSystem.DirectoryExists(Context.Tag) Then
             dir = Context.Tag
@@ -1094,7 +1081,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click, NewMarkdownPageToolStripMenuItem.Click
+    Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
         If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then ' check if page, otherwise empty
             NewFile(My.Resources.Defaults_NewMd, ".md", My.Resources.Defaults_NewMdPage_Contents)
         Else
@@ -1110,15 +1097,15 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub NewCSSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCSSCon.Click, NewStylesheetToolStripMenuItem.Click
+    Private Sub NewCSSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCSSCon.Click
         NewFile(My.Resources.Defaults_NewCss, ".css", "")
     End Sub
 
-    Private Sub NewJSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewJSCon.Click, NewJavaScriptToolStripMenuItem.Click
+    Private Sub NewJSCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewJSCon.Click
         NewFile(My.Resources.Defaults_NewJs, ".js", "")
     End Sub
 
-    Private Sub NewTXTCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewTXTCon.Click, NewTextFileToolStripMenuItem.Click
+    Private Sub NewTXTCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewTXTCon.Click
         NewFile(My.Resources.Defaults_NewFile, ".txt", "")
     End Sub
 
@@ -1481,7 +1468,7 @@ Public Class Main
         'HandleLiveBuildCreatedChanged(e)
     End Sub
 
-    Private Sub Watcher_Changed(sender As Object, e As FileSystemEventArgs) Handles Watcher.Changed
+    Private Sub Watcher_Changed(ByVal sender As Object, ByVal e As FileSystemEventArgs) Handles Watcher.Changed
         HandleLiveBuildCreatedChanged(e)
     End Sub
 
@@ -1516,7 +1503,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click ', BrowseSiteInExternalProgramToolStripMenuItem.Click
+    Private Sub BrowseOutputExt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BrowseSite.Click, BrowseSiteMnu.Click ', BrowseSiteInExternalProgramToolStripMenuItem.Click
         Dim path = SiteTree.Nodes(0).Text & "\out\"
         If My.Computer.FileSystem.FileExists(path & "index.html") Then
             path &= "index.html"
@@ -1690,7 +1677,7 @@ Public Class Main
         End If
     End Sub
 
-    Public EverySpeciesofNeopet As String() = {"Acara", "Aisha", "Blumaroo", "Bori", "Bruce", "Buzz", "Chia", "Chomby", "Cybunny", "Draik", "Elephante", "Eyrie", "Flotsam", "Gelert", "Gnorbu", "Grarrl", "Grundo", "Hissi", "Ixi", "Jetsam", "JubJub", "Kacheek", "Kau", "Kiko", "Koi", "Korbat", "Kougra", "Krawk", "Kyrii", "Lenny", "Lupe", "Lutari", "Meerca", "Moehog", "Mynci", "Nimmo", "Ogrin", "Peophin", "Poogle", "Pteri", "Quiggle", "Ruki", "Scorchio", "Shoyru", "Skeith", "Techo", "Tonu", "Tuskaninny", "Uni", "Usul", "Vandagyre", "Wocky", "Xweetok", "Yurble", "Zafara"}
+    Public EverySpeciesofNeopet As String() = {"Acara", "Aisha", "Blumaroo", "Bori", "Bruce", "Buzz", "Chia", "Chomby", "Cybunny", "Draik", "Elephante", "Eyrie", "Flotsam", "Gelert", "Gnorbu", "Grarrl", "Grundo", "Hissi", "Ixi", "Jetsam", "JubJub", "Kacheek", "Kau", "Kiko", "Koi", "Korbat", "Kougra", "Krawk", "Kyrii", "Lenny", "Lupe", "Lutari", "Meerca", "Moehog", "Mynci", "Nimmo", "Ogrin", "Peophin", "Poogle", "Pteri", "Quiggle", "Ruki", "Scorchio", "Shoyru", "Skeith", "Techo", "Tonu", "Tuskaninny", "Uni", "Usul", "Vandagyre", "Varwolf", "Wocky", "Xweetok", "Yurble", "Zafara"}
 
     Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click, RedoBtn.Click
         Dim edit As Editor = activeEditor()
@@ -1755,7 +1742,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.ButtonClick, PreviewPage.Click
+    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.ButtonClick
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPreview()
@@ -1774,9 +1761,12 @@ Public Class Main
         If Not edit Is Nothing Then
             edit.Close()
         End If
+        If EditTabs.TabCount = 0 Then
+            EditTabs.Hide()
+        End If
     End Sub
 
-    Private Sub ViewFileOutput_Click() Handles ViewOutBtn.ButtonClick
+    Private Sub ViewFileOutput_Click() Handles ViewOutBtn.ButtonClick, ViewFileOutput.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doViewOutput()
@@ -1891,7 +1881,7 @@ Public Class Main
         q.ShowDialog()
     End Sub
 
-    Private Sub QuickInsertMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickInsertMnu.Click, InsertBtn.Click
+    Private Sub QuickInsertMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickInsertMnu.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doQuickInsert()
@@ -1916,11 +1906,11 @@ Public Class Main
         If Not mebk = Nothing Then
             Me.BackColor = mebk
             BuildStrip.BackColor = mebk
-            Strip.BackColor = mebk
+            FileStrip.BackColor = mebk
         Else
             Me.BackColor = bk
             BuildStrip.BackColor = bk
-            Strip.BackColor = bk
+            FileStrip.BackColor = bk
         End If
 
         AttributeTree.BackColor = bk
@@ -1937,41 +1927,41 @@ Public Class Main
         SiteTree.HotTracking = False
 
         Me.ForeColor = fc
-        For Each item As ToolStripItem In Strip.Items
+        For Each item As ToolStripItem In FileStrip.Items
             item.ForeColor = fc
         Next
 
         Me.Refresh()
     End Sub
 
-    Private Sub cDark_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDark.Click
-        My.Settings.theme = "Dark"
-        loadTheme()
-    End Sub
+    'Private Sub cDark_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDark.Click
+    '    My.Settings.theme = "Dark"
+    '    loadTheme()
+    'End Sub
 
-    Private Sub cDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDefault.Click
-        My.Settings.theme = ""
-        loadTheme()
-    End Sub
+    'Private Sub cDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cDefault.Click
+    '    My.Settings.theme = ""
+    '    loadTheme()
+    'End Sub
 
-    Private Sub loadTheme()
-        cDefault.Checked = False
-        cDark.Checked = False
-        If My.Settings.theme = "Dark" Then
-            setTheme(Color.FromArgb(61, 61, 61), Color.White)
-            cDark.Checked = True
-        Else
-            setTheme(Color.White, SystemColors.ControlText, SystemColors.Control)
-            cDefault.Checked = True
-        End If
-    End Sub
+    'Private Sub loadTheme()
+    '    cDefault.Checked = False
+    '    cDark.Checked = False
+    '    If My.Settings.theme = "Dark" Then
+    '        setTheme(Color.FromArgb(61, 61, 61), Color.White)
+    '        cDark.Checked = True
+    '    Else
+    '        setTheme(Color.White, SystemColors.ControlText, SystemColors.Control)
+    '        cDefault.Checked = True
+    '    End If
+    'End Sub
 
-    Private Sub ChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles EnglishLang.Click, SpanishLang.Click, PolishLang.Click, WelshLang.Click
+    Private Sub ChangeLanguage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnglishLang.Click, SpanishLang.Click, PolishLang.Click, WelshLang.Click
         My.Settings.language = sender.Tag
         MsgBox(My.Resources.Prompt_ChangesOnRestart, MsgBoxStyle.Information, Application.ProductName) ' Added ProductName because for some reason my installed version of .NET (4.8?) has System.Windows.Forms as the title/caption by default
     End Sub
 
-    Private Sub ShowVersion_Click(sender As System.Object, e As System.EventArgs) Handles ShowVersion.Click
+    Private Sub ShowVersion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ShowVersion.Click
         My.Settings.showVersion = Not My.Settings.showVersion
         updatewTitle()
     End Sub
@@ -1994,7 +1984,7 @@ Public Class Main
         Me.Text = Me.Text.Replace(oldwtitle, wTitle)
     End Sub
 
-    Public Sub Preview_Navigate(url As String)
+    Public Sub Preview_Navigate(ByVal url As String)
         ' hooked into by editor
         Preview.Navigate(url)
 
@@ -2004,7 +1994,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub OpenFileLocation_Click(sender As System.Object, e As System.EventArgs) Handles OpenFileLocation.Click
+    Private Sub OpenFileLocation_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenFileLocation.Click
         Process.Start(Path.GetDirectoryName(Context.Tag))
     End Sub
 
@@ -2016,30 +2006,7 @@ Public Class Main
         openSite(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "SampleSite"), False)
     End Sub
 
-    Private Sub BuildShortcut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        'Dim n As New SaveFileDialog
-        'n.Title = "Save Build Shortcut"
-        'n.Filter = "Shortcut (.lnk)|*.lnk"
-        'n.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
-        'If n.ShowDialog = Windows.Forms.DialogResult.OK Then
-
-        'End If
-        ' TODO
-    End Sub
-
-    Private Sub ScriptingToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ScriptingToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub AttributeTree_BeforeLabelEdit(sender As System.Object, e As System.Windows.Forms.NodeLabelEditEventArgs) Handles AttributeTree.BeforeLabelEdit
-
-    End Sub
-
-    Private Sub AttributeTree_AfterLabelEdit(sender As System.Object, e As System.Windows.Forms.NodeLabelEditEventArgs) Handles AttributeTree.AfterLabelEdit
-
-    End Sub
-
-    Private Sub AttributeMapAdd(tn As Apricot.TNode)
+    Private Sub AttributeMapAdd(ByVal tn As Apricot.TNode)
         Dim aNode As New TreeNode
         Dim exists As Boolean = False
         For Each node As TreeNode In AttributeTree.Nodes
@@ -2118,33 +2085,24 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub MenuItem2_Click(sender As System.Object, e As System.EventArgs) Handles ExplorerAttributes.Click
-        ExplorerAttributes.Checked = Not ExplorerAttributes.Checked
-        RefreshItem_Click()
-        My.Settings.explorerAttributes = ExplorerAttributes.Checked
-    End Sub
-
-    Private Sub MenuItem2_Click_1(sender As System.Object, e As System.EventArgs)
-        EditTabs.TabPages.Add("You found the level select! Sorry I couldn't come up with a new easter egg..")
-        Dim cheat As New CheatGame
-        cheat.Parent = EditTabs.TabPages.Item(EditTabs.TabPages.Count - 1)
-        cheat.Dock = DockStyle.Fill
-    End Sub
-
-    Private Sub MenuItem23_Click(sender As System.Object, e As System.EventArgs) Handles MenuItem23.Click, ToolStripButton1.Click
+    Private Sub MenuItem23_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem23.Click, HorizontalBtn.Click
         ' icons tk
         If EdSplit.Orientation = Orientation.Horizontal Then
             EdSplit.Orientation = Orientation.Vertical
-            ToolStripButton1.Image = My.Resources.application_split
+            HorizontalBtn.Image = My.Resources.application_split
         Else
             EdSplit.Orientation = Orientation.Horizontal
-            ToolStripButton1.Image = My.Resources.application_tile_horizontal
+            HorizontalBtn.Image = My.Resources.application_tile_horizontal
         End If
         MenuItem23.Checked = EdSplit.Orientation = Orientation.Vertical
-
+        If EdSplit.Orientation = Orientation.Vertical Then
+            EdSplit.SplitterDistance = EdSplit.Width / 2
+        Else
+            EdSplit.SplitterDistance = EdSplit.Height / 2
+        End If
     End Sub
 
-    Private Sub updateExplorerFileTitleHelper(node As TreeNode, title As String, openfile As String)
+    Private Sub updateExplorerFileTitleHelper(ByVal node As TreeNode, ByVal title As String, ByVal openfile As String)
         If node.Tag = openfile Then
             node.Text = title
             Exit Sub
@@ -2154,13 +2112,40 @@ Public Class Main
         Next
     End Sub
 
-    Public Sub updateExplorerFileTitle(title As String, openFile As String)
-        If ExplorerAttributes.Checked = False Then Exit Sub
-
+    Public Sub updateExplorerFileTitle(ByVal title As String, ByVal openFile As String)
         updateExplorerFileTitleHelper(SiteTree.Nodes(0), title, openFile)
     End Sub
 
-    Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click
+    Private Sub ClearToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ClearToolStripMenuItem.Click
         Log.Clear()
     End Sub
+
+    'Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, Build.Click, BuildBtn.ButtonClick
+
+    'End Sub
+
+    'Private Sub doSanitaryBuild(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SanitaryBuildBtn.Click, SanitaryBuild.Click, CleanBuildBtn.Click
+
+    'End Sub
+
+    'Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.ButtonClick
+
+    'End Sub
+
+    'Private Sub PreviewPage_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewPage.Click
+
+    'End Sub
+
+
+    'Private Sub doSanitaryBuild(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SanitaryBuildBtn.Click, SanitaryBuild.Click, CleanBuildBtn.Click
+
+    'End Sub
+
+    'Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, BuildBtn.ButtonClick, Build.Click
+
+    'End Sub
+
+    'Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.ButtonClick, ViewFileOutput.Click
+
+    'End Sub
 End Class

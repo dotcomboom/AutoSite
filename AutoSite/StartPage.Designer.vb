@@ -52,7 +52,7 @@ Partial Class StartPage
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Name = "Label1"
         '
@@ -61,7 +61,7 @@ Partial Class StartPage
         Me.NewSite.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.NewSite.AutoEllipsis = True
         resources.ApplyResources(Me.NewSite, "NewSite")
-        Me.NewSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.NewSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.NewSite.ForeColor = System.Drawing.Color.Black
         Me.NewSite.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.NewSite.LinkColor = System.Drawing.Color.White
@@ -73,7 +73,7 @@ Partial Class StartPage
         Me.Recent1.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent1.AutoEllipsis = True
         resources.ApplyResources(Me.Recent1, "Recent1")
-        Me.Recent1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Recent1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Recent1.ForeColor = System.Drawing.Color.Black
         Me.Recent1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.Recent1.LinkColor = System.Drawing.Color.White
@@ -83,7 +83,7 @@ Partial Class StartPage
         'Label2
         '
         resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Name = "Label2"
         '
@@ -92,7 +92,7 @@ Partial Class StartPage
         Me.Recent2.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent2.AutoEllipsis = True
         resources.ApplyResources(Me.Recent2, "Recent2")
-        Me.Recent2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Recent2.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Recent2.ForeColor = System.Drawing.Color.Black
         Me.Recent2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.Recent2.LinkColor = System.Drawing.Color.White
@@ -104,7 +104,7 @@ Partial Class StartPage
         Me.Recent3.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent3.AutoEllipsis = True
         resources.ApplyResources(Me.Recent3, "Recent3")
-        Me.Recent3.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Recent3.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Recent3.ForeColor = System.Drawing.Color.Black
         Me.Recent3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.Recent3.LinkColor = System.Drawing.Color.White
@@ -116,7 +116,7 @@ Partial Class StartPage
         Me.Recent4.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent4.AutoEllipsis = True
         resources.ApplyResources(Me.Recent4, "Recent4")
-        Me.Recent4.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Recent4.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Recent4.ForeColor = System.Drawing.Color.Black
         Me.Recent4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.Recent4.LinkColor = System.Drawing.Color.White
@@ -128,7 +128,7 @@ Partial Class StartPage
         Me.Recent5.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.Recent5.AutoEllipsis = True
         resources.ApplyResources(Me.Recent5, "Recent5")
-        Me.Recent5.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Recent5.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Recent5.ForeColor = System.Drawing.Color.Black
         Me.Recent5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.Recent5.LinkColor = System.Drawing.Color.White
@@ -140,7 +140,7 @@ Partial Class StartPage
         Me.OpenSite.ActiveLinkColor = System.Drawing.Color.Gainsboro
         Me.OpenSite.AutoEllipsis = True
         resources.ApplyResources(Me.OpenSite, "OpenSite")
-        Me.OpenSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.OpenSite.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.OpenSite.ForeColor = System.Drawing.Color.Black
         Me.OpenSite.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.OpenSite.LinkColor = System.Drawing.Color.White
@@ -149,7 +149,7 @@ Partial Class StartPage
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.PictureBox1.Image = Global.AutoSite.My.Resources.Resources.NewSite
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
@@ -157,14 +157,14 @@ Partial Class StartPage
         '
         'PictureBox2
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
         'R1
         '
-        Me.R1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.R1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.R1.Image = Global.AutoSite.My.Resources.Resources.Web
         resources.ApplyResources(Me.R1, "R1")
         Me.R1.Name = "R1"
@@ -172,7 +172,7 @@ Partial Class StartPage
         '
         'R2
         '
-        Me.R2.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.R2.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.R2.Image = Global.AutoSite.My.Resources.Resources.Web
         resources.ApplyResources(Me.R2, "R2")
         Me.R2.Name = "R2"
@@ -180,7 +180,7 @@ Partial Class StartPage
         '
         'R3
         '
-        Me.R3.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.R3.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.R3.Image = Global.AutoSite.My.Resources.Resources.Web
         resources.ApplyResources(Me.R3, "R3")
         Me.R3.Name = "R3"
@@ -188,7 +188,7 @@ Partial Class StartPage
         '
         'R4
         '
-        Me.R4.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.R4.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.R4.Image = Global.AutoSite.My.Resources.Resources.Web
         resources.ApplyResources(Me.R4, "R4")
         Me.R4.Name = "R4"
@@ -196,7 +196,7 @@ Partial Class StartPage
         '
         'R5
         '
-        Me.R5.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.R5.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.R5.Image = Global.AutoSite.My.Resources.Resources.Web
         resources.ApplyResources(Me.R5, "R5")
         Me.R5.Name = "R5"
@@ -204,7 +204,7 @@ Partial Class StartPage
         '
         'RWarn
         '
-        Me.RWarn.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.RWarn.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.RWarn.ForeColor = System.Drawing.Color.White
         resources.ApplyResources(Me.RWarn, "RWarn")
         Me.RWarn.Name = "RWarn"
@@ -213,7 +213,7 @@ Partial Class StartPage
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Controls.Add(Me.R5)
         Me.Controls.Add(Me.R4)
         Me.Controls.Add(Me.R3)

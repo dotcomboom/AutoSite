@@ -284,7 +284,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\autosite_32.ico" />
-    <None Include="Resources\Synchronize_grey_16x.png.lnk" />
     <None Include="Resources\Tag_16x.png" />
     <None Include="Resources\OpenFolder_16x.png" />
     <None Include="Resources\Browse_16x.png" />
@@ -478,6 +477,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Synchronize_grey_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mb_bg_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

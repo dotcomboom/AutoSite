@@ -72,6 +72,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _2Columns_16x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_2Columns_16x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _2Rows_16x() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_2Rows_16x", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property AddBinaryFile_16x() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("AddBinaryFile_16x", resourceCulture)
@@ -92,19 +112,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property application_split() As System.Drawing.Bitmap
+        Friend ReadOnly Property Application_16x() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("application_split", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property application_tile_horizontal() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("application_tile_horizontal", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Application_16x", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

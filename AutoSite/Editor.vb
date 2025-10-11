@@ -67,6 +67,20 @@ Public Class Editor
     Private AttributeStyle As New TextStyle(Nothing, Nothing, FontStyle.Italic)
     Private ConditionalStyle As New TextStyle(Brushes.ForestGreen, Nothing, FontStyle.Italic)
 
+    Private rc As String
+    Friend Sub doLivePreview()
+        rc = Code.Text.Replace("[#root#]", "file://" & Main.SiteTree.Nodes(0).Tag.Replace("\", "/") & "/out/")
+        If My.Settings.LivePreviewAttributes Then
+            rc = rc.Replace("<!-- attrib", "    <!-- attrib")
+        End If
+        If Me.Parent.Text.Replace("*", "").EndsWith(".md") Then
+            rc = CommonMark.CommonMarkConverter.Convert(rc)
+        End If
+
+        Main.Preview.DocumentText = "<FONT FACE=""" & My.Settings.previewFont.Name & """>" & _
+                 rc & "</FONT>"
+    End Sub
+
     Private Sub Editor_TextChanged(ByVal sender As System.Object, ByVal e As FastColoredTextBoxNS.TextChangedEventArgs) Handles Code.TextChanged
         If (Not Code.Text = Snapshot) And (Not openFile Is Nothing) Then
             Me.Parent.Text = openFile.Replace(siteRoot & "\", "") & "*"
@@ -86,11 +100,7 @@ Public Class Editor
         End If
         Try
             If My.Settings.LivePreview Then
-                If Me.Parent.Text.Replace("*", "").EndsWith(".md") Then
-                    Main.Preview.DocumentText = CommonMark.CommonMarkConverter.Convert(Code.Text)
-                Else
-                    Main.Preview.DocumentText = Code.Text
-                End If
+                doLivePreview()
             End If
         Catch ex As Exception
         End Try
@@ -421,4 +431,23 @@ Public Class Editor
     Private Sub doUndo(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UndoBtn.Click
 
     End Sub
+
+    Public Sub doOpenFileLocation()
+        Dim url As String = siteRoot & "\out\" & _rel()
+
+        url = Path.GetDirectoryName(url)
+        If Not My.Computer.FileSystem.DirectoryExists(url) Then
+            If Build.Enabled Then
+                Main.afterBuildLaunch = url
+                Main.doBuild()
+            End If
+            Exit Sub
+        End If
+
+        Try
+            Process.Start(url)
+        Catch ex As Exception
+        End Try
+    End Sub
+
 End Class

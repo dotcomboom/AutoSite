@@ -269,31 +269,51 @@ Public Class Main
         ExSplit.Panel1Collapsed = Not (ExplorerPanel.Checked)
         ExSplit.Panel2Collapsed = Not (BuildPanel.Checked)
 
+        Dim showLabels = CommandLabelsMnu.Checked
+        For Each item As ToolStripItem In StandardStrip.Items
+            'If item.GetType().ToString = "ToolStripButton" Then
+            If showLabels Then
+                item.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText
+            Else
+                item.DisplayStyle = ToolStripItemDisplayStyle.Image
+            End If
+            'End If
+        Next
+
+        If VerticalSplitMnu.Checked Then
+            EdSplit.Orientation = Orientation.Vertical
+            HorizontalBtn.Image = My.Resources._2Columns_16x
+        Else
+            EdSplit.Orientation = Orientation.Horizontal
+            HorizontalBtn.Image = My.Resources._2Rows_16x
+        End If
+
 
         EditMenu.Visible = EditorPanel.Checked
-        EditStrip.Visible = EditorPanel.Checked
+        'EditStrip.Visible = EditorPanel.Checked
 
-        TabStrip.Visible = EditorPanel.Checked
+        'TabStrip.Visible = EditorPanel.Checked
 
-        'CutBtn.Visible = EditorPanel.Checked
-        'CopyBtn.Visible = EditorPanel.Checked
-        'PasteBtn.Visible = EditorPanel.Checked
-        'FindBtn.Visible = EditorPanel.Checked
-        'ReplaceBtn.Visible = EditorPanel.Checked
-        'GotoBtn.Visible = EditorPanel.Checked
-        'InsertBtn.Visible = EditorPanel.Checked
-        'UndoBtn.Visible = EditorPanel.Checked
-        'RedoBtn.Visible = EditorPanel.Checked
+        CutBtn.Visible = EditorPanel.Checked
+        CopyBtn.Visible = EditorPanel.Checked
+        PasteBtn.Visible = EditorPanel.Checked
+        FindBtn.Visible = EditorPanel.Checked
+        ReplaceBtn.Visible = EditorPanel.Checked
+        GotoBtn.Visible = EditorPanel.Checked
+        QuickInsertBtn.Visible = EditorPanel.Checked
+        UndoBtn.Visible = EditorPanel.Checked
+        RedoBtn.Visible = EditorPanel.Checked
         PreviewBtn.Visible = EditorPanel.Checked
-        ToolStripSeparator2.Visible = EditorPanel.Checked
+        'ToolStripSeparator2.Visible = EditorPanel.Checked
         ViewOutBtn.Visible = EditorPanel.Checked
-        'Sep2.Visible = EditorPanel.Checked
-        'Sep3.Visible = EditorPanel.Checked
-        'ToolStripSeparator1.Visible = EditorPanel.Checked
+        Sep2.Visible = EditorPanel.Checked
+        Sep3.Visible = EditorPanel.Checked
+        ToolStripSeparator1.Visible = EditorPanel.Checked
+        ToolStripSeparator6.Visible = EditorPanel.Checked
         'Sep5.Visible = EditorPanel.Checked
         'ToolStripSeparator2.Visible = EditorPanel.Checked
-        'SaveBtn.Visible = EditorPanel.Checked
-        'CloseBtn.Visible = EditorPanel.Checked
+        SaveBtn.Visible = EditorPanel.Checked
+        CloseBtn.Visible = EditorPanel.Checked
 
         FormatMenu.Visible = EditorPanel.Checked
 
@@ -328,6 +348,24 @@ Public Class Main
                 edit.LivePreview.Checked = My.Settings.LivePreview
             End If
         Next
+
+        If EditorPanel.Checked Or PreviewPanel.Checked Then
+            ExSplit.Orientation = Orientation.Horizontal
+            ExSplitOrient.Visible = False
+            'VerticalSplitExplorerMnu.Enabled = False
+        ElseIf Not VerticalSplitExplorerMnu.Checked Then
+            ExSplit.Orientation = Orientation.Horizontal
+            ExSplitOrient.Visible = True
+            VerticalSplitExplorerMnu.Enabled = True
+        ElseIf VerticalSplitExplorerMnu.Checked Then
+            ExSplit.Orientation = Orientation.Vertical
+            ExSplitOrient.Visible = True
+            VerticalSplitExplorerMnu.Enabled = True
+        Else
+            ExSplit.Orientation = Orientation.Horizontal
+            ExSplitOrient.Visible = True
+            VerticalSplitExplorerMnu.Enabled = True
+        End If
     End Sub
     Public Sub openEditor(ByVal path As String)
         EditTabs.Show()
@@ -521,6 +559,11 @@ Public Class Main
         EdSplit.SplitterDistance = My.Settings.edSplitterDistance
         CoreSplit.SplitterDistance = My.Settings.coreSplitterDistance
 
+        If My.Settings.firstStart Then
+            OriginalToolStripMenuItem_Click(sender, e)
+            My.Settings.firstStart = False
+        End If
+
         Try
             Dim key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", True)
             key.SetValue(Path.GetFileName(Application.ExecutablePath), 11000, Microsoft.Win32.RegistryValueKind.DWord)
@@ -606,6 +649,7 @@ Public Class Main
         WideCaret.Checked = My.Settings.WideCaret
         'SyntaxHighlight.Checked = My.Settings.SyntaxHighlight
         LivePreview.Checked = My.Settings.LivePreview
+        LivePreviewMnu.Checked = My.Settings.LivePreview
         SystemIcons.Checked = My.Settings.systemIcons
 
         If args.Length > 1 Then
@@ -930,6 +974,9 @@ Public Class Main
         End If
     End Sub
 
+    Private cutMode = False
+    Private cutPath = ""
+
     Private Sub CopyCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopyCon.Click
         Dim path = Context.Tag
         If Not path = "" Then
@@ -939,35 +986,46 @@ Public Class Main
         End If
     End Sub
 
+    Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        cutMode = True
+        cutPath = Context.Tag
+        CopyCon_Click(sender, e)
+    End Sub
     Private Sub PasteCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PasteCon.Click
         Dim path = Context.Tag
-        Dim dir = ""
+        Dim destDir = ""
         If My.Computer.FileSystem.DirectoryExists(path) Then
-            dir = path
+            destDir = path
         ElseIf My.Computer.FileSystem.FileExists(path) Then
-            dir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
-        End If
-        ' https://stackoverflow.com/questions/10450447/how-to-paste-a-file-from-clipboard-to-specific-path
-        Try
-            Dim data As IDataObject = Clipboard.GetDataObject
-            If data.GetDataPresent(DataFormats.FileDrop) Then
-                For Each s As String In data.GetData(DataFormats.FileDrop)
-                    Dim newFile As String = System.IO.Path.Combine(dir, System.IO.Path.GetFileName(s))
-                    Dim number = 0
-                    Dim oldnewFile = newFile
-                    While My.Computer.FileSystem.FileExists(newFile)
-                        number += 1
-                        newFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(oldnewFile), System.IO.Path.GetFileNameWithoutExtension(oldnewFile) & "_" & number & System.IO.Path.GetExtension(oldnewFile))
-                    End While
-                    My.Computer.FileSystem.CopyFile(s, newFile, False)
-                    If Watcher.EnableRaisingEvents = False Then
-                        refreshTree(SiteTree.Nodes(0))
-                    End If
-                Next
-            End If
-        Catch ex As Exception
+            destDir = My.Computer.FileSystem.GetFileInfo(path).DirectoryName
 
-        End Try
+            ' https://stackoverflow.com/questions/10450447/how-to-paste-a-file-from-clipboard-to-specific-path
+            Try
+                Dim data As IDataObject = Clipboard.GetDataObject
+                If data.GetDataPresent(DataFormats.FileDrop) Then
+                    For Each s As String In data.GetData(DataFormats.FileDrop)
+                        Dim newFile As String = System.IO.Path.Combine(destDir, System.IO.Path.GetFileName(s))
+                        Dim number = 0
+                        Dim oldnewFile = newFile
+                        While My.Computer.FileSystem.FileExists(newFile)
+                            number += 1
+                            newFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(oldnewFile), System.IO.Path.GetFileNameWithoutExtension(oldnewFile) & "_" & number & System.IO.Path.GetExtension(oldnewFile))
+                        End While
+                        My.Computer.FileSystem.CopyFile(s, newFile, False)
+                        If Watcher.EnableRaisingEvents = False Then
+                            refreshTree(SiteTree.Nodes(0))
+                        End If
+                        If cutMode And s = cutPath Then
+                            My.Computer.FileSystem.DeleteFile(s)
+                            cutPath = ""
+                            cutMode = False
+                        End If
+                    Next
+                End If
+            Catch ex As Exception
+
+            End Try
+        End If
     End Sub
 
     Private Sub MarkDeletedAsUnsaved()
@@ -1469,7 +1527,13 @@ Public Class Main
     End Sub
 
     Private Sub Watcher_Changed(ByVal sender As Object, ByVal e As FileSystemEventArgs) Handles Watcher.Changed
+        BuildProgress.Visible = True
+        BuildProgress.Style = ProgressBarStyle.Marquee
+
         HandleLiveBuildCreatedChanged(e)
+
+        BuildProgress.Visible = False
+        BuildProgress.Style = ProgressBarStyle.Blocks
     End Sub
 
     Private Sub Watcher_Renamed(ByVal sender As System.Object, ByVal e As System.IO.RenamedEventArgs) Handles Watcher.Renamed
@@ -1480,7 +1544,13 @@ Public Class Main
         End If
 
         'HandleLiveBuildRename(e)
+        BuildProgress.Visible = True
+        BuildProgress.Style = ProgressBarStyle.Marquee
+
         HandleLiveBuildCreatedChanged(e)
+
+        BuildProgress.Visible = False
+        BuildProgress.Style = ProgressBarStyle.Blocks
     End Sub
 
     Private Sub Watcher_Deleted(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Deleted
@@ -1490,9 +1560,15 @@ Public Class Main
             foundNode.Remove()
         End If
 
+        BuildProgress.Visible = True
+        BuildProgress.Style = ProgressBarStyle.Marquee
+
         MarkDeletedAsUnsaved()
 
         HandleLiveBuildDelete(e)
+
+        BuildProgress.Visible = False
+        BuildProgress.Style = ProgressBarStyle.Blocks
     End Sub
 
     Private Sub Rename_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RenameCon.Click
@@ -1517,7 +1593,7 @@ Public Class Main
         End Try
     End Sub
 
-    Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click
+    Private Sub ViewinDefaultBrowser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewinDefaultBrowser.Click, FileOutputInDefaultBrowserToolStripMenuItem.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doViewinDefaultBrowser()
@@ -1670,7 +1746,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Undo.Click, UndoBtn.Click
+    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Undo.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doUndo()
@@ -1679,28 +1755,28 @@ Public Class Main
 
     Public EverySpeciesofNeopet As String() = {"Acara", "Aisha", "Blumaroo", "Bori", "Bruce", "Buzz", "Chia", "Chomby", "Cybunny", "Draik", "Elephante", "Eyrie", "Flotsam", "Gelert", "Gnorbu", "Grarrl", "Grundo", "Hissi", "Ixi", "Jetsam", "JubJub", "Kacheek", "Kau", "Kiko", "Koi", "Korbat", "Kougra", "Krawk", "Kyrii", "Lenny", "Lupe", "Lutari", "Meerca", "Moehog", "Mynci", "Nimmo", "Ogrin", "Peophin", "Poogle", "Pteri", "Quiggle", "Ruki", "Scorchio", "Shoyru", "Skeith", "Techo", "Tonu", "Tuskaninny", "Uni", "Usul", "Vandagyre", "Varwolf", "Wocky", "Xweetok", "Yurble", "Zafara"}
 
-    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click, RedoBtn.Click
+    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doRedo()
         End If
     End Sub
 
-    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click, CutBtn.Click
+    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doCut()
         End If
     End Sub
 
-    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click, CopyBtn.Click
+    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doCopy()
         End If
     End Sub
 
-    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click, PasteBtn.Click
+    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPaste()
@@ -1721,28 +1797,28 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Find_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Find.Click, FindBtn.Click
+    Private Sub Find_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Find.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doFind()
         End If
     End Sub
 
-    Private Sub Replace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Replace.Click, ReplaceBtn.Click
+    Private Sub Replace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Replace.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doReplace()
         End If
     End Sub
 
-    Private Sub GoToMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GoToMnu.Click, GotoBtn.Click
+    Private Sub GoToMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GoToMnu.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doGoto()
         End If
     End Sub
 
-    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.ButtonClick
+    Private Sub PreviewPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewBtn.Click, PreviewPage.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPreview()
@@ -1881,7 +1957,7 @@ Public Class Main
         q.ShowDialog()
     End Sub
 
-    Private Sub QuickInsertMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickInsertMnu.Click
+    Private Sub QuickInsertMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles QuickInsertMnu.Click, QuickInsertBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doQuickInsert()
@@ -1906,11 +1982,11 @@ Public Class Main
         If Not mebk = Nothing Then
             Me.BackColor = mebk
             BuildStrip.BackColor = mebk
-            FileStrip.BackColor = mebk
+            StandardStrip.BackColor = mebk
         Else
             Me.BackColor = bk
             BuildStrip.BackColor = bk
-            FileStrip.BackColor = bk
+            StandardStrip.BackColor = bk
         End If
 
         AttributeTree.BackColor = bk
@@ -1927,7 +2003,7 @@ Public Class Main
         SiteTree.HotTracking = False
 
         Me.ForeColor = fc
-        For Each item As ToolStripItem In FileStrip.Items
+        For Each item As ToolStripItem In StandardStrip.Items
             item.ForeColor = fc
         Next
 
@@ -2085,21 +2161,63 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub MenuItem23_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem23.Click, HorizontalBtn.Click
-        ' icons tk
-        If EdSplit.Orientation = Orientation.Horizontal Then
-            EdSplit.Orientation = Orientation.Vertical
-            HorizontalBtn.Image = My.Resources.application_split
-        Else
-            EdSplit.Orientation = Orientation.Horizontal
-            HorizontalBtn.Image = My.Resources.application_tile_horizontal
-        End If
-        MenuItem23.Checked = EdSplit.Orientation = Orientation.Vertical
-        If EdSplit.Orientation = Orientation.Vertical Then
+    Private Sub evenEdSplit(Optional ByVal vertical As Boolean = False)
+        EdSplit.Refresh()
+        If EdSplit.Orientation = Orientation.Vertical Or vertical Then
             EdSplit.SplitterDistance = EdSplit.Width / 2
         Else
             EdSplit.SplitterDistance = EdSplit.Height / 2
         End If
+        EdSplit.Refresh()
+    End Sub
+
+    Private Sub evenExSplit()
+        ExSplit.Refresh()
+        'ExSplit.SplitterDistance = 2 * ExSplit.Height / 3
+        If ExSplit.Orientation = Orientation.Vertical Then
+            ExSplit.SplitterDistance = ExSplit.Width / 2
+        Else
+            ExSplit.SplitterDistance = ExSplit.Height / 2
+        End If
+        ExSplit.Refresh()
+    End Sub
+    Private Sub thirdCoreSplit()
+        CoreSplit.Refresh()
+        CoreSplit.SplitterDistance = Math.Min(340, Math.Max(CoreSplit.Width / 4, 250))
+        CoreSplit.Refresh()
+    End Sub
+
+    Private Sub MenuItem23_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VerticalSplitMnu.Click, HorizontalBtn.Click
+        ' icons tk
+        If EdSplit.Orientation = Orientation.Horizontal Then
+            EdSplit.Orientation = Orientation.Vertical
+            HorizontalBtn.Image = My.Resources._2Columns_16x
+        Else
+            EdSplit.Orientation = Orientation.Horizontal
+            HorizontalBtn.Image = My.Resources._2Rows_16x
+        End If
+        VerticalSplitMnu.Checked = EdSplit.Orientation = Orientation.Vertical
+
+        evenEdSplit()
+
+        My.Settings.verticalSplit = VerticalSplitMnu.Checked
+        panelUpdate()
+    End Sub
+    Private Sub ExSplitOrient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExSplitOrient.Click, VerticalSplitExplorerMnu.Click
+        ' icons tk
+        If ExSplit.Orientation = Orientation.Horizontal Then
+            ExSplit.Orientation = Orientation.Vertical
+            HorizontalBtn.Image = My.Resources._2Columns_16x
+        Else
+            ExSplit.Orientation = Orientation.Horizontal
+            HorizontalBtn.Image = My.Resources._2Rows_16x
+        End If
+        VerticalSplitExplorerMnu.Checked = ExSplit.Orientation = Orientation.Vertical
+
+        evenExSplit()
+
+        'My.Settings.verticalSplit = VerticalSplitMnu.Checked
+        panelUpdate()
     End Sub
 
     Private Sub updateExplorerFileTitleHelper(ByVal node As TreeNode, ByVal title As String, ByVal openfile As String)
@@ -2148,4 +2266,157 @@ Public Class Main
     'Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.ButtonClick, ViewFileOutput.Click
 
     'End Sub
+
+    'Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, Build.Click, BuildBtn.ButtonClick
+
+    'End Sub
+
+    'Private Sub doSanitaryBuild(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SanitaryBuildBtn.Click, SanitaryBuild.Click, CleanBuildBtn.Click
+
+    'End Sub
+
+    'Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewFileOutput.Click, ViewOutBtn.ButtonClick
+
+    'End Sub
+
+    Private Sub LivePreviewMnu_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LivePreviewMnu.CheckedChanged
+        My.Settings.LivePreview = LivePreviewMnu.Checked
+        LivePreview.Checked = LivePreviewMnu.Checked
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CommandLabelsMnu.Click
+        panelUpdate()
+    End Sub
+
+    Private Sub BuildOnChangesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildOnChangesToolStripMenuItem.Click
+        LiveBuildToggle.Checked = BuildOnChangesToolStripMenuItem.Checked
+    End Sub
+
+    Private Sub OriginalToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OriginalToolStripMenuItem.Click
+        ExplorerPanel.Checked = True
+        EditorPanel.Checked = True
+        BuildPanel.Checked = True
+        PreviewPanel.Checked = True
+        VerticalSplitMnu.Checked = False
+
+        If Me.Size.Width < 1024 Then
+            Me.Size = New Size(Math.Min(1024, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
+        End If
+        If Me.Size.Height < 768 Then
+            Me.Size = New Size(Me.Size.Width, Math.Min(768, My.Computer.Screen.WorkingArea.Height))
+        End If
+
+        thirdCoreSplit()
+        panelUpdate()
+        evenEdSplit()
+        evenExSplit()
+    End Sub
+
+    Private Sub WidescreenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WidescreenToolStripMenuItem.Click
+        ExplorerPanel.Checked = True
+        EditorPanel.Checked = True
+        BuildPanel.Checked = True
+        PreviewPanel.Checked = True
+        VerticalSplitMnu.Checked = True
+
+        If Me.Size.Width < 1024 Then
+            Me.Size = New Size(Math.Min(1024, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
+        End If
+        If Me.Size.Height < 768 Then
+            Me.Size = New Size(Me.Size.Width, Math.Min(768, My.Computer.Screen.WorkingArea.Height))
+        End If
+
+        thirdCoreSplit()
+        evenEdSplit(True)
+        evenExSplit()
+        panelUpdate()
+    End Sub
+
+    Private Sub NoEditorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NoEditorToolStripMenuItem.Click
+        ExplorerPanel.Checked = True
+        EditorPanel.Checked = False
+        BuildPanel.Checked = True
+        PreviewPanel.Checked = False
+        'CommandLabelsMnu.Checked = False
+        VerticalSplitExplorerMnu.Checked = True
+
+        Me.WindowState = FormWindowState.Normal
+
+        If Me.Size.Width < 1024 Then
+            Me.Size = New Size(Math.Min(1024, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
+        End If
+        If Me.Size.Height < 768 Then
+            Me.Size = New Size(Me.Size.Width, Math.Min(768, My.Computer.Screen.WorkingArea.Height))
+        End If
+
+        thirdCoreSplit()
+        panelUpdate()
+        'Me.Size = New Size(Math.Min(400, My.Computer.Screen.WorkingArea.Width), Math.Min(600, My.Computer.Screen.WorkingArea.Height))
+
+
+        evenEdSplit(False)
+        evenExSplit()
+    End Sub
+
+    Private Sub EditToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditToolStripMenuItem.Click
+        ExplorerPanel.Checked = True
+        EditorPanel.Checked = True
+        BuildPanel.Checked = True
+        PreviewPanel.Checked = False
+        thirdCoreSplit()
+        panelUpdate()
+        evenEdSplit()
+        evenExSplit()
+    End Sub
+
+    Private Sub LivePreviewMnu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LivePreviewMnu.Click, LivePreview.Click
+        LivePreview.Checked = sender.Checked
+        LivePreviewMnu.Checked = sender.Checked
+
+        If LivePreviewMnu.Checked Then
+            Dim edit As Editor = activeEditor()
+            If Not edit Is Nothing Then
+                edit.doLivePreview()
+            End If
+        End If
+    End Sub
+
+    Private Sub LivePreviewFontToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LivePreviewFontToolStripMenuItem.Click, LivePreviewFontCopyMnu.Click
+        SelectPreviewFont.Font = My.Settings.previewFont
+        If SelectPreviewFont.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+            My.Settings.previewFont = SelectPreviewFont.Font
+            panelUpdate()
+
+            If My.Settings.LivePreview Then
+                Dim edit As Editor = activeEditor()
+                If Not edit Is Nothing Then
+                    edit.doLivePreview()
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub EditTabs_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditTabs.SelectedIndexChanged
+        If My.Settings.LivePreview Then
+            Dim edit As Editor = activeEditor()
+            If Not edit Is Nothing Then
+                edit.doLivePreview()
+            End If
+        End If
+    End Sub
+
+    Private Sub ToolStripButton1_ButtonClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.ButtonClick
+        If ExSplitOrient.Visible Then
+            ExSplitOrient_Click(sender, e)
+        ElseIf EditorPanel.Checked And PreviewPanel.Checked Then
+            MenuItem23_Click(sender, e)
+        End If
+    End Sub
+
+    Private Sub OpenFileLocationToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenFileLocationToolStripMenuItem.Click
+        Dim edit As Editor = activeEditor()
+        If Not edit Is Nothing Then
+            edit.doOpenFileLocation()
+        End If
+    End Sub
 End Class

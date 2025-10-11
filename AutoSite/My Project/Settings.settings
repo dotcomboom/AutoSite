@@ -75,5 +75,20 @@
     <Setting Name="explorerAttributes" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="verticalSplit" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="commandLabels" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="firstStart" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="previewFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Arial, 10.8pt</Value>
+    </Setting>
+    <Setting Name="LivePreviewAttributes" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

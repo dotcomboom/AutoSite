@@ -154,7 +154,7 @@
     <value>True</value>
   </data>
   <data name="EditTabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>770, 209</value>
+    <value>770, 230</value>
   </data>
   <data name="EditTabs.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -205,7 +205,7 @@
     <value>32, 45</value>
   </data>
   <data name="Preview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>770, 310</value>
+    <value>770, 348</value>
   </data>
   <data name="Preview.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -241,10 +241,10 @@
     <value>1</value>
   </data>
   <data name="EdSplit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>778, 543</value>
+    <value>778, 602</value>
   </data>
   <data name="EdSplit.SplitterDistance" type="System.Int32, mscorlib">
-    <value>217</value>
+    <value>238</value>
   </data>
   <data name="EdSplit.SplitterWidth" type="System.Int32, mscorlib">
     <value>8</value>
@@ -292,7 +292,7 @@
     <value>0</value>
   </data>
   <data name="SiteTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 267</value>
+    <value>284, 326</value>
   </data>
   <data name="SiteTree.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -609,6 +609,18 @@ Build your site to populate the Attribute Map.</value>
   <data name="BrowseSite.Text" xml:space="preserve">
     <value>Browse Site</value>
   </data>
+  <data name="LiveBuildToggle.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="LiveBuildToggle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="LiveBuildToggle.Text" xml:space="preserve">
+    <value>Build changes automatically</value>
+  </data>
+  <data name="LiveBuildToggle.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
   <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -652,10 +664,10 @@ Build your site to populate the Attribute Map.</value>
     <value>1</value>
   </data>
   <data name="ExSplit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 543</value>
+    <value>292, 602</value>
   </data>
   <data name="ExSplit.SplitterDistance" type="System.Int32, mscorlib">
-    <value>275</value>
+    <value>334</value>
   </data>
   <data name="ExSplit.SplitterWidth" type="System.Int32, mscorlib">
     <value>8</value>
@@ -715,7 +727,7 @@ Build your site to populate the Attribute Map.</value>
     <value>1</value>
   </data>
   <data name="CoreSplit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1078, 543</value>
+    <value>1078, 602</value>
   </data>
   <data name="CoreSplit.SplitterDistance" type="System.Int32, mscorlib">
     <value>292</value>
@@ -757,7 +769,7 @@ Build your site to populate the Attribute Map.</value>
     <value>3, 4, 3, 4</value>
   </data>
   <data name="ToolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1078, 543</value>
+    <value>1078, 602</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Name" xml:space="preserve">
     <value>ToolStripContainer1.ContentPanel</value>
@@ -823,19 +835,19 @@ Build your site to populate the Attribute Map.</value>
     <value>None</value>
   </data>
   <data name="NewSite.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+N</value>
+    <value>Ctrl+N</value>
   </data>
   <data name="NewSite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>239, 24</value>
   </data>
   <data name="NewSite.Text" xml:space="preserve">
     <value>New Site...</value>
   </data>
   <data name="OpenFolder.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+O</value>
+    <value>Ctrl+O</value>
   </data>
   <data name="OpenFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>239, 24</value>
   </data>
   <data name="OpenFolder.Text" xml:space="preserve">
     <value>Open Site...</value>
@@ -844,7 +856,7 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+W</value>
   </data>
   <data name="CloseFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>239, 24</value>
   </data>
   <data name="CloseFile.Text" xml:space="preserve">
     <value>Close</value>
@@ -856,19 +868,19 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+Shift+W</value>
   </data>
   <data name="CloseSite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>239, 24</value>
   </data>
   <data name="CloseSite.Text" xml:space="preserve">
     <value>Close Site</value>
   </data>
   <data name="FileSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 6</value>
+    <value>236, 6</value>
   </data>
   <data name="Save.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+S</value>
   </data>
   <data name="Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>239, 24</value>
   </data>
   <data name="Save.Text" xml:space="preserve">
     <value>Save</value>
@@ -877,13 +889,13 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+Shift+S</value>
   </data>
   <data name="SaveAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>239, 24</value>
   </data>
   <data name="SaveAll.Text" xml:space="preserve">
     <value>Save All</value>
   </data>
   <data name="FileSep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 6</value>
+    <value>236, 6</value>
   </data>
   <data name="FileSep3.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -943,19 +955,19 @@ Build your site to populate the Attribute Map.</value>
     <value>Clear Recent Sites</value>
   </data>
   <data name="OpenRecent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>239, 24</value>
   </data>
   <data name="OpenRecent.Text" xml:space="preserve">
     <value>Recent Sites</value>
   </data>
   <data name="FileSep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 6</value>
+    <value>236, 6</value>
   </data>
   <data name="ExitItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Alt+F4</value>
   </data>
   <data name="ExitItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 24</value>
+    <value>239, 24</value>
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
     <value>Exit</value>
@@ -970,7 +982,7 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+Z</value>
   </data>
   <data name="Undo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="Undo.Text" xml:space="preserve">
     <value>Undo</value>
@@ -979,19 +991,19 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+Y</value>
   </data>
   <data name="Redo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
     <value>Redo</value>
   </data>
   <data name="EditSep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 6</value>
+    <value>247, 6</value>
   </data>
   <data name="Cut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+X</value>
   </data>
   <data name="Cut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
     <value>Cut</value>
@@ -1000,7 +1012,7 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+C</value>
   </data>
   <data name="Copy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="Copy.Text" xml:space="preserve">
     <value>Copy</value>
@@ -1009,70 +1021,70 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+V</value>
   </data>
   <data name="Paste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
     <value>Paste</value>
   </data>
   <data name="EditSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 6</value>
+    <value>247, 6</value>
   </data>
   <data name="SelectAll.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+S</value>
   </data>
   <data name="SelectAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
     <value>Select All</value>
   </data>
   <data name="EditSep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 6</value>
+    <value>247, 6</value>
   </data>
   <data name="Find.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+F</value>
   </data>
   <data name="Find.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Find...</value>
+    <value>Find</value>
   </data>
   <data name="Replace.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+H</value>
   </data>
   <data name="Replace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Replace...</value>
+    <value>Replace</value>
   </data>
   <data name="GoToMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+G</value>
   </data>
   <data name="GoToMnu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="GoToMnu.Text" xml:space="preserve">
-    <value>Go To...</value>
+    <value>Go To</value>
   </data>
   <data name="EditSep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 6</value>
+    <value>247, 6</value>
   </data>
   <data name="QuickInsertMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+J</value>
   </data>
   <data name="QuickInsertMnu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="QuickInsertMnu.Text" xml:space="preserve">
     <value>Quick Insert</value>
   </data>
   <data name="InsertConditional.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+I</value>
+    <value>Ctrl+I</value>
   </data>
   <data name="InsertConditional.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>250, 24</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
     <value>Insert Conditional...</value>
@@ -1084,37 +1096,43 @@ Build your site to populate the Attribute Map.</value>
     <value>&amp;Edit</value>
   </data>
   <data name="WordWrap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 24</value>
+    <value>201, 24</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
     <value>Word Wrap</value>
   </data>
   <data name="VirtualSpace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 24</value>
+    <value>201, 24</value>
   </data>
   <data name="VirtualSpace.Text" xml:space="preserve">
     <value>Virtual Space</value>
   </data>
   <data name="WideCaret.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 24</value>
+    <value>201, 24</value>
   </data>
   <data name="WideCaret.Text" xml:space="preserve">
     <value>Wide Caret</value>
   </data>
   <data name="FormatSep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 6</value>
+    <value>198, 6</value>
   </data>
   <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 24</value>
+    <value>201, 24</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
     <value>Live Preview</value>
   </data>
   <data name="FormatSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 6</value>
+    <value>198, 6</value>
+  </data>
+  <data name="LivePreviewFontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="LivePreviewFontToolStripMenuItem.Text" xml:space="preserve">
+    <value>Live Preview Font...</value>
   </data>
   <data name="EditorFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 24</value>
+    <value>201, 24</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
     <value>Monospace Font...</value>
@@ -1129,7 +1147,7 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+1</value>
   </data>
   <data name="ExplorerPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="ExplorerPanel.Text" xml:space="preserve">
     <value>Explorer</value>
@@ -1138,7 +1156,7 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+2</value>
   </data>
   <data name="BuildPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="BuildPanel.Text" xml:space="preserve">
     <value>Build</value>
@@ -1147,7 +1165,7 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+3</value>
   </data>
   <data name="EditorPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="EditorPanel.Text" xml:space="preserve">
     <value>Editor</value>
@@ -1156,25 +1174,40 @@ Build your site to populate the Attribute Map.</value>
     <value>Ctrl+4</value>
   </data>
   <data name="PreviewPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="PreviewPanel.Text" xml:space="preserve">
     <value>Preview</value>
   </data>
   <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 6</value>
+    <value>366, 6</value>
   </data>
-  <data name="MenuItem23.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+  <data name="CommandLabelsMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="CommandLabelsMnu.Text" xml:space="preserve">
+    <value>Command Labels</value>
+  </data>
+  <data name="ToolStripSeparator8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 6</value>
+  </data>
+  <data name="VerticalSplitMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+5</value>
   </data>
-  <data name="MenuItem23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+  <data name="VerticalSplitMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
   </data>
-  <data name="MenuItem23.Text" xml:space="preserve">
-    <value>Vertical Split</value>
+  <data name="VerticalSplitMnu.Text" xml:space="preserve">
+    <value>Vertical Split Editor</value>
+  </data>
+  <data name="VerticalSplitExplorerMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="VerticalSplitExplorerMnu.Text" xml:space="preserve">
+    <value>Vertical Split Explorer</value>
   </data>
   <data name="MenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 6</value>
+    <value>366, 6</value>
   </data>
   <data name="VS2017item.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 24</value>
@@ -1189,61 +1222,67 @@ Build your site to populate the Attribute Map.</value>
     <value>XP</value>
   </data>
   <data name="ExplorerIconSchemeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="ExplorerIconSchemeToolStripMenuItem.Text" xml:space="preserve">
     <value>Explorer Icon Scheme</value>
   </data>
   <data name="SystemIcons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
     <value>Use System Icons</value>
   </data>
   <data name="RefreshItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="RefreshItem.Text" xml:space="preserve">
     <value>Refresh Explorer</value>
   </data>
   <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 6</value>
+    <value>366, 6</value>
   </data>
   <data name="PreviewPage.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+P</value>
   </data>
   <data name="PreviewPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="PreviewPage.Text" xml:space="preserve">
-    <value>Preview File</value>
+    <value>Page Preview</value>
   </data>
   <data name="ViewFileOutput.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Alt+P</value>
   </data>
   <data name="ViewFileOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Output</value>
+  </data>
+  <data name="FileOutputInDefaultBrowserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="FileOutputInDefaultBrowserToolStripMenuItem.Text" xml:space="preserve">
+    <value>Output in Default Browser</value>
   </data>
   <data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 6</value>
+    <value>366, 6</value>
   </data>
   <data name="BrowseSitePreviewMnu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Browse Site in Preview</value>
+    <value>Output Site in Preview</value>
   </data>
   <data name="BrowseSiteMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+P</value>
   </data>
   <data name="BrowseSiteMnu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 24</value>
+    <value>369, 24</value>
   </data>
   <data name="BrowseSiteMnu.Text" xml:space="preserve">
-    <value>Browse Site in Default Browser</value>
+    <value>Output Site in Default Browser</value>
   </data>
   <data name="ViewMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 24</value>
@@ -1267,7 +1306,7 @@ Build your site to populate the Attribute Map.</value>
     <value>303, 24</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Sanitary Build</value>
   </data>
   <data name="ToolsSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 6</value>
@@ -1318,40 +1357,40 @@ Build your site to populate the Attribute Map.</value>
     <value>F1</value>
   </data>
   <data name="HelpTopics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>204, 24</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
     <value>View Help</value>
   </data>
   <data name="OpenSampleSite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>204, 24</value>
   </data>
   <data name="OpenSampleSite.Text" xml:space="preserve">
-    <value>Open Sample Site...</value>
+    <value>Open Sample Site</value>
   </data>
   <data name="HelpSep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 6</value>
+    <value>201, 6</value>
   </data>
   <data name="Website.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>204, 24</value>
   </data>
   <data name="Website.Text" xml:space="preserve">
     <value>Website</value>
   </data>
   <data name="GitHub.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>204, 24</value>
   </data>
   <data name="GitHub.Text" xml:space="preserve">
     <value>GitHub Repository</value>
   </data>
   <data name="SendFeedback.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>204, 24</value>
   </data>
   <data name="SendFeedback.Text" xml:space="preserve">
     <value>Send Feedback</value>
   </data>
   <data name="HelpSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 6</value>
+    <value>201, 6</value>
   </data>
   <data name="EnglishLang.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 24</value>
@@ -1378,16 +1417,16 @@ Build your site to populate the Attribute Map.</value>
     <value>Cymraeg</value>
   </data>
   <data name="LanguageMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>204, 24</value>
   </data>
   <data name="LanguageMenu.Text" xml:space="preserve">
     <value>Language / Idioma</value>
   </data>
   <data name="HelpSep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 6</value>
+    <value>201, 6</value>
   </data>
   <data name="AboutItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>204, 24</value>
   </data>
   <data name="AboutItem.Text" xml:space="preserve">
     <value>About AutoSite</value>
@@ -1419,44 +1458,47 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;MenuBar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="FileStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="StandardStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>417, 60</value>
   </metadata>
-  <data name="FileStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="StandardStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="ProjectLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
-  </data>
-  <data name="ProjectLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
-  </data>
-  <data name="ProjectLabel.Text" xml:space="preserve">
-    <value>Project</value>
   </data>
   <data name="NewSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="NewSiteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>43, 40</value>
   </data>
   <data name="NewSiteBtn.Text" xml:space="preserve">
-    <value>New Site (Ctrl+N)</value>
+    <value>New</value>
+  </data>
+  <data name="NewSiteBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="OpenSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="OpenSiteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>49, 40</value>
   </data>
   <data name="OpenSiteBtn.Text" xml:space="preserve">
-    <value>Open Site (Ctrl+O)</value>
+    <value>Open</value>
+  </data>
+  <data name="OpenSiteBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>44, 40</value>
+  </data>
+  <data name="SaveBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="SaveBtn.ToolTipText" xml:space="preserve">
     <value>Save (CTRL+S)</value>
@@ -1465,280 +1507,297 @@ Build your site to populate the Attribute Map.</value>
     <value>Magenta</value>
   </data>
   <data name="SaveAllBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>66, 40</value>
   </data>
   <data name="SaveAllBtn.Text" xml:space="preserve">
-    <value>Save All (Ctrl+Shift+S)</value>
+    <value>Save All</value>
   </data>
-  <data name="FileStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 28</value>
+  <data name="SaveAllBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
-  <data name="FileStrip.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 5</value>
-  </data>
-  <data name="FileStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="FileStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 25</value>
-  </data>
-  <data name="FileStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="FileStrip.Text" xml:space="preserve">
-    <value>World</value>
-  </data>
-  <data name="&gt;&gt;FileStrip.Name" xml:space="preserve">
-    <value>FileStrip</value>
-  </data>
-  <data name="&gt;&gt;FileStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileStrip.Parent" xml:space="preserve">
-    <value>ToolStripContainer1.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;FileStrip.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="EditStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>687, 60</value>
-  </metadata>
-  <data name="EditStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="EditLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
-  </data>
-  <data name="EditLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 24</value>
-  </data>
-  <data name="EditLabel.Text" xml:space="preserve">
-    <value>Edit</value>
+  <data name="ToolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 43</value>
   </data>
   <data name="CutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="CutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>35, 40</value>
   </data>
   <data name="CutBtn.Text" xml:space="preserve">
-    <value>Cut (Ctrl+X)</value>
+    <value>Cut</value>
+  </data>
+  <data name="CutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="CopyBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="CopyBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>47, 40</value>
   </data>
   <data name="CopyBtn.Text" xml:space="preserve">
-    <value>Copy (Ctrl+C)</value>
+    <value>Copy</value>
+  </data>
+  <data name="CopyBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="PasteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="PasteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>47, 40</value>
   </data>
   <data name="PasteBtn.Text" xml:space="preserve">
-    <value>Paste (Ctrl+V)</value>
+    <value>Paste</value>
   </data>
-  <data name="InsertBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="PasteBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="QuickInsertBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="InsertBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 24</value>
+  <data name="QuickInsertBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 40</value>
   </data>
-  <data name="InsertBtn.Text" xml:space="preserve">
+  <data name="QuickInsertBtn.Text" xml:space="preserve">
     <value>Insert</value>
   </data>
-  <data name="InsertBtn.ToolTipText" xml:space="preserve">
-    <value>Open the Quick Insert panel in the editor.</value>
+  <data name="QuickInsertBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="QuickInsertBtn.ToolTipText" xml:space="preserve">
+    <value>Quick Insert (CTRL+Space)</value>
   </data>
   <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 27</value>
+    <value>6, 43</value>
   </data>
   <data name="FindBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="FindBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>41, 40</value>
   </data>
   <data name="FindBtn.Text" xml:space="preserve">
-    <value>Find (Ctrl+F)</value>
+    <value>Find</value>
+  </data>
+  <data name="FindBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="ReplaceBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="ReplaceBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>66, 40</value>
   </data>
   <data name="ReplaceBtn.Text" xml:space="preserve">
-    <value>Replace (Ctrl+H)</value>
+    <value>Replace</value>
+  </data>
+  <data name="ReplaceBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="GotoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="GotoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>52, 40</value>
   </data>
   <data name="GotoBtn.Text" xml:space="preserve">
-    <value>Go To (Ctrl+G)</value>
+    <value>Go To</value>
+  </data>
+  <data name="GotoBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 27</value>
+    <value>6, 43</value>
   </data>
   <data name="UndoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="UndoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>49, 40</value>
   </data>
   <data name="UndoBtn.Text" xml:space="preserve">
-    <value>Undo (Ctrl+Z)</value>
+    <value>Undo</value>
+  </data>
+  <data name="UndoBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="RedoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+    <value>48, 40</value>
   </data>
   <data name="RedoBtn.Text" xml:space="preserve">
-    <value>Redo (Ctrl+Y)</value>
+    <value>Redo</value>
   </data>
-  <data name="EditStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 53</value>
+  <data name="RedoBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
-  <data name="EditStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 27</value>
-  </data>
-  <data name="EditStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;EditStrip.Name" xml:space="preserve">
-    <value>EditStrip</value>
-  </data>
-  <data name="&gt;&gt;EditStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditStrip.Parent" xml:space="preserve">
-    <value>ToolStripContainer1.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;EditStrip.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="TopBuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>797, 60</value>
-  </metadata>
-  <data name="TopBuildStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="BuildLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
-  </data>
-  <data name="BuildLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 24</value>
-  </data>
-  <data name="BuildLabel.Text" xml:space="preserve">
-    <value>Apricot</value>
-  </data>
-  <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 24</value>
-  </data>
-  <data name="ToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Live Preview</value>
-  </data>
-  <data name="PreviewBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="PreviewBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 24</value>
-  </data>
-  <data name="PreviewBtn.Text" xml:space="preserve">
-    <value>Preview</value>
-  </data>
-  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 27</value>
+  <data name="ToolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 43</value>
   </data>
   <data name="CleanBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 24</value>
+    <value>195, 24</value>
   </data>
   <data name="CleanBuildBtn.Text" xml:space="preserve">
-    <value>Sanitary Build...</value>
+    <value>Clean and build</value>
   </data>
-  <data name="OpenOutputFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 24</value>
+  <data name="BuildOnChangesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
   </data>
-  <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
-    <value>Open folder</value>
+  <data name="BuildOnChangesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Build on changes </value>
   </data>
   <data name="BuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="BuildBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 24</value>
+    <value>59, 40</value>
   </data>
   <data name="BuildBtn.Text" xml:space="preserve">
     <value>Build</value>
   </data>
-  <data name="LiveBuildToggle.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="BuildBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="LivePreviewMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 24</value>
+  </data>
+  <data name="LivePreviewMnu.Text" xml:space="preserve">
+    <value>Live Preview</value>
+  </data>
+  <data name="LivePreviewFontCopyMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 24</value>
+  </data>
+  <data name="LivePreviewFontCopyMnu.Text" xml:space="preserve">
+    <value>Live Preview Font...</value>
+  </data>
+  <data name="AttributesInLivePreviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 24</value>
+  </data>
+  <data name="AttributesInLivePreviewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Attributes in Live Preview</value>
+  </data>
+  <data name="PreviewBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="LiveBuildToggle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 24</value>
+  <data name="PreviewBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 40</value>
   </data>
-  <data name="LiveBuildToggle.Text" xml:space="preserve">
-    <value>Build changes automatically</value>
+  <data name="PreviewBtn.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="PreviewBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 24</value>
+    <value>259, 24</value>
   </data>
   <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>Open in default browser</value>
+    <value>Open with default program</value>
+  </data>
+  <data name="OpenFileLocationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="OpenFileLocationToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="OpenOutputFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
+    <value>Open output folder</value>
   </data>
   <data name="ViewOutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="ViewOutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 24</value>
+    <value>71, 40</value>
   </data>
   <data name="ViewOutBtn.Text" xml:space="preserve">
-    <value>View Output</value>
+    <value>Output</value>
   </data>
-  <data name="TopBuildStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 80</value>
+  <data name="ViewOutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
-  <data name="TopBuildStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 27</value>
+  <data name="OriginalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
   </data>
-  <data name="TopBuildStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="OriginalToolStripMenuItem.Text" xml:space="preserve">
+    <value>Standard</value>
   </data>
-  <data name="&gt;&gt;TopBuildStrip.Name" xml:space="preserve">
-    <value>TopBuildStrip</value>
+  <data name="WidescreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
   </data>
-  <data name="&gt;&gt;TopBuildStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="WidescreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Widescreen</value>
   </data>
-  <data name="&gt;&gt;TopBuildStrip.Parent" xml:space="preserve">
-    <value>ToolStripContainer1.TopToolStripPanel</value>
+  <data name="EditToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
   </data>
-  <data name="&gt;&gt;TopBuildStrip.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="EditToolStripMenuItem.Text" xml:space="preserve">
+    <value>Editor</value>
   </data>
-  <metadata name="TabStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>942, 60</value>
-  </metadata>
-  <data name="TabStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
+  <data name="NoEditorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
   </data>
-  <data name="TabLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+  <data name="NoEditorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Compact</value>
   </data>
-  <data name="TabLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 22</value>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 6</value>
   </data>
-  <data name="TabLabel.Text" xml:space="preserve">
-    <value>Document</value>
+  <data name="ExSplitOrient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVDhPY2BgYGD49u3bf3IxSD/YACcnJ5IxhgEf3n/E
+        wPjERw0YNWCQGkAqRjGAXAw2gBIAAJTD5LD1fpDdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ExSplitOrient.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ExSplitOrient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="ExSplitOrient.Text" xml:space="preserve">
+    <value>Explorer Orientation</value>
+  </data>
+  <data name="ExSplitOrient.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="HorizontalBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVDhPY2BgYGD49u3bf3IxSD/YACcnJ5IxhgEf3n/E
+        wPjERw0YNWCQGkAqRjGAXAw2gBIAAJTD5LD1fpDdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="HorizontalBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="HorizontalBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="HorizontalBtn.Text" xml:space="preserve">
+    <value>Preview Orientation</value>
+  </data>
+  <data name="HorizontalBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="ToolStripButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ToolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 40</value>
+  </data>
+  <data name="ToolStripButton1.Text" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="ToolStripButton1.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1752,50 +1811,43 @@ Build your site to populate the Attribute Map.</value>
     <value>Magenta</value>
   </data>
   <data name="CloseBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>49, 40</value>
   </data>
   <data name="CloseBtn.Text" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="HorizontalBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGaSURBVDhPxY3JS0JRHEb7z5ooqKAoGijLJkLCiAbKFqJl
-        ZQNWNtir6CGKDa96iaamDWaDFQRFNNBgqc9VZju38UVeuIsLrlp04G7Odzm/jIy/0jjiU66chJKmvRhG
-        7U/Qbz5iQLiHUQwm6we9wvxhKDnhimLcGYXaeguV+Rra+WCyQiUqUwGz//RbuPzC+gV5a+cJrAQTsJ0l
-        wHklWE4/YT7+BB+IY/kojiV/HAuHHyibO/pOBUy+GOZ8Mcx6Y5jelWD0SJh0SzDs/F6NYMwRwYg9jOHt
-        MHRb7+jffINGeIPCEEAqMOORkA69GGYVpXFonwSmXBF2o+g2QqyiyLQeEjA43tmNoll9YRWlUuUgAb34
-        ym6UPssjqyhlHSIJ6IRndqN083esohQr10lAbXtgN0r7wg2rKIUKGwn08Ok/KYyXrKLkNfAk0MldsRul
-        eSzIKkpu3SIJKKfTX5EPHbOKklXDkUBxm01oGg2gfvAAJW2rKGq1oqDFjPwmHtm1i1KV2ofyXjdKu5zI
-        lS8hR8Yhq5pDZrVJSAX+nR+4JaSnrUt2aQAAAABJRU5ErkJggg==
-</value>
+  <data name="CloseBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
-  <data name="HorizontalBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="StandardStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
   </data>
-  <data name="HorizontalBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+  <data name="StandardStrip.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 5</value>
   </data>
-  <data name="TabStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 107</value>
+  <data name="StandardStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
   </data>
-  <data name="TabStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 25</value>
+  <data name="StandardStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 45</value>
   </data>
-  <data name="TabStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="StandardStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;TabStrip.Name" xml:space="preserve">
-    <value>TabStrip</value>
+  <data name="StandardStrip.Text" xml:space="preserve">
+    <value>Standard</value>
   </data>
-  <data name="&gt;&gt;TabStrip.Type" xml:space="preserve">
+  <data name="&gt;&gt;StandardStrip.Name" xml:space="preserve">
+    <value>StandardStrip</value>
+  </data>
+  <data name="&gt;&gt;StandardStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TabStrip.Parent" xml:space="preserve">
+  <data name="&gt;&gt;StandardStrip.Parent" xml:space="preserve">
     <value>ToolStripContainer1.TopToolStripPanel</value>
   </data>
-  <data name="&gt;&gt;TabStrip.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;StandardStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer1.TopToolStripPanel.Name" xml:space="preserve">
     <value>ToolStripContainer1.TopToolStripPanel</value>
@@ -1825,10 +1877,10 @@ Build your site to populate the Attribute Map.</value>
     <value>529, 17</value>
   </metadata>
   <data name="FolderBrowser.Description" xml:space="preserve">
-    <value>Pick a folder in which to store your site's assets. If no site exists in that folder, one will be created.</value>
+    <value>Select a folder to store your site's files. If no site exists in that folder, one will be created.</value>
   </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>355, 17</value>
+    <value>358, 23</value>
   </metadata>
   <data name="XP.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -1989,6 +2041,9 @@ Build your site to populate the Attribute Map.</value>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 7, 6, 7</value>
   </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>18, 47</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>
   </data>
@@ -2029,6 +2084,12 @@ Build your site to populate the Attribute Map.</value>
     <value>BrowseSite</value>
   </data>
   <data name="&gt;&gt;BrowseSite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LiveBuildToggle.Name" xml:space="preserve">
+    <value>LiveBuildToggle</value>
+  </data>
+  <data name="&gt;&gt;LiveBuildToggle.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FileMenu.Name" xml:space="preserve">
@@ -2283,6 +2344,12 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;FormatSep2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;LivePreviewFontToolStripMenuItem.Name" xml:space="preserve">
+    <value>LivePreviewFontToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewFontToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;EditorFont.Name" xml:space="preserve">
     <value>EditorFont</value>
   </data>
@@ -2325,10 +2392,28 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MenuItem23.Name" xml:space="preserve">
-    <value>MenuItem23</value>
+  <data name="&gt;&gt;CommandLabelsMnu.Name" xml:space="preserve">
+    <value>CommandLabelsMnu</value>
   </data>
-  <data name="&gt;&gt;MenuItem23.Type" xml:space="preserve">
+  <data name="&gt;&gt;CommandLabelsMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator8.Name" xml:space="preserve">
+    <value>ToolStripSeparator8</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VerticalSplitMnu.Name" xml:space="preserve">
+    <value>VerticalSplitMnu</value>
+  </data>
+  <data name="&gt;&gt;VerticalSplitMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VerticalSplitExplorerMnu.Name" xml:space="preserve">
+    <value>VerticalSplitExplorerMnu</value>
+  </data>
+  <data name="&gt;&gt;VerticalSplitExplorerMnu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MenuItem3.Name" xml:space="preserve">
@@ -2383,6 +2468,12 @@ Build your site to populate the Attribute Map.</value>
     <value>ViewFileOutput</value>
   </data>
   <data name="&gt;&gt;ViewFileOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileOutputInDefaultBrowserToolStripMenuItem.Name" xml:space="preserve">
+    <value>FileOutputInDefaultBrowserToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;FileOutputInDefaultBrowserToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripSeparator4.Name" xml:space="preserve">
@@ -2553,12 +2644,6 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;AboutItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ProjectLabel.Name" xml:space="preserve">
-    <value>ProjectLabel</value>
-  </data>
-  <data name="&gt;&gt;ProjectLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;NewSiteBtn.Name" xml:space="preserve">
     <value>NewSiteBtn</value>
   </data>
@@ -2583,11 +2668,11 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;SaveAllBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EditLabel.Name" xml:space="preserve">
-    <value>EditLabel</value>
+  <data name="&gt;&gt;ToolStripSeparator6.Name" xml:space="preserve">
+    <value>ToolStripSeparator6</value>
   </data>
-  <data name="&gt;&gt;EditLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ToolStripSeparator6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CutBtn.Name" xml:space="preserve">
     <value>CutBtn</value>
@@ -2607,10 +2692,10 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;PasteBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InsertBtn.Name" xml:space="preserve">
-    <value>InsertBtn</value>
+  <data name="&gt;&gt;QuickInsertBtn.Name" xml:space="preserve">
+    <value>QuickInsertBtn</value>
   </data>
-  <data name="&gt;&gt;InsertBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;QuickInsertBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Sep2.Name" xml:space="preserve">
@@ -2655,28 +2740,10 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;RedoBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BuildLabel.Name" xml:space="preserve">
-    <value>BuildLabel</value>
+  <data name="&gt;&gt;ToolStripSeparator7.Name" xml:space="preserve">
+    <value>ToolStripSeparator7</value>
   </data>
-  <data name="&gt;&gt;BuildLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PreviewBtn.Name" xml:space="preserve">
-    <value>PreviewBtn</value>
-  </data>
-  <data name="&gt;&gt;PreviewBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem1.Name" xml:space="preserve">
-    <value>ToolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
-    <value>ToolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+  <data name="&gt;&gt;ToolStripSeparator7.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BuildBtn.Name" xml:space="preserve">
@@ -2691,17 +2758,35 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;CleanBuildBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OpenOutputFolderBtn.Name" xml:space="preserve">
-    <value>OpenOutputFolderBtn</value>
+  <data name="&gt;&gt;BuildOnChangesToolStripMenuItem.Name" xml:space="preserve">
+    <value>BuildOnChangesToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;OpenOutputFolderBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;BuildOnChangesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LiveBuildToggle.Name" xml:space="preserve">
-    <value>LiveBuildToggle</value>
+  <data name="&gt;&gt;PreviewBtn.Name" xml:space="preserve">
+    <value>PreviewBtn</value>
   </data>
-  <data name="&gt;&gt;LiveBuildToggle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PreviewBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewMnu.Name" xml:space="preserve">
+    <value>LivePreviewMnu</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewFontCopyMnu.Name" xml:space="preserve">
+    <value>LivePreviewFontCopyMnu</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewFontCopyMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributesInLivePreviewToolStripMenuItem.Name" xml:space="preserve">
+    <value>AttributesInLivePreviewToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;AttributesInLivePreviewToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ViewOutBtn.Name" xml:space="preserve">
     <value>ViewOutBtn</value>
@@ -2715,22 +2800,70 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;ViewinDefaultBrowser.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TabLabel.Name" xml:space="preserve">
-    <value>TabLabel</value>
+  <data name="&gt;&gt;OpenFileLocationToolStripMenuItem.Name" xml:space="preserve">
+    <value>OpenFileLocationToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;TabLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;OpenFileLocationToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CloseBtn.Name" xml:space="preserve">
-    <value>CloseBtn</value>
+  <data name="&gt;&gt;OpenOutputFolderBtn.Name" xml:space="preserve">
+    <value>OpenOutputFolderBtn</value>
   </data>
-  <data name="&gt;&gt;CloseBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;OpenOutputFolderBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton1.Name" xml:space="preserve">
+    <value>ToolStripButton1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OriginalToolStripMenuItem.Name" xml:space="preserve">
+    <value>OriginalToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;OriginalToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WidescreenToolStripMenuItem.Name" xml:space="preserve">
+    <value>WidescreenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;WidescreenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditToolStripMenuItem.Name" xml:space="preserve">
+    <value>EditToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;EditToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NoEditorToolStripMenuItem.Name" xml:space="preserve">
+    <value>NoEditorToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;NoEditorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExSplitOrient.Name" xml:space="preserve">
+    <value>ExSplitOrient</value>
+  </data>
+  <data name="&gt;&gt;ExSplitOrient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HorizontalBtn.Name" xml:space="preserve">
     <value>HorizontalBtn</value>
   </data>
   <data name="&gt;&gt;HorizontalBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CloseBtn.Name" xml:space="preserve">
+    <value>CloseBtn</value>
+  </data>
+  <data name="&gt;&gt;CloseBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FolderBrowser.Name" xml:space="preserve">
@@ -2925,6 +3058,12 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;LiveBuildWorker.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;SelectPreviewFont.Name" xml:space="preserve">
+    <value>SelectPreviewFont</value>
+  </data>
+  <data name="&gt;&gt;SelectPreviewFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FontDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
@@ -2975,5 +3114,8 @@ Build your site to populate the Attribute Map.</value>
   </data>
   <metadata name="LiveBuildWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>524, 60</value>
+  </metadata>
+  <metadata name="SelectPreviewFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 103</value>
   </metadata>
 </root>

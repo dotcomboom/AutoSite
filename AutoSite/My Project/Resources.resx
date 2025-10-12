@@ -157,8 +157,8 @@
   <data name="SaveAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveAll_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cut_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Error_BuildToViewOutput" xml:space="preserve">
+    <value>Build the site first to view output.</value>
   </data>
   <data name="XP_Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xp_folder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +180,12 @@ pages.</value>
   <data name="Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Undo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_2Rows_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2Rows_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddPageGuide_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddPageGuide_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SanitaryBuild" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CleanData_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -195,14 +201,16 @@ pages.</value>
   <data name="Application_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Application_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
-    <value>Update Site</value>
+  <data name="Error_CouldNotSaveFile" xml:space="preserve">
+    <value>The file could not be saved.</value>
+  </data>
+  <data name="Error_LogSaveFail" xml:space="preserve">
+    <value>Something went wrong when trying to save the log:
+
+{0}</value>
   </data>
   <data name="autosite_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>The file could not be saved.</value>
   </data>
   <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -216,11 +224,14 @@ pages.</value>
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
+  <data name="QuickInsert_path_Tip" xml:space="preserve">
+    <value>Path</value>
+  </data>
   <data name="Script_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Script_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Explorer_Templates" xml:space="preserve">
-    <value>Templates</value>
+  <data name="Cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cut_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewJs" xml:space="preserve">
     <value>new-script</value>
@@ -244,6 +255,9 @@ Use once in templates.</value>
   </data>
   <data name="Question_RemoveFromRecents" xml:space="preserve">
     <value>The site located in {0} could not be opened. Do you want to remove it from the Recent Sites list?</value>
+  </data>
+  <data name="HTMLFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HTMLFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NewFile_16x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewFile_16x1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -275,9 +289,6 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
   <data name="Snippet_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Snippet_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Explorer_Includes" xml:space="preserve">
-    <value>Includes</value>
-  </data>
   <data name="InsertPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InsertPanel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -291,6 +302,9 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>&lt;!-- attrib template: default --&gt;
 &lt;!-- attrib title: New HTML Page --&gt;
 </value>
+  </data>
+  <data name="AddAttribute_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddAttribute_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -335,12 +349,8 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
   <data name="UI_OpenFolderLocation" xml:space="preserve">
     <value>Open folder location</value>
   </data>
-  <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: New PHP Page --&gt;
-&lt;?php
-      echo "This will be interpreted by the server. Hello universe!";
-?&gt;</value>
+  <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
+    <value>Update Site</value>
   </data>
   <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
     <value>Some files have unsaved changes. Save them?</value>
@@ -353,6 +363,9 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
   </data>
   <data name="Web" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Web_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert__Example" xml:space="preserve">
+    <value>Example: {0}</value>
   </data>
   <data name="Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PageBody_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -383,17 +396,14 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
   <data name="Prompt_ProjectUpgrade" xml:space="preserve">
     <value>AutoSite now uses the pages\ path for the Pages folder. Compatibility with older releases of AutoSite will be affected by this conversion.</value>
   </data>
-  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Changes will be applied on restart.</value>
-  </data>
   <data name="PY_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PY_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Explorer_OutputFolder" xml:space="preserve">
     <value>Output Folder</value>
   </data>
-  <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Example: {0}</value>
+  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
+    <value>Changes will be applied on restart.</value>
   </data>
   <data name="Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Folder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -404,23 +414,32 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
   <data name="Structure_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Structure_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Explorer_Templates" xml:space="preserve">
+    <value>Templates</value>
+  </data>
   <data name="Build" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BuildSolution_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConditionalRuleIfThen_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConditionalRuleIfThen_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="StyleSheet_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StyleSheet_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HTMLFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HTMLFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Explorer_Pages" xml:space="preserve">
+    <value>Pages</value>
   </data>
-  <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Path</value>
+  <data name="Explorer_Includes" xml:space="preserve">
+    <value>Includes</value>
   </data>
   <data name="NewFileCollection_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewFileCollection_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_modified_TipText" xml:space="preserve">
     <value>Outputs the date the page was last modified on.</value>
+  </data>
+  <data name="QuickReplace_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuickReplace_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Browse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Browse_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -443,17 +462,21 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
   <data name="UI_OpenWithDefault" xml:space="preserve">
     <value>Open with default program</value>
   </data>
-  <data name="Error_BuildToViewOutput" xml:space="preserve">
-    <value>Build the site first to view output.</value>
-  </data>
   <data name="AddBinaryFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddBinaryFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Error_UpgradeFail_Title" xml:space="preserve">
     <value>Unable to convert</value>
   </data>
-  <data name="Explorer_Pages" xml:space="preserve">
-    <value>Pages</value>
+  <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
+    <value>&lt;!-- attrib template: default --&gt;
+&lt;!-- attrib title: New PHP Page --&gt;
+&lt;?php
+      echo "This will be interpreted by the server. Hello universe!";
+?&gt;</value>
+  </data>
+  <data name="_2Columns_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2Columns_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
     <value>Defines the {0} attribute for this page.</value>
@@ -484,10 +507,8 @@ Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
   <data name="Defaults_NewFile" xml:space="preserve">
     <value>new-file</value>
   </data>
-  <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Something went wrong when trying to save the log:
-
-{0}</value>
+  <data name="QuickFind_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuickFind_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -513,10 +534,7 @@ Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
     <value>Define a new attribute</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="_2Columns_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2Columns_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_2Rows_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2Rows_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GridUniform_16x_MD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GridUniform_16x_MD.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

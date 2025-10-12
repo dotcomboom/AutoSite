@@ -495,6 +495,24 @@
   <ItemGroup>
     <None Include="Resources\3Columns_16x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuickReplace_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuickFind_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConditionalRuleIfThen_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddAttribute_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPageGuide_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridUniform_16x_MD.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

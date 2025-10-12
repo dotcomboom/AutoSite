@@ -68,6 +68,11 @@ Public Class Editor
     Private ConditionalStyle As New TextStyle(Brushes.ForestGreen, Nothing, FontStyle.Italic)
 
     Private rc As String
+
+    Private Sub prepLivePreview()
+        doPreview(True)
+    End Sub
+
     Friend Sub doLivePreview()
         rc = Code.Text.Replace("[#root#]", "file://" & Main.SiteTree.Nodes(0).Tag.Replace("\", "/") & "/out/")
         If My.Settings.LivePreviewAttributes Then
@@ -77,13 +82,31 @@ Public Class Editor
             rc = CommonMark.CommonMarkConverter.Convert(rc)
         End If
 
-        Main.Preview.DocumentText = "<FONT FACE=""" & My.Settings.previewFont.Name & """>" & _
-                 rc & "</FONT>"
+        'Main.Preview.SuspendLayout()
+
+        'Main.Preview.DocumentText = "<FONT FACE=""" & My.Settings.previewFont.Name & """>" & _
+        '         rc & "</FONT>"
+
+        'Main.Preview.Document.Body.InnerHtml = "<FONT FACE=""" & My.Settings.previewFont.Name & """>" & _
+        '         rc & "</FONT>"
+
+        If Not Main.livePreviewHolder = _rel() Then
+            Main.livePreviewHolder = _rel()
+            prepLivePreview()
+        End If
+
+        If (Main.Preview.Document.GetElementsByTagName("autosite").Count >= 1) Then
+            Main.Preview.Document.GetElementsByTagName("autosite").Item(0).InnerHtml = rc
+        End If
+        'Main.Preview.Document.Window.ScrollTo(0, Main.Preview.Document.Window.Size.Height * (Code.Selection.FromLine / Code.LinesCount))
+
     End Sub
 
     Private Sub Editor_TextChanged(ByVal sender As System.Object, ByVal e As FastColoredTextBoxNS.TextChangedEventArgs) Handles Code.TextChanged
         If (Not Code.Text = Snapshot) And (Not openFile Is Nothing) Then
-            Me.Parent.Text = openFile.Replace(siteRoot & "\", "") & "*"
+            If Not Me.Parent.Text.EndsWith("*") Then
+                Me.Parent.Text = openFile.Replace(siteRoot & "\", "") & "*"
+            End If
             SaveBtn.Enabled = True
         End If
         If My.Settings.SyntaxHighlight Then
@@ -99,7 +122,7 @@ Public Class Editor
             'for atteql, value, text in re.findall(r'\[(.*)=(.*?)\](.*)\[\/\1.*\]', template):
         End If
         Try
-            If My.Settings.LivePreview Then
+            If My.Settings.LivePreview And Main.PreviewPanel.Checked Then
                 doLivePreview()
             End If
         Catch ex As Exception
@@ -174,8 +197,9 @@ Public Class Editor
     Public Sub doReplace() Handles Replace.Click
         Code.ShowReplaceDialog()
     End Sub
+    Private attributes As String = ""
 
-    Public Sub doPreview() Handles Preview.ButtonClick
+    Public Sub doPreview(Optional ByVal livePreviewPrep = False)
         Dim rel = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
         If Not Main.PreviewPanel.Checked Then
@@ -191,9 +215,24 @@ Public Class Editor
             Preview.Enabled = False
             ViewOutput.Enabled = False
             template_cache.Clear()
-            PreviewWorker.RunWorkerAsync({Code.Text, rel})
+            If livePreviewPrep Then
+                'Dim attributes As String = "<!-- attrib title: <span title=""This is a limited preview. Live Preview uses the default template, and does not include attribute or conditional processing."">Live Preview</span> -->" & Environment.NewLine
+                attributes = ""
+                Dim regex As RegularExpressions.Regex = New RegularExpressions.Regex("<!--\s*(?:attrib\s){1}\s*(.*?)\s*:\s*(.*?)\s*-->")
+                For Each Match As Match In regex.Matches(Code.Text)
+                    attributes &= Match.ToString & Environment.NewLine
+                Next
+
+                activLivePreviewOnFinishLoad = True
+                PreviewWorker.RunWorkerAsync({attributes & "<autosite></autosite>", rel})
+            Else
+                Main.livePreviewHolder = ""
+                PreviewWorker.RunWorkerAsync({Code.Text, rel})
+            End If
         End If
     End Sub
+
+    Private activLivePreviewOnFinishLoad As Boolean = False
 
     Private Sub Preview_DropDownOpening(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Preview.DropDownOpening
         LivePreview.Checked = My.Settings.LivePreview
@@ -399,6 +438,11 @@ Public Class Editor
         Main.Preview.DocumentText = e.Result
         Preview.Enabled = True
         ViewOutput.Enabled = True
+        If activLivePreviewOnFinishLoad Then
+            doLivePreview()
+            activLivePreviewOnFinishLoad = False
+            Main.haveBrowserCallForLivePreview = True
+        End If
     End Sub
 
     Private Function _rel()

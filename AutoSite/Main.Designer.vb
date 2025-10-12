@@ -153,7 +153,6 @@ Partial Class Main
         Me.Sep2 = New System.Windows.Forms.ToolStripSeparator()
         Me.FindBtn = New System.Windows.Forms.ToolStripButton()
         Me.ReplaceBtn = New System.Windows.Forms.ToolStripButton()
-        Me.GotoBtn = New System.Windows.Forms.ToolStripButton()
         Me.Sep3 = New System.Windows.Forms.ToolStripSeparator()
         Me.UndoBtn = New System.Windows.Forms.ToolStripButton()
         Me.RedoBtn = New System.Windows.Forms.ToolStripButton()
@@ -164,19 +163,18 @@ Partial Class Main
         Me.PreviewBtn = New System.Windows.Forms.ToolStripSplitButton()
         Me.LivePreviewMnu = New System.Windows.Forms.ToolStripMenuItem()
         Me.LivePreviewFontCopyMnu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AttributesInLivePreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewOutBtn = New System.Windows.Forms.ToolStripSplitButton()
         Me.ViewinDefaultBrowser = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileLocationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenOutputFolderBtn = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripSplitButton()
+        Me.LayoutBtn = New System.Windows.Forms.ToolStripSplitButton()
         Me.OriginalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WidescreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NoEditorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExSplitOrient = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HorizontalBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EdSplitOrient = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseBtn = New System.Windows.Forms.ToolStripButton()
         Me.FolderBrowser = New System.Windows.Forms.FolderBrowserDialog()
         Me.XP = New System.Windows.Forms.ImageList(Me.components)
@@ -256,6 +254,7 @@ Partial Class Main
         '
         resources.ApplyResources(Me.EditTabs, "EditTabs")
         Me.EditTabs.ImageList = Me.VS2017
+        Me.EditTabs.Multiline = True
         Me.EditTabs.Name = "EditTabs"
         Me.EditTabs.SelectedIndex = 0
         '
@@ -275,7 +274,6 @@ Partial Class Main
         'ExSplit
         '
         resources.ApplyResources(Me.ExSplit, "ExSplit")
-        Me.ExSplit.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
         Me.ExSplit.Name = "ExSplit"
         '
         'ExSplit.Panel1
@@ -677,6 +675,7 @@ Partial Class Main
         '
         'InsertConditional
         '
+        Me.InsertConditional.Image = Global.AutoSite.My.Resources.Resources.ConditionalRuleIfThen_16x
         Me.InsertConditional.MergeIndex = 14
         Me.InsertConditional.Name = "InsertConditional"
         resources.ApplyResources(Me.InsertConditional, "InsertConditional")
@@ -1050,7 +1049,7 @@ Partial Class Main
         '
         Me.StandardStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(216, Byte), Integer))
         resources.ApplyResources(Me.StandardStrip, "StandardStrip")
-        Me.StandardStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.SaveBtn, Me.SaveAllBtn, Me.ToolStripSeparator6, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.QuickInsertBtn, Me.Sep2, Me.FindBtn, Me.ReplaceBtn, Me.GotoBtn, Me.Sep3, Me.UndoBtn, Me.RedoBtn, Me.ToolStripSeparator7, Me.BuildBtn, Me.PreviewBtn, Me.ViewOutBtn, Me.ToolStripButton1, Me.CloseBtn})
+        Me.StandardStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSiteBtn, Me.OpenSiteBtn, Me.SaveBtn, Me.SaveAllBtn, Me.ToolStripSeparator6, Me.CutBtn, Me.CopyBtn, Me.PasteBtn, Me.QuickInsertBtn, Me.Sep2, Me.FindBtn, Me.ReplaceBtn, Me.Sep3, Me.UndoBtn, Me.RedoBtn, Me.ToolStripSeparator7, Me.BuildBtn, Me.PreviewBtn, Me.ViewOutBtn, Me.LayoutBtn, Me.CloseBtn})
         Me.StandardStrip.Name = "StandardStrip"
         Me.StandardStrip.Stretch = True
         '
@@ -1123,23 +1122,16 @@ Partial Class Main
         'FindBtn
         '
         Me.FindBtn.ForeColor = System.Drawing.Color.Black
-        Me.FindBtn.Image = Global.AutoSite.My.Resources.Resources.Search
+        Me.FindBtn.Image = Global.AutoSite.My.Resources.Resources.QuickFind_16x
         resources.ApplyResources(Me.FindBtn, "FindBtn")
         Me.FindBtn.Name = "FindBtn"
         '
         'ReplaceBtn
         '
         Me.ReplaceBtn.ForeColor = System.Drawing.Color.Black
-        Me.ReplaceBtn.Image = Global.AutoSite.My.Resources.Resources.ReplaceAll
+        Me.ReplaceBtn.Image = Global.AutoSite.My.Resources.Resources.QuickReplace_16x
         resources.ApplyResources(Me.ReplaceBtn, "ReplaceBtn")
         Me.ReplaceBtn.Name = "ReplaceBtn"
-        '
-        'GotoBtn
-        '
-        Me.GotoBtn.ForeColor = System.Drawing.Color.Black
-        Me.GotoBtn.Image = Global.AutoSite.My.Resources.Resources.GotoRow
-        resources.ApplyResources(Me.GotoBtn, "GotoBtn")
-        Me.GotoBtn.Name = "GotoBtn"
         '
         'Sep3
         '
@@ -1190,7 +1182,7 @@ Partial Class Main
         '
         'PreviewBtn
         '
-        Me.PreviewBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LivePreviewMnu, Me.LivePreviewFontCopyMnu, Me.AttributesInLivePreviewToolStripMenuItem})
+        Me.PreviewBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LivePreviewMnu, Me.LivePreviewFontCopyMnu})
         Me.PreviewBtn.ForeColor = System.Drawing.Color.Black
         Me.PreviewBtn.Image = Global.AutoSite.My.Resources.Resources.WebTest
         resources.ApplyResources(Me.PreviewBtn, "PreviewBtn")
@@ -1206,11 +1198,6 @@ Partial Class Main
         '
         Me.LivePreviewFontCopyMnu.Name = "LivePreviewFontCopyMnu"
         resources.ApplyResources(Me.LivePreviewFontCopyMnu, "LivePreviewFontCopyMnu")
-        '
-        'AttributesInLivePreviewToolStripMenuItem
-        '
-        Me.AttributesInLivePreviewToolStripMenuItem.Name = "AttributesInLivePreviewToolStripMenuItem"
-        resources.ApplyResources(Me.AttributesInLivePreviewToolStripMenuItem, "AttributesInLivePreviewToolStripMenuItem")
         '
         'ViewOutBtn
         '
@@ -1236,13 +1223,13 @@ Partial Class Main
         Me.OpenOutputFolderBtn.Name = "OpenOutputFolderBtn"
         resources.ApplyResources(Me.OpenOutputFolderBtn, "OpenOutputFolderBtn")
         '
-        'ToolStripButton1
+        'LayoutBtn
         '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OriginalToolStripMenuItem, Me.WidescreenToolStripMenuItem, Me.EditToolStripMenuItem, Me.NoEditorToolStripMenuItem, Me.ToolStripSeparator2, Me.ExSplitOrient, Me.HorizontalBtn})
-        Me.ToolStripButton1.Image = Global.AutoSite.My.Resources.Resources.Application_16x
-        resources.ApplyResources(Me.ToolStripButton1, "ToolStripButton1")
-        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.LayoutBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.LayoutBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OriginalToolStripMenuItem, Me.WidescreenToolStripMenuItem, Me.EditToolStripMenuItem, Me.NoEditorToolStripMenuItem, Me.ToolStripSeparator2, Me.ExSplitOrient, Me.EdSplitOrient})
+        Me.LayoutBtn.Image = Global.AutoSite.My.Resources.Resources.Application_16x
+        resources.ApplyResources(Me.LayoutBtn, "LayoutBtn")
+        Me.LayoutBtn.Name = "LayoutBtn"
         '
         'OriginalToolStripMenuItem
         '
@@ -1274,10 +1261,10 @@ Partial Class Main
         resources.ApplyResources(Me.ExSplitOrient, "ExSplitOrient")
         Me.ExSplitOrient.Name = "ExSplitOrient"
         '
-        'HorizontalBtn
+        'EdSplitOrient
         '
-        resources.ApplyResources(Me.HorizontalBtn, "HorizontalBtn")
-        Me.HorizontalBtn.Name = "HorizontalBtn"
+        resources.ApplyResources(Me.EdSplitOrient, "EdSplitOrient")
+        Me.EdSplitOrient.Name = "EdSplitOrient"
         '
         'CloseBtn
         '
@@ -1666,11 +1653,9 @@ Partial Class Main
     Friend WithEvents CutBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents CopyBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents PasteBtn As System.Windows.Forms.ToolStripButton
-    Friend WithEvents QuickInsertBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents Sep2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents FindBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents ReplaceBtn As System.Windows.Forms.ToolStripButton
-    Friend WithEvents GotoBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents Sep3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents UndoBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents RedoBtn As System.Windows.Forms.ToolStripButton
@@ -1681,7 +1666,6 @@ Partial Class Main
     Friend WithEvents ViewinDefaultBrowser As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuildBtn As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents CleanBuildBtn As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CloseBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents LiveBuildToggle As System.Windows.Forms.ToolStripButton
     Friend WithEvents FileOutputInDefaultBrowserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CommandLabelsMnu As System.Windows.Forms.ToolStripMenuItem
@@ -1693,13 +1677,14 @@ Partial Class Main
     Friend WithEvents SelectPreviewFont As System.Windows.Forms.FontDialog
     Friend WithEvents LivePreviewFontCopyMnu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents AttributesInLivePreviewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripSplitButton
+    Friend WithEvents QuickInsertBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents CloseBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents LayoutBtn As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents OriginalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents WidescreenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NoEditorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ExSplitOrient As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents HorizontalBtn As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EdSplitOrient As System.Windows.Forms.ToolStripMenuItem
 End Class

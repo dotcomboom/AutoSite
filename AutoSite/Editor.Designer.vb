@@ -272,24 +272,27 @@ Partial Class Editor
         '
         'Context
         '
-        Me.Context.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Cut, Me.Copy, Me.Paste, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertConditional, Me.InsertMnu})
+        Me.Context.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Cut, Me.Copy, Me.Paste, Me.ConSep2, Me.SelectAll, Me.ConSep3, Me.InsertMnu, Me.InsertConditional})
         Me.Context.Name = "Context"
         resources.ApplyResources(Me.Context, "Context")
         '
         'Cut
         '
+        Me.Cut.Image = Global.AutoSite.My.Resources.Resources.Cut
         Me.Cut.MergeIndex = 0
         Me.Cut.Name = "Cut"
         resources.ApplyResources(Me.Cut, "Cut")
         '
         'Copy
         '
+        Me.Copy.Image = Global.AutoSite.My.Resources.Resources.Copy
         Me.Copy.MergeIndex = 1
         Me.Copy.Name = "Copy"
         resources.ApplyResources(Me.Copy, "Copy")
         '
         'Paste
         '
+        Me.Paste.Image = Global.AutoSite.My.Resources.Resources.Paste
         Me.Paste.MergeIndex = 2
         Me.Paste.Name = "Paste"
         resources.ApplyResources(Me.Paste, "Paste")
@@ -314,12 +317,14 @@ Partial Class Editor
         '
         'InsertConditional
         '
+        Me.InsertConditional.Image = Global.AutoSite.My.Resources.Resources.ConditionalRuleIfThen_16x
         Me.InsertConditional.MergeIndex = 6
         Me.InsertConditional.Name = "InsertConditional"
         resources.ApplyResources(Me.InsertConditional, "InsertConditional")
         '
         'InsertMnu
         '
+        Me.InsertMnu.Image = Global.AutoSite.My.Resources.Resources.Tag
         Me.InsertMnu.MergeIndex = 8
         Me.InsertMnu.Name = "InsertMnu"
         resources.ApplyResources(Me.InsertMnu, "InsertMnu")

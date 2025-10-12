@@ -171,6 +171,7 @@ Public Class Main
         If My.Computer.FileSystem.DirectoryExists(path) Then
             If doClose() Then
                 EditTabs.TabPages.Clear()
+                EditTabs.Hide()
                 Dim templatePath = path & "\templates"
                 Dim inPath = path & "\pages"
                 Dim includePath = path & "\includes"
@@ -261,6 +262,8 @@ Public Class Main
     End Sub
 
     Public Sub panelUpdate()
+        CloseBtn.Visible = EditTabs.TabPages.Count > 0
+
         EdSplit.Panel2Collapsed = Not (PreviewPanel.Checked)
         CoreSplit.Panel1Collapsed = (ExplorerPanel.Checked = False) And (BuildPanel.Checked = False)
         EdSplit.Panel1Collapsed = Not (EditorPanel.Checked)
@@ -282,10 +285,10 @@ Public Class Main
 
         If VerticalSplitMnu.Checked Then
             EdSplit.Orientation = Orientation.Vertical
-            HorizontalBtn.Image = My.Resources._2Columns_16x
+            EdSplitOrient.Image = My.Resources._2Columns_16x
         Else
             EdSplit.Orientation = Orientation.Horizontal
-            HorizontalBtn.Image = My.Resources._2Rows_16x
+            EdSplitOrient.Image = My.Resources._2Rows_16x
         End If
 
 
@@ -299,7 +302,7 @@ Public Class Main
         PasteBtn.Visible = EditorPanel.Checked
         FindBtn.Visible = EditorPanel.Checked
         ReplaceBtn.Visible = EditorPanel.Checked
-        GotoBtn.Visible = EditorPanel.Checked
+        'GotoBtn.Visible = EditorPanel.Checked
         QuickInsertBtn.Visible = EditorPanel.Checked
         UndoBtn.Visible = EditorPanel.Checked
         RedoBtn.Visible = EditorPanel.Checked
@@ -317,7 +320,7 @@ Public Class Main
 
         FormatMenu.Visible = EditorPanel.Checked
 
-        HorizontalBtn.Visible = EditorPanel.Checked And PreviewPanel.Checked
+        EdSplitOrient.Visible = EditorPanel.Checked And PreviewPanel.Checked
 
         'StatusBar.Visible = StatusBarMnu.Checked
 
@@ -349,6 +352,7 @@ Public Class Main
             End If
         Next
 
+
         If EditorPanel.Checked Or PreviewPanel.Checked Then
             ExSplit.Orientation = Orientation.Horizontal
             ExSplitOrient.Visible = False
@@ -366,6 +370,12 @@ Public Class Main
             ExSplitOrient.Visible = True
             VerticalSplitExplorerMnu.Enabled = True
         End If
+
+        If EditorPanel.Checked And Not PreviewPanel.Checked Then
+            ToolStripSeparator2.Visible = False
+        Else
+            ToolStripSeparator2.Visible = True
+        End If
     End Sub
     Public Sub openEditor(ByVal path As String)
         EditTabs.Show()
@@ -381,12 +391,14 @@ Public Class Main
         EditTabs.TabPages.Add(tab)
         EditTabs.SelectedTab = tab
         Dim game As Boolean = False
-        For Each species In EverySpeciesofNeopet
-            If tab.Text.EndsWith("\" & species & ".ts") Then
-                game = True
-                Exit For
-            End If
-        Next
+        If tab.Text.EndsWith(".ts") Then ' might as well check this first before iterating
+            For Each species In EverySpeciesofNeopet
+                If tab.Text.EndsWith("\" & species & ".ts") Then
+                    game = True
+                    Exit For
+                End If
+            Next
+        End If
         If game Then
             Dim cheat As New CheatGame With {
                 .Parent = tab,
@@ -1694,7 +1706,7 @@ Public Class Main
     End Sub
 
     Private Function activeEditor()
-        If EditTabs.TabCount > 0 Then
+        If EditTabs.TabPages.Count > 0 Then
             For Each c In EditTabs.SelectedTab.Controls
                 If c.GetType() Is GetType(Editor) Then
                     Dim edit As Editor = c
@@ -1746,7 +1758,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Undo.Click
+    Private Sub Undo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Undo.Click, UndoBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doUndo()
@@ -1755,28 +1767,28 @@ Public Class Main
 
     Public EverySpeciesofNeopet As String() = {"Acara", "Aisha", "Blumaroo", "Bori", "Bruce", "Buzz", "Chia", "Chomby", "Cybunny", "Draik", "Elephante", "Eyrie", "Flotsam", "Gelert", "Gnorbu", "Grarrl", "Grundo", "Hissi", "Ixi", "Jetsam", "JubJub", "Kacheek", "Kau", "Kiko", "Koi", "Korbat", "Kougra", "Krawk", "Kyrii", "Lenny", "Lupe", "Lutari", "Meerca", "Moehog", "Mynci", "Nimmo", "Ogrin", "Peophin", "Poogle", "Pteri", "Quiggle", "Ruki", "Scorchio", "Shoyru", "Skeith", "Techo", "Tonu", "Tuskaninny", "Uni", "Usul", "Vandagyre", "Varwolf", "Wocky", "Xweetok", "Yurble", "Zafara"}
 
-    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click
+    Private Sub Redo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Redo.Click, RedoBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doRedo()
         End If
     End Sub
 
-    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click
+    Private Sub Cut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cut.Click, CutBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doCut()
         End If
     End Sub
 
-    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click
+    Private Sub Copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Copy.Click, CopyBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doCopy()
         End If
     End Sub
 
-    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click
+    Private Sub Paste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Paste.Click, PasteBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doPaste()
@@ -1797,14 +1809,14 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Find_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Find.Click
+    Private Sub Find_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Find.Click, FindBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doFind()
         End If
     End Sub
 
-    Private Sub Replace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Replace.Click
+    Private Sub Replace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Replace.Click, ReplaceBtn.Click
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.doReplace()
@@ -1836,9 +1848,14 @@ Public Class Main
         Dim edit As Editor = activeEditor()
         If Not edit Is Nothing Then
             edit.Close()
+        ElseIf EditTabs.TabPages.Count > 0 Then
+            If EditTabs.SelectedTab.Controls.ContainsKey("CheatGame") Then
+                EditTabs.TabPages.Remove(EditTabs.SelectedTab)
+            End If
         End If
-        If EditTabs.TabCount = 0 Then
+        If EditTabs.TabPages.Count = 0 Then
             EditTabs.Hide()
+            panelUpdate()
         End If
     End Sub
 
@@ -1932,7 +1949,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub SiteTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs)
+    Private Sub SiteTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles SiteTree.ItemDrag
         If e.Button = Windows.Forms.MouseButtons.Left Then
             If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & "\pages\") Or e.Item.tag.contains(SiteTree.Nodes(0).Tag & "\includes\") Then
                 Dim slash = ""
@@ -2187,14 +2204,13 @@ Public Class Main
         CoreSplit.Refresh()
     End Sub
 
-    Private Sub MenuItem23_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VerticalSplitMnu.Click, HorizontalBtn.Click
-        ' icons tk
+    Private Sub EdSplitOrient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VerticalSplitMnu.Click, EdSplitOrient.Click
         If EdSplit.Orientation = Orientation.Horizontal Then
             EdSplit.Orientation = Orientation.Vertical
-            HorizontalBtn.Image = My.Resources._2Columns_16x
+            EdSplitOrient.Image = My.Resources._2Columns_16x
         Else
             EdSplit.Orientation = Orientation.Horizontal
-            HorizontalBtn.Image = My.Resources._2Rows_16x
+            EdSplitOrient.Image = My.Resources._2Rows_16x
         End If
         VerticalSplitMnu.Checked = EdSplit.Orientation = Orientation.Vertical
 
@@ -2203,14 +2219,13 @@ Public Class Main
         My.Settings.verticalSplit = VerticalSplitMnu.Checked
         panelUpdate()
     End Sub
-    Private Sub ExSplitOrient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExSplitOrient.Click, VerticalSplitExplorerMnu.Click
-        ' icons tk
+    Private Sub ExSplitOrient_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VerticalSplitExplorerMnu.Click, ExSplitOrient.Click
         If ExSplit.Orientation = Orientation.Horizontal Then
             ExSplit.Orientation = Orientation.Vertical
-            HorizontalBtn.Image = My.Resources._2Columns_16x
+            EdSplitOrient.Image = My.Resources._2Columns_16x
         Else
             ExSplit.Orientation = Orientation.Horizontal
-            HorizontalBtn.Image = My.Resources._2Rows_16x
+            EdSplitOrient.Image = My.Resources._2Rows_16x
         End If
         VerticalSplitExplorerMnu.Checked = ExSplit.Orientation = Orientation.Vertical
 
@@ -2238,47 +2253,6 @@ Public Class Main
         Log.Clear()
     End Sub
 
-    'Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, Build.Click, BuildBtn.ButtonClick
-
-    'End Sub
-
-    'Private Sub doSanitaryBuild(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SanitaryBuildBtn.Click, SanitaryBuild.Click, CleanBuildBtn.Click
-
-    'End Sub
-
-    'Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.ButtonClick
-
-    'End Sub
-
-    'Private Sub PreviewPage_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreviewPage.Click
-
-    'End Sub
-
-
-    'Private Sub doSanitaryBuild(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SanitaryBuildBtn.Click, SanitaryBuild.Click, CleanBuildBtn.Click
-
-    'End Sub
-
-    'Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, BuildBtn.ButtonClick, Build.Click
-
-    'End Sub
-
-    'Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewOutBtn.ButtonClick, ViewFileOutput.Click
-
-    'End Sub
-
-    'Private Sub Build_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildSite.Click, Build.Click, BuildBtn.ButtonClick
-
-    'End Sub
-
-    'Private Sub doSanitaryBuild(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SanitaryBuildBtn.Click, SanitaryBuild.Click, CleanBuildBtn.Click
-
-    'End Sub
-
-    'Private Sub ViewFileOutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ViewFileOutput.Click, ViewOutBtn.ButtonClick
-
-    'End Sub
-
     Private Sub LivePreviewMnu_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LivePreviewMnu.CheckedChanged
         My.Settings.LivePreview = LivePreviewMnu.Checked
         LivePreview.Checked = LivePreviewMnu.Checked
@@ -2299,11 +2273,11 @@ Public Class Main
         PreviewPanel.Checked = True
         VerticalSplitMnu.Checked = False
 
-        If Me.Size.Width < 1024 Then
-            Me.Size = New Size(Math.Min(1024, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
+        If Me.Size.Width < 800 Then
+            Me.Size = New Size(Math.Min(800, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
         End If
-        If Me.Size.Height < 768 Then
-            Me.Size = New Size(Me.Size.Width, Math.Min(768, My.Computer.Screen.WorkingArea.Height))
+        If Me.Size.Height < 600 Then
+            Me.Size = New Size(Me.Size.Width, Math.Min(600, My.Computer.Screen.WorkingArea.Height))
         End If
 
         thirdCoreSplit()
@@ -2319,11 +2293,11 @@ Public Class Main
         PreviewPanel.Checked = True
         VerticalSplitMnu.Checked = True
 
-        If Me.Size.Width < 1024 Then
-            Me.Size = New Size(Math.Min(1024, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
+        If Me.Size.Width < 800 Then
+            Me.Size = New Size(Math.Min(800, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
         End If
-        If Me.Size.Height < 768 Then
-            Me.Size = New Size(Me.Size.Width, Math.Min(768, My.Computer.Screen.WorkingArea.Height))
+        If Me.Size.Height < 600 Then
+            Me.Size = New Size(Me.Size.Width, Math.Min(600, My.Computer.Screen.WorkingArea.Height))
         End If
 
         thirdCoreSplit()
@@ -2333,21 +2307,22 @@ Public Class Main
     End Sub
 
     Private Sub NoEditorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NoEditorToolStripMenuItem.Click
+        'Compact
         ExplorerPanel.Checked = True
         EditorPanel.Checked = False
         BuildPanel.Checked = True
         PreviewPanel.Checked = False
         'CommandLabelsMnu.Checked = False
-        VerticalSplitExplorerMnu.Checked = True
+        VerticalSplitExplorerMnu.Checked = False
 
-        Me.WindowState = FormWindowState.Normal
+        'Me.WindowState = FormWindowState.Normal
 
-        If Me.Size.Width < 1024 Then
-            Me.Size = New Size(Math.Min(1024, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
-        End If
-        If Me.Size.Height < 768 Then
-            Me.Size = New Size(Me.Size.Width, Math.Min(768, My.Computer.Screen.WorkingArea.Height))
-        End If
+        'If Me.Size.Width < 1024 Then
+        '    Me.Size = New Size(Math.Min(1024, My.Computer.Screen.WorkingArea.Width), Me.Size.Height)
+        'End If
+        'If Me.Size.Height < 768 Then
+        '    Me.Size = New Size(Me.Size.Width, Math.Min(768, My.Computer.Screen.WorkingArea.Height))
+        'End If
 
         thirdCoreSplit()
         panelUpdate()
@@ -2405,11 +2380,11 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub ToolStripButton1_ButtonClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.ButtonClick
-        If ExSplitOrient.Visible Then
+    Private Sub LayoutBtn_ButtonClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LayoutBtn.ButtonClick
+        If Not EditorPanel.Checked And Not PreviewPanel.Checked Then
             ExSplitOrient_Click(sender, e)
         ElseIf EditorPanel.Checked And PreviewPanel.Checked Then
-            MenuItem23_Click(sender, e)
+            EdSplitOrient_Click(sender, e)
         End If
     End Sub
 
@@ -2418,5 +2393,21 @@ Public Class Main
         If Not edit Is Nothing Then
             edit.doOpenFileLocation()
         End If
+    End Sub
+
+    ' designates which file editor has a live preview lock
+    Public livePreviewHolder As String
+    ' set by editor when live preview prep (template render) is done processing and sent to browser control, 
+    ' when browser control finishes it will call live preview
+    Friend haveBrowserCallForLivePreview As Boolean = False
+
+    Private Sub Preview_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserDocumentCompletedEventArgs) Handles Preview.DocumentCompleted
+        If haveBrowserCallForLivePreview Then
+            Dim edit As Editor = activeEditor()
+            If Not edit Is Nothing Then
+                edit.doLivePreview()
+            End If
+        End If
+        haveBrowserCallForLivePreview = False
     End Sub
 End Class

@@ -78,7 +78,7 @@ Public Class Editor
         If My.Settings.LivePreviewAttributes Then
             rc = rc.Replace("<!-- attrib", "    <!-- attrib")
         End If
-        If Me.Parent.Text.Replace("*", "").EndsWith(".md") Then
+        If openFile.EndsWith(".md") Then
             rc = CommonMark.CommonMarkConverter.Convert(rc)
         End If
 
@@ -90,8 +90,8 @@ Public Class Editor
         'Main.Preview.Document.Body.InnerHtml = "<FONT FACE=""" & My.Settings.previewFont.Name & """>" & _
         '         rc & "</FONT>"
 
-        If Not Main.livePreviewHolder = _rel() Then
-            Main.livePreviewHolder = _rel()
+        If Not Main.livePreviewHolder = OutRel() Then
+            Main.livePreviewHolder = OutRel()
             prepLivePreview()
         End If
 
@@ -101,11 +101,11 @@ Public Class Editor
         'Main.Preview.Document.Window.ScrollTo(0, Main.Preview.Document.Window.Size.Height * (Code.Selection.FromLine / Code.LinesCount))
 
     End Sub
-
+    
     Private Sub Editor_TextChanged(ByVal sender As System.Object, ByVal e As FastColoredTextBoxNS.TextChangedEventArgs) Handles Code.TextChanged
         If (Not Code.Text = Snapshot) And (Not openFile Is Nothing) Then
             If Not Me.Parent.Text.EndsWith("*") Then
-                Me.Parent.Text = openFile.Replace(siteRoot & "\", "") & "*"
+                Me.Parent.Text = KindRel() & "*"
             End If
             SaveBtn.Enabled = True
         End If
@@ -142,7 +142,7 @@ Public Class Editor
                 Main.refreshTree(Main.SiteTree.Nodes(0))
             End If
             Snapshot = Code.Text
-            Me.Parent.Text = openFile.Replace(siteRoot & "\", "")
+            Me.Parent.Text = KindRel()
             SaveBtn.Enabled = False
 
                 If Snapshot.Contains("<!-- attrib title: ") And Snapshot.Contains("-->") Then
@@ -207,7 +207,7 @@ Public Class Editor
             Main.panelUpdate()
         End If
 
-        If Not Me.Parent.Text.StartsWith("pages\") Then
+        If Not fromRoot().StartsWith("pages\") Then
             Main.Preview.Navigate(Path.Combine(Main.SiteTree.Nodes(0).Text, "out\"))
             Main.Preview.DocumentText = Code.Text
         Else
@@ -262,7 +262,7 @@ Public Class Editor
     End Sub
 
     Public Sub doViewOutput() Handles ViewOutput.ButtonClick
-        Dim url As String = siteRoot & "\out\" & _rel()
+        Dim url As String = siteRoot & "\out\" & OutRel()
         If Not My.Computer.FileSystem.FileExists(url) Then
             If Build.Enabled Then
                 Main.afterBuildNavigatePreview = url
@@ -276,7 +276,7 @@ Public Class Editor
     End Sub
 
     Public Sub doViewinDefaultBrowser() Handles ViewinDefaultBrowser.Click
-        Dim url As String = siteRoot & "\out\" & _rel()
+        Dim url As String = siteRoot & "\out\" & OutRel()
         If Not My.Computer.FileSystem.FileExists(url) Then
             If Build.Enabled Then
                 Main.afterBuildLaunch = url
@@ -338,9 +338,9 @@ Public Class Editor
         internal.Add("modified")
         internal.Add("template")
 
-        If (Not Me.Parent.Text.StartsWith("includes\")) And Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
+        If (Not fromRoot().StartsWith("includes\")) And Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
             ' Internal
-            If Me.Parent.Text.StartsWith("templates\") And Not Code.Text.Contains("[#content#]") Then
+            If fromRoot().StartsWith("templates\") And Not Code.Text.Contains("[#content#]") Then
                 items.Add(New AutocompleteMenuNS.AutocompleteItem("[#content#]", 2, "content", My.Resources.QuickInsert_content_Tip, My.Resources.QuickInsert_content_TipText))
             End If
             items.Add(New AutocompleteMenuNS.AutocompleteItem("[#root#]", 2, "root", My.Resources.QuickInsert_root_Tip, My.Resources.QuickInsert_root_TipText & Environment.NewLine & Environment.NewLine & rootCalc()))
@@ -348,7 +348,7 @@ Public Class Editor
             items.Add(New AutocompleteMenuNS.AutocompleteItem("[#path#]", 2, "path", My.Resources.QuickInsert_path_Tip, My.Resources.QuickInsert_path_TipText & Environment.NewLine & Environment.NewLine & pathCalc()))
             For Each Attribute As TreeNode In Main.AttributeTree.Nodes
                 If Not internal.Contains(Attribute.Text) Then
-                    If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or Me.Parent.Text.StartsWith("templates\") Then
+                    If Code.Text.Contains("<!-- attrib " & Attribute.Text & ":") Or fromRoot().StartsWith("templates\") Then
                         items.Add(New AutocompleteMenuNS.AutocompleteItem("[#" & Attribute.Text & "#]", 0, Attribute.Text, Attribute.Text, String.Format(My.Resources.QuickInsert_Generic_TipText, Attribute.Text)))
                     End If
                 End If
@@ -356,7 +356,7 @@ Public Class Editor
         End If
 
         ' Internal define option
-        If Me.Parent.Text.StartsWith("pages\") Then
+        If fromRoot().StartsWith("pages\") Then
             If Not Code.Text.Contains("<!-- attrib template:") Then
                 items.Insert(0, New AutocompleteMenuNS.AutocompleteItem("<!-- attrib template: default -->", 1, String.Format(My.Resources.QuickInsert_DefineGeneric_Tip, "template"), String.Format(My.Resources.QuickInsert_DefineGeneric_Tip, "template"), String.Format(My.Resources.QuickInsert_DefineTemplate_TipText, "default", "default.html")))
             End If
@@ -373,7 +373,7 @@ Public Class Editor
             items.Add(New AutocompleteMenuNS.AutocompleteItem("<!-- attrib ...: ... -->", 5, My.Resources.QuickInsert_DefineNew_Tip, My.Resources.QuickInsert_DefineNew_Tip, My.Resources.QuickInsert_DefineNew_TipText & Environment.NewLine & Environment.NewLine & String.Format(My.Resources.QuickInsert__Example, "<!-- attrib ...: ... -->")))
         End If
 
-        If Not Me.Parent.Text.StartsWith("includes\") Then
+        If Not fromRoot().StartsWith("includes\") Then
             If Not Code.GetLineText(Code.Selection.FromLine).StartsWith("<!-- attrib") Then
                 items.Add(New AutocompleteMenuNS.AutocompleteItem(My.Resources.QuickInsert_InsertConditional_Tip, 4, My.Resources.QuickInsert_InsertConditional_Tip, My.Resources.QuickInsert_InsertConditional_Tip, My.Resources.QuickInsert_InsertConditional_TipText))
             End If
@@ -393,7 +393,7 @@ Public Class Editor
         ' Estimates [#root#] attribute output
         Dim toreturn = String.Format(My.Resources.QuickInsert__Example, "../")
 
-        If Not Me.Parent.Text.StartsWith("templates\") Then
+        If Not fromRoot().StartsWith("templates\") Then
             Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
             toreturn = ""
@@ -414,7 +414,7 @@ Public Class Editor
         ' Estimates [#path#] attribute output
         Dim toreturn = String.Format(My.Resources.QuickInsert__Example, "about/index.md")
 
-        If Not Me.Parent.Text.StartsWith("templates\") Then
+        If Not fromRoot().StartsWith("templates\") Then
             Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
 
             toreturn = String.Format(My.Resources.QuickInsert__Output, rel)
@@ -445,8 +445,18 @@ Public Class Editor
         End If
     End Sub
 
-    Private Function _rel()
-        Dim rel As String = openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+    Public Function fromRoot()
+        ' replace Me.Parent.Text to keep pages\, includes\, templates\
+        Return openFile.Replace(siteRoot & "\", "")
+    End Function
+    
+    Public Function KindRel()
+        ' replace Me.Parent.Text to keep pages\, includes\, templates\
+        Return openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+    End Function
+    
+    Private Function OutRel()
+        Dim rel As String = KindRel()
 
         If rel.EndsWith(".md") Then
             rel = rel.Substring(0, rel.Length - 3) & ".html"
@@ -477,7 +487,7 @@ Public Class Editor
     End Sub
 
     Public Sub doOpenFileLocation()
-        Dim url As String = siteRoot & "\out\" & _rel()
+        Dim url As String = siteRoot & "\out\" & OutRel()
 
         url = Path.GetDirectoryName(url)
         If Not My.Computer.FileSystem.DirectoryExists(url) Then

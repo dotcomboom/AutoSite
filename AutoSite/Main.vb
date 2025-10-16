@@ -377,24 +377,26 @@ Public Class Main
             ToolStripSeparator2.Visible = True
         End If
     End Sub
+    
     Public Sub openEditor(ByVal path As String)
         EditTabs.Show()
 
+        EditTabs.ImageList = VS2017
         EditTabs.SuspendLayout()
-
         Dim tab As New TabPage With {
             .Tag = path,
             .BackColor = Color.White,
             .ToolTipText = path,
-            .Text = path.Replace(SiteTree.Nodes.Item(0).Text & "\", "")
+            .Text = path.Replace(SiteTree.Nodes.Item(0).Text & "\", "").Replace("pages\", "").replace("templates\", "").Replace("includes\", "")
         }
         EditTabs.TabPages.Add(tab)
         EditTabs.SelectedTab = tab
         Dim game As Boolean = False
         If tab.Text.EndsWith(".ts") Then ' might as well check this first before iterating
             For Each species In EverySpeciesofNeopet
-                If tab.Text.EndsWith("\" & species & ".ts") Then
+                If tab.Text.EndsWith(species & ".ts") Then
                     game = True
+                    tab.ImageIndex = 3
                     Exit For
                 End If
             Next
@@ -410,16 +412,30 @@ Public Class Main
                 .Parent = tab,
                 .Dock = DockStyle.Fill
             }
-            editor.Code.Text = editor.ReadAllText(tab.Tag)
-            editor.Code.ClearUndo()
-            editor.Snapshot = editor.Code.Text
             editor.siteRoot = SiteTree.Nodes.Item(0).Text
             editor.openFile = tab.Tag
-            If tab.Text.StartsWith("templates\") Then
+            tab.Text = editor.KindRel()
+            editor.Code.Text = editor.ReadAllText(tab.Tag)
+            editor.Snapshot = editor.Code.Text
+            editor.Code.ClearUndo()
+            if tab.Text.EndsWith("*")
+                tab.text = tab.Text.Substring(0, tab.text.Length - 1)
+            End If
+            tab.ImageIndex = 4 ' Build
+            Console.WriteLine(editor.fromRoot())
+            if editor.fromRoot().StartsWith("pages\") Then
+                tab.ImageKey = "Page"
+                tab.ImageIndex = 2
+            End If
+            If editor.fromRoot().StartsWith("templates\") Then
+                tab.ImageKey = "Template"
+                tab.ImageIndex = 1
                 editor.ViewOutput.Visible = False
                 editor.Preview.Text = My.Resources.UI_Editor_ViewFile
             End If
-            If tab.Text.StartsWith("includes\") Then
+            If editor.fromRoot().StartsWith("includes\") Then
+                tab.ImageKey = "Include"
+                tab.ImageIndex = 3
                 editor.InsertConditional.Enabled = False
                 editor.Preview.Text = My.Resources.UI_Editor_ViewFile
             End If

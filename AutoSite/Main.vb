@@ -3,6 +3,7 @@ Imports System.IO
 Imports System.Text
 Imports Microsoft.Win32
 Imports System.Globalization
+Imports CefSharp
 
 Public Class Main
 
@@ -226,7 +227,7 @@ Public Class Main
                 End While
 
                 If My.Settings.browserOpen And My.Computer.FileSystem.FileExists(root.Text & "\out\index.html") Then
-                    Preview.Navigate(root.Text & "\out\index.html")
+                    Preview.LoadUrl(root.Text & "\out\index.html")
                 End If
 
                 refreshTree(root)
@@ -493,7 +494,7 @@ Public Class Main
         Me.Text = wTitle
         EditTabs.TabPages.Clear()
         AttributeTree.Nodes.Clear()
-        Preview.DocumentText = ""
+        Preview.LoadHtml("")
         My.Settings.openProject = ""
         Watcher.EnableRaisingEvents = False
         Watcher.Filter = ""
@@ -1280,7 +1281,7 @@ Public Class Main
         SanitaryBuildBtn.Enabled = True
 
         If afterBuildNavigatePreview.Length > 0 Then
-            Preview.Navigate(afterBuildNavigatePreview)
+            Preview.LoadUrl(afterBuildNavigatePreview)
         ElseIf afterBuildLaunch.Length > 0 Then
             Process.Start(afterBuildLaunch)
         End If
@@ -1377,29 +1378,40 @@ Public Class Main
             panelUpdate()
         End If
         If My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.html") Then
-            Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.html")
+            Preview.LoadUrl(SiteTree.Nodes(0).Text & "\out\index.html")
         ElseIf My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.phtml") Then
-            Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.phtml", False)
+            Preview.LoadUrl(SiteTree.Nodes(0).Text & "\out\index.phtml")
         ElseIf My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Text & "\out\index.php") Then
-            Preview.Navigate(SiteTree.Nodes(0).Text & "\out\index.php", False)
+            Preview.LoadUrl(SiteTree.Nodes(0).Text & "\out\index.php")
         Else
             If My.Computer.FileSystem.DirectoryExists(SiteTree.Nodes(0).Text & "\out\") Then
                 Dim html = My.Computer.FileSystem.GetFiles(SiteTree.Nodes(0).Text & "\out\", FileIO.SearchOption.SearchAllSubDirectories, "*.html")
                 If html.Count > 0 Then
-                    Preview.Navigate(html.Item(0))
+                    Preview.LoadUrl(html.Item(0))
                 Else
-                    Preview.Navigate(SiteTree.Nodes(0).Text & "\out\")
+                    Preview.LoadUrl(SiteTree.Nodes(0).Text & "\out\")
                 End If
             End If
         End If
     End Sub
 
-    Private Sub Preview_Navigating(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserNavigatingEventArgs) Handles Preview.Navigating
+    Private Sub Preview_Navigating(ByVal sender As System.Object, ByVal e As LoadingStateChangedEventArgs) Handles Preview.LoadingStateChanged
         ' This check routes directories that contain a index.html to that index.html instead of a directory listing
-        If My.Computer.FileSystem.FileExists(e.Url.AbsolutePath.Replace("/", "\").Replace("%20", " ") & "\index.html") Then
-            e.Cancel = True
-            Preview.Navigate(e.Url.AbsolutePath.Replace("%20", " ") & "/index.html")
+        if e.IsLoading then
+            If My.Computer.FileSystem.FileExists(e.Browser.FocusedFrame.url.Replace("/", "\").Replace("%20", " ") & "\index.html") Then
+                ' e.Cancel = True
+                Preview.LoadUrl(e.Browser.FocusedFrame.Url.Replace("%20", " ") & "/index.html")
+            End If
+        else if e.Browser.HasDocument
+                If haveBrowserCallForLivePreview Then
+                    Dim edit As Editor = activeEditor()
+                    If Not edit Is Nothing Then
+                        edit.doLivePreview()
+                    End If
+                End If
+                haveBrowserCallForLivePreview = False
         End If
+        
     End Sub
 
     Private Sub HandleLiveBuildCreatedChanged(ByVal e As System.IO.FileSystemEventArgs)
@@ -2095,7 +2107,7 @@ Public Class Main
 
     Public Sub Preview_Navigate(ByVal url As String)
         ' hooked into by editor
-        Preview.Navigate(url)
+        Preview.LoadUrl(url)
 
         If Not PreviewPanel.Checked Then
             PreviewPanel.Checked = True
@@ -2417,13 +2429,13 @@ Public Class Main
     ' when browser control finishes it will call live preview
     Friend haveBrowserCallForLivePreview As Boolean = False
 
-    Private Sub Preview_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserDocumentCompletedEventArgs) Handles Preview.DocumentCompleted
-        If haveBrowserCallForLivePreview Then
-            Dim edit As Editor = activeEditor()
-            If Not edit Is Nothing Then
-                edit.doLivePreview()
-            End If
-        End If
-        haveBrowserCallForLivePreview = False
-    End Sub
+    'Private Sub Preview_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserDocumentCompletedEventArgs) Handles Preview.DocumentCompleted
+    '    If haveBrowserCallForLivePreview Then
+    '        Dim edit As Editor = activeEditor()
+   '         If Not edit Is Nothing Then
+   '             edit.doLivePreview()
+   '         End If
+   '     End If
+    '    haveBrowserCallForLivePreview = False
+   ' End Sub
 End Class

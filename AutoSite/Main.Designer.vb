@@ -27,7 +27,7 @@ Partial Class Main
         Me.EdSplit = New System.Windows.Forms.SplitContainer()
         Me.EditTabs = New System.Windows.Forms.TabControl()
         Me.VS2017 = New System.Windows.Forms.ImageList(Me.components)
-        Me.Preview = New System.Windows.Forms.WebBrowser()
+        Me.Preview = New CefSharp.Winforms.ChromiumWebBrowser()
         Me.ExSplit = New System.Windows.Forms.SplitContainer()
         Me.SiteTree = New System.Windows.Forms.TreeView()
         Me.ApricotTabs = New System.Windows.Forms.TabControl()
@@ -271,8 +271,8 @@ Partial Class Main
         '
         resources.ApplyResources(Me.Preview, "Preview")
         Me.Preview.Name = "Preview"
-        Me.Preview.ScriptErrorsSuppressed = True
-        Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
+        'Me.Preview.ScriptErrorsSuppressed = True
+        'Me.Preview.Url = New System.Uri("about:blank", System.UriKind.Absolute)
         '
         'ExSplit
         '
@@ -1553,7 +1553,7 @@ Partial Class Main
     Friend WithEvents BrowseSite As System.Windows.Forms.ToolStripButton
     Friend WithEvents EdSplit As System.Windows.Forms.SplitContainer
     Friend WithEvents EditTabs As System.Windows.Forms.TabControl
-    Friend WithEvents Preview As System.Windows.Forms.WebBrowser
+    Friend WithEvents Preview As CefSharp.WinForms.ChromiumWebBrowser
     Friend WithEvents EditorFont As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SelectFont As System.Windows.Forms.FontDialog
     Friend WithEvents NewJSCon As System.Windows.Forms.ToolStripMenuItem

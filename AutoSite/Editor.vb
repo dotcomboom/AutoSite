@@ -2,6 +2,7 @@
 Imports System.Text.RegularExpressions
 Imports FastColoredTextBoxNS
 Imports System.Text
+Imports CefSharp
 
 Public Class Editor
 
@@ -95,9 +96,9 @@ Public Class Editor
             prepLivePreview()
         End If
 
-        If (Main.Preview.Document.GetElementsByTagName("autosite").Count >= 1) Then
-            Main.Preview.Document.GetElementsByTagName("autosite").Item(0).InnerHtml = rc
-        End If
+        'If (Main.Preview.Document.GetElementsByTagName("autosite").Count >= 1) Then
+       '     Main.Preview.Document.GetElementsByTagName("autosite").Item(0).InnerHtml = rc
+       ' End If
         'Main.Preview.Document.Window.ScrollTo(0, Main.Preview.Document.Window.Size.Height * (Code.Selection.FromLine / Code.LinesCount))
 
     End Sub
@@ -208,10 +209,10 @@ Public Class Editor
         End If
 
         If Not fromRoot().StartsWith("pages\") Then
-            Main.Preview.Navigate(Path.Combine(Main.SiteTree.Nodes(0).Text, "out\"))
-            Main.Preview.DocumentText = Code.Text
+            Main.Preview.LoadUrl(Path.Combine(Main.SiteTree.Nodes(0).Text, "out\"))
+            Main.Preview.LoadHtml( Code.Text)
         Else
-            Main.Preview.Navigate(siteRoot & "out\" & rel)
+            Main.Preview.LoadUrl(siteRoot & "out\" & rel)
             Preview.Enabled = False
             ViewOutput.Enabled = False
             template_cache.Clear()
@@ -435,7 +436,7 @@ Public Class Editor
     End Sub
 
     Private Sub PreviewWorker_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles PreviewWorker.RunWorkerCompleted
-        Main.Preview.DocumentText = e.Result
+        Main.Preview.LoadHtml(e.Result)
         Preview.Enabled = True
         ViewOutput.Enabled = True
         If activLivePreviewOnFinishLoad Then

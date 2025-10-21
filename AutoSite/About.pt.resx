@@ -123,26 +123,24 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="LicenseBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
+    <value>6, 7</value>
   </data>
   <data name="LicenseBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>6, 7, 6, 7</value>
   </data>
   <data name="LicenseBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 272</value>
+    <value>388, 366</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="LicenseBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="LicenseBox.Text" xml:space="preserve">
-    <value>This release is dedicated to my friends and colleagues at Somnolescent for their testing, contributions and support for this project.
-Their contributions include, (but are not limited to!)
+    <value>Many thanks to my friends at Somnolescent for their testing, contributions and camaraderie for this project.
   - Website &amp; manual: mariteaux (http://mariteaux.somnolescent.net)
   - Welsh translation: Caby (http://caby.somnolescent.net)
   - Polish translation: devon (http://matfloor.net)
-
-And of course, to every website in the wild that I learn uses AutoSite.. thank you! More to come in the future.
+And every site in the wild that uses AutoSite- thank you!
 ----
 AutoSite is also made possible by these open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
@@ -231,13 +229,13 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>Bottom, Right</value>
   </data>
   <data name="OK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 333</value>
+    <value>459, 444</value>
   </data>
   <data name="OK.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>6, 7, 6, 7</value>
   </data>
   <data name="OK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>86, 31</value>
   </data>
   <data name="OK.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -258,13 +256,13 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>3</value>
   </data>
   <data name="Logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 10</value>
+    <value>11, 13</value>
   </data>
   <data name="Logo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>6, 7, 6, 7</value>
   </data>
   <data name="Logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 128</value>
+    <value>118, 171</value>
   </data>
   <data name="Logo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -288,13 +286,13 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>Segoe UI, 7.8pt, style=Bold</value>
   </data>
   <data name="Version.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 145</value>
+    <value>14, 193</value>
   </data>
   <data name="Version.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>6, 0, 6, 0</value>
   </data>
   <data name="Version.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 21</value>
+    <value>118, 28</value>
   </data>
   <data name="Version.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -317,14 +315,17 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="&gt;&gt;Version.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="GithubLink.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
   <data name="GithubLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 175</value>
+    <value>14, 233</value>
   </data>
   <data name="GithubLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>6, 0, 6, 0</value>
   </data>
   <data name="GithubLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 20</value>
+    <value>118, 27</value>
   </data>
   <data name="GithubLink.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -347,14 +348,17 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="&gt;&gt;GithubLink.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="WebsiteLink.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
   <data name="WebsiteLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 209</value>
+    <value>14, 279</value>
   </data>
   <data name="WebsiteLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>6, 0, 6, 0</value>
   </data>
   <data name="WebsiteLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 20</value>
+    <value>118, 27</value>
   </data>
   <data name="WebsiteLink.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -380,17 +384,65 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="Tabs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="&gt;&gt;Credits.Name" xml:space="preserve">
+    <value>Credits</value>
+  </data>
+  <data name="&gt;&gt;Credits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Credits.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Credits.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Changelog.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 13</value>
+  </data>
+  <data name="Tabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>408, 413</value>
+  </data>
+  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="Credits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+    <value>4, 29</value>
   </data>
   <data name="Credits.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>6, 7, 6, 7</value>
   </data>
   <data name="Credits.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>6, 7, 6, 7</value>
   </data>
   <data name="Credits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 282</value>
+    <value>400, 380</value>
   </data>
   <data name="Credits.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -410,23 +462,65 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="&gt;&gt;Credits.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;ChangelogBox.Name" xml:space="preserve">
+    <value>ChangelogBox</value>
+  </data>
+  <data name="&gt;&gt;ChangelogBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChangelogBox.Parent" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="&gt;&gt;ChangelogBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Changelog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="Changelog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="Changelog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="Changelog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 380</value>
+  </data>
+  <data name="Changelog.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Changelog.Text" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Changelog.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;Changelog.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="ChangelogBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="ChangelogBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
+    <value>6, 7</value>
   </data>
   <data name="ChangelogBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>6, 7, 6, 7</value>
   </data>
   <data name="ChangelogBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 272</value>
+    <value>388, 366</value>
   </data>
   <data name="ChangelogBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>Unnamed Planned Release:
+    <value>Unnamed Planned Release: (changelog out of date)
    + Global toolbar (60%)
    + Run scripts after build (0%)
    + Dockable panels (0%)
@@ -640,68 +734,14 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
   <data name="&gt;&gt;ChangelogBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Changelog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="Changelog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Changelog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Changelog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 282</value>
-  </data>
-  <data name="Changelog.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Changelog.Text" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Changelog.Parent" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;Changelog.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Tabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 10</value>
-  </data>
-  <data name="Tabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="Tabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 310</value>
-  </data>
-  <data name="Tabs.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Name" xml:space="preserve">
-    <value>Tabs</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Tabs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Tabs.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="Sysinfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
   <data name="Sysinfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 323</value>
+    <value>145, 431</value>
   </data>
   <data name="Sysinfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 38</value>
+    <value>270, 51</value>
   </data>
   <data name="Sysinfo.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -728,10 +768,13 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>Top, Bottom, Left</value>
   </data>
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-2, -2</value>
+    <value>-2, -3</value>
+  </data>
+  <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 379</value>
+    <value>141, 505</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -752,16 +795,19 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+    <value>8, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>491, 370</value>
+    <value>561, 493</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>6, 7, 6, 7</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

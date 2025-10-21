@@ -400,7 +400,7 @@ Los condicionales le permiten mostrar texto si un atributo tiene cierto valor.</
     <value>..\Resources\PY_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Explorer_OutputFolder" xml:space="preserve">
-    <value>Output Folder</value>
+    <value>Carpeta de salida</value>
   </data>
   <data name="Prompt_ChangesOnRestart" xml:space="preserve">
     <value>Los cambios se aplicarán después de reiniciar.</value>

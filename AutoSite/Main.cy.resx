@@ -1306,7 +1306,7 @@ Adeiladu eich gwefan i boblogi'r Map Priodoledd.</value>
     <value>303, 24</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Adeilad Iechydol...</value>
+    <value>Adeilad Iechydol</value>
   </data>
   <data name="ToolsSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 6</value>
@@ -1366,7 +1366,7 @@ Adeiladu eich gwefan i boblogi'r Map Priodoledd.</value>
     <value>204, 24</value>
   </data>
   <data name="OpenSampleSite.Text" xml:space="preserve">
-    <value>Agor Gwefan Enghraifft...</value>
+    <value>Agor Gwefan Enghraifft</value>
   </data>
   <data name="HelpSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 6</value>

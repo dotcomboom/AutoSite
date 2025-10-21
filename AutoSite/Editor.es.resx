@@ -121,190 +121,13 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 22</value>
-  </data>
-  <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Guardar</value>
-  </data>
-  <data name="SaveAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 22</value>
-  </data>
-  <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Guardar Todo</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 22</value>
-  </data>
-  <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Guardar</value>
-  </data>
-  <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="UndoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="UndoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="UndoBtn.Text" xml:space="preserve">
-    <value>Deshacer</value>
-  </data>
-  <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="RedoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="RedoBtn.Text" xml:space="preserve">
-    <value>Rehacer</value>
-  </data>
-  <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="CutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="CutBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="CutBtn.Text" xml:space="preserve">
-    <value>Cortar</value>
-  </data>
-  <data name="CopyBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="CopyBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="CopyBtn.Text" xml:space="preserve">
-    <value>Copiar</value>
-  </data>
-  <data name="PasteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="PasteBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="PasteBtn.Text" xml:space="preserve">
-    <value>Pegar</value>
-  </data>
-  <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACHSURBVDhP3ZJbCoAgEEWFttGKXJr7cB2uQvCjZej3NCcU
-        pKIov+rC4GXuQ3qYH6KUMus4EZnqysDZodXVOTDknJcYoyj3BGvYp5QE7bJERUfYWishhK2EgbOjBE+1
-        H9FuawHOnqP1j3aKfcmjMBgq2Ic5e35booaxl6ji2GcEGHTe/UhfhDEroIcQgNyBAocAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="CloseBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="CloseBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="CloseBtn.Text" xml:space="preserve">
-    <value>Cerrar</value>
-  </data>
-  <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="Find.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Find.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="Find.Text" xml:space="preserve">
-    <value>Buscar</value>
-  </data>
-  <data name="GTo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="GTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="GTo.Text" xml:space="preserve">
-    <value>Ir a</value>
-  </data>
-  <data name="Replace.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Replace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="Replace.Text" xml:space="preserve">
-    <value>Reemplazar</value>
-  </data>
-  <data name="QuickInsert.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="QuickInsert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="QuickInsert.Text" xml:space="preserve">
-    <value>Inserción Rápida</value>
-  </data>
-  <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="LivePreview.Text" xml:space="preserve">
-    <value>Vista Previa</value>
-  </data>
-  <data name="Preview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Preview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 22</value>
-  </data>
-  <data name="Preview.Text" xml:space="preserve">
-    <value>Previsualizar</value>
-  </data>
-  <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 22</value>
-  </data>
-  <data name="Build.Text" xml:space="preserve">
-    <value>Compilar</value>
-  </data>
-  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>Ver en Navegador Predeterminado</value>
-  </data>
-  <data name="ViewOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ViewOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 22</value>
-  </data>
-  <data name="ViewOutput.Text" xml:space="preserve">
-    <value>Ver Output</value>
-  </data>
   <data name="Strip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="Strip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 25</value>
+    <value>757, 27</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="Strip.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -324,7 +147,183 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Strip.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="SaveBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 24</value>
+  </data>
+  <data name="SaveBtn.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 24</value>
+  </data>
+  <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="SaveAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 24</value>
+  </data>
+  <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Guardar Todo</value>
+  </data>
+  <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="UndoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="UndoBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="UndoBtn.Text" xml:space="preserve">
+    <value>Deshacer</value>
+  </data>
+  <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="RedoBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="RedoBtn.Text" xml:space="preserve">
+    <value>Rehacer</value>
+  </data>
+  <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="CutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="CutBtn.Text" xml:space="preserve">
+    <value>Cortar</value>
+  </data>
+  <data name="CopyBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CopyBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="CopyBtn.Text" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="PasteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="PasteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="PasteBtn.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB+SURBVDhP3ZLLCYAwEEQDtmFFKc0+UkeqCORgGZnzyhMj
+        ugdBctKBkGWzbza/EP4nSbOkxcymniMmx9q92omC1tpaSjFJCfCAU63VWHs0oQtwjNFyzrsJg5gcJtR4
+        7lTv1gHma9x35bmbvMkrGA0ZePj1EYYvcfgZ0dBH+qY2oIcQgGiLJD4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="CloseBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CloseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="CloseBtn.Text" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="Find.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Find.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="Find.Text" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="GTo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="GTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="GTo.Text" xml:space="preserve">
+    <value>Ir a</value>
+  </data>
+  <data name="Replace.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Replace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="Replace.Text" xml:space="preserve">
+    <value>Reemplazar</value>
+  </data>
+  <data name="QuickInsert.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="QuickInsert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="QuickInsert.Text" xml:space="preserve">
+    <value>Inserción Rápida</value>
+  </data>
+  <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="Preview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Preview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
+  </data>
+  <data name="Preview.Text" xml:space="preserve">
+    <value>Previsualizar</value>
+  </data>
+  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 24</value>
+  </data>
+  <data name="LivePreview.Text" xml:space="preserve">
+    <value>Vista Previa</value>
+  </data>
+  <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 27</value>
+  </data>
+  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 24</value>
+  </data>
+  <data name="Build.Text" xml:space="preserve">
+    <value>Compilar</value>
+  </data>
+  <data name="ViewOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ViewOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 24</value>
+  </data>
+  <data name="ViewOutput.Text" xml:space="preserve">
+    <value>Ver Output</value>
+  </data>
+  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 24</value>
+  </data>
+  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
+    <value>Ver en Navegador Predeterminado</value>
   </data>
   <metadata name="Autocomplete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>213, 17</value>
@@ -354,7 +353,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD4
-        DgAAAk1TRnQBSQFMAgEBBwEAATABAQEwAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DgAAAk1TRnQBSQFMAgEBBwEAAWABAQFgAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -421,7 +420,7 @@
 </value>
   </data>
   <data name="Code.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
-    <value>27, 14</value>
+    <value>31, 18</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="Code.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -431,7 +430,7 @@
     <value>0, 0</value>
   </data>
   <data name="Code.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="Code.ServiceColors" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -452,7 +451,7 @@
 </value>
   </data>
   <data name="Code.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 495</value>
+    <value>757, 701</value>
   </data>
   <data name="Code.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -467,43 +466,61 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Code.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>119, 17</value>
   </metadata>
-  <data name="Undo.Text" xml:space="preserve">
-    <value>Deshacer</value>
-  </data>
-  <data name="Redo.Text" xml:space="preserve">
-    <value>Rehacer</value>
-  </data>
-  <data name="ConSep.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="Cut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
     <value>Cortar</value>
   </data>
+  <data name="Copy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
   <data name="Copy.Text" xml:space="preserve">
     <value>Copiar</value>
+  </data>
+  <data name="Paste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
     <value>Pegar</value>
   </data>
-  <data name="ConSep2.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="ConSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="SelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
     <value>Seleccionar Todo</value>
   </data>
-  <data name="ConSep3.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="ConSep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="InsertMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
+  <data name="InsertMnu.Text" xml:space="preserve">
+    <value>Inserción Rápida</value>
+  </data>
+  <data name="InsertConditional.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
     <value>Insertar Condicional...</value>
   </data>
-  <data name="Insert.Text" xml:space="preserve">
-    <value>Inserción Rápida</value>
+  <data name="Context.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 182</value>
+  </data>
+  <data name="&gt;&gt;Context.Name" xml:space="preserve">
+    <value>Context</value>
+  </data>
+  <data name="&gt;&gt;Context.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="PreviewWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>475, 17</value>
@@ -512,16 +529,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+    <value>7, 17</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 7.8pt</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 495</value>
+    <value>757, 701</value>
   </data>
   <data name="&gt;&gt;SaveBtn.Name" xml:space="preserve">
     <value>SaveBtn</value>
@@ -661,77 +678,53 @@
   <data name="&gt;&gt;ViewinDefaultBrowser.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Context.Name" xml:space="preserve">
-    <value>Context</value>
-  </data>
-  <data name="&gt;&gt;Context.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Undo.Name" xml:space="preserve">
-    <value>Undo</value>
-  </data>
-  <data name="&gt;&gt;Undo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Redo.Name" xml:space="preserve">
-    <value>Redo</value>
-  </data>
-  <data name="&gt;&gt;Redo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ConSep.Name" xml:space="preserve">
-    <value>ConSep</value>
-  </data>
-  <data name="&gt;&gt;ConSep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;Cut.Name" xml:space="preserve">
     <value>Cut</value>
   </data>
   <data name="&gt;&gt;Cut.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Copy.Name" xml:space="preserve">
     <value>Copy</value>
   </data>
   <data name="&gt;&gt;Copy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Paste.Name" xml:space="preserve">
     <value>Paste</value>
   </data>
   <data name="&gt;&gt;Paste.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ConSep2.Name" xml:space="preserve">
     <value>ConSep2</value>
   </data>
   <data name="&gt;&gt;ConSep2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;SelectAll.Name" xml:space="preserve">
     <value>SelectAll</value>
   </data>
   <data name="&gt;&gt;SelectAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ConSep3.Name" xml:space="preserve">
     <value>ConSep3</value>
   </data>
   <data name="&gt;&gt;ConSep3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;InsertConditional.Name" xml:space="preserve">
     <value>InsertConditional</value>
   </data>
   <data name="&gt;&gt;InsertConditional.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Insert.Name" xml:space="preserve">
-    <value>Insert</value>
+  <data name="&gt;&gt;InsertMnu.Name" xml:space="preserve">
+    <value>InsertMnu</value>
   </data>
-  <data name="&gt;&gt;Insert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;InsertMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Autocomplete.Name" xml:space="preserve">
     <value>Autocomplete</value>

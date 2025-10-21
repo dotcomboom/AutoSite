@@ -413,9 +413,9 @@
   </data>
   <data name="AttributeExplanation.Text" xml:space="preserve">
     <value>
-The Attribute Map allows you to view all of the Attributes used in your site.
+O Mapa de Atributos permite que você veja todos os Atributos usados em seu site.
 
-Build your site to populate the Attribute Map.</value>
+Construa seu site para preencher o Mapa de Atributos.</value>
   </data>
   <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -481,7 +481,7 @@ Build your site to populate the Attribute Map.</value>
     <value>1</value>
   </data>
   <data name="MapPage.Text" xml:space="preserve">
-    <value>Attribute Map</value>
+    <value>Mapa de Atributos</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -616,7 +616,7 @@ Build your site to populate the Attribute Map.</value>
     <value>23, 24</value>
   </data>
   <data name="LiveBuildToggle.Text" xml:space="preserve">
-    <value>Build changes automatically</value>
+    <value>Criar mudanças automaticamente</value>
   </data>
   <data name="LiveBuildToggle.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1186,7 +1186,7 @@ Build your site to populate the Attribute Map.</value>
     <value>369, 24</value>
   </data>
   <data name="CommandLabelsMnu.Text" xml:space="preserve">
-    <value>Command Labels</value>
+    <value>Etiquetas de Comando</value>
   </data>
   <data name="ToolStripSeparator8.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 6</value>
@@ -1198,13 +1198,13 @@ Build your site to populate the Attribute Map.</value>
     <value>369, 24</value>
   </data>
   <data name="VerticalSplitMnu.Text" xml:space="preserve">
-    <value>Vertical Split Editor</value>
+    <value>Editor Dividido Vertical</value>
   </data>
   <data name="VerticalSplitExplorerMnu.Size" type="System.Drawing.Size, System.Drawing">
     <value>369, 24</value>
   </data>
   <data name="VerticalSplitExplorerMnu.Text" xml:space="preserve">
-    <value>Vertical Split Explorer</value>
+    <value>Explorador Dividido Vertical</value>
   </data>
   <data name="MenuItem3.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 6</value>
@@ -1225,7 +1225,7 @@ Build your site to populate the Attribute Map.</value>
     <value>369, 24</value>
   </data>
   <data name="ExplorerIconSchemeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Explorer Icon Scheme</value>
+    <value>Esquema do ícone de explorador</value>
   </data>
   <data name="SystemIcons.Size" type="System.Drawing.Size, System.Drawing">
     <value>369, 24</value>
@@ -1258,13 +1258,13 @@ Build your site to populate the Attribute Map.</value>
     <value>369, 24</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>Output</value>
+    <value>Saída</value>
   </data>
   <data name="FileOutputInDefaultBrowserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>369, 24</value>
   </data>
   <data name="FileOutputInDefaultBrowserToolStripMenuItem.Text" xml:space="preserve">
-    <value>Output in Default Browser</value>
+    <value>Saída no navegador padrão</value>
   </data>
   <data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 6</value>
@@ -1273,7 +1273,7 @@ Build your site to populate the Attribute Map.</value>
     <value>369, 24</value>
   </data>
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Output Site in Preview</value>
+    <value>Site de saída na pré-visualização</value>
   </data>
   <data name="BrowseSiteMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+P</value>
@@ -1282,7 +1282,7 @@ Build your site to populate the Attribute Map.</value>
     <value>369, 24</value>
   </data>
   <data name="BrowseSiteMnu.Text" xml:space="preserve">
-    <value>Output Site in Default Browser</value>
+    <value>Site de Saída no Navegador Padrão</value>
   </data>
   <data name="ViewMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 24</value>
@@ -1306,7 +1306,7 @@ Build your site to populate the Attribute Map.</value>
     <value>303, 24</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Sanitary Build</value>
+    <value>Construção Sanitária</value>
   </data>
   <data name="ToolsSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 6</value>
@@ -1339,7 +1339,7 @@ Build your site to populate the Attribute Map.</value>
     <value>303, 24</value>
   </data>
   <data name="InspectorBtn.Text" xml:space="preserve">
-    <value>Form Inspector</value>
+    <value>Inspetor de formulário</value>
   </data>
   <data name="ShowVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 24</value>
@@ -1351,7 +1351,7 @@ Build your site to populate the Attribute Map.</value>
     <value>56, 24</value>
   </data>
   <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
+    <value>&amp;Ferramentas</value>
   </data>
   <data name="HelpTopics.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F1</value>
@@ -1360,13 +1360,13 @@ Build your site to populate the Attribute Map.</value>
     <value>204, 24</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
-    <value>View Help</value>
+    <value>Ver Ajuda</value>
   </data>
   <data name="OpenSampleSite.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 24</value>
   </data>
   <data name="OpenSampleSite.Text" xml:space="preserve">
-    <value>Open Sample Site</value>
+    <value>Abrir Site Modelo</value>
   </data>
   <data name="HelpSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 6</value>
@@ -1387,7 +1387,7 @@ Build your site to populate the Attribute Map.</value>
     <value>204, 24</value>
   </data>
   <data name="SendFeedback.Text" xml:space="preserve">
-    <value>Send Feedback</value>
+    <value>Enviar Feedback</value>
   </data>
   <data name="HelpSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 6</value>
@@ -1435,7 +1435,7 @@ Build your site to populate the Attribute Map.</value>
     <value>53, 24</value>
   </data>
   <data name="HelpMenu.Text" xml:space="preserve">
-    <value>&amp;Help</value>
+    <value>&amp;Ajuda</value>
   </data>
   <data name="MenuBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1477,7 +1477,7 @@ Build your site to populate the Attribute Map.</value>
     <value>ImageAboveText</value>
   </data>
   <data name="NewSiteBtn.ToolTipText" xml:space="preserve">
-    <value>New Site (CTRL+N)</value>
+    <value>Novo Site (CTRL+N)</value>
   </data>
   <data name="OpenSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1492,7 +1492,7 @@ Build your site to populate the Attribute Map.</value>
     <value>ImageAboveText</value>
   </data>
   <data name="OpenSiteBtn.ToolTipText" xml:space="preserve">
-    <value>Open Site (CTRL+O)</value>
+    <value>Site aberto (CTRL+O)</value>
   </data>
   <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1507,7 +1507,7 @@ Build your site to populate the Attribute Map.</value>
     <value>ImageAboveText</value>
   </data>
   <data name="SaveBtn.ToolTipText" xml:space="preserve">
-    <value>Save (CTRL+S)</value>
+    <value>Salvar (CTRL+S)</value>
   </data>
   <data name="SaveAllBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1567,13 +1567,13 @@ Build your site to populate the Attribute Map.</value>
     <value>49, 40</value>
   </data>
   <data name="QuickInsertBtn.Text" xml:space="preserve">
-    <value>Insert</value>
+    <value>Inserir</value>
   </data>
   <data name="QuickInsertBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
   <data name="QuickInsertBtn.ToolTipText" xml:space="preserve">
-    <value>Quick Insert (CTRL+Space)</value>
+    <value>Inserção rápida (CTRL+Espaço)</value>
   </data>
   <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 43</value>
@@ -1636,13 +1636,13 @@ Build your site to populate the Attribute Map.</value>
     <value>195, 24</value>
   </data>
   <data name="CleanBuildBtn.Text" xml:space="preserve">
-    <value>Clean and build</value>
+    <value>Limpar e construir</value>
   </data>
   <data name="BuildOnChangesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 24</value>
   </data>
   <data name="BuildOnChangesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Build on changes </value>
+    <value>Construir alterações </value>
   </data>
   <data name="BuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1696,7 +1696,7 @@ Build your site to populate the Attribute Map.</value>
     <value>259, 24</value>
   </data>
   <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
-    <value>Open output folder</value>
+    <value>Abrir pasta de saída</value>
   </data>
   <data name="ViewOutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1705,7 +1705,7 @@ Build your site to populate the Attribute Map.</value>
     <value>71, 40</value>
   </data>
   <data name="ViewOutBtn.Text" xml:space="preserve">
-    <value>Output</value>
+    <value>Saída</value>
   </data>
   <data name="ViewOutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1714,13 +1714,13 @@ Build your site to populate the Attribute Map.</value>
     <value>212, 24</value>
   </data>
   <data name="OriginalToolStripMenuItem.Text" xml:space="preserve">
-    <value>Standard</value>
+    <value>Padrão</value>
   </data>
   <data name="WidescreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 24</value>
   </data>
   <data name="WidescreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Widescreen</value>
+    <value>Tela larga</value>
   </data>
   <data name="EditToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 24</value>
@@ -1732,7 +1732,7 @@ Build your site to populate the Attribute Map.</value>
     <value>212, 24</value>
   </data>
   <data name="NoEditorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Compact</value>
+    <value>Compacta</value>
   </data>
   <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 6</value>
@@ -1751,7 +1751,7 @@ Build your site to populate the Attribute Map.</value>
     <value>212, 24</value>
   </data>
   <data name="ExSplitOrient.Text" xml:space="preserve">
-    <value>Explorer Orientation</value>
+    <value>Orientação do Explorador</value>
   </data>
   <data name="ExSplitOrient.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1770,7 +1770,7 @@ Build your site to populate the Attribute Map.</value>
     <value>212, 24</value>
   </data>
   <data name="EdSplitOrient.Text" xml:space="preserve">
-    <value>Preview Orientation</value>
+    <value>Orientação da pré-visualização</value>
   </data>
   <data name="EdSplitOrient.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1782,7 +1782,7 @@ Build your site to populate the Attribute Map.</value>
     <value>69, 40</value>
   </data>
   <data name="LayoutBtn.Text" xml:space="preserve">
-    <value>Layout</value>
+    <value>Disposição</value>
   </data>
   <data name="LayoutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1826,7 +1826,7 @@ Build your site to populate the Attribute Map.</value>
     <value>5</value>
   </data>
   <data name="StandardStrip.Text" xml:space="preserve">
-    <value>Standard</value>
+    <value>Padrão</value>
   </data>
   <data name="&gt;&gt;StandardStrip.Name" xml:space="preserve">
     <value>StandardStrip</value>
@@ -1868,7 +1868,7 @@ Build your site to populate the Attribute Map.</value>
     <value>529, 17</value>
   </metadata>
   <data name="FolderBrowser.Description" xml:space="preserve">
-    <value>Select a folder to store your site's files. If no site exists in that folder, one will be created.</value>
+    <value>Selecione uma pasta para armazenar os arquivos do seu site. Se não existir nenhum site nessa pasta, uma será criada.</value>
   </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>358, 23</value>
@@ -3059,7 +3059,7 @@ Build your site to populate the Attribute Map.</value>
     <value>118, 24</value>
   </data>
   <data name="ClearToolStripMenuItem.Text" xml:space="preserve">
-    <value>Clear</value>
+    <value>Limpar</value>
   </data>
   <data name="SaveLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 24</value>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="QuickInsert_Build" xml:space="preserve">
-    <value>Build for more options</value>
+    <value>Construa para mais opções</value>
   </data>
   <data name="QuickInsert_content_Tip" xml:space="preserve">
     <value>Conteúdo</value>
@@ -134,13 +134,13 @@
     <value>..\Resources\WebTest_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_Generic_TipText" xml:space="preserve">
-    <value>Outputs the page's value for the {0} attribute.</value>
+    <value>Exibe o valor da página para o atributo {0}.</value>
   </data>
   <data name="XP_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xp_page.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UI_StartPage_Title" xml:space="preserve">
-    <value>Start Page</value>
+    <value>página inicial</value>
   </data>
   <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -152,7 +152,7 @@
     <value>new-page</value>
   </data>
   <data name="QuickInsert_path_TipText" xml:space="preserve">
-    <value>Outputs the page's relative path from root.</value>
+    <value>Exibe o caminho relativo da página a partir da raiz.</value>
   </data>
   <data name="SaveAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveAll_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,10 +169,10 @@
 ?&gt;</value>
   </data>
   <data name="QuickInsert_root_TipText" xml:space="preserve">
-    <value>Outputs the relative path from the page to the site root.
+    <value>Exibe o caminho relativo da página até a raiz do site.
 
-Use this to begin paths to stylesheets, images, and other 
-pages.</value>
+Use isso para iniciar caminhos para folhas de estilo, 
+imagens e outras páginas.</value>
   </data>
   <data name="Redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Redo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,10 +190,10 @@ pages.</value>
     <value>..\Resources\CleanData_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Add files to {0}</value>
+    <value>Adicionar arquivos à {0}</value>
   </data>
   <data name="QuickInsert__Output" xml:space="preserve">
-    <value>Output: {0}</value>
+    <value>Saída: {0}</value>
   </data>
   <data name="Synchronize_grey_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Synchronize_grey_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -225,7 +225,7 @@ pages.</value>
 &lt;/html&gt;</value>
   </data>
   <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Path</value>
+    <value>Caminho</value>
   </data>
   <data name="Script_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Script_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -243,18 +243,18 @@ pages.</value>
     <value>..\Resources\AddItem_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_content_TipText" xml:space="preserve">
-    <value>Outputs the page's content.
+    <value>Sai o conteúdo da página. U
 
-Use once in templates.</value>
+Usar uma vez nos templates.</value>
   </data>
   <data name="QuickInsert_root_Tip" xml:space="preserve">
-    <value>Relative path to root</value>
+    <value>Caminho relativo à raiz</value>
   </data>
   <data name="QuickInsert_modified_Tip" xml:space="preserve">
-    <value>Last modified date</value>
+    <value>Data da última modificação</value>
   </data>
   <data name="Question_RemoveFromRecents" xml:space="preserve">
-    <value>The site located in {0} could not be opened. Do you want to remove it from the Recent Sites list?</value>
+    <value>O site localizado em {0} não pode ser aberto. Deseja removê-lo da lista de Sites Recentes?</value>
   </data>
   <data name="HTMLFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HTMLFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -269,8 +269,8 @@ Use once in templates.</value>
     <value>..\Resources\NewItem_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_Build_TipText" xml:space="preserve">
-    <value>AutoSite can give you more suggestions when you build
-your site and populate the Attribute Map.</value>
+    <value>O AutoSite pode lhe dar mais sugestões quando você construir
+seu site e preencher o Mapa de Atributos.</value>
   </data>
   <data name="Defaults_NewCss" xml:space="preserve">
     <value>new-style</value>
@@ -282,9 +282,9 @@ your site and populate the Attribute Map.</value>
     <value>..\Resources\TextFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
-    <value>Open the Insert Conditional dialog.
+    <value>Abra o diálogo Inserir Condicional.
 
-Conditionals allow you to output text if an attribute has a certain value.</value>
+Condicionais permitem que você saia do texto se um atributo tiver um determinado valor.</value>
   </data>
   <data name="Snippet_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Snippet_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -347,25 +347,25 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>..\Resources\value.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UI_OpenFolderLocation" xml:space="preserve">
-    <value>Open folder location</value>
+    <value>Abrir local da pasta</value>
   </data>
   <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
     <value>Atualizar Site</value>
   </data>
   <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
-    <value>Some files have unsaved changes. Save them?</value>
+    <value>Alguns arquivos têm alterações não salvas. Salvá-las?</value>
   </data>
   <data name="NewFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
-    <value>Define {0}</value>
+    <value>Definir {0}</value>
   </data>
   <data name="Web" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Web_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Example: {0}</value>
+    <value>Exemplo: {0}</value>
   </data>
   <data name="Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PageBody_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -383,10 +383,10 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>..\Resources\mfc90u.dll_14_17105-0.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
-    <value>Adds an attribute definition.</value>
+    <value>Adiciona uma definição de atributo.</value>
   </data>
   <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
-    <value>Insert conditional</value>
+    <value>Inserir condicional</value>
   </data>
   <data name="Error_BuildFailed" xml:space="preserve">
     <value>Apricot retornou a seguinte exceção:
@@ -400,10 +400,10 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>..\Resources\PY_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Explorer_OutputFolder" xml:space="preserve">
-    <value>Output Folder</value>
+    <value>Pasta de saída</value>
   </data>
   <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Changes will be applied on restart.</value>
+    <value>As alterações serão aplicadas ao reiniciar.</value>
   </data>
   <data name="Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Folder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -415,7 +415,7 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>..\Resources\Structure_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Explorer_Templates" xml:space="preserve">
-    <value>Templates</value>
+    <value>Modelos</value>
   </data>
   <data name="Build" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BuildSolution_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -427,16 +427,16 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>..\Resources\StyleSheet_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Explorer_Pages" xml:space="preserve">
-    <value>Pages</value>
+    <value>Páginas</value>
   </data>
   <data name="Explorer_Includes" xml:space="preserve">
-    <value>Includes</value>
+    <value>Inclui</value>
   </data>
   <data name="NewFileCollection_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewFileCollection_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_modified_TipText" xml:space="preserve">
-    <value>Outputs the date the page was last modified on.</value>
+    <value>Data de saída na qual a página foi modificada pela última vez.</value>
   </data>
   <data name="QuickReplace_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QuickReplace_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -448,7 +448,7 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>..\Resources\xp_include.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Prompt_SaveChangesToFile" xml:space="preserve">
-    <value>Save changes to {0}?</value>
+    <value>Salvar alterações para {0}?</value>
   </data>
   <data name="mb_bg_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mb_bg_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -479,10 +479,10 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>..\Resources\2Columns_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
-    <value>Defines the {0} attribute for this page.</value>
+    <value>Define o atributo {0} para esta página.</value>
   </data>
   <data name="Prompt_SanitaryBuild" xml:space="preserve">
-    <value>A sanitary build will move the output folder to the Recycle Bin before building, removing any stray files.</value>
+    <value>Uma compilação sanitária moverá a pasta de saída para a Lixeira antes de construir, removendo quaisquer arquivos perdidos.</value>
   </data>
   <data name="NewSite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewWeb_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -494,9 +494,9 @@ Conditionals allow you to output text if an attribute has a certain value.</valu
     <value>AutoSite não pôde renomear a pasta. Por favor renomeie a pasta manualmente e abra seu site novamente.</value>
   </data>
   <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
-    <value>Defines the template used by the current page.
+    <value>Define o template usado pela página atual.
 
-Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
+O padrão é {0}, que diz ao AutoSite para usar {1} na pasta templates.</value>
   </data>
   <data name="QuickInsert_Build_Tip" xml:space="preserve">
     <value>Construir</value>
@@ -522,7 +522,7 @@ Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
     <value/>
   </data>
   <data name="UI_Editor_ViewFile" xml:space="preserve">
-    <value>View</value>
+    <value>Visualizar</value>
   </data>
   <data name="UI_Open" xml:space="preserve">
     <value>Abrir</value>
@@ -531,7 +531,7 @@ Default is {0}, which tells AutoSite to use {1} in the templates folder.</value>
     <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
-    <value>Define a new attribute</value>
+    <value>Definir um novo atributo</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="GridUniform_16x_MD" type="System.Resources.ResXFileRef, System.Windows.Forms">

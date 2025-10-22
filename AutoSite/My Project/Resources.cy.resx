@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -112,22 +112,104 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="QuickInsert_Build" xml:space="preserve">
+    <value>Adeiladu am fwy o opsiynau</value>
+  </data>
   <data name="QuickInsert_content_Tip" xml:space="preserve">
     <value>Cynnwys</value>
   </data>
-  <data name="Defaults_NewCss" xml:space="preserve">
-    <value>steil-newydd</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="Paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paste.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Defaults_NewFile" xml:space="preserve">
-    <value>ffeil-newydd</value>
+  <data name="UI_OpenFileLocation" xml:space="preserve">
+    <value>Agor lleoliad ffeil</value>
   </data>
-  <data name="Defaults_NewHtml" xml:space="preserve">
+  <data name="WebTest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WebTest_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_Generic_TipText" xml:space="preserve">
+    <value>Yn allbynnu gwerth y dudalen am y priodoledd {0}.</value>
+  </data>
+  <data name="XP_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xp_page.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_StartPage_Title" xml:space="preserve">
+    <value>Tudalen Gychwyn</value>
+  </data>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewWeb_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewWeb_16x1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Defaults_NewMd" xml:space="preserve">
     <value>tudalen-newydd</value>
+  </data>
+  <data name="QuickInsert_path_TipText" xml:space="preserve">
+    <value>Yn allbynnu llwybr cymharol y dudalen o'r gwraidd.</value>
+  </data>
+  <data name="SaveAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveAll_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Error_BuildToViewOutput" xml:space="preserve">
+    <value>Adeiladu'r wefan yn gyntaf i weld allbwn.</value>
+  </data>
+  <data name="XP_Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xp_folder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
+    <value>&lt;?php
+      echo "Bydd hyn yn cael ei ddehongli gan y gweinydd. Helo bydysawd!";
+?&gt;</value>
+  </data>
+  <data name="QuickInsert_root_TipText" xml:space="preserve">
+    <value>Yn allbynnu'r llwybr cymharol o'r dudalen i wraidd y wefan.
+
+Defnyddiwch hwn i ddechrau llwybrau i daflenni arddull, delweddau a thudalennau eraill.</value>
+  </data>
+  <data name="Redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Redo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Undo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2Rows_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2Rows_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddPageGuide_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddPageGuide_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SanitaryBuild" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CleanData_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_AddFilesDialog_Title" xml:space="preserve">
+    <value>Ychwanegu ffeiliau i {0}</value>
+  </data>
+  <data name="QuickInsert__Output" xml:space="preserve">
+    <value>Allbwn: {0}</value>
+  </data>
+  <data name="Synchronize_grey_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Synchronize_grey_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Application_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Application_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Error_CouldNotSaveFile" xml:space="preserve">
+    <value>Ni ellid arbed y ffeil.</value>
+  </data>
+  <data name="Error_LogSaveFail" xml:space="preserve">
+    <value>Aeth rhywbeth o'i le wrth geisio arbed y log:
+
+{0}</value>
+  </data>
+  <data name="autosite_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\autosite_32.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewHtmlInclude_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -141,10 +223,87 @@
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
+  <data name="QuickInsert_path_Tip" xml:space="preserve">
+    <value>Llwybr</value>
+  </data>
+  <data name="Script_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Script_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cut_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Defaults_NewJs" xml:space="preserve">
+    <value>sgript-newydd</value>
+  </data>
+  <data name="Error_BuildFailed_Title" xml:space="preserve">
+    <value>Adeiladu wedi methu</value>
+  </data>
+  <data name="AddItem_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddItem_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_content_TipText" xml:space="preserve">
+    <value>Yn allbynnu cynnwys y dudalen.
+
+Defnyddiwch unwaith mewn templedi.</value>
+  </data>
+  <data name="QuickInsert_root_Tip" xml:space="preserve">
+    <value>Llwybr cymharol i'r gwreiddyn</value>
+  </data>
+  <data name="QuickInsert_modified_Tip" xml:space="preserve">
+    <value>Y dyddiad o addasiad ddiwethaf</value>
+  </data>
+  <data name="Question_RemoveFromRecents" xml:space="preserve">
+    <value>Ni ellid agor y wefan sydd wedi ei lleoli yn {0}. Ydych chi eisiau ei symud o'r rhestr Wefanau Diweddar?</value>
+  </data>
+  <data name="HTMLFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HTMLFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewFile_16x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewFile_16x1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Prompt_CreateSite" xml:space="preserve">
+    <value>Bydd AutoSite yn creu safle yn y ffolder sydd wedi'i leoli yn {0}. A yw hyn yn iawn?</value>
+  </data>
+  <data name="NewItem_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewItem_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_Build_TipText" xml:space="preserve">
+    <value>Gall AutoSite roi mwy o awgrymiadau i chi pan fyddwch chi'n adeiladu
+eich gwefan a phoblogi'r Map Priodoledd.</value>
+  </data>
+  <data name="Defaults_NewCss" xml:space="preserve">
+    <value>steil-newydd</value>
+  </data>
+  <data name="Defaults_NewHtml" xml:space="preserve">
+    <value>tudalen-newydd</value>
+  </data>
+  <data name="TextFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
+    <value>Mewnosod deialog rhan amodol.
+
+Mae amodau yn caniatáu ichi allbynnu testun os oes gan briodoledd werth penodol.</value>
+  </data>
+  <data name="Snippet_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snippet_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsertPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InsertPanel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PYClassLibrary_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PYClassLibrary_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HelpApplication_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpApplication_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Defaults_NewHtmlPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
 &lt;!-- attrib title: Tudalen HTML Newydd --&gt;
 </value>
+  </data>
+  <data name="AddAttribute_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddAttribute_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewHtmlTemplate_Contents" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -159,24 +318,154 @@
   &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
-  <data name="Defaults_NewJs" xml:space="preserve">
-    <value>sgript-newydd</value>
+  <data name="PreviewWebTab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PreviewWebTab_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Defaults_NewMd" xml:space="preserve">
-    <value>tudalen-newydd</value>
+  <data name="PYConsole_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PYConsole_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
-    <value>&lt;!-- attrib template: default --&gt;
-&lt;!-- attrib title: Tudalen Markdown Newydd --&gt;
-</value>
+  <data name="ReplaceAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReplaceAll_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GotoRow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GotoRow_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tag_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Defaults_NewPhp" xml:space="preserve">
     <value>tudalen-newydd</value>
   </data>
-  <data name="Defaults_NewPhpOther_Contents" xml:space="preserve">
-    <value>&lt;?php
-      echo "Bydd hyn yn cael ei ddehongli gan y gweinydd. Helo bydysawd!";
-?&gt;</value>
+  <data name="XP_Output" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\netshell.dll_14_1907-1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Value" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\value.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_OpenFolderLocation" xml:space="preserve">
+    <value>Agor lleoliad ffolder</value>
+  </data>
+  <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
+    <value>Diweddaru Gwefan</value>
+  </data>
+  <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
+    <value>Mae gan rai ffeiliau newidiadau heb eu cadw. Arbedwch nhw?</value>
+  </data>
+  <data name="NewFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
+    <value>Diffinio {0}</value>
+  </data>
+  <data name="Web" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Web_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert__Example" xml:space="preserve">
+    <value>Enghraifft: {0}</value>
+  </data>
+  <data name="Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PageBody_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Include" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MarkdownFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MarkdownFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XP_Include" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mfc90u.dll_14_17105-0.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
+    <value>Yn ychwanegu diffiniad priodoledd.</value>
+  </data>
+  <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
+    <value>Mewnosod rhan amodol</value>
+  </data>
+  <data name="Error_BuildFailed" xml:space="preserve">
+    <value>Dychwelodd Apricot yr eithriad hwn:
+
+{0}</value>
+  </data>
+  <data name="Prompt_ProjectUpgrade" xml:space="preserve">
+    <value>Mae AutoSite bellach yn defnyddio'r llwybr pages\ ar gyfer y ffolder Tudalennau. Bydd y trawsnewidiad hwn yn effeithio ar gydnawsedd â datganiadau hŷn o AutoSite.</value>
+  </data>
+  <data name="PY_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PY_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Explorer_OutputFolder" xml:space="preserve">
+    <value>Output Folder</value>
+  </data>
+  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
+    <value>Bydd newidiadau yn cael eu gweithredu wrth ailgychwyn.</value>
+  </data>
+  <data name="Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\autosite_mixer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Structure_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Structure_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Explorer_Templates" xml:space="preserve">
+    <value>Templedi</value>
+  </data>
+  <data name="Build" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuildSolution_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConditionalRuleIfThen_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConditionalRuleIfThen_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StyleSheet_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StyleSheet_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Explorer_Pages" xml:space="preserve">
+    <value>Tudalennau</value>
+  </data>
+  <data name="Explorer_Includes" xml:space="preserve">
+    <value>Cynnwys</value>
+  </data>
+  <data name="NewFileCollection_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewFileCollection_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuickInsert_modified_TipText" xml:space="preserve">
+    <value>Yn allbwn y dyddiad y cafodd y dudalen ei haddasu ddiwethaf.</value>
+  </data>
+  <data name="QuickReplace_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuickReplace_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Browse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Browse_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XP_Include_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xp_include.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Prompt_SaveChangesToFile" xml:space="preserve">
+    <value>Arbed newidiadau i {0}?</value>
+  </data>
+  <data name="mb_bg_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mb_bg_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewImage_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewImage_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpenFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OpenFolder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_OpenWithDefault" xml:space="preserve">
+    <value>Agor yn rhaglen ddiofyn</value>
+  </data>
+  <data name="AddBinaryFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddBinaryFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Error_UpgradeFail_Title" xml:space="preserve">
+    <value>Methu trosi</value>
   </data>
   <data name="Defaults_NewPhpPage_Contents" xml:space="preserve">
     <value>&lt;!-- attrib template: default --&gt;
@@ -185,24 +474,17 @@
       echo "Bydd hyn yn cael ei ddehongli gan y gweinydd. Helo bydysawd!";
 ?&gt;</value>
   </data>
-  <data name="Error_BuildFailed" xml:space="preserve">
-    <value>Dychwelodd Apricot yr eithriad hwn:
-
-{0}</value>
+  <data name="_2Columns_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2Columns_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Error_BuildFailed_Title" xml:space="preserve">
-    <value>Adeiladu wedi methu</value>
+  <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
+    <value>Yn diffinio'r priodoledd {0} ar gyfer y dudalen hon.</value>
   </data>
-  <data name="Error_BuildToViewOutput" xml:space="preserve">
-    <value>Adeiladu'r wefan yn gyntaf i weld allbwn.</value>
+  <data name="Prompt_SanitaryBuild" xml:space="preserve">
+    <value>Bydd adeiladu iechydol yn symud y ffolder allbwn i'r Bin Ailgylchu cyn ei adeiladu, gan gael gwared ar unrhyw ffeiliau crwydr.</value>
   </data>
-  <data name="Error_CouldNotSaveFile" xml:space="preserve">
-    <value>Ni ellid arbed y ffeil.</value>
-  </data>
-  <data name="Error_LogSaveFail" xml:space="preserve">
-    <value>Aeth rhywbeth o'i le wrth geisio arbed y log:
-
-{0}</value>
+  <data name="NewSite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewWeb_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Error_LogSaveFail_Title" xml:space="preserve">
     <value>Methu arbed</value>
@@ -210,113 +492,33 @@
   <data name="Error_UpgradeFail" xml:space="preserve">
     <value>Ni allai AutoSite ailenwi'r mewn\ ffolder i tudalennau\. Ail-enwi'r ffolder â llaw ac agor eich gwefan eto, os gwelwch yn dda.</value>
   </data>
-  <data name="Error_UpgradeFail_Title" xml:space="preserve">
-    <value>Methu trosi</value>
-  </data>
-  <data name="Prompt_CreateSite" xml:space="preserve">
-    <value>Bydd AutoSite yn creu safle yn y ffolder sydd wedi'i leoli yn {0}. A yw hyn yn iawn?</value>
-  </data>
-  <data name="Prompt_ProjectUpgrade" xml:space="preserve">
-    <value>Mae AutoSite bellach yn defnyddio'r llwybr pages\ ar gyfer y ffolder Tudalennau. Bydd y trawsnewidiad hwn yn effeithio ar gydnawsedd â datganiadau hŷn o AutoSite.</value>
-  </data>
-  <data name="Prompt_ProjectUpgrade_Title" xml:space="preserve">
-    <value>Diweddaru Gwefan</value>
-  </data>
-  <data name="Prompt_SanitaryBuild" xml:space="preserve">
-    <value>Bydd adeiladu iechydol yn symud y ffolder allbwn i'r Bin Ailgylchu cyn ei adeiladu, gan gael gwared ar unrhyw ffeiliau crwydr.</value>
-  </data>
-  <data name="Prompt_SaveChangesToFile" xml:space="preserve">
-    <value>Arbed newidiadau i {0}?</value>
-  </data>
-  <data name="Prompt_SaveFilesBeforeClosing" xml:space="preserve">
-    <value>Mae gan rai ffeiliau newidiadau heb eu cadw. Arbedwch nhw?</value>
-  </data>
-  <data name="QuickInsert_Build" xml:space="preserve">
-    <value>Adeiladu am fwy o opsiynau</value>
-  </data>
-  <data name="QuickInsert_Build_Tip" xml:space="preserve">
-    <value>Adeiladu</value>
-  </data>
-  <data name="QuickInsert_Build_TipText" xml:space="preserve">
-    <value>Gall AutoSite roi mwy o awgrymiadau i chi pan fyddwch chi'n adeiladu
-eich gwefan a phoblogi'r Map Priodoledd.</value>
-  </data>
-  <data name="QuickInsert_content_TipText" xml:space="preserve">
-    <value>Yn allbynnu cynnwys y dudalen.
-
-Defnyddiwch unwaith mewn templedi.</value>
-  </data>
-  <data name="QuickInsert_DefineGeneric_Tip" xml:space="preserve">
-    <value>Diffinio {0}</value>
-  </data>
-  <data name="QuickInsert_DefineGeneric_TipText" xml:space="preserve">
-    <value>Yn diffinio'r priodoledd {0} ar gyfer y dudalen hon.</value>
-  </data>
-  <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
-    <value>Diffinio priodoledd newydd</value>
-  </data>
-  <data name="QuickInsert_DefineNew_TipText" xml:space="preserve">
-    <value>Yn ychwanegu diffiniad priodoledd.</value>
-  </data>
   <data name="QuickInsert_DefineTemplate_TipText" xml:space="preserve">
     <value>Yn diffinio'r templed a ddefnyddir gan y dudalen gyfredol.
 
 Y rhagosodiad yw {0}, sy'n dweud wrth AutoSite i ddefnyddio {1} yn y ffolder templedi.</value>
   </data>
-  <data name="QuickInsert_Generic_TipText" xml:space="preserve">
-    <value>Yn allbynnu gwerth y dudalen am y priodoledd {0}.</value>
+  <data name="QuickInsert_Build_Tip" xml:space="preserve">
+    <value>Adeiladu</value>
   </data>
-  <data name="QuickInsert_InsertConditional_Tip" xml:space="preserve">
-    <value>Mewnosod rhan amodol</value>
+  <data name="OpenWeb_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OpenWeb_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="QuickInsert_InsertConditional_TipText" xml:space="preserve">
-    <value>Mewnosod deialog rhan amodol.
-
-Mae amodau yn caniatáu ichi allbynnu testun os oes gan briodoledd werth penodol.</value>
+  <data name="Defaults_NewFile" xml:space="preserve">
+    <value>ffeil-newydd</value>
   </data>
-  <data name="QuickInsert_modified_Tip" xml:space="preserve">
-    <value>Y dyddiad o addasiad ddiwethaf</value>
+  <data name="QuickFind_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuickFind_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="QuickInsert_modified_TipText" xml:space="preserve">
-    <value>Yn allbwn y dyddiad y cafodd y dudalen ei haddasu ddiwethaf.</value>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search_16x.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="QuickInsert_path_Tip" xml:space="preserve">
-    <value>Llwybr</value>
+  <data name="Defaults_NewMdPage_Contents" xml:space="preserve">
+    <value>&lt;!-- attrib template: default --&gt;
+&lt;!-- attrib title: Tudalen Markdown Newydd --&gt;
+</value>
   </data>
-  <data name="QuickInsert_path_TipText" xml:space="preserve">
-    <value>Yn allbynnu llwybr cymharol y dudalen o'r gwraidd.</value>
-  </data>
-  <data name="QuickInsert_root_Tip" xml:space="preserve">
-    <value>Llwybr cymharol i'r gwreiddyn</value>
-  </data>
-  <data name="QuickInsert_root_TipText" xml:space="preserve">
-    <value>Yn allbynnu'r llwybr cymharol o'r dudalen i wraidd y wefan.
-
-Defnyddiwch hwn i ddechrau llwybrau i daflenni arddull, delweddau a thudalennau eraill.</value>
-  </data>
-  <data name="QuickInsert__Example" xml:space="preserve">
-    <value>Enghraifft: {0}</value>
-  </data>
-  <data name="QuickInsert__Output" xml:space="preserve">
-    <value>Allbwn: {0}</value>
-  </data>
-  <data name="UI_AddFilesDialog_Title" xml:space="preserve">
-    <value>Ychwanegu ffeiliau i {0}</value>
-  </data>
-  <data name="UI_StartPage_Title" xml:space="preserve">
-    <value>Tudalen Gychwyn</value>
-  </data>
-  <data name="Explorer_Includes" xml:space="preserve">
-    <value>Cynnwys</value>
-  </data>
-  <data name="Explorer_Pages" xml:space="preserve">
-    <value>Tudalennau</value>
-  </data>
-  <data name="Explorer_Templates" xml:space="preserve">
-    <value>Templedi</value>
-  </data>
-  <data name="Prompt_ChangesOnRestart" xml:space="preserve">
-    <value>Bydd newidiadau yn cael eu gweithredu wrth ailgychwyn.</value>
+  <data name="__" xml:space="preserve">
+    <value/>
   </data>
   <data name="UI_Editor_ViewFile" xml:space="preserve">
     <value>Gweld</value>
@@ -324,16 +526,14 @@ Defnyddiwch hwn i ddechrau llwybrau i daflenni arddull, delweddau a thudalennau 
   <data name="UI_Open" xml:space="preserve">
     <value>Agor</value>
   </data>
-  <data name="UI_OpenFileLocation" xml:space="preserve">
-    <value>Agor lleoliad ffeil</value>
+  <data name="XP_Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xp_template.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UI_OpenFolderLocation" xml:space="preserve">
-    <value>Agor lleoliad ffolder</value>
+  <data name="QuickInsert_DefineNew_Tip" xml:space="preserve">
+    <value>Diffinio priodoledd newydd</value>
   </data>
-  <data name="UI_OpenWithDefault" xml:space="preserve">
-    <value>Agor yn rhaglen ddiofyn</value>
-  </data>
-  <data name="Question_RemoveFromRecents" xml:space="preserve">
-    <value>Ni ellid agor y wefan sydd wedi ei lleoli yn {0}. Ydych chi eisiau ei symud o'r rhestr Wefanau Diweddar?</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="GridUniform_16x_MD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GridUniform_16x_MD.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

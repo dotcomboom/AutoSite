@@ -159,19 +159,19 @@
     <value>72, 24</value>
   </data>
   <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Salvar</value>
   </data>
   <data name="SaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 24</value>
   </data>
   <data name="SaveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Salvar</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 24</value>
   </data>
   <data name="SaveAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Guardar Todo</value>
+    <value>Salvar Tudo</value>
   </data>
   <data name="Sep.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>
@@ -183,7 +183,7 @@
     <value>23, 24</value>
   </data>
   <data name="UndoBtn.Text" xml:space="preserve">
-    <value>Deshacer</value>
+    <value>Desfazer</value>
   </data>
   <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -192,7 +192,7 @@
     <value>23, 24</value>
   </data>
   <data name="RedoBtn.Text" xml:space="preserve">
-    <value>Rehacer</value>
+    <value>Refazer</value>
   </data>
   <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>
@@ -204,7 +204,7 @@
     <value>23, 24</value>
   </data>
   <data name="CutBtn.Text" xml:space="preserve">
-    <value>Cortar</value>
+    <value>Recortar</value>
   </data>
   <data name="CopyBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -222,7 +222,7 @@
     <value>23, 24</value>
   </data>
   <data name="PasteBtn.Text" xml:space="preserve">
-    <value>Pegar</value>
+    <value>Colar</value>
   </data>
   <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -239,7 +239,7 @@
     <value>23, 24</value>
   </data>
   <data name="CloseBtn.Text" xml:space="preserve">
-    <value>Cerrar</value>
+    <value>Fechar</value>
   </data>
   <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>
@@ -251,7 +251,7 @@
     <value>23, 24</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Buscar</value>
+    <value>Encontrar</value>
   </data>
   <data name="GTo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -260,7 +260,7 @@
     <value>23, 24</value>
   </data>
   <data name="GTo.Text" xml:space="preserve">
-    <value>Ir a</value>
+    <value>Ir Para</value>
   </data>
   <data name="Replace.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -269,7 +269,7 @@
     <value>23, 24</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Reemplazar</value>
+    <value>Substituir</value>
   </data>
   <data name="QuickInsert.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -278,7 +278,7 @@
     <value>23, 24</value>
   </data>
   <data name="QuickInsert.Text" xml:space="preserve">
-    <value>Inserción Rápida</value>
+    <value>Inserção Rápida</value>
   </data>
   <data name="Sep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>
@@ -290,13 +290,13 @@
     <value>92, 24</value>
   </data>
   <data name="Preview.Text" xml:space="preserve">
-    <value>Previsualizar</value>
+    <value>Visualizar</value>
   </data>
   <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 24</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Vista Previa</value>
+    <value>Visualização em tempo real</value>
   </data>
   <data name="Sep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 27</value>
@@ -308,7 +308,7 @@
     <value>63, 24</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Compilar</value>
+    <value>Construir</value>
   </data>
   <data name="ViewOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -317,13 +317,13 @@
     <value>123, 24</value>
   </data>
   <data name="ViewOutput.Text" xml:space="preserve">
-    <value>Ver Output</value>
+    <value>Ver Saída</value>
   </data>
   <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 24</value>
   </data>
   <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>Ver en Navegador Predeterminado</value>
+    <value>Visualizar no Navegador Padrão</value>
   </data>
   <metadata name="Autocomplete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>213, 17</value>
@@ -475,7 +475,7 @@
     <value>204, 24</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cortar</value>
+    <value>Recortar</value>
   </data>
   <data name="Copy.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 24</value>
@@ -487,7 +487,7 @@
     <value>204, 24</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Pegar</value>
+    <value>Colar</value>
   </data>
   <data name="ConSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 6</value>
@@ -496,7 +496,7 @@
     <value>204, 24</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Seleccionar Todo</value>
+    <value>Selecionar Todos</value>
   </data>
   <data name="ConSep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 6</value>
@@ -505,13 +505,13 @@
     <value>204, 24</value>
   </data>
   <data name="InsertMnu.Text" xml:space="preserve">
-    <value>Inserción Rápida</value>
+    <value>Inserção Rápida</value>
   </data>
   <data name="InsertConditional.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 24</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insertar Condicional...</value>
+    <value>Inserir Condicional...</value>
   </data>
   <data name="Context.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 182</value>

@@ -135,7 +135,7 @@
     <value>0</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>Dechrau</value>
+    <value>Iniciar</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
@@ -169,7 +169,7 @@
     <value>7</value>
   </data>
   <data name="NewSite.Text" xml:space="preserve">
-    <value>Gwefan Newydd...</value>
+    <value>Novo Site...</value>
   </data>
   <data name="NewSite.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -238,7 +238,7 @@
     <value>9</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Agor diweddar</value>
+    <value>Abrir recente</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -415,7 +415,7 @@
     <value>19</value>
   </data>
   <data name="OpenSite.Text" xml:space="preserve">
-    <value>Agor Gwefan...</value>
+    <value>Abrir Site...</value>
   </data>
   <data name="OpenSite.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -646,7 +646,7 @@
     <value>14</value>
   </data>
   <data name="RWarn.Text" xml:space="preserve">
-    <value>Bydd gwefanau rydych yn gweithio arnyn i'w gweld yma am mynediad cyflym.</value>
+    <value>Sites nos quais você trabalha aparecerão aqui para acesso rápido.</value>
   </data>
   <data name="RWarn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>

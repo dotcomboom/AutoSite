@@ -145,7 +145,7 @@
     <value>6</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cerrar</value>
+    <value>Fechar</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
     <value>Cancel_Button</value>
@@ -238,7 +238,7 @@
     <value>3</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Cree su primera plantilla</value>
+    <value>Crie seu primeiro modelo</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
@@ -262,7 +262,7 @@
     <value>4</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>Esta tarea creará default.html en su carpeta de Plantillas. Esto debería ser suficiente para la mayoría de los sitios, aunque siempre puede añadir más tarde.</value>
+    <value>Esta tarefa criará "default.html" em sua pasta de Modelos. Isto deve ser suficiente para a maioria dos sites, mas você pode sempre adicionar mais depois.</value>
   </data>
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
@@ -289,7 +289,7 @@
     <value>7</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>Esta tarea creará una página de índice en la carpeta de páginas.</value>
+    <value>Esta tarefá criará uma pagina de índice na sua pasta de Páginas.</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -322,7 +322,7 @@
     <value>6</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
-    <value>Crea tu primera página</value>
+    <value>Crie sua primeira página</value>
   </data>
   <data name="&gt;&gt;Label5.Name" xml:space="preserve">
     <value>Label5</value>
@@ -436,7 +436,7 @@
     <value>10</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
-    <value>Elija esta extensión si desea usar exclusivamente HTML.</value>
+    <value>Escolha esta extensão se você quiser usar exclusivamente HTML.</value>
   </data>
   <data name="&gt;&gt;Label7.Name" xml:space="preserve">
     <value>Label7</value>
@@ -463,7 +463,7 @@
     <value>11</value>
   </data>
   <data name="Label8.Text" xml:space="preserve">
-    <value>Elija esta extensión si desea utilizar Markdown para un formato simplificado. HTML también se puede utilizar según sea necesario.</value>
+    <value>Escolha esta extensão se você gostaria de usar Markdown para a formatação simplificada. HTML também poderá ser usado conforme necessário.</value>
   </data>
   <data name="&gt;&gt;Label8.Name" xml:space="preserve">
     <value>Label8</value>
@@ -490,7 +490,7 @@
     <value>12</value>
   </data>
   <data name="CreateTemplate.Text" xml:space="preserve">
-    <value>Crear default.html</value>
+    <value>Criar default.html</value>
   </data>
   <data name="&gt;&gt;CreateTemplate.Name" xml:space="preserve">
     <value>CreateTemplate</value>
@@ -520,7 +520,7 @@
     <value>16</value>
   </data>
   <data name="Button5.Text" xml:space="preserve">
-    <value>Añadir archivos...</value>
+    <value>Adicionar arquivos...</value>
   </data>
   <data name="&gt;&gt;Button5.Name" xml:space="preserve">
     <value>Button5</value>
@@ -547,7 +547,7 @@
     <value>15</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
-    <value>Utilice esta tarea o seleccione y haga clic derecho en Incluye en el Explorador para añadir archivos. Estas pueden ser referenciadas en tus plantillas y páginas como [#root#]image.png o [#root#]subdir/image.png.</value>
+    <value>Use esta tarefa ou selecione com o botão direito em Includes no Navegador para adicionar arquivos. Estes arquivos poderão ser referenciados em seus modelos e páginas como [#root#]image.png ou [#root#]subdir/image.png.</value>
   </data>
   <data name="&gt;&gt;Label11.Name" xml:space="preserve">
     <value>Label11</value>
@@ -580,7 +580,7 @@
     <value>14</value>
   </data>
   <data name="Label12.Text" xml:space="preserve">
-    <value>Añadir incluye</value>
+    <value>Adicionar Inclusões</value>
   </data>
   <data name="&gt;&gt;Label12.Name" xml:space="preserve">
     <value>Label12</value>
@@ -643,7 +643,7 @@
     <value>20</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
-    <value>Compilar</value>
+    <value>Construir</value>
   </data>
   <data name="&gt;&gt;Build.Name" xml:space="preserve">
     <value>Build</value>
@@ -670,7 +670,7 @@
     <value>19</value>
   </data>
   <data name="Label9.Text" xml:space="preserve">
-    <value>AutoSite tiene dos opciones para construir su sitio. Construcción Sanitaria limpia su carpeta de salida de cualquier archivo antiguo y se recomienda antes de publicar.</value>
+    <value>AutoSite tem duas opções para a construção do seu site. Construção Sanitária limpa sua pasta de saída de quaisquer arquivos antigos e é recomendada antes de publicar.</value>
   </data>
   <data name="&gt;&gt;Label9.Name" xml:space="preserve">
     <value>Label9</value>
@@ -703,7 +703,7 @@
     <value>18</value>
   </data>
   <data name="Label10.Text" xml:space="preserve">
-    <value>Crea tu sitio</value>
+    <value>Construa seu site</value>
   </data>
   <data name="&gt;&gt;Label10.Name" xml:space="preserve">
     <value>Label10</value>
@@ -760,7 +760,7 @@
     <value>21</value>
   </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
-    <value>Guía Markdown</value>
+    <value>Guia Markdown</value>
   </data>
   <data name="LinkLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
@@ -793,7 +793,7 @@
     <value>22</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Construcción sanitaria...</value>
+    <value>Construção Sanitária...</value>
   </data>
   <data name="&gt;&gt;SanitaryBuild.Name" xml:space="preserve">
     <value>SanitaryBuild</value>
@@ -820,7 +820,7 @@
     <value>23</value>
   </data>
   <data name="LinkLabel2.Text" xml:space="preserve">
-    <value>Guía HTML</value>
+    <value>Guia HTML</value>
   </data>
   <data name="LinkLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
@@ -874,7 +874,7 @@
     <value>25</value>
   </data>
   <data name="Label15.Text" xml:space="preserve">
-    <value>Puede volver a este diálogo o renombrar el archivo para cambiar los formatos en cualquier momento.</value>
+    <value>Você pode voltar para este diálogo ou renomear o arquivo para mudar os formatos a qualquer momento.</value>
   </data>
   <data name="&gt;&gt;Label15.Name" xml:space="preserve">
     <value>Label15</value>
@@ -907,7 +907,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Inicio rápido</value>
+    <value>Inicio Rápido</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Quickstart</value>

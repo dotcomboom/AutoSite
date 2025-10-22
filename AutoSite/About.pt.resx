@@ -136,25 +136,23 @@
     <value>0</value>
   </data>
   <data name="LicenseBox.Text" xml:space="preserve">
-    <value>This release is dedicated to Somnolescent and its mutuals for their testing, support and contributions to this project, including but not limited to:
+    <value>Many thanks to my friends at Somnolescent for their testing, contributions and camaraderie for this project.
   - Website &amp; manual: mariteaux (http://mariteaux.somnolescent.net)
   - Welsh translation: Caby (http://caby.somnolescent.net)
   - Polish translation: devon (http://matfloor.net)
-
+And every site in the wild that uses AutoSite- thank you!
 ----
-
 AutoSite is also made possible by these open source libraries:
   - FastColoredTextBox: https://github.com/PavelTorgashov/FastColoredTextBox (LGPLv3)
   - AutoComplete Menu: https://www.codeproject.com/articles/365974/autocomplete-menu (LGPLv3)
   - CommonMark.NET: https://github.com/Knagis/CommonMark.NET (BSD 3-Clause)
-
 ----
-
-Apricot, AutoSite Core, and AutoSite's code with the exception of the libraries used above, and the code used from StackOverflow and other websites (referenced in the source) is licensed under the MIT License.
+Disclaimer:
+The AutoSite project, with the exception of the libraries used above and code used from StackOverflow and other websites as referenced in the source code, is licensed under the MIT License.
 
 MIT License
 
-Copyright (c) 2021 dotcomboom
+Copyright (c) 2023 dotcomboom
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -173,9 +171,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 -----
-
 CommonMark.NET License
 
 Copyright (c) 2014, Kārlis Gaņģis
@@ -205,9 +201,7 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 --- 
-
 FastColoredTextBox and AutoComplete Menu License
 
   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
@@ -370,7 +364,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>5</value>
   </data>
   <data name="WebsiteLink.Text" xml:space="preserve">
-    <value>Strona internetowa</value>
+    <value>Website</value>
   </data>
   <data name="WebsiteLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -454,7 +448,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>0</value>
   </data>
   <data name="Credits.Text" xml:space="preserve">
-    <value>Kredyty</value>
+    <value>Créditos</value>
   </data>
   <data name="&gt;&gt;Credits.Name" xml:space="preserve">
     <value>Credits</value>
@@ -496,7 +490,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="Changelog.Text" xml:space="preserve">
-    <value>Lista zmian</value>
+    <value>Changelog</value>
   </data>
   <data name="&gt;&gt;Changelog.Name" xml:space="preserve">
     <value>Changelog</value>
@@ -526,8 +520,20 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>1</value>
   </data>
   <data name="ChangelogBox.Text" xml:space="preserve">
-    <value>1.0 Gold:
-   + Help manual (CTRL+F1) and sample site added
+    <value>Unnamed Planned Release: (changelog out of date)
+   + Global toolbar (60%)
+   + Run scripts after build (0%)
+   + Dockable panels (0%)
+   + Build shortcut lnk (0%)
+   + Insert Conditional dialog uses selected text (90%; needs to check for an already conditional being there)
+   - Codebase improvements hopefully (?%)
+   - Certain instruction text and naming simplified (?%)
+   - More builtin Explorer icons improved (0%)
+   - Rearranged menu item places
+   - Now uses MenuStrips?
+
+1.0 Gold:
+   + Help manual (CTRL+F1) and sample site included
    + About box prettified and updated
 
 1.0 RC5:
@@ -807,7 +813,7 @@ Copyright (C) Pavel Torgashov, 2011-2016. </value>
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>O AutoSite</value>
+    <value>Sobre o AutoSite</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>About</value>

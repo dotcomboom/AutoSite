@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,347 +117,299 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FolderBrowser.Description" xml:space="preserve">
-    <value>Elija una carpeta en la que guardar los recursos de su sitio. Si no existe ningún sitio en esa carpeta, se creará una.</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="EdSplit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="NewSite.Text" xml:space="preserve">
-    <value>Nuevo sitio...</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <data name="EdSplit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="OpenFolder.Text" xml:space="preserve">
-    <value>Abrir sitio...</value>
+  <data name="EdSplit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
   </data>
-  <data name="CloseFile.Text" xml:space="preserve">
-    <value>Cerrar</value>
+  <data name="EdSplit.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
-  <data name="CloseSite.Text" xml:space="preserve">
-    <value>Cerrar sitio</value>
+  <data name="EditTabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="FileSep2.Text" xml:space="preserve">
-    <value>-</value>
+  <metadata name="VS2017.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>425, 17</value>
+  </metadata>
+  <data name="VS2017.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
   </data>
-  <data name="Save.Text" xml:space="preserve">
-    <value>Guardar</value>
+  <data name="EditTabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 8</value>
   </data>
-  <data name="SaveAll.Text" xml:space="preserve">
-    <value>Guardar todo</value>
+  <data name="EditTabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="FileSep3.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="EditTabs.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="Recent1.Text" xml:space="preserve">
-    <value>Recent 1</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="EditTabs.ShowToolTips" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="Recent2.Text" xml:space="preserve">
-    <value>Recent 2</value>
+  <data name="EditTabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>770, 236</value>
   </data>
-  <data name="Recent3.Text" xml:space="preserve">
-    <value>Recent 3</value>
+  <data name="EditTabs.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="Recent4.Text" xml:space="preserve">
-    <value>Recent 4</value>
+  <data name="EditTabs.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="Recent5.Text" xml:space="preserve">
-    <value>Recent 5</value>
+  <data name="&gt;&gt;EditTabs.Name" xml:space="preserve">
+    <value>EditTabs</value>
   </data>
-  <data name="RecentSep.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="&gt;&gt;EditTabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClearRecents.Text" xml:space="preserve">
-    <value>Limpiar sitios recientes</value>
+  <data name="&gt;&gt;EditTabs.Parent" xml:space="preserve">
+    <value>EdSplit.Panel1</value>
   </data>
-  <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Sitios recientes</value>
+  <data name="&gt;&gt;EditTabs.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="InstallPackMnu.Text" xml:space="preserve">
-    <value>Instalar paquete...</value>
+  <data name="EdSplit.Panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 8, 8, 0</value>
   </data>
-  <data name="FileSep4.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="EdSplit.Panel1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
-  <data name="ExitItem.Text" xml:space="preserve">
-    <value>Salir</value>
+  <data name="&gt;&gt;EdSplit.Panel1.Name" xml:space="preserve">
+    <value>EdSplit.Panel1</value>
   </data>
-  <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;Archivo</value>
+  <data name="&gt;&gt;EdSplit.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Undo.Text" xml:space="preserve">
-    <value>Deshacer</value>
+  <data name="&gt;&gt;EdSplit.Panel1.Parent" xml:space="preserve">
+    <value>EdSplit</value>
   </data>
-  <data name="Redo.Text" xml:space="preserve">
-    <value>Rehacer</value>
+  <data name="&gt;&gt;EdSplit.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="EditSep.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="Preview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="Cut.Text" xml:space="preserve">
-    <value>Cortar</value>
+  <data name="Preview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="Copy.Text" xml:space="preserve">
-    <value>Copiar</value>
+  <data name="Preview.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="Paste.Text" xml:space="preserve">
-    <value>Pegar</value>
+  <data name="Preview.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 45</value>
   </data>
-  <data name="EditSep2.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="Preview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>770, 342</value>
   </data>
-  <data name="SelectAll.Text" xml:space="preserve">
-    <value>Seleccionar todo</value>
+  <data name="Preview.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="EditSep3.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="&gt;&gt;Preview.Name" xml:space="preserve">
+    <value>Preview</value>
   </data>
-  <data name="GoToMnu.Text" xml:space="preserve">
-    <value>Ir a...</value>
+  <data name="&gt;&gt;Preview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Find.Text" xml:space="preserve">
-    <value>Buscar...</value>
+  <data name="&gt;&gt;Preview.Parent" xml:space="preserve">
+    <value>EdSplit.Panel2</value>
   </data>
-  <data name="Replace.Text" xml:space="preserve">
-    <value>Reemplazar...</value>
+  <data name="&gt;&gt;Preview.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="EditSep4.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="EdSplit.Panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 8, 8</value>
   </data>
-  <data name="QuickInsertMnu.Text" xml:space="preserve">
-    <value>Quick Insert</value>
+  <data name="EdSplit.Panel2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
-  <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insertar condicional...</value>
+  <data name="&gt;&gt;EdSplit.Panel2.Name" xml:space="preserve">
+    <value>EdSplit.Panel2</value>
   </data>
-  <data name="EditMenu.Text" xml:space="preserve">
-    <value>Editar</value>
+  <data name="&gt;&gt;EdSplit.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="WordWrap.Text" xml:space="preserve">
-    <value>Ajuste de palabras</value>
+  <data name="&gt;&gt;EdSplit.Panel2.Parent" xml:space="preserve">
+    <value>EdSplit</value>
   </data>
-  <data name="VirtualSpace.Text" xml:space="preserve">
-    <value>Espacio virtual</value>
+  <data name="&gt;&gt;EdSplit.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="WideCaret.Text" xml:space="preserve">
-    <value>Cuidado ancho</value>
+  <data name="EdSplit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 602</value>
   </data>
-  <data name="FormatSep.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="EdSplit.SplitterDistance" type="System.Int32, mscorlib">
+    <value>244</value>
   </data>
-  <data name="SyntaxHighlight.Text" xml:space="preserve">
-    <value>Resaltado sintáctico experimental</value>
+  <data name="EdSplit.SplitterWidth" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="LivePreview.Text" xml:space="preserve">
-    <value>Vista previa en vivo</value>
+  <data name="EdSplit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="FormatSep2.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="&gt;&gt;EdSplit.Name" xml:space="preserve">
+    <value>EdSplit</value>
   </data>
-  <data name="EditorFont.Text" xml:space="preserve">
-    <value>Fuentes monoespaciales...</value>
+  <data name="&gt;&gt;EdSplit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
+  <data name="&gt;&gt;EdSplit.Parent" xml:space="preserve">
+    <value>CoreSplit.Panel2</value>
   </data>
-  <data name="ExplorerPanel.Text" xml:space="preserve">
-    <value>Explorador</value>
+  <data name="&gt;&gt;EdSplit.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="BuildPanel.Text" xml:space="preserve">
-    <value>Apricot</value>
+  <data name="ExSplit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="EditorPanel.Text" xml:space="preserve">
-    <value>Editor</value>
+  <data name="ExSplit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="PreviewPanel.Text" xml:space="preserve">
-    <value>Vista previa</value>
+  <data name="ExSplit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
   </data>
-  <data name="ViewSep.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="ExSplit.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
-  <data name="VS2017item.Text" xml:space="preserve">
-    <value>Visual Studio 2017</value>
+  <data name="SiteTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="XPitem.Text" xml:space="preserve">
-    <value>XP</value>
+  <data name="SiteTree.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="IconThemeMenu.Text" xml:space="preserve">
-    <value>Tema de icono de explorador</value>
+  <data name="SiteTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
   </data>
-  <data name="cDefault.Text" xml:space="preserve">
-    <value>Predeterminado</value>
+  <data name="SiteTree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="cDark.Text" xml:space="preserve">
-    <value>Oscuro</value>
+  <data name="SiteTree.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="ColorScheme.Text" xml:space="preserve">
-    <value>Esquema de color (beta)</value>
+  <data name="SiteTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 335</value>
   </data>
-  <data name="SystemIcons.Text" xml:space="preserve">
-    <value>Usar iconos del sistema</value>
+  <data name="SiteTree.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="RefreshItem.Text" xml:space="preserve">
-    <value>Actualizar Explorador</value>
+  <data name="&gt;&gt;SiteTree.Name" xml:space="preserve">
+    <value>SiteTree</value>
   </data>
-  <data name="ViewSep2.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="&gt;&gt;SiteTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PreviewPage.Text" xml:space="preserve">
-    <value>Previsualizar archivo</value>
+  <data name="&gt;&gt;SiteTree.Parent" xml:space="preserve">
+    <value>ExSplit.Panel1</value>
   </data>
-  <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>Ver salida</value>
+  <data name="&gt;&gt;SiteTree.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="ViewSep3.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="ExSplit.Panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 8, 0, 0</value>
   </data>
-  <data name="BrowseSiteMnu.Text" xml:space="preserve">
-    <value>Navegar por el sitio en el navegador por defecto</value>
+  <data name="ExSplit.Panel1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
-  <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Navegar por el sitio en vista previa</value>
+  <data name="&gt;&gt;ExSplit.Panel1.Name" xml:space="preserve">
+    <value>ExSplit.Panel1</value>
   </data>
-  <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;Ver</value>
+  <data name="&gt;&gt;ExSplit.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="BuildSite.Text" xml:space="preserve">
-    <value>Construir sitio</value>
+  <data name="&gt;&gt;ExSplit.Panel1.Parent" xml:space="preserve">
+    <value>ExSplit</value>
   </data>
-  <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Construcción sanitaria...</value>
+  <data name="&gt;&gt;ExSplit.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="ToolsSep.Text" xml:space="preserve">
-    <value>-</value>
+  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 60</value>
+  </metadata>
+  <data name="LogMenuBridge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
   </data>
-  <data name="OpenOutputMnu.Text" xml:space="preserve">
-    <value>Abrir carpeta de salida</value>
+  <data name="&gt;&gt;LogMenuBridge.Name" xml:space="preserve">
+    <value>LogMenuBridge</value>
   </data>
-  <data name="ToolsSep2.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="&gt;&gt;LogMenuBridge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="QuickstartMnu.Text" xml:space="preserve">
-    <value>Inicio rápido</value>
+  <data name="Log.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="ShowVersion.Text" xml:space="preserve">
-    <value>Mostrar versión</value>
+  <data name="Log.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 9</value>
   </data>
-  <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Herramientas</value>
+  <data name="Log.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
-  <data name="HelpTopics.Text" xml:space="preserve">
-    <value>Ver manual</value>
+  <data name="Log.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 141</value>
   </data>
-  <data name="OpenSampleSite.Text" xml:space="preserve">
-    <value>Abrir sitio de ejemplo...</value>
+  <data name="Log.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="HelpSep.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="&gt;&gt;Log.Name" xml:space="preserve">
+    <value>Log</value>
   </data>
-  <data name="Website.Text" xml:space="preserve">
-    <value>Sitio web</value>
+  <data name="&gt;&gt;Log.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="GitHub.Text" xml:space="preserve">
-    <value>Repositorio de GitHub</value>
+  <data name="&gt;&gt;Log.Parent" xml:space="preserve">
+    <value>LogPage</value>
   </data>
-  <data name="SendFeedback.Text" xml:space="preserve">
-    <value>Enviar Comentarios</value>
+  <data name="&gt;&gt;Log.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="HelpSep2.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="LogPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
   </data>
-  <data name="EnglishLang.Text" xml:space="preserve">
-    <value>English</value>
+  <data name="LogPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>7, 9, 7, 9</value>
   </data>
-  <data name="SpanishLang.Text" xml:space="preserve">
-    <value>Español</value>
+  <data name="LogPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>7, 9, 7, 9</value>
   </data>
-  <data name="PolishLang.Text" xml:space="preserve">
-    <value>Polski</value>
+  <data name="LogPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 159</value>
   </data>
-  <data name="WelshLang.Text" xml:space="preserve">
-    <value>Cymraeg</value>
-  </data>
-  <data name="LanguageMenu.Text" xml:space="preserve">
-    <value>🌐</value>
-  </data>
-  <data name="InspectorBtn.Text" xml:space="preserve">
-    <value>Inspector de GUI (F12)</value>
-  </data>
-  <data name="HelpSep3.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="AboutItem.Text" xml:space="preserve">
-    <value>Acerca de AutoSite</value>
-  </data>
-  <data name="HelpMenu.Text" xml:space="preserve">
-    <value>Ayuda</value>
-  </data>
-  <data name="OpenContext.Text" xml:space="preserve">
-    <value>Abrir</value>
-  </data>
-  <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Abrir en programa predeterminado</value>
-  </data>
-  <data name="OpenFileLocation.Text" xml:space="preserve">
-    <value>Abrir la ubicación del archivo</value>
-  </data>
-  <data name="ContextSep.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="CopyCon.Text" xml:space="preserve">
-    <value>Copiar</value>
-  </data>
-  <data name="PasteCon.Text" xml:space="preserve">
-    <value>Pegar</value>
-  </data>
-  <data name="AddFilesCon.Text" xml:space="preserve">
-    <value>Añadir archivos...</value>
-  </data>
-  <data name="ContextSep2.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="DeleteCon.Text" xml:space="preserve">
-    <value>Eliminar</value>
-  </data>
-  <data name="RenameCon.Text" xml:space="preserve">
-    <value>Renombrar</value>
-  </data>
-  <data name="ContextSep3.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="NewFolderCon.Text" xml:space="preserve">
-    <value>Carpeta</value>
-  </data>
-  <data name="NewSep.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="NewHTMLCon.Text" xml:space="preserve">
-    <value>Página HTML (.html)</value>
-  </data>
-  <data name="NewMDCon.Text" xml:space="preserve">
-    <value>Página Markdown (.md)</value>
-  </data>
-  <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>Guión PHP (.php)</value>
-  </data>
-  <data name="NewSep2.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>Hojas de estilo CSS (.css)</value>
-  </data>
-  <data name="NewJSCon.Text" xml:space="preserve">
-    <value>Guión JS (.js)</value>
-  </data>
-  <data name="NewTXTCon.Text" xml:space="preserve">
-    <value>Texto simple (.txt)</value>
-  </data>
-  <data name="NewCon.Text" xml:space="preserve">
-    <value>Nuevo</value>
-  </data>
-  <data name="AddFilesDialog.Filter" xml:space="preserve">
-    <value>Todos los archivos (*.*)|*.*</value>
-  </data>
-  <data name="AddFilesDialog.Title" xml:space="preserve">
-    <value>Añadir archivos a la carpeta</value>
+  <data name="LogPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="LogPage.Text" xml:space="preserve">
     <value>Logo</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
+    <value>LogPage</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogPage.Parent" xml:space="preserve">
+    <value>ApricotTabs</value>
+  </data>
+  <data name="&gt;&gt;LogPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AttributeExplanation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AttributeExplanation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AttributeExplanation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 7</value>
+  </data>
+  <data name="AttributeExplanation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 145</value>
+  </data>
+  <data name="AttributeExplanation.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="AttributeExplanation.Text" xml:space="preserve">
     <value>
@@ -465,8 +417,152 @@ El Mapa de Atributos le permite ver todos los atributos utilizados en su sitio.
 
 Compila su sitio para poblar el Mapa de Atributos.</value>
   </data>
+  <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Name" xml:space="preserve">
+    <value>AttributeExplanation</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeExplanation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AttributeTree.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 7</value>
+  </data>
+  <data name="AttributeTree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="AttributeTree.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AttributeTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 145</value>
+  </data>
+  <data name="AttributeTree.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Name" xml:space="preserve">
+    <value>AttributeTree</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.Parent" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;AttributeTree.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MapPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="MapPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="MapPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="MapPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 159</value>
+  </data>
+  <data name="MapPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="MapPage.Text" xml:space="preserve">
     <value>Mapa de atributos</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
+    <value>MapPage</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MapPage.Parent" xml:space="preserve">
+    <value>ApricotTabs</value>
+  </data>
+  <data name="&gt;&gt;MapPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ApricotTabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ApricotTabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="ApricotTabs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="ApricotTabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 192</value>
+  </data>
+  <data name="ApricotTabs.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ApricotTabs.Name" xml:space="preserve">
+    <value>ApricotTabs</value>
+  </data>
+  <data name="&gt;&gt;ApricotTabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ApricotTabs.Parent" xml:space="preserve">
+    <value>ExSplit.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ApricotTabs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BuildProgress.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="BuildProgress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BuildProgress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 220</value>
+  </data>
+  <data name="BuildProgress.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="BuildProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 31</value>
+  </data>
+  <data name="BuildProgress.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BuildProgress.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;BuildProgress.Name" xml:space="preserve">
+    <value>BuildProgress</value>
+  </data>
+  <data name="&gt;&gt;BuildProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildProgress.Parent" xml:space="preserve">
+    <value>ExSplit.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BuildProgress.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="BuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="Build.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Build.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 24</value>
   </data>
   <data name="Build.Text" xml:space="preserve">
     <value>Construir</value>
@@ -474,82 +570,2531 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
   <data name="Build.ToolTipText" xml:space="preserve">
     <value>Construir</value>
   </data>
+  <data name="SanitaryBuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SanitaryBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
   <data name="SanitaryBuildBtn.Text" xml:space="preserve">
     <value>Construcción sanitaria...</value>
   </data>
   <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
     <value>Construcción sanitaria...</value>
   </data>
+  <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="OpenOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
   <data name="OpenOutput.Text" xml:space="preserve">
     <value>Abrir carpeta de salida</value>
+  </data>
+  <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BrowseSitePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
   </data>
   <data name="BrowseSitePreview.Text" xml:space="preserve">
     <value>Navegar por el sitio en vista previa</value>
   </data>
+  <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BrowseSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
   <data name="BrowseSite.Text" xml:space="preserve">
     <value>Ver sitio</value>
+  </data>
+  <data name="LiveBuildToggle.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="LiveBuildToggle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 24</value>
+  </data>
+  <data name="LiveBuildToggle.Text" xml:space="preserve">
+    <value>Compilar cambios automáticamente</value>
+  </data>
+  <data name="LiveBuildToggle.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="BuildStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="BuildStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 0, 1, 1</value>
+  </data>
+  <data name="BuildStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 28</value>
+  </data>
+  <data name="BuildStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="BuildStrip.Text" xml:space="preserve">
     <value>Compilar</value>
   </data>
+  <data name="&gt;&gt;BuildStrip.Name" xml:space="preserve">
+    <value>BuildStrip</value>
+  </data>
+  <data name="&gt;&gt;BuildStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildStrip.Parent" xml:space="preserve">
+    <value>ExSplit.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BuildStrip.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ExSplit.Panel2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;ExSplit.Panel2.Name" xml:space="preserve">
+    <value>ExSplit.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ExSplit.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExSplit.Panel2.Parent" xml:space="preserve">
+    <value>ExSplit</value>
+  </data>
+  <data name="&gt;&gt;ExSplit.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ExSplit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 602</value>
+  </data>
+  <data name="ExSplit.SplitterDistance" type="System.Int32, mscorlib">
+    <value>343</value>
+  </data>
+  <data name="ExSplit.SplitterWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ExSplit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ExSplit.Name" xml:space="preserve">
+    <value>ExSplit</value>
+  </data>
+  <data name="&gt;&gt;ExSplit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExSplit.Parent" xml:space="preserve">
+    <value>CoreSplit.Panel1</value>
+  </data>
+  <data name="&gt;&gt;ExSplit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CoreSplit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="CoreSplit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="CoreSplit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="CoreSplit.Panel1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Panel1.Name" xml:space="preserve">
+    <value>CoreSplit.Panel1</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Panel1.Parent" xml:space="preserve">
+    <value>CoreSplit</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CoreSplit.Panel2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Panel2.Name" xml:space="preserve">
+    <value>CoreSplit.Panel2</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Panel2.Parent" xml:space="preserve">
+    <value>CoreSplit</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CoreSplit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 602</value>
+  </data>
+  <data name="CoreSplit.SplitterDistance" type="System.Int32, mscorlib">
+    <value>292</value>
+  </data>
+  <data name="CoreSplit.SplitterWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="CoreSplit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Name" xml:space="preserve">
+    <value>CoreSplit</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.Parent" xml:space="preserve">
+    <value>ToolStripContainer1.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;CoreSplit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.BottomToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.BottomToolStripPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ToolStripContainer1.ContentPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ToolStripContainer1.ContentPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ToolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 602</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ContentPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToolStripContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ToolStripContainer1.LeftToolStripPanel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.LeftToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.LeftToolStripPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ToolStripContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ToolStripContainer1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.RightToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.RightToolStripPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ToolStripContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 675</value>
+  </data>
+  <data name="ToolStripContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ToolStripContainer1.Text" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>241, 17</value>
+  </metadata>
+  <data name="MenuBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="NewSite.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+N</value>
+  </data>
+  <data name="NewSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="NewSite.Text" xml:space="preserve">
+    <value>Nuevo sitio...</value>
+  </data>
+  <data name="OpenFolder.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+O</value>
+  </data>
+  <data name="OpenFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="OpenFolder.Text" xml:space="preserve">
+    <value>Abrir sitio...</value>
+  </data>
+  <data name="CloseFile.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+W</value>
+  </data>
+  <data name="CloseFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="CloseFile.Text" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="CloseSite.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CloseSite.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+W</value>
+  </data>
+  <data name="CloseSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="CloseSite.Text" xml:space="preserve">
+    <value>Cerrar sitio</value>
+  </data>
+  <data name="FileSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 6</value>
+  </data>
+  <data name="Save.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="SaveAll.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+S</value>
+  </data>
+  <data name="SaveAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="SaveAll.Text" xml:space="preserve">
+    <value>Guardar todo</value>
+  </data>
+  <data name="FileSep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 6</value>
+  </data>
+  <data name="FileSep3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 24</value>
+  </data>
+  <data name="Recent1.Text" xml:space="preserve">
+    <value>Recent 1</value>
+  </data>
+  <data name="Recent1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 24</value>
+  </data>
+  <data name="Recent2.Text" xml:space="preserve">
+    <value>Recent 2</value>
+  </data>
+  <data name="Recent2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 24</value>
+  </data>
+  <data name="Recent3.Text" xml:space="preserve">
+    <value>Recent 3</value>
+  </data>
+  <data name="Recent3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 24</value>
+  </data>
+  <data name="Recent4.Text" xml:space="preserve">
+    <value>Recent 4</value>
+  </data>
+  <data name="Recent4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Recent5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 24</value>
+  </data>
+  <data name="Recent5.Text" xml:space="preserve">
+    <value>Recent 5</value>
+  </data>
+  <data name="Recent5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RecentSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 6</value>
+  </data>
+  <data name="ClearRecents.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 24</value>
+  </data>
+  <data name="ClearRecents.Text" xml:space="preserve">
+    <value>Limpiar sitios recientes</value>
+  </data>
+  <data name="OpenRecent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="OpenRecent.Text" xml:space="preserve">
+    <value>Sitios recientes</value>
+  </data>
+  <data name="FileSep4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 6</value>
+  </data>
+  <data name="ExitItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+F4</value>
+  </data>
+  <data name="ExitItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="ExitItem.Text" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="FileMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 24</value>
+  </data>
+  <data name="FileMenu.Text" xml:space="preserve">
+    <value>&amp;Archivo</value>
+  </data>
+  <data name="Undo.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Z</value>
+  </data>
+  <data name="Undo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="Undo.Text" xml:space="preserve">
+    <value>Deshacer</value>
+  </data>
+  <data name="Redo.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Y</value>
+  </data>
+  <data name="Redo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="Redo.Text" xml:space="preserve">
+    <value>Rehacer</value>
+  </data>
+  <data name="EditSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 6</value>
+  </data>
+  <data name="Cut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+X</value>
+  </data>
+  <data name="Cut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="Cut.Text" xml:space="preserve">
+    <value>Cortar</value>
+  </data>
+  <data name="Copy.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="Copy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="Copy.Text" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="Paste.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+V</value>
+  </data>
+  <data name="Paste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="Paste.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="EditSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 6</value>
+  </data>
+  <data name="SelectAll.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="SelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="SelectAll.Text" xml:space="preserve">
+    <value>Seleccionar todo</value>
+  </data>
+  <data name="EditSep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 6</value>
+  </data>
+  <data name="Find.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+F</value>
+  </data>
+  <data name="Find.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="Find.Text" xml:space="preserve">
+    <value>Buscar...</value>
+  </data>
+  <data name="Replace.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+H</value>
+  </data>
+  <data name="Replace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="Replace.Text" xml:space="preserve">
+    <value>Reemplazar...</value>
+  </data>
+  <data name="GoToMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+G</value>
+  </data>
+  <data name="GoToMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="GoToMnu.Text" xml:space="preserve">
+    <value>Ir a...</value>
+  </data>
+  <data name="EditSep4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 6</value>
+  </data>
+  <data name="QuickInsertMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+J</value>
+  </data>
+  <data name="QuickInsertMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="QuickInsertMnu.Text" xml:space="preserve">
+    <value>Quick Insert</value>
+  </data>
+  <data name="InsertConditional.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+I</value>
+  </data>
+  <data name="InsertConditional.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 24</value>
+  </data>
+  <data name="InsertConditional.Text" xml:space="preserve">
+    <value>Insertar condicional...</value>
+  </data>
+  <data name="EditMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 24</value>
+  </data>
+  <data name="EditMenu.Text" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="WordWrap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="WordWrap.Text" xml:space="preserve">
+    <value>Ajuste de palabras</value>
+  </data>
+  <data name="VirtualSpace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="VirtualSpace.Text" xml:space="preserve">
+    <value>Espacio virtual</value>
+  </data>
+  <data name="WideCaret.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="WideCaret.Text" xml:space="preserve">
+    <value>Cuidado ancho</value>
+  </data>
+  <data name="FormatSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 6</value>
+  </data>
+  <data name="LivePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="LivePreview.Text" xml:space="preserve">
+    <value>Vista previa en vivo</value>
+  </data>
+  <data name="FormatSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 6</value>
+  </data>
+  <data name="LivePreviewFontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="LivePreviewFontToolStripMenuItem.Text" xml:space="preserve">
+    <value>Fuente para vista previa en vivo...</value>
+  </data>
+  <data name="EditorFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="EditorFont.Text" xml:space="preserve">
+    <value>Fuentes monoespaciales...</value>
+  </data>
+  <data name="FormatMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
+  </data>
+  <data name="FormatMenu.Text" xml:space="preserve">
+    <value>F&amp;ormat</value>
+  </data>
+  <data name="ExplorerPanel.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+1</value>
+  </data>
+  <data name="ExplorerPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="ExplorerPanel.Text" xml:space="preserve">
+    <value>Explorador</value>
+  </data>
+  <data name="BuildPanel.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+2</value>
+  </data>
+  <data name="BuildPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="BuildPanel.Text" xml:space="preserve">
+    <value>Apricot</value>
+  </data>
+  <data name="EditorPanel.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+3</value>
+  </data>
+  <data name="EditorPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="EditorPanel.Text" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="PreviewPanel.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+4</value>
+  </data>
+  <data name="PreviewPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="PreviewPanel.Text" xml:space="preserve">
+    <value>Vista previa</value>
+  </data>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 6</value>
+  </data>
+  <data name="CommandLabelsMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="CommandLabelsMnu.Text" xml:space="preserve">
+    <value>Etiquetas de Comando</value>
+  </data>
+  <data name="ToolStripSeparator8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 6</value>
+  </data>
+  <data name="VerticalSplitMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+5</value>
+  </data>
+  <data name="VerticalSplitMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="VerticalSplitMnu.Text" xml:space="preserve">
+    <value>Editor de división vertical</value>
+  </data>
+  <data name="VerticalSplitExplorerMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="VerticalSplitExplorerMnu.Text" xml:space="preserve">
+    <value>Explorador de división vertical</value>
+  </data>
+  <data name="MenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 6</value>
+  </data>
+  <data name="VS2017item.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="VS2017item.Text" xml:space="preserve">
+    <value>Visual Studio 2017</value>
+  </data>
+  <data name="XPitem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="XPitem.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="ExplorerIconSchemeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="ExplorerIconSchemeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tema de icono de explorador</value>
+  </data>
+  <data name="SystemIcons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="SystemIcons.Text" xml:space="preserve">
+    <value>Usar iconos del sistema</value>
+  </data>
+  <data name="RefreshItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="RefreshItem.Text" xml:space="preserve">
+    <value>Actualizar Explorador</value>
+  </data>
+  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 6</value>
+  </data>
+  <data name="PreviewPage.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+P</value>
+  </data>
+  <data name="PreviewPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="PreviewPage.Text" xml:space="preserve">
+    <value>Previsualizar archivo</value>
+  </data>
+  <data name="ViewFileOutput.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Alt+P</value>
+  </data>
+  <data name="ViewFileOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="ViewFileOutput.Text" xml:space="preserve">
+    <value>Ver salida</value>
+  </data>
+  <data name="FileOutputInDefaultBrowserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="FileOutputInDefaultBrowserToolStripMenuItem.Text" xml:space="preserve">
+    <value>Salida en el Navegador por defecto</value>
+  </data>
+  <data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 6</value>
+  </data>
+  <data name="BrowseSitePreviewMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
+    <value>Navegar por el sitio en vista previa</value>
+  </data>
+  <data name="BrowseSiteMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+P</value>
+  </data>
+  <data name="BrowseSiteMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 24</value>
+  </data>
+  <data name="BrowseSiteMnu.Text" xml:space="preserve">
+    <value>Navegar por el sitio en el navegador por defecto</value>
+  </data>
+  <data name="ViewMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 24</value>
+  </data>
+  <data name="ViewMenu.Text" xml:space="preserve">
+    <value>&amp;Ver</value>
+  </data>
+  <data name="BuildSite.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+B</value>
+  </data>
+  <data name="BuildSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 24</value>
+  </data>
+  <data name="BuildSite.Text" xml:space="preserve">
+    <value>Construir sitio</value>
+  </data>
+  <data name="SanitaryBuild.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+B</value>
+  </data>
+  <data name="SanitaryBuild.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 24</value>
+  </data>
+  <data name="SanitaryBuild.Text" xml:space="preserve">
+    <value>Construcción sanitaria</value>
+  </data>
+  <data name="ToolsSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 6</value>
+  </data>
+  <data name="OpenOutputMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+O</value>
+  </data>
+  <data name="OpenOutputMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 24</value>
+  </data>
+  <data name="OpenOutputMnu.Text" xml:space="preserve">
+    <value>Abrir carpeta de salida</value>
+  </data>
+  <data name="MenuItem5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 6</value>
+  </data>
+  <data name="QuickstartMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 24</value>
+  </data>
+  <data name="QuickstartMnu.Text" xml:space="preserve">
+    <value>Inicio rápido</value>
+  </data>
+  <data name="ToolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 6</value>
+  </data>
+  <data name="InspectorBtn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F12</value>
+  </data>
+  <data name="InspectorBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 24</value>
+  </data>
+  <data name="InspectorBtn.Text" xml:space="preserve">
+    <value>Inspector de GUI (F12)</value>
+  </data>
+  <data name="ShowVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 24</value>
+  </data>
+  <data name="ShowVersion.Text" xml:space="preserve">
+    <value>Mostrar versión</value>
+  </data>
+  <data name="BuildMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 24</value>
+  </data>
+  <data name="BuildMenu.Text" xml:space="preserve">
+    <value>&amp;Herramientas</value>
+  </data>
+  <data name="HelpTopics.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F1</value>
+  </data>
+  <data name="HelpTopics.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
+  <data name="HelpTopics.Text" xml:space="preserve">
+    <value>Ver manual</value>
+  </data>
+  <data name="OpenSampleSite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
+  <data name="OpenSampleSite.Text" xml:space="preserve">
+    <value>Abrir sitio de ejemplo</value>
+  </data>
+  <data name="HelpSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="Website.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
+  <data name="Website.Text" xml:space="preserve">
+    <value>Sitio web</value>
+  </data>
+  <data name="GitHub.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
+  <data name="GitHub.Text" xml:space="preserve">
+    <value>Repositorio de GitHub</value>
+  </data>
+  <data name="SendFeedback.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
+  <data name="SendFeedback.Text" xml:space="preserve">
+    <value>Enviar Comentarios</value>
+  </data>
+  <data name="HelpSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="EnglishLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 24</value>
+  </data>
+  <data name="EnglishLang.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="SpanishLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 24</value>
+  </data>
+  <data name="SpanishLang.Text" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="PolishLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 24</value>
+  </data>
+  <data name="PolishLang.Text" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+  <data name="WelshLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 24</value>
+  </data>
+  <data name="WelshLang.Text" xml:space="preserve">
+    <value>Cymraeg</value>
+  </data>
+  <data name="LanguageMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
+  <data name="LanguageMenu.Text" xml:space="preserve">
+    <value>🌐</value>
+  </data>
+  <data name="HelpSep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="AboutItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
+  </data>
+  <data name="AboutItem.Text" xml:space="preserve">
+    <value>Acerca de AutoSite</value>
+  </data>
+  <data name="HelpMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 24</value>
+  </data>
+  <data name="HelpMenu.Text" xml:space="preserve">
+    <value>&amp;Ayuda</value>
+  </data>
+  <data name="MenuBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 28</value>
+  </data>
+  <data name="MenuBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MenuBar.Name" xml:space="preserve">
+    <value>MenuBar</value>
+  </data>
+  <data name="&gt;&gt;MenuBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBar.Parent" xml:space="preserve">
+    <value>ToolStripContainer1.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;MenuBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="StandardStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>417, 60</value>
+  </metadata>
+  <data name="StandardStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="NewSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="NewSiteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 40</value>
+  </data>
+  <data name="NewSiteBtn.Text" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="NewSiteBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="NewSiteBtn.ToolTipText" xml:space="preserve">
+    <value>Nuevo sitio (CTRL+N)</value>
+  </data>
+  <data name="OpenSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="OpenSiteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 40</value>
+  </data>
+  <data name="OpenSiteBtn.Text" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="OpenSiteBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="OpenSiteBtn.ToolTipText" xml:space="preserve">
+    <value>Abrir sitio (CTRL+O)</value>
+  </data>
+  <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 40</value>
+  </data>
+  <data name="SaveBtn.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="SaveBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="SaveBtn.ToolTipText" xml:space="preserve">
+    <value>Guardar (CTRL+S)</value>
+  </data>
+  <data name="SaveAllBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="SaveAllBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 40</value>
+  </data>
+  <data name="SaveAllBtn.Text" xml:space="preserve">
+    <value>Guardar todo</value>
+  </data>
+  <data name="SaveAllBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="ToolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 43</value>
+  </data>
+  <data name="CutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 40</value>
+  </data>
+  <data name="CutBtn.Text" xml:space="preserve">
+    <value>Cortar</value>
+  </data>
+  <data name="CutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="CopyBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CopyBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 40</value>
+  </data>
+  <data name="CopyBtn.Text" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="CopyBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="PasteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="PasteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 40</value>
+  </data>
+  <data name="PasteBtn.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="PasteBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="QuickInsertBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="QuickInsertBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 40</value>
+  </data>
+  <data name="QuickInsertBtn.Text" xml:space="preserve">
+    <value>Insertar</value>
+  </data>
+  <data name="QuickInsertBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="QuickInsertBtn.ToolTipText" xml:space="preserve">
+    <value>Insertar rápido (CTRL+Espacio)</value>
+  </data>
+  <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 43</value>
+  </data>
+  <data name="FindBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="FindBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 40</value>
+  </data>
+  <data name="FindBtn.Text" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="FindBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="ReplaceBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ReplaceBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 40</value>
+  </data>
+  <data name="ReplaceBtn.Text" xml:space="preserve">
+    <value>Reemplazar</value>
+  </data>
+  <data name="ReplaceBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="Sep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 43</value>
+  </data>
+  <data name="UndoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="UndoBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 40</value>
+  </data>
+  <data name="UndoBtn.Text" xml:space="preserve">
+    <value>Deshacer</value>
+  </data>
+  <data name="UndoBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="RedoBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="RedoBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 40</value>
+  </data>
+  <data name="RedoBtn.Text" xml:space="preserve">
+    <value>Rehacer</value>
+  </data>
+  <data name="RedoBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="ToolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 43</value>
+  </data>
+  <data name="CleanBuildBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
+  </data>
+  <data name="CleanBuildBtn.Text" xml:space="preserve">
+    <value>Limpiar y construir</value>
+  </data>
+  <data name="BuildOnChangesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 24</value>
+  </data>
+  <data name="BuildOnChangesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Construir con cambios </value>
+  </data>
+  <data name="BuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BuildBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 40</value>
+  </data>
+  <data name="BuildBtn.Text" xml:space="preserve">
+    <value>Construir</value>
+  </data>
+  <data name="BuildBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="LivePreviewMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="LivePreviewMnu.Text" xml:space="preserve">
+    <value>Vista previa en vivo</value>
+  </data>
+  <data name="LivePreviewFontCopyMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 24</value>
+  </data>
+  <data name="LivePreviewFontCopyMnu.Text" xml:space="preserve">
+    <value>Fuente para vista previa en vivo...</value>
+  </data>
+  <data name="PreviewBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="PreviewBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 40</value>
+  </data>
+  <data name="PreviewBtn.Text" xml:space="preserve">
+    <value>Vista previa</value>
+  </data>
+  <data name="PreviewBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="ViewinDefaultBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
+    <value>Abrir en programa predeterminado</value>
+  </data>
+  <data name="OpenFileLocationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="OpenFileLocationToolStripMenuItem.Text" xml:space="preserve">
+    <value>Abrir la ubicación del archivo</value>
+  </data>
+  <data name="OpenOutputFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
+    <value>Abrir carpeta de salida</value>
+  </data>
+  <data name="ViewOutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ViewOutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 40</value>
+  </data>
+  <data name="ViewOutBtn.Text" xml:space="preserve">
+    <value>Ver salida</value>
+  </data>
+  <data name="ViewOutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="OriginalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="OriginalToolStripMenuItem.Text" xml:space="preserve">
+    <value>Estándar</value>
+  </data>
+  <data name="WidescreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="WidescreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Panorámica</value>
+  </data>
+  <data name="EditToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="EditToolStripMenuItem.Text" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="NoEditorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="NoEditorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Compacto</value>
+  </data>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 6</value>
+  </data>
+  <data name="ExSplitOrient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVDhPY2BgYGD49u3bf3IxSD/YACcnJ5IxhgEf3n/E
+        wPjERw0YNWCQGkAqRjGAXAw2gBIAAJTD5LD1fpDdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ExSplitOrient.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ExSplitOrient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="ExSplitOrient.Text" xml:space="preserve">
+    <value>Orientación del Explorador</value>
+  </data>
+  <data name="ExSplitOrient.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="EdSplitOrient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVDhPY2BgYGD49u3bf3IxSD/YACcnJ5IxhgEf3n/E
+        wPjERw0YNWCQGkAqRjGAXAw2gBIAAJTD5LD1fpDdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="EdSplitOrient.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="EdSplitOrient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 24</value>
+  </data>
+  <data name="EdSplitOrient.Text" xml:space="preserve">
+    <value>Orientación de Previsualización</value>
+  </data>
+  <data name="EdSplitOrient.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="LayoutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="LayoutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 40</value>
+  </data>
+  <data name="LayoutBtn.Text" xml:space="preserve">
+    <value>Diseño</value>
+  </data>
+  <data name="LayoutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="CloseBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB+SURBVDhP3ZLLCYAwEEQDtmFFKc0+UkeqCORgGZnzyhMj
+        ugdBctKBkGWzbza/EP4nSbOkxcymniMmx9q92omC1tpaSjFJCfCAU63VWHs0oQtwjNFyzrsJg5gcJtR4
+        7lTv1gHma9x35bmbvMkrGA0ZePj1EYYvcfgZ0dBH+qY2oIcQgGiLJD4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="CloseBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CloseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 40</value>
+  </data>
+  <data name="CloseBtn.Text" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="CloseBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="CloseBtn.ToolTipText" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="StandardStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="StandardStrip.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 5</value>
+  </data>
+  <data name="StandardStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="StandardStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 45</value>
+  </data>
+  <data name="StandardStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="StandardStrip.Text" xml:space="preserve">
+    <value>Estándar</value>
+  </data>
+  <data name="&gt;&gt;StandardStrip.Name" xml:space="preserve">
+    <value>StandardStrip</value>
+  </data>
+  <data name="&gt;&gt;StandardStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StandardStrip.Parent" xml:space="preserve">
+    <value>ToolStripContainer1.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;StandardStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.TopToolStripPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer1.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.TopToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.TopToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.TopToolStripPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.Name" xml:space="preserve">
+    <value>ToolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>529, 17</value>
+  </metadata>
+  <data name="FolderBrowser.Description" xml:space="preserve">
+    <value>Elija una carpeta en la que guardar los recursos de su sitio. Si no existe ningún sitio en esa carpeta, se creará una.</value>
+  </data>
+  <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>358, 23</value>
+  </metadata>
+  <data name="XP.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <metadata name="Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>135, 17</value>
+  </metadata>
+  <data name="OpenContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="OpenContext.Text" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="OpenInDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="OpenInDefault.Text" xml:space="preserve">
+    <value>Abrir en programa predeterminado</value>
+  </data>
+  <data name="OpenFileLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="OpenFileLocation.Text" xml:space="preserve">
+    <value>Abrir la ubicación del archivo</value>
+  </data>
+  <data name="ContextSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 6</value>
+  </data>
+  <data name="CopyCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="CopyCon.Text" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="PasteCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="PasteCon.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="AddFilesCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="AddFilesCon.Text" xml:space="preserve">
+    <value>Añadir archivos...</value>
+  </data>
+  <data name="ContextSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 6</value>
+  </data>
+  <data name="DeleteCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="DeleteCon.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="RenameCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="RenameCon.Text" xml:space="preserve">
+    <value>Renombrar</value>
+  </data>
+  <data name="ContextSep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 6</value>
+  </data>
+  <data name="NewFolderCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 24</value>
+  </data>
+  <data name="NewFolderCon.Text" xml:space="preserve">
+    <value>Carpeta</value>
+  </data>
+  <data name="NewSep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 6</value>
+  </data>
+  <data name="NewHTMLCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 24</value>
+  </data>
+  <data name="NewHTMLCon.Text" xml:space="preserve">
+    <value>Página HTML (.html)</value>
+  </data>
+  <data name="NewMDCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 24</value>
+  </data>
+  <data name="NewMDCon.Text" xml:space="preserve">
+    <value>Página Markdown (.md)</value>
+  </data>
+  <data name="NewPHPCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 24</value>
+  </data>
+  <data name="NewPHPCon.Text" xml:space="preserve">
+    <value>Guión PHP (.php)</value>
+  </data>
+  <data name="NewSep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 6</value>
+  </data>
+  <data name="NewCSSCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 24</value>
+  </data>
+  <data name="NewCSSCon.Text" xml:space="preserve">
+    <value>Hojas de estilo CSS (.css)</value>
+  </data>
+  <data name="NewJSCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 24</value>
+  </data>
+  <data name="NewJSCon.Text" xml:space="preserve">
+    <value>Guión JS (.js)</value>
+  </data>
+  <data name="NewTXTCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 24</value>
+  </data>
+  <data name="NewTXTCon.Text" xml:space="preserve">
+    <value>Texto simple (.txt)</value>
+  </data>
+  <data name="NewCon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="NewCon.Text" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="Context.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 238</value>
+  </data>
+  <data name="&gt;&gt;Context.Name" xml:space="preserve">
+    <value>Context</value>
+  </data>
+  <data name="&gt;&gt;Context.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>679, 17</value>
+  </metadata>
+  <data name="AddFilesDialog.Filter" xml:space="preserve">
+    <value>Todos los archivos (*.*)|*.*</value>
+  </data>
+  <data name="AddFilesDialog.Title" xml:space="preserve">
+    <value>Añadir archivos a la carpeta</value>
+  </data>
+  <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>834, 17</value>
+  </metadata>
+  <metadata name="Watcher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>986, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>160</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 675</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 7, 6, 7</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>18, 47</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AutoSite</value>
+  </data>
+  <data name="&gt;&gt;VS2017.Name" xml:space="preserve">
+    <value>VS2017</value>
+  </data>
+  <data name="&gt;&gt;VS2017.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Build.Name" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="&gt;&gt;Build.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SanitaryBuildBtn.Name" xml:space="preserve">
+    <value>SanitaryBuildBtn</value>
+  </data>
+  <data name="&gt;&gt;SanitaryBuildBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenOutput.Name" xml:space="preserve">
+    <value>OpenOutput</value>
+  </data>
+  <data name="&gt;&gt;OpenOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BrowseSitePreview.Name" xml:space="preserve">
+    <value>BrowseSitePreview</value>
+  </data>
+  <data name="&gt;&gt;BrowseSitePreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BrowseSite.Name" xml:space="preserve">
+    <value>BrowseSite</value>
+  </data>
+  <data name="&gt;&gt;BrowseSite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LiveBuildToggle.Name" xml:space="preserve">
+    <value>LiveBuildToggle</value>
+  </data>
+  <data name="&gt;&gt;LiveBuildToggle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileMenu.Name" xml:space="preserve">
+    <value>FileMenu</value>
+  </data>
+  <data name="&gt;&gt;FileMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewSite.Name" xml:space="preserve">
+    <value>NewSite</value>
+  </data>
+  <data name="&gt;&gt;NewSite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenFolder.Name" xml:space="preserve">
+    <value>OpenFolder</value>
+  </data>
+  <data name="&gt;&gt;OpenFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CloseFile.Name" xml:space="preserve">
+    <value>CloseFile</value>
+  </data>
+  <data name="&gt;&gt;CloseFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CloseSite.Name" xml:space="preserve">
+    <value>CloseSite</value>
+  </data>
+  <data name="&gt;&gt;CloseSite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileSep2.Name" xml:space="preserve">
+    <value>FileSep2</value>
+  </data>
+  <data name="&gt;&gt;FileSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Save.Name" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveAll.Name" xml:space="preserve">
+    <value>SaveAll</value>
+  </data>
+  <data name="&gt;&gt;SaveAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileSep3.Name" xml:space="preserve">
+    <value>FileSep3</value>
+  </data>
+  <data name="&gt;&gt;FileSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenRecent.Name" xml:space="preserve">
+    <value>OpenRecent</value>
+  </data>
+  <data name="&gt;&gt;OpenRecent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Recent1.Name" xml:space="preserve">
+    <value>Recent1</value>
+  </data>
+  <data name="&gt;&gt;Recent1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Recent2.Name" xml:space="preserve">
+    <value>Recent2</value>
+  </data>
+  <data name="&gt;&gt;Recent2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Recent3.Name" xml:space="preserve">
+    <value>Recent3</value>
+  </data>
+  <data name="&gt;&gt;Recent3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Recent4.Name" xml:space="preserve">
+    <value>Recent4</value>
+  </data>
+  <data name="&gt;&gt;Recent4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Recent5.Name" xml:space="preserve">
+    <value>Recent5</value>
+  </data>
+  <data name="&gt;&gt;Recent5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RecentSep.Name" xml:space="preserve">
+    <value>RecentSep</value>
+  </data>
+  <data name="&gt;&gt;RecentSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClearRecents.Name" xml:space="preserve">
+    <value>ClearRecents</value>
+  </data>
+  <data name="&gt;&gt;ClearRecents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileSep4.Name" xml:space="preserve">
+    <value>FileSep4</value>
+  </data>
+  <data name="&gt;&gt;FileSep4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExitItem.Name" xml:space="preserve">
+    <value>ExitItem</value>
+  </data>
+  <data name="&gt;&gt;ExitItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditMenu.Name" xml:space="preserve">
+    <value>EditMenu</value>
+  </data>
+  <data name="&gt;&gt;EditMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Undo.Name" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="&gt;&gt;Undo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Redo.Name" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="&gt;&gt;Redo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditSep.Name" xml:space="preserve">
+    <value>EditSep</value>
+  </data>
+  <data name="&gt;&gt;EditSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Cut.Name" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="&gt;&gt;Cut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Copy.Name" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="&gt;&gt;Copy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Paste.Name" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="&gt;&gt;Paste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditSep2.Name" xml:space="preserve">
+    <value>EditSep2</value>
+  </data>
+  <data name="&gt;&gt;EditSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectAll.Name" xml:space="preserve">
+    <value>SelectAll</value>
+  </data>
+  <data name="&gt;&gt;SelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditSep3.Name" xml:space="preserve">
+    <value>EditSep3</value>
+  </data>
+  <data name="&gt;&gt;EditSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Find.Name" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="&gt;&gt;Find.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Replace.Name" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="&gt;&gt;Replace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GoToMnu.Name" xml:space="preserve">
+    <value>GoToMnu</value>
+  </data>
+  <data name="&gt;&gt;GoToMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditSep4.Name" xml:space="preserve">
+    <value>EditSep4</value>
+  </data>
+  <data name="&gt;&gt;EditSep4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;QuickInsertMnu.Name" xml:space="preserve">
+    <value>QuickInsertMnu</value>
+  </data>
+  <data name="&gt;&gt;QuickInsertMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InsertConditional.Name" xml:space="preserve">
+    <value>InsertConditional</value>
+  </data>
+  <data name="&gt;&gt;InsertConditional.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FormatMenu.Name" xml:space="preserve">
+    <value>FormatMenu</value>
+  </data>
+  <data name="&gt;&gt;FormatMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WordWrap.Name" xml:space="preserve">
+    <value>WordWrap</value>
+  </data>
+  <data name="&gt;&gt;WordWrap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VirtualSpace.Name" xml:space="preserve">
+    <value>VirtualSpace</value>
+  </data>
+  <data name="&gt;&gt;VirtualSpace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WideCaret.Name" xml:space="preserve">
+    <value>WideCaret</value>
+  </data>
+  <data name="&gt;&gt;WideCaret.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FormatSep.Name" xml:space="preserve">
+    <value>FormatSep</value>
+  </data>
+  <data name="&gt;&gt;FormatSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LivePreview.Name" xml:space="preserve">
+    <value>LivePreview</value>
+  </data>
+  <data name="&gt;&gt;LivePreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FormatSep2.Name" xml:space="preserve">
+    <value>FormatSep2</value>
+  </data>
+  <data name="&gt;&gt;FormatSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewFontToolStripMenuItem.Name" xml:space="preserve">
+    <value>LivePreviewFontToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewFontToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditorFont.Name" xml:space="preserve">
+    <value>EditorFont</value>
+  </data>
+  <data name="&gt;&gt;EditorFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ViewMenu.Name" xml:space="preserve">
+    <value>ViewMenu</value>
+  </data>
+  <data name="&gt;&gt;ViewMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExplorerPanel.Name" xml:space="preserve">
+    <value>ExplorerPanel</value>
+  </data>
+  <data name="&gt;&gt;ExplorerPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildPanel.Name" xml:space="preserve">
+    <value>BuildPanel</value>
+  </data>
+  <data name="&gt;&gt;BuildPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditorPanel.Name" xml:space="preserve">
+    <value>EditorPanel</value>
+  </data>
+  <data name="&gt;&gt;EditorPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PreviewPanel.Name" xml:space="preserve">
+    <value>PreviewPanel</value>
+  </data>
+  <data name="&gt;&gt;PreviewPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
+    <value>ToolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CommandLabelsMnu.Name" xml:space="preserve">
+    <value>CommandLabelsMnu</value>
+  </data>
+  <data name="&gt;&gt;CommandLabelsMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator8.Name" xml:space="preserve">
+    <value>ToolStripSeparator8</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VerticalSplitMnu.Name" xml:space="preserve">
+    <value>VerticalSplitMnu</value>
+  </data>
+  <data name="&gt;&gt;VerticalSplitMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VerticalSplitExplorerMnu.Name" xml:space="preserve">
+    <value>VerticalSplitExplorerMnu</value>
+  </data>
+  <data name="&gt;&gt;VerticalSplitExplorerMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Name" xml:space="preserve">
+    <value>MenuItem3</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExplorerIconSchemeToolStripMenuItem.Name" xml:space="preserve">
+    <value>ExplorerIconSchemeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ExplorerIconSchemeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VS2017item.Name" xml:space="preserve">
+    <value>VS2017item</value>
+  </data>
+  <data name="&gt;&gt;VS2017item.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;XPitem.Name" xml:space="preserve">
+    <value>XPitem</value>
+  </data>
+  <data name="&gt;&gt;XPitem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SystemIcons.Name" xml:space="preserve">
+    <value>SystemIcons</value>
+  </data>
+  <data name="&gt;&gt;SystemIcons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RefreshItem.Name" xml:space="preserve">
+    <value>RefreshItem</value>
+  </data>
+  <data name="&gt;&gt;RefreshItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
+    <value>ToolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PreviewPage.Name" xml:space="preserve">
+    <value>PreviewPage</value>
+  </data>
+  <data name="&gt;&gt;PreviewPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ViewFileOutput.Name" xml:space="preserve">
+    <value>ViewFileOutput</value>
+  </data>
+  <data name="&gt;&gt;ViewFileOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileOutputInDefaultBrowserToolStripMenuItem.Name" xml:space="preserve">
+    <value>FileOutputInDefaultBrowserToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;FileOutputInDefaultBrowserToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator4.Name" xml:space="preserve">
+    <value>ToolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BrowseSitePreviewMnu.Name" xml:space="preserve">
+    <value>BrowseSitePreviewMnu</value>
+  </data>
+  <data name="&gt;&gt;BrowseSitePreviewMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BrowseSiteMnu.Name" xml:space="preserve">
+    <value>BrowseSiteMnu</value>
+  </data>
+  <data name="&gt;&gt;BrowseSiteMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildMenu.Name" xml:space="preserve">
+    <value>BuildMenu</value>
+  </data>
+  <data name="&gt;&gt;BuildMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildSite.Name" xml:space="preserve">
+    <value>BuildSite</value>
+  </data>
+  <data name="&gt;&gt;BuildSite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SanitaryBuild.Name" xml:space="preserve">
+    <value>SanitaryBuild</value>
+  </data>
+  <data name="&gt;&gt;SanitaryBuild.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolsSep.Name" xml:space="preserve">
+    <value>ToolsSep</value>
+  </data>
+  <data name="&gt;&gt;ToolsSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenOutputMnu.Name" xml:space="preserve">
+    <value>OpenOutputMnu</value>
+  </data>
+  <data name="&gt;&gt;OpenOutputMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Name" xml:space="preserve">
+    <value>MenuItem5</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;QuickstartMnu.Name" xml:space="preserve">
+    <value>QuickstartMnu</value>
+  </data>
+  <data name="&gt;&gt;QuickstartMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator5.Name" xml:space="preserve">
+    <value>ToolStripSeparator5</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InspectorBtn.Name" xml:space="preserve">
+    <value>InspectorBtn</value>
+  </data>
+  <data name="&gt;&gt;InspectorBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ShowVersion.Name" xml:space="preserve">
+    <value>ShowVersion</value>
+  </data>
+  <data name="&gt;&gt;ShowVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HelpMenu.Name" xml:space="preserve">
+    <value>HelpMenu</value>
+  </data>
+  <data name="&gt;&gt;HelpMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HelpTopics.Name" xml:space="preserve">
+    <value>HelpTopics</value>
+  </data>
+  <data name="&gt;&gt;HelpTopics.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenSampleSite.Name" xml:space="preserve">
+    <value>OpenSampleSite</value>
+  </data>
+  <data name="&gt;&gt;OpenSampleSite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HelpSep.Name" xml:space="preserve">
+    <value>HelpSep</value>
+  </data>
+  <data name="&gt;&gt;HelpSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Website.Name" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="&gt;&gt;Website.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GitHub.Name" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="&gt;&gt;GitHub.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SendFeedback.Name" xml:space="preserve">
+    <value>SendFeedback</value>
+  </data>
+  <data name="&gt;&gt;SendFeedback.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HelpSep2.Name" xml:space="preserve">
+    <value>HelpSep2</value>
+  </data>
+  <data name="&gt;&gt;HelpSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageMenu.Name" xml:space="preserve">
+    <value>LanguageMenu</value>
+  </data>
+  <data name="&gt;&gt;LanguageMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnglishLang.Name" xml:space="preserve">
+    <value>EnglishLang</value>
+  </data>
+  <data name="&gt;&gt;EnglishLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SpanishLang.Name" xml:space="preserve">
+    <value>SpanishLang</value>
+  </data>
+  <data name="&gt;&gt;SpanishLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PolishLang.Name" xml:space="preserve">
+    <value>PolishLang</value>
+  </data>
+  <data name="&gt;&gt;PolishLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WelshLang.Name" xml:space="preserve">
+    <value>WelshLang</value>
+  </data>
+  <data name="&gt;&gt;WelshLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HelpSep3.Name" xml:space="preserve">
+    <value>HelpSep3</value>
+  </data>
+  <data name="&gt;&gt;HelpSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AboutItem.Name" xml:space="preserve">
+    <value>AboutItem</value>
+  </data>
+  <data name="&gt;&gt;AboutItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewSiteBtn.Name" xml:space="preserve">
+    <value>NewSiteBtn</value>
+  </data>
+  <data name="&gt;&gt;NewSiteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenSiteBtn.Name" xml:space="preserve">
+    <value>OpenSiteBtn</value>
+  </data>
+  <data name="&gt;&gt;OpenSiteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveBtn.Name" xml:space="preserve">
+    <value>SaveBtn</value>
+  </data>
+  <data name="&gt;&gt;SaveBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveAllBtn.Name" xml:space="preserve">
+    <value>SaveAllBtn</value>
+  </data>
+  <data name="&gt;&gt;SaveAllBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator6.Name" xml:space="preserve">
+    <value>ToolStripSeparator6</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CutBtn.Name" xml:space="preserve">
+    <value>CutBtn</value>
+  </data>
+  <data name="&gt;&gt;CutBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CopyBtn.Name" xml:space="preserve">
+    <value>CopyBtn</value>
+  </data>
+  <data name="&gt;&gt;CopyBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PasteBtn.Name" xml:space="preserve">
+    <value>PasteBtn</value>
+  </data>
+  <data name="&gt;&gt;PasteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;QuickInsertBtn.Name" xml:space="preserve">
+    <value>QuickInsertBtn</value>
+  </data>
+  <data name="&gt;&gt;QuickInsertBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sep2.Name" xml:space="preserve">
+    <value>Sep2</value>
+  </data>
+  <data name="&gt;&gt;Sep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FindBtn.Name" xml:space="preserve">
+    <value>FindBtn</value>
+  </data>
+  <data name="&gt;&gt;FindBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReplaceBtn.Name" xml:space="preserve">
+    <value>ReplaceBtn</value>
+  </data>
+  <data name="&gt;&gt;ReplaceBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sep3.Name" xml:space="preserve">
+    <value>Sep3</value>
+  </data>
+  <data name="&gt;&gt;Sep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UndoBtn.Name" xml:space="preserve">
+    <value>UndoBtn</value>
+  </data>
+  <data name="&gt;&gt;UndoBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RedoBtn.Name" xml:space="preserve">
+    <value>RedoBtn</value>
+  </data>
+  <data name="&gt;&gt;RedoBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator7.Name" xml:space="preserve">
+    <value>ToolStripSeparator7</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildBtn.Name" xml:space="preserve">
+    <value>BuildBtn</value>
+  </data>
+  <data name="&gt;&gt;BuildBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CleanBuildBtn.Name" xml:space="preserve">
+    <value>CleanBuildBtn</value>
+  </data>
+  <data name="&gt;&gt;CleanBuildBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildOnChangesToolStripMenuItem.Name" xml:space="preserve">
+    <value>BuildOnChangesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;BuildOnChangesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PreviewBtn.Name" xml:space="preserve">
+    <value>PreviewBtn</value>
+  </data>
+  <data name="&gt;&gt;PreviewBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewMnu.Name" xml:space="preserve">
+    <value>LivePreviewMnu</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewFontCopyMnu.Name" xml:space="preserve">
+    <value>LivePreviewFontCopyMnu</value>
+  </data>
+  <data name="&gt;&gt;LivePreviewFontCopyMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ViewOutBtn.Name" xml:space="preserve">
+    <value>ViewOutBtn</value>
+  </data>
+  <data name="&gt;&gt;ViewOutBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ViewinDefaultBrowser.Name" xml:space="preserve">
+    <value>ViewinDefaultBrowser</value>
+  </data>
+  <data name="&gt;&gt;ViewinDefaultBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenFileLocationToolStripMenuItem.Name" xml:space="preserve">
+    <value>OpenFileLocationToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;OpenFileLocationToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenOutputFolderBtn.Name" xml:space="preserve">
+    <value>OpenOutputFolderBtn</value>
+  </data>
+  <data name="&gt;&gt;OpenOutputFolderBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LayoutBtn.Name" xml:space="preserve">
+    <value>LayoutBtn</value>
+  </data>
+  <data name="&gt;&gt;LayoutBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OriginalToolStripMenuItem.Name" xml:space="preserve">
+    <value>OriginalToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;OriginalToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WidescreenToolStripMenuItem.Name" xml:space="preserve">
+    <value>WidescreenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;WidescreenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditToolStripMenuItem.Name" xml:space="preserve">
+    <value>EditToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;EditToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NoEditorToolStripMenuItem.Name" xml:space="preserve">
+    <value>NoEditorToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;NoEditorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExSplitOrient.Name" xml:space="preserve">
+    <value>ExSplitOrient</value>
+  </data>
+  <data name="&gt;&gt;ExSplitOrient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EdSplitOrient.Name" xml:space="preserve">
+    <value>EdSplitOrient</value>
+  </data>
+  <data name="&gt;&gt;EdSplitOrient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CloseBtn.Name" xml:space="preserve">
+    <value>CloseBtn</value>
+  </data>
+  <data name="&gt;&gt;CloseBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FolderBrowser.Name" xml:space="preserve">
+    <value>FolderBrowser</value>
+  </data>
+  <data name="&gt;&gt;FolderBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;XP.Name" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="&gt;&gt;XP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenContext.Name" xml:space="preserve">
+    <value>OpenContext</value>
+  </data>
+  <data name="&gt;&gt;OpenContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenInDefault.Name" xml:space="preserve">
+    <value>OpenInDefault</value>
+  </data>
+  <data name="&gt;&gt;OpenInDefault.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenFileLocation.Name" xml:space="preserve">
+    <value>OpenFileLocation</value>
+  </data>
+  <data name="&gt;&gt;OpenFileLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextSep.Name" xml:space="preserve">
+    <value>ContextSep</value>
+  </data>
+  <data name="&gt;&gt;ContextSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CopyCon.Name" xml:space="preserve">
+    <value>CopyCon</value>
+  </data>
+  <data name="&gt;&gt;CopyCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PasteCon.Name" xml:space="preserve">
+    <value>PasteCon</value>
+  </data>
+  <data name="&gt;&gt;PasteCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddFilesCon.Name" xml:space="preserve">
+    <value>AddFilesCon</value>
+  </data>
+  <data name="&gt;&gt;AddFilesCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextSep2.Name" xml:space="preserve">
+    <value>ContextSep2</value>
+  </data>
+  <data name="&gt;&gt;ContextSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteCon.Name" xml:space="preserve">
+    <value>DeleteCon</value>
+  </data>
+  <data name="&gt;&gt;DeleteCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenameCon.Name" xml:space="preserve">
+    <value>RenameCon</value>
+  </data>
+  <data name="&gt;&gt;RenameCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextSep3.Name" xml:space="preserve">
+    <value>ContextSep3</value>
+  </data>
+  <data name="&gt;&gt;ContextSep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewCon.Name" xml:space="preserve">
+    <value>NewCon</value>
+  </data>
+  <data name="&gt;&gt;NewCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewFolderCon.Name" xml:space="preserve">
+    <value>NewFolderCon</value>
+  </data>
+  <data name="&gt;&gt;NewFolderCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewSep.Name" xml:space="preserve">
+    <value>NewSep</value>
+  </data>
+  <data name="&gt;&gt;NewSep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewHTMLCon.Name" xml:space="preserve">
+    <value>NewHTMLCon</value>
+  </data>
+  <data name="&gt;&gt;NewHTMLCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewMDCon.Name" xml:space="preserve">
+    <value>NewMDCon</value>
+  </data>
+  <data name="&gt;&gt;NewMDCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewPHPCon.Name" xml:space="preserve">
+    <value>NewPHPCon</value>
+  </data>
+  <data name="&gt;&gt;NewPHPCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewSep2.Name" xml:space="preserve">
+    <value>NewSep2</value>
+  </data>
+  <data name="&gt;&gt;NewSep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewCSSCon.Name" xml:space="preserve">
+    <value>NewCSSCon</value>
+  </data>
+  <data name="&gt;&gt;NewCSSCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewJSCon.Name" xml:space="preserve">
+    <value>NewJSCon</value>
+  </data>
+  <data name="&gt;&gt;NewJSCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NewTXTCon.Name" xml:space="preserve">
+    <value>NewTXTCon</value>
+  </data>
+  <data name="&gt;&gt;NewTXTCon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddFilesDialog.Name" xml:space="preserve">
+    <value>AddFilesDialog</value>
+  </data>
+  <data name="&gt;&gt;AddFilesDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ApricotWorker.Name" xml:space="preserve">
+    <value>ApricotWorker</value>
+  </data>
+  <data name="&gt;&gt;ApricotWorker.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Watcher.Name" xml:space="preserve">
+    <value>Watcher</value>
+  </data>
+  <data name="&gt;&gt;Watcher.Type" xml:space="preserve">
+    <value>System.IO.FileSystemWatcher, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectFont.Name" xml:space="preserve">
+    <value>SelectFont</value>
+  </data>
+  <data name="&gt;&gt;SelectFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FontDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClearToolStripMenuItem.Name" xml:space="preserve">
+    <value>ClearToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ClearToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveLog.Name" xml:space="preserve">
+    <value>SaveLog</value>
+  </data>
+  <data name="&gt;&gt;SaveLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveLogDialog.Name" xml:space="preserve">
+    <value>SaveLogDialog</value>
+  </data>
+  <data name="&gt;&gt;SaveLogDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpenPack.Name" xml:space="preserve">
+    <value>OpenPack</value>
+  </data>
+  <data name="&gt;&gt;OpenPack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LiveBuildWorker.Name" xml:space="preserve">
+    <value>LiveBuildWorker</value>
+  </data>
+  <data name="&gt;&gt;LiveBuildWorker.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectPreviewFont.Name" xml:space="preserve">
+    <value>SelectPreviewFont</value>
+  </data>
+  <data name="&gt;&gt;SelectPreviewFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FontDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="SelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1095, 17</value>
+  </metadata>
+  <metadata name="LogMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 60</value>
+  </metadata>
+  <data name="ClearToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 24</value>
+  </data>
+  <data name="ClearToolStripMenuItem.Text" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="SaveLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 24</value>
   </data>
   <data name="SaveLog.Text" xml:space="preserve">
     <value>Guardar...</value>
   </data>
+  <data name="LogMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 52</value>
+  </data>
+  <data name="&gt;&gt;LogMenu.Name" xml:space="preserve">
+    <value>LogMenu</value>
+  </data>
+  <data name="&gt;&gt;LogMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="SaveLogDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1051, 60</value>
+  </metadata>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
     <value>Texto rico (*.rtf)|*.rtf|Texto plano (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
     <value>Guardar Log</value>
   </data>
+  <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>296, 60</value>
+  </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
     <value>Paquete Zip AutoSite (*.zip)|*.zip</value>
   </data>
-  <metadata name="VS2017.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>382, 17</value>
+  <metadata name="LiveBuildWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>524, 60</value>
   </metadata>
-  <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>474, 17</value>
-  </metadata>
-  <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 17</value>
-  </metadata>
-  <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>316, 17</value>
-  </metadata>
-  <metadata name="Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>121, 17</value>
-  </metadata>
-  <metadata name="AddFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>603, 17</value>
-  </metadata>
-  <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>736, 17</value>
-  </metadata>
-  <metadata name="Watcher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="LogMenuBridge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>458, 56</value>
-  </metadata>
-  <metadata name="BuildStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="SelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 56</value>
-  </metadata>
-  <metadata name="LogMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>222, 56</value>
-  </metadata>
-  <metadata name="SaveLogDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>325, 56</value>
-  </metadata>
-  <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>597, 56</value>
+  <metadata name="SelectPreviewFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 103</value>
   </metadata>
 </root>

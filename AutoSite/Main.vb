@@ -878,9 +878,9 @@ Public Class Main
                         openFiles.Add(edit.openFile)
 
                         If t.Text.Contains("*") Then
-                            t.Text = edit.openFile.Replace(SiteTree.Nodes(0).Text & Path.DirectorySeparatorChar, "") & "*"
+                            t.Text = edit.KindRel() & "*"
                         Else
-                            t.Text = edit.openFile.Replace(SiteTree.Nodes(0).Text & Path.DirectorySeparatorChar, "")
+                            t.Text = edit.KindRel()
                         End If
                     End If
                 End If

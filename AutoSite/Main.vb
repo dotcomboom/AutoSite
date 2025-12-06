@@ -97,7 +97,7 @@ Public Class Main
         If SiteTree.Nodes.Count > 0 Then
             'Me.Text = wTitle & " - " & SiteTree.Nodes(0).Text
             Dim projPath As String = SiteTree.Nodes(0).Text
-            Dim projPathSplit As String() = projPath.Split("\")
+            Dim projPathSplit As String() = projPath.Split(Path.DirectorySeparatorChar)
             ' Sets window title to the name of the current project/folder
             Me.Text = projPathSplit(projPathSplit.Length - 1) & " - " & wTitle
         Else
@@ -377,17 +377,17 @@ Public Class Main
             ToolStripSeparator2.Visible = True
         End If
     End Sub
-    
-    Public Sub openEditor(ByVal path As String)
+
+    Public Sub openEditor(ByVal ppath As String)
         EditTabs.Show()
 
         EditTabs.ImageList = VS2017
         EditTabs.SuspendLayout()
         Dim tab As New TabPage With {
-            .Tag = path,
+            .Tag = ppath,
             .BackColor = Color.White,
-            .ToolTipText = path,
-            .Text = path.Replace(SiteTree.Nodes.Item(0).Text & "\", "").Replace("pages\", "").replace("templates\", "").Replace("includes\", "")
+            .ToolTipText = ppath,
+            .Text = ppath.Replace(SiteTree.Nodes.Item(0).Text & Path.DirectorySeparatorChar, "").Replace("pages" & Path.DirectorySeparatorChar, "").Replace("templates" & Path.DirectorySeparatorChar, "").Replace("includes" & Path.DirectorySeparatorChar, "")
         }
         EditTabs.TabPages.Add(tab)
         EditTabs.SelectedTab = tab
@@ -418,12 +418,12 @@ Public Class Main
             editor.Code.Text = editor.ReadAllText(tab.Tag)
             editor.Snapshot = editor.Code.Text
             editor.Code.ClearUndo()
-            if tab.Text.EndsWith("*")
-                tab.text = tab.Text.Substring(0, tab.text.Length - 1)
+            If tab.Text.EndsWith("*") Then
+                tab.Text = tab.Text.Substring(0, tab.Text.Length - 1)
             End If
             tab.ImageIndex = 4 ' Build
             Console.WriteLine(editor.fromRoot())
-            if editor.fromRoot().StartsWith("pages\") Then
+            If editor.fromRoot().StartsWith("pages\") Then
                 tab.ImageKey = "Page"
                 tab.ImageIndex = 2
             End If
@@ -439,7 +439,7 @@ Public Class Main
                 editor.InsertConditional.Enabled = False
                 editor.Preview.Text = My.Resources.UI_Editor_ViewFile
             End If
-            openFiles.Add(path)
+            openFiles.Add(ppath)
         End If
 
         EditTabs.ResumeLayout()
@@ -864,7 +864,7 @@ Public Class Main
 
     Private Sub iterateUpdateNodePaths(ByVal node As TreeNode, ByVal oldpath As String, ByVal newpath As String)
         node.Tag = Apricot.ReplaceFirst(node.Tag, oldpath, newpath) 'update path/tag
-        node.Text = node.Tag.Split("\")(UBound(node.Tag.Split("\"))) 'update text
+        node.Text = node.Tag.Split(Path.DirectorySeparatorChar)(UBound(node.Tag.Split(Path.DirectorySeparatorChar))) 'update text
 
         'update editors
         For Each t As TabPage In EditTabs.TabPages
@@ -878,9 +878,9 @@ Public Class Main
                         openFiles.Add(edit.openFile)
 
                         If t.Text.Contains("*") Then
-                            t.Text = edit.openFile.Replace(SiteTree.Nodes(0).Text & "\", "") & "*"
+                            t.Text = edit.openFile.Replace(SiteTree.Nodes(0).Text & Path.DirectorySeparatorChar, "") & "*"
                         Else
-                            t.Text = edit.openFile.Replace(SiteTree.Nodes(0).Text & "\", "")
+                            t.Text = edit.openFile.Replace(SiteTree.Nodes(0).Text & Path.DirectorySeparatorChar, "")
                         End If
                     End If
                 End If
@@ -1396,7 +1396,7 @@ Public Class Main
 
     Private Sub Preview_Navigating(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserNavigatingEventArgs) Handles Preview.Navigating
         ' This check routes directories that contain a index.html to that index.html instead of a directory listing
-        If My.Computer.FileSystem.FileExists(e.Url.AbsolutePath.Replace("/", "\").Replace("%20", " ") & "\index.html") Then
+        If My.Computer.FileSystem.FileExists(e.Url.AbsolutePath.Replace("/", Path.DirectorySeparatorChar).Replace("%20", " ") & Path.DirectorySeparatorChar & "index.html") Then
             e.Cancel = True
             Preview.Navigate(e.Url.AbsolutePath.Replace("%20", " ") & "/index.html")
         End If
@@ -1463,17 +1463,17 @@ Public Class Main
         Dim includes = root.Nodes(2)
         'Dim output_site = root.Nodes(3)
         Dim node As New TreeNode
-        Dim arr As Array = e.Name.Split("\")
+        Dim arr As Array = e.Name.Split(Path.DirectorySeparatorChar)
         node.Text = arr(arr.Length - 1)
         node.Tag = e.FullPath
         node.ImageKey = "Folder"
         node.SelectedImageKey = "Folder"
-        If e.Name.StartsWith("pages\") Then
-            Dim f = Apricot.ReplaceFirst(e.Name, "pages\", "")
+        If e.Name.StartsWith("pages" & Path.DirectorySeparatorChar) Then
+            Dim f = Apricot.ReplaceFirst(e.Name, "pages" & Path.DirectorySeparatorChar, "")
             Dim pnode As TreeNode = pages
-            While f.Contains("\")
-                Dim pdir = f.Split("\")(0)
-                f = Apricot.ReplaceFirst(f, pdir & "\", "")
+            While f.Contains(Path.DirectorySeparatorChar)
+                Dim pdir = f.Split(Path.DirectorySeparatorChar)(0)
+                f = Apricot.ReplaceFirst(f, pdir & Path.DirectorySeparatorChar, "")
                 For Each nod As TreeNode In pnode.Nodes()
                     If nod.Text = pdir Then
                         pnode = nod
@@ -1490,12 +1490,12 @@ Public Class Main
                 fileAddContext = ""
                 node.BeginEdit()
             End If
-        ElseIf e.Name.StartsWith("templates\") Then
-            Dim f = Apricot.ReplaceFirst(e.Name, "templates\", "")
+        ElseIf e.Name.StartsWith("templates" & Path.DirectorySeparatorChar) Then
+            Dim f = Apricot.ReplaceFirst(e.Name, "templates" & Path.DirectorySeparatorChar, "")
             Dim pnode As TreeNode = templates
-            While f.Contains("\")
-                Dim pdir = f.Split("\")(0)
-                f = Apricot.ReplaceFirst(f, pdir & "\", "")
+            While f.Contains(Path.DirectorySeparatorChar)
+                Dim pdir = f.Split(Path.DirectorySeparatorChar)(0)
+                f = Apricot.ReplaceFirst(f, pdir & Path.DirectorySeparatorChar, "")
                 For Each nod As TreeNode In pnode.Nodes()
                     If nod.Text = pdir Then
                         pnode = nod
@@ -1512,12 +1512,12 @@ Public Class Main
                 fileAddContext = ""
                 node.BeginEdit()
             End If
-        ElseIf e.Name.StartsWith("includes\") Then
-            Dim f = Apricot.ReplaceFirst(e.Name, "includes\", "")
+        ElseIf e.Name.StartsWith("includes" & Path.DirectorySeparatorChar) Then
+            Dim f = Apricot.ReplaceFirst(e.Name, "includes" & Path.DirectorySeparatorChar, "")
             Dim pnode As TreeNode = includes
-            While f.Contains("\")
-                Dim pdir = f.Split("\")(0)
-                f = Apricot.ReplaceFirst(f, pdir & "\", "")
+            While f.Contains(Path.DirectorySeparatorChar)
+                Dim pdir = f.Split(Path.DirectorySeparatorChar)(0)
+                f = Apricot.ReplaceFirst(f, pdir & Path.DirectorySeparatorChar, "")
                 For Each nod As TreeNode In pnode.Nodes()
                     If nod.Text = pdir Then
                         pnode = nod
@@ -1967,12 +1967,12 @@ Public Class Main
 
     Private Sub SiteTree_ItemDrag(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles SiteTree.ItemDrag
         If e.Button = Windows.Forms.MouseButtons.Left Then
-            If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & "\pages\") Or e.Item.tag.contains(SiteTree.Nodes(0).Tag & "\includes\") Then
+            If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & Path.DirectorySeparatorChar & "pages" & Path.DirectorySeparatorChar) Or e.Item.tag.contains(SiteTree.Nodes(0).Tag & Path.DirectorySeparatorChar & "includes" & Path.DirectorySeparatorChar) Then
                 Dim slash = ""
                 If My.Computer.FileSystem.DirectoryExists(e.Item.tag) Then
                     slash = "/"
                 End If
-                Dim pth As String = e.Item.Tag.Replace(SiteTree.Nodes(0).Tag & "\pages\", "").Replace(SiteTree.Nodes(0).Tag & "\includes\", "").Replace("\", "/")
+                Dim pth As String = e.Item.Tag.Replace(SiteTree.Nodes(0).Tag & "\pages\", "").Replace(SiteTree.Nodes(0).Tag & Path.DirectorySeparatorChar & "includes" & Path.DirectorySeparatorChar, "").Replace("\", Path.DirectorySeparatorChar)
                 If e.Item.Tag.Contains(SiteTree.Nodes(0).Tag & "\pages\") Then
                     pth = Apricot.ReplaceLast(pth, ".md", ".html")
                 End If
@@ -2156,8 +2156,8 @@ Public Class Main
 
         Dim pNode = vNode
         Dim rPath = tn.relPath
-        While rPath.Contains("\")
-            Dim folderName = rPath.Split("\")(0)
+        While rPath.Contains(Path.DirectorySeparatorChar)
+            Dim folderName = rPath.Split(Path.DirectorySeparatorChar)(0)
             Dim npExists = False
             Dim npNode As New TreeNode
             For Each node As TreeNode In pNode.Nodes
@@ -2173,14 +2173,14 @@ Public Class Main
                 pNode.Nodes.Add(npNode)
             End If
             pNode = npNode
-            rPath = Apricot.ReplaceFirst(rPath, folderName & "\", "")
+            rPath = Apricot.ReplaceFirst(rPath, folderName & Path.DirectorySeparatorChar, "")
         End While
 
         Dim fNode As New TreeNode With {
             .Text = rPath,
             .ImageKey = "Page",
             .SelectedImageKey = "Page",
-            .Tag = Path.Combine(SiteTree.Nodes(0).Text, "pages\" & tn.relPath)
+            .Tag = Path.Combine(SiteTree.Nodes(0).Text, "pages" & Path.DirectorySeparatorChar & tn.relPath)
         }
 
         Dim add = True

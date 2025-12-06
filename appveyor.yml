@@ -1,0 +1,12 @@
+on_success:
+  - ps: Invoke-RestMethod https://raw.githubusercontent.com/DiscordHooks/appveyor-discord-webhook/master/send.ps1 -o send.ps1
+  - ps: ./send.ps1 success $env:WEBHOOK_URL
+after_build:
+  - cmd: 7z a AutoSite_nightly.zip %APPVEYOR_BUILD_FOLDER%\AutoSite\bin\Debug\*.exe
+  - cmd: 7z a AutoSite_nightly.zip %APPVEYOR_BUILD_FOLDER%\AutoSite\bin\Debug\*.dll
+  - cmd: 7z a AutoSite_nightly.zip %APPVEYOR_BUILD_FOLDER%\AutoSite\bin\Debug\*.exe.config
+  - cmd: 7z a AutoSite_nightly.zip %APPVEYOR_BUILD_FOLDER%\AutoSite\bin\Debug\*\
+  - cmd: 7z a AutoSite_nightly.zip %APPVEYOR_BUILD_FOLDER%\AutoSite\dist\**
+artifacts:
+  - path: AutoSite_nightly.zip
+    name: AutoSite Nightly

@@ -382,7 +382,7 @@
     <value>0</value>
   </data>
   <data name="LogPage.Text" xml:space="preserve">
-    <value>Logo</value>
+    <value>Registro</value>
   </data>
   <data name="&gt;&gt;LogPage.Name" xml:space="preserve">
     <value>LogPage</value>
@@ -413,9 +413,9 @@
   </data>
   <data name="AttributeExplanation.Text" xml:space="preserve">
     <value>
-El Mapa de Atributos le permite ver todos los atributos utilizados en su sitio. 
+O Mapa de Atributos permite que você veja todos os Atributos usados em seu site.
 
-Compila su sitio para poblar el Mapa de Atributos.</value>
+Construa seu site para preencher o Mapa de Atributos.</value>
   </data>
   <data name="AttributeExplanation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -481,7 +481,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>1</value>
   </data>
   <data name="MapPage.Text" xml:space="preserve">
-    <value>Mapa de atributos</value>
+    <value>Mapa de Atributos</value>
   </data>
   <data name="&gt;&gt;MapPage.Name" xml:space="preserve">
     <value>MapPage</value>
@@ -577,10 +577,10 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>23, 24</value>
   </data>
   <data name="SanitaryBuildBtn.Text" xml:space="preserve">
-    <value>Construcción sanitaria...</value>
+    <value>Construção Sanitária...</value>
   </data>
   <data name="SanitaryBuildBtn.ToolTipText" xml:space="preserve">
-    <value>Construcción sanitaria...</value>
+    <value>Construção Sanitária...</value>
   </data>
   <data name="OpenOutput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -589,7 +589,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>23, 24</value>
   </data>
   <data name="OpenOutput.Text" xml:space="preserve">
-    <value>Abrir carpeta de salida</value>
+    <value>Abrir Pasta de Saída</value>
   </data>
   <data name="BrowseSitePreview.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -598,7 +598,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>23, 24</value>
   </data>
   <data name="BrowseSitePreview.Text" xml:space="preserve">
-    <value>Navegar por el sitio en vista previa</value>
+    <value>Abrir Site na Pré-visualização</value>
   </data>
   <data name="BrowseSite.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -607,7 +607,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>23, 24</value>
   </data>
   <data name="BrowseSite.Text" xml:space="preserve">
-    <value>Ver sitio</value>
+    <value>Navegar no Site</value>
   </data>
   <data name="LiveBuildToggle.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -616,7 +616,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>23, 24</value>
   </data>
   <data name="LiveBuildToggle.Text" xml:space="preserve">
-    <value>Compilar cambios automáticamente</value>
+    <value>Criar mudanças automaticamente</value>
   </data>
   <data name="LiveBuildToggle.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -634,7 +634,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>3</value>
   </data>
   <data name="BuildStrip.Text" xml:space="preserve">
-    <value>Compilar</value>
+    <value>Construir</value>
   </data>
   <data name="&gt;&gt;BuildStrip.Name" xml:space="preserve">
     <value>BuildStrip</value>
@@ -841,7 +841,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>239, 24</value>
   </data>
   <data name="NewSite.Text" xml:space="preserve">
-    <value>Nuevo sitio...</value>
+    <value>Novo Site...</value>
   </data>
   <data name="OpenFolder.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+O</value>
@@ -850,7 +850,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>239, 24</value>
   </data>
   <data name="OpenFolder.Text" xml:space="preserve">
-    <value>Abrir sitio...</value>
+    <value>Abrir Site...</value>
   </data>
   <data name="CloseFile.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+W</value>
@@ -859,7 +859,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>239, 24</value>
   </data>
   <data name="CloseFile.Text" xml:space="preserve">
-    <value>Cerrar</value>
+    <value>Fechar</value>
   </data>
   <data name="CloseSite.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -871,7 +871,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>239, 24</value>
   </data>
   <data name="CloseSite.Text" xml:space="preserve">
-    <value>Cerrar sitio</value>
+    <value>Fechar Site</value>
   </data>
   <data name="FileSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 6</value>
@@ -883,7 +883,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>239, 24</value>
   </data>
   <data name="Save.Text" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Salvar</value>
   </data>
   <data name="SaveAll.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+S</value>
@@ -892,7 +892,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>239, 24</value>
   </data>
   <data name="SaveAll.Text" xml:space="preserve">
-    <value>Guardar todo</value>
+    <value>Salvar Tudo</value>
   </data>
   <data name="FileSep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 6</value>
@@ -952,13 +952,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>196, 24</value>
   </data>
   <data name="ClearRecents.Text" xml:space="preserve">
-    <value>Limpiar sitios recientes</value>
+    <value>Limpar Sites Recentes</value>
   </data>
   <data name="OpenRecent.Size" type="System.Drawing.Size, System.Drawing">
     <value>239, 24</value>
   </data>
   <data name="OpenRecent.Text" xml:space="preserve">
-    <value>Sitios recientes</value>
+    <value>Sites Recentes</value>
   </data>
   <data name="FileSep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 6</value>
@@ -970,13 +970,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>239, 24</value>
   </data>
   <data name="ExitItem.Text" xml:space="preserve">
-    <value>Salir</value>
+    <value>Sair</value>
   </data>
   <data name="FileMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 24</value>
   </data>
   <data name="FileMenu.Text" xml:space="preserve">
-    <value>&amp;Archivo</value>
+    <value>&amp;Arquivo</value>
   </data>
   <data name="Undo.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Z</value>
@@ -985,7 +985,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="Undo.Text" xml:space="preserve">
-    <value>Deshacer</value>
+    <value>Desfazer</value>
   </data>
   <data name="Redo.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Y</value>
@@ -994,7 +994,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="Redo.Text" xml:space="preserve">
-    <value>Rehacer</value>
+    <value>Refazer</value>
   </data>
   <data name="EditSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 6</value>
@@ -1006,7 +1006,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="Cut.Text" xml:space="preserve">
-    <value>Cortar</value>
+    <value>Recortar</value>
   </data>
   <data name="Copy.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+C</value>
@@ -1024,7 +1024,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="Paste.Text" xml:space="preserve">
-    <value>Pegar</value>
+    <value>Colar</value>
   </data>
   <data name="EditSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 6</value>
@@ -1036,7 +1036,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="SelectAll.Text" xml:space="preserve">
-    <value>Seleccionar todo</value>
+    <value>Selecionar Todos</value>
   </data>
   <data name="EditSep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 6</value>
@@ -1048,7 +1048,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="Find.Text" xml:space="preserve">
-    <value>Buscar...</value>
+    <value>Encontrar</value>
   </data>
   <data name="Replace.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+H</value>
@@ -1057,7 +1057,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="Replace.Text" xml:space="preserve">
-    <value>Reemplazar...</value>
+    <value>Substituir</value>
   </data>
   <data name="GoToMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+G</value>
@@ -1066,7 +1066,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="GoToMnu.Text" xml:space="preserve">
-    <value>Ir a...</value>
+    <value>Ir Para</value>
   </data>
   <data name="EditSep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 6</value>
@@ -1078,7 +1078,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="QuickInsertMnu.Text" xml:space="preserve">
-    <value>Quick Insert</value>
+    <value>Inserção Rápida</value>
   </data>
   <data name="InsertConditional.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+I</value>
@@ -1087,7 +1087,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>250, 24</value>
   </data>
   <data name="InsertConditional.Text" xml:space="preserve">
-    <value>Insertar condicional...</value>
+    <value>Inserir Condicional...</value>
   </data>
   <data name="EditMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 24</value>
@@ -1099,19 +1099,19 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>201, 24</value>
   </data>
   <data name="WordWrap.Text" xml:space="preserve">
-    <value>Ajuste de palabras</value>
+    <value>Quebra de Linha</value>
   </data>
   <data name="VirtualSpace.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 24</value>
   </data>
   <data name="VirtualSpace.Text" xml:space="preserve">
-    <value>Espacio virtual</value>
+    <value>Espaço Virtual</value>
   </data>
   <data name="WideCaret.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 24</value>
   </data>
   <data name="WideCaret.Text" xml:space="preserve">
-    <value>Cuidado ancho</value>
+    <value>Seta Larga</value>
   </data>
   <data name="FormatSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 6</value>
@@ -1120,7 +1120,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>201, 24</value>
   </data>
   <data name="LivePreview.Text" xml:space="preserve">
-    <value>Vista previa en vivo</value>
+    <value>Visualização em tempo real</value>
   </data>
   <data name="FormatSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 6</value>
@@ -1129,19 +1129,19 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>201, 24</value>
   </data>
   <data name="LivePreviewFontToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fuente para vista previa en vivo...</value>
+    <value>Live Preview Font...</value>
   </data>
   <data name="EditorFont.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 24</value>
   </data>
   <data name="EditorFont.Text" xml:space="preserve">
-    <value>Fuentes monoespaciales...</value>
+    <value>Fonte Monoespaçada...</value>
   </data>
   <data name="FormatMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 24</value>
   </data>
   <data name="FormatMenu.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
+    <value>F&amp;ormatar</value>
   </data>
   <data name="ExplorerPanel.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+1</value>
@@ -1150,7 +1150,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="ExplorerPanel.Text" xml:space="preserve">
-    <value>Explorador</value>
+    <value>Navegador</value>
   </data>
   <data name="BuildPanel.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+2</value>
@@ -1159,7 +1159,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="BuildPanel.Text" xml:space="preserve">
-    <value>Apricot</value>
+    <value>Construir</value>
   </data>
   <data name="EditorPanel.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+3</value>
@@ -1177,7 +1177,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="PreviewPanel.Text" xml:space="preserve">
-    <value>Vista previa</value>
+    <value>Visualizar</value>
   </data>
   <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 6</value>
@@ -1198,13 +1198,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="VerticalSplitMnu.Text" xml:space="preserve">
-    <value>Editor de división vertical</value>
+    <value>Editor Dividido Vertical</value>
   </data>
   <data name="VerticalSplitExplorerMnu.Size" type="System.Drawing.Size, System.Drawing">
     <value>369, 24</value>
   </data>
   <data name="VerticalSplitExplorerMnu.Text" xml:space="preserve">
-    <value>Explorador de división vertical</value>
+    <value>Explorador Dividido Vertical</value>
   </data>
   <data name="MenuItem3.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 6</value>
@@ -1225,19 +1225,19 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="ExplorerIconSchemeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tema de icono de explorador</value>
+    <value>Esquema do ícone de explorador</value>
   </data>
   <data name="SystemIcons.Size" type="System.Drawing.Size, System.Drawing">
     <value>369, 24</value>
   </data>
   <data name="SystemIcons.Text" xml:space="preserve">
-    <value>Usar iconos del sistema</value>
+    <value>Usar Ícones do Sistema</value>
   </data>
   <data name="RefreshItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>369, 24</value>
   </data>
   <data name="RefreshItem.Text" xml:space="preserve">
-    <value>Actualizar Explorador</value>
+    <value>Atualizar Navegador</value>
   </data>
   <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 6</value>
@@ -1249,7 +1249,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="PreviewPage.Text" xml:space="preserve">
-    <value>Previsualizar archivo</value>
+    <value>Visualizar</value>
   </data>
   <data name="ViewFileOutput.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Alt+P</value>
@@ -1258,13 +1258,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="ViewFileOutput.Text" xml:space="preserve">
-    <value>Ver salida</value>
+    <value>Saída</value>
   </data>
   <data name="FileOutputInDefaultBrowserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>369, 24</value>
   </data>
   <data name="FileOutputInDefaultBrowserToolStripMenuItem.Text" xml:space="preserve">
-    <value>Salida en el Navegador por defecto</value>
+    <value>Saída no navegador padrão</value>
   </data>
   <data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 6</value>
@@ -1273,7 +1273,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="BrowseSitePreviewMnu.Text" xml:space="preserve">
-    <value>Navegar por el sitio en vista previa</value>
+    <value>Site de saída na pré-visualização</value>
   </data>
   <data name="BrowseSiteMnu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+P</value>
@@ -1282,13 +1282,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>369, 24</value>
   </data>
   <data name="BrowseSiteMnu.Text" xml:space="preserve">
-    <value>Navegar por el sitio en el navegador por defecto</value>
+    <value>Site de Saída no Navegador Padrão</value>
   </data>
   <data name="ViewMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 24</value>
   </data>
   <data name="ViewMenu.Text" xml:space="preserve">
-    <value>&amp;Ver</value>
+    <value>&amp;Visualizar</value>
   </data>
   <data name="BuildSite.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+B</value>
@@ -1297,7 +1297,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>303, 24</value>
   </data>
   <data name="BuildSite.Text" xml:space="preserve">
-    <value>Construir sitio</value>
+    <value>Construir</value>
   </data>
   <data name="SanitaryBuild.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+B</value>
@@ -1306,7 +1306,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>303, 24</value>
   </data>
   <data name="SanitaryBuild.Text" xml:space="preserve">
-    <value>Construcción sanitaria</value>
+    <value>Construção Sanitária</value>
   </data>
   <data name="ToolsSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 6</value>
@@ -1318,7 +1318,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>303, 24</value>
   </data>
   <data name="OpenOutputMnu.Text" xml:space="preserve">
-    <value>Abrir carpeta de salida</value>
+    <value>Abrir Pasta de Saída</value>
   </data>
   <data name="MenuItem5.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 6</value>
@@ -1327,7 +1327,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>303, 24</value>
   </data>
   <data name="QuickstartMnu.Text" xml:space="preserve">
-    <value>Inicio rápido</value>
+    <value>Inicio Rápido</value>
   </data>
   <data name="ToolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 6</value>
@@ -1339,19 +1339,19 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>303, 24</value>
   </data>
   <data name="InspectorBtn.Text" xml:space="preserve">
-    <value>Inspector de GUI (F12)</value>
+    <value>Inspetor de formulário</value>
   </data>
   <data name="ShowVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 24</value>
   </data>
   <data name="ShowVersion.Text" xml:space="preserve">
-    <value>Mostrar versión</value>
+    <value>Exibir Versão</value>
   </data>
   <data name="BuildMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 24</value>
   </data>
   <data name="BuildMenu.Text" xml:space="preserve">
-    <value>&amp;Herramientas</value>
+    <value>&amp;Ferramentas</value>
   </data>
   <data name="HelpTopics.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F1</value>
@@ -1360,13 +1360,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>204, 24</value>
   </data>
   <data name="HelpTopics.Text" xml:space="preserve">
-    <value>Ver manual</value>
+    <value>Ver Ajuda</value>
   </data>
   <data name="OpenSampleSite.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 24</value>
   </data>
   <data name="OpenSampleSite.Text" xml:space="preserve">
-    <value>Abrir sitio de ejemplo</value>
+    <value>Abrir Site Modelo</value>
   </data>
   <data name="HelpSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 6</value>
@@ -1375,19 +1375,19 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>204, 24</value>
   </data>
   <data name="Website.Text" xml:space="preserve">
-    <value>Sitio web</value>
+    <value>Website</value>
   </data>
   <data name="GitHub.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 24</value>
   </data>
   <data name="GitHub.Text" xml:space="preserve">
-    <value>Repositorio de GitHub</value>
+    <value>Repositório no GitHub</value>
   </data>
   <data name="SendFeedback.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 24</value>
   </data>
   <data name="SendFeedback.Text" xml:space="preserve">
-    <value>Enviar Comentarios</value>
+    <value>Enviar Feedback</value>
   </data>
   <data name="HelpSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 6</value>
@@ -1420,7 +1420,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>204, 24</value>
   </data>
   <data name="LanguageMenu.Text" xml:space="preserve">
-    <value>🌐</value>
+    <value>Language / Idioma</value>
   </data>
   <data name="HelpSep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 6</value>
@@ -1429,13 +1429,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>204, 24</value>
   </data>
   <data name="AboutItem.Text" xml:space="preserve">
-    <value>Acerca de AutoSite</value>
+    <value>Sobre o AutoSite</value>
   </data>
   <data name="HelpMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 24</value>
   </data>
   <data name="HelpMenu.Text" xml:space="preserve">
-    <value>&amp;Ayuda</value>
+    <value>&amp;Ajuda</value>
   </data>
   <data name="MenuBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1471,13 +1471,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>43, 40</value>
   </data>
   <data name="NewSiteBtn.Text" xml:space="preserve">
-    <value>Nuevo</value>
+    <value>Novo</value>
   </data>
   <data name="NewSiteBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
   <data name="NewSiteBtn.ToolTipText" xml:space="preserve">
-    <value>Nuevo sitio (CTRL+N)</value>
+    <value>Novo Site (CTRL+N)</value>
   </data>
   <data name="OpenSiteBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1492,7 +1492,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>ImageAboveText</value>
   </data>
   <data name="OpenSiteBtn.ToolTipText" xml:space="preserve">
-    <value>Abrir sitio (CTRL+O)</value>
+    <value>Site aberto (CTRL+O)</value>
   </data>
   <data name="SaveBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1501,13 +1501,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>44, 40</value>
   </data>
   <data name="SaveBtn.Text" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Salvar</value>
   </data>
   <data name="SaveBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
   <data name="SaveBtn.ToolTipText" xml:space="preserve">
-    <value>Guardar (CTRL+S)</value>
+    <value>Salvar (CTRL+S)</value>
   </data>
   <data name="SaveAllBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1516,7 +1516,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>66, 40</value>
   </data>
   <data name="SaveAllBtn.Text" xml:space="preserve">
-    <value>Guardar todo</value>
+    <value>Salvar Tudo</value>
   </data>
   <data name="SaveAllBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1531,7 +1531,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>35, 40</value>
   </data>
   <data name="CutBtn.Text" xml:space="preserve">
-    <value>Cortar</value>
+    <value>Recortar</value>
   </data>
   <data name="CutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1555,7 +1555,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>47, 40</value>
   </data>
   <data name="PasteBtn.Text" xml:space="preserve">
-    <value>Pegar</value>
+    <value>Colar</value>
   </data>
   <data name="PasteBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1567,13 +1567,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>49, 40</value>
   </data>
   <data name="QuickInsertBtn.Text" xml:space="preserve">
-    <value>Insertar</value>
+    <value>Inserir</value>
   </data>
   <data name="QuickInsertBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
   <data name="QuickInsertBtn.ToolTipText" xml:space="preserve">
-    <value>Insertar rápido (CTRL+Espacio)</value>
+    <value>Inserção rápida (CTRL+Espaço)</value>
   </data>
   <data name="Sep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 43</value>
@@ -1585,7 +1585,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>41, 40</value>
   </data>
   <data name="FindBtn.Text" xml:space="preserve">
-    <value>Buscar</value>
+    <value>Encontrar</value>
   </data>
   <data name="FindBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1597,7 +1597,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>66, 40</value>
   </data>
   <data name="ReplaceBtn.Text" xml:space="preserve">
-    <value>Reemplazar</value>
+    <value>Substituir</value>
   </data>
   <data name="ReplaceBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1612,7 +1612,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>49, 40</value>
   </data>
   <data name="UndoBtn.Text" xml:space="preserve">
-    <value>Deshacer</value>
+    <value>Desfazer</value>
   </data>
   <data name="UndoBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1624,7 +1624,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>48, 40</value>
   </data>
   <data name="RedoBtn.Text" xml:space="preserve">
-    <value>Rehacer</value>
+    <value>Refazer</value>
   </data>
   <data name="RedoBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1636,13 +1636,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>195, 24</value>
   </data>
   <data name="CleanBuildBtn.Text" xml:space="preserve">
-    <value>Limpiar y construir</value>
+    <value>Limpar e construir</value>
   </data>
   <data name="BuildOnChangesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 24</value>
   </data>
   <data name="BuildOnChangesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Construir con cambios </value>
+    <value>Construir alterações </value>
   </data>
   <data name="BuildBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1660,13 +1660,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>201, 24</value>
   </data>
   <data name="LivePreviewMnu.Text" xml:space="preserve">
-    <value>Vista previa en vivo</value>
+    <value>Visualização em tempo real</value>
   </data>
   <data name="LivePreviewFontCopyMnu.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 24</value>
   </data>
   <data name="LivePreviewFontCopyMnu.Text" xml:space="preserve">
-    <value>Fuente para vista previa en vivo...</value>
+    <value>Live Preview Font...</value>
   </data>
   <data name="PreviewBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1675,7 +1675,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>76, 40</value>
   </data>
   <data name="PreviewBtn.Text" xml:space="preserve">
-    <value>Vista previa</value>
+    <value>Visualizar</value>
   </data>
   <data name="PreviewBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1684,19 +1684,19 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>259, 24</value>
   </data>
   <data name="ViewinDefaultBrowser.Text" xml:space="preserve">
-    <value>Abrir en programa predeterminado</value>
+    <value>Abrir com o programa padrão</value>
   </data>
   <data name="OpenFileLocationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 24</value>
   </data>
   <data name="OpenFileLocationToolStripMenuItem.Text" xml:space="preserve">
-    <value>Abrir la ubicación del archivo</value>
+    <value>Abrir local do arquivo</value>
   </data>
   <data name="OpenOutputFolderBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 24</value>
   </data>
   <data name="OpenOutputFolderBtn.Text" xml:space="preserve">
-    <value>Abrir carpeta de salida</value>
+    <value>Abrir pasta de saída</value>
   </data>
   <data name="ViewOutBtn.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1705,7 +1705,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>71, 40</value>
   </data>
   <data name="ViewOutBtn.Text" xml:space="preserve">
-    <value>Ver salida</value>
+    <value>Saída</value>
   </data>
   <data name="ViewOutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1714,13 +1714,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>212, 24</value>
   </data>
   <data name="OriginalToolStripMenuItem.Text" xml:space="preserve">
-    <value>Estándar</value>
+    <value>Padrão</value>
   </data>
   <data name="WidescreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 24</value>
   </data>
   <data name="WidescreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Panorámica</value>
+    <value>Tela larga</value>
   </data>
   <data name="EditToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 24</value>
@@ -1732,7 +1732,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>212, 24</value>
   </data>
   <data name="NoEditorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Compacto</value>
+    <value>Compacta</value>
   </data>
   <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 6</value>
@@ -1751,7 +1751,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>212, 24</value>
   </data>
   <data name="ExSplitOrient.Text" xml:space="preserve">
-    <value>Orientación del Explorador</value>
+    <value>Orientação do Explorador</value>
   </data>
   <data name="ExSplitOrient.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1770,7 +1770,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>212, 24</value>
   </data>
   <data name="EdSplitOrient.Text" xml:space="preserve">
-    <value>Orientación de Previsualización</value>
+    <value>Orientação da pré-visualização</value>
   </data>
   <data name="EdSplitOrient.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1782,7 +1782,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>69, 40</value>
   </data>
   <data name="LayoutBtn.Text" xml:space="preserve">
-    <value>Diseño</value>
+    <value>Disposição</value>
   </data>
   <data name="LayoutBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1802,13 +1802,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>49, 40</value>
   </data>
   <data name="CloseBtn.Text" xml:space="preserve">
-    <value>Cerrar</value>
+    <value>Fechar</value>
   </data>
   <data name="CloseBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
   <data name="CloseBtn.ToolTipText" xml:space="preserve">
-    <value>Cerrar</value>
+    <value>Fechar</value>
   </data>
   <data name="StandardStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 28</value>
@@ -1826,7 +1826,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>5</value>
   </data>
   <data name="StandardStrip.Text" xml:space="preserve">
-    <value>Estándar</value>
+    <value>Padrão</value>
   </data>
   <data name="&gt;&gt;StandardStrip.Name" xml:space="preserve">
     <value>StandardStrip</value>
@@ -1868,7 +1868,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>529, 17</value>
   </metadata>
   <data name="FolderBrowser.Description" xml:space="preserve">
-    <value>Elija una carpeta en la que guardar los recursos de su sitio. Si no existe ningún sitio en esa carpeta, se creará una.</value>
+    <value>Selecione uma pasta para armazenar os arquivos do seu site. Se não existir nenhum site nessa pasta, uma será criada.</value>
   </data>
   <metadata name="XP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>358, 23</value>
@@ -1889,13 +1889,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>259, 24</value>
   </data>
   <data name="OpenInDefault.Text" xml:space="preserve">
-    <value>Abrir en programa predeterminado</value>
+    <value>Abrir com o programa padrão</value>
   </data>
   <data name="OpenFileLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 24</value>
   </data>
   <data name="OpenFileLocation.Text" xml:space="preserve">
-    <value>Abrir la ubicación del archivo</value>
+    <value>Abrir local do arquivo</value>
   </data>
   <data name="ContextSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 6</value>
@@ -1910,13 +1910,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>259, 24</value>
   </data>
   <data name="PasteCon.Text" xml:space="preserve">
-    <value>Pegar</value>
+    <value>Colar</value>
   </data>
   <data name="AddFilesCon.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 24</value>
   </data>
   <data name="AddFilesCon.Text" xml:space="preserve">
-    <value>Añadir archivos...</value>
+    <value>Adicionar arquivos...</value>
   </data>
   <data name="ContextSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 6</value>
@@ -1925,13 +1925,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>259, 24</value>
   </data>
   <data name="DeleteCon.Text" xml:space="preserve">
-    <value>Eliminar</value>
+    <value>Excluir</value>
   </data>
   <data name="RenameCon.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 24</value>
   </data>
   <data name="RenameCon.Text" xml:space="preserve">
-    <value>Renombrar</value>
+    <value>Renomear</value>
   </data>
   <data name="ContextSep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 6</value>
@@ -1940,7 +1940,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>223, 24</value>
   </data>
   <data name="NewFolderCon.Text" xml:space="preserve">
-    <value>Carpeta</value>
+    <value>Pasta</value>
   </data>
   <data name="NewSep.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 6</value>
@@ -1961,7 +1961,7 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>223, 24</value>
   </data>
   <data name="NewPHPCon.Text" xml:space="preserve">
-    <value>Guión PHP (.php)</value>
+    <value>Script PHP (.php)</value>
   </data>
   <data name="NewSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 6</value>
@@ -1970,25 +1970,25 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>223, 24</value>
   </data>
   <data name="NewCSSCon.Text" xml:space="preserve">
-    <value>Hojas de estilo CSS (.css)</value>
+    <value>Stylesheet CSS (.css)</value>
   </data>
   <data name="NewJSCon.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 24</value>
   </data>
   <data name="NewJSCon.Text" xml:space="preserve">
-    <value>Guión JS (.js)</value>
+    <value>Script JS (.js)</value>
   </data>
   <data name="NewTXTCon.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 24</value>
   </data>
   <data name="NewTXTCon.Text" xml:space="preserve">
-    <value>Texto simple (.txt)</value>
+    <value>Texto Sem Formatação (.txt)</value>
   </data>
   <data name="NewCon.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 24</value>
   </data>
   <data name="NewCon.Text" xml:space="preserve">
-    <value>Nuevo</value>
+    <value>Novo</value>
   </data>
   <data name="Context.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 238</value>
@@ -2003,10 +2003,10 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>679, 17</value>
   </metadata>
   <data name="AddFilesDialog.Filter" xml:space="preserve">
-    <value>Todos los archivos (*.*)|*.*</value>
+    <value>Todos os arquivos (*.*)|*.*</value>
   </data>
   <data name="AddFilesDialog.Title" xml:space="preserve">
-    <value>Añadir archivos a la carpeta</value>
+    <value>Adicionar Arquivos à Pasta</value>
   </data>
   <metadata name="ApricotWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>834, 17</value>
@@ -3059,13 +3059,13 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>118, 24</value>
   </data>
   <data name="ClearToolStripMenuItem.Text" xml:space="preserve">
-    <value>Borrar</value>
+    <value>Limpar</value>
   </data>
   <data name="SaveLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 24</value>
   </data>
   <data name="SaveLog.Text" xml:space="preserve">
-    <value>Guardar...</value>
+    <value>Salvar...</value>
   </data>
   <data name="LogMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 52</value>
@@ -3080,16 +3080,16 @@ Compila su sitio para poblar el Mapa de Atributos.</value>
     <value>1051, 60</value>
   </metadata>
   <data name="SaveLogDialog.Filter" xml:space="preserve">
-    <value>Texto rico (*.rtf)|*.rtf|Texto plano (*.txt)|*.txt</value>
+    <value>Texto Formatado (*.rtf)|*.rtf|Texto não Formatado (*.txt)|*.txt</value>
   </data>
   <data name="SaveLogDialog.Title" xml:space="preserve">
-    <value>Guardar Log</value>
+    <value>Salvar Registro</value>
   </data>
   <metadata name="OpenPack.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>296, 60</value>
   </metadata>
   <data name="OpenPack.Filter" xml:space="preserve">
-    <value>Paquete Zip AutoSite (*.zip)|*.zip</value>
+    <value>Pacote Zip do AutoSite (*.zip)|*.zip</value>
   </data>
   <metadata name="LiveBuildWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>524, 60</value>

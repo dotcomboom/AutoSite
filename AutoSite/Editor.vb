@@ -452,7 +452,7 @@ Public Class Editor
     
     Public Function KindRel()
         ' replace Me.Parent.Text to keep pages\, includes\, templates\
-        Return openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "")
+        Return openFile.Replace(siteRoot & "\pages\", "").Replace(siteRoot & "\includes\", "").Replace(siteRoot & "\templates\", "").Replace("\", "/")
     End Function
     
     Private Function OutRel()

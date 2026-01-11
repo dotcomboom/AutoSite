@@ -539,8 +539,6 @@ Public Class Main
     End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
-        Save.ShortcutKeys = Keys.Control + Keys.S
-        
         Preview.Hide()
 
         Me.Font = SystemFonts.IconTitleFont

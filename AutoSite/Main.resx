@@ -1030,7 +1030,7 @@ Build your site to populate the Attribute Map.</value>
     <value>247, 6</value>
   </data>
   <data name="SelectAll.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+S</value>
+    <value>Ctrl+A</value>
   </data>
   <data name="SelectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 24</value>
@@ -2626,16 +2626,16 @@ Build your site to populate the Attribute Map.</value>
   <data name="&gt;&gt;PullToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GitGUIToolStripMenuItem.Name" xml:space="preserve">
-    <value>GitGUIToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;GitGUIToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;GitBashToolStripMenuItem.Name" xml:space="preserve">
     <value>GitBashToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;GitBashToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GitGUIToolStripMenuItem.Name" xml:space="preserve">
+    <value>GitGUIToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;GitGUIToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripSeparator10.Name" xml:space="preserve">

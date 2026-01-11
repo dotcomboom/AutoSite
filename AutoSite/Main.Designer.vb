@@ -130,8 +130,8 @@ Partial Class Main
         Me.PowerShellToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.PullToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GitGUIToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GitBashToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GitGUIToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.WinSCPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileZillaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -984,15 +984,15 @@ Partial Class Main
         Me.PullToolStripMenuItem.Name = "PullToolStripMenuItem"
         resources.ApplyResources(Me.PullToolStripMenuItem, "PullToolStripMenuItem")
         '
-        'GitGUIToolStripMenuItem
-        '
-        Me.GitGUIToolStripMenuItem.Name = "GitGUIToolStripMenuItem"
-        resources.ApplyResources(Me.GitGUIToolStripMenuItem, "GitGUIToolStripMenuItem")
-        '
         'GitBashToolStripMenuItem
         '
         Me.GitBashToolStripMenuItem.Name = "GitBashToolStripMenuItem"
         resources.ApplyResources(Me.GitBashToolStripMenuItem, "GitBashToolStripMenuItem")
+        '
+        'GitGUIToolStripMenuItem
+        '
+        Me.GitGUIToolStripMenuItem.Name = "GitGUIToolStripMenuItem"
+        resources.ApplyResources(Me.GitGUIToolStripMenuItem, "GitGUIToolStripMenuItem")
         '
         'ToolStripSeparator10
         '

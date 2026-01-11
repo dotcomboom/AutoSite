@@ -2428,4 +2428,91 @@ Public Class Main
         End If
         haveBrowserCallForLivePreview = False
     End Sub
+
+    Private Sub PullToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim p As New Process()
+        p.StartInfo.UseShellExecute = True
+        p.StartInfo.FileName = "git"
+        p.StartInfo.Arguments = "pull"
+        p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
+        p.Start()
+    End Sub
+
+    Private Sub CommandPromptToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CommandPromptToolStripMenuItem.Click
+        Dim p As New Process()
+        p.StartInfo.UseShellExecute = True
+        p.StartInfo.FileName = "cmd"
+        p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
+        p.Start()
+    End Sub
+
+    Private Sub PowerShellToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PowerShellToolStripMenuItem.Click
+        Dim p As New Process()
+        p.StartInfo.UseShellExecute = True
+        p.StartInfo.FileName = "powershell"
+        p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
+        p.Start()
+    End Sub
+
+    Private Sub GitBashToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GitBashToolStripMenuItem.Click
+        Dim p As New Process
+        p.StartInfo.UseShellExecute = True
+        If My.Computer.FileSystem.FileExists("sh.exe") Then
+            p.StartInfo.FileName = "sh.exe"
+        ElseIf My.Computer.FileSystem.FileExists("C:\Program Files\Git\git-bash.exe") Then
+            p.StartInfo.FileName = "C:\Program Files\Git\git-bash.exe"
+        ElseIf My.Computer.FileSystem.FileExists("%PROGRAMFILES%\Git\bin\sh.exe") Then
+            p.StartInfo.FileName = "%PROGRAMFILES%\Git\bin\sh.exe"
+        ElseIf My.Computer.FileSystem.FileExists("%SYSTEMDRIVE%\Program Files (x86)\Git\bin\sh.exe") Then
+            p.StartInfo.FileName = "%SYSTEMDRIVE%\Program Files (x86)\Git\bin\sh.exe"
+        Else
+            MsgBox("We could not find your Git Bash path.", MsgBoxStyle.Exclamation, "Git Bash")
+            Exit Sub
+        End If
+        p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
+        p.Start()
+    End Sub
+
+    Private Sub WinSCPToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WinSCPToolStripMenuItem.Click
+        Dim p As New Process
+        p.StartInfo.UseShellExecute = True
+        If My.Computer.FileSystem.FileExists("C:\Program Files (x86)\WinSCP\WinSCP.exe") Then
+            p.StartInfo.FileName = "C:\Program Files (x86)\WinSCP\WinSCP.exe"
+        End If
+        p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
+        p.Start()
+    End Sub
+
+    Private Sub GitGUIToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GitGUIToolStripMenuItem.Click
+        Dim p As New Process
+        p.StartInfo.UseShellExecute = True
+        If My.Computer.FileSystem.FileExists("C:\Program Files\Git\cmd\git-gui.exe") Then
+            p.StartInfo.FileName = "C:\Program Files\Git\cmd\git-gui.exe"
+        Else
+            MsgBox("We could not find your Git GUI path.", MsgBoxStyle.Exclamation, "Git GUI")
+            Exit Sub
+        End If
+        p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
+        p.Start()
+    End Sub
+
+    Private Sub PushToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim p As New Process()
+        p.StartInfo.UseShellExecute = True
+        p.StartInfo.FileName = "git"
+        p.StartInfo.Arguments = "push"
+        p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
+        p.Start()
+    End Sub
+
+    Private Sub FileZillaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FileZillaToolStripMenuItem.Click
+        Dim p As New Process
+        p.StartInfo.UseShellExecute = True
+        If My.Computer.FileSystem.FileExists("C:\Program Files\FileZilla FTP Client\filezilla.exe") Then
+            p.StartInfo.FileName = "C:\Program Files\FileZilla FTP Client\filezilla.exe"
+        End If
+        p.StartInfo.Arguments = "--local """ & SiteTree.Nodes(0).Tag & "\out" & """"
+        p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
+        p.Start()
+    End Sub
 End Class

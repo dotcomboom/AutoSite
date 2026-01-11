@@ -125,6 +125,16 @@ Partial Class Main
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.InspectorBtn = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowVersion = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CommandPromptToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PowerShellToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PullToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GitGUIToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GitBashToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
+        Me.WinSCPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileZillaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpTopics = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenSampleSite = New System.Windows.Forms.ToolStripMenuItem()
@@ -211,11 +221,9 @@ Partial Class Main
         Me.OpenPack = New System.Windows.Forms.OpenFileDialog()
         Me.LiveBuildWorker = New System.ComponentModel.BackgroundWorker()
         Me.SelectPreviewFont = New System.Windows.Forms.FontDialog()
-        CType(Me.EdSplit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EdSplit.Panel1.SuspendLayout()
         Me.EdSplit.Panel2.SuspendLayout()
         Me.EdSplit.SuspendLayout()
-        CType(Me.ExSplit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ExSplit.Panel1.SuspendLayout()
         Me.ExSplit.Panel2.SuspendLayout()
         Me.ExSplit.SuspendLayout()
@@ -223,7 +231,6 @@ Partial Class Main
         Me.LogPage.SuspendLayout()
         Me.MapPage.SuspendLayout()
         Me.BuildStrip.SuspendLayout()
-        CType(Me.CoreSplit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CoreSplit.Panel1.SuspendLayout()
         Me.CoreSplit.Panel2.SuspendLayout()
         Me.CoreSplit.SuspendLayout()
@@ -322,7 +329,7 @@ Partial Class Main
         resources.ApplyResources(Me.Log, "Log")
         Me.Log.Name = "Log"
         Me.Log.ReadOnly = True
-        Me.Log.Text = Global.AutoSite.My.Resources.Resources.__
+        Me.Log.Text = ""
         '
         'LogMenuBridge
         '
@@ -891,7 +898,7 @@ Partial Class Main
         '
         'BuildMenu
         '
-        Me.BuildMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuildSite, Me.SanitaryBuild, Me.ToolsSep, Me.OpenOutputMnu, Me.MenuItem5, Me.QuickstartMnu, Me.ToolStripSeparator5, Me.InspectorBtn, Me.ShowVersion})
+        Me.BuildMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuildSite, Me.SanitaryBuild, Me.ToolsSep, Me.OpenOutputMnu, Me.MenuItem5, Me.QuickstartMnu, Me.ToolStripSeparator5, Me.InspectorBtn, Me.ShowVersion, Me.ToolStripSeparator9, Me.CommandPromptToolStripMenuItem, Me.PowerShellToolStripMenuItem, Me.ToolStripSeparator11, Me.PullToolStripMenuItem, Me.GitBashToolStripMenuItem, Me.GitGUIToolStripMenuItem, Me.ToolStripSeparator10, Me.WinSCPToolStripMenuItem, Me.FileZillaToolStripMenuItem})
         Me.BuildMenu.MergeIndex = 4
         Me.BuildMenu.Name = "BuildMenu"
         resources.ApplyResources(Me.BuildMenu, "BuildMenu")
@@ -951,6 +958,56 @@ Partial Class Main
         Me.ShowVersion.MergeIndex = 11
         Me.ShowVersion.Name = "ShowVersion"
         resources.ApplyResources(Me.ShowVersion, "ShowVersion")
+        '
+        'ToolStripSeparator9
+        '
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        resources.ApplyResources(Me.ToolStripSeparator9, "ToolStripSeparator9")
+        '
+        'CommandPromptToolStripMenuItem
+        '
+        Me.CommandPromptToolStripMenuItem.Name = "CommandPromptToolStripMenuItem"
+        resources.ApplyResources(Me.CommandPromptToolStripMenuItem, "CommandPromptToolStripMenuItem")
+        '
+        'PowerShellToolStripMenuItem
+        '
+        Me.PowerShellToolStripMenuItem.Name = "PowerShellToolStripMenuItem"
+        resources.ApplyResources(Me.PowerShellToolStripMenuItem, "PowerShellToolStripMenuItem")
+        '
+        'ToolStripSeparator11
+        '
+        Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
+        resources.ApplyResources(Me.ToolStripSeparator11, "ToolStripSeparator11")
+        '
+        'PullToolStripMenuItem
+        '
+        Me.PullToolStripMenuItem.Name = "PullToolStripMenuItem"
+        resources.ApplyResources(Me.PullToolStripMenuItem, "PullToolStripMenuItem")
+        '
+        'GitGUIToolStripMenuItem
+        '
+        Me.GitGUIToolStripMenuItem.Name = "GitGUIToolStripMenuItem"
+        resources.ApplyResources(Me.GitGUIToolStripMenuItem, "GitGUIToolStripMenuItem")
+        '
+        'GitBashToolStripMenuItem
+        '
+        Me.GitBashToolStripMenuItem.Name = "GitBashToolStripMenuItem"
+        resources.ApplyResources(Me.GitBashToolStripMenuItem, "GitBashToolStripMenuItem")
+        '
+        'ToolStripSeparator10
+        '
+        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
+        resources.ApplyResources(Me.ToolStripSeparator10, "ToolStripSeparator10")
+        '
+        'WinSCPToolStripMenuItem
+        '
+        Me.WinSCPToolStripMenuItem.Name = "WinSCPToolStripMenuItem"
+        resources.ApplyResources(Me.WinSCPToolStripMenuItem, "WinSCPToolStripMenuItem")
+        '
+        'FileZillaToolStripMenuItem
+        '
+        Me.FileZillaToolStripMenuItem.Name = "FileZillaToolStripMenuItem"
+        resources.ApplyResources(Me.FileZillaToolStripMenuItem, "FileZillaToolStripMenuItem")
         '
         'HelpMenu
         '
@@ -1475,12 +1532,10 @@ Partial Class Main
         Me.Name = "Main"
         Me.EdSplit.Panel1.ResumeLayout(False)
         Me.EdSplit.Panel2.ResumeLayout(False)
-        CType(Me.EdSplit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EdSplit.ResumeLayout(False)
         Me.ExSplit.Panel1.ResumeLayout(False)
         Me.ExSplit.Panel2.ResumeLayout(False)
         Me.ExSplit.Panel2.PerformLayout()
-        CType(Me.ExSplit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ExSplit.ResumeLayout(False)
         Me.ApricotTabs.ResumeLayout(False)
         Me.LogPage.ResumeLayout(False)
@@ -1489,7 +1544,6 @@ Partial Class Main
         Me.BuildStrip.PerformLayout()
         Me.CoreSplit.Panel1.ResumeLayout(False)
         Me.CoreSplit.Panel2.ResumeLayout(False)
-        CType(Me.CoreSplit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CoreSplit.ResumeLayout(False)
         Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
         Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
@@ -1693,4 +1747,14 @@ Partial Class Main
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ExSplitOrient As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EdSplitOrient As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator9 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents CommandPromptToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PowerShellToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GitBashToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator10 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents WinSCPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GitGUIToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator11 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents PullToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents FileZillaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -90,5 +90,8 @@
     <Setting Name="LivePreviewAttributes" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="modDateFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%Y-%m-%d</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

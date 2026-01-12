@@ -40,6 +40,10 @@ Partial Class StartPage
         Me.R4 = New System.Windows.Forms.PictureBox()
         Me.R5 = New System.Windows.Forms.PictureBox()
         Me.RWarn = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.dateFormat = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.R1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -209,11 +213,41 @@ Partial Class StartPage
         resources.ApplyResources(Me.RWarn, "RWarn")
         Me.RWarn.Name = "RWarn"
         '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Name = "Label4"
+        '
+        'dateFormat
+        '
+        Me.dateFormat.FormattingEnabled = True
+        Me.dateFormat.Items.AddRange(New Object() {resources.GetString("dateFormat.Items"), resources.GetString("dateFormat.Items1"), resources.GetString("dateFormat.Items2"), resources.GetString("dateFormat.Items3"), resources.GetString("dateFormat.Items4")})
+        resources.ApplyResources(Me.dateFormat, "dateFormat")
+        Me.dateFormat.Name = "dateFormat"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Name = "Label5"
+        '
         'StartPage
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.dateFormat)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.R5)
         Me.Controls.Add(Me.R4)
         Me.Controls.Add(Me.R3)
@@ -260,4 +294,8 @@ Partial Class StartPage
     Friend WithEvents R4 As PictureBox
     Friend WithEvents R5 As PictureBox
     Friend WithEvents RWarn As Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents dateFormat As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

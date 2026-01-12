@@ -127,7 +127,56 @@ Public Module Apricot
         End If
     End Sub
 
-    Public Function Compile(ByVal pageHtml As String, ByVal inputFilename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal modifiedDate As Date = Nothing, Optional ByVal worker As Object = Nothing)
+    Private Function zero(ByVal str As String)
+        If str.Length = 1 Then
+            Return "0" & str
+        End If
+        Return str
+    End Function
+
+    Public Function calcModified(ByVal modifiedDate As Date, Optional ByVal dateFormat As String = "")
+        'strftime cheatsheet: https://strftime.org
+        Dim strDate = dateFormat
+        If dateFormat.Length = 0 Then
+            Return modifiedDate.Year & "-" & zero(modifiedDate.Month) & "-" & zero(modifiedDate.Day)
+        Else
+            strDate = strDate.Replace("%a", "")
+            strDate = strDate.Replace("%A", "")
+            strDate = strDate.Replace("%w", "")
+            strDate = strDate.Replace("%d", zero(modifiedDate.Day))
+            strDate = strDate.Replace("%-d", modifiedDate.Day)
+            strDate = strDate.Replace("%b", "")
+            strDate = strDate.Replace("%B", "")
+            strDate = strDate.Replace("%m", zero(modifiedDate.Month))
+            strDate = strDate.Replace("%-m", modifiedDate.Month)
+            strDate = strDate.Replace("%y", modifiedDate.Year.ToString.Substring(2))
+            strDate = strDate.Replace("%Y", modifiedDate.Year)
+            strDate = strDate.Replace("%H", "")
+            strDate = strDate.Replace("%-H", "")
+            strDate = strDate.Replace("%I", "")
+            strDate = strDate.Replace("%-I", "")
+            strDate = strDate.Replace("%p", "")
+            strDate = strDate.Replace("%M", "")
+            strDate = strDate.Replace("%-M", "")
+            strDate = strDate.Replace("%S", "")
+            strDate = strDate.Replace("%-S", "")
+            strDate = strDate.Replace("%f", "")
+            strDate = strDate.Replace("%z", "")
+            strDate = strDate.Replace("%Z", "")
+            strDate = strDate.Replace("%j", zero(modifiedDate.DayOfYear))
+            strDate = strDate.Replace("%-j", modifiedDate.DayOfYear)
+            strDate = strDate.Replace("%U", "")
+            strDate = strDate.Replace("%-U", "")
+            strDate = strDate.Replace("%W", "")
+            strDate = strDate.Replace("%c", "")
+            strDate = strDate.Replace("%x", "")
+            strDate = strDate.Replace("%X", "")
+            strDate = strDate.Replace("%%", "%")
+        End If
+        Return strDate
+    End Function
+
+    Public Function Compile(ByVal pageHtml As String, ByVal inputFilename As String, ByVal siteRoot As String, ByVal local As Boolean, Optional ByVal modifiedDate As Date = Nothing, Optional ByVal worker As Object = Nothing, Optional ByVal modifiedFormat As String = "%Y-%m-%d")
         Dim filename = inputFilename
 
         If local Then ' clear cache for previews
@@ -161,7 +210,7 @@ Public Module Apricot
         attribs.Item("template") = "default"
         If Not modifiedDate = Nothing Then
             Try
-                attribs.Item("modified") = modifiedDate.ToString.Split(" ")(0)
+                attribs.Item("modified") = calcModified(modifiedDate, modifiedFormat)
             Catch ex As Exception
             End Try
             Try
@@ -307,7 +356,7 @@ Public Module Apricot
             'doLog(pass, worker)
 
             If pass Then
-                    newHtml = newHtml.Replace(fullStr, html)
+                newHtml = newHtml.Replace(fullStr, html)
             Else
                 newHtml = newHtml.Replace(fullStr, "")
             End If
@@ -337,7 +386,7 @@ Public Module Apricot
         Return output
     End Function
 
-    Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As ComponentModel.BackgroundWorker = Nothing)
+    Sub walkInputs(ByVal subdir As IO.DirectoryInfo, ByVal pattern As String, ByVal siteRoot As String, Optional ByVal worker As ComponentModel.BackgroundWorker = Nothing, Optional ByVal modifiedDateFormat As String = "")
         Dim input = Path.Combine(siteRoot, "pages\")
         Dim templates = Path.Combine(siteRoot, "templates\")
         Dim includes = Path.Combine(siteRoot, "includes\")
@@ -358,7 +407,7 @@ Public Module Apricot
             doLog("Rendering " & rel.Replace("\", "/"), worker, 0)
 
             Try
-                Dim output As ApricotOutput = Compile(ReadAllText(file.FullName), rel, ReplaceLast(templates, "\templates", ""), False, modifiedDate, worker)
+                Dim output As ApricotOutput = Compile(ReadAllText(file.FullName), rel, ReplaceLast(templates, "\templates", ""), False, modifiedDate, worker, modifiedDateFormat)
                 Dim html = output.HTML
                 Dim attribs = output.Attributes
 
@@ -382,7 +431,7 @@ Public Module Apricot
         'Next
     End Sub
 
-    Public Sub buildSite(ByVal folder As String, Optional ByVal worker As Object = Nothing, Optional ByVal removeStrays As Boolean = False)
+    Public Sub buildSite(ByVal folder As String, Optional ByVal worker As Object = Nothing, Optional ByVal removeStrays As Boolean = False, Optional ByVal modDateFormat As String = "")
         template_cache.Clear()
 
         Dim pages = Path.Combine(folder, "pages\")
@@ -444,7 +493,7 @@ Public Module Apricot
         End If
 
         doLog("Processing input files", worker, 50)
-        walkInputs(My.Computer.FileSystem.GetDirectoryInfo(pages), "*.*", folder, worker)
+        walkInputs(My.Computer.FileSystem.GetDirectoryInfo(pages), "*.*", folder, worker, modDateFormat)
 
         Dim plugins = Path.Combine(folder, "plugins\")
         If My.Computer.FileSystem.DirectoryExists(plugins) Then

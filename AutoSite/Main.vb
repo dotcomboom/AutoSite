@@ -760,6 +760,7 @@ Public Class Main
                         End If
                         If edit Then
                             openEditor(e.Node.Tag)
+                            'e.Node.NodeFont = New Font(Me.Font, FontStyle.Italic)
                         Else
                             Process.Start(e.Node.Tag)
                         End If
@@ -993,6 +994,9 @@ Public Class Main
             Catch ex As Exception
             End Try
             Context.Show(SiteTree, e.Location)
+        ElseIf e.Button = Windows.Forms.MouseButtons.Left Then
+            'SiteTree_NodeMouseDoubleClick(sender, e)
+            'e.Node.Expand()
         End If
     End Sub
 
@@ -1223,7 +1227,7 @@ Public Class Main
     Shared removeStrays = False
 
     Private Sub Apricot_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ApricotWorker.DoWork
-        Apricot.buildSite(SiteTree.Nodes(0).Text, ApricotWorker, removeStrays)
+        Apricot.buildSite(SiteTree.Nodes(0).Text, ApricotWorker, removeStrays, My.Settings.modDateFormat)
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles ApricotWorker.ProgressChanged
@@ -2512,5 +2516,9 @@ Public Class Main
         p.StartInfo.Arguments = "--local """ & SiteTree.Nodes(0).Tag & "\out" & """"
         p.StartInfo.WorkingDirectory = SiteTree.Nodes(0).Tag
         p.Start()
+    End Sub
+
+    Private Sub AttributeTree_StyleChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles AttributeTree.StyleChanged
+
     End Sub
 End Class

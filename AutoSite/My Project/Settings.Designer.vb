@@ -402,6 +402,18 @@ Namespace My
                 Me("LivePreviewAttributes") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("%Y-%m-%d")>  _
+        Public Property modDateFormat() As String
+            Get
+                Return CType(Me("modDateFormat"),String)
+            End Get
+            Set
+                Me("modDateFormat") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

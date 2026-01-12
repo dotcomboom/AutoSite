@@ -33,6 +33,7 @@
             Recent5.Tag = My.Settings.recents(4)
         End If
         Me.Font = Main.getFont()
+        dateFormat.Text = My.Settings.modDateFormat
     End Sub
 
     Private Sub NewSite_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles NewSite.LinkClicked
@@ -59,5 +60,10 @@
         Dim s = RWarn.Size
         s.Width = Me.Width - RWarn.Location.X - 16
         RWarn.Size = s
+    End Sub
+
+    Private Sub dateFormat_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dateFormat.TextChanged
+        Label5.Text = Apricot.calcModified(Today, dateFormat.Text)
+        My.Settings.modDateFormat = dateFormat.Text
     End Sub
 End Class

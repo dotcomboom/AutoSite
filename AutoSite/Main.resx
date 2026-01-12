@@ -140,6 +140,9 @@
   <data name="VS2017.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
+  <data name="EditTabs.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>1, 24</value>
+  </data>
   <data name="EditTabs.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 8</value>
   </data>

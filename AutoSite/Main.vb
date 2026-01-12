@@ -157,6 +157,23 @@ Public Class Main
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(templatePath), "*", templates, "Template", False)
         walkTree(My.Computer.FileSystem.GetDirectoryInfo(includePath), "*", includes, "Include", False)
         'walkTree(My.Computer.FileSystem.GetDirectoryInfo(outputPath), "*", output_site, "Include", False)
+        
+        SiteTree.Sort()
+        'sortNode(pages)
+        'sortNode(templates)
+        'sortNode(includes)
+
+        ' TODO fix order not ordering after sort
+        SiteTree.EndUpdate()
+        SiteTree.BeginUpdate()
+        
+        SiteTree.Nodes(0).Nodes.Clear()
+        SiteTree.Nodes(0).Nodes.Add(pages)
+        SiteTree.Nodes(0).Nodes.Add(templates)
+        SiteTree.Nodes(0).Nodes.Add(includes)
+
+        AttributeTree.Sort()
+
         SiteTree.EndUpdate()
         AttributeTree.EndUpdate()
 
@@ -767,6 +784,20 @@ Public Class Main
                     End If
                 Catch ex As Exception
                 End Try
+            ElseIf sender Is SiteTree And e.Node.Nodes.Count = 1 And e.Node.IsExpanded Then ' open index.html, index.md in otherwise empty folder
+                If openFiles.Contains(e.Node.Nodes(0).Tag) Then
+                    Exit Sub
+                End If
+                Dim edit = False
+                For Each extension In editExtensions
+                    If e.Node.Nodes(0).Tag.EndsWith(extension) Or e.Node.Nodes(0).Tag = extension Then
+                        edit = True
+                        Exit For
+                    End If
+                Next
+                If edit Then
+                    openEditor(e.Node.Nodes(0).Tag)
+                End If
             End If
         End If
     End Sub
@@ -1276,6 +1307,9 @@ Public Class Main
 
     Private Sub Apricot_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ApricotWorker.RunWorkerCompleted
         AttributeTree.EndUpdate()
+
+        AttributeTree.Sort()
+
         BuildProgress.Visible = False
         Build.Enabled = True
         BuildBtn.Enabled = True
@@ -2156,6 +2190,7 @@ Public Class Main
                 .SelectedImageKey = "Value"
             }
             aNode.Nodes.Add(vNode)
+
         End If
 
         Dim pNode = vNode
@@ -2521,4 +2556,5 @@ Public Class Main
     Private Sub AttributeTree_StyleChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles AttributeTree.StyleChanged
 
     End Sub
+
 End Class

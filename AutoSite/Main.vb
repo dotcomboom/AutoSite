@@ -995,7 +995,7 @@ Public Class Main
                 NewCon.Enabled = False
             End If
             Try
-                If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then
+                If Context.Tag.Contains(SiteTree.Nodes(0).Tag & "/pages") Or Context.Tag.Contains(SiteTree.Nodes(0).Tag & "\pages") Then
                     NewFolderCon.Enabled = True
                     NewHTMLCon.Enabled = True
                     NewMDCon.Enabled = True
@@ -1004,7 +1004,7 @@ Public Class Main
                     NewJSCon.Enabled = False
                     NewTXTCon.Enabled = True
                 End If
-                If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(1).Tag) Then
+                If Context.Tag.Contains(SiteTree.Nodes(0).Tag & "/templates") Or Context.Tag.Contains(SiteTree.Nodes(0).Tag & "\templates") Then
                     NewFolderCon.Enabled = False
                     NewHTMLCon.Enabled = True
                     NewMDCon.Enabled = False
@@ -1013,7 +1013,7 @@ Public Class Main
                     NewJSCon.Enabled = False
                     NewTXTCon.Enabled = False
                 End If
-                If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(2).Tag) Then
+                If Context.Tag.Contains(SiteTree.Nodes(0).Tag & "/includes") Or Context.Tag.Contains(SiteTree.Nodes(0).Tag & "\includes") Then
                     NewFolderCon.Enabled = True
                     NewHTMLCon.Enabled = True
                     NewMDCon.Enabled = True
@@ -1494,11 +1494,21 @@ Public Class Main
     '    Log.AppendText(e.FullPath.Replace(SiteTree.Nodes(0).Text, "") & " renamed in source folder but this will be reflected on next change or manual build" & vbNewLine)
     'End Function
 
+    Private Function GetPTINode(ByVal root As TreeNode, ByVal kind As String)
+        Dim rootpath = root.Tag
+        For Each node As TreeNode In root.Nodes
+            If node.Tag = (rootpath & "/" & kind) Or node.Tag = rootpath & "\" & kind Then
+                Return node
+            End If
+        Next
+        Return ""
+    End Function
+
     Private Sub Watcher_Created(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Created
         Dim root = SiteTree.Nodes(0)
-        Dim pages = root.Nodes(0)
-        Dim templates = root.Nodes(1)
-        Dim includes = root.Nodes(2)
+        Dim pages = GetPTINode(root, "pages")
+        Dim templates = GetPTINode(root, "templates")
+        Dim includes = GetPTINode(root, "includes")
         'Dim output_site = root.Nodes(3)
         Dim node As New TreeNode
         Dim arr As Array = e.Name.Split(Path.DirectorySeparatorChar)

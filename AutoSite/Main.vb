@@ -1185,17 +1185,17 @@ Public Class Main
 
         Dim html = My.Resources.Defaults_NewHtmlPage_Contents ' Page
 
-        If dir.Contains(SiteTree.Nodes(0).Nodes(1).Tag) Then ' Template
+        If dir.Contains(GetPTINode(SiteTree.Nodes(0), "templates").Tag) Then ' Template
 
             html = My.Resources.Defaults_NewHtmlTemplate_Contents
 
-        ElseIf dir.Contains(SiteTree.Nodes(0).Nodes(2).Tag) Then ' Include
+        ElseIf dir.Contains(GetPTINode(SiteTree.Nodes(0), "includes").Tag) Then ' Include
 
             html = My.Resources.Defaults_NewHtmlInclude_Contents
 
         End If
 
-        If dir.Contains(SiteTree.Nodes(0).Nodes(1).Tag) And Not My.Computer.FileSystem.FileExists(SiteTree.Nodes(0).Nodes(1).Tag & "\default.html") Then ' Template
+        If dir.Contains(GetPTINode(SiteTree.Nodes(0), "templates").Tag) And Not My.Computer.FileSystem.FileExists(GetPTINode(SiteTree.Nodes(0), "templates").Tag & "\default.html") Then ' Template
             NewFile("default", ".html", html)
         Else
             NewFile(My.Resources.Defaults_NewHtml, ".html", html)
@@ -1203,7 +1203,7 @@ Public Class Main
     End Sub
 
     Private Sub NewMDCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewMDCon.Click
-        If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then ' check if page, otherwise empty
+        If Context.Tag.Contains(GetPTINode(SiteTree.Nodes(0), "pages").Tag) Then ' check if page, otherwise empty
             NewFile(My.Resources.Defaults_NewMd, ".md", My.Resources.Defaults_NewMdPage_Contents)
         Else
             NewFile(My.Resources.Defaults_NewMd, ".md", "")
@@ -1211,7 +1211,7 @@ Public Class Main
     End Sub
 
     Private Sub NewPHPCon_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewPHPCon.Click
-        If Context.Tag.Contains(SiteTree.Nodes(0).Nodes(0).Tag) Then ' check if page, otherwise other default
+        If Context.Tag.contains(GetPTINode(SiteTree.Nodes(0), "pages").Tag) Then ' check if page, otherwise other
             NewFile(My.Resources.Defaults_NewMd, ".php", My.Resources.Defaults_NewPhpPage_Contents)
         Else
             NewFile(My.Resources.Defaults_NewMd, ".php", My.Resources.Defaults_NewPhpOther_Contents)

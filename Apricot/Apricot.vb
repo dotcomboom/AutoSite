@@ -304,7 +304,7 @@ Public Module Apricot
         newHtml = newHtml.Replace("[#content#]", content)
         'newHtml = newHtml.Replace("[#root#]", Form1.FillString("../", Form1.CountCharacter(filename, "\")))
         Dim conditionalRegex = "\[(.*?)=(.*?)\](.*?)\[\/\1(.{1,2})\]"
-        Dim matches = RegularExpressions.Regex.Matches(newHtml, conditionalRegex)
+        Dim matches = RegularExpressions.Regex.Matches(newHtml, conditionalRegex, RegularExpressions.RegexOptions.Singleline)
         For Each m As RegularExpressions.Match In matches
             Dim fullStr = m.Groups(0).Value
             Dim key = m.Groups(1).Value
